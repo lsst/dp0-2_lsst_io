@@ -1,4 +1,5 @@
 .. Review the README on instructions to contribute.
+.. Review the style guide to keep a consistent approach to the documentation.
 .. Static objects, such as figures, should be stored in the _static directory. Review the _static/README on instructions to contribute.
 .. Do not remove the comments that describe each section. They are included to provide guidance to contributors.
 .. Do not remove other content provided in the templates, such as a section. Instead, comment out the content and include comments to explain the situation. For example:
