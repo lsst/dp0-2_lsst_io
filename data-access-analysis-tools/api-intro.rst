@@ -1,5 +1,3 @@
-.. This is a template rst file (.rst) within the Vera C. Rubin Observatory Documentation for Data Preview 0.2 (DP0.2) documentation project. This template can be used for a directory's index.rst or other pages within the directory. This comment and proceeding blank line may be deleted after the file is copied and renamed within the destination directory.
-
 .. Review the README on instructions to contribute.
 .. Review the style guide to keep a consistent approach to the documentation.
 .. Static objects, such as figures, should be stored in the _static directory. Review the _static/README on instructions to contribute.
@@ -10,29 +8,41 @@
 
 .. This is the label that can be used for cross referencing this file.
 .. Recommended title label format is "Directory Name"-"Title Name"  -- Spaces should be replaced by hyphens.
-.. _Template-Folder-Title-of-Index:
+.. _Data-Access-Analysis-Tools-API-Intro:
 .. Each section should include a label for cross referencing to a given area.
 .. Recommended format for all labels is "Title Name"-"Section Name" -- Spaces should be replaced by hyphens.
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
 .. A warning will alert you of identical labels during the linkcheck process.
 
-##############
-Title of Index
-##############
+##################################
+Introduction to the RSP API Aspect
+##################################
 
 .. This section should provide a brief, top-level description of the page.
 
-.. note::
-    This is a template file. This note should be deleted when the section is properly populated.
+On the the main landing page at `data.lsst.cloud <https://data.lsst.cloud>`_ there is an "APIs" panel however this is not yet active for DP0.
+The only Web API provided for DP0.1 is a TAP service for catalog access via the Portal and Notebook Aspects.
+Image access is not yet supported via TAP.
+Other IVOA standard APIs that we expect to support in the future include SCS for simple catalog searches, SIAv2 for image searches, SODA for image cutouts and mosaics, and VOSpace (in addition to WebDAV)
+for access to user files.
 
-This is a template for the index.rst of a directory.
-If there are no levels beneath this one, make sure the last line containing the asterisk (*) of ``toctree`` is commented out.
 
-.. toctree::
-    :maxdepth: 2
-    :titlesonly:
-    :glob:
+.. _Data-Access-Analysis-Tools-TAP:
 
-    *
+The Table Access Protocol (TAP) service
+=======================================
 
-This template may also be used for other pages within the directory. In this case, feel free to remove the ``toctree``.
+Use of the TAP service to query catalogs via the Portal is described in :doc:`/data-access-analysis-tools/portal-intro`.
+
+In the Notebook Aspect, a TAP service is instantiated in a python notebook and used to execute an ADQL query and return a result set.
+A set of utilities are provided to get a TAP service instance.
+
+.. code-block:: python
+
+   from rubin_jupyter_utils.lab.notebook import get_tap_service, retrieve_query
+   service = get_tap_service()
+   query = "SELECT TOP 100 * FROM dp01_dc2_catalogs.forced_photometry"
+   results = service.search(query)
+   results.to_table().show_in_notebook()
+
+Several of the DP0 :ref:`DP0-1-Tutorials-Notebooks` demonstrate how to use the TAP service programmatically from a python notebook.
