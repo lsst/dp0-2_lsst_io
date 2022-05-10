@@ -25,7 +25,7 @@ Vera C. Rubin Observatory Documentation for Data Preview 0.2 (DP0.2)
     This documentation area is under heavy development and only in the very early stages of design.
     It should not be used nor consulted for a place of information at this time.
     
-    The currently active documentation is available for `Data Preview 0.2 (DP0.2) <https://dp0-2.lsst.io>`_.
+    The currently active documentation is available for `Data Preview 0.1 (DP0.1) <https://dp0-1.lsst.io>`_.
 
 This site provides information about the Rubin Observatory's Data Preview 0.2 (DP0.2).
 
