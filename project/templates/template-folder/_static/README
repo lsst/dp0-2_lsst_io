@@ -4,7 +4,7 @@ Before creating a new _static directory, consider if it's appropriate to utilize
 
 Note: The lines above and proceeding blank line may be deleted after the file is copied within the destination directory.
 
-This _static/README includes information on using static objects within this directory, part of the Vera C. Rubin Observatory Documentation for Data Preview 0.1 (DP0.2) documentation project. Do not reproduce static files in multiple _static directories; instead, use the appropriate reST syntax and/or symbolic links.
+This _static/README includes information on using static objects within this directory, part of the Vera C. Rubin Observatory Documentation for Data Preview 0.2 (DP0.2) documentation project. Do not reproduce static files in multiple _static directories; instead, use the appropriate reST syntax and/or symbolic links.
 
 To use static files, add the file (png, svg or jpeg preferred for images) to this _static directory. The reST syntax for adding the image from this _static directory is:
 

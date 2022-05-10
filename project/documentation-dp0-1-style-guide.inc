@@ -17,7 +17,7 @@
 .. This file does not contain a title so it can match formatting in another location (project/contributing.rst).
 .. title:: Documentation for DP0.1 Style Guide
 .. ###################################
-.. Documentation for DP0.1 Style Guide
+.. Documentation for DP0.2 Style Guide
 .. ###################################
 
 .. This section should provide a brief, top-level description of the page.
@@ -68,7 +68,7 @@ Templates
 ---------
 
 A template folder is located in the :doc:`documentation project directory </project/index>`.
-It contains template pages for the Documentation for DP0.1, including a directory index.
+It contains template pages for the Documentation for DP0.2, including a directory index.
 Review the README in the template folder for instructions, then update the contents accordingly.
 
 .. _Documentation-DP0-1-Style-Guide-Titles-and-Headings:

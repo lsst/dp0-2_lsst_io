@@ -15,7 +15,7 @@
 .. A warning will alert you of identical labels during the linkcheck process.
 
 ###################
-DP0.1 Data Products
+DP0.2 Data Products
 ###################
 
 .. This section should provide a brief, top-level description of the page.
@@ -32,12 +32,12 @@ For more information about the LSST regions and cadence see `Ivezic et al. (2019
 
 **Simulated Objects and Images:**
 The DC2's WFD simulated images include galaxies (with large-scale structure), Type Ia supernovae, and stars (10% of which are variable).
-DP0.1 does not include AGN, strong lenses, solar system objects, non-Ia extragalactic transients, or diffuse features (e.g., tidal streams, intracluster light).
+DP0.2 does not include AGN, strong lenses, solar system objects, non-Ia extragalactic transients, or diffuse features (e.g., tidal streams, intracluster light).
 The DESC simulated the DC2 images using the `imSim <https://github.com/LSSTDESC/imSim>`__ package.
 
 **Image Processing:**
 The DESC processed the simulated DC2 images with `Version 19 <https://pipelines.lsst.io/v/v19_0_0/index.html>`_ of the LSST Science Pipelines.
-DP0.1 makes the DESC's DC2 images and catalogs available to RSP users.
+DP0.2 makes the DESC's DC2 images and catalogs available to RSP users.
 For DP0.2, the Rubin Data Production team will reprocess the same images with the most up-to-date version of the LSST Science Pipelines, and release the resulting images and catalogs in mid-2022.
 
 .. toctree::
@@ -49,7 +49,7 @@ For DP0.2, the Rubin Data Production team will reprocess the same images with th
 
 .. _DP0-1-Data-Products-DPDD:
 
-DP0.1 Data Products Definition Document (DPDD)
+DP0.2 Data Products Definition Document (DPDD)
 ==============================================
 
 **Disclaimer: The DC2 data set is being made available for use on a shared-risk basis.**
@@ -64,8 +64,8 @@ It is important to note that **many of the future data products listed in the DP
 Images
 ------
 
-For DP0.1 the DC2 data set has only two types of images: coadds and processed visit images.
-For DP0.1, images are only accessible with the Butler via the Notebook Aspect.
+For DP0.2 the DC2 data set has only two types of images: coadds and processed visit images.
+For DP0.2, images are only accessible with the Butler via the Notebook Aspect.
 
 **Processed Visit Images** (PVIs):
 A fully-qualified LSST image from a single visit (in other words, a single pointing) that includes the science pixel array, a quality mask, and a variance array,
@@ -109,16 +109,16 @@ and to use its WCS and methods associated with the image to extract a cutout ima
 Catalogs
 --------
 
-Source detection, measurement, and characterization have been run on both the PVIs and coadds to generate catalog data for DP0.1 (see also :ref:`Data-Processing-Overview-Coadded-Catalogs`).
+Source detection, measurement, and characterization have been run on both the PVIs and coadds to generate catalog data for DP0.2 (see also :ref:`Data-Processing-Overview-Coadded-Catalogs`).
 Catalog data are accessible with the :ref:`Data-Access-Analysis-Tools-TAP` via the Portal or Notebook Aspect, and with the Butler via the Notebook Aspect.
-Although this will not be the case for the Operations-era data releases, for DP0.1 the TAP and Butler table data are not named or organized the same way.
+Although this will not be the case for the Operations-era data releases, for DP0.2 the TAP and Butler table data are not named or organized the same way.
 Here we distinguish between the TAP- and Butler-accessible catalog data products.
 **The recommended catalog interface for DP0.1 is the TAP service.**
 
 **Schema:**
 A table's "schema" refers to the column names, units, and descriptions of the tabulated data.
 Links to full or curated versions of the table schema (curated meaning limited to columns that will be of most use to most DP0 delegates) are provided in the tables below.
-A `DP0.1 schema browser <https://dm.lsst.org/sdm_schemas/browser/dp01.html>`_ is also available, thanks to the Rubin Data Management team.
+A `DP0.2 schema browser <https://dm.lsst.org/sdm_schemas/browser/dp01.html>`_ is also available, thanks to the Rubin Data Management team.
 
 **Principal Columns:**
 For convenience, Rubin Observatory staff have identified the principal columns which are most likely to be useful.
@@ -136,7 +136,7 @@ For all Portal-accessible TAP catalogs, one way to view and interact with the sc
 Schema for all five TAP-accessible catalogs can be also viewed and interacted with in a Jupyter Notebook by following the examples in Section 2.2 of the first of the :ref:`DP0-1-Tutorials-Notebooks`.
 The table below contains links to pages that list the schema for these tables: the column names, units, data types, and a description.
 
-.. list-table:: TAP-accessible tables available for DP0.1.
+.. list-table:: TAP-accessible tables available for DP0.2.
    :widths: 120 150 320
    :header-rows: 1
 
@@ -161,12 +161,12 @@ The table below contains links to pages that list the schema for these tables: t
 
 
 **Butler Catalogs**:
-The recommended catalog interface for DP0.1 is the TAP service.
-However, because the catalog of sources detected in individual processed visit images (PVIs) is only available through the Butler, the Butler schema for several of the most useful DP0.1 catalogs are provided below.
+The recommended catalog interface for DP0.2 is the TAP service.
+However, because the catalog of sources detected in individual processed visit images (PVIs) is only available through the Butler, the Butler schema for several of the most useful DP0.2 catalogs are provided below.
 The Butler catalogs are listed in the approximate order that a processing workflow with the LSST Science Pipelines would generate them.
 For examples of how to access these Butler catalogs, see the :ref:`DP0-1-Tutorials-Notebooks` about the Butler.
 
-.. list-table:: Butler-accessible tables available for DP0.1.
+.. list-table:: Butler-accessible tables available for DP0.2.
    :widths: 120 120 350
    :header-rows: 1
 

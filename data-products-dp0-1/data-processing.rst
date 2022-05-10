@@ -20,7 +20,7 @@ Data Processing Overview
 
 .. This section should provide a brief, top-level description of the page.
 
-The imaging data and catalogs included in DP0.1 are based on the wide-fast-deep data generated as part of the LSST Dark Energy Science Collaboration (DESC) Data Challenge 2 (DC2).
+The imaging data and catalogs included in DP0.2 are based on the wide-fast-deep data generated as part of the LSST Dark Energy Science Collaboration (DESC) Data Challenge 2 (DC2).
 This page provides a brief overview of the production and processing of those data. A much more comprehensive description of DC2 can be found in `LSST Dark Energy Science Collaboration (2020) <https://arxiv.org/abs/2010.05926>`_.
 This page draws heavily from those sources.
 
@@ -100,8 +100,8 @@ Post-processing
 ===============
 
 The DESC DC2 data were simulated and processed using v19.0.0 of the LSST Science Pipelines which relied on the "Gen2" Butler.
-For release as part of DP0.1, these data products were converted to the "Gen3" Butler system and ingested into the Interim Data Facility (IDF).
+For release as part of DP0.2, these data products were converted to the "Gen3" Butler system and ingested into the Interim Data Facility (IDF).
 Since this was a post-processing conversion rather than a native processing with the Gen3 Butler, there may be some slight inconsistencies in the data structure that raise warnings when accessed by the user (see the :doc:`/data-access-analysis-tools/rsp-warnings`).
 This should be corrected in DP0.2 when the DC2 data will be natively reprocessed with the Gen3 Butler.
-We also note that the post-processing organization of the DC2 catalogs described in `Section 4 of DC2 Data Release Note <https://arxiv.org/abs/2101.04855>`_ have not been applied to the DP0.1 data.
+We also note that the post-processing organization of the DC2 catalogs described in `Section 4 of DC2 Data Release Note <https://arxiv.org/abs/2101.04855>`_ have not been applied to the DP0.2 data.
 These data are instead intended to be accessed from the Rubin Observatory TAP service.

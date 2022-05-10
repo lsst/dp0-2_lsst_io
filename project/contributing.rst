@@ -15,7 +15,7 @@
 .. A warning will alert you of identical labels during the linkcheck process.
 
 ############################################################################
-Contributing to Rubin Observatory Documentation for Data Preview 0.1 (DP0.1)
+Contributing to Rubin Observatory Documentation for Data Preview 0.2 (DP0.2)
 ############################################################################
 
 .. This section should provide a brief, top-level description of the page.
