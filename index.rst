@@ -100,7 +100,7 @@ for their Data Challenge 2 (DC2; `arXiv:2010.05926 <https://arxiv.org/abs/2010.0
     :maxdepth: 2
     :glob:
 
-    data-products-dp0-1/index
+    data-products-dp0-2/index
 
 
 .. _Rubin-Observatory-Documentation-DP0-2-Documentation-Project-Information:
