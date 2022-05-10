@@ -8,7 +8,7 @@
 
 .. This is the label that can be used for cross referencing this file.
 .. Recommended title label format is "Directory Name"-"Title Name"  -- Spaces should be replaced by hyphens.
-.. _Data-Products-DP0-1-schema-obj-tm-principal:
+.. _Data-Products-DP0-2-schema-obj-tm-principal:
 .. Each section should include a label for cross referencing to a given area.
 .. Recommended format for all labels is "Title Name"-"Section Name" -- Spaces should be replaced by hyphens.
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
@@ -27,7 +27,7 @@ Principal Columns for Object and Truth Match Catalogs
 
 The following two images show the principal columns of the DC2 Objects and Truth Match tables, as seen in the Table View of the Portal Aspect of the Rubin Science Platform.
 Learn more in :doc:`/data-access-analysis-tools/portal-intro`.
-Other schemas are listed under :ref:`DP0-1-Data-Products-DPDD-Catalogs`.
+Other schemas are listed under :ref:`DP0-2-Data-Products-DPDD-Catalogs`.
 
 .. _schema-obj-tm-principal-Objects:
 

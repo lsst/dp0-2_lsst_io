@@ -45,4 +45,4 @@ A set of utilities are provided to get a TAP service instance.
    results = service.search(query)
    results.to_table().show_in_notebook()
 
-Several of the DP0 :ref:`DP0-1-Tutorials-Notebooks` demonstrate how to use the TAP service programmatically from a python notebook.
+Several of the DP0 :ref:`DP0-2-Tutorials-Notebooks` demonstrate how to use the TAP service programmatically from a python notebook.

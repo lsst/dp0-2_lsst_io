@@ -38,7 +38,7 @@ and to enable a limited number of astronomers and students to begin early prepar
 Term definitions are provided on the `Rubin Observatory Glossary & Acronyms webpage <https://www.lsst.org/scientists/glossary-acronyms>`__.
 
 
-.. _Rubin-Observatory-Documentation-DP0-1-Delegate-Resources:
+.. _Rubin-Observatory-Documentation-DP0-2-Delegate-Resources:
 
 Resources for DP0 delegates
 ===========================
@@ -52,7 +52,7 @@ DP0 delegates are the 300 Rubin Observatory data rights holders who have been gi
     dp0-delegate-resources/index
 
 
-.. _Rubin-Observatory-Documentation-DP0-1-Tutorials-Examples:
+.. _Rubin-Observatory-Documentation-DP0-2-Tutorials-Examples:
 
 Tutorials
 =========
@@ -70,7 +70,7 @@ Tutorials include hands-on executable tutorials and demonstrations based on scie
     tutorials-examples/index
 
 
-.. _Rubin-Observatory-Documentation-DP0-1-Data-Access-Analysis-Tools:
+.. _Rubin-Observatory-Documentation-DP0-2-Data-Access-Analysis-Tools:
 
 DP0.2 data access and analysis tools
 ====================================
@@ -88,7 +88,7 @@ Throughout DP0 the RSP will be in active development by Rubin Observatory staff,
     data-access-analysis-tools/index
 
 
-.. _Rubin-Observatory-Documentation-DP0-1-Data-Products:
+.. _Rubin-Observatory-Documentation-DP0-2-Data-Products:
 
 DP0.2 data products
 ===================
@@ -103,7 +103,7 @@ for their Data Challenge 2 (DC2; `arXiv:2010.05926 <https://arxiv.org/abs/2010.0
     data-products-dp0-1/index
 
 
-.. _Rubin-Observatory-Documentation-DP0-1-Documentation-Project-Information:
+.. _Rubin-Observatory-Documentation-DP0-2-Documentation-Project-Information:
 
 Documentation project information
 =================================

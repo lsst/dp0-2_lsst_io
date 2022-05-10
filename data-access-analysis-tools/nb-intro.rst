@@ -113,7 +113,7 @@ How to use a Jupyter notebook
 =============================
 
 The best way to learn how to use a Jupyter Notebook is to open the first of the tutorial notebooks which are provided in each user's home directory,
-and also available in the `tutorial-notebooks <https://github.com/rubin-dp0/tutorial-notebooks>`_ repository in the ``rubin-dp0`` GitHub Organization (see also :ref:`DP0-1-Tutorials-Notebooks`).
+and also available in the `tutorial-notebooks <https://github.com/rubin-dp0/tutorial-notebooks>`_ repository in the ``rubin-dp0`` GitHub Organization (see also :ref:`DP0-2-Tutorials-Notebooks`).
 
 **Executing code in a Notebook:**
 Jupyter notebooks provide "cells" within which you type either Python code or markdown language (for formatted text).
@@ -155,7 +155,7 @@ Is all the code in Python?
 
 Yes, the RSP Notebook Aspect will only have python environments for DP0.
 To access DP0.2 data from the Notebook Aspect, users will need to use Python commands and code.
-Much of the LSST Science Pipelines code is in Python, and the DP0 :ref:`DP0-1-Tutorials-Notebooks` use Python as well.
+Much of the LSST Science Pipelines code is in Python, and the DP0 :ref:`DP0-2-Tutorials-Notebooks` use Python as well.
 These tutorials contain executable examples of the commands required to access and analyze data.
 All DP0 delegates should feel free to copy and paste from the provided tutorials.
 Anyone new to Python and looking to learn more might benefit from this `Python for Beginners <https://www.python.org/about/gettingstarted>`_ website (which includes links to tutorial in a variety of languages).
@@ -167,7 +167,7 @@ What is the Butler?
 The Butler is a middleware component of the Data Management System (DMS) for persisting and retrieving datasets from the DP0.2 data repository.
 The only way to access DP0.2 images is via the Butler from a Jupyter Notebook.
 The third generation "Gen3" Butler is the version being used for DP0.2.
-Full `Butler documentation <https://pipelines.lsst.io/modules/lsst.daf.butler/index.html>`_ is available, and one of the :ref:`DP0-1-Tutorials-Notebooks` focuses on Butler use as well.
+Full `Butler documentation <https://pipelines.lsst.io/modules/lsst.daf.butler/index.html>`_ is available, and one of the :ref:`DP0-2-Tutorials-Notebooks` focuses on Butler use as well.
 
 How do I ask more questions about the RSP's Notebook Aspect?
 ------------------------------------------------------------

@@ -46,7 +46,7 @@ Single Table Queries
 **2. Select Query Type**: Select "Single Table (UI assisted)" to query via the single-table interface (default).
 
 **3. Select Table**: Drop down menus of available tables.
-For DP0 data, choose the "Table Collection (Schema): dp01_dc2_catalogs", and then choose the table to query (see the :ref:`DP0-1-Data-Products-DPDD` for a reminder of what tables are available).
+For DP0 data, choose the "Table Collection (Schema): dp01_dc2_catalogs", and then choose the table to query (see the :ref:`DP0-2-Data-Products-DPDD` for a reminder of what tables are available).
 The table view at lower-right will automatically update to match the selected table.
 
 **4. Enter Constraints**: Only "Spatial" constraints apply for DP0.2.
@@ -134,7 +134,7 @@ Note that corresponding plot point for the selected row in the table is differen
 
     An updated results view in which the xy plot uses the magnitude columns.
 
-See also :ref:`DP0-1-Tutorials-Portal` for additional demonstrations of how to use the Portal's Single Table Query.
+See also :ref:`DP0-2-Tutorials-Portal` for additional demonstrations of how to use the Portal's Single Table Query.
 
 .. _Portal-Intro-ADQL-Queries:
 
@@ -219,4 +219,4 @@ To get the detailed list of columns available in the `object` table, their assoc
 
 This produces a subset of the data shown in the lower-right pane of the Portal's **Single Table** query screen, described above.
 
-See also :ref:`DP0-1-Tutorials-Portal` for additional demonstrations of how to use the Portal's ADQL functionality.
+See also :ref:`DP0-2-Tutorials-Portal` for additional demonstrations of how to use the Portal's ADQL functionality.

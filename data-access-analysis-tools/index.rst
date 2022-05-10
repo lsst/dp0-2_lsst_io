@@ -120,6 +120,6 @@ Data processing tools
 
 Documentation for the LSST Science Pipelines, a software package which is available to all RSP users via the Notebook Aspect, can be found at `pipelines.lsst.io <https://pipelines.lsst.io>`_.
 
-A brief summary of how the LSST Science Pipelines were used to create the DP0.2 data products can be found in this :doc:`/data-products-dp0-1/data-processing`.
+A brief summary of how the LSST Science Pipelines were used to create the DP0.2 data products can be found in this :doc:`/data-products-dp0-2/data-processing`.
 
 To view a list of packages available to you in the Notebook Aspect of the RSP, type ``pip install`` in a terminal.

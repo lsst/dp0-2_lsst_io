@@ -20,8 +20,8 @@ Contributing to Rubin Observatory Documentation for Data Preview 0.2 (DP0.2)
 
 .. This section should provide a brief, top-level description of the page.
 
-Below are instructions and guidelines on contributing to the :doc:`Rubin Observatory Documentation for DP0.1 </index>`.
-This documentation is built with `Sphinx <https://www.sphinx-doc.org/en/master/>`__ and published to :doc:`https://dp0-1.lsst.io </index>`.
+Below are instructions and guidelines on contributing to the :doc:`Rubin Observatory Documentation for DP0.2 </index>`.
+This documentation is built with `Sphinx <https://www.sphinx-doc.org/en/master/>`__ and published to :doc:`https://dp0-2.lsst.io </index>`.
 
 This documentation is open source.
 Rubin Observatory welcomes contributions that make this documentation more useful and accurate.
@@ -32,7 +32,7 @@ Rubin Observatory welcomes contributions that make this documentation more usefu
 Raising an issue
 ================
 
-If you spot an issue with the documentation, the best thing to do is `raise a GitHub issue in the dp0-1_lsst_io repo <https://github.com/lsst/dp0-1_lsst_io/issues/new>`__.
+If you spot an issue with the documentation, the best thing to do is `raise a GitHub issue in the dp0-2_lsst_io repo <https://github.com/lsst/dp0-1_lsst_io/issues/new>`__.
 Include any relevant URLs with your issue description.
 
 
@@ -41,7 +41,7 @@ Include any relevant URLs with your issue description.
 Creating a pull request (PR)
 ============================
 
-You can contribute directly to the `dp0-1_lsst_io repo <https://github.com/lsst/dp0-1_lsst_io>`__ by creating a pull request (PR).
+You can contribute directly to the `dp0-2_lsst_io repo <https://github.com/lsst/dp0-1_lsst_io>`__ by creating a pull request (PR).
 If you’re intending to make a substantial change, it’s a good idea to create a GitHub issue first with your proposal.
 Rubin Observatory can’t accept contributions that don’t fit with our strategy and roadmap.
 
@@ -121,9 +121,9 @@ Deployment
 ==========
 
 Whenever you push to the GitHub repository, the site is built for the corresponding branch.
-Find your build at https://dp0-1.lsst.io/v/. You can push to a branch you've created at any time.
+Find your build at https://dp0-2.lsst.io/v/. You can push to a branch you've created at any time.
 
-The ``main`` branch is always published as :doc:`https://dp0-1.lsst.io </index>`. Only authorized individuals can merge to ``main`` (may be delegated).
+The ``main`` branch is always published as :doc:`https://dp0-2.lsst.io </index>`. Only authorized individuals can merge to ``main`` (may be delegated).
 To incorporate your suggestions, create a :ref:`pull request <contributing-pr>`.
 
 Approval process
@@ -174,4 +174,4 @@ Check out these resources and guides. Sources files are available to compare raw
 Data products documentation style guide
 ---------------------------------------
 
-.. include:: documentation-dp0-1-style-guide.inc
+.. include:: documentation-dp0-2-style-guide.inc

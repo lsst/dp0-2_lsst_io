@@ -8,7 +8,7 @@
 
 .. This is the label that can be used for cross referencing this file.
 .. Recommended title label format is "Directory Name"-"Title Name"  -- Spaces should be replaced by hyphens.
-.. _Tutorials-Examples-DP0-1-Tutorials:
+.. _Tutorials-Examples-DP0-2-Tutorials:
 .. Each section should include a label for cross referencing to a given area.
 .. Recommended format for all labels is "Title Name"-"Section Name" -- Spaces should be replaced by hyphens.
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
@@ -26,7 +26,7 @@ Before following these tutorials, delegates should have gotten their :ref:`Deleg
 and :ref:`the basic components of the RSP <Data-Access-Analysis-Tools-RSP>`, and know how and where to :ref:`get support <Delegate-Homepage-Getting-Support>`. 
 
 
-.. _DP0-1-Tutorials-Notebooks:
+.. _DP0-2-Tutorials-Notebooks:
 
 Jupyter notebook tutorials
 ==========================
@@ -38,7 +38,7 @@ See that repository's README file for descriptions of the notebooks.
 If these notebooks are used for a journal publication, please consider adding an acknowledgment that gives credit to the original creator(s) as listed in the notebook's header.
 
 
-.. _DP0-1-Tutorials-Portal:
+.. _DP0-2-Tutorials-Portal:
 
 Portal aspect demonstrations
 ============================

@@ -8,7 +8,7 @@
 
 .. This is the label that can be used for cross referencing this file.
 .. Recommended title label format is "Directory Name"-"Title Name"  -- Spaces should be replaced by hyphens.
-.. _Tutorials-Examples-DP0-1-Portal-Beginner:
+.. _Tutorials-Examples-DP0-2-Portal-Beginner:
 .. Each section should include a label for cross referencing to a given area.
 .. Recommended format for all labels is "Title Name"-"Section Name" -- Spaces should be replaced by hyphens.
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
@@ -20,14 +20,14 @@ Beginner TAP Tutorial - Single Table Usage in the Portal Aspect
 
 .. This section should provide a brief, top-level description of the page.
 
-This brief tutorial will show you how to perform the same data retrieval and analysis that is shown in the first of the :ref:`DP0-1-Tutorials-Notebooks` (titled "Intro to DP0") by using the Portal Aspect's Single Table TAP search function.
+This brief tutorial will show you how to perform the same data retrieval and analysis that is shown in the first of the :ref:`DP0-2-Tutorials-Notebooks` (titled "Intro to DP0") by using the Portal Aspect's Single Table TAP search function.
 
 In this tutorial we will extract data from a small region of sky in the ``object`` table and build a Color-Magnitude Diagram.
 
 This tutorial assumes you have read the basic introduction to the Portal Aspect in :doc:`/data-access-analysis-tools/portal-intro`.
 
 
-.. _DP0-1-Portal-Beginner-Step-1:
+.. _DP0-2-Portal-Beginner-Step-1:
 
 Select portal aspect from RSP
 =============================
@@ -46,7 +46,7 @@ Choose a radius of ``1 degree`` and select a row limit of ``10,000``, as shown i
     :name: Spatial_data
 
 
-.. _DP0-1-Portal-Beginner-Step-2:
+.. _DP0-2-Portal-Beginner-Step-2:
 
 Select columns for analysis
 ===========================
@@ -65,7 +65,7 @@ Then, press the filter icon to select only those items for analysis, as shown in
     :name: Table_column_filter
 
 
-.. _DP0-1-Portal-Beginner-Step-3:
+.. _DP0-2-Portal-Beginner-Step-3:
 
 Select columns constraints
 ==========================
@@ -81,7 +81,7 @@ Then, press the "Search" button as shown in the next figure.
     :name: Search_with_selected_parameters
 
 
-.. _DP0-1-Portal-Beginner-Step-4:
+.. _DP0-2-Portal-Beginner-Step-4:
 
 Select configure the graph to create a color magnitude diagram
 ==============================================================
@@ -106,7 +106,7 @@ Under **Chart Options**, select "reverse" under the "Y Label".
     :name: Edit_chart_data
 
 After including any other information such as a "Chart title," "X Label," and "Y Label", hit "Apply."
-The plot that you make will be slightly different from what is shown below, and different from the plot in the first of the :ref:`DP0-1-Tutorials-Notebooks` due to random sampling and the 10,000 maximum that we used.
+The plot that you make will be slightly different from what is shown below, and different from the plot in the first of the :ref:`DP0-2-Tutorials-Notebooks` due to random sampling and the 10,000 maximum that we used.
 
 .. figure:: /_static/Final_data.png
     :name: Final_data
