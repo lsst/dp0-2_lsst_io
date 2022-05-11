@@ -31,7 +31,7 @@ and :ref:`the basic components of the RSP <Data-Access-Analysis-Tools-RSP>`, and
 Jupyter notebook tutorials
 ==========================
 
-The tutorial notebooks in the ``rubin-dp0`` GitHub Organization's `tutorial-notebooks repository <https://github.com/rubin-dp0/tutorial-notebooks>`_ will be available by default in a folder in each user's home directory in the RSP's Notebook Aspect.
+The tutorial notebooks in the ``rubin-dp0`` GitHub Organization's `tutorial-notebooks repository <https://github.com/rubin-dp0/tutorial-notebooks>`_ will be available by default in a folder in each user's home directory in the RSP's Notebook Aspect. Find more `_documentation <https://nb.lsst.io>`_ about Rubin Science Platform notebook aspect 
 See that repository's README file for descriptions of the notebooks.
 
 **Acknowledgments:** Many of these tutorial notebooks were originally developed by `Stack Club <https://github.com/LSSTScienceCollaborations/StackClub>`_ members and have been altered and updated to be appropriate for DP0. 
