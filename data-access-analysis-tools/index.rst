@@ -21,7 +21,7 @@ Data Access and Analysis Tools
 .. This section should provide a brief, top-level description of the page.
 
 The **Rubin Science Platform (RSP)** is the set of integrated web-based applications, services, and tools to query, visualize, subset, and analyze LSST data - including the DP0.2 simulated data products.
-Throughout DP0 the RSP will be in active development by Rubin Observatory staff, with access provided to delegates on a shared-risk basis.
+Throughout DP0 the RSP will be in active development by Rubin Observatory staff, with access provided to delegates on a shared-risk basis. See `Rubin Science Platform Documentation <https://data.lsst.cloud/docs>`_ page for additional information. 
 
 
 .. _Data-Access-Analysis-Tools-Warnings:
