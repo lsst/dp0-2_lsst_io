@@ -207,9 +207,6 @@ There is no set agenda for these sessions, but Rubin Observatory staff are alway
 For example, delegates could discuss their DP0-related analysis with Rubin Observatory staff and with each other, review the DP0 RSP tutorials together,
 collaborate on DP0-related science, and get support from Rubin Observatory staff as needed.
 
-| **2021 Information:** July 15, August 19, and September 16 at 9am in Sydney Australia (Wednesday at 4pm US Pacific Daylight Time, 11pm UTC).
-| These sessions were not recorded.
-
 
 .. _Delegate-Homepage-Delegate-Activities:
 
