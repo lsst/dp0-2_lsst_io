@@ -43,7 +43,7 @@ Term definitions are provided on the `Rubin Observatory Glossary & Acronyms webp
 Resources for DP0 delegates
 ===========================
 
-DP0 delegates are the 300 Rubin Observatory data rights holders who have been given accounts in the shared-risk early-development version of the RSP, through which they can access and analyze the DP0 data set.
+DP0 delegates are the 600 Rubin Observatory data rights holders who have been given accounts in the shared-risk early-development version of the RSP, through which they can access and analyze the DP0 data set.
 
 .. toctree::
     :maxdepth: 2
