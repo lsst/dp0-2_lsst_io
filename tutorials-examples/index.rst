@@ -23,7 +23,7 @@ DP0.2 Tutorials
 These tutorials and user guides are for DP0 delegates using the Rubin Science Platform (RSP) deployed at the Interim Data Facility (IDF), the Google cloud.
 
 Before following these tutorials, delegates should have gotten their :ref:`Delegate-Homepage-RSP-Accounts`, be familiar with this list of :doc:`/data-access-analysis-tools/rsp-warnings`
-and :ref:`the basic components of the RSP <Data-Access-Analysis-Tools-RSP>`, and know how and where to :ref:`get support <Delegate-Homepage-Getting-Support>`. 
+and :ref:`the basic components of the RSP <Data-Access-Analysis-Tools-RSP>`, and know how and where to :ref:`get support <Delegate-Homepage-Getting-Support>`. Additional information can be found at the `Rubin Science Platform Documentation <https://data.lsst.cloud/docs>`_ page.
 
 
 .. _DP0-2-Tutorials-Notebooks:
@@ -44,7 +44,7 @@ Portal aspect demonstrations
 ============================
 
 An overview of the RSP Portal functionality is provided in this :doc:`/data-access-analysis-tools/portal-intro`. 
-Below are two step-by-step demonstrations of how to use the Portal for science investigations.
+Below are two step-by-step demonstrations of how to use the Portal for science investigations. You may also find information about the portal aspect in the `about firefly <https://data.lsst.cloud/portal/app/onlinehelp/>`_ page on the `Rubin Science Platform Documentation <https://data.lsst.cloud/docs>`_ page.
 
 .. toctree::
     :titlesonly:
