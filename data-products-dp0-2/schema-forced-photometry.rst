@@ -8,7 +8,7 @@
 
 .. This is the label that can be used for cross referencing this file.
 .. Recommended title label format is "Directory Name"-"Title Name"  -- Spaces should be replaced by hyphens.
-.. _Data-Products-DP0-1-schema-forced-photometry:
+.. _Data-Products-DP0-2-schema-forced-photometry:
 .. Each section should include a label for cross referencing to a given area.
 .. Recommended format for all labels is "Title Name"-"Section Name" -- Spaces should be replaced by hyphens.
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
@@ -26,7 +26,7 @@ Schema for dp01_dc2_catalogs.forced_photometry
 .. This section should provide a brief, top-level description of the page.
 
 This page is a reference to schema for forced photometry measurements for objects detected in the coadded images, at the locations defined by the position table.
-Other schemas are listed under :ref:`DP0-1-Data-Products-DPDD-Catalogs`.
+Other schemas are listed under :ref:`DP0-2-Data-Products-DPDD-Catalogs`.
 
 Principal Columns
 =================

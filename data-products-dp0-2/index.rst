@@ -8,20 +8,20 @@
 
 .. This is the label that can be used for cross referencing this file.
 .. Recommended title label format is "Directory Name"-"Title Name"  -- Spaces should be replaced by hyphens.
-.. _Data-Products-DP0-1-Data-Products:
+.. _Data-Products-DP0-2-Data-Products:
 .. Each section should include a label for cross referencing to a given area.
 .. Recommended format for all labels is "Title Name"-"Section Name" -- Spaces should be replaced by hyphens.
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
 .. A warning will alert you of identical labels during the linkcheck process.
 
 ###################
-DP0.1 Data Products
+DP0.2 Data Products
 ###################
 
 .. This section should provide a brief, top-level description of the page.
 
 
-.. _DP0-1-Data-Products-Introduction:
+.. _DP0-2-Data-Products-Introduction:
 
 The DESC DC2 Data Set
 =====================
@@ -32,12 +32,12 @@ For more information about the LSST regions and cadence see `Ivezic et al. (2019
 
 **Simulated Objects and Images:**
 The DC2's WFD simulated images include galaxies (with large-scale structure), Type Ia supernovae, and stars (10% of which are variable).
-DP0.1 does not include AGN, strong lenses, solar system objects, non-Ia extragalactic transients, or diffuse features (e.g., tidal streams, intracluster light).
+DP0.2 does not include AGN, strong lenses, solar system objects, non-Ia extragalactic transients, or diffuse features (e.g., tidal streams, intracluster light).
 The DESC simulated the DC2 images using the `imSim <https://github.com/LSSTDESC/imSim>`__ package.
 
 **Image Processing:**
 The DESC processed the simulated DC2 images with `Version 19 <https://pipelines.lsst.io/v/v19_0_0/index.html>`_ of the LSST Science Pipelines.
-DP0.1 makes the DESC's DC2 images and catalogs available to RSP users.
+DP0.2 makes the DESC's DC2 images and catalogs available to RSP users.
 For DP0.2, the Rubin Data Production team will reprocess the same images with the most up-to-date version of the LSST Science Pipelines, and release the resulting images and catalogs in mid-2022.
 
 .. toctree::
@@ -47,9 +47,9 @@ For DP0.2, the Rubin Data Production team will reprocess the same images with th
     data-processing
 
 
-.. _DP0-1-Data-Products-DPDD:
+.. _DP0-2-Data-Products-DPDD:
 
-DP0.1 Data Products Definition Document (DPDD)
+DP0.2 Data Products Definition Document (DPDD)
 ==============================================
 
 **Disclaimer: The DC2 data set is being made available for use on a shared-risk basis.**
@@ -59,13 +59,13 @@ DP0.1 Data Products Definition Document (DPDD)
 Future data previews and Operations-era data releases will produce images and catalogs that more closely resemble the plan laid out in the Data Products Definitions Document (DPDD; `ls.st/dpdd <https://ls.st/dpdd/>`_).
 It is important to note that **many of the future data products listed in the DPDD, and in particular all of the Prompt Products such as difference images and alerts, are not available for DP0.**
 
-.. _DP0-1-Data-Products-DPDD-Images:
+.. _DP0-2-Data-Products-DPDD-Images:
 
 Images
 ------
 
-For DP0.1 the DC2 data set has only two types of images: coadds and processed visit images.
-For DP0.1, images are only accessible with the Butler via the Notebook Aspect.
+For DP0.2 the DC2 data set has only two types of images: coadds and processed visit images.
+For DP0.2, images are only accessible with the Butler via the Notebook Aspect.
 
 **Processed Visit Images** (PVIs):
 A fully-qualified LSST image from a single visit (in other words, a single pointing) that includes the science pixel array, a quality mask, and a variance array,
@@ -98,27 +98,27 @@ Coadd images are divided into ``tracts`` (a spherical convex polygon) and tracts
     The center image is one tract quadrant, and the right image one hundredth the area of the tract quadrant. Patches are larger than the right image, as described in the DESC's paper:
     *"each tract is composed of 7 × 7 patches, and each patch is 4,100 × 4,100 pixels with a pixel scale of 0.2 arcsec"*.
 
-The first of the :ref:`DP0-1-Tutorials-Notebooks` demonstrates how to identify the tract and patch for a given coordinate, and retrieve and plot a coadd image.
+The first of the :ref:`DP0-2-Tutorials-Notebooks` demonstrates how to identify the tract and patch for a given coordinate, and retrieve and plot a coadd image.
 
 The `image display and manipulation tutorial <https://github.com/rubin-dp0/tutorial-notebooks/blob/main/03_Image_Display_and_Manipulation.ipynb>`_ demonstrates how to retrieve and display a coadd image,
 and to use its WCS and methods associated with the image to extract a cutout image zoomed in on a region of interest.
 
 
-.. _DP0-1-Data-Products-DPDD-Catalogs:
+.. _DP0-2-Data-Products-DPDD-Catalogs:
 
 Catalogs
 --------
 
-Source detection, measurement, and characterization have been run on both the PVIs and coadds to generate catalog data for DP0.1 (see also :ref:`Data-Processing-Overview-Coadded-Catalogs`).
+Source detection, measurement, and characterization have been run on both the PVIs and coadds to generate catalog data for DP0.2 (see also :ref:`Data-Processing-Overview-Coadded-Catalogs`).
 Catalog data are accessible with the :ref:`Data-Access-Analysis-Tools-TAP` via the Portal or Notebook Aspect, and with the Butler via the Notebook Aspect.
-Although this will not be the case for the Operations-era data releases, for DP0.1 the TAP and Butler table data are not named or organized the same way.
+Although this will not be the case for the Operations-era data releases, for DP0.2 the TAP and Butler table data are not named or organized the same way.
 Here we distinguish between the TAP- and Butler-accessible catalog data products.
-**The recommended catalog interface for DP0.1 is the TAP service.**
+**The recommended catalog interface for DP0.2 is the TAP service.**
 
 **Schema:**
 A table's "schema" refers to the column names, units, and descriptions of the tabulated data.
 Links to full or curated versions of the table schema (curated meaning limited to columns that will be of most use to most DP0 delegates) are provided in the tables below.
-A `DP0.1 schema browser <https://dm.lsst.org/sdm_schemas/browser/dp01.html>`_ is also available, thanks to the Rubin Data Management team.
+A `DP0.2 schema browser <https://dm.lsst.org/sdm_schemas/browser/dp01.html>`_ is also available, thanks to the Rubin Data Management team.
 
 **Principal Columns:**
 For convenience, Rubin Observatory staff have identified the principal columns which are most likely to be useful.
@@ -133,10 +133,10 @@ Setting ``detect_isPrimary`` to ``True`` will remove any duplicates, sky objects
 **TAP Catalogs**:
 The five TAP-accessible catalogs in the table below are generated from coadded images and are available via both the Portal and Notebook Aspects.
 For all Portal-accessible TAP catalogs, one way to view and interact with the schema is by using the Portal's "table view" in the TAP service for single-table queries, as described in the :doc:`/data-access-analysis-tools/portal-intro`.
-Schema for all five TAP-accessible catalogs can be also viewed and interacted with in a Jupyter Notebook by following the examples in Section 2.2 of the first of the :ref:`DP0-1-Tutorials-Notebooks`.
+Schema for all five TAP-accessible catalogs can be also viewed and interacted with in a Jupyter Notebook by following the examples in Section 2.2 of the first of the :ref:`DP0-2-Tutorials-Notebooks`.
 The table below contains links to pages that list the schema for these tables: the column names, units, data types, and a description.
 
-.. list-table:: TAP-accessible tables available for DP0.1.
+.. list-table:: TAP-accessible tables available for DP0.2.
    :widths: 120 150 320
    :header-rows: 1
 
@@ -161,12 +161,12 @@ The table below contains links to pages that list the schema for these tables: t
 
 
 **Butler Catalogs**:
-The recommended catalog interface for DP0.1 is the TAP service.
-However, because the catalog of sources detected in individual processed visit images (PVIs) is only available through the Butler, the Butler schema for several of the most useful DP0.1 catalogs are provided below.
+The recommended catalog interface for DP0.2 is the TAP service.
+However, because the catalog of sources detected in individual processed visit images (PVIs) is only available through the Butler, the Butler schema for several of the most useful DP0.2 catalogs are provided below.
 The Butler catalogs are listed in the approximate order that a processing workflow with the LSST Science Pipelines would generate them.
-For examples of how to access these Butler catalogs, see the :ref:`DP0-1-Tutorials-Notebooks` about the Butler.
+For examples of how to access these Butler catalogs, see the :ref:`DP0-2-Tutorials-Notebooks` about the Butler.
 
-.. list-table:: Butler-accessible tables available for DP0.1.
+.. list-table:: Butler-accessible tables available for DP0.2.
    :widths: 120 120 350
    :header-rows: 1
 
@@ -191,7 +191,7 @@ For examples of how to access these Butler catalogs, see the :ref:`DP0-1-Tutoria
 ..     - Measurement parameters for sources in deep coadded images, based on deepCoadd_ref. (489 columns)
 
 
-.. _DP0-1-Data-Products-Visualization:
+.. _DP0-2-Data-Products-Visualization:
 ..
 .. Visualization
 .. =============
@@ -200,7 +200,7 @@ For examples of how to access these Butler catalogs, see the :ref:`DP0-1-Tutoria
 .. This section includes information about data visualization.
 ..
 ..
-.. _DP0-1-Data-Products-User-Generated:
+.. _DP0-2-Data-Products-User-Generated:
 ..
 .. User Generated Data Products and Processing
 .. ===========================================

@@ -8,7 +8,7 @@
 
 .. This is the label that can be used for cross referencing this file.
 .. Recommended title label format is "Directory Name"-"Title Name"  -- Spaces should be replaced by hyphens.
-.. _Data-Products-DP0-1-schema-deepCoadd-ref:
+.. _Data-Products-DP0-2-schema-deepCoadd-meas:
 .. Each section should include a label for cross referencing to a given area.
 .. Recommended format for all labels is "Title Name"-"Section Name" -- Spaces should be replaced by hyphens.
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
@@ -19,14 +19,14 @@
 
 :orphan:
 
-#######################################
-Schema for Butler catalog deepCoadd_ref
-#######################################
+########################################
+Schema for Butler catalog deepCoadd_meas
+########################################
 
 .. This section should provide a brief, top-level description of the page.
 
-This page is a reference to schema for source detections in deep coadded images across all filters.
-Other schemas are listed under :ref:`DP0-1-Data-Products-DPDD-Catalogs`.
+This page is a reference to schema for measurement parameters for sources in deep coadded images, based on :doc:`schema-deepCoadd-ref`.
+Other schemas are listed under :ref:`DP0-2-Data-Products-DPDD-Catalogs`.
 
 **id** (units=None,type=int64): unique ID
 
@@ -1589,15 +1589,3 @@ Other schemas are listed under :ref:`DP0-1-Data-Products-DPDD-Catalogs`.
 **base_ClassificationExtendedness_flag** (units=None,type=bool): Set to 1 for any fatal failure.
 
 **base_FootprintArea_value** (units=pix,type=int32): Number of pixels in the source''s detection footprint.
-
-**merge_measurement_i** (units=None,type=bool): Flag field set if the measurements here are from the i filter
-
-**merge_measurement_r** (units=None,type=bool): Flag field set if the measurements here are from the r filter
-
-**merge_measurement_z** (units=None,type=bool): Flag field set if the measurements here are from the z filter
-
-**merge_measurement_y** (units=None,type=bool): Flag field set if the measurements here are from the y filter
-
-**merge_measurement_g** (units=None,type=bool): Flag field set if the measurements here are from the g filter
-
-**merge_measurement_u** (units=None,type=bool): Flag field set if the measurements here are from the u filter

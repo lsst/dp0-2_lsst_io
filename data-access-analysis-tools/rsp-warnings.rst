@@ -54,7 +54,7 @@ For this data preview there are no file quotas applied, however usage will be mo
 
 For this data preview, there are no write/delete restrictions on the shared user data Butler repository (butler-us-central1-dp01).
 That means you could delete your data and other user's data.
-User data stored in our Butler repositories is not backed up, and may not be retained past the Data Preview 0.1 period.
+User data stored in our Butler repositories is not backed up, and may not be retained past the Data Preview 0.2 period.
 Be very careful when using the Butler prune collection feature and in particular don't use wildcards with that command.
 
 You can reduce the risk of accidents by following the convention documented in `DMTN-167 <https://dmtn-167.lsst.io/>`__ and only write to your own ``u/<user>/*`` collections.

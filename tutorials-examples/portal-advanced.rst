@@ -8,7 +8,7 @@
 
 .. This is the label that can be used for cross referencing this file.
 .. Recommended title label format is "Directory Name"-"Title Name"  -- Spaces should be replaced by hyphens.
-.. _Tutorials-Examples-DP0-1-Portal-Advanced:
+.. _Tutorials-Examples-DP0-2-Portal-Advanced:
 .. Each section should include a label for cross referencing to a given area.
 .. Recommended format for all labels is "Title Name"-"Section Name" -- Spaces should be replaced by hyphens.
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
@@ -23,12 +23,12 @@ Advanced TAP/ADQL Usage in the Portal Aspect
 Now that you have seen the basic functionality of the Portal Aspect and some demonstrations of ADQL queries from :doc:`/data-access-analysis-tools/portal-intro`, the following tutorial demonstrates some more advanced usage of the Portal Aspect.
 
 
-.. _DP0-1-Portal-Advanced-Table-Join:
+.. _DP0-2-Portal-Advanced-Table-Join:
 
 Complex ADQL queries: joining multiple tables
 =============================================
 
-This section demonstrates how to do the analysis from the tutorial notebook "06_Comparing_Object_and_Truth_Tables" in :ref:`DP0-1-Tutorials-Notebooks`, but using the ADQL query capability of the Portal Aspect rather than a Jupyter notebook.
+This section demonstrates how to do the analysis from the tutorial notebook "06_Comparing_Object_and_Truth_Tables" in :ref:`DP0-2-Tutorials-Notebooks`, but using the ADQL query capability of the Portal Aspect rather than a Jupyter notebook.
 You will extract data from a small region of sky in the `object` table, and simultaneously join this together with the `truth-match` table to enable comparison of the simulated and measured properties of some stars and galaxies.
 
 This tutorial assumes that you have read the basic intro to the Portal Aspect in :doc:`/data-access-analysis-tools/portal-intro`.

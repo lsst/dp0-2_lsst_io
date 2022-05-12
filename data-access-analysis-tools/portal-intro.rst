@@ -46,10 +46,10 @@ Single Table Queries
 **2. Select Query Type**: Select "Single Table (UI assisted)" to query via the single-table interface (default).
 
 **3. Select Table**: Drop down menus of available tables.
-For DP0 data, choose the "Table Collection (Schema): dp01_dc2_catalogs", and then choose the table to query (see the :ref:`DP0-1-Data-Products-DPDD` for a reminder of what tables are available).
+For DP0 data, choose the "Table Collection (Schema): dp01_dc2_catalogs", and then choose the table to query (see the :ref:`DP0-2-Data-Products-DPDD` for a reminder of what tables are available).
 The table view at lower-right will automatically update to match the selected table.
 
-**4. Enter Constraints**: Only "Spatial" constraints apply for DP0.1.
+**4. Enter Constraints**: Only "Spatial" constraints apply for DP0.2.
 The longitude and latitude columns will automatically update to be the correct column names for right ascension and declination for the selected table (usually ``ra`` and ``dec`` or ``coord_ra`` and ``coord_dec``).
 If a non-existent column name is entered the box will highlight red in indication of the error.
 Choose the desired shape type for a spatial search, ``Cone`` or ``Polygon``, and the appropriate instructions for the search terms will appear.
@@ -58,7 +58,7 @@ Keeping the search area to a minimum will keep processing times short and return
 *Note*: The examples under the box for coordinates are object names as examples of the syntax and formatting only. Those examples are not guaranteed to be in the accessible data sets.
 The central coordinates for DC2, in decimal degrees, are: ``61.863 -35.790``. (See Table 2 of `The LSST DESC DC2 Simulated Sky Survey <https://ui.adsabs.harvard.edu/abs/2021ApJS..253...31L/abstract>`_.)
 
-*Note*: Although there are two options for "Constraints" (``Spatial`` and ``Temporal``), for DP0.1, all of the catalog data that is available through the Portal is from the coadded DC2 images, and does not contain time-domain information.
+*Note*: Although there are two options for "Constraints" (``Spatial`` and ``Temporal``), for DP0.2, all of the catalog data that is available through the Portal is from the coadded DC2 images, and does not contain time-domain information.
 
 **Table View**: The table to the right of "Select Constraints" enables applying additional search constraints on the columns in the selected table.
 Use the checkboxes in the left-most column to select the columns to be returned by the query.
@@ -134,7 +134,7 @@ Note that corresponding plot point for the selected row in the table is differen
 
     An updated results view in which the xy plot uses the magnitude columns.
 
-See also :ref:`DP0-1-Tutorials-Portal` for additional demonstrations of how to use the Portal's Single Table Query.
+See also :ref:`DP0-2-Tutorials-Portal` for additional demonstrations of how to use the Portal's Single Table Query.
 
 .. _Portal-Intro-ADQL-Queries:
 
@@ -200,7 +200,7 @@ Note that ``is_good_match`` is of type boolean whereas in the ADQL query above w
 
 **Query the TAP service schema**
 Information about the LSST TAP schema can also be obtained via ADQL queries.
-The following query gets the names of all the available DP0.1 tables.
+The following query gets the names of all the available DP0.2 tables.
 
 .. code-block:: SQL
 
@@ -219,4 +219,4 @@ To get the detailed list of columns available in the `object` table, their assoc
 
 This produces a subset of the data shown in the lower-right pane of the Portal's **Single Table** query screen, described above.
 
-See also :ref:`DP0-1-Tutorials-Portal` for additional demonstrations of how to use the Portal's ADQL functionality.
+See also :ref:`DP0-2-Tutorials-Portal` for additional demonstrations of how to use the Portal's ADQL functionality.

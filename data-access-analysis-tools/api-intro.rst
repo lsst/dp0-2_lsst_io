@@ -21,7 +21,7 @@ Introduction to the RSP API Aspect
 .. This section should provide a brief, top-level description of the page.
 
 On the the main landing page at `data.lsst.cloud <https://data.lsst.cloud>`_ there is an "APIs" panel however this is not yet active for DP0.
-The only Web API provided for DP0.1 is a TAP service for catalog access via the Portal and Notebook Aspects.
+The only Web API provided for DP0.2 is a TAP service for catalog access via the Portal and Notebook Aspects.
 Image access is not yet supported via TAP.
 Other IVOA standard APIs that we expect to support in the future include SCS for simple catalog searches, SIAv2 for image searches, SODA for image cutouts and mosaics, and VOSpace (in addition to WebDAV)
 for access to user files.
@@ -45,4 +45,4 @@ A set of utilities are provided to get a TAP service instance.
    results = service.search(query)
    results.to_table().show_in_notebook()
 
-Several of the DP0 :ref:`DP0-1-Tutorials-Notebooks` demonstrate how to use the TAP service programmatically from a python notebook.
+Several of the DP0 :ref:`DP0-2-Tutorials-Notebooks` demonstrate how to use the TAP service programmatically from a python notebook.
