@@ -31,7 +31,7 @@ Delegates’ DP0-related activities will be supported with resources and infrast
 |   2. Get one of the :ref:`Delegate-Homepage-RSP-Accounts` for DP0 delegates.
 |   3. Set up your account in the :ref:`Delegate-Homepage-Forum`.
 |   4. Attend one of the :ref:`Delegate-Homepage-Kickoff` (or watch a recording).
-|   5. Consider attending the :ref:`Delegate-Homepage-DP0-Virtual-Seminars`.
+|   5. Consider attending the :ref:`Delegate-Homepage-DP0-Virtual-Seminars` (optional).
 |   6. Learn about :ref:`Delegate-Homepage-Getting-Support` for DP0.
 
 
@@ -99,9 +99,9 @@ DP0-related news and events are shared as direct messages to this group.
 If you want email notifications, set your Community Forum user profile preference for "Email me when I am sent a personal message" to "Always".
 
 | **Find DP0-Related Content and Discussions:**
-|   1. `Support - Data Preview 0 <https://community.lsst.org/c/support/dp0>`_: for all questions and discussions related to DP0. For example, use of the RSP's aspects for science, contents of the DC2 data set, delegate activities, brainstorm new investigations, show-and-tell DP0-related results, etc.
-|   2. "Support - DP0 RSP Service Issues": a private subcategory for technical Q&A and discussion about potential bugs, service outages, etc.
-|   3. `Topics tagged with #dp0 <https://community.lsst.org/tag/dp0>`_ across all categories.
+| - `Support - Data Preview 0 <https://community.lsst.org/c/support/dp0>`_: for all questions and discussions related to DP0. For example, use of the RSP's aspects for science, contents of the DC2 data set, delegate activities, brainstorm new investigations, show-and-tell DP0-related results, etc.
+| - "Support - DP0 RSP Service Issues": a private subcategory for technical Q&A and discussion about potential bugs, service outages, etc.
+| - `Topics tagged with #dp0 <https://community.lsst.org/tag/dp0>`_ across all categories.
 
 
 .. _Delegate-Homepage-Kickoff:
@@ -118,19 +118,17 @@ Delegates who joined DP0 in 2021 do not need to attend a kick-off info session i
 **Recording:** (link to be added here)
 
 | **Schedule:**
-|   -- 2022-07-01 09:00 US Pacific, 2022-07-01 16:00 UTC
-|   -- 2022-07-05 21:00 US Pacific, 2022-07-06 04:00 UTC
-|   -- 2022-07-06 07:00 US Pacific, 2022-07-06 14:00 UTC
+| - Fri Jul 1 2022 at 09:00 US Pacific, Fri Jul 1 2022 at 16:00 UTC
+| - Tue Jul 5 2022 at 21:00 US Pacific, Wed Jul 6 2022 at 04:00 UTC
+| - Wed Jul 6 2022 at 07:00 US Pacific, Wed Jul 6 2022 at 14:00 UTC
 
-Note that the first kick-off info session, on 2022-07-01, takes place during the first hour of a Delegate Assembly (see below).
+Note that the first kick-off info session, on Fri Jul 1 2022 at 09:00 US Pacific, takes place during the first hour of the first of the :ref:`Delegate-Homepage-DP0-Delegate-Assemblies`.
 
 | **Every session will be 1 hour and will cover:**
-|   -- RSP and Community Forum accounts
-|   -- RSP hazards and delegate expectations
-|   -- resources and support for delegates
-|   -- DP0 goals and the road to Rubin Observatory operations
-
-
+| - RSP and Community Forum accounts
+| - RSP hazards and delegate expectations
+| - resources and support for delegates
+| - DP0 goals and the road to Rubin Observatory operations
 
 
 .. _Delegate-Homepage-DP0-Virtual-Seminars:
@@ -161,18 +159,19 @@ Contributed presentations, tutorials, or advance suggestions for breakouts are e
 
 **Schedule:** 
 
-| **Fri Jul 1 2022: Special DP0.2 Assembly**
-|   -- first hour: :ref:`Delegate-Homepage-Kickoff` for *new* DP0 delegates
-|   -- second hour: "Introduction to the DP0.2 Time-Domain Data Products" for everyone (especially for DP0.1 delegates)
-| **Fri Jul 15 2022: TBD**
-|   -- first hour:
-|   -- second hour:
-| **Fri Jul 29 2022: TBD**
-|   -- first hour:
-|   -- second hour:
-| **Fri Aug 26 2022: TBD**
-|   -- first hour: 
-|   -- second hour: 
+| Fri Jul 1 2022: Special DP0.2 Assembly
+| - first hour: :ref:`Delegate-Homepage-Kickoff` for *new* DP0 delegates
+| - second hour: "Introduction to the DP0.2 Time-Domain Data Products" for everyone
+|   -- but will be especially tailored for DP0.1 delegates
+| Fri Jul 15 2022: TBD
+| - first hour:
+| - second hour:
+| Fri Jul 29 2022: TBD
+| - first hour:
+| - second hour:
+| Fri Aug 26 2022: TBD
+| - first hour: 
+| - second hour: 
 
 
 .. _DP0-Delegate-Programming-StackClub:
@@ -201,9 +200,9 @@ Third Thursday office hour
 **Time:** The third Thursday of every month at 04:00 and 14:00 UTC.
 
 These two time slots serve the Asia-Pacific (APAC) and Europe, the Middle East, and Africa (EMEA) time zones, respectively.
-Note that in the western Americas (AMER) time zone, the first slot is actually on Wednesday evening.
+Note that in the western Americas (AMER) time zone, the first slot at 04:00 UTC is actually on Wednesday evening.
 
-**Dates:** Thu Jul 21 (additional dates TBD)
+**Dates:** Thu Jul 21 2022 (additional dates TBD)
 
 These office hour sessions are open, drop-in discussions designed to compensate for the fact that the time of the Delegate Assemblies was only convenient for DP0 delegates in North and South America, Europe, and Africa.
 Everyone is welcome to attend any of these sessions, instead of or in addition to the Delegate Assemblies and the Stack Club sessions.
@@ -231,10 +230,19 @@ Group work is encouraged, as are delegate-designed activities.
 Inform and improve the RSP
 --------------------------
 
-| - complete one or more feedback surveys for Rubin Observatory
-|   -- read about `the results from the first DP0 survey <https://community.lsst.org/t/the-dp0-1-feedback-survey-action-items/6105>`_
-| - submit bug reports via `GitHub issues <https://github.com/rubin-dp0/Support>`_ (see :ref:`Delegate-Homepage-Getting-Support`)
-| - suggest a new RSP feature via `GitHub issues <https://github.com/rubin-dp0/Support>`_
+**Participate in Feedback Surveys.**
+When requested, complete the DP0 delegate feedback surveys for Rubin Observatory.
+Read about `the results from the first DP0 survey <https://community.lsst.org/t/the-dp0-1-feedback-survey-action-items/6105>`_.
+
+**Submit Bug Reports.**
+Submit bug reports via `GitHub issues <https://github.com/rubin-dp0/Support>`_ (see :ref:`Delegate-Homepage-Getting-Support`).
+
+**Suggest Needed RSP Features.**
+Suggest a new RSP features via `GitHub issues <https://github.com/rubin-dp0/Support>`_.
+Communicate directly with the Rubin `Users Committee <https://www.lsst.org/scientists/users-committee>`_ to advocate for tools or functionality that you need for your science goals.
+
+
+
 | - post about your experiences in the `Data Preview 0 <https://community.lsst.org/c/support/dp0>`_ forum category
 | - communicate directly with the Rubin RSP Users Committee
 |   -- *(more information about the Users Committee is forthcoming)*
