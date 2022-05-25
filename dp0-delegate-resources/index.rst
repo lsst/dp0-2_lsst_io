@@ -31,7 +31,7 @@ Delegates’ DP0-related activities will be supported with resources and infrast
 |   2. Get one of the :ref:`Delegate-Homepage-RSP-Accounts` for DP0 delegates.
 |   3. Set up your account in the :ref:`Delegate-Homepage-Forum`.
 |   4. Attend one of the :ref:`Delegate-Homepage-Kickoff` (or watch a recording).
-|   5. Consider attending the :ref:`Delegate-Homepage-DP0-Delegate-Assemblies`.
+|   5. Consider attending the :ref:`Delegate-Homepage-DP0-Delegate-Assemblies`, the :ref:`DP0-Delegate-Programming-StackClub` sessions, or a :ref:`DP0-Delegate-Programming-ThirdThursday`.
 |   6. Learn about :ref:`Delegate-Homepage-Getting-Support` for DP0.
 
 
@@ -109,19 +109,22 @@ If you want email notifications, set your Community Forum user profile preferenc
 DP0 kick-off info sessions
 ==========================
 
-All **new** delegates in 2022 should plan to attend one of the three sessions, or view the recording.
-Delegates who joined DP0 in 2021 do not need to attend the kick-off info sessions in 2022.
+All **new** delegates in 2022 should plan to attend one of the three live virtual kick-off info sessions, or view the recording.
+
+Delegates who joined DP0 in 2021 do not need to attend a kick-off info session in 2022.
 
 **Connection Info:** `ls.st/dp0-events <http://ls.st/dp0-events>`_
 
-**Reconrding:** (link to be added here)
+**Recording:** (link to be added here)
 
-| **Schedule (1 hour duration):**
+| **Schedule:**
 |   -- 2022-07-01 09:00 US Pacific, 2022-07-01 16:00 UTC
 |   -- 2022-07-05 21:00 US Pacific, 2022-07-06 04:00 UTC
 |   -- 2022-07-06 07:00 US Pacific, 2022-07-06 14:00 UTC
 
-| **Session Agenda:**
+Note that the first kick-off info session, on 2022-07-01, takes place during the first hour of a Delegate Assembly (see below).
+
+| **Every session will be 1 hour and will cover:**
 |   -- RSP and Community Forum accounts
 |   -- RSP hazards and delegate expectations
 |   -- resources and support for delegates
@@ -141,8 +144,12 @@ DP0 Delegate assemblies
 
 The Delegate Assemblies are a live, virtual seminars for DP0 delegates to learn more about DP0, the RSP, and the DC2 data set.
 Attendance is optional and all are welcome.
+
 Typically, the first hour contains a presentation or hands-on tutorial, and the second hour is spent in breakout rooms for discussion or co-working on topics suggested by delegates.
+
 Rubin Observatory staff are always available in the main room to answer questions and provide assistance with DP0-related work during breakouts.
+
+Contributed presentations, tutorials, or advance suggestions for breakouts are encouraged from DP0 delegates and Rubin Observatory staff (contact Melissa Graham).
 
 
 .. _DP0-Delegate-Programming-Assemblies:
@@ -150,11 +157,8 @@ Rubin Observatory staff are always available in the main room to answer question
 Assemblies schedule
 -------------------
 
-Please reach out to Melissa Graham with suggestions or contributions (e.g., send her a direct message in the Community Forum).
-Suggestions and contributed talks are welcome from anyone, e.g., delegates, Rubin Observatory staff.
-
 | **Fri Jul 1 2022: Special DP0.2 Assembly**
-|   -- first hour: "Kick-Off Info Session" for *new* DP0 delegates
+|   -- first hour: :ref:`Delegate-Homepage-Kickoff` for *new* DP0 delegates
 |   -- second hour: "Introduction to the DP0.2 Time-Domain Data Products" for everyone (especially for DP0.1 delegates)
 | **Fri Jul 15 2022: TBD**
 |   -- first hour:
