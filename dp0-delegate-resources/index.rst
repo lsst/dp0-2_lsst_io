@@ -41,7 +41,7 @@ Guidelines and expectations
 ===========================
 
 **Rubin data rights** are required in order to hold an account in the Rubin Science Platform.
-All delegates should be aware of their data rights status (please refer to the `Rubin Data Policy <ls.st/rdo-013>`_).
+All delegates should be aware of their data rights status (please refer to the `Rubin Data Policy <https://docushare.lsst.org/docushare/dsweb/Get/RDO-013>`_).
 
 **Understand the** :doc:`/data-access-analysis-tools/rsp-warnings` **of using the DP0 RSP on a shared-risk basis**.
 
