@@ -31,7 +31,7 @@ Delegates’ DP0-related activities will be supported with resources and infrast
 |   2. Get one of the :ref:`Delegate-Homepage-RSP-Accounts` for DP0 delegates.
 |   3. Set up your account in the :ref:`Delegate-Homepage-Forum`.
 |   4. Attend one of the :ref:`Delegate-Homepage-Kickoff` (or watch a recording).
-|   5. Consider attending the :ref:`Delegate-Homepage-DP0-Delegate-Assemblies`, the :ref:`DP0-Delegate-Programming-StackClub` sessions, or a :ref:`DP0-Delegate-Programming-ThirdThursday`.
+|   5. Consider attending the :ref:`Delegate-Homepage-DP0-Virtual-Seminars`.
 |   6. Learn about :ref:`Delegate-Homepage-Getting-Support` for DP0.
 
 
@@ -133,10 +133,18 @@ Note that the first kick-off info session, on 2022-07-01, takes place during the
 
 
 
+.. _Delegate-Homepage-DP0-Virtual-Seminars:
+
+DP0 virtual seminars
+====================
+
+Attendance at any of the following virtual seminars is optional for DP0 delegates.
+
+
 .. _Delegate-Homepage-DP0-Delegate-Assemblies:
 
 DP0 Delegate assemblies
-=======================
+-----------------------
 
 **Connection Info:** `ls.st/dp0-events <http://ls.st/dp0-events>`_
 
@@ -151,11 +159,7 @@ Rubin Observatory staff are always available in the main room to answer question
 
 Contributed presentations, tutorials, or advance suggestions for breakouts are encouraged from DP0 delegates and Rubin Observatory staff (contact Melissa Graham).
 
-
-.. _DP0-Delegate-Programming-Assemblies:
-
-Assemblies schedule
--------------------
+**Schedule:** 
 
 | **Fri Jul 1 2022: Special DP0.2 Assembly**
 |   -- first hour: :ref:`Delegate-Homepage-Kickoff` for *new* DP0 delegates
@@ -178,7 +182,7 @@ Stack Club
 
 **Connection Info:**  `ls.st/dp0-events <http://ls.st/dp0-events>`_
 
-**Time:** Biweekly on Fridays from 9am to 11am US Pacific time (alternating with :ref:`DP0-Delegate-Programming-Assemblies`).
+**Time:** Biweekly on Fridays from 9am to 11am US Pacific time (alternating with :ref:`Delegate-Homepage-DP0-Delegate-Assemblies`).
 
 `Stack Club <https://github.com/LSSTScienceCollaborations/StackClub>`_ is an open drop-in session for working with the DP0 data set and/or the Rubin Observatory `LSST Science Pipelines <https://pipelines.lsst.io/>`_ (colloquially called "the Stack").
 Stack Club sessions begin with a roundtable of what people want to do or learn that day, and then work proceeds as people stay connected via Zoom,
