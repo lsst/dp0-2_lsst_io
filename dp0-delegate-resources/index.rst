@@ -223,12 +223,20 @@ Please see `this Rubin Community Forum topic <https://community.lsst.org/t/invit
 Suggested delegate activities
 =============================
 
-All delegates are invited to take on an activity that will inform and improve development of the RSP development,
-and/or extend and enhance the benefits of DP0 within the science community, beyond the limited number of DP0 participants that Rubin Observatory is able to support.
+**Learn to use the Rubin Science Platform.**
+All delegates are encouraged to use the documentation, instructions, and tutorials to learn how to use the Rubin Science Platform, and its various tools for accessing and analyzing LSST data.
+
+**Prepare to do science with the Data Previews.**
+In the coming years, *real commissioning data* from Rubin Observatory will be released as Data Preview 1 and 2.
+Use the simulated LSST-like DP0 data set to prepare your custom analysis software, so that you're ready to do early science.
+
+Beyond these two main activities, all delegates are invited to take on an activity that will inform and improve development of the RSP development,
+and/or extend and enhance the benefits of DP0 within the science community beyond the limited number of DP0 participants that Rubin Observatory is able to support.
 
 Delegate activities are envisioned to be simple and enjoyable.
 They are completely voluntary and will not be tracked.
 Group work is encouraged, as are delegate-designed activities.
+Have fun!
 
 
 Inform and improve the RSP
