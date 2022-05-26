@@ -20,7 +20,7 @@ DP0.2 Tutorials
 
 .. This section should provide a brief, top-level description of the page.
 
-These tutorials and user guides are for DP0 delegates using the Rubin Science Platform (RSP) deployed at the Interim Data Facility (IDF), the Google cloud.
+These tutorials and user guides are for DP0 delegates using the Rubin Science Platform (RSP) deployed at the Interim Data Facility (IDF; the Google cloud).
 
 Before following these tutorials, delegates should have gotten their :ref:`Delegate-Homepage-RSP-Accounts`, be familiar with this list of :doc:`/data-access-analysis-tools/rsp-warnings`
 and :ref:`the basic components of the RSP <Data-Access-Analysis-Tools-RSP>`, and know how and where to :ref:`get support <Delegate-Homepage-Getting-Support>`.
@@ -32,14 +32,11 @@ Additional information can be found at the `Rubin Science Platform Documentation
 Jupyter notebook tutorials
 ==========================
 
-The tutorial notebooks in the ``rubin-dp0`` GitHub Organization's `tutorial-notebooks repository <https://github.com/rubin-dp0/tutorial-notebooks>`_ will be available
-by default in a folder in each user's home directory in the RSP's Notebook Aspect. 
+The tutorial notebooks in the ``rubin-dp0`` GitHub Organization's `tutorial-notebooks repository <https://github.com/rubin-dp0/tutorial-notebooks>`_ will be available by default in a folder in each user's home directory in the RSP's Notebook Aspect. 
 See that repository's README file for descriptions of the notebooks.
-Also, visit Rubin Science Platform notebook aspect  `documentation <https://nb.lsst.io>`_ to get more information on setting up an account,
-using the LSST pipelines, the software environment, and more information on the project.
 
 **Acknowledgments:** Many of these tutorial notebooks were originally developed by `Stack Club <https://github.com/LSSTScienceCollaborations/StackClub>`_ members and have been altered and updated to be appropriate for DP0. 
-If these notebooks are used for a journal publication, please consider adding an acknowledgment that gives credit to the original creator(s) as listed in the notebook's header.
+Delegates should review the DP0 :ref:`Delegate-Homepage-PubPol` if they use these tutorial notebooks.
 
 
 .. _DP0-2-Tutorials-Portal:
@@ -49,7 +46,7 @@ Portal aspect demonstrations
 
 An overview of the RSP Portal functionality is provided in this :doc:`/data-access-analysis-tools/portal-intro`. 
 Below are two step-by-step demonstrations of how to use the Portal for science investigations.
-You may also find information about the portal aspect in the `about firefly <https://data.lsst.cloud/portal/app/onlinehelp/>`_ page on the `Rubin Science Platform Documentation <https://data.lsst.cloud/docs>`_ page.
+You can also find information about the portal aspect in the `about firefly <https://data.lsst.cloud/portal/app/onlinehelp/>`_ page on the `Rubin Science Platform Documentation <https://data.lsst.cloud/docs>`_ page.
 
 .. toctree::
     :titlesonly:
