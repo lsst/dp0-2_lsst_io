@@ -30,7 +30,7 @@
    :header-rows: 1
    :widths: 1 2 2
 
-   * - Date (Fridays at 9am US Pacific)
+   * - Date
      - First Hour
      - Second Hour
    * - 2022-07-01
