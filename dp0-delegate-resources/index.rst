@@ -118,9 +118,9 @@ Delegates who joined DP0 in 2021 do not need to attend a kick-off info session i
 **Recording:** (link to be added here)
 
 | **Schedule:**
-| - Fri Jul 1 2022 at 09:00 US Pacific, Fri Jul 1 2022 at 16:00 UTC
-| - Tue Jul 5 2022 at 21:00 US Pacific, Wed Jul 6 2022 at 04:00 UTC
-| - Wed Jul 6 2022 at 07:00 US Pacific, Wed Jul 6 2022 at 14:00 UTC
+| - Session 1: Fri Jul 1 2022 at 09:00 US Pacific, Fri Jul 1 2022 at 16:00 UTC
+| - Session 2: Tue Jul 5 2022 at 21:00 US Pacific, Wed Jul 6 2022 at 04:00 UTC
+| - Session 3: Wed Jul 6 2022 at 07:00 US Pacific, Wed Jul 6 2022 at 14:00 UTC
 
 Note that the first kick-off info session, on Fri Jul 1 2022 at 09:00 US Pacific, takes place during the first hour of the first of the :ref:`Delegate-Homepage-DP0-Delegate-Assemblies`.
 
@@ -160,15 +160,19 @@ Contributed presentations, tutorials, or advance suggestions for breakouts are e
 **Schedule:** 
 
 | Fri Jul 1 2022: Special DP0.2 Assembly
-| - first hour: :ref:`Delegate-Homepage-Kickoff` for *new* DP0 delegates
-| - second hour: "Introduction to the DP0.2 Time-Domain Data Products" for everyone
-|   -- but will be especially tailored for DP0.1 delegates
+| - first hour: :ref:`Delegate-Homepage-Kickoff`
+|   -- for *new* DP0 delegates only
+| - second hour: "Introduction to the DP0.2 Time-Domain Data Products"
+|   -- for experienced DP0 delegates
+
 | Fri Jul 15 2022: TBD
 | - first hour:
 | - second hour:
+
 | Fri Jul 29 2022: TBD
 | - first hour:
 | - second hour:
+
 | Fri Aug 26 2022: TBD
 | - first hour: 
 | - second hour: 
@@ -230,93 +234,43 @@ Group work is encouraged, as are delegate-designed activities.
 Inform and improve the RSP
 --------------------------
 
-**Participate in Feedback Surveys.**
+**Participate in feedback surveys.**
 When requested, complete the DP0 delegate feedback surveys for Rubin Observatory.
 Read about `the results from the first DP0 survey <https://community.lsst.org/t/the-dp0-1-feedback-survey-action-items/6105>`_.
 
-**Submit Bug Reports.**
-Submit bug reports via `GitHub issues <https://github.com/rubin-dp0/Support>`_ (see :ref:`Delegate-Homepage-Getting-Support`).
+**Submit bug reports.**
+Help with RSP improvements by submitting bug reports via `GitHub issues <https://github.com/rubin-dp0/Support>`_ (see :ref:`Delegate-Homepage-Getting-Support`).
 
-**Suggest Needed RSP Features.**
-Suggest a new RSP features via `GitHub issues <https://github.com/rubin-dp0/Support>`_.
-Communicate directly with the Rubin `Users Committee <https://www.lsst.org/scientists/users-committee>`_ to advocate for tools or functionality that you need for your science goals.
+**Suggest new features.**
+Help with RSP development by suggesting new RSP features via `GitHub issues <https://github.com/rubin-dp0/Support>`_, or by communicating directly with the Rubin `Users Committee <https://www.lsst.org/scientists/users-committee>`_ to advocate for the tools that you need for your LSST science goals.
 
-
-
-| - post about your experiences in the `Data Preview 0 <https://community.lsst.org/c/support/dp0>`_ forum category
-| - communicate directly with the Rubin RSP Users Committee
-|   -- *(more information about the Users Committee is forthcoming)*
-
-.. | - participate in calls for user acceptance testing (UAT) **(PLACEHOLDER for link to more UAT info)**
-.. |   -- work through an “RSP Test Checklist” and fill out a related form **(PLACEHOLDER for link to checklist and form)**
-.. |   -- test that new Notebooks run and fill out a related form **(PLACEHOLDER for link to notebooks and form)**
+**Share your experiences with Rubin Observatory staff.**
+Post about your DP0 investigations in the `Data Preview 0 <https://community.lsst.org/c/support/dp0>`_ category of the Community Forum, so Rubin Observatory staff can see how users are doing science with the RSP.
 
 
-Extend or enhance the benefits of DP0 in the science community
---------------------------------------------------------------
+Extend the benefits of DP0 in the science community
+---------------------------------------------------
 
-| - join one of the eight `LSST Science Collaborations <https://www.lsstcorporation.org/science-collaborations>`_
-|   -- consider participating in the Science Collaborations' `DP0 New Friends program <https://community.lsst.org/t/invitation-for-dp0-delegates-to-participate-in-the-lsst-science-collaborations-new-friends-program/5700>`_
-|
-| - participate in the :ref:`Delegate-Homepage-Forum` DP0-related categories
-|   -- ask questions about using the RSP or the DP0 data set
-|   -- respond to delegates requests for assistance when possible
-|   -- "show and tell" your DP0-related work in new topics
-|
-| - participate in the :ref:`Delegate-Homepage-DP0-Delegate-Assemblies`
-|   -- ask questions, join the breakout discussions
-|   -- volunteer to facilitate a breakout discussion during an assembly
-|   -- present the results of your DP0 work in one of the :ref:`Delegate-Homepage-DP0-Delegate-Assemblies`
-|
-| - lead or participate in one or more :ref:`Delegate-Homepage-Working-Groups`
-|
-| - contribute tutorials to the `delegates' shared repository <https://github.com/rubin-dp0/delegate-contributions-dp01>`_
-|   -- create a tutorial Jupyter Notebook that uses the DC2 data set
-|   -- tutorials that use the Portal, TAP, or command-line are also welcome
-|
-| - share your DP0-related work outside of DP0
-|   -- give a seminar about Rubin Observatory and DP0 at your home institution
-|   -- give a tutorial about your RSP/DP0 experience in your Science Collaboration
-|   -- publish a paper on your DP0-related work
+**Join an LSST Science Collaboration.** 
+There are eight `LSST Science Collaborations <https://www.lsstcorporation.org/science-collaborations>`_, and new members are always welcome.
 
+**Participate in the Rubin Community Forum.**
+Ask questions about DP0, or "show and tell" your DP0-related investigations in the `Data Preview 0 <https://community.lsst.org/c/support/dp0>`_ category of the Community Forum.
+Respond to questions or discussion topics raised by other DP0 delegates.
+This helps to build a global self-supporting network of scientists engaged in LSST reasearch.
 
-.. _Delegate-Homepage-Working-Groups:
+**Participate in the DP0 virtual seminars.**
+Attend the delegate assemblies, Stack Club, or Third Thursday sessions described above.
+Ask questions and join the breakout discussions.
+All are welcome to volunteer to facilitate a breakout room or to give a presentation (contact Melissa Graham).
 
-DP0 Working Groups
-==================
+**Contribute tutorial notebooks.**
+All delegates are welcome to share their own Jupyter Notebooks using the `delegates' shared repo <https://github.com/rubin-dp0/delegate-contributions-dp02>`_.
+Step-by-step tutorials that use the Portal, TAP, or command-line are also welcome.
 
-"DP0 Working Groups" (DP0 WGs) are any collection of DP0 delegates who want to work together on similar DP0-related science or analysis tools.
-DP0 WGs are meant to be fairly informal; there are no pre-set DP0 WGs topics, and anyone can propose and coordinate a DP0 WG.
-The Rubin Observatory Community Engagement Team (CET) is supporting DP0 WGs by providing Zoom breakout rooms for co-working sessions and a shared repository in the ``rubin-dp0`` GitHub Organization, as described below.
-To get your DP0 WG on the list below, or request any other kind of DP0 WG support, please contact Melissa Graham.
-
-**When would DP0 WGs meet?**
-Breakout rooms during the second hour of the :ref:`Delegate-Homepage-DP0-Delegate-Assemblies`, or anytime during :ref:`DP0-Delegate-Programming-StackClub` sessions, will be created for any and all who request one.
-DP0 WGs could also meet any other time they want to, for the convenience of their members.
-
-**How would DP0 WGs collaborate?**
-One way to facilitate collaborative work is to use the `delegates' shared repository <https://github.com/rubin-dp0/delegate-contributions-dp01>`_ in the ``rubin-dp0`` GitHub Organization.
-As described in that repository's README file, simply create a new directory in the repository with an appropriate name (e.g., for a Transients Hosts Galaxies DP0 Working Group, could use "wg-transients-host-galaxies").
-To facilitate collaboration, it is recommended to keep a README file updated with descriptions of the directory's contents.
-
-**Can I start a DP0 WG by myself?**
-Yes! In time, other delegates might join your efforts, and remember that more delegates will be joining for DP0.2 next year.
-
-**How can I advertise a DP0 WG?**
-Make a new topic in the Community Forum's Data Preview 0 category titled, e.g., "Invitation to Join the Transient Host Galaxies DP0 Working Group".
-If applicable, describe some of the groups potential activities, link to the relevant folder in the shared GitHub repository, and/or say when and where the tag-ups will be.
-
-**Current working groups and their contact info:**
-
-.. list-table:: Active DP0 Working Groups.
-   :header-rows: 1
-
-   * - Working Group
-     - Contact
-   * - `Supernovae <https://community.lsst.org/t/dp0-1-supernova-science-join-the-fun/5869>`_
-     - Fabio Ragosta
-   * - `Large Scale Structure <https://community.lsst.org/t/invitation-to-join-dp0-lss-working-group/5694>`_
-     - Bernardita Ried Guachalla
+**Share your DP0-related work outside of DP0.**
+For example, give a seminar about Rubin Observatory and DP0 at your home institution, give a tutorial about your RSP/DP0 experience in your Science Collaboration, or publish a paper on your DP0-related work.
+Be sure to refer to the :ref:`Delegate-Homepage-PubPol`.
 
 
 .. _Delegate-Homepage-Getting-Support:
@@ -326,7 +280,7 @@ Getting support
 
 Several venues are provided to support DP0 delegates, as described below.
 There is no wrong place to post questions or requests for assistance!
-Hearing about issues and receiving feedback from delegates is a key component of DP0.
+Hearing about issues and receiving feedback from delegates is a key component of DP0 for Rubin Observatory staff.
 
 Scientific support via the Community Forum
 ------------------------------------------
