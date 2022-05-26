@@ -157,35 +157,9 @@ Rubin Observatory staff are always available in the main room to answer question
 
 Contributed presentations, tutorials, or advance suggestions for breakouts are encouraged from DP0 delegates and Rubin Observatory staff (contact Melissa Graham).
 
-**Schedule:** 
+.. include:: dp0-delegate-assemblies-schedule.inc
 
-| Fri Jul 1 2022: Special DP0.2 Assembly
-| - first hour: :ref:`Delegate-Homepage-Kickoff`
-|   -- live demo of the Portal and Notebook aspects
-|   -- for *new* DP0 delegates only
-| - second hour: "Introduction to the DP0.2 Time-Domain Data Products"
-|   -- for experienced DP0 delegates
-
-| Fri Jul 15 2022: Query and Retrieve Catalog Data with the TAP Service
-| - first hour: live demo of Portal and Notebook TAP
-|   -- beginner-level
-| - second hour: delegate breakouts
-|   -- will include a time-domain TAP notebook demo, intermediate-level
-
-| Fri Jul 29 2022: Visualizing Image Data with afwDisplay and Firefly 
-| - first hour: live demo of Notebooks for image display
-|   -- beginner-level
-| - second hour: delegate breakouts
-
-| Fri Aug 12 2022: No assembly, enjoy the `Rubin 2022 PCW <https://project.lsst.org/meetings/rubin2022/>`_.
-
-| Fri Aug 26 2022: Querying and Retrieving Data with the Butler
-| - first hour: live demo of a Butler Notebook
-|   -- beginner-level
-| - second hour: delegate breakouts
-|   -- will include a time-domain Butler notebook demo, intermediate-level
-
-Additional delegate assemblies to be posted here.
+Additional delegate assemblies to be posted.
 
 
 .. _DP0-Delegate-Programming-StackClub:
