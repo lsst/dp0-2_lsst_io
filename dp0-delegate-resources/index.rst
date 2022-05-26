@@ -37,7 +37,7 @@ Delegates’ DP0-related activities will be supported with resources and infrast
 
 .. _Delegate-Homepage-Guidelines-Expectations:
 
-Guidelines and Expectations
+Guidelines and expectations
 ===========================
 
 **Rubin data rights** are required in order to hold an account in the Rubin Science Platform.
@@ -55,7 +55,7 @@ All delegates should be aware of their data rights status (please refer to the `
 
 .. _Delegate-Homepage-RSP-Accounts:
 
-Rubin Science Platform Accounts
+Rubin Science Platform accounts
 ===============================
 
 **Activation:**
@@ -106,7 +106,7 @@ If you want email notifications, set your Community Forum user profile preferenc
 
 .. _Delegate-Homepage-Kickoff:
 
-Kick-off Info Sessions for New Delegates
+Kick-off info sessions for new delegates
 ========================================
 
 All **new** delegates in 2022 should plan to attend one of the three live virtual kick-off info sessions, or view the recording.
@@ -134,7 +134,7 @@ Note that the first kick-off info session, on Fri Jul 1 2022 at 09:00 US Pacific
 
 .. _Delegate-Homepage-DP0-Virtual-Seminars:
 
-DP0 Virtual Seminars
+DP0 virtual seminars
 ====================
 
 Attendance at any of the following virtual seminars is optional for DP0 delegates.
@@ -142,14 +142,14 @@ Attendance at any of the following virtual seminars is optional for DP0 delegate
 
 .. _Delegate-Homepage-DP0-Delegate-Assemblies:
 
-DP0 Delegate Assemblies
+DP0 delegate assemblies
 -----------------------
 
 **Connection Info:** `ls.st/dp0-events <http://ls.st/dp0-events>`_
 
 **Time:** Biweekly on Fridays from 9am to 11am US Pacific (alternating with :ref:`DP0-Delegate-Programming-StackClub`).
 
-The Delegate Assemblies are a live, virtual seminars for DP0 delegates to learn more about DP0, the RSP, and the DC2 data set.
+The delegate assemblies are a live, virtual seminars for DP0 delegates to learn more about DP0, the RSP, and the DC2 data set.
 Attendance is optional and all are welcome.
 
 Typically, the first hour contains a presentation or hands-on tutorial, and the second hour is spent in breakout rooms for discussion or co-working on topics suggested by delegates.
@@ -181,7 +181,7 @@ Everyone is welcome to attend for the full two hours, or just to drop in for a f
 
 .. _DP0-Delegate-Programming-ThirdThursday:
 
-Third Thursday Office Hour
+Third Thursday office hour
 --------------------------
 
 **Connection Info:**  `ls.st/dp0-events <http://ls.st/dp0-events>`_
@@ -205,7 +205,7 @@ Please see `this Rubin Community Forum topic <https://community.lsst.org/t/invit
 
 .. _Delegate-Homepage-Delegate-Activities:
 
-Suggested Delegate Activities
+Suggested delegate activities
 =============================
 
 **Learn to use the Rubin Science Platform.**
@@ -224,7 +224,7 @@ Group work is encouraged, as are delegate-designed activities.
 Have fun!
 
 
-Inform and Improve the RSP
+Inform and improve the RSP
 --------------------------
 
 **Participate in feedback surveys.**
@@ -241,7 +241,7 @@ Help with RSP development by suggesting new RSP features via `GitHub issues <htt
 Post about your DP0 investigations in the `Data Preview 0 <https://community.lsst.org/c/support/dp0>`_ category of the Community Forum, so Rubin Observatory staff can see how users are doing science with the RSP.
 
 
-Extend the Benefits of DP0 in the Science Community
+Extend the benefits of DP0 in the science community
 ---------------------------------------------------
 
 **Join an LSST Science Collaboration.** 
@@ -268,7 +268,7 @@ Be sure to refer to the :ref:`Delegate-Homepage-PubPol`.
 
 .. _Delegate-Homepage-Getting-Support:
 
-Getting Support
+Getting support
 ===============
 
 Several venues are provided to support DP0 delegates, as described below.
@@ -319,7 +319,7 @@ Rubin Observatory staff members will usually be in attendance and able to assist
 
 .. _Delegate-Homepage-Code-of-Conduct:
 
-Code of Conduct
+Code of conduct
 ===============
 
 Please review the Rubin Code of Conduct (CoC) at `ls.st/comms-coc <http://ls.st/comms-coc>`_.
@@ -341,7 +341,7 @@ All can be contacted by email or via direct message in the Community Forum.
 
 .. _Delegate-Homepage-PubPol:
 
-Citation Policies
+Citation policies
 =================
 
 **Cite the DESC’s publications for the DC2 simulated data set**, which is being used for DP0.
