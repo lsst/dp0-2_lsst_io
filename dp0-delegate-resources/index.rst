@@ -125,10 +125,11 @@ Delegates who joined DP0 in 2021 do not need to attend a kick-off info session i
 Note that the first kick-off info session, on Fri Jul 1 2022 at 09:00 US Pacific, takes place during the first hour of the first of the :ref:`Delegate-Homepage-DP0-Delegate-Assemblies`.
 
 | **Every session will be 1 hour and will cover:**
+| - DP0 goals and the road to Rubin Observatory operations
 | - RSP and Community Forum accounts
+| - introductory demo to the Portal and Notebook aspects
 | - RSP hazards and delegate expectations
 | - resources and support for delegates
-| - DP0 goals and the road to Rubin Observatory operations
 
 
 .. _Delegate-Homepage-DP0-Virtual-Seminars:
