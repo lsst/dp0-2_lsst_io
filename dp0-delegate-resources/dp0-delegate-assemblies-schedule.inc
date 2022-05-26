@@ -43,7 +43,7 @@
      - Visualizing Image Data (beginner)
      - *breakouts*
    * - 2022-08-12
-     - *no assembly - enjoy the PCW*
+     - *no assembly - enjoy the `PCW <https://project.lsst.org/meetings/rubin2022/>`_*
      - *n/a*
    * - 2022-08-26
      - Data Query & Retrieval with the Butler (beginner)
