@@ -36,7 +36,7 @@ DP0.2 does not include AGN, strong lenses, solar system objects, non-Ia extragal
 The DESC simulated the DC2 images using the `imSim <https://github.com/LSSTDESC/imSim>`__ package.
 
 **Image Processing:**
-The DESC processed the simulated DC2 images with `Version 19 <https://pipelines.lsst.io/v/v19_0_0/index.html>`_ of the LSST Science Pipelines.
+The DESC processed the simulated DC2 images with `Version 23 <https://pipelines.lsst.io/v/v23_0_0/index.html>`_ of the LSST Science Pipelines.
 DP0.2 makes the DESC's DC2 images and catalogs available to RSP users.
 For DP0.2, the Rubin Data Production team will reprocess the same images with the most up-to-date version of the LSST Science Pipelines, and release the resulting images and catalogs in mid-2022.
 
