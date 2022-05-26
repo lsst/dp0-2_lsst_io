@@ -33,18 +33,15 @@
    * - Date
      - First Hour
      - Second Hour
-   * - 2022-07-01
+   * - 2022-07-08
      - :ref:`Delegate-Homepage-Kickoff` (beginner)
      - Introduction to the DP0.2 Time-Domain Data Products (intermediate)
-   * - 2022-07-15
+   * - 2022-07-22
      - Catalog Data with the TAP Service (beginner)
      - Time-Domain Catalogs in the TAP Service (intermediate)
-   * - 2022-07-29
+   * - 2022-08-05
      - Visualizing Image Data (beginner)
      - *breakouts*
-   * - 2022-08-12
-     - *no assembly - enjoy the `PCW <https://project.lsst.org/meetings/rubin2022/>`_*
-     - *n/a*
-   * - 2022-08-26
+   * - 2022-08-19
      - Data Query & Retrieval with the Butler (beginner)
      - Time-Domain Data in the Butler (intermediate)
