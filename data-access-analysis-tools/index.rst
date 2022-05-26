@@ -46,7 +46,7 @@ RSP usage: risks and responsibilities
 Rubin Science Platform (RSP)
 ============================
 
-During DP0, the Rubin Science Platform (RSP) provides access to Rubin Observatory data products via two services: a Notebook Aspect and a Portal Aspect.
+The Rubin Science Platform (RSP) provides access to Rubin Observatory data products.
 The :ref:`Tools-RSP-Notebook` enables programmatic interaction with, and analysis of, data products in a python environment.
 The :ref:`Tools-RSP-Portal` provides interactive query, data discovery, and visualization tools.
 
@@ -56,8 +56,8 @@ In the Operations era, the RSP will feature additional tools in the Application 
 .. figure:: /_static/RSP_home.png
     :name: RSP_home
 
-    Above is shown the landing page of `data.lsst.cloud <https://data.lsst.cloud/>`_.
-    The Notebook and Portal Aspects can be accessed by clicking on their respective icons on this dashboard.
+    Above: the `data.lsst.cloud <https://data.lsst.cloud/>`_ dashboard.
+    Enter an aspect using the top menu bar or by clicking on the icon.
 
 .. _Tools-RSP-Portal:
 
@@ -80,10 +80,11 @@ Notebook Aspect
 
 The Notebook Aspect of the RSP provides Python-based access to DP0.2 data products via a custom implementation of web-based JupyterLab Notebooks (`JupyterLab documentation <https://jupyterlab.readthedocs.io/en/stable/index.html>`_), as well as a command-line interface.
 
-Within the RSP Notebook Aspect, users can query DP0.2 data sets, subset and retrieve catalogs, manipulate and display images, calculate derived properties, plot results, reprocess the data, and most other analyses you can imagine performing with Python on astronomical images and catalogs.
+Within the RSP Notebook Aspect users can query and retrieve data sets, manipulate and display images, calculate derived properties, plot results, reprocess data with the `LSST Science Pipelines <https://pipelines.lsst.io>`_, and most other analyses you can imagine performing with Python on astronomical images and catalogs.
 
-A stable software environment is provided and maintained for users, which includes many commonly-used packages and the :ref:`Data-Access-Analysis-Tools-Data-Processing` including the `LSST Pipelines <https://pipelines.lsst.io>`__.
+A stable software environment is provided and maintained for users, which includes many commonly-used packages and the `LSST Science Pipelines <https://pipelines.lsst.io>`__.
 For DP0, this environment will only support Python 3.
+To view a list of packages available to you in the Notebook Aspect of the RSP, type ``pip list`` in a terminal.
 
 .. toctree::
     :maxdepth: 2
@@ -118,5 +119,3 @@ Data processing tools
 Documentation for the LSST Science Pipelines, a software package which is available to all RSP users via the Notebook Aspect, can be found at `pipelines.lsst.io <https://pipelines.lsst.io>`_.
 
 A brief summary of how the LSST Science Pipelines were used to create the DP0.2 data products can be found in this :doc:`/data-products-dp0-2/data-processing`.
-
-To view a list of packages available to you in the Notebook Aspect of the RSP, type ``pip list`` in a terminal.
