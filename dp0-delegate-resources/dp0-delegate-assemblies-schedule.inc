@@ -28,6 +28,7 @@
 
 .. list-table:: Schedule and planned content of DP0 Delegate Assemblies
    :header-rows: 1
+   :widths: 1 2 2
 
    * - Date (Fridays at 9am US Pacific)
      - First Hour
