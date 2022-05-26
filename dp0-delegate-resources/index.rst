@@ -173,6 +173,8 @@ Contributed presentations, tutorials, or advance suggestions for breakouts are e
 | - first hour:
 | - second hour:
 
+| Fri Aug 12 2022: No assembly, enjoy the `Rubin 2022 PCW <https://project.lsst.org/meetings/rubin2022/>`_.
+
 | Fri Aug 26 2022: TBD
 | - first hour: 
 | - second hour: 
