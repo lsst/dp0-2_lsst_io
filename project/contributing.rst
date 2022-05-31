@@ -7,7 +7,7 @@
     - If a file cannot include a title (surrounded by ampersands (#)), comment out the title from the template and include a comment explaining why this is implemented (in addition to applying the ``title`` directive).
 
 .. This is the label that can be used for cross referencing this file.
-.. Recommended title label format is "Directory Name"-"Title Name"  -- Spaces should be replaced by hyphens.
+.. Recommended title label format is "Directory Name"-"Title Name" -- Spaces should be replaced by hyphens.
 .. _Project-Contributing:
 .. Each section should include a label for cross referencing to a given area.
 .. Recommended format for all labels is "Title Name"-"Section Name" -- Spaces should be replaced by hyphens.
@@ -32,7 +32,7 @@ Rubin Observatory welcomes contributions that make this documentation more usefu
 Raising an issue
 ================
 
-If you spot an issue with the documentation, the best thing to do is `raise a GitHub issue in the dp0-2_lsst_io repo <https://github.com/lsst/dp0-1_lsst_io/issues/new>`__.
+If you spot an issue with the documentation, the best thing to do is `raise a GitHub issue in the dp0-2_lsst_io repo <https://github.com/lsst/dp0-2_lsst_io/issues/new>`__.
 Include any relevant URLs with your issue description.
 
 
@@ -41,7 +41,7 @@ Include any relevant URLs with your issue description.
 Creating a pull request (PR)
 ============================
 
-You can contribute directly to the `dp0-2_lsst_io repo <https://github.com/lsst/dp0-1_lsst_io>`__ by creating a pull request (PR).
+You can contribute directly to the `dp0-2_lsst_io repo <https://github.com/lsst/dp0-2_lsst_io>`__ by creating a pull request (PR).
 If you’re intending to make a substantial change, it’s a good idea to create a GitHub issue first with your proposal.
 Rubin Observatory can’t accept contributions that don’t fit with our strategy and roadmap.
 
@@ -61,14 +61,14 @@ These are the basic steps to clone and build the docs:
 #. Clone the GitHub repository:
 
    .. code-block:: bash
-
-      git clone https://github.com/lsst/dp0-1_lsst_io
-      cd dp0-1_lsst_io
+      
+      git clone https://github.com/lsst/dp0-2_lsst_io
+      cd dp0-2_lsst_io
 
 #. Create a Python virtual environment (with `venv <https://docs.python.org/3/tutorial/venv.html>`__, for example):
 
    .. code-block:: bash
-
+      
       python3 -m venv .venv
       source .venv/bin/activate
 
@@ -78,7 +78,7 @@ These are the basic steps to clone and build the docs:
 #. Install the Python dependencies:
 
    .. code-block:: bash
-
+      
       python -m pip install --upgrade pip
       python -m pip install -r requirements.txt
 
@@ -89,7 +89,7 @@ These are the basic steps to clone and build the docs:
 #. Build the site:
 
    .. code-block:: bash
-
+      
       make html
 
    .. note::
@@ -98,7 +98,7 @@ These are the basic steps to clone and build the docs:
 #. Validate the documentation build:
 
    .. code-block:: bash
-
+      
       make linkcheck
 
    .. note::
@@ -108,7 +108,7 @@ These are the basic steps to clone and build the docs:
 #. Completely clear the build:
 
    .. code-block:: bash
-
+      
       make clean
 
    .. note::
@@ -134,7 +134,7 @@ Approval process
 #. Create a PR.
 
 #. Request the following to review the PR (additional reviewers may be included in the process):
-
+   
    * Melissa Graham
    * Leanne Guy
 

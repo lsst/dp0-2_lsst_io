@@ -7,7 +7,7 @@
     - If a file cannot include a title (surrounded by ampersands (#)), comment out the title from the template and include a comment explaining why this is implemented (in addition to applying the ``title`` directive).
 
 .. This is the label that can be used for cross referencing this file.
-.. Recommended title label format is "Directory Name"-"Title Name"  -- Spaces should be replaced by hyphens.
+.. Recommended title label format is "Directory Name"-"Title Name" -- Spaces should be replaced by hyphens.
 .. _DP0-Delegate-Resources-DP0-Assemblies-Schedule:
 .. Each section should include a label for cross referencing to a given area.
 .. Recommended format for all labels is "Title Name"-"Section Name" -- Spaces should be replaced by hyphens.
@@ -45,3 +45,6 @@
    * - 2022-08-19
      - Data Query & Retrieval with the Butler (beginner)
      - Time-Domain Data in the Butler (intermediate)
+
+Additional delegate assemblies to be posted.
+Rows in *italics* are tentative topics.
