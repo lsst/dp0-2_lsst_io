@@ -7,7 +7,7 @@
     - If a file cannot include a title (surrounded by ampersands (#)), comment out the title from the template and include a comment explaining why this is implemented (in addition to applying the ``title`` directive).
 
 .. This is the label that can be used for cross referencing this file.
-.. Recommended title label format is "Directory Name"-"Title Name"  -- Spaces should be replaced by hyphens.
+.. Recommended title label format is "Directory Name"-"Title Name" -- Spaces should be replaced by hyphens.
 .. _Tutorials-Examples-DP0-2-Tutorials:
 .. Each section should include a label for cross referencing to a given area.
 .. Recommended format for all labels is "Title Name"-"Section Name" -- Spaces should be replaced by hyphens.
@@ -20,7 +20,7 @@ DP0.2 Tutorials
 
 .. This section should provide a brief, top-level description of the page.
 
-These tutorials and user guides are for DP0 delegates using the Rubin Science Platform (RSP) deployed at the Interim Data Facility (IDF; the Google cloud).
+These tutorials and user guides are for DP0 delegates using the Rubin Science Platform (RSP) deployed at the Interim Data Facility (IDF; the Google Cloud).
 
 Before following these tutorials, delegates should have gotten their :ref:`Delegate-Homepage-RSP-Accounts`, be familiar with this list of :doc:`/data-access-analysis-tools/rsp-warnings`
 and :ref:`the basic components of the RSP <Data-Access-Analysis-Tools-RSP>`, and know how and where to :ref:`get support <Delegate-Homepage-Getting-Support>`.
@@ -46,7 +46,7 @@ Portal aspect demonstrations
 
 An overview of the RSP Portal functionality is provided in this :doc:`/data-access-analysis-tools/portal-intro`. 
 Below are two step-by-step demonstrations of how to use the Portal for science investigations.
-You can also find information about the portal aspect in the `about firefly <https://data.lsst.cloud/portal/app/onlinehelp/>`_ page on the `Rubin Science Platform Documentation <https://data.lsst.cloud/docs>`_ page.
+You can also find information about the portal aspect in the `about Firefly <https://data.lsst.cloud/portal/app/onlinehelp/>`_ page (requires credentials) on the `Rubin Science Platform Documentation <https://data.lsst.cloud/docs>`_ page.
 
 .. toctree::
     :titlesonly:

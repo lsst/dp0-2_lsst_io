@@ -7,7 +7,7 @@
     - If a file cannot include a title (surrounded by ampersands (#)), comment out the title from the template and include a comment explaining why this is implemented (in addition to applying the ``title`` directive).
 
 .. This is the label that can be used for cross referencing this file.
-.. Recommended title label format is "Directory Name"-"Title Name"  -- Spaces should be replaced by hyphens.
+.. Recommended title label format is "Directory Name"-"Title Name" -- Spaces should be replaced by hyphens.
 .. _Data-Products-DP0-2-schema-deepCoadd-ref:
 .. Each section should include a label for cross referencing to a given area.
 .. Recommended format for all labels is "Title Name"-"Section Name" -- Spaces should be replaced by hyphens.

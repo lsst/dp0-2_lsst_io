@@ -7,7 +7,7 @@
     - If a file cannot include a title (surrounded by ampersands (#)), comment out the title from the template and include a comment explaining why this is implemented (in addition to applying the ``title`` directive).
 
 .. This is the label that can be used for cross referencing this file.
-.. Recommended title label format is "Directory Name"-"Title Name"  -- Spaces should be replaced by hyphens.
+.. Recommended title label format is "Directory Name"-"Title Name" -- Spaces should be replaced by hyphens.
 .. _Data-Access-Analysis-Tools:
 .. Each section should include a label for cross referencing to a given area.
 .. Recommended format for all labels is "Title Name"-"Section Name" -- Spaces should be replaced by hyphens.
@@ -50,13 +50,13 @@ The Rubin Science Platform (RSP) provides access to Rubin Observatory data produ
 The :ref:`Tools-RSP-Notebook` enables programmatic interaction with, and analysis of, data products in a python environment.
 The :ref:`Tools-RSP-Portal` provides interactive query, data discovery, and visualization tools.
 
-In the DP0-era, the RSP has limited functionality (see :ref:`Data-Access-Analysis-Tools-Warnings`) compared to the Operations-era (see the RSP Vision Document, `LSE-319 <http://ls.st/lse-319>`_).
-In the Operations era, the RSP will feature additional tools in the Application Programming Interface (API) aspect and more options for using the Portal and Notebook aspects in tandem.
+During DP0, the RSP has limited functionality (see :ref:`Data-Access-Analysis-Tools-Warnings`) compared to the Operations-era (see the RSP Vision Document, `LSE-319 <https://ls.st/lse-319>`_).
+During Rubin Observatory Operations, the RSP will feature additional tools in the Application Programming Interface (API) aspect and more options for using the Portal and Notebook aspects in tandem.
 
 .. figure:: /_static/RSP_home.png
     :name: RSP_home
 
-    Above: the `data.lsst.cloud <https://data.lsst.cloud/>`_ dashboard.
+    Screenshot of the `data.lsst.cloud <https://data.lsst.cloud/>`_ dashboard.
     Enter an aspect using the top menu bar or by clicking on the icon.
 
 .. _Tools-RSP-Portal:
