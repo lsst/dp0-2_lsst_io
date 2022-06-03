@@ -46,11 +46,11 @@ Single Table Queries
 **2. Select Query Type**: Select "Single Table (UI assisted)" to query via the single-table interface (default).
 
 **3. Select Table**: Drop down menus of available tables.
-For DP0 data, choose the "Table Collection (Schema): dp01_dc2_catalogs", and then choose the table to query (see the :ref:`DP0-2-Data-Products-DPDD` for a reminder of what tables are available).
+For DP0 data, choose the "Table Collection (Schema): dp02_dc2_catalogs", and then choose the table to query (see the :ref:`DP0-2-Data-Products-DPDD` for a reminder of what tables are available).
 The table view at lower-right will automatically update to match the selected table.
 
 **4. Enter Constraints**: Only "Spatial" constraints apply for DP0.2.
-The longitude and latitude columns will automatically update to be the correct column names for right ascension and declination for the selected table (usually ``ra`` and ``dec`` or ``coord_ra`` and ``coord_dec``).
+The longitude and latitude columns will automatically update to be the correct column names for right ascension and declination for the selected table (in DP0.1 they were ``ra`` and ``dec`` but in DP0.2, they are ``coord_ra`` and ``coord_dec``).
 If a non-existent column name is entered the box will highlight red in indication of the error.
 Choose the desired shape type for a spatial search, ``Cone`` or ``Polygon``, and the appropriate instructions for the search terms will appear.
 Keeping the search area to a minimum will keep processing times short and returned subsets small and manageable.
@@ -60,7 +60,7 @@ The central coordinates for DC2, in decimal degrees, are: ``61.863 -35.790``. (S
 
 *Note*: Although there are two options for "Constraints" (``Spatial`` and ``Temporal``), for DP0.2, all of the catalog data that is available through the Portal is from the coadded DC2 images, and does not contain time-domain information.
 
-**Table View**: The table to the right of "Select Constraints" enables applying additional search constraints on the columns in the selected table.
+**Table View**: The table to the right of "Enter Constraints" enables applying additional search constraints on the columns in the selected table.
 Use the checkboxes in the left-most column to select the columns to be returned by the query.
 Use the filter icon to only view selected columns.
 Many of the attributes of the table columns in the DC2 datasets are blank, but these are expected to be populated in the future Data Previews and Data Releases.
@@ -89,8 +89,8 @@ to limit the number of columns requested for queries expected to return results 
 *Note*: Because of the implementation of the Rubin Observatory `Qserv` database, it is not recommended to use the row limit alone in order to get a "sampling" of data.
 Queries with only a row limit can run for much longer than one might intuitively expect; applying a spatial constrain is likely to return a result more quickly.
 
-The example in the image below queries the dp01_dc2_catalogs.object table using a cone search centered on ``61.863 -35.790`` in decimal degrees (the approximate center of the DC2 region) with a 200 arcsec radius.
-The search will return data in columns ``ra``, ``dec``, ``mag_g``, and ``mag_i`` for all objects with ``mag_g`` and ``mag_i`` brighter than 24th magnitude.
+The example in the image below queries the dp02_dc2_catalogs.object table using a cone search centered on ``62.0 -37.0`` in decimal degrees (close to the approximate center of the DC2 region) with a 0.1 degre radius.
+The search allows you to provide additional constraints, and the example here limits the flux as specified in Column "constraints."  The search will return data in columns ``coord_ra``, ``coord_dec``, ``g_ap25Flux``, and ``i_ap25Flux`` for all objects with ``g_ap25Flux`` and ``1_ap25Flux`` brighter than 1 nanojansky.
 
 .. figure:: /_static/portal_example_search.png
     :name: portal_example_search
