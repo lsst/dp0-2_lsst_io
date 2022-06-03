@@ -53,12 +53,12 @@ The table view at lower-right will automatically update to match the selected ta
 The longitude and latitude columns will automatically update to be the correct column names for right ascension and declination for the selected table (in DP0.1 they were ``ra`` and ``dec`` but in DP0.2, they are ``coord_ra`` and ``coord_dec``).
 If a non-existent column name is entered the box will highlight red in indication of the error.
 Choose the desired shape type for a spatial search, ``Cone`` or ``Polygon``, and the appropriate instructions for the search terms will appear.
-Keeping the search area to a minimum will keep processing times short and returned subsets small and manageable.
+Keeping the search area to a minimum will keep processing times short and returned subsets small and manageable.  You can start with 0.2 degrees. 
 
 *Note*: The examples under the box for coordinates are object names as examples of the syntax and formatting only. Those examples are not guaranteed to be in the accessible data sets.
 The central coordinates for DC2, in decimal degrees, are: ``61.863 -35.790``. (See Table 2 of `The LSST DESC DC2 Simulated Sky Survey <https://ui.adsabs.harvard.edu/abs/2021ApJS..253...31L/abstract>`_.)
 
-*Note*: Although there are two options for "Constraints" (``Spatial`` and ``Temporal``), for DP0.2, all of the catalog data that is available through the Portal is from the coadded DC2 images, and does not contain time-domain information.
+*Note*: Although there are two options for "Constraints" (``Spatial`` and ``Temporal``), for DP0.2, all of the catalog data that are available through the Portal are from the coadded DC2 images, and do not contain time-domain information.
 
 **Table View**: The table to the right of "Enter Constraints" enables applying additional search constraints on the columns in the selected table.
 Use the checkboxes in the left-most column to select the columns to be returned by the query.
@@ -73,16 +73,17 @@ Many of the attributes of the table columns in the DC2 datasets are blank, but t
 Some tables have a lot of columns.
 Search for desired columns by entering terms in the boxes underneath "column_name" or "description".
 Additional constraints on column data can be included in the query by specifying them under "constraints".
+One constraint we will use here is to limit the range of fluxes of selected objects.  In our example, the fluxes are given in nanojanskys, and we will use ``>10 and <1000``.  When we are ready to plot, we will convert those to magnitudes by taking logs of fluxes.  
 Mouse-over to view pop-up boxes with instructions.
 
-Remove filters and reset the table view at any time using the "Remove" or "Reset" buttons above the upper-right corner of the table (not shown in image above).
+You can remove filters and reset the table view at any time using the "Remove" or "Reset" buttons above the upper-right corner of the table (not shown in image above).
 
 If desired, convert table view queries to `ADQL Queries` using the "Populate and Edit ADQL" button at the bottom of the page.
 This can enable entering more complex constraints that cannot be expressed against individual columns.
 
 **Search:** Press the search button at lower left when ready to execute.
 
-The `Row Limit` may be changed to apply an upper bound to the number of rows returned.
+The `Row Limit` may be changed to apply an upper bound to the number of rows returned.  For starters, you can select 10000.  
 The Portal can work effectively with datasets with up to a million rows, or even more; however, in the present implementation of the RSP it is advisable
 to limit the number of columns requested for queries expected to return results on such a scale: `SELECT *` for 100,000+ rows can return datasets of unwieldy total size.
 
@@ -90,7 +91,7 @@ to limit the number of columns requested for queries expected to return results 
 Queries with only a row limit can run for much longer than one might intuitively expect; applying a spatial constrain is likely to return a result more quickly.
 
 The example in the image below queries the dp02_dc2_catalogs.object table using a cone search centered on ``62.0 -37.0`` in decimal degrees (close to the approximate center of the DC2 region) with a 0.1 degre radius.
-The search allows you to provide additional constraints, and the example here limits the flux as specified in Column "constraints."  The search will return data in columns ``coord_ra``, ``coord_dec``, ``g_ap25Flux``, and ``i_ap25Flux`` for all objects with ``g_ap25Flux`` and ``1_ap25Flux`` brighter than 1 nanojansky.
+The search allows you to provide additional constraints, and the example here limits the flux as specified in Column "constraints."  The search will return data in columns ``coord_ra``, ``coord_dec``, ``g_ap25Flux``, and ``i_ap25Flux`` for all objects with ``g_ap25Flux`` and ``i_ap25Flux`` in the range you specified, between 10 and 1000 nanojansky.  
 
 .. figure:: /_static/portal_example_search.png
     :name: portal_example_search
@@ -120,14 +121,17 @@ Thus for DP0, the "xy-tbl" is the most relevant view for results.
 To manipulate the plotted data, select the double gear "settings" icon above the x-y plot and a pop-up window will open (see the next figure).
 Select other columns to use, change the symbol type and color, and so forth, and click "Apply".
 
+The data in the DP0.2 tables are given in units of nanojansky.  Astronomers often prefer to display or plot data in a form of magnitudes.  Since our original goal was to plot a color-magnitude diagram of the objects selected according to our query, we can enter the following values:  
+``log(r_ap25Flux) - log(i_ap25Flux)`` in the "X" box, and ``log(g_ap25Flux)`` box for the "Y" box.  
+
 .. figure:: /_static/portal_results_xy_settings.png
     :name: portal_results_xy_settings
     :width: 200
 
     The plot settings pop-up window.
 
-Additional cuts can be applied to the plotted data using the table query boxes, such as in the next image where a limit of ``mag_g`` brighter than 22 mag is used.
-Note that corresponding plot point for the selected row in the table is differently colored, and that hovering the mouse over the plotted data will show the x- and yvalues in a pop-up window.
+Additional cuts can be applied to the plotted data using the table query boxes, for instance where you select a different range of fluxes.  
+Note that corresponding plot point for the selected row in the table is differently colored, and that hovering the mouse over the plotted data will show the x- and y-values in a pop-up window.
 
 .. figure:: /_static/portal_results_final.png
     :name: portal_results_final
