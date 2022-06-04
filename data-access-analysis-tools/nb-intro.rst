@@ -96,7 +96,7 @@ To help users avoid issues with stale instances, sessions will be automatically 
 How to use the JupyterLab terminal
 ==================================
 
-The LSST data sets and the LSST Science Pipelines tools can both be accessed from the command line of a JupyterLab terminal tab.
+The :ref:`Data-Products-DP0-2-Data-Products` and the `LSST Science Pipelines'<https://pipelines.lsst.io/>`_ tools can both be accessed from the command line of a JupyterLab terminal tab.
 A terminal session can be started by clicking on the terminal icon in the Jupyterlab launch pad.
 As described in the default message that appears in all newly-launched terminals, to create a Rubin Observatory environment in a JupyterLab terminal session and set up the full set of packages, users must first execute:
 
@@ -152,7 +152,7 @@ Jupyter notebook frequently asked questions
 What is a kernel?
 -----------------
 
-In the RSP Notebook Aspect, your notebooks will be operating in a kernel that has access to the full Rubin Science Pipelines, including the Butler (see :ref:`NB-Intro-Use-A-NB-faq-butler`, below).
+In the RSP Notebook Aspect, your notebooks will be operating in a kernel that has access to the full `LSST Science Pipelines<https://pipelines.lsst.io/>`_, including the Butler (see :ref:`NB-Intro-Use-A-NB-faq-butler`, below).
 Many standard Python libraries and modules will be available, and users can `install <https://nb.lsst.io/environment/python.html>`_ additional Python tools they wish to use.
 See also `this tutorial on installing python packages<https://packaging.python.org/en/latest/tutorials/installing-packages/>`_
 (which includes, e.g., use of ``pip install``).
@@ -167,7 +167,7 @@ Is all the code in Python?
 Yes, the RSP Notebook Aspect will only have python environments for DP0.
 
 To access data from the Notebook Aspect, users will need to use Python commands and code.
-Much of the LSST Science Pipelines code is in Python, and the DP0 :ref:`DP0-2-Tutorials-Notebooks` use Python as well.
+Much of the `LSST Science Pipelines<https://pipelines.lsst.io/>`_ code is in Python, and the DP0 :ref:`DP0-2-Tutorials-Notebooks` use Python as well.
 These tutorials contain executable examples of the commands required to access and analyze data.
 All DP0 delegates should feel free to copy and paste from the provided tutorials.
 
@@ -304,4 +304,3 @@ Now your notebooks/tutorial-notebooks directory only contains the most up-to-dat
    git pull
 
 Using any of the above options is the preferred method to update your tutorial notebooks, but as a last resort, you can delete the entire ``tutorial-notebooks`` directory, log out and stop the server, and then log back in again.
-
