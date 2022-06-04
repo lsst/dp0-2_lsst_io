@@ -20,11 +20,11 @@ Introduction to the RSP Notebook Aspect
 
 .. This section should provide a brief, top-level description of the page.
 
-Most RSP users will find Jupyter Notebooks to be the most efficient and powerful way to interact with the DP0.2 data set.
-For DP0.2, Jupyter Notebooks will be the primary way to access images.
+Most RSP users will find Jupyter Notebooks to be the most efficient and powerful way to interact with the LSST data sets.
 
 **Always save and shutdown all notebooks and log out of JupyterLab when you are done your day's work.**
 This is important to preserve resources for other users and to ensure you re-enter the RSP in a known state every time.
+To help users avoid issues with stale instances, sessions will be automatically shut-down after 5 days of inactivity, or after 25 days.
 
 
 .. _NB-Intro-Login:
@@ -45,7 +45,7 @@ Most users will choose the recommended software version and a medium server size
     Most users will choose the recommended software version and a medium size.
 
 The term "image" atop the left box refers to a "Docker image" that defines the software packages and their versions which will be automatically loaded in the server environment.
-The "recommended" image will be updated on a monthly basis during DP0.2 to encourage users to adapt to using software that is in active development, and to benefit from the bug fixes and updates made by Rubin Observatory staff.
+The "recommended" image will be updated on a regular (monthly) basis to encourage users to adapt to using software that is in active development, and to benefit from the bug fixes and updates made by Rubin Observatory staff.
 Older images will remain accessible to users.
 
 RSP users who are doing a lot of image processing might need to select a large server, and those who are working with small subsets of catalog data can use a small server.
@@ -60,10 +60,8 @@ Pressing the orange "Start" button to start the server returns this page with a 
     Be patient. Sometimes it takes a couple of minutes to start a server.
 
 **Navigating the JupyterLab Interface:**
-The JupyterLab landing page in the figure below is the launch pad for all JupyterLab functionality (e.g., Notebook, Terminal).
+The JupyterLab landing page in the figure below is the launch pad for all JupyterLab functionality (e.g., Notebook, Terminal, Python console).
 Return to this launch pad at any time by clicking the plus symbol at upper-left.
-For DP0.2, most users will prefer using the Notebook or Terminal, but there is also a Python console available.
-In order to duplicate catalog queries executed in the Portal, re-execute the query using the TAP client available in the Notebook.
 
 .. figure:: /_static/RSP_NB_launcher_options.png
     :width: 400
@@ -80,13 +78,14 @@ Although the file browser is a handy way to navigate your user home space, it do
 One way to make other spaces available in the file browser is to create a `symbolic link <https://en.m.wikipedia.org/wiki/Symbolic_link>`_ using the Terminal to the desired space somewhere in your home directory.
 
 Jupyter Notebooks can be identified by their file extension ``.ipynb``.
-All users will find a set of tutorial notebooks provided in the "notebooks/" directory.
+All users will find a set of tutorial notebooks provided in the "notebooks/tutorial-notebooks/" directory.
 
 **Safely Log Out of JupyterLab:**
 Use the "File" menu in the top menu bar.
 To safely shut down a Notebook, choose "Close and Shutdown Notebook".
 To safely shut down a JupyterLab server and log out of the RSP, choose "Save all, Exit, and Log Out".
 It is recommended you log out every time you are finished with a session in order to both preserve resources for other users and to ensure you re-enter the RSP in a known state every time.
+To help users avoid issues with stale instances, sessions will be automatically shut-down after 5 days of inactivity, or after 25 days.
 
 
 .. _NB-Intro-Use-A-JL-terminal:
@@ -94,7 +93,7 @@ It is recommended you log out every time you are finished with a session in orde
 How to use the JupyterLab terminal
 ==================================
 
-The DP0.2 data sets and the LSST Science Pipelines tools can both be accessed from the command line of a JupyterLab terminal tab.
+The LSST data sets and the LSST Science Pipelines tools can both be accessed from the command line of a JupyterLab terminal tab.
 A terminal session can be started by clicking on the terminal icon in the Jupyterlab launch pad.
 As described in the default message that appears in all newly-launched terminals, to create a Rubin Observatory environment in a JupyterLab terminal session and set up the full set of packages, users must first execute:
 
@@ -103,7 +102,7 @@ As described in the default message that appears in all newly-launched terminals
    source ${LOADSTACK}
    setup lsst_distrib
 
-For example, to query and retrieve DP0.2 data sets using the Butler (see below), command-line tools are available as `documented here <https://pipelines.lsst.io/v/weekly/modules/lsst.daf.butler/scripts/butler.html>`_.
+For example, to query and retrieve data sets using the Butler (see :ref:`NB-Intro-Use-A-NB-faq-butler`, below), command-line tools are available as `documented here <https://pipelines.lsst.io/v/weekly/modules/lsst.daf.butler/scripts/butler.html>`_.
 Type ``butler --help`` in any terminal to see a list of available butler functionality.
 
 
@@ -144,30 +143,58 @@ Note that JupyterLab autosaves your notebooks at a default rate of 2 minutes.
 Jupyter notebook frequently asked questions
 ===========================================
 
+
+.. _NB-Intro-Use-A-NB-faq-kernel:
+
 What is a kernel?
 -----------------
 
-In the RSP Notebook Aspect, your notebooks will be operating in a kernel that has access to the full Rubin Science Pipelines, including the "Butler" (see below) that will be your main access tool to extract images and catalogs from the DP0.2 data.
+In the RSP Notebook Aspect, your notebooks will be operating in a kernel that has access to the full Rubin Science Pipelines, including the Butler (see :ref:`NB-Intro-Use-A-NB-faq-butler`, below).
 Many standard Python libraries and modules will be available, and users can `install <https://nb.lsst.io/environment/python.html>`_ additional Python tools they wish to use.
+See also `this tutorial on installing python packages<https://packaging.python.org/en/latest/tutorials/installing-packages/>`_
+(which includes, e.g., use of ``pip install``).
+To view a list of packages available to you, type ``pip list`` in a terminal.
+
+
+.. _NB-Intro-Use-A-NB-faq-python:
 
 Is all the code in Python?
 --------------------------
 
 Yes, the RSP Notebook Aspect will only have python environments for DP0.
-To access DP0.2 data from the Notebook Aspect, users will need to use Python commands and code.
+
+To access data from the Notebook Aspect, users will need to use Python commands and code.
 Much of the LSST Science Pipelines code is in Python, and the DP0 :ref:`DP0-2-Tutorials-Notebooks` use Python as well.
 These tutorials contain executable examples of the commands required to access and analyze data.
 All DP0 delegates should feel free to copy and paste from the provided tutorials.
-Anyone new to Python and looking to learn more might benefit from this `Python for Beginners <https://www.python.org/about/gettingstarted>`_ website (which includes links to tutorial in a variety of languages).
+
+Anyone new to Python and looking to learn more might benefit from this `Python for Beginners <https://www.python.org/about/gettingstarted>`_ website (which includes links to tutorial in a variety of languages),
+or this Community Forum thread where DP0 delegates can share `resources for python beginners<https://community.lsst.org/t/5975>`_.
 Web searches for "python *(thing you want to do)*" are usually pretty successful too.
+
+
+.. _NB-Intro-Use-A-NB-faq-github:
+
+Do I need to know git?
+----------------------
+
+Git is free open-sourced software for change-tracking and version control of any set of files that are edited by one or more contributors.
+GitHub is a web-based provider for git functionality, plus a few of its own features.
+Although use of git and GitHub are not neccessary for DP0 participation, most Rubin Observatory staff and LSST Science Collaborations use git and GitHub, and it is highly recommended by the Community Engagement Team for all RSP users.
+In this Community Forum thread, everyone can find and share `resources for learning about git and GitHub<https://community.lsst.org/t/resources-for-github/6153>`_.
+
+
+.. _NB-Intro-Use-A-NB-faq-butler:
 
 What is the Butler?
 -------------------
 
-The Butler is a middleware component of the Data Management System (DMS) for persisting and retrieving datasets from the DP0.2 data repository.
-The only way to access DP0.2 images is via the Butler from a Jupyter Notebook.
+The Butler is a middleware component of the Data Management System (DMS) for persisting and retrieving datasets.
 The third generation "Gen3" Butler is the version being used for DP0.2.
-Full `Butler documentation <https://pipelines.lsst.io/modules/lsst.daf.butler/index.html>`_ is available, and one of the :ref:`DP0-2-Tutorials-Notebooks` focuses on Butler use as well.
+Full `Butler documentation <https://pipelines.lsst.io/modules/lsst.daf.butler/index.html>`_ is available, and several of the :ref:`DP0-2-Tutorials-Notebooks` demonstrate Butler use as well.
+
+
+.. _NB-Intro-Use-A-NB-faq-questions:
 
 How do I ask more questions about the RSP's Notebook Aspect?
 ------------------------------------------------------------
@@ -211,8 +238,8 @@ and move their ``.local`` file out of the way by renaming it as something else, 
 There will be no need to recreate the ``.local`` directory after this.
 The user should then restart the notebook (or, e.g., ipython session) and try to import the packages.
 
-What to do if DP0.2 Tutorial Notebooks Do Not Automatically Update
-------------------------------------------------------------------
+What to do if Tutorial Notebooks Do Not Automatically Update
+------------------------------------------------------------
 
 New versions of the tutorial notebooks will be periodically released by the Community Engagement Team (CET).
 The contents of your ``notebooks/tutorial-notebooks/`` directory should automatically update when a new version of a tutorial notebook is released.
