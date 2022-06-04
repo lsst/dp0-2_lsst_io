@@ -26,6 +26,9 @@ Most RSP users will find Jupyter Notebooks to be the most efficient and powerful
 This is important to preserve resources for other users and to ensure you re-enter the RSP in a known state every time.
 To help users avoid issues with stale instances, sessions will be automatically shut-down after 5 days of inactivity, or after 25 days.
 
+This page focuses on the basic instructions for using the RSP Notebook Aspect, and a few FAQs and Troubleshooting Tips.
+The full documentation for the RSP Notebook Aspect is available at `nb.lsst.io <https://nb.lsst.io/>`_.
+
 
 .. _NB-Intro-Login:
 
@@ -302,10 +305,3 @@ Now your notebooks/tutorial-notebooks directory only contains the most up-to-dat
 
 Using any of the above options is the preferred method to update your tutorial notebooks, but as a last resort, you can delete the entire ``tutorial-notebooks`` directory, log out and stop the server, and then log back in again.
 
-
-.. _NB-Intro-Other_Docs:
-
-Additional RSP notebook documentation
-=====================================
-
-Additional documentation for the RSP Notebook Aspect is available at `nb.lsst.io <https://nb.lsst.io/>`_.
