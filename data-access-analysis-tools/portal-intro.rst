@@ -47,6 +47,7 @@ Single Table Queries
 
 **3. Select Table**: Drop down menus of available tables.
 For DP0 data, choose the "Table Collection (Schema): dp02_dc2_catalogs", and then choose the table to query (see the :ref:`DP0-2-Data-Products-DPDD` for a reminder of what tables are available).
+On the right-hand side of the panel, select "dp02_dc2_catalogs.Object" from the drop-down menu.  
 The table view at lower-right will automatically update to match the selected table.
 
 **4. Enter Constraints**: Only "Spatial" constraints apply for DP0.2.
@@ -73,7 +74,7 @@ Many of the attributes of the table columns in the DC2 datasets are blank, but t
 Some tables have a lot of columns.
 Search for desired columns by entering terms in the boxes underneath "column_name" or "description".
 Additional constraints on column data can be included in the query by specifying them under "constraints".
-One constraint we will use here is to limit the range of fluxes of selected objects.  In our example, the fluxes are given in nanojanskys, and we will use ``>10 and <1000``.  When we are ready to plot, we will convert those to magnitudes by taking logs of fluxes.  
+One constraint we will use here is to limit the range of fluxes of selected objects.  In our example, the fluxes are given in nanojanskys, and we will use ``>20 and <1000``.  When we are ready to plot, we will convert those to magnitudes by taking logs of fluxes.  
 Mouse-over to view pop-up boxes with instructions.
 
 You can remove filters and reset the table view at any time using the "Remove" or "Reset" buttons above the upper-right corner of the table (not shown in image above).
@@ -90,8 +91,8 @@ to limit the number of columns requested for queries expected to return results 
 *Note*: Because of the implementation of the Rubin Observatory `Qserv` database, it is not recommended to use the row limit alone in order to get a "sampling" of data.
 Queries with only a row limit can run for much longer than one might intuitively expect; applying a spatial constrain is likely to return a result more quickly.
 
-The example in the image below queries the dp02_dc2_catalogs.object table using a cone search centered on ``62.0 -37.0`` in decimal degrees (close to the approximate center of the DC2 region) with a 0.1 degre radius.
-The search allows you to provide additional constraints, and the example here limits the flux as specified in Column "constraints."  The search will return data in columns ``coord_ra``, ``coord_dec``, ``g_ap25Flux``, and ``i_ap25Flux`` for all objects with ``g_ap25Flux`` and ``i_ap25Flux`` in the range you specified, between 10 and 1000 nanojansky.  
+The example in the image below queries the dp02_dc2_catalogs.object table using a cone search centered on ``62.0 -37.0`` in decimal degrees (close to the approximate center of the DC2 region) with a 3 arcminutes radius.
+The search allows you to provide additional constraints, and the example here limits the flux as specified in Column "constraints."  The search will return data in columns ``coord_ra``, ``coord_dec``, ``g_calibFlux``, ``r_calibFlux``, and ``i_calibFlux`` for all objects with ``g_calibFlux``, ``i_calibFlux``, and ``i_calibFlux`` in the range you specified, between 10 and 1000 nanojansky.  
 
 .. figure:: /_static/portal_example_search.png
     :name: portal_example_search
@@ -122,7 +123,7 @@ To manipulate the plotted data, select the double gear "settings" icon above the
 Select other columns to use, change the symbol type and color, and so forth, and click "Apply".
 
 The data in the DP0.2 tables are given in units of nanojansky.  Astronomers often prefer to display or plot data in a form of magnitudes.  Since our original goal was to plot a color-magnitude diagram of the objects selected according to our query, we can enter the following values:  
-``log(r_ap25Flux) - log(i_ap25Flux)`` in the "X" box, and ``log(g_ap25Flux)`` box for the "Y" box.  
+``log(r_calibFlux) - log(i_calibFlux)`` in the "X" box, and ``log(g_calibFlux)`` box for the "Y" box.  
 
 .. figure:: /_static/portal_results_xy_settings.png
     :name: portal_results_xy_settings
