@@ -54,7 +54,7 @@ The table view at lower-right will automatically update to match the selected ta
 The longitude and latitude columns will automatically update to be the correct column names for right ascension and declination for the selected table (in DP0.1 they were ``ra`` and ``dec`` but in DP0.2, they are ``coord_ra`` and ``coord_dec``).
 If a non-existent column name is entered the box will highlight red in indication of the error.
 Choose the desired shape type for a spatial search, ``Cone`` or ``Polygon``, and the appropriate instructions for the search terms will appear.
-Keeping the search area to a minimum will keep processing times short and returned subsets small and manageable.  You can start with 0.2 degrees. 
+Keeping the search area to a minimum will keep processing times short and returned subsets small and manageable.  You can start with 3 arc minutes. 
 
 *Note*: The examples under the box for coordinates are object names as examples of the syntax and formatting only. Those examples are not guaranteed to be in the accessible data sets.
 The central coordinates for DC2, in decimal degrees, are: ``61.863 -35.790``. (See Table 2 of `The LSST DESC DC2 Simulated Sky Survey <https://ui.adsabs.harvard.edu/abs/2021ApJS..253...31L/abstract>`_.)
@@ -92,7 +92,7 @@ to limit the number of columns requested for queries expected to return results 
 Queries with only a row limit can run for much longer than one might intuitively expect; applying a spatial constrain is likely to return a result more quickly.
 
 The example in the image below queries the dp02_dc2_catalogs.object table using a cone search centered on ``62.0 -37.0`` in decimal degrees (close to the approximate center of the DC2 region) with a 3 arcminutes radius.
-The search allows you to provide additional constraints, and the example here limits the flux as specified in Column "constraints."  The search will return data in columns ``coord_ra``, ``coord_dec``, ``g_calibFlux``, ``r_calibFlux``, and ``i_calibFlux`` for all objects with ``g_calibFlux``, ``i_calibFlux``, and ``i_calibFlux`` in the range you specified, between 10 and 1000 nanojansky.  
+The search allows you to provide additional constraints, and the example here limits the flux as specified in Column "constraints."  The search will return data in columns ``coord_ra``, ``coord_dec``, ``g_calibFlux``, ``r_calibFlux``, and ``i_calibFlux`` for all objects with ``g_calibFlux``, ``i_calibFlux``, and ``i_calibFlux`` in the range you specified, between 20 and 1000 nanojansky.  
 
 .. figure:: /_static/portal_example_search.png
     :name: portal_example_search
