@@ -31,8 +31,8 @@ The Portal's user interface
 Across the top is a menu bar of interface options, but the DP0 data set is only accessed via the :ref:`Data-Access-Analysis-Tools-TAP` reached via the "RSP TAP Search" button.
 Under **TAP Searches** there are four steps.
 
-.. figure:: /_static/portal_default_view.png
-    :name: portal_default_view
+.. figure:: /_static/portal_default_view_DP02.png
+    :name: portal_default_view_DP02
 
     This is the default view upon entering the Portal Aspect.
 
@@ -66,8 +66,8 @@ Use the checkboxes in the left-most column to select the columns to be returned 
 Use the filter icon to only view selected columns.
 Many of the attributes of the table columns in the DC2 datasets are blank, but these are expected to be populated in the future Data Previews and Data Releases.
 
-.. figure:: /_static/portal_table_view.png
-    :name: portal_table_view
+.. figure:: /_static/portal_table_view_DP02.png
+    :name: portal_table_view_DP02
 
     The table view offers additional query options.
 
@@ -94,8 +94,8 @@ Queries with only a row limit can run for much longer than one might intuitively
 The example in the image below queries the dp02_dc2_catalogs.object table using a cone search centered on ``62.0 -37.0`` in decimal degrees (close to the approximate center of the DC2 region) with a 3 arcminutes radius.
 The search allows you to provide additional constraints, and the example here limits the flux as specified in Column "constraints."  The search will return data in columns ``coord_ra``, ``coord_dec``, ``g_calibFlux``, ``r_calibFlux``, and ``i_calibFlux`` for all objects with ``g_calibFlux``, ``i_calibFlux``, and ``i_calibFlux`` in the range you specified, between 20 and 1000 nanojansky.  
 
-.. figure:: /_static/portal_example_search.png
-    :name: portal_example_search
+.. figure:: /_static/portal_example_search_DP02.png
+    :name: portal_example_search_DP02
 
     An example query of the DC2 Object catalog.
 
@@ -107,8 +107,8 @@ The search allows you to provide additional constraints, and the example here li
 
 **Results View**: The search results will populate the results view, as shown in the next figure.
 
-.. figure:: /_static/portal_search_results.png
-    :name: portal_search_results
+.. figure:: /_static/portal_search_results_DP02.png
+    :name: portal_search_results_DP02
 
     The default view of the search results.
 
@@ -125,8 +125,8 @@ Select other columns to use, change the symbol type and color, and so forth, and
 The data in the DP0.2 tables are given in units of nanojansky.  Astronomers often prefer to display or plot data in a form of magnitudes.  Since our original goal was to plot a color-magnitude diagram of the objects selected according to our query, we can enter the following values:  
 ``log(r_calibFlux) - log(i_calibFlux)`` in the "X" box, and ``log(g_calibFlux)`` box for the "Y" box.  
 
-.. figure:: /_static/portal_results_xy_settings.png
-    :name: portal_results_xy_settings
+.. figure:: /_static/portal_results_xy_settings_DP02.png
+    :name: portal_results_xy_settings_DP02
     :width: 200
 
     The plot settings pop-up window.
@@ -134,8 +134,8 @@ The data in the DP0.2 tables are given in units of nanojansky.  Astronomers ofte
 Additional cuts can be applied to the plotted data using the table query boxes, for instance where you select a different range of fluxes.  
 Note that corresponding plot point for the selected row in the table is differently colored, and that hovering the mouse over the plotted data will show the x- and y-values in a pop-up window.
 
-.. figure:: /_static/portal_results_final.png
-    :name: portal_results_final
+.. figure:: /_static/portal_results_final_DP02.png
+    :name: portal_results_final_DP02
 
     An updated results view in which the xy plot uses the magnitude columns.
 
