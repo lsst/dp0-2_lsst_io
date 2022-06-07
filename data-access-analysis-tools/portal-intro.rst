@@ -72,10 +72,10 @@ Many of the attributes of the table columns in the DC2 datasets are blank, but t
     The table view offers additional query options.
 
 Some tables have a lot of columns.
-Search for desired columns by entering terms in the boxes underneath "column_name" or "description".
-Additional constraints on column data can be included in the query by specifying them under "constraints".
+Search for desired columns by entering terms in the boxes underneath "column_name" or "description".  
+Additional constraints on column data can be included in the query by specifying them under "constraints".  
 One constraint we will use here is to limit the range of fluxes of selected objects.  In our example, the fluxes are given in nanojanskys, and we will use ``>20 and <1000``.  When we are ready to plot, we will convert those to magnitudes by taking logs of fluxes.  
-Mouse-over to view pop-up boxes with instructions.
+Mouse-over to view pop-up boxes with instructions.   
 
 You can remove filters and reset the table view at any time using the "Remove" or "Reset" buttons above the upper-right corner of the table (not shown in image above).
 
