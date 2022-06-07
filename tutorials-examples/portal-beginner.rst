@@ -104,7 +104,7 @@ Next, click on the double gear icon on the upper right-hand window, as shown in 
     :name: Select_double_gear
 
 Finally, change the parameters in the selection box.
-Set **X** to be ``mag_r - mag_i`` and set **Y** to be ``mag_g``.
+Set **X** to be ``-1.0857*log(r_calibFlux/3.631e12+1.0857*log(i_calibFlux/3.631e12)`` and set **Y** to be ``1.0857*log(g_calibFlux/3.631e12)``.
 Under **Chart Options**, select "reverse" under the "Y Label".
 
 .. figure:: /_static/Edit_chart_data.png
