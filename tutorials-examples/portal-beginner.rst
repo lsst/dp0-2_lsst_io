@@ -52,7 +52,7 @@ Select columns for analysis
 ===========================
 
 In the "Output Column Selection and Constraints" window on the lower right-hand side of the under **Enter Constraints**, select the following items:
-``coord_ra``, ``coord_dec``, ``g_cModelFlux``, ``i_cModelFlux``, ``r_cModelFlux``
+``coord_ra``, ``coord_dec``, ``g_calibFlux``, ``i_calibFlux``, ``r_calibFlux``
 
 ..  ``clean``, ``dec``, ``extendedness``, ``good``, ``mag_g``, ``mag_i``, ``mag_r``, ``magerr_g``, ``magerr_i``, ``magerr_r``, and ``ra``.
 
@@ -75,8 +75,8 @@ Select columns constraints
 
 After you press the filter icon, you should have only those items you selected shown in the "Output Column Selection and Constraints" table.
 You may now add your column constaints to the table.
-For this example, use the following values, which limi the source fluxes to the range of 20 - 1000 nanojansky: 
-``coord_ra`` leave blank, ``coord_dec`` leave blank, ``g_cModelFlux`` >20 and < 1000, ``i_cModelFlux ``>20 and < 1000, ``r_cModelFlux`` >20 and < 1000,
+For this example, use the following values, which limi the source fluxes to the range of 30 - 1000 nanojansky: 
+``coord_ra`` leave blank, ``coord_dec`` leave blank, ``g_calibFlux`` >30 and < 1000, ``i_calibFlux ``>30 and < 1000, ``r_calibFlux`` >30 and < 1000,
 
 .. ``clean`` = 1, ``dec`` leave blank, ``xtendedness`` = 0, ``good`` = 1, ``mag_g`` <24, ``mag_i`` <24, ``mag_r`` <24, ``magerr_g`` < 0.1, ``magerr_i`` < 0.1, ``magerr_r`` < 0.1, ``ra`` (leave blank).
 
