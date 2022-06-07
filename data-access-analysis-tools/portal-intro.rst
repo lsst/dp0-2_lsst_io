@@ -50,8 +50,8 @@ For DP0 data, choose the "Table Collection (Schema): dp02_dc2_catalogs", and the
 On the right-hand side of the panel, select "dp02_dc2_catalogs.Object" from the drop-down menu.  
 The table view at lower-right will automatically update to match the selected table.
 
-**4. Enter Constraints**: Only "Spatial" constraints apply for DP0.2.
-The longitude and latitude columns will automatically update to be the correct column names for right ascension and declination for the selected table (in DP0.1 they were ``ra`` and ``dec`` but in DP0.2, they are ``coord_ra`` and ``coord_dec``).
+**4. Enter Constraints**: For now, only "Spatial" constraints apply for DP0.2.
+The longitude and latitude columns will not automatically update to be the correct column names for right ascension and declination for the selected table - you have to enter it manually (note that in DP0.1 they were ``ra`` and ``dec`` but in DP0.2, they are ``coord_ra`` and ``coord_dec``).
 If a non-existent column name is entered the box will highlight red in indication of the error.
 Choose the desired shape type for a spatial search, ``Cone`` or ``Polygon``, and the appropriate instructions for the search terms will appear.
 Keeping the search area to a minimum will keep processing times short and returned subsets small and manageable.  You can start with 3 arc minutes. 
@@ -59,7 +59,7 @@ Keeping the search area to a minimum will keep processing times short and return
 *Note*: The examples under the box for coordinates are object names as examples of the syntax and formatting only. Those examples are not guaranteed to be in the accessible data sets.
 The central coordinates for DC2, in decimal degrees, are: ``61.863 -35.790``. (See Table 2 of `The LSST DESC DC2 Simulated Sky Survey <https://ui.adsabs.harvard.edu/abs/2021ApJS..253...31L/abstract>`_.)
 
-*Note*: Although there are two options for "Constraints" (``Spatial`` and ``Temporal``), for DP0.2, all of the catalog data that are available through the Portal are from the coadded DC2 images, and do not contain time-domain information.
+*Note*: Although there are two options for "Constraints" (``Spatial`` and ``Temporal``), for DP0.2, currently all of the catalog data that are available through the Portal are from the coadded DC2 images, and do not contain time-domain information.
 
 **Table View**: The table to the right of "Enter Constraints" enables applying additional search constraints on the columns in the selected table.
 Use the checkboxes in the left-most column to select the columns to be returned by the query.
@@ -91,7 +91,7 @@ to limit the number of columns requested for queries expected to return results 
 *Note*: Because of the implementation of the Rubin Observatory `Qserv` database, it is not recommended to use the row limit alone in order to get a "sampling" of data.
 Queries with only a row limit can run for much longer than one might intuitively expect; applying a spatial constrain is likely to return a result more quickly.
 
-The example in the image below queries the dp02_dc2_catalogs.object table using a cone search centered on ``62.0 -37.0`` in decimal degrees (close to the approximate center of the DC2 region) with a 3 arcminutes radius.
+The example in the image below queries the dp02_dc2_catalogs.Object table using a cone search centered on ``62.0 -37.0`` in decimal degrees (close to the approximate center of the DC2 region) with a 3 arcminutes radius.
 The search allows you to provide additional constraints, and the example here limits the flux as specified in Column "constraints."  The search will return data in columns ``coord_ra``, ``coord_dec``, ``g_calibFlux``, ``r_calibFlux``, and ``i_calibFlux`` for all objects with ``g_calibFlux``, ``i_calibFlux``, and ``i_calibFlux`` in the range you specified, between 20 and 1000 nanojansky.  
 
 .. figure:: /_static/portal_example_search_DP02.png
@@ -123,7 +123,8 @@ To manipulate the plotted data, select the double gear "settings" icon above the
 Select other columns to use, change the symbol type and color, and so forth, and click "Apply".
 
 The data in the DP0.2 tables are given in units of nanojansky.  Astronomers often prefer to display or plot data in a form of magnitudes.  Since our original goal was to plot a color-magnitude diagram of the objects selected according to our query, we can enter the following values:  
-``log(r_calibFlux) - log(i_calibFlux)`` in the "X" box, and ``log(g_calibFlux)`` box for the "Y" box.  
+``-1.0857*log(r_calibFlux/3.631e12)+1.0857*log(i_calibFlux/3.631e12)`` in the "X" box, and ``-1.0857log(g_calibFlux/3.631e12)`` box for the "Y" box.  
+Here, the log function in the "expression" for the plot is a natural log, and so the 1.0857 factor is a ratio of 2.5 over ln(10).  The 3.631 is the standard AB conversion factor from flux to magnitude.  
 
 .. figure:: /_static/portal_results_xy_settings_DP02.png
     :name: portal_results_xy_settings_DP02
@@ -137,7 +138,7 @@ Note that corresponding plot point for the selected row in the table is differen
 .. figure:: /_static/portal_results_final_DP02.png
     :name: portal_results_final_DP02
 
-    An updated results view in which the xy plot uses the magnitude columns.
+    An updated results view in which the xy plot uses the magnitude columns:  mag(r)-mag(i) on the x-axis, mag(g) on the y-axis.  
 
 See also :ref:`DP0-2-Tutorials-Portal` for additional demonstrations of how to use the Portal's Single Table Query.
 
