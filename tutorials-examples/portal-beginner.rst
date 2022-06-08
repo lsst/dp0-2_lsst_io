@@ -40,7 +40,7 @@ This is demonstrated in the next figure.
 
 Next, select the "Spatial" checkbox under **Enter Constraints**, and for the "Longitude Column" and "Latitude Column" enter ``coord-ra`` and ``coord-dec``.
 Enter the coordinates of ``62.0, -37.0`` in the "Coordinates or Object Name:" area.
-Choose a radius of ``0.1 degree`` and select a row limit of ``10000``, as shown in the next figure.
+Choose a radius of ``3 arcminutes`` and select a row limit of ``10000``, as shown in the next figure.
 
 .. figure:: /_static/Spacial_data.png
     :name: Spatial_data
@@ -76,7 +76,7 @@ Select columns constraints
 After you press the filter icon, you should have only those items you selected shown in the "Output Column Selection and Constraints" table.
 You may now add your column constaints to the table.
 For this example, use the following values, which limi the source fluxes to the range of 30 - 1000 nanojansky: 
-``coord_ra`` leave blank, ``coord_dec`` leave blank, ``g_calibFlux`` >30 and < 1000, ``i_calibFlux ``>30 and < 1000, ``r_calibFlux`` >30 and < 1000,
+``coord_ra`` leave blank, ``coord_dec`` leave blank, ``g_calibFlux`` >20 and < 1000, ``i_calibFlux ``>20 and < 1000, ``r_calibFlux`` >20 and < 1000,
 
 .. ``clean`` = 1, ``dec`` leave blank, ``xtendedness`` = 0, ``good`` = 1, ``mag_g`` <24, ``mag_i`` <24, ``mag_r`` <24, ``magerr_g`` < 0.1, ``magerr_i`` < 0.1, ``magerr_r`` < 0.1, ``ra`` (leave blank).
 
@@ -104,7 +104,7 @@ Next, click on the double gear icon on the upper right-hand window, as shown in 
     :name: Select_double_gear
 
 Finally, change the parameters in the selection box.
-Set **X** to be ``-1.0857*log(r_calibFlux/3.631e12+1.0857*log(i_calibFlux/3.631e12)`` and set **Y** to be ``1.0857*log(g_calibFlux/3.631e12)``.
+Set **X** to be ``-1.0857*log(r_calibFlux/3.631e12)+1.0857*log(i_calibFlux/3.631e12)`` and set **Y** to be ``1.0857*log(g_calibFlux/3.631e12)``.
 Under **Chart Options**, select "reverse" under the "Y Label".
 
 .. figure:: /_static/Edit_chart_data.png
