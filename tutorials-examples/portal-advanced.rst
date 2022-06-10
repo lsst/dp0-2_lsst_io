@@ -49,7 +49,7 @@ The following figure illustrates a selection from the `object` table in a circul
 
 Type the above query into the ADQL Query block and click on the "Search" button in the bottom left-corner to execute.
 The search results will populate the "Results View," which should look similar to the next figure.
-The query returns 15,670 results, with the 19 data columns you specified in the query.
+The query returns 492 results, with the 6 data columns you specified in the query.
 
 .. figure:: /_static/Portal_Advanced_Single_Query.png
     :name: advanced_portal_example_search
