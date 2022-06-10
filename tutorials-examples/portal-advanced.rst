@@ -39,15 +39,13 @@ The following figure illustrates a selection from the `object` table in a circul
 
 .. code-block:: SQL
 
-   SELECT objectId, ra, dec, mag_g, mag_r,
-          mag_i, mag_g_cModel, mag_r_cModel, mag_i_cModel,
-          psFlux_g, psFlux_r, psFlux_i, cModelFlux_g,
-          cModelFlux_r, cModelFlux_i, tract, patch,
-          extendedness, good, clean
-   FROM dp01_dc2_catalogs.object
+   SELECT objectId, coord_ra, coord_dec, 
+          g_calibFlux, r_calibFlux, i_calibFlux, 
+   FROM dp02_dc2_catalogs.Object
    WHERE CONTAINS(
-   POINT('ICRS', ra, dec),
-   CIRCLE('ICRS', 62.0, -37.0, 0.1)) = 1
+   POINT('ICRS', coord_ra, coord_dec),
+   CIRCLE('ICRS', 62.0, -37.0, 0.05)) = 1
+   AND (g_calibFlux >1000 AND i_calibFlux>1000 AND r_calibFlux>1000)
 
 Type the above query into the ADQL Query block and click on the "Search" button in the bottom left-corner to execute.
 The search results will populate the "Results View," which should look similar to the next figure.
@@ -56,18 +54,18 @@ The query returns 15,670 results, with the 19 data columns you specified in the 
 .. figure:: /_static/Portal_Advanced_Single_Query.png
     :name: advanced_portal_example_search
 
-    Results from a 0.1-degree query of the DP0.1 Object catalog.
+    Results from a 0.05-degree query of the DP0.2 Object catalog.
 
 In the tutorial notebook, you would execute the same query as above, and then queried the `truth_match` table for the same region of sky, like this:
 
 .. code-block:: SQL
    
-   SELECT ra, dec, mag_r, match_objectId,
-          flux_g, flux_r, flux_i, truth_type, match_sep, is_variable
-   FROM dp01_dc2_catalogs.truth_match
+   SELECT coord_ra, coord_dec, match_objectId,
+          g_calibFlux, r_calibFlux, i_calibFlux, truth_type, match_sep, is_variable
+   FROM dp02_dc2_catalogs.MatchesTruth
    WHERE CONTAINS(
-   POINT('ICRS', ra, dec),
-   CIRCLE('ICRS', 62.0, -37.0, 0.1)) = 1
+   POINT('ICRS', coord_ra, coord_dec),
+   CIRCLE('ICRS', 62.0, -37.0, 0.05)) = 1
    AND match_objectId >= 0
    AND is_good_match = 1
 
@@ -84,20 +82,16 @@ This is how the JOIN is done:
 
 .. code-block:: SQL
 
-   SELECT obj.objectId, obj.ra, obj.dec, obj.mag_g, obj.mag_r,
-          obj.mag_i, obj.mag_g_cModel, obj.mag_r_cModel, obj.mag_i_cModel,
-          obj.psFlux_g, obj.psFlux_r, obj.psFlux_i, obj.cModelFlux_g,
-          obj.cModelFlux_r, obj.cModelFlux_i, obj.tract, obj.patch,
-          obj.extendedness, obj.good, obj.clean,
-          truth.mag_r as truth_mag_r, truth.match_objectId,
-          truth.flux_g, truth.flux_r, truth.flux_i, truth.truth_type,
+   SELECT obj.objectId, obj.coord_ra, obj.coord_dec, 
+          obj.g_calibFlux, obj.r_calibFlux, obj.i_calib_Flux_i, obj.tract, obj.patch
+          truth.g_calibFlux, truth.r_calibFlux, truth.i_calibFlux, truth.truth_type,
           truth.match_sep, truth.is_variable
-   FROM dp01_dc2_catalogs.object as obj
+   FROM dp02_dc2_catalogs.object as obj
    JOIN dp01_dc2_catalogs.truth_match as truth
    ON truth.match_objectId = obj.objectId
    WHERE CONTAINS(
    POINT('ICRS', obj.ra, obj.dec),
-   CIRCLE('ICRS', 62.0, -37.0, 0.1))=1
+   CIRCLE('ICRS', 62.0, -37.0, 0.05))=1
    AND truth.match_objectid >= 0
    AND truth.is_good_match = 1
 
