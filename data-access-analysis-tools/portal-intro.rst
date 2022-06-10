@@ -159,11 +159,11 @@ The query executed in the :ref:`Portal-Intro-Single-Table-Queries` example above
 .. code-block:: SQL
 
    SELECT coord_ra, coord_dec, g_calibFlux, r_calibFlux
-   FROM dp02_dc2_catalogs.object
+   FROM dp02_dc2_catalogs.Object
    WHERE CONTAINS(
    POINT('ICRS', coord_ra, coord_dec),
    CIRCLE('ICRS', 62.0, -37, 0.05))=1
-   AND (g_calib_Flux>1000 AND i_calib_Flux>1000)
+   AND (g_calibFlux>1000 AND i_calibFlux>1000)
 
 Type the above query into the ADQL Query block and click on the "Search" button in the bottom-left corner to execute.
 You should set the row limit to be a small number, such as 10, when first testing queries.
