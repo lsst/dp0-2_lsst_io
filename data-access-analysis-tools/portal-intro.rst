@@ -181,7 +181,7 @@ The two tables are joined by matching the ``objectId`` across two catalogs.
     SELECT obj.coord_ra as ora, obj.coord_dec as odec,
     truth.ra as tra, truth.dec as tdec,
     truth.is_good_match
-    FROM dp02_dc2_catalogs.Object as obj
+    FROM dp01_dc2_catalogs.object as obj
     JOIN dp01_dc2_catalogs.truth_match as truth
     ON truth.match_objectId = obj.objectId
     WHERE CONTAINS(
