@@ -168,7 +168,7 @@ The query executed in the :ref:`Portal-Intro-Single-Table-Queries` example above
 Type the above query into the ADQL Query block and click on the "Search" button in the bottom-left corner to execute.
 You should set the row limit to be a small number, such as 10, when first testing queries.
 The search results will populate the same **Results View**, as shown above using the Single Table Query interface.
-A total of 205 records should be returned, which you can interact with in the same manner as outlined in :ref:`Portal-Intro-Single-Table-Queries`.
+A total of 492 records should be returned, which you can interact with in the same manner as outlined in :ref:`Portal-Intro-Single-Table-Queries`.
 
 **Joining with another table**
 It is often desirable to access data stored in more than just one table.
@@ -178,18 +178,16 @@ The two tables are joined by matching the ``objectId`` across two catalogs.
 
 .. code-block:: SQL
 
-    SELECT obj.ra as ora, obj.dec as odec,
+    SELECT obj.coord_ra as ora, obj.coord_dec as odec,
     truth.ra as tra, truth.dec as tdec,
-    obj.mag_g as g, obj.mag_i as i, obj.mag_r as r,
-    truth.mag_r as tmr, truth.is_good_match
-    FROM dp01_dc2_catalogs.object as obj
+    truth.is_good_match
+    FROM dp02_dc2_catalogs.Object as obj
     JOIN dp01_dc2_catalogs.truth_match as truth
     ON truth.match_objectId = obj.objectId
     WHERE CONTAINS(
     POINT('ICRS', obj.ra, obj.dec),
     CIRCLE('ICRS', 61.863, -35.79, 0.05555555555555555))=1
-    AND (obj.mag_g <24 AND obj.mag_i <24)
-    AND truth.is_good_match = 1
+    
 
 This query also includes some additional quality filtering on the match.
 In the `truth_match` table, ``is_good_match`` is ``true`` (or ``1``) if an object-truth matching pair satisfies all matching criteria, or it is ``false``(or ``0``) otherwise.
