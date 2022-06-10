@@ -40,7 +40,7 @@ The following figure illustrates a selection from the `object` table in a circul
 .. code-block:: SQL
 
    SELECT objectId, coord_ra, coord_dec, 
-          g_calibFlux, r_calibFlux, i_calibFlux, 
+          g_calibFlux, r_calibFlux, i_calibFlux
    FROM dp02_dc2_catalogs.Object
    WHERE CONTAINS(
    POINT('ICRS', coord_ra, coord_dec),
