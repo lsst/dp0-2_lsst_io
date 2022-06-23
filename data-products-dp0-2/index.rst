@@ -54,7 +54,7 @@ DP0.2 Data Products Definition Document (DPDD)
 
 **The DC2 data set is being made available for use on a shared-risk basis, and the LSST Science Pipelines which produced these images and catalogs is in active development.**
 
-Future data previews and Operations-era data releases will produce images and catalogs that more closely resemble the plan laid out in the Data Products Definitions Document (DPDD; `ls.st/dpdd <https://ls.st/dpdd/>`_).
+Future data previews and Operations-era data releases will produce images and catalogs that more closely resemble the plan laid out in the `Data Products Definitions Document <https://ls.st/dpdd/>`_ (DPDD).
 Note that several of the future data products (such as specific table columns) that are listed in the DPDD are not available for DP0.
 
 .. _DP0-2-Data-Products-DPDD-Images:
@@ -64,7 +64,7 @@ Images
 
 The three main types of images available for DP0.2 are processed visit images, coadded images, and difference images.
 
-**Processed Visit Images** (PVIs) and **calexps**:
+**Processed Visit Images** (PVIs; **calexps**):
 A fully-qualified LSST image from a single visit (in other words, a single pointing) that includes the science pixel array, a quality mask, and a variance array,
 in addition to a PSF characterization and metadata (including calibration metadata) about the image.
 PVIs are stored with the background already subtracted.
@@ -77,7 +77,7 @@ a WCS solution to be used in converting between pixel and sky coordinates,
 a photometric calibration object to be used in converting between fluxes and magnitudes for astronomical sources,
 and a model of the point-spread function (PSF) at each position on the image.
 
-**Coadd Images**:
+**Coadded Images** (**deepCoadd**):
 An image that is the combination of multiple input images, often referred to as a "coadd" or a "deepCoadd".
 The input images have been aligned to a common projection and pixel grid;
 corrected to the same photometric scale, zero-point, and point-spread function (PSF);
@@ -112,92 +112,53 @@ Although this will not be the case for the Operations-era data releases, for DP0
 Here we distinguish between the TAP- and Butler-accessible catalog data products.
 
 **DP0.2 Table Schema:**
-The column names, units, and descriptions of the DP0.2 table data are all available via the `DP0.2 schema browser <https://dm.lsst.org/sdm_schemas/browser/dp02.html>`_.
+The column names, units, and descriptions of the DP0.2 catalogs listed in the table below are all available via the `DP0.2 schema browser <https://dm.lsst.org/sdm_schemas/browser/dp02.html>`_.
+
+.. list-table:: Catalog data available for DP0.2.
+   :widths: 120 150 320
+   :header-rows: 1
+
+   * - TAP Name
+     - Butler Name
+     - Description
+   * - Object
+     - objectTable
+     - Astrometric and photometric measurements for objects detected in coadded images (990 columns).
+   * - Source
+     - sourceTable
+     - Astrometric and photometric measurements for sources detected in the individual PVIs (143 columns).
+   * - ForcedSource
+     - forcedSourceTable
+     - Forced photometry on the individual PVIs at the locations of all detected objects and sources (38 columns).
+   * - DiaObject
+     - diaObjectTable_tract
+     - Derived summary parameters for DiaSources associated by sky location, including lighcurve statistics (137 columns).
+   * - DiaSource
+     - diaSourceTable_tract
+     - Astrometric and photometric measurements for sources detected in the difference images (66 columns).
+   * - ForcedSourceOnDiaObject
+     - forcedSourceOnDiaObjectTable_tract
+     - Forced photometry on the individual PVIs at the locations of all DiaObjects (35 columns).
+   * - Visit
+     - visitTable
+     - Individual visit information, including band, airmass, exposure time, and so on (15 columns).
+   * - CcdVisit
+     - ccdVisitTable
+     - Individual CCD (detecor) information, including measured seeing, sky background, and zeropoint (30 columns).
+
 
 **Principal Columns:**
 For convenience, Rubin Observatory staff have identified the principal columns which are most likely to be useful.
 These principal columns will be pre-selected in the Table View of the RSP's Portal Aspect.
-The table schema below also identify the principal columns.
 
 **Recommended Search Parameter "detect_isPrimary = True":**
-A good default search query parameter for catalogs of objects in the coadded images is to set **detect_isPrimary** = **True**, i.e., for the dp01_dc2_catalogs.position (TAP) and deepCoadd_ref (Butler) catalogs.
+A good default search query parameter for the Object, Source, and ForcedSource catalogs is to set **detect_isPrimary** = **True**.
 The ``detect_isPrimary`` parameter is ``True`` if a source has no children, is in the inner region of a coadd patch, is in the inner region of a coadd tract, and is not “detected” in a pseudo-filter.
 Setting ``detect_isPrimary`` to ``True`` will remove any duplicates, sky objects, etc.
 
-**TAP Catalogs**:
-The five TAP-accessible catalogs in the table below are generated from coadded images and are available via both the Portal and Notebook Aspects.
-For all Portal-accessible TAP catalogs, one way to view and interact with the schema is by using the Portal's "table view" in the TAP service for single-table queries, as described in the :doc:`/data-access-analysis-tools/portal-intro`.
-Schema for all five TAP-accessible catalogs can be also viewed and interacted with in a Jupyter Notebook by following the examples in Section 2.2 of the first of the :ref:`DP0-2-Tutorials-Notebooks`.
-The table below contains links to pages that list the schema for these tables: the column names, units, data types, and a description.
+**Additional butler catalogs** can also be found by querying the collections in the butler registry.
+Some tables require different types of inputs: for example, "diaSourceTable" can be queried with a dataId that includes the visit,
+whereas "diaSourceTable_tract" can be queried with a dataId that includes the tract number.
 
-.. list-table:: TAP-accessible tables available for DP0.2.
-   :widths: 120 150 320
-   :header-rows: 1
-
-   * - Catalog Name
-     - Schema Link
-     - Description
-   * - object
-     - See Appendix B1 of the `DESC DC2 Release Note <https://ui.adsabs.harvard.edu/abs/2021arXiv210104855L/abstract>`_ for full schema. :ref:`schema-obj-tm-principal-Objects`.
-     - The object table from the DESC DC2 simulated sky survey as described in the `DESC DC2 Release Note <https://ui.adsabs.harvard.edu/abs/2021arXiv210104855L/abstract>`_. Includes astrometric and photometric parameters for objects detected in coadded images. (137 columns)
-   * - truth_match
-     - See Appendix B2 of the `DESC DC2 Release Note <https://ui.adsabs.harvard.edu/abs/2021arXiv210104855L/abstract>`_ for full schema. :ref:`schema-obj-tm-principal-TM`.
-     - The truth-match table for the DESC DC2's object table as described in the `DESC DC2 Release Note <https://ui.adsabs.harvard.edu/abs/2021arXiv210104855L/abstract>`_. Includes the noiseless astrometric and photometric parameters and the best matches to the object table. (30 columns)
-   * - position
-     - :doc:`full schema <schema-position>`
-     - Select astrometry-related parameters for objects detected in the coadded images, such as coordinates, footprints, patch/tract information, and deblending parameters. (29 columns)
-   * - reference
-     - :doc:`full schema <schema-reference>`
-     - Measurements for objects detected in the coadded images, including photometry, astrometry, shape, deblending, model fits, and related background and flag parameters. This table joined with the position table is very similar to the object table, but with additional columns. (236 columns)
-   * - forced_photometry
-     - :doc:`full schema <schema-forced-photometry>`
-     - Forced photometry measurements for objects detected in the coadded images, at the locations defined by the position table. (747 columns)
-
-
-**Butler Catalogs**:
-The recommended catalog interface for DP0.2 is the TAP service.
-However, because the catalog of sources detected in individual processed visit images (PVIs) is only available through the Butler, the Butler schema for several of the most useful DP0.2 catalogs are provided below.
-The Butler catalogs are listed in the approximate order that a processing workflow with the LSST Science Pipelines would generate them.
-For examples of how to access these Butler catalogs, see the :ref:`DP0-2-Tutorials-Notebooks` about the Butler.
-
-.. list-table:: Butler-accessible tables available for DP0.2.
-   :widths: 120 120 350
-   :header-rows: 1
-
-   * - Table Name
-     - Schema Link
-     - Description
-   * - src
-     - :doc:`full schema <schema-src>`
-     - Source detections in a single processed visit image (PVI; also called a calexp). (234 columns)
-   * - deepCoadd_ref
-     - :doc:`full schema <schema-deepCoadd-ref>`
-     - Source detections in deep coadded images across all filters. (495 columns)
-   * - deepCoadd_forced_src
-     - :doc:`full schema <schema-deepCoadd-forced-src>`
-     - Forced photometry for sources in deep coadded images. (508 columns)
-
-..   * - deepCoadd_deblendedFlux
-..     - :doc:`full schema <schema-deepCoadd-deblendedFlux>`
-..     - Deblended parent and child parameters for sources in deep coadded images, based on deepCoadd_ref. (30 columns)
-..   * - deepCoadd_meas
-..     - :doc:`full schema <schema-deepCoadd-meas>`
-..     - Measurement parameters for sources in deep coadded images, based on deepCoadd_ref. (489 columns)
-
-
-.. _DP0-2-Data-Products-Visualization:
-..
-.. Visualization
-.. =============
-..
-.. *MLG Note: not sure that this is needed?*
-.. This section includes information about data visualization.
-..
-..
-.. _DP0-2-Data-Products-User-Generated:
-..
-.. User Generated Data Products and Processing
-.. ===========================================
-..
-.. *MLG Note: not sure that this is needed?*
-.. This section includes information on user generated data products and user generated data processing.
+**Truth catalog data** will also be available via TAP and the Butler.
+More information to come.
