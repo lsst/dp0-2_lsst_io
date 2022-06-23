@@ -80,7 +80,7 @@ Navigate the file system and open files by double-clicking on folders and files 
 Although the file browser is a handy way to navigate your user home space, it does not allow you to navigate to, e.g., the shared data space.
 One way to make other spaces available in the file browser is to create a `symbolic link <https://en.m.wikipedia.org/wiki/Symbolic_link>`_ using the Terminal to the desired space somewhere in your home directory.
 
-Jupyter Notebooks can be identified by their file extension ``.ipynb``.
+Jupyter Notebooks can be identified by their file extension ".ipynb".
 All users will find a set of tutorial notebooks provided in the "notebooks/tutorial-notebooks/" directory.
 
 **Safely Log Out of JupyterLab:**
@@ -96,7 +96,7 @@ To help users avoid issues with stale instances, sessions will be automatically 
 How to use the JupyterLab terminal
 ==================================
 
-The :ref:`Data-Products-DP0-2-Data-Products` and the `LSST Science Pipelines'<https://pipelines.lsst.io/>`_ tools can both be accessed from the command line of a JupyterLab terminal tab.
+The :ref:`Data-Products-DP0-2-Data-Products` and the `LSST Science Pipelines <https://pipelines.lsst.io/>`_ tools can both be accessed from the command line of a JupyterLab terminal tab.
 A terminal session can be started by clicking on the terminal icon in the Jupyterlab launch pad.
 As described in the default message that appears in all newly-launched terminals, to create a Rubin Observatory environment in a JupyterLab terminal session and set up the full set of packages, users must first execute:
 
@@ -106,7 +106,7 @@ As described in the default message that appears in all newly-launched terminals
    setup lsst_distrib
 
 For example, to query and retrieve data sets using the Butler (see :ref:`NB-Intro-Use-A-NB-faq-butler`, below), command-line tools are available as `documented here <https://pipelines.lsst.io/v/weekly/modules/lsst.daf.butler/scripts/butler.html>`_.
-Type ``butler --help`` in any terminal to see a list of available butler functionality.
+Type "butler --help" in any terminal to see a list of available butler functionality.
 
 
 .. _NB-Intro-Use-A-NB:
@@ -115,7 +115,7 @@ How to use a Jupyter notebook
 =============================
 
 The best way to learn how to use a Jupyter Notebook is to open the first of the tutorial notebooks which are provided in each user's home directory,
-and also available in the `tutorial-notebooks <https://github.com/rubin-dp0/tutorial-notebooks>`_ repository in the ``rubin-dp0`` GitHub Organization (see also :ref:`DP0-2-Tutorials-Notebooks`).
+and also available in the `tutorial-notebooks <https://github.com/rubin-dp0/tutorial-notebooks>`_ repository in the "rubin-dp0" GitHub Organization (see also :ref:`DP0-2-Tutorials-Notebooks`).
 
 **Executing code in a Notebook:**
 Jupyter notebooks provide "cells" within which you type either Python code or markdown language (for formatted text).
@@ -152,11 +152,11 @@ Jupyter notebook frequently asked questions
 What is a kernel?
 -----------------
 
-In the RSP Notebook Aspect, your notebooks will be operating in a kernel that has access to the full `LSST Science Pipelines<https://pipelines.lsst.io/>`_, including the Butler (see :ref:`NB-Intro-Use-A-NB-faq-butler`, below).
+In the RSP Notebook Aspect, your notebooks will be operating in a kernel that has access to the full `LSST Science Pipelines <https://pipelines.lsst.io/>`_, including the Butler (see :ref:`NB-Intro-Use-A-NB-faq-butler`, below).
 Many standard Python libraries and modules will be available, and users can `install <https://nb.lsst.io/environment/python.html>`_ additional Python tools they wish to use.
-See also `this tutorial on installing python packages<https://packaging.python.org/en/latest/tutorials/installing-packages/>`_
-(which includes, e.g., use of ``pip install``).
-To view a list of packages available to you, type ``pip list`` in a terminal.
+See also `this tutorial on installing python packages <https://packaging.python.org/en/latest/tutorials/installing-packages/>`_
+(which includes, e.g., use of "pip install").
+To view a list of packages available to you, type "pip list" in a terminal.
 
 
 .. _NB-Intro-Use-A-NB-faq-python:
@@ -172,7 +172,7 @@ These tutorials contain executable examples of the commands required to access a
 All DP0 delegates should feel free to copy and paste from the provided tutorials.
 
 Anyone new to Python and looking to learn more might benefit from this `Python for Beginners <https://www.python.org/about/gettingstarted>`_ website (which includes links to tutorial in a variety of languages),
-or this Community Forum thread where DP0 delegates can share `resources for python beginners<https://community.lsst.org/t/5975>`_.
+or this Community Forum thread where DP0 delegates can share `resources for python beginners <https://community.lsst.org/t/5975>`_.
 Web searches for "python *(thing you want to do)*" are usually pretty successful too.
 
 
@@ -184,7 +184,7 @@ Do I need to know git?
 Git is free open-sourced software for change-tracking and version control of any set of files that are edited by one or more contributors.
 GitHub is a web-based provider for git functionality, plus a few of its own features.
 Although use of git and GitHub are not neccessary for DP0 participation, most Rubin Observatory staff and LSST Science Collaborations use git and GitHub, and it is highly recommended by the Community Engagement Team for all RSP users.
-In this Community Forum thread, everyone can find and share `resources for learning about git and GitHub<https://community.lsst.org/t/resources-for-github/6153>`_.
+In this Community Forum thread, everyone can find and share `resources for learning about git and GitHub <https://community.lsst.org/t/resources-for-github/6153>`_.
 
 
 .. _NB-Intro-Use-A-NB-faq-butler:
@@ -199,8 +199,8 @@ Full `Butler documentation <https://pipelines.lsst.io/modules/lsst.daf.butler/in
 
 .. _NB-Intro-Use-A-NB-faq-questions:
 
-How do I ask more questions about the RSP's Notebook Aspect?
-------------------------------------------------------------
+How do I ask questions about Notebooks?
+---------------------------------------
 
 Keep in mind that if you are not experienced at accessing data via Jupyter notebooks, or using a Science Platform more generally, you are not alone!
 Most of the DP0 delegates are new to this environment, and all of your questions and feedback will help us improve both the documentation and the tools.
@@ -223,33 +223,35 @@ How to recover from package import errors (ImportError)
 -------------------------------------------------------
 
 **The Problem:** In this case the problem manifests when a package cannot be properly imported.
-This leads to an ImportError for which the last line of the traceback actually points to the file it is trying to import from, and it is in the users ``.local`` directory.
+This leads to an ImportError for which the last line of the traceback actually points to the file it is trying to import from, and it is in the users ".local" directory.
 
-If a user sees a mention of ``.local`` anywhere in the exception, there is a chance they have installed packages that are polluting stack environments, and this is a big red flag that following the solution below will be necessary.
+If a user sees a mention of ".local" anywhere in the exception, there is a chance they have installed packages that are polluting stack environments, and this is a big red flag that following the solution below will be necessary.
 
 However, this is not the only way this problem can manifest, as issues with user-installed packages can be hard to track down. E.g., it might import fine, but then not be able to find an attribute or method on a particular object.
 
-**The Solution:** Users should exit the RSP and then clear their ``.local`` file when they log back in to the Notebook Aspect by checking the box "Clear .local directory (caution!)"
+**The Solution:** Users should exit the RSP and then clear their ".local" file when they log back in to the Notebook Aspect by checking the box "Clear .local directory (caution!)"
 on the Hub spawner page (see the "Server Options" image at the top of this page).
 This option is simple and effective, and also helps in cases where the user-installed packages are keeping JupyterLab from starting.
 
 **An Alternative Solution:** The user should first close and shutdown the notebook (or, e.g., ipython session) which is experiencing the error, and then launch a terminal in the Notebook Aspect
-and move their ``.local`` file out of the way by renaming it as something else, such as:
+and move their ".local" file out of the way by renaming it as something else, such as:
 
-``mv ~/.local ~/.local_[YYYY][MM][DD]``
+.. code-block:: bash
 
-There will be no need to recreate the ``.local`` directory after this.
+   mv ~/.local ~/.local_[YYYY][MM][DD]
+
+There will be no need to recreate the ".local" directory after this.
 The user should then restart the notebook (or, e.g., ipython session) and try to import the packages.
 
-What to do if Tutorial Notebooks Do Not Automatically Update
-------------------------------------------------------------
+What to do if Notebooks do not automatically update
+---------------------------------------------------
 
 New versions of the tutorial notebooks will be periodically released by the Community Engagement Team (CET).
-The contents of your ``notebooks/tutorial-notebooks/`` directory should automatically update when a new version of a tutorial notebook is released.
-There are several reasons why this might not occur, and, correspondingly, several ways for you to update the contents of your ``notebooks/tutorial-notebooks/`` directory.
+The contents of your "notebooks/tutorial-notebooks/" directory should automatically update when a new version of a tutorial notebook is released.
+There are several reasons why this might not occur, and, correspondingly, several ways for you to update the contents of your "notebooks/tutorial-notebooks/" directory.
 
-All of the options below require that you first configure ``git`` for your GitHub account using the terminal in the RSP Notebook Aspect.
-First, check whether your GitHub user name and email are configured correctly in the ``.gitconfig`` file in your home directory.
+All of the options below require that you first configure git for your GitHub account using the terminal in the RSP Notebook Aspect.
+First, check whether your GitHub user name and email are configured correctly in the ".gitconfig" file in your home directory.
 To do this, use the following command in the terminal window of the RSP Notebook Aspect:
 
 .. code-block:: bash
@@ -264,26 +266,31 @@ You may set them up by typing in the following commands (remember to use the sam
    git config --global user.email yourEmail@yourdomain
    git config --global user.name GItUsername
 
-From here, you have three options to update the contents of your ``notebooks/tutorial-notebooks/`` directory.
+From here, you have three options to update the contents of your "notebooks/tutorial-notebooks/" directory.
 
 **Option 1** (if you have not saved changed versions of the notebooks) - Fully log out, stop the server, and log back in again.
-This will automatically refresh the contents of your ``notebooks/tutorial-notebooks/`` directory.
-To fully stop your server, use the control panel at ``https://data.lsst.cloud/nb/hub/home>``.
+This will automatically refresh the contents of your "notebooks/tutorial-notebooks/" directory.
+To fully stop your server, use the control panel at `https://data.lsst.cloud/nb/hub/home>`_.
 Click the red button that says "Stop My Server".
 
 **Option 2** (if you have saved changed versions of the notebooks that you want to keep) - The first option, above, will not result in you having the most up-to-date versions of all the notebooks if you have made and saved changes to any of the notebooks.
-To check if files have been modified, use this command from a terminal in the ``notebooks/tutorial-notebooks/`` directory.
+To check if files have been modified, use this command from a terminal in the "notebooks/tutorial-notebooks/" directory.
 
 .. code-block:: bash
 
    git status
 
-If it says in red text, e.g., ``both modified: 01_Intro_to_DP0_Notebooks.ipynb``, then changes have been made to this file (recall that executing the notebook counts as making changes,
+If it says in red text, e.g., "both modified: 01_Intro_to_DP0_Notebooks.ipynb", then changes have been made to this file (recall that executing the notebook counts as making changes,
 and note that Jupyter auto-saves changes on a ~2 minute cadence), but Rubin Observatory staff have also updated it (e.g., bug fixes).
-Since the file has been twice modified, ``git`` has gone ahead and annotated file with all the conflicting lines between the two versions.
-This essentially ruins a ``ipynb`` file's functionality (but it is a very useful built-in git feature for, e.g., ascii and code files).
-A ``git``-annotated ``ipynb`` file might not even load or run for you anymore.
-Do a ``git diff 01_Intro_to_DP0_Notebooks.ipynb`` and all the differences will be listed.
+Since the file has been twice modified, git has gone ahead and annotated file with all the conflicting lines between the two versions.
+This essentially ruins a ".ipynb" file's functionality (but it is a very useful built-in git feature for, e.g., ascii and code files).
+A git-annotated ".ipynb" file might not even load or run for you anymore.
+On the command line, do
+
+.. code-block:: bash
+   git diff 01_Intro_to_DP0_Notebooks.ipynb
+   
+and all the differences will be listed.
 
 Use the following commands in the terminal window to restore the version in which you made changes (this takes it out of 'staged' status and will avoid future errors),
 copy your version into a different directory and rename it, and then restore the new version of the notebook that was updated by Rubin Observatory staff.
@@ -296,11 +303,11 @@ copy your version into a different directory and rename it, and then restore the
 
 Now your notebooks/tutorial-notebooks directory only contains the most up-to-date versions of the tutorial notebooks, with none of your changes.
 
-**Option 3** (if you don't care about keeping changed versions of the notebooks) - To get a completely new version of all the tutorial notebooks in your ``notebooks/tutorial-notebooks/`` directory, use the following commands:
+**Option 3** (if you don't care about keeping changed versions of the notebooks) - To get a completely new version of all the tutorial notebooks in your "notebooks/tutorial-notebooks/" directory, use the following commands:
 
 .. code-block:: bash
 
    git reset --hard origin/prod
    git pull
 
-Using any of the above options is the preferred method to update your tutorial notebooks, but as a last resort, you can delete the entire ``tutorial-notebooks`` directory, log out and stop the server, and then log back in again.
+Using any of the above options is the preferred method to update your tutorial notebooks, but as a last resort, you can delete the entire "tutorial-notebooks/" directory, log out and stop the server, and then log back in again.
