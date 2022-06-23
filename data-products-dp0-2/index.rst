@@ -146,6 +146,7 @@ The column names, units, and descriptions of the DP0.2 catalogs listed in the ta
      - ccdVisitTable
      - Individual CCD (detecor) information, including measured seeing, sky background, and zeropoint (30 columns).
 
+|
 
 **Principal Columns:**
 For convenience, Rubin Observatory staff have identified the principal columns which are most likely to be useful.
