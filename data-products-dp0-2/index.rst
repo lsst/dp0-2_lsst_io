@@ -52,44 +52,41 @@ For DP0.2, the Rubin Data Production team will reprocess the same images with th
 DP0.2 Data Products Definition Document (DPDD)
 ==============================================
 
-**Disclaimer: The DC2 data set is being made available for use on a shared-risk basis.**
-**The LSST Science Pipelines which produced these images and catalogs is in active development.**
-**The data contents, formats, and related documentation are all incomplete.**
+**The DC2 data set is being made available for use on a shared-risk basis, and the LSST Science Pipelines which produced these images and catalogs is in active development.**
 
 Future data previews and Operations-era data releases will produce images and catalogs that more closely resemble the plan laid out in the Data Products Definitions Document (DPDD; `ls.st/dpdd <https://ls.st/dpdd/>`_).
-It is important to note that **many of the future data products listed in the DPDD, and in particular all of the Prompt Products such as difference images and alerts, are not available for DP0.**
+Note that several of the future data products (such as specific table columns) that are listed in the DPDD are not available for DP0.
 
 .. _DP0-2-Data-Products-DPDD-Images:
 
 Images
 ------
 
-For DP0.2 the DC2 data set has only two types of images: coadds and processed visit images.
-For DP0.2, images are only accessible with the Butler via the Notebook Aspect.
+The three main types of images available for DP0.2 are processed visit images, coadded images, and difference images.
 
-**Processed Visit Images** (PVIs):
+**Processed Visit Images** (PVIs) and **calexps**:
 A fully-qualified LSST image from a single visit (in other words, a single pointing) that includes the science pixel array, a quality mask, and a variance array,
 in addition to a PSF characterization and metadata (including calibration metadata) about the image.
 PVIs are stored with the background already subtracted.
-A single CCD of a PVI is called a ``calexp``.
-For more information about how PVIs are created, see :ref:`Data-Processing-Overview-Single-Image-Processing`.
+A single CCD of a PVI is called a "calexp".
 
-There are many associated data products that are accessible alongside PVIs. These include the background (``calexpBackground``) that was subtracted from the ``calexp,`` which can be retrieved separately.
-Each PVI also has an associated mask plane that encodes quality and other information about each pixel, a WCS solution to be used in converting between pixel and sky coordinates,
-a photometric calibration object to be used in converting between fluxes and magnitudes for astronomical sources, and a model of the point-spread function (PSF) at each position on the image.
-
-To get started working with PVIs, see `this brief tutorial <https://github.com/rubin-dp0/tutorial-notebooks/blob/main/03_Image_Display_and_Manipulation.ipynb>`_ that retrieves and displays a PVI and its associated mask plane.
+There are many associated data products that are accessible alongside PVIs.
+These include the background ("calexpBackground") that was subtracted from the "calexp", which can be retrieved separately.
+Each PVI also has an associated mask plane that encodes quality and other information about each pixel,
+a WCS solution to be used in converting between pixel and sky coordinates,
+a photometric calibration object to be used in converting between fluxes and magnitudes for astronomical sources,
+and a model of the point-spread function (PSF) at each position on the image.
 
 **Coadd Images**:
-An image that is the combination of multiple input images, often referred to as just a ``coadd`` or a ``deep coadd``.
-The input images have been aligned to a common projection and pixel grid; corrected to the same photometric scale, zero-point, and point-spread function (PSF);
+An image that is the combination of multiple input images, often referred to as a "coadd" or a "deepCoadd".
+The input images have been aligned to a common projection and pixel grid;
+corrected to the same photometric scale, zero-point, and point-spread function (PSF);
 and had bad pixels, artifacts, and transient and variable object flux removed prior to combination.
 Coadds are stored with the non-astrophysical background already subtracted.
-For more information about how PVIs are created, see :ref:`Data-Processing-Overview-Coadded-Image-Processing`.
+As with PVIs, the coadds also have associated data products including the background model that has been subtracted,
+the mask and variance planes associated with the image, a WCS solution, photometric calibration, and a PSF model.
 
-As with PVIs, the coadds also have associated data products including the background model that has been subtracted, the mask and variance planes associated with the image, a WCS solution, photometric calibration, and a PSF model.
-
-Coadd images are divided into ``tracts`` (a spherical convex polygon) and tracts are divided into ``patches`` (a quadrilateral sub-region, with a size in pixels chosen to fit easily into memory on desktop computers, about the same size as a ``calexp``).
+Coadd images are divided into **"tracts"** (a spherical convex polygon) and tracts are divided into **"patches"** (a quadrilateral sub-region, with a size in pixels chosen to fit easily into memory on desktop computers, about the same size as a "calexp").
 
 .. figure:: /_static/dpdd_dc2_zoom.png
     :name: dpdd_dc2_zoom
@@ -98,27 +95,24 @@ Coadd images are divided into ``tracts`` (a spherical convex polygon) and tracts
     The center image is one tract quadrant, and the right image one hundredth the area of the tract quadrant. Patches are larger than the right image, as described in the DESC's paper:
     *"each tract is composed of 7 × 7 patches, and each patch is 4,100 × 4,100 pixels with a pixel scale of 0.2 arcsec"*.
 
-The first of the :ref:`DP0-2-Tutorials-Notebooks` demonstrates how to identify the tract and patch for a given coordinate, and retrieve and plot a coadd image.
-
-The `image display and manipulation tutorial <https://github.com/rubin-dp0/tutorial-notebooks/blob/main/03_Image_Display_and_Manipulation.ipynb>`_ demonstrates how to retrieve and display a coadd image,
-and to use its WCS and methods associated with the image to extract a cutout image zoomed in on a region of interest.
-
+**Difference Images**:
+A PVI which has had a template image subtracted from it.
+Template images are built from images obtained the previous year.
+Any source detected in a difference image represents the *time-variable* flux component of the astrophysical object.
 
 .. _DP0-2-Data-Products-DPDD-Catalogs:
 
 Catalogs
 --------
 
-Source detection, measurement, and characterization have been run on both the PVIs and coadds to generate catalog data for DP0.2 (see also :ref:`Data-Processing-Overview-Coadded-Catalogs`).
+Source detection, measurement, and characterization have been run on the PVIs, coadds, and difference images to generate catalog data.
+
 Catalog data are accessible with the :ref:`Data-Access-Analysis-Tools-TAP` via the Portal or Notebook Aspect, and with the Butler via the Notebook Aspect.
 Although this will not be the case for the Operations-era data releases, for DP0.2 the TAP and Butler table data are not named or organized the same way.
 Here we distinguish between the TAP- and Butler-accessible catalog data products.
-**The recommended catalog interface for DP0.2 is the TAP service.**
 
-**Schema:**
-A table's "schema" refers to the column names, units, and descriptions of the tabulated data.
-Links to full or curated versions of the table schema (curated meaning limited to columns that will be of most use to most DP0 delegates) are provided in the tables below.
-A `DP0.2 schema browser <https://dm.lsst.org/sdm_schemas/browser/dp01.html>`_ is also available, thanks to the Rubin Data Management team.
+**DP0.2 Table Schema:**
+The column names, units, and descriptions of the DP0.2 table data are all available via the `DP0.2 schema browser <https://dm.lsst.org/sdm_schemas/browser/dp02.html>`_.
 
 **Principal Columns:**
 For convenience, Rubin Observatory staff have identified the principal columns which are most likely to be useful.
