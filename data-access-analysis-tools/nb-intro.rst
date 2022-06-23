@@ -74,7 +74,7 @@ Return to this launch pad at any time by clicking the plus symbol at upper-left.
 
 In the very left-most vertical sidebar of icons, the top icon is a file folder, and that is the default view.
 The left sidebar lists folders in the user's home directory (e.g., DATA, WORK, and notebooks).
-Launching a terminal (the default is a linux bash terminal) and using the command ``ls`` will return the same list.
+Launching a terminal (the default is a linux bash terminal) and using the command "ls" will return the same list.
 Navigate the file system and open files by double-clicking on folders and files in the left sidebar.
 
 Although the file browser is a handy way to navigate your user home space, it does not allow you to navigate to, e.g., the shared data space.
@@ -167,7 +167,7 @@ Is all the code in Python?
 Yes, the RSP Notebook Aspect will only have python environments for DP0.
 
 To access data from the Notebook Aspect, users will need to use Python commands and code.
-Much of the `LSST Science Pipelines<https://pipelines.lsst.io/>`_ code is in Python, and the DP0 :ref:`DP0-2-Tutorials-Notebooks` use Python as well.
+Much of the `LSST Science Pipelines <https://pipelines.lsst.io/>`_ code is in Python, and the DP0 :ref:`DP0-2-Tutorials-Notebooks` use Python as well.
 These tutorials contain executable examples of the commands required to access and analyze data.
 All DP0 delegates should feel free to copy and paste from the provided tutorials.
 
@@ -270,7 +270,7 @@ From here, you have three options to update the contents of your "notebooks/tuto
 
 **Option 1** (if you have not saved changed versions of the notebooks) - Fully log out, stop the server, and log back in again.
 This will automatically refresh the contents of your "notebooks/tutorial-notebooks/" directory.
-To fully stop your server, use the control panel at `https://data.lsst.cloud/nb/hub/home>`_.
+To fully stop your server, use the control panel at `data.lsst.cloud/nb/hub/home <https://data.lsst.cloud/nb/hub/home>`_.
 Click the red button that says "Stop My Server".
 
 **Option 2** (if you have saved changed versions of the notebooks that you want to keep) - The first option, above, will not result in you having the most up-to-date versions of all the notebooks if you have made and saved changes to any of the notebooks.
@@ -288,6 +288,7 @@ A git-annotated ".ipynb" file might not even load or run for you anymore.
 On the command line, do
 
 .. code-block:: bash
+
    git diff 01_Intro_to_DP0_Notebooks.ipynb
    
 and all the differences will be listed.
