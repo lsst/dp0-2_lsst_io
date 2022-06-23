@@ -106,10 +106,7 @@ Catalogs
 --------
 
 Source detection, measurement, and characterization have been run on the PVIs, coadds, and difference images to generate catalog data.
-
 Catalog data are accessible with the :ref:`Data-Access-Analysis-Tools-TAP` via the Portal or Notebook Aspect, and with the Butler via the Notebook Aspect.
-Although this will not be the case for the Operations-era data releases, for DP0.2 the TAP and Butler table data are not named or organized the same way.
-Here we distinguish between the TAP- and Butler-accessible catalog data products.
 
 **DP0.2 Table Schema:**
 The column names, units, and descriptions of the DP0.2 catalogs listed in the table below are all available via the `DP0.2 schema browser <https://dm.lsst.org/sdm_schemas/browser/dp02.html>`_.
