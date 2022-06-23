@@ -54,8 +54,8 @@ DP0.2 Data Products Definition Document (DPDD)
 
 **The DC2 data set is being made available for use on a shared-risk basis, and the LSST Science Pipelines which produced these images and catalogs is in active development.**
 
-Future data previews and Operations-era data releases will produce images and catalogs that more closely resemble the plan laid out in the `Data Products Definitions Document <https://ls.st/dpdd/>`_ (DPDD).
-Note that several of the future data products (such as specific table columns) that are listed in the DPDD are not available for DP0.
+Future data previews and Operations-era LSST data releases will produce images and catalogs that more closely resemble the plan laid out in the `Data Products Definitions Document <https://ls.st/dpdd/>`_ (DPDD).
+Several of the future data products (e.g., specific table columns) that are listed in the DPDD are not available for DP0.
 
 .. _DP0-2-Data-Products-DPDD-Images:
 
