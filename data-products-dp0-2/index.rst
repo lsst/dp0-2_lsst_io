@@ -115,7 +115,7 @@ Here we distinguish between the TAP- and Butler-accessible catalog data products
 The column names, units, and descriptions of the DP0.2 catalogs listed in the table below are all available via the `DP0.2 schema browser <https://dm.lsst.org/sdm_schemas/browser/dp02.html>`_.
 
 .. list-table:: Catalog data available for DP0.2.
-   :widths: 120 150 320
+   :widths: 100 100 390
    :header-rows: 1
 
    * - TAP Name
