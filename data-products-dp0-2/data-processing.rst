@@ -94,13 +94,18 @@ and (5) performing forced measurements in each band using the reference band pos
 This last step produces a catalog of independent per-band object measurements that are provided to science users.
 
 
-.. _DATA-Processing-Overview-Difference-Imaging:
+.. _Data-Processing-Overview-Difference-Imaging:
 
 Difference Image Analysis (DIA) production
 ==========================================
 
-The version (23.0.1) of the LSST Science Pipelines that was used for DP0.2 processing now includes portions of the Prompt Processing pipelines, which centers on template image subtraction and transient detection on the resulting "difference images." 
-Each science observation is subtracted from a template coadd image covering the same area of the sky (in LSST survey operations, templates will be created from the previous year of observations).
-The template images are resampled to the coordinate system of the science image, then convolved with a kernel to produce an image whose PSF matches that of the new science image.
-Once the image subtraction has been performed, similar algorithms to those used in Data Release Processing are used to detect and measure objects on the resulting "difference image." These source detections and measurements make up the _DIASource_ catalog.
-Like the Object table from standard processing, the _DIAObject_ table consists of a superset of unique sources that were detected on all of the difference images. 
+The version (23.0.1) of the LSST Science Pipelines that was used for DP0.2 processing now includes portions of the Prompt Processing pipelines,
+which centers on template image subtraction and transient detection on the resulting "difference images." 
+Each science observation is subtracted from a template coadd image covering the same area of the sky (in LSST survey operations,
+templates will be created from the previous year of observations).
+The template images are resampled to the coordinate system of the science image, then convolved with a kernel to produce an image whose PSF matches
+that of the new science image.
+Once the image subtraction has been performed, similar algorithms to those used in Data Release Processing are used to detect and measure sources on the resulting "difference image."
+These source detections and measurements make up the _DIASource_ catalog, and the _DIAObject_ table is made up of _DIASources_ associated
+by sky coordinate.
+The _DIAObject_ table includes statistical summary parameters of the associated _DIASources_ (i.e., lightcurve properties).
