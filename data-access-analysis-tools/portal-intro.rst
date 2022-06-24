@@ -43,6 +43,7 @@ Under **TAP Searches** there are four steps.
 
 Single Table Queries
 ====================
+
 **1. TAP Service**: Leave the default (``https://data.lsst.cloud/api/tap``) to access DP0 data.
 
 **2. Select Query Type**: Select "Single Table (UI assisted)" to query via the single-table interface (default).
@@ -231,3 +232,26 @@ To get the detailed list of columns available in the "Object" table, their assoc
    WHERE tap_schema.columns.table_name = 'dp02_dc2_catalogs.Object'
 
 See also :ref:`DP0-2-Tutorials-Portal` for additional demonstrations of how to use the Portal's ADQL functionality.
+
+
+.. _Portal-Intro-Image-Queries:
+
+Image Queries
+=============
+
+This is a placeholder for further instructions about how to use the image query interface and how to interact with the search results in the Portal.
+
+These two figures are representative of what this functionality will include.
+
+.. figure:: /_static/portal_ImageQueryDP02.png
+    :name: portal_ImageQueryDP02
+
+    An early version of the Portal's image query interface.  
+
+
+.. figure:: /_static/portal_ImageQueryCoverageDP02.png
+    :name: portal_ImageQueryCoverageDP02
+
+    An early version of the Portal's image query search results coverage map.  
+
+
