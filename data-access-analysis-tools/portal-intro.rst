@@ -61,7 +61,7 @@ It is recommended to start with 3 arcminutes.
 
 *Note*: The central coordinates for DC2, in decimal degrees, are: ``61.863 -35.790``.
 
-.. figure:: /_static/portal_EnterConstraints_DP0.2png
+.. figure:: /_static/portal_EnterConstraints_DP02.png
     :name: portal_enter_constraints_DP02
     
     These basic constraints should work well for all learners.
