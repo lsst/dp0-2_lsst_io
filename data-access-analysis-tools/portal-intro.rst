@@ -86,11 +86,11 @@ An example of a query for Object catalog data with "detect_isPrimary" = True, th
 (i.e., apparent magnitudes less than about 19th mag), and an extendedness = 0 in the g-band (i.e., stars), is shown in the figure above. 
 Remove filters and reset the table view at any time using the "Remove" or "Reset" buttons above the upper-right corner of the table.
 
-**Convert to ADQL:**
+**Convert to ADQL**:
 If desired, convert table view queries to "ADQL Queries" using the "Populate and Edit ADQL" button at the bottom of the page.
 This can enable entering more complex constraints that cannot be expressed against individual columns.
 
-**Apply a Row Limit:**
+**Apply a Row Limit**:
 The "Row Limit" in the bottom bar can be changed to apply an upper bound to the number of rows returned.
 The Portal can work effectively with datasets with millions of rows.
 However, when learning or testing queries, it is advisable to limit the number of rows (e.g., 10000 rows is useful for testing).
@@ -100,16 +100,20 @@ alone in order to get a "sampling" of data.
 Queries with only a row limit can run for much longer than one might intuitively expect; applying a spatial constraint is
 likely to return a result more quickly.
 
-**Search:** Press the search button at lower left when ready to execute.
-
-**Example:**
-The example in the image below queries the dp02_dc2_catalogs.Object table using a cone search centered on ``62.0 -37.0`` in decimal degrees (close to the approximate center of the DC2 region) with a 3 arcminutes radius.
-The search allows you to provide additional constraints, and the example here limits the flux as specified in Column "constraints."  The search will return data in columns ``coord_ra``, ``coord_dec``, ``g_calibFlux``, ``r_calibFlux``, and ``i_calibFlux`` for all objects with ``g_calibFlux``, ``i_calibFlux``, and ``i_calibFlux`` in the range you specified, between 20 and 1000 nanojansky.  
+**Example**:
+The example in the image below queries the dp02_dc2_catalogs.Object table using a cone search centered on ``62.0 -37.0``
+in decimal degrees (close to the approximate center of the DC2 region) with a 3 arcminutes radius.
+The search allows you to provide additional constraints, and the example here limits the flux as specified in Column "constraints."
+The search will return data in columns ``coord_ra``, ``coord_dec``, ``g_calibFlux``, ``r_calibFlux``, and ``i_calibFlux`` for all
+objects with ``g_calibFlux``, ``i_calibFlux``, and ``i_calibFlux`` in the range you specified, between 20 and 1000 nanojansky
+(i.e., between 24th and 28th magnitude).  
 
 .. figure:: /_static/portal_example_search_DP02.png
     :name: portal_example_search_DP02
 
     An example query of the DC2 Object catalog.
+
+**Search**: Press the search button at lower left when ready to execute.
 
 .. figure:: /_static/portal_search_working.png
     :name: portal_search_working
@@ -124,19 +128,27 @@ The search allows you to provide additional constraints, and the example here li
 
     The default view of the search results.
 
-Across the top of the results view are many icons that control the display settings; hover over the icons and a statement about their functionality will appear at upper-right.
+Across the top of the results view are many icons that control the display settings; hover over the icons and a statement
+about their functionality will appear at upper-right.
 Also at upper right, under the user name, are the options "tri-view", "img-tbl", "img-xy", and "xy-tbl".
 These control how the results view is partitioned, and the default is "tri-view".
-In the "tri-view", at top-left is a sky image with the search results overplotted, but note that this is *not* a simulated DC2 image, but a 2MASS image.
-Select "HiPS" and a "Change HiPS" button will appear with options for sky images to use, but none of the options are relevant for the DC2 simulated sky data.
-Thus for DP0, the "xy-tbl" is the most relevant view for results.
+In the "tri-view", at top-left is a sky image with the search results overplotted: it was not a simulated DC2 image but a 2MASS image
+at the time this demonstration was made, but expect it to show DC2 images in the future (and LSST images when real data is available).
+As this example does not use the image at upper left, the "xy-tbl" is used to view for results.
 
+**Plotting Data**:
 To manipulate the plotted data, select the double gear "settings" icon above the x-y plot and a pop-up window will open (see the next figure).
 Select other columns to use, change the symbol type and color, and so forth, and click "Apply".
 
-The data in the DP0.2 tables are given in units of nanojansky.  Astronomers often prefer to display or plot data in a form of magnitudes.  Since our original goal was to plot a color-magnitude diagram of the objects selected according to our query, we can enter the following values:  
-``-1.0857*log(r_calibFlux/3.631e12)+1.0857*log(i_calibFlux/3.631e12)`` in the "X" box, and ``-1.0857log(g_calibFlux/3.631e12)`` box for the "Y" box.  
-Here, the log function in the "expression" for the plot is a natural log, and so the 1.0857 factor is a ratio of 2.5 over ln(10).  The 3.631 is the standard AB conversion factor from flux to magnitude.  
+**Getting Magnitudes from Fluxes**:
+The flux data in the DP0.2 tables are given in units of nanojansky, but in the future apparent magnitudes will be available.
+In the meantime, users can still obtain magnitudes and, as in this example, plot a color-magnitude diagram of the objects
+selected according to our query.
+As shown below, the following conversion is required to plot the retrieved flux values as a color-magnitude diagram:  
+``-1.0857*log(r_calibFlux/3.631e12)+1.0857*log(i_calibFlux/3.631e12)`` in the "X" box,
+and ``-1.0857log(g_calibFlux/3.631e12)`` box for the "Y" box.  
+Here, the log function in the "expression" for the plot is actually a natural log, and so the 1.0857 factor is a ratio of 2.5 over ln(10).
+The 3.631 is the standard AB conversion factor from flux to magnitude.
 
 .. figure:: /_static/portal_results_xy_settings_DP02.png
     :name: portal_results_xy_settings_DP02
