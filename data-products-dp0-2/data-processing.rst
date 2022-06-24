@@ -20,7 +20,7 @@ Data Processing Overview
 
 .. This section should provide a brief, top-level description of the page.
 
-The imaging data and catalogs included in DP0.2 are based on the wide-fast-deep data generated as part of the LSST Dark Energy Science Collaboration (DESC) Data Challenge 2 (DC2).
+The imaging data and catalogs included in DP0.2 are based on the wide-fast-deep simulated survey generated as part of the LSST Dark Energy Science Collaboration (DESC) Data Challenge 2 (DC2).
 This page provides a brief overview of the production and processing of those data. A much more comprehensive description of DC2 can be found in `LSST Dark Energy Science Collaboration (2020) <https://arxiv.org/abs/2010.05926>`_.
 This page draws heavily from those sources.
 
@@ -41,7 +41,7 @@ The input catalogs of astronomical sources are described in `Section 5 <https://
 
 There are several astronomical inputs into the DC2 image simulations.
 The extra-galactic catalog is described in detail in `Korytov et al. (2019) <https://arxiv.org/abs/1907.06530>`_ and is based on the Outer Rim dark-matter-only cosmological simulations (`Heitmann et al. 2019 <https://arxiv.org/abs/1904.11970>`_).
-Supernova are also included in the DC2 data, modeled with a volumetric rate and time evolution that matches observed data (`Dilday et al. 2010 <https://arxiv.org/abs/1001.4995>`_, `Guy et al. 2007 <https://arxiv.org/abs/astro-ph/0701828>`_).
+Supernovae are also included in the DC2 data, modeled with a volumetric rate and time evolution that matches observed data (`Dilday et al. 2010 <https://arxiv.org/abs/1001.4995>`_, `Guy et al. 2007 <https://arxiv.org/abs/astro-ph/0701828>`_).
 Stars are drawn from the Galfast model of `Juric et al. (2008) <https://arxiv.org/abs/astro-ph/0510520>`_ with approximately 10% of the stellar sources assumed to be variable.
 Solar system objects are not included. A flat sky background is assumed in each filter.
 
@@ -52,16 +52,16 @@ Single-image processing
 =======================
 
 The LSST DESC DC2 image processing is described in `Section 7 <https://arxiv.org/pdf/2010.05926.pdf#page=24>`_ of the `DC2 Paper <https://arxiv.org/abs/2010.05926>`_.
-The simulated images were processed with the Data Release Production (DRP) pipeline included as part of the `v19.0.0 <https://pipelines.lsst.io/releases/v19_0_0.html>`_ of the LSST Science Pipelines.
+The simulated images were processed with the Data Release Production (DRP) pipeline included as part of the `v23.0.1 <https://pipelines.lsst.io/v/v23_0_2/releases/v23_0_0.html>`_ release of the LSST Science Pipelines.
 More detailed descriptions of the LSST Science Pipelines can be found in `Bosch et al. (2018) <https://arxiv.org/abs/1705.06766>`_ and `Bosch et al. (2019) <https://arxiv.org/abs/1812.03248>`_.
-Briefly, image processing with the DRP pipeline involves four major steps – single-frame processing, joint calibration, image coaddition, and coadd processing. For single-frame processing, individual visits are processed on a per-CCD basis.
+Briefly, image processing with the DRP pipeline involves four major steps – single-frame processing, calibration, image coaddition, and coadd processing. For single-frame processing, individual visits are processed on a per-CCD basis.
 This step starts with instrument signature removal (ISR) that consists of bias subtraction, crosstalk correction, non-linearity correction, flat fielding, brighter-fatter correction, and masking of bad and saturated pixels
 (see `Appendix A <https://arxiv.org/pdf/2010.05926.pdf#page=38>`_ of the DC2 paper for details).
-ISR is followed by an image characterization step that performs background estimation and subtraction, Point-Spread Function (PSF) modeling, cosmic-ray detection and removal, source detection, source deblending, and source measurement.
+ISR is followed by an image characterization step that performs background estimation and subtraction, Point-Spread Function (PSF) modeling, cosmic-ray detection and removal, measuring and applying aperture corrections, and source detection, deblending, and measurement.
 Various measurement algorithms are applied including centroiding, aperture photometry, PSF photometry, model photometry, and shape fitting.
 The image catalogs are compared to a reference catalog to generate photometric and astrometric calibrations for the images and associated catalogs.
 For DC2, the photometric and astrometric calibrations are based on a simulated reference catalog.
-The resulting calibrated images are known formally as "Processed Visit Images" (PVI) and informally as "calibrated exposures" (`calexps`).
+The resulting calibrated images are known formally as "Processed Visit Images" (PVIs) and informally as "calibrated exposures" (`calexps`).
 
 
 .. _Data-Processing-Overview-Coadded-Image-Processing:
@@ -69,16 +69,16 @@ The resulting calibrated images are known formally as "Processed Visit Images" (
 Coadded-image processing
 ========================
 
-Calibrated images are resampled onto a common pixel grid on the sky and combined to generated deeper coadded images.
-The coadd image grid is defined in terms of "tracts" and "patches", where each tract is composed of 7 × 7 patches, and each patch is 4,100 × 4,100 pixels with a pixel scale of 0.2 arcsec.
+Calibrated images are resampled onto a common pixel grid on the sky and combined to generate deeper coadded images.
+The coadd image grid is defined in terms of "tracts" and "patches", where each tract is composed of 7 × 7 patches, and each patch is 4,100 × 4,100 pixels with a pixel scale of 0.2 arcsec (note that these choices are specific to DP0.2; the choice of tract and patch sizes is configurable in the Science Pipelines).
 Tracts have dimensions of 1.6 degrees on a side, while patches are ~13.7 arcmin on a side (roughly the size of a CCD).
 Patches overlap by 100 pixels along each edge so that objects lying on the edge of one patch are typically fully contained on the neighboring overlapping patch.
 Similarly, tracts overlap their neighbors by 1 arcmin.
-When producing the coadded images variable sources and artifacts using resampled PSF-matched images to produce a static image of the sky.
-As described in `Aihara et al. (2019) <https://arxiv.org/abs/1905.12221>`_, each image is resampled, PSF-matched, and stacked into a 2-sigma-clipped mean coadd that serves as a model of the static scene.
+When producing the coadded images variable sources and artifacts are removed using resampled PSF-matched images to produce a static image of the sky.
+As described in `Aihara et al. (2019) <https://arxiv.org/abs/1905.12221>`_, each image is resampled, PSF-matched, and stacked into a 2.5-sigma-clipped mean coadd that serves as a model of the static scene.
 A difference image was created for each image with respect to this model to identify regions associated with transient detections that only appear in a small number of epochs.
 With these regions identified, the final coadded image is created as a weighted mean stack of images where the transient detections are ignored.
-The PSF at any location point in the coadded image is calculated by taking a weighted sum of the PSFs from individual visit that have been resampled and weighted in the same way as the coadds.
+The PSF at any location point in the coadded image is calculated by taking a weighted sum of the PSFs from individual visits that have been resampled and weighted in the same way as the coadds.
 Regions that have clipped areas will not have the correct PSF, and these are flagged for individual objects.
 Before individual images are combined to form the coadd, an empirical background model is fit to the entire focal plane to control the extent to which extended features are included in the background model.
 
@@ -94,14 +94,18 @@ and (5) performing forced measurements in each band using the reference band pos
 This last step produces a catalog of independent per-band object measurements that are provided to science users.
 
 
-.. _Data-Processing-Overview-Postprocessing:
+.. _Data-Processing-Overview-Difference-Imaging:
 
-Post-processing
-===============
+Difference Image Analysis (DIA) production
+==========================================
 
-The DESC DC2 data were simulated and processed using v19.0.0 of the LSST Science Pipelines which relied on the "Gen2" Butler.
-For release as part of DP0.2, these data products were converted to the "Gen3" Butler system and ingested into the Interim Data Facility (IDF).
-Since this was a post-processing conversion rather than a native processing with the Gen3 Butler, there may be some slight inconsistencies in the data structure that raise warnings when accessed by the user (see the :doc:`/data-access-analysis-tools/rsp-warnings`).
-This should be corrected in DP0.2 when the DC2 data will be natively reprocessed with the Gen3 Butler.
-We also note that the post-processing organization of the DC2 catalogs described in `Section 4 of DC2 Data Release Note <https://arxiv.org/abs/2101.04855>`_ have not been applied to the DP0.2 data.
-These data are instead intended to be accessed from the Rubin Observatory TAP service.
+The version (23.0.1) of the LSST Science Pipelines that was used for DP0.2 processing now includes portions of the Prompt Processing pipelines,
+which centers on template image subtraction and transient detection on the resulting "difference images." 
+Each science observation is subtracted from a template coadd image covering the same area of the sky (in LSST survey operations,
+templates will be created from the previous year of observations).
+The template images are resampled to the coordinate system of the science image, then convolved with a kernel to produce an image whose PSF matches
+that of the new science image.
+Once the image subtraction has been performed, similar algorithms to those used in Data Release Processing are used to detect and measure sources on the resulting "difference image."
+These source detections and measurements make up the _DIASource_ catalog, and the _DIAObject_ table is made up of _DIASources_ associated
+by sky coordinate.
+The _DIAObject_ table includes statistical summary parameters of the associated _DIASources_ (i.e., lightcurve properties).
