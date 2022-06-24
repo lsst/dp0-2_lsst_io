@@ -34,7 +34,7 @@ Under **TAP Searches** there are four steps.
 .. figure:: /_static/portal_default_view_DP02.png
     :name: portal_default_view_DP02
 
-    This is the default view upon entering the Portal Aspect.
+    This is the view when the DP0.2 Object table has been selected from the drop-down menus.
 
 
 .. _Portal-Intro-Single-Table-Queries:
@@ -46,38 +46,46 @@ Single Table Queries
 **2. Select Query Type**: Select "Single Table (UI assisted)" to query via the single-table interface (default).
 
 **3. Select Table**: Drop down menus of available tables.
-For DP0 data, choose the "Table Collection (Schema): dp02_dc2_catalogs", and then choose the table to query (see the :ref:`DP0-2-Data-Products-DPDD` for a reminder of what tables are available).
+For DP0 data, choose the "Table Collection (Schema): dp02_dc2_catalogs", and then choose the table to query 
+(see the :ref:`DP0-2-Data-Products-DPDD` for a reminder of what tables are available).
 On the right-hand side of the panel, select "dp02_dc2_catalogs.Object" from the drop-down menu.  
 The table view at lower-right will automatically update to match the selected table.
 
-**4. Enter Constraints**: For now, only "Spatial" constraints apply for DP0.2.
-The longitude and latitude columns will not automatically update to be the correct column names for right ascension and declination for the selected table - you have to enter it manually (note that in DP0.1 they were ``ra`` and ``dec`` but in DP0.2, they are ``coord_ra`` and ``coord_dec``).
+**4. Enter Constraints**: For "Spatial" constraints, the longitude and latitude columns do not yet automatically 
+update to be the correct column names for right ascension and declination for the selected table, and need to be 
+entered (for the DP0.2 Object table, they are "coord_ra" and "coord_dec").
 If a non-existent column name is entered the box will highlight red in indication of the error.
-Choose the desired shape type for a spatial search, ``Cone`` or ``Polygon``, and the appropriate instructions for the search terms will appear.
-Keeping the search area to a minimum will keep processing times short and returned subsets small and manageable.  You can start with 3 arc minutes. 
+Choose the desired shape type for a spatial search, such as "Cone", and the appropriate instructions for the search terms will appear.
+Keeping the search area to a minimum will keep query times short and returned subsets small and manageable as you learn.
+It is recommended to start with 3 arcminutes. 
 
-*Note*: The examples under the box for coordinates are object names as examples of the syntax and formatting only. Those examples are not guaranteed to be in the accessible data sets.
-The central coordinates for DC2, in decimal degrees, are: ``61.863 -35.790``. (See Table 2 of `The LSST DESC DC2 Simulated Sky Survey <https://ui.adsabs.harvard.edu/abs/2021ApJS..253...31L/abstract>`_.)
+*Note*: The central coordinates for DC2, in decimal degrees, are: ``61.863 -35.790``.
 
-*Note*: Although there are two options for "Constraints" (``Spatial`` and ``Temporal``), for DP0.2, currently all of the catalog data that are available through the Portal are from the coadded DC2 images, and do not contain time-domain information.
+.. figure:: /_static/portal_EnterConstraints_DP0.2png
+    :name: portal_enter_constraints_DP02
+    
+    These basic constraints should work well for all learners.
 
-**Table View**: The table to the right of "Enter Constraints" enables applying additional search constraints on the columns in the selected table.
-Use the checkboxes in the left-most column to select the columns to be returned by the query.
-Use the filter icon to only view selected columns.
-Many of the attributes of the table columns in the DC2 datasets are blank, but these are expected to be populated in the future Data Previews and Data Releases.
+**Table View**:
+The table to the right of "Enter Constraints" enables applying additional search constraints on the columns in the selected catalog table.
+Use the checkboxes in the left-most column to select the data column names to be returned by the query.
+Use the filter icon to only view selected data column names.
+Use the constraints column to specify query parameters and only retrieve data which meets those constraints.
+Some of the attributes of the table columns in the DC2 datasets are blank, but these are expected to be populated in the future Data Previews and Data Releases.
 
 .. figure:: /_static/portal_table_view_DP02.png
     :name: portal_table_view_DP02
 
     The table view offers additional query options.
 
-Some tables have a lot of columns.
-Search for desired columns by entering terms in the boxes underneath "column_name" or "description".  
-Additional constraints on column data can be included in the query by specifying them under "constraints".  
-One constraint we will use here is to limit the range of fluxes of selected objects.  In our example, the fluxes are given in nanojanskys, and we will use ``>20 and <1000``.  When we are ready to plot, we will convert those to magnitudes by taking logs of fluxes.  
-Mouse-over to view pop-up boxes with instructions.   
+Some tables have a lot of data columns.
+Search for desired data columns by entering terms in the boxes underneath "column_name" or "description" and pressing "enter".  
+An example of a query for Object catalog data with "detect_isPrimary" = True, the g-band cModel flux > 100000
+(i.e., apparent magnitudes less than about 19th mag), and an extendedness = 0 in the g-band (i.e., stars), is shown in the figure above. 
 
-You can remove filters and reset the table view at any time using the "Remove" or "Reset" buttons above the upper-right corner of the table (not shown in image above).
+Mouse-over to view pop-up boxes with instructions throughout the Portal interface.   
+
+Remove filters and reset the table view at any time using the "Remove" or "Reset" buttons above the upper-right corner of the table.
 
 If desired, convert table view queries to `ADQL Queries` using the "Populate and Edit ADQL" button at the bottom of the page.
 This can enable entering more complex constraints that cannot be expressed against individual columns.
