@@ -265,7 +265,7 @@ You may set them up by typing in the following commands (remember to use the sam
 .. code-block:: bash
 
    git config --global user.email yourEmail@yourdomain
-   git config --global user.name GItUsername
+   git config --global user.name GitUsername
 
 From here, you have three options to update the contents of your "notebooks/tutorial-notebooks/" directory.
 
@@ -324,7 +324,7 @@ First, using a terminal in the Notebook aspect, set the global git configuration
 .. code-block:: bash
 
    git config --global user.email yourEmail@yourdomain
-   git config --global user.name GItUsername
+   git config --global user.name GitUsername
 
 Then, using a terminal in the Notebook aspect, follow these instructions for `generating a new SSH key and adding it to the ssh-agent <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent>`_.
 Be sure to follow the instructions for the Linux environment (i.e., the RSP environment), regardless of your personal computer's environment, because you are generating an SSH key *for your account in the RSP*.
