@@ -75,7 +75,6 @@ favorite editor/IDE to write code in your local environment and save it in a way
 - Qserv: TAP/ADQL Queries using some keywords (AREA, BOX, COORDSYS, COORD1, COORD2 and INTERSECTS) are not yet supported
 - Portal: Many improvements are planned, including the ability to start a query in the portal and access it from your notebook
 - Authentication and Authorization: You will be able to create and manage groups to allow you to share data with specific RSP users
-- API: Virtual Observatory image services are not yet available
 - API: VOSpace service is not yet available
 - ConsolidatedDB: Access to observatory metadata is not yet available
 - Bulk Download Service: Not offered
