@@ -178,55 +178,40 @@ The language is used by the `IVOA <https://ivoa.net>`_ to represent astronomy qu
 ADQL is based on the Structured Query Language (SQL).
 
 **3. Advanced ADQL**: When ADQL is selected as the query type, the interface in step 3 changes to provide a free-form block into which ADQL queries can be entered directly.
-The query executed in the :ref:`Portal-Intro-Single-Table-Queries` example above can be expressed in ADQL as follows:
+The query executed in the example above can be expressed in ADQL as follows:
 
 .. code-block:: SQL
 
-   SELECT coord_ra, coord_dec, g_calibFlux, r_calibFlux
-   FROM dp02_dc2_catalogs.Object
-   WHERE CONTAINS(
-   POINT('ICRS', coord_ra, coord_dec),
-   CIRCLE('ICRS', 62.0, -37, 0.05))=1
-   AND (g_calibFlux>1000 AND i_calibFlux>1000)
+   SELECT coord_dec,coord_ra,g_calibFlux,i_calibFlux,r_calibFlux 
+   FROM dp02_dc2_catalogs.Object 
+   WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),CIRCLE('ICRS', 62, -37, 0.05))=1 
+   AND (g_calibFlux >20 AND g_calibFlux <1000 AND i_calibFlux >20 AND i_calibFlux <1000 
+   AND r_calibFlux >20 AND r_calibFlux <1000)
 
 Type the above query into the ADQL Query block and click on the "Search" button in the bottom-left corner to execute.
-You should set the row limit to be a small number, such as 10, when first testing queries.
+Remember to set the "Row Limit" to be a small number, such as 10000, when testing queries.
 The search results will populate the same **Results View**, as shown above using the Single Table Query interface.
-A total of 492 records should be returned, which you can interact with in the same manner as outlined in :ref:`Portal-Intro-Single-Table-Queries`.
 
-**Joining with another table**
+**Joining with another table**:
 It is often desirable to access data stored in more than just one table.
-We do this using a JOIN clause to combine rows from two or more tables.
-Here, using the same query as above, we will join the data in the object table with the data in the truth table to compare the results of the processing with the input truth information.
-The two tables are joined by matching the ``objectId`` across two catalogs.
+This is possible to do using a JOIN clause to combine rows from two or more tables.
+In the example below, the Source and CcdVisit table are joined in order to obtain the date and seeing from the CcdVisit table
+for the observations that produced the photometry in the Source table.
+Any two tables can be joined so long as they have an index in common.
 
 .. code-block:: SQL
 
-    SELECT obj.coord_ra as ora, obj.coord_dec as odec,
-    truth.ra as tra, truth.dec as tdec,
-    truth.is_good_match
-    FROM dp01_dc2_catalogs.object as obj
-    JOIN dp01_dc2_catalogs.truth_match as truth
-    ON truth.match_objectId = obj.objectId
-    WHERE CONTAINS(
-    POINT('ICRS', obj.ra, obj.dec),
-    CIRCLE('ICRS', 61.863, -35.79, 0.05555555555555555))=1
+   SELECT src.ccdVisitId, src.extendedness, src.band,
+   scisql_nanojanskyToAbMag(src.psfFlux) AS psfAbMag,
+   cv.obsStartMJD, cv.seeing 
+   FROM dp02_dc2_catalogs.Source AS src
+   JOIN dp02_dc2_catalogs.CcdVisit AS cv
+   ON src.ccdVisitId = cv.ccdVisitId
+   WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 62.0, -37, 1)) = 1
+   AND src.band = 'i' AND src.extendedness = 0 AND src.psfFlux > 10000
+   AND cv.obsStartMJD > 60925 AND cv.obsStartMJD < 60955
     
-
-This query also includes some additional quality filtering on the match.
-In the `truth_match` table, ``is_good_match`` is ``true`` (or ``1``) if an object-truth matching pair satisfies all matching criteria, or it is ``false``(or ``0``) otherwise.
-``is_good_match`` for an object is defined as, separations <1 arcsec and magnitude differences <1 mag.
-This reduces the number of results returned from 205 to 191.
-
-.. figure:: /_static/portal_results_join.png
-    :name: portal_results_join
-    :width: 600
-
-    The results of a JOIN.
-
-Note that ``is_good_match`` is of type boolean whereas in the ADQL query above we selected good matches by filtering on ``truth.is_good_match`` = ``1`` . With ADQL, the "=0" (false) or "=1" (true) syntax for booleans should be used.
-
-**Query the TAP service schema**
+**Query the TAP service schema**:
 Information about the LSST TAP schema can also be obtained via ADQL queries.
 The following query gets the names of all the available DP0.2 tables.
 
@@ -234,17 +219,15 @@ The following query gets the names of all the available DP0.2 tables.
 
    SELECT *
    FROM tap_schema.tables
-   WHERE tap_schema.tables.table_name like 'dp01%'
+   WHERE tap_schema.tables.table_name like 'dp02%'
 
-To get the detailed list of columns available in the `object` table, their associated units and descriptions:
+To get the detailed list of columns available in the "Object" table, their associated units and descriptions:
 
 .. code-block:: SQL
 
    SELECT tap_schema.columns.column_name, tap_schema.columns.unit,
    tap_schema.columns.description
    FROM tap_schema.columns
-   WHERE tap_schema.columns.table_name = 'dp01_dc2_catalogs.object'
-
-This produces a subset of the data shown in the lower-right pane of the Portal's **Single Table** query screen, described above.
+   WHERE tap_schema.columns.table_name = 'dp02_dc2_catalogs.Object'
 
 See also :ref:`DP0-2-Tutorials-Portal` for additional demonstrations of how to use the Portal's ADQL functionality.
