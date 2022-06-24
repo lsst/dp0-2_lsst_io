@@ -52,12 +52,12 @@ Take care you do not delete other people's files.
 
 For this data preview there are no file quotas applied, however usage will be monitored and users may be asked to reduce their footprint, either in their home space or shared data spaces.
 
-For this data preview, there are no write/delete restrictions on the shared user data Butler repository (butler-us-central1-dp01).
+For this data preview, there are no write/delete restrictions on the shared user data Butler repository (`dp02`).
 That means you could delete your data and other user's data.
 User data stored in our Butler repositories is not backed up, and may not be retained past the Data Preview 0.2 period.
 Be very careful when using the Butler prune collection feature and in particular don't use wildcards with that command.
 
-You can reduce the risk of accidents by following the convention documented in `DMTN-167 <https://dmtn-167.lsst.io/>`__ and only write to your own ``u/<user>/*`` collections.
+You can reduce the risk of accidents by following the convention documented in `DMTN-167 <https://dmtn-167.lsst.io/>`__ and only write to your own ``u/<username>/*`` collections.
 
 You should only access our Butler repositories using standard Butler APIs provided in the Rubin Stack.
 This is both to prevent accidents but also to fulfill your role in helping us evaluate our software.
@@ -68,7 +68,8 @@ RSP/IDF missing features
 Many more features are on our roadmap for the RSP and its related services (Qserv, Butler, etc.) and we have requirements to deliver them by the start of the survey.
 Some major ones to look forward in the future are:
 
-- Notebooks: We are planning on providing a filespace that you can access from your personal device (e.g., laptop) so you can use your favorite editor/IDE to write code in your local environment and save it in a way that makes it visible in your RSP notebook environment
+- Notebooks: We are planning on providing a filespace that you can access from your personal device (e.g., laptop) so you can use your
+favorite editor/IDE to write code in your local environment and save it in a way that makes it visible in your RSP notebook environment
 - Batch: Opportunities for parallelized/batch/non-interactive computation are not currently available
 - Qserv: User tables are not yet available
 - Qserv: TAP/ADQL Queries using some keywords (AREA, BOX, COORDSYS, COORD1, COORD2 and INTERSECTS) are not yet supported
