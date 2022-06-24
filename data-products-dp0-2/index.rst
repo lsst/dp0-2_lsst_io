@@ -64,7 +64,7 @@ Images
 
 The three main types of images available for DP0.2 are processed visit images, coadded images, and difference images.
 
-**Processed Visit Images** (PVIs; **calexps**):
+**Processed Visit Image** (PVI; **calexp**):
 A fully-qualified LSST image from a single visit (in other words, a single pointing) that includes the science pixel array, a quality mask, and a variance array,
 in addition to a PSF characterization and metadata (including calibration metadata) about the image.
 PVIs are stored with the background already subtracted.
@@ -77,7 +77,7 @@ a WCS solution to be used in converting between pixel and sky coordinates,
 a photometric calibration object to be used in converting between fluxes and magnitudes for astronomical sources,
 and a model of the point-spread function (PSF) at each position on the image.
 
-**Coadded Images** (**deepCoadd**):
+**Coadded Image** (**deepCoadd**):
 An image that is the combination of multiple input images, often referred to as a "coadd" or a "deepCoadd".
 The input images have been aligned to a common projection and pixel grid;
 corrected to the same photometric scale, zero-point, and point-spread function (PSF);
@@ -95,10 +95,11 @@ Coadd images are divided into **"tracts"** (a spherical convex polygon) and trac
     The center image is one tract quadrant, and the right image one hundredth the area of the tract quadrant. Patches are larger than the right image, as described in the DESC's paper:
     *"each tract is composed of 7 × 7 patches, and each patch is 4,100 × 4,100 pixels with a pixel scale of 0.2 arcsec"*.
 
-**Difference Images**:
+**Difference Image**:
 A PVI which has had a template image subtracted from it.
 Template images are built from images obtained the previous year.
 Any source detected in a difference image represents the *time-variable* flux component of the astrophysical object.
+In the butler, find difference exposures as "goodSeeingDiff_differenceExp", and the templates as "goodSeeingDiff_templateExp".
 
 .. _DP0-2-Data-Products-DPDD-Catalogs:
 
@@ -106,10 +107,18 @@ Catalogs
 --------
 
 Source detection, measurement, and characterization have been run on the PVIs, coadds, and difference images to generate catalog data.
-Catalog data are accessible with the :ref:`Data-Access-Analysis-Tools-TAP` via the Portal or Notebook Aspect, and with the Butler via the Notebook Aspect.
+Catalog data are accessible with :ref:`Data-Access-Analysis-Tools-TAP` via the Portal or Notebook Aspect, and with the Butler via the Notebook Aspect.
 
 **DP0.2 Table Schema:**
 The column names, units, and descriptions of the DP0.2 catalogs listed in the table below are all available via the `DP0.2 schema browser <https://dm.lsst.org/sdm_schemas/browser/dp02.html>`_.
+
+**Multiple similar butler catalogs**, which contain the same data but are slightly differently named and differently formatted,
+can be found by querying the collections in the butler registry.
+Some tables require different types of inputs: for example, "diaSourceTable" can be queried with a dataId that includes the visit,
+whereas "diaSourceTable_tract" can be queried with a dataId that includes the tract number.
+The table below lists the catalogs most likely to be most useful to most people.
+Note that in the future, for real LSST data releases, this level of redundancy in the catalog data would not be served.
+
 
 .. list-table:: Catalog data available for DP0.2.
    :widths: 100 100 390
@@ -131,10 +140,10 @@ The column names, units, and descriptions of the DP0.2 catalogs listed in the ta
      - diaObjectTable_tract
      - Derived summary parameters for DiaSources associated by sky location, including lighcurve statistics (137 columns).
    * - DiaSource
-     - diaSourceTable_tract
+     - diaSourceTable
      - Astrometric and photometric measurements for sources detected in the difference images (66 columns).
    * - ForcedSourceOnDiaObject
-     - forcedSourceOnDiaObjectTable_tract
+     - forcedSourceOnDiaObjectTable
      - Forced photometry on the individual PVIs at the locations of all DiaObjects (35 columns).
    * - Visit
      - visitTable
@@ -153,10 +162,7 @@ These principal columns will be pre-selected in the Table View of the RSP's Port
 A good default search query parameter for the Object, Source, and ForcedSource catalogs is to set **detect_isPrimary** = **True**.
 The ``detect_isPrimary`` parameter is ``True`` if a source has no children, is in the inner region of a coadd patch, is in the inner region of a coadd tract, and is not “detected” in a pseudo-filter.
 Setting ``detect_isPrimary`` to ``True`` will remove any duplicates, sky objects, etc.
-
-**Additional butler catalogs** can also be found by querying the collections in the butler registry.
-Some tables require different types of inputs: for example, "diaSourceTable" can be queried with a dataId that includes the visit,
-whereas "diaSourceTable_tract" can be queried with a dataId that includes the tract number.
+See `this documentation on filtering for unique, deblended sources with the detect_isPrimary flag <https://pipelines.lsst.io/getting-started/multiband-analysis.html#filtering-for-unique-deblended-sources-with-the-detect-isprimary-flag>`_ for more information.
 
 **Truth catalog data** will also be available via TAP and the Butler.
 More information to come.
