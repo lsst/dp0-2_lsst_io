@@ -28,6 +28,8 @@ Log in to the Portal Aspect by clicking on the "Portal" panel of the main landin
 The Portal's user interface
 ===========================
 
+Mouse-over to view pop-up boxes with instructions throughout the Portal interface.   
+
 Across the top is a menu bar of interface options, but the DP0 data set is only accessed via the :ref:`Data-Access-Analysis-Tools-TAP` reached via the "RSP TAP Search" button.
 Under **TAP Searches** there are four steps.
 
@@ -82,23 +84,25 @@ Some tables have a lot of data columns.
 Search for desired data columns by entering terms in the boxes underneath "column_name" or "description" and pressing "enter".  
 An example of a query for Object catalog data with "detect_isPrimary" = True, the g-band cModel flux > 100000
 (i.e., apparent magnitudes less than about 19th mag), and an extendedness = 0 in the g-band (i.e., stars), is shown in the figure above. 
-
-Mouse-over to view pop-up boxes with instructions throughout the Portal interface.   
-
 Remove filters and reset the table view at any time using the "Remove" or "Reset" buttons above the upper-right corner of the table.
 
-If desired, convert table view queries to `ADQL Queries` using the "Populate and Edit ADQL" button at the bottom of the page.
+**Convert to ADQL:**
+If desired, convert table view queries to "ADQL Queries" using the "Populate and Edit ADQL" button at the bottom of the page.
 This can enable entering more complex constraints that cannot be expressed against individual columns.
+
+**Apply a Row Limit:**
+The "Row Limit" in the bottom bar can be changed to apply an upper bound to the number of rows returned.
+The Portal can work effectively with datasets with millions of rows.
+However, when learning or testing queries, it is advisable to limit the number of rows (e.g., 10000 rows is useful for testing).
+
+*Note*: Because of the implementation of the Rubin Observatory "Qserv" database, it is not recommended to use the row limit
+alone in order to get a "sampling" of data.
+Queries with only a row limit can run for much longer than one might intuitively expect; applying a spatial constraint is
+likely to return a result more quickly.
 
 **Search:** Press the search button at lower left when ready to execute.
 
-The `Row Limit` may be changed to apply an upper bound to the number of rows returned.  For starters, you can select 10000.  
-The Portal can work effectively with datasets with up to a million rows, or even more; however, in the present implementation of the RSP it is advisable
-to limit the number of columns requested for queries expected to return results on such a scale: `SELECT *` for 100,000+ rows can return datasets of unwieldy total size.
-
-*Note*: Because of the implementation of the Rubin Observatory `Qserv` database, it is not recommended to use the row limit alone in order to get a "sampling" of data.
-Queries with only a row limit can run for much longer than one might intuitively expect; applying a spatial constrain is likely to return a result more quickly.
-
+**Example:**
 The example in the image below queries the dp02_dc2_catalogs.Object table using a cone search centered on ``62.0 -37.0`` in decimal degrees (close to the approximate center of the DC2 region) with a 3 arcminutes radius.
 The search allows you to provide additional constraints, and the example here limits the flux as specified in Column "constraints."  The search will return data in columns ``coord_ra``, ``coord_dec``, ``g_calibFlux``, ``r_calibFlux``, and ``i_calibFlux`` for all objects with ``g_calibFlux``, ``i_calibFlux``, and ``i_calibFlux`` in the range you specified, between 20 and 1000 nanojansky.  
 
