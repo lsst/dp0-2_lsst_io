@@ -54,7 +54,7 @@ Click on the funnel symbol at the top of the checkbox column to filter the table
 
 1.6. In the "constraints" column, enter "=1" for the "detect_isPrimary", ">360" for the fluxes, and "=0" for the extendedness parameters.
 This will limit the objects returned to those with no children (i.e., the products of deblending), which are brighter than about 25th magnitude
-in the g, r, and i filters, and which appear to be point-like (not extended) in those three filters as well.
+in the g, r, and i filters, and which appear to be point-like (not extended, but *not necessarily stellar*) in those three filters as well.
 
 At this point the boxes selecting the "extendedness" and "detect_isPrimary" parameters can be unchecked, because
 it is not necessary for this tutorial to actually retrieve the data in those columns, only to constrain the query based on their values.
@@ -128,6 +128,8 @@ Use the same "Chart Options" except give it a different "Chart title", such as "
 	:name: portal_tut01_step02e
 	
 	The color-magnitude diagrams, including the new scatter plot (right).
+
+**Notice:** The simulated data is visibly quantized in the above plot, and this will not be the case with real data.
 
 2.6. Interact with the plot.
 Hover over the data points with a mouse and see the x and y values appear in a pop-up window.
