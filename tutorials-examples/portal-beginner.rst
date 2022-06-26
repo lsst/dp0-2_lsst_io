@@ -74,18 +74,64 @@ it is not necessary for this tutorial to actually retrieve the data in those col
 Step 2. Create the color-magnitude diagram
 ==========================================
 
-2.1. The default Results view shows a sky-image at upper left (with the coordinates of returned objects marked on it),
+The default Results view shows a sky-image at upper left (with the coordinates of returned objects marked on it),
 a xy table at upper right, and a table of the results values along the bottom.
 At the time this tutorial was created, the sky-image was still 2MASS and not a DC2 simulated image, so this tutorial does not involve use of the sky-image.
-In the upper left corner, click "xy-tbl" to show only the default xy plot along the top (in this case, plotting the two sky coordinates columns), and the table along the bottom of the screen.
+
+2.1. In the upper left corner, click "xy-tbl" to show only the default xy plot along the top (in this case, plotting the two sky coordinates columns), and the table along the bottom of the screen.
+
+**Notice:** The objects retrieved *do not* fill in the search area (a 1 degree radius) in the xy plot of "coord_ra" versus "coord_dec".
+This is because a row limit of 10000 objects was applied, and the data is partitioned into files by sky coordinate.
+The query accessed these files until 10000 objects were found (i.e., the query *does not* find *all objects* that satisfy the query parameters and then choose 10000 random objects to return).
 
 .. figure:: /_static/portal_tut01_step02a.png
 	:name: portal_tut01_step02a
 	
 	The Results view with "xy-tbl" selected.
 	
-2.2. 
 
+**Notice:** In order to plot color (r-i magnitude) versus magnitude (g), the fluxes (which are in units of nanojansky) are being converted to AB magnitudes in the next step. The `AB Magnitudes Wikipedia <https://en.wikipedia.org/wiki/AB_magnitude>`_ page</a> provides a concise resource for users unfamiliar with AB magnitudes and jansky fluxes.
+
+2.2. Click on the xy plot settings icon (two gears, upper right) in order to "modify trace", which means to change the plot parameters.
+Set "X" to be "(-2.5 * log10(r_calibFlux)) - (-2.5 * log10(i_calibFlux))", and "Y" to be "-2.5 * log10(g_calibFlux) + 31.4".
+Leave the color scale and the bins as they are, and click on "Chart Options" to show the options.
+For "Chart title" enter "Color-Magnitude Diagram"; set "X Label" to "color (r-i)"; set "Y Label" to "magnitude (g)", and underneath check the "Options" box to "reverse".
+Set the "X Min/Max" values to "-0.5" and "2.0", and the "Y Min/Max" values to "16.5" and "25.5".
+
+.. figure:: /_static/portal_tut01_step02b.png
+	:name: portal_tut01_step02b
+	
+	Set the plot parameters.
+
+2.3. Click "Apply" and then "Close" the pop-up window, and look at the color-magnitude plot.
+
+.. figure:: /_static/portal_tut01_step02c.png
+	:name: portal_tut01_step02c
+	
+	The color-magnitude diagram.
+
+**Notice:** The default plot style is a density map, which is appropriate for very large data sets.
+In this case, with only 10000 object retrieved, create a scatter plot for comparison.
+
+2.4. Click on the xy plot settings icon (two gears, upper right) again, but this time choose "Add New Chart".
+Leave "Plot Type" at the default, "Scatter", and then set the "X" and "Y" to the same equation as in Step 2.2.
+Use the same "Chart Options" except give it a different "Chart title", such as "Scatter CMD".
+
+.. figure:: /_static/portal_tut01_step02d.png
+	:name: portal_tut01_step02d
+	
+	Set the new chart parameters for a scatter plot.
+
+2.5. Click "OK" and "Close", and look at the new color-magnitude plot.
+
+.. figure:: /_static/portal_tut01_step02e.png
+	:name: portal_tut01_step02e
+	
+	The color-magnitude diagrams, including the new scatter plot (right).
+
+**Notice:** The plot is interactive.
+Hover over the data points with a mouse and see the x and y values appear in a pop-up window.
+Select a row in the table and it appears as a different color in the plot, and vice-versa: select a point in the plot and it is highlighted in the table below.
 
 
 
