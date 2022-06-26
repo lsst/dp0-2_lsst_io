@@ -14,25 +14,66 @@
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
 .. A warning will alert you of identical labels during the linkcheck process.
 
-###############################################################
-Beginner TAP Tutorial - Single Table Usage in the Portal Aspect
-###############################################################
+##################################################
+01. Bright Stars Color-Magnitude Diagram (beginner)
+##################################################
 
 .. This section should provide a brief, top-level description of the page.
 
-This brief tutorial will show you how to perform the same data retrieval and analysis that is shown in the first of the :ref:`DP0-2-Tutorials-Notebooks` (titled "Intro to DP0") by using the Portal Aspect's Single Table TAP search function.
+**Contact authors:** Melissa Graham and Greg Madejski
 
-In this tutorial we will extract data from a small region of sky in the ``object`` table and build a Color-Magnitude Diagram.
+**Last verified to run:** 2022-06-26
 
-This tutorial assumes you have read the basic introduction to the Portal Aspect in :doc:`/data-access-analysis-tools/portal-intro`.
+**Targeted learning level:** beginner
+
+**Introduction:**
+This tutorial uses the Single-Table Query interface to search for bright stars in a small region of sky,
+and then uses the Results interface to create a color-magnitude diagram.
+This is the same demonstration used to illustrate the Table Access Protocol (TAP) service in the first of the :ref:`DP0-2-Tutorials-Notebooks`.
+Beginner-level users looking for a more general overview of the Portal Aspect should refer to this :ref:`Data-Access-Analysis-Tools-Portal-Intro`.
 
 
 .. _DP0-2-Portal-Beginner-Step-1:
 
-Select portal aspect from RSP
-=============================
+Step 1. Set the query constraints
+=================================
 
-After logging into the Portal Aspect, select Single Table (UI assisted) from the **Select Query Type**, then select the ``dp02_dc2_catalogs`` (left) and ``dp02_dc2_catalogs.Object`` (right) from the **Select Table** drop down menus.
+1.1. Log in to the Portal Aspect.
+
+1.2 Under "TAP Searches", leave "1. Select TAP Service" at its default "LSST RSP https://data.lsst.cloud/api/tap", and leave "2. Select Query Type" at its default "Single Table (UI assisted)".
+
+1.3. Next to "3. Select Table", choose the Table Collection to be "dp02_dc2_catalogs" (left drop-down menu) and the Table to be "dp02_dc2_catalogs.Object" (right drop-down menu).
+
+1.4. Under "4. Enter Constraints", select the box to the left of "Spatial".
+Set the "Longitude Column" to "coord_ra", the "Latitude Column" to "coord_dec", to match the sky coordinates column names in the Object table.
+Leave the "Shape Type" as the default "Cone", and for "Coordinates or Object Name" use the central coordinates of the DC2 simulation area "62, -37".
+Next to "Radius", from the drop down menu choose "degrees" *and then* enter "1" in the box and press enter to set the search radius to 1 degree.
+
+1.5. In the table at right, under "Output Column Selection and Constraints", click the box in the left-most column to select "column_names" "coord_ra", "coord_dec", "detect_isPrimary", "g" "r" and "i_calibFlux", and "g" "r" and "i_extendedness". 
+Click on the funnel symbol at the top of the checkbox column to filter the table view to show selected columns only.
+
+1.6. In the "constraints" column, add "=1" for the "detect_isPrimary", ">360" for the fluxes, and "=0" for the extendedness parameters.
+This will limit the objects returned to those with no children (i.e., the products of deblending), which are brighter than about 25th magnitude
+in the g, r, and i filters, and which appear to be point-like (not extended) in those three filters as well.
+
+1.7. At this point the boxes selecting the "extendedness" and "detect_isPrimary" parameters can be unchecked, because
+it is not necessary for this tutorial to actually retrieve the data in those columns, only to constrain the query based on their values.
+
+1.8. Set the "Row Limit" to 10000, to only retrieve 10000 objects for this demonstration.
+
+.. figure:: /_static/portal_tut01_step01.png
+	:name: portal_tut01_step01
+	
+	The above screenshot shows the constraints before clicking "Search".
+	
+
+
+.. _DP0-2-Portal-Beginner-original:
+
+Greg's Original -- Remove after updated
+=======================================
+
+After logging into the Portal Aspect, select "Single Table (UI assisted)" from the **Select Query Type**, then select the ``dp02_dc2_catalogs`` (left) and ``dp02_dc2_catalogs.Object`` (right) from the **Select Table** drop down menus.
 This is demonstrated in the next figure.
 
 .. figure:: /_static/Portal_aspect_DP02.png
