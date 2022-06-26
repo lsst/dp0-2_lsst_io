@@ -40,7 +40,7 @@ Step 1. Set the query constraints
 
 1.1. Log in to the Portal Aspect.
 
-1.2 Under "TAP Searches", leave "1. Select TAP Service" at its default "LSST RSP https://data.lsst.cloud/api/tap", and leave "2. Select Query Type" at its default "Single Table (UI assisted)".
+1.2. Under "TAP Searches", leave "1. Select TAP Service" at its default "LSST RSP https://data.lsst.cloud/api/tap", and leave "2. Select Query Type" at its default "Single Table (UI assisted)".
 
 1.3. Next to "3. Select Table", choose the Table Collection to be "dp02_dc2_catalogs" (left drop-down menu) and the Table to be "dp02_dc2_catalogs.Object" (right drop-down menu).
 
@@ -52,20 +52,41 @@ Next to "Radius", from the drop down menu choose "degrees" *and then* enter "1" 
 1.5. In the table at right, under "Output Column Selection and Constraints", click the box in the left-most column to select "column_names" "coord_ra", "coord_dec", "detect_isPrimary", "g" "r" and "i_calibFlux", and "g" "r" and "i_extendedness". 
 Click on the funnel symbol at the top of the checkbox column to filter the table view to show selected columns only.
 
-1.6. In the "constraints" column, add "=1" for the "detect_isPrimary", ">360" for the fluxes, and "=0" for the extendedness parameters.
+1.6. In the "constraints" column, enter "=1" for the "detect_isPrimary", ">360" for the fluxes, and "=0" for the extendedness parameters.
 This will limit the objects returned to those with no children (i.e., the products of deblending), which are brighter than about 25th magnitude
 in the g, r, and i filters, and which appear to be point-like (not extended) in those three filters as well.
 
-1.7. At this point the boxes selecting the "extendedness" and "detect_isPrimary" parameters can be unchecked, because
+At this point the boxes selecting the "extendedness" and "detect_isPrimary" parameters can be unchecked, because
 it is not necessary for this tutorial to actually retrieve the data in those columns, only to constrain the query based on their values.
 
-1.8. Set the "Row Limit" to 10000, to only retrieve 10000 objects for this demonstration.
+1.7. Set the "Row Limit" to 10000, to only retrieve 10000 objects for this demonstration.
 
 .. figure:: /_static/portal_tut01_step01.png
 	:name: portal_tut01_step01
 	
 	The above screenshot shows the constraints before clicking "Search".
 	
+1.8. Click "Search" at lower left.
+
+
+.. _DP0-2-Portal-Beginner-Step-1:
+
+Step 2. Create the color-magnitude diagram
+==========================================
+
+2.1. The default Results view shows a sky-image at upper left (with the coordinates of returned objects marked on it),
+a xy table at upper right, and a table of the results values along the bottom.
+At the time this tutorial was created, the sky-image was still 2MASS and not a DC2 simulated image, so this tutorial does not involve use of the sky-image.
+In the upper left corner, click "xy-tbl" to show only the default xy plot along the top (in this case, plotting the two sky coordinates columns), and the table along the bottom of the screen.
+
+.. figure:: /_static/portal_tut01_step02a.png
+	:name: portal_tut01_step02a
+	
+	The Results view with "xy-tbl" selected.
+	
+2.2. 
+
+
 
 
 .. _DP0-2-Portal-Beginner-original:
