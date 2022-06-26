@@ -46,3 +46,20 @@ A set of utilities are provided to get a TAP service instance.
    results.to_table().show_in_notebook()
 
 Several of the DP0 :ref:`DP0-2-Tutorials-Notebooks` demonstrate how to use the TAP service programmatically from a python notebook.
+
+
+.. _Data-Access-Analysis-Tools-TAP-TOPCAT:
+
+
+Use of TOPCAT with the RSP TAP service
+======================================
+
+One popular and useful TAP utility is `TOPCAT <http://www.star.bris.ac.uk/~mbt/topcat/>`_.
+
+To access DP0.2 from the TAP utility, one needs to have an RSP access token.  How to generate and use an RSP access token is described by the `Rubin Science Platform APIs <https://data-int.lsst.cloud/api-aspect>`_ webpage and by the `Science Platform Tokens <https://nb.lsst.io/environment/tokens.html>`_ webpage.
+
+Additional details can be found on Slides 11-12 of Leanne Guy's talk, `Rubin Science Platform – what to expect
+<https://docushare.lsstcorp.org/docushare/dsweb/Get/presentation-1694/PST-SC%20-%20Rubin%20Science%20Platform%20-%20LeanneGuy%20-%2020220413.pdf>`_, as well as in `this Rubin Community Forum thread <https://community.lsst.org/t/will-there-be-external-tap-access-to-rsp-dp0-2-tables/6660>`_.
+
+
+
