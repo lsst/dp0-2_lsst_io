@@ -22,6 +22,8 @@ Introduction to the RSP Portal Aspect
 
 Log in to the Portal Aspect by clicking on the "Portal" panel of the main landing page at `data.lsst.cloud <https://data.lsst.cloud>`_.
 
+**New for DP0.2!** :ref:`Portal-Intro-Image-Queries`
+
 .. _Portal-Intro-User-Interface:
 
 The Portal's user interface
