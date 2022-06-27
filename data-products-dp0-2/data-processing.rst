@@ -100,7 +100,7 @@ Difference Image Analysis (DIA) production
 ==========================================
 
 The version (23.0.1) of the LSST Science Pipelines that was used for DP0.2 processing now includes portions of the Prompt Processing pipelines,
-which centers on template image subtraction and transient detection on the resulting "difference images." 
+which centers on template image subtraction and transient detection on the resulting "difference images."
 Each science observation is subtracted from a template coadd image covering the same area of the sky (in LSST survey operations,
 templates will be created from the previous year of observations).
 The template images are resampled to the coordinate system of the science image, then convolved with a kernel to produce an image whose PSF matches

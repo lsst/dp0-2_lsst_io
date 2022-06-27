@@ -26,7 +26,7 @@
 
 **Targeted learning level:** intermediate
 
-**Introduction:** 
+**Introduction:**
 This notebook explores the data for a Type Ia supernova (SNIa) lightcurve: the i-band photometry, the seeing for each i-band epoch, and the astrometric scatter of the i-band observations.
 The scientific motivation here is that a user knows the coordinates of a low-redshift SNIa (67.4579, -44.0802), and now
 wants to find an i-band epoch in which this SNIa was bright *and* the seeing was good.
@@ -52,7 +52,7 @@ For more information about the DP0.2 catalogs, visit the :ref:`DP0-2-Data-Produc
 
 1.2. Leave the TAP Service and Query Type as their default, and select the `dp02_dc2_catalogs.DiaObject <https://dm.lsst.org/sdm_schemas/browser/dp02.html#DiaObject>`_ table.
 
-1.3. Check the box for spatial constraints, and use ra and decl as the longitude and latitude columns. Leave the shape type as Cone and enter the coordinates ``67.4579, -44.0802``. Set the radius to 2 arcseconds.
+1.3. Check the box for spatial constraints, and use ra and decl as the longitude and latitude columns. Leave the shape type as Cone and enter the coordinates ``67.4579, -44.0802``. Set the radius to 2 arcsec.
 
 1.4. In the table at right, select columns ra, decl, and diaObjectId to be returned.
 
@@ -61,7 +61,7 @@ For more information about the DP0.2 catalogs, visit the :ref:`DP0-2-Data-Produc
 
     Initial query to obtain the DiaObjectId.
 
-1.5. Click "Search" and view the results: there is only one DiaObject within 2 arcseconds, with coordinates ``67.4579634, -44.080243`` and DiaObjectId "1252220598734556212".
+1.5. Click "Search" and view the results: there is only one DiaObject within 2 arcsec, with coordinates ``67.4579634, -44.080243`` and DiaObjectId "1252220598734556212".
 This is definitely the SNIa of interest to the user.
 
 
@@ -78,9 +78,9 @@ This query also uses the ccdVisitId to join to the CcdVisit table and obtain the
 
 .. code-block:: SQL
 
-   SELECT diasrc.ra, diasrc.decl, 
-   diasrc.diaObjectId, diasrc.diaSourceId, 
-   diasrc.filterName, diasrc.midPointTai, 
+   SELECT diasrc.ra, diasrc.decl,
+   diasrc.diaObjectId, diasrc.diaSourceId,
+   diasrc.filterName, diasrc.midPointTai,
    scisql_nanojanskyToAbMag(diasrc.psFlux) AS psAbMag,
    ccdvis.seeing
    FROM dp02_dc2_catalogs.DiaSource AS diasrc
@@ -135,9 +135,9 @@ In the left-most plot, the lightcurve, notice that for this "best-seeing" epoch 
 That makes it a suitable choice for the scientific use-case outlined in the Introduction.
 
 In the right-most plot, the astrometric scatter, notice that for this "bright / best-seeing" epoch the measured sky coordinates of the DiaSource are very close to those reported for the DiaObject.
-This *does not* necessarly mean that the coordinates for the "best-seeing" epoch are more accurate, because the
+This *does not* necessarily mean that the coordinates for the "best-seeing" epoch are more accurate, because the
 coordinates of DiaObjects are *derived from* the individual DiaSources.
-The point of the right-most plot is more that the overall scatter is less than 0.3 arcsec, and that selecting the 
+The point of the right-most plot is more that the overall scatter is less than 0.3 arcsec, and that selecting the
 "bright / best-seeing" epoch image for co-registration with images from other facilities is a wise choice.
 
 .. figure:: /_static/portal_tut02_step03e.png

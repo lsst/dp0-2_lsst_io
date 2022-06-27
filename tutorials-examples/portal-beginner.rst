@@ -49,7 +49,7 @@ Set the "Longitude Column" to "coord_ra", the "Latitude Column" to "coord_dec", 
 Leave the "Shape Type" as the default "Cone", and for "Coordinates or Object Name" use the central coordinates of the DC2 simulation area "62, -37".
 Next to "Radius", from the drop down menu choose "degrees" *and then* enter "1" in the box and press enter to set the search radius to 1 degree.
 
-1.5. In the table at right, under "Output Column Selection and Constraints", click the box in the left-most column to select "column_names" "coord_ra", "coord_dec", "detect_isPrimary", "g" "r" and "i_calibFlux", and "g" "r" and "i_extendedness". 
+1.5. In the table at right, under "Output Column Selection and Constraints", click the box in the left-most column to select "column_names" "coord_ra", "coord_dec", "detect_isPrimary", "g" "r" and "i_calibFlux", and "g" "r" and "i_extendedness".
 Click on the funnel symbol at the top of the checkbox column to filter the table view to show selected columns only.
 
 1.6. In the "constraints" column, enter "=1" for the "detect_isPrimary", ">360" for the fluxes, and "=0" for the extendedness parameters.
@@ -151,11 +151,11 @@ Under "2. Select Query Type" select "Edit ADQL (Single Table (UI assisted)", and
 
 .. code-block:: SQL
 
-   SELECT coord_dec,coord_ra,g_calibFlux,i_calibFlux,r_calibFlux 
-   FROM dp02_dc2_catalogs.Object 
-   WHERE detect_isPrimary =1 
-   AND g_calibFlux >360 AND g_extendedness =0 
-   AND i_calibFlux >360 AND i_extendedness =0 
+   SELECT coord_dec,coord_ra,g_calibFlux,i_calibFlux,r_calibFlux
+   FROM dp02_dc2_catalogs.Object
+   WHERE detect_isPrimary =1
+   AND g_calibFlux >360 AND g_extendedness =0
+   AND i_calibFlux >360 AND i_extendedness =0
    AND r_calibFlux >360 AND r_extendedness =0
 
 3.2. Remember to set the "Row Limit" to 10000, and then click "Search" to execute the same query as above.

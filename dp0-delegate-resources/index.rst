@@ -59,7 +59,7 @@ Rubin Science Platform accounts
 ===============================
 
 **Activation:**
-Delegates will be contacted by Rubin Observatory staff to provide their `GitHub <https://www.github.com/>`_ username.
+Delegates will be contacted by Rubin Observatory staff to provide their `GitHub <https://www.github.com>`__ username.
 All delegates will be invited to join the `rubin-dp0 GitHub Organization <https://github.com/rubin-dp0>`_ and its `Delegates team <https://github.com/orgs/rubin-dp0/teams/delegates/members>`_, and must accept this invitation in order to log into the RSP at the Interim Data Facility (IDF; the Google Cloud).
 With a browser that is logged in to GitHub, navigate to `data.lsst.cloud <https://data.lsst.cloud>`_ and choose "Log in" at upper-right.
 A pop-up window will ask to "Authorize Rubin Science Platform IDF Production Environment".
@@ -243,7 +243,7 @@ Post about your DP0 investigations in the `Data Preview 0 Community Forum catego
 Extend the benefits of DP0 in the science community
 ---------------------------------------------------
 
-**Join an LSST Science Collaboration.** 
+**Join an LSST Science Collaboration.**
 There are eight `LSST Science Collaborations <https://www.lsstcorporation.org/science-collaborations>`_, and new members are always welcome.
 
 **Participate in the Rubin Community Forum.**
@@ -334,8 +334,6 @@ Please note that there are a few reasons why posts get flagged, and CoC violatio
 Here are some guidelines on `how to react if your post is flagged <https://community.lsst.org/t/how-to-react-if-your-post-is-flagged>`_.
 
 If you experience or witness a violation of the CoC in another venue, please reach out to Sandrine Thomas, one of the `Rubin Observatory Workplace Culture Advocates <https://project.lsst.org/workplace-culture-advocate>`_ who has agreed to be the contact person for DP0 Delegates.
-Please also feel free to reach out to any Community Engagement Team member at any time: Melissa Graham, Jeff Carlin, Greg Madejski, Jim Annis, Alex Drlica-Wagner, or Tina Adair.
-All can be contacted by email or via direct message in the Community Forum.
 
 
 .. _Delegate-Homepage-PubPol:

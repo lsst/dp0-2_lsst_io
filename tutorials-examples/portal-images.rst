@@ -26,7 +26,7 @@
 
 **Targeted learning level:** intermediate
 
-**Introduction:** 
+**Introduction:**
 This notebook demonstrates how to get an initial look at the potential host galaxy of a SNIa in the six (ugrizy) deepCoadd images.
 
 This tutorial assumes a basic working knowledge of the Portal interface (e.g., review of the :ref:`Portal-Intro-Image-Queries` instructions or the successful completion of the first Portal tutorial).
@@ -99,12 +99,12 @@ then bottom row (left to right).
 In the table, notice that the filter order is y, z, i, u, g, r.
 To sort the table so that the filter order is u, g, r, i, z, y, click on the column heading for "em_min" columns.
 
-2.5. Rescale the flux to explore the underlying distribution of host galaxy light. 
+2.5. Rescale the flux to explore the underlying distribution of host galaxy light.
 Use the "scale" icon (hover-over text "Stretch drop down") to change the greyscale stretch and/or boundaries for the images.
 From the drop-down window, select one of the supplied image stretch options or select "Color stretch" to get a pop-up window.
 
 Set the Stretch Type to "Log" and the upper range to 99.5%, and unselect the checkbox next to "Use Zscale for bounds", then click "Refresh".
-Notice that there appears to be a faint - but spatially distinct - extended object at the location of the SNIa, especially in the 
+Notice that there appears to be a faint - but spatially distinct - extended object at the location of the SNIa, especially in the
 g-band image (bottom center), which at first was not obvious due to the wings of the brighter galaxy.
 
 .. figure:: /_static/portal_tut03_step02e.png

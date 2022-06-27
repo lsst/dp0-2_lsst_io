@@ -24,7 +24,7 @@ The **Rubin Science Platform (RSP)** is the set of integrated web-based applicat
 
 Throughout DP0 the RSP will be in active development by Rubin Observatory staff, with access provided to delegates on a shared-risk basis.
 
-See `Rubin Science Platform Documentation <https://data.lsst.cloud/docs>`_ page for additional information. 
+See `Rubin Science Platform Documentation <https://data.lsst.cloud/docs>`_ page for additional information.
 
 
 .. _Data-Access-Analysis-Tools-Warnings:

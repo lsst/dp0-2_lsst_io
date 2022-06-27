@@ -32,7 +32,7 @@ Additional information can be found at the `Rubin Science Platform Documentation
 Portal tutorials
 ================
 
-A beginner-level overview for the Portal Aspect is provided in this :doc:`/data-access-analysis-tools/portal-intro`. 
+A beginner-level overview for the Portal Aspect is provided in this :doc:`/data-access-analysis-tools/portal-intro`.
 More information can also be found in the `about firefly <https://data.lsst.cloud/portal/app/onlinehelp/>`_ page on the `Rubin Science Platform Documentation <https://data.lsst.cloud/docs>`_ page.
 
 The tutorials below are step-by-step demonstrations of how to use the Portal for science investigations.
@@ -55,9 +55,8 @@ Notebook tutorials
 A beginner-level overview for the Notebook Aspect is provided in this :doc:`/data-access-analysis-tools/nb-intro`.
 More information can also be found in the `Notebook Aspect documentation <https://nb.lsst.io/>`_
 
-The tutorials in the ``rubin-dp0`` GitHub Organization's `tutorial-notebooks repository <https://github.com/rubin-dp0/tutorial-notebooks>`_ will be available by default in a folder in each user's home directory in the RSP's Notebook Aspect. 
+The tutorials in the ``rubin-dp0`` GitHub Organization's `tutorial-notebooks repository <https://github.com/rubin-dp0/tutorial-notebooks>`_ will be available by default in a folder in each user's home directory in the RSP's Notebook Aspect.
 See that repository's `README file <https://github.com/rubin-dp0/tutorial-notebooks/blob/main/README.md>`_ for descriptions of the notebooks.
 
-**Acknowledgments:** Many of these tutorial notebooks were originally developed by `Stack Club <https://github.com/LSSTScienceCollaborations/StackClub>`_ members and have been altered and updated to be appropriate for DP0. 
+**Acknowledgments:** Many of these tutorial notebooks were originally developed by `Stack Club <https://github.com/LSSTScienceCollaborations/StackClub>`_ members and have been altered and updated to be appropriate for DP0.
 Delegates should review the DP0 :ref:`Delegate-Homepage-PubPol` if they use these tutorial notebooks.
-
