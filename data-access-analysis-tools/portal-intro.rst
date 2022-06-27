@@ -22,21 +22,19 @@ Introduction to the RSP Portal Aspect
 
 Log in to the Portal Aspect by clicking on the "Portal" panel of the main landing page at `data.lsst.cloud <https://data.lsst.cloud>`_.
 
-
 .. _Portal-Intro-User-Interface:
 
 The Portal's user interface
 ===========================
 
-Mouse-over to view pop-up boxes with instructions throughout the Portal interface.   
+**Try it:** Mouse-over text to view pop-up boxes with more detailed descriptions throughout the Portal interface.   
 
-Across the top is a menu bar of interface options, but the DP0 data set is only accessed via the :ref:`Data-Access-Analysis-Tools-TAP` reached via the "RSP TAP Search" button.
-Under **TAP Searches** there are four steps.
+**"1. Select TAP Service"**
+Leave the default (``https://data.lsst.cloud/api/tap``) to access DP0 data.
 
-.. figure:: /_static/portal_default_view_DP02.png
-    :name: portal_default_view_DP02
-
-    This is the view when the DP0.2 Object table has been selected from the drop-down menus.
+**"2. Select Query Type"**
+There are three types of queries: "Single Table (UI assisted)", "Edit ADQL (advanced)", and "Image Search (ObsTAP)".
+Each of these options has a different user interface, covered in the sections below.
 
 
 .. _Portal-Intro-Single-Table-Queries:
@@ -44,14 +42,17 @@ Under **TAP Searches** there are four steps.
 Single Table Queries
 ====================
 
-**1. TAP Service**: Leave the default (``https://data.lsst.cloud/api/tap``) to access DP0 data.
+The default query type, and default user interface, is for "Single Table (UI assisted)" queries.
 
-**2. Select Query Type**: Select "Single Table (UI assisted)" to query via the single-table interface (default).
+.. figure:: /_static/portal_default_view_DP02.png
+    :name: portal_default_view_DP02
 
+    The default view of the Portal's user interface for single table queries.
+    
 **3. Select Table**: Drop down menus of available tables.
-For DP0 data, choose the "Table Collection (Schema): dp02_dc2_catalogs", and then choose the table to query 
-(see the :ref:`DP0-2-Data-Products-DPDD` for a reminder of what tables are available).
-On the right-hand side of the panel, select "dp02_dc2_catalogs.Object" from the drop-down menu.  
+For DP0 data, choose the "Table Collection (Schema): dp02_dc2_catalogs" in the left drop-down menu.
+The default table in the right drop-down menu is the Object table.
+See the :ref:`DP0-2-Data-Products-DPDD` for table descriptions and schema.
 The table view at lower-right will automatically update to match the selected table.
 
 **4. Enter Constraints**: For "Spatial" constraints, the longitude and latitude columns do not yet automatically 
