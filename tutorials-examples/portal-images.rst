@@ -69,7 +69,7 @@ In this example the compass has been enabled using the "Tools" icon (wrench and 
     :name: portal_tut03_step02a
 
     The default view centers the image display on the patch center.
-    
+
 2.3. Align and lock by WCS.
 Click on the "align" icon above the image (hover-over text "Image alignment drop down...") and under "Align and Lock Options" select "WCS".
 Notice now that zooming and panning in one image does the same in all six images.
@@ -78,22 +78,20 @@ Notice now that zooming and panning in one image does the same in all six images
     :name: portal_tut03_step02b
 
     Choose to align and lock on WCS.
- 
- 2.4. Mark and center the SNIa.
- Choose the "center" icon (hover-over text "Image center drop down"), and in the box next to "Center On" enter the SNIa's coordinates, "67.4579, -44.0802", and then click "Go & Mark". 
- If you pan away from the SNIa, recenter using the "center" icon and finding the SNIa coordinates under "Recent Positions".
+
+2.4. Mark and center the SNIa.
+Choose the "center" icon (hover-over text "Image center drop down"), and in the box next to "Center On" enter the SNIa's coordinates, "67.4579, -44.0802", and then click "Go & Mark".
+If you pan away from the SNIa, recenter using the "center" icon and finding the SNIa coordinates under "Recent Positions".
 
 .. figure:: /_static/portal_tut03_step02c.png
     :name: portal_tut03_step02c
 
     Center on and mark the coordinates of the SNIa.
 
-
 .. figure:: /_static/portal_tut03_step02d.png
     :name: portal_tut03_step02d
 
     A zoom-in on the SNIa and its host, with linear zscaling.
-
 
 2.5. Rescale the flux to explore the underlying distribution of host galaxy light. 
 Use the "scale" icon (hover-over text "Stretch drop down") to change the greyscale stretch and/or boundaries for the images.
@@ -107,5 +105,5 @@ g-band image (bottom center), which at first was not obvious due to the wings of
     :name: portal_tut03_step02e
 
     Well the host association looks a little complicated!
-    
+
 Techniques for associating SNIa with their host galaxies are beyond the scope of this tutorial, which only concerned with getting an initial look at the *potential* host galaxy.
