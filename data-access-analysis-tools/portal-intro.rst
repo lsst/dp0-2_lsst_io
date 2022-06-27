@@ -299,25 +299,24 @@ Above the magnifying glass, use the back and forth arrows to navigate between HD
 Click either on one of the green boxes (representing the central coordinats of another image in the table), or on another row in the table, to display a different image.
 At upper right, click on "img-tbl" to get ride of the xy plot and show the images and the table side-by-side.
 
-.. figure:: /_static/portal_ImageQuery_sidybyside_DP02.png
-    :name: portal_ImageQuery_sidybyside_DP02
+.. figure:: /_static/portal_ImageQuery_sidebyside_DP02.png
+    :name: portal_ImageQuery_sidebyside_DP02
 
     Display the image in row three of the table (with the view format set to "img-tbl").
 
 **Image tools**: 
-Zoom in on a bright star in one of the images.
+There are many tools available for users, the following demonstrates use of just one.
+First, zoom in on a bright star in one of the images.
 Select the "tools" icon (wrench and ruler), and from the pop-up window choose to "Extract" using a line.
 Draw a line on the image across the star to extract the pixel values and show an approximate shape of the point-spread function for the star.
 The plot reveals that this particular star is saturated.
 Click on "Pin Table" to add a table of pixel data as a new tab in the right half of the view.
-To make the line go away, click on the "layers" icon (the one for which the hover-over text reads:  "Manipulate overlay display...") and next to "Extract Line 1 - HDU#1" click on "Delete".
+To make the line go away, click on the "layers" icon (the one for which the hover-over text reads:  "Manipulate overlay display...") and in the pop-up window, next to "Extract Line 1 - HDU#1", click on "Delete".
 
 .. figure:: /_static/portal_ImageQuery_tools_DP02.png
     :name: portal_ImageQuery_tools_DP02
 
     Use the image display tool to extract a line cut.
-
-Try out some of the other tools.
 
 **Image grid display**:
 Above the image use the grid icon (hover-over text "Show full grid") to show up to eight of the images side-by-side.
@@ -334,4 +333,4 @@ At the time this documentation was created, the boxes were overlayed on 2MASS im
     The coverage window will, in the future, be overlayed on a DC2 image and not 2MASS.
 
 **Learn More.**
-See also :ref:`DP0-2-Tutorials-Portal` for a demonstration of the Portal's image-related functionality applied to a deepCoadd.
+See also :ref:`DP0-2-Tutorials-Portal` for a tutorial using additional image types and more of the Portal's image-related functionality.
