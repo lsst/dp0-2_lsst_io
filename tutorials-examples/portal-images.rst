@@ -27,7 +27,7 @@
 **Targeted learning level:** intermediate
 
 **Introduction:** 
-This notebook demonstrates how to find the host galaxy of a SNIa in the six (ugrizy) deepCoadd images.
+This notebook demonstrates how to get an initial look at the potential host galaxy of a SNIa in the six (ugrizy) deepCoadd images.
 
 This tutorial assumes a basic working knowledge of the Portal interface (e.g., review of the :ref:`Portal-Intro-Image-Queries` instructions or the successful completion of the first Portal tutorial).
 For more information about the DP0.2 catalogs and images, visit the :ref:`DP0-2-Data-Products-DPDD`.
@@ -63,6 +63,7 @@ For more information about the DP0.2 catalogs and images, visit the :ref:`DP0-2-
 2.1. In the results view, click on "img-tbl" in the upper right corner to remove the "xy plot" from the display as it is not needed.
 
 2.2. Above the image, click on the grid icon (hover-over text "Show full grid") to simultaneously view all six filters' deepCoadds. The default view is to center all deepCoadds on the center of the patch.
+In this example the compass has been enabled using the "Tools" icon (wrench and ruler, hover-over text "Tools drop down").
 
 .. figure:: /_static/portal_tut03_step02a.png
     :name: portal_tut03_step02a
@@ -80,11 +81,29 @@ Notice now that zooming and panning in one image does the same in all six images
  
  2.4. Mark and center the SNIa.
  Choose the "center" icon (hover-over text "Image center drop down"), and in the box next to "Center On" enter the SNIa's coordinates, "67.4579, -44.0802", and then click "Go & Mark". 
- 
+ If you pan away from the SNIa, recenter using the "center" icon and finding the SNIa coordinates under "Recent Positions".
+
 .. figure:: /_static/portal_tut03_step02c.png
     :name: portal_tut03_step02c
 
     Center on and mark the coordinates of the SNIa.
- 
- 2.5. 
- 
+
+
+.. figure:: /_static/portal_tut03_step02d.png
+    :name: portal_tut03_step02d
+
+    A zoom-in on the SNIa and its host, with linear zscaling.
+
+
+2.5. Rescale the flux to explore the underlying distribution of host galaxy light. 
+Use the "scale" icon (hover-over text "Stretch drop down") to change the greyscale stretch and/or boundaries for the images.
+From the drop-down window, select one of the supplied image stretch options or select "Color stretch" to get a pop-up window.
+
+If the Stretch Type is set to "Log" and the upper range to 99.5% (with "Use Zscale for bounds" unselected, then click "Refresh"), there appears to be a faint - but spatially distinct - extended object at the location of the SNIa which at first was lost in the wings of the brighter galaxy, especially in the g-band image (bottom-center).
+
+.. figure:: /_static/portal_tut03_step02e.png
+    :name: portal_tut03_step02e
+
+    Well the host association looks a little complicated!
+    
+ Techniques for associating SNIa with their host galaxies are beyond the scope of this tutorial, which only concerned with getting an initial look at the *potential* host galaxy.
