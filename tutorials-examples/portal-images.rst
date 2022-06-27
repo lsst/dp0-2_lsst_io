@@ -41,7 +41,7 @@ For more information about the DP0.2 catalogs and images, visit the :ref:`DP0-2-
 
 1.1. Log into the Portal Aspect and select query type "Image Search (Obs TAP)".
 
-1.2. Under "Observation Type and Source", choose "Calibration Level" 3, which is for derived images such as deepCoadds and different images. Leave the other options to their default settings except for the "Data Product Subtype" enter "lsst.deepCoadd_calexp".
+1.2. Under "Observation Type and Source", choose "Calibration Level" 3, which is for derived images such as deepCoadds and difference images. Leave the other options to their default settings except for the "Data Product Subtype" enter "lsst.deepCoadd_calexp".
 
 1.3. Under "Location", choose "Observation boundary contains point" from the drop-down menu and enter the coordinates "67.4579, -44.0802" - the known location of the SNIa from Portal tutorial 02.
 
