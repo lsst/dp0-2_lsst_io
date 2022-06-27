@@ -1,5 +1,3 @@
-.. This is a template rst file (.rst) within the Vera C. Rubin Observatory Documentation for Data Preview 0.2 (DP0.2) documentation project. This template can be used for a directory's index.rst or other pages within the directory. This comment and proceeding blank line may be deleted after the file is copied and renamed within the destination directory.
-
 .. Review the README on instructions to contribute.
 .. Review the style guide to keep a consistent approach to the documentation.
 .. Static objects, such as figures, should be stored in the _static directory. Review the _static/README on instructions to contribute.
@@ -10,29 +8,43 @@
 
 .. This is the label that can be used for cross referencing this file.
 .. Recommended title label format is "Directory Name"-"Title Name" -- Spaces should be replaced by hyphens.
-.. _Template-Folder-Title-of-Index:
+.. _DP0-Delegate-Resources-DP0-Assemblies-Schedule:
 .. Each section should include a label for cross referencing to a given area.
 .. Recommended format for all labels is "Title Name"-"Section Name" -- Spaces should be replaced by hyphens.
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
 .. A warning will alert you of identical labels during the linkcheck process.
 
-##############
-Title of Index
-##############
+.. This file does not contain a title because it is a table for another location (dp0-delegate-resources/index.rst).
+.. title:: DP0 Delegate Assemblies Schedule
+.. ################################
+.. DP0 Delegate Assemblies Schedule
+.. ################################
 
 .. This section should provide a brief, top-level description of the page.
 
-.. note::
-    This is a template file. This note should be deleted when the section is properly populated.
+.. Use *italics* for tentative topics.
 
-This is a template for the index.rst of a directory.
-If there are no levels beneath this one, make sure the last line containing the asterisk (*) of ``toctree`` is commented out.
+.. Use double-underscore for external links to prevent duplicate explicit target names.
 
-.. toctree::
-    :maxdepth: 2
-    :titlesonly:
-    :glob:
+.. list-table:: Schedule and planned content of DP0 Delegate Assemblies
+   :header-rows: 1
+   :widths: 1 2 2
 
-    *
+   * - Date
+     - First Hour
+     - Second Hour
+   * - 2022-07-08
+     - :ref:`Delegate-Homepage-Kickoff` (beginner)
+     - Introduction to the DP0.2 Time-Domain Data Products (intermediate)
+   * - 2022-07-22
+     - Catalog Data with the TAP Service (beginner)
+     - Time-Domain Catalogs in the TAP Service (intermediate)
+   * - 2022-08-05
+     - Visualizing Image Data (beginner)
+     - *breakouts*
+   * - 2022-08-19
+     - Data Query & Retrieval with the Butler (beginner)
+     - Time-Domain Data in the Butler (intermediate)
 
-This template may also be used for other pages within the directory. In this case, feel free to remove the ``toctree``.
+Additional delegate assemblies to be posted.
+Rows in *italics* are tentative topics.

@@ -1,6 +1,7 @@
 .. This is a template rst file (.rst) within the Vera C. Rubin Observatory Documentation for Data Preview 0.2 (DP0.2) documentation project. This template can be used for a directory's index.rst or other pages within the directory. This comment and proceeding blank line may be deleted after the file is copied and renamed within the destination directory.
 
 .. Review the README on instructions to contribute.
+.. Review the style guide to keep a consistent approach to the documentation.
 .. Static objects, such as figures, should be stored in the _static directory. Review the _static/README on instructions to contribute.
 .. Do not remove the comments that describe each section. They are included to provide guidance to contributors.
 .. Do not remove other content provided in the templates, such as a section. Instead, comment out the content and include comments to explain the situation. For example:
@@ -8,7 +9,7 @@
     - If a file cannot include a title (surrounded by ampersands (#)), comment out the title from the template and include a comment explaining why this is implemented (in addition to applying the ``title`` directive).
 
 .. This is the label that can be used for cross referencing this file.
-.. Recommended title label format is "Directory Name"-"Title Name"  -- Spaces should be replaced by hyphens.
+.. Recommended title label format is "Directory Name"-"Title Name" -- Spaces should be replaced by hyphens.
 .. _Templates-Title-of-Index:
 .. Each section should include a label for cross referencing to a given area.
 .. Recommended format for all labels is "Title Name"-"Section Name" -- Spaces should be replaced by hyphens.
