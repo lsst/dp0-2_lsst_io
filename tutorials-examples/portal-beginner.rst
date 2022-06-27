@@ -59,6 +59,8 @@ in the g, r, and i filters, and which appear to be point-like (not extended, but
 At this point the boxes selecting the "extendedness" and "detect_isPrimary" parameters can be unchecked, because
 it is not necessary for this tutorial to actually retrieve the data in those columns, only to constrain the query based on their values.
 
+**Notice:** At this point, with the query all set up, clicking "Populate and Edit ADQL" will switch the Query Type to "Edit ADQL (advanced)" and populate the ADQL query box, as shown in Step 3 below.
+
 1.7. Set the "Row Limit" to 10000, to only retrieve 10000 objects for this demonstration.
 
 .. figure:: /_static/portal_tut01_step01.png
@@ -134,3 +136,24 @@ Use the same "Chart Options" except give it a different "Chart title", such as "
 2.6. Interact with the plot.
 Hover over the data points with a mouse and see the x and y values appear in a pop-up window.
 Select a row in the table and it appears as a different color in the plot, and vice-versa: select a point in the plot and it is highlighted in the table below.
+
+
+
+.. _DP0-2-Portal-Beginner-Step-3:
+
+Step 3. Do the same query with ADQL
+===================================
+
+3.1. Clear the search results and return to the main Portal interface.
+Under "2. Select Query Type" select "Edit ADQL (Single Table (UI assisted)", and enter the following in the box under "ADQL Query".
+
+.. code-block:: SQL
+   SELECT coord_dec,coord_ra,g_calibFlux,i_calibFlux,r_calibFlux 
+   FROM dp02_dc2_catalogs.Object 
+   WHERE detect_isPrimary =1 
+   AND g_calibFlux >360 AND g_extendedness =0 
+   AND i_calibFlux >360 AND i_extendedness =0 
+   AND r_calibFlux >360 AND r_extendedness =0
+
+3.2. Remember to set the "Row Limit" to 10000, and then click "Search" to execute the same query as above.
+Interact with the results in the same way.
