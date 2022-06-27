@@ -27,21 +27,6 @@ and :ref:`the basic components of the RSP <Data-Access-Analysis-Tools-RSP>`, and
 Additional information can be found at the `Rubin Science Platform Documentation <https://data.lsst.cloud/docs>`_ page.
 
 
-.. _DP0-2-Tutorials-Notebooks:
-
-Notebook tutorials
-==================
-
-A beginner-level overview for the Notebook Aspect is provided in this :doc:`/data-access-analysis-tools/nb-intro`.
-More information can also be found in the `Notebook Aspect documentation https://nb.lsst.io/>`_
-
-The tutorials in the ``rubin-dp0`` GitHub Organization's `tutorial-notebooks repository <https://github.com/rubin-dp0/tutorial-notebooks>`_ will be available by default in a folder in each user's home directory in the RSP's Notebook Aspect. 
-See that repository's `README file <https://github.com/rubin-dp0/tutorial-notebooks/blob/main/README.md>`_ for descriptions of the notebooks.
-
-**Acknowledgments:** Many of these tutorial notebooks were originally developed by `Stack Club <https://github.com/LSSTScienceCollaborations/StackClub>`_ members and have been altered and updated to be appropriate for DP0. 
-Delegates should review the DP0 :ref:`Delegate-Homepage-PubPol` if they use these tutorial notebooks.
-
-
 .. _DP0-2-Tutorials-Portal:
 
 Portal tutorials
@@ -60,3 +45,19 @@ The tutorials below are step-by-step demonstrations of how to use the Portal for
     portal-beginner
     portal-intermediate
     portal-images
+
+
+.. _DP0-2-Tutorials-Notebooks:
+
+Notebook tutorials
+==================
+
+A beginner-level overview for the Notebook Aspect is provided in this :doc:`/data-access-analysis-tools/nb-intro`.
+More information can also be found in the `Notebook Aspect documentation <https://nb.lsst.io/>`_
+
+The tutorials in the ``rubin-dp0`` GitHub Organization's `tutorial-notebooks repository <https://github.com/rubin-dp0/tutorial-notebooks>`_ will be available by default in a folder in each user's home directory in the RSP's Notebook Aspect. 
+See that repository's `README file <https://github.com/rubin-dp0/tutorial-notebooks/blob/main/README.md>`_ for descriptions of the notebooks.
+
+**Acknowledgments:** Many of these tutorial notebooks were originally developed by `Stack Club <https://github.com/LSSTScienceCollaborations/StackClub>`_ members and have been altered and updated to be appropriate for DP0. 
+Delegates should review the DP0 :ref:`Delegate-Homepage-PubPol` if they use these tutorial notebooks.
+
