@@ -94,7 +94,7 @@ Tutorials include hands-on executable tutorials and demonstrations based on scie
 .. Using reST syntax, the examples can be reproduced in other locations on this site by using the ``include`` directive.
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :glob:
     :titlesonly:
 
