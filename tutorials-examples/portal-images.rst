@@ -47,7 +47,6 @@ For more information about the DP0.2 catalogs and images, visit the :ref:`DP0-2-
 
 1.4. Do not set any timing or spectral coverage constraints, and do not change the default table column selections.
 
-
 .. figure:: /_static/portal_tut03_step01.png
     :name: portal_tut03_step01
 
@@ -55,3 +54,37 @@ For more information about the DP0.2 catalogs and images, visit the :ref:`DP0-2-
 
 1.5. Click "Search".
 
+
+.. _DP0-2-Portal-Images_Step-2:
+
+2. Interact with the deepCoadds
+===============================
+
+2.1. In the results view, click on "img-tbl" in the upper right corner to remove the "xy plot" from the display as it is not needed.
+
+2.2. Above the image, click on the grid icon (hover-over text "Show full grid") to simultaneously view all six filters' deepCoadds. The default view is to center all deepCoadds on the center of the patch.
+
+.. figure:: /_static/portal_tut03_step02a.png
+    :name: portal_tut03_step02a
+
+    The default view centers the image display on the patch center.
+    
+2.3. Align and lock by WCS.
+Click on the "align" icon above the image (hover-over text "Image alignment drop down...") and under "Align and Lock Options" select "WCS".
+Notice now that zooming and panning in one image does the same in all six images.
+
+.. figure:: /_static/portal_tut03_step02b.png
+    :name: portal_tut03_step02b
+
+    Choose to align and lock on WCS.
+ 
+ 2.4. Mark and center the SNIa.
+ Choose the "center" icon (hover-over text "Image center drop down"), and in the box next to "Center On" enter the SNIa's coordinates, "67.4579, -44.0802", and then click "Go & Mark". 
+ 
+.. figure:: /_static/portal_tut03_step02c.png
+    :name: portal_tut03_step02c
+
+    Center on and mark the coordinates of the SNIa.
+ 
+ 2.5. 
+ 
