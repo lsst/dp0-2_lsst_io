@@ -135,7 +135,7 @@ Note that in the future, for real LSST data releases, this level of redundancy i
      - Astrometric and photometric measurements for sources detected in the individual PVIs (143 columns).
    * - ForcedSource
      - forcedSourceTable
-     - Forced photometry on the individual PVIs at the locations of all detected objects and sources (38 columns).
+     - Forced photometry on the individual PVIs at the locations of all detected objects (38 columns).
    * - DiaObject
      - diaObjectTable_tract
      - Derived summary parameters for DiaSources associated by sky location, including lighcurve statistics (137 columns).
