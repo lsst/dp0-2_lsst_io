@@ -148,6 +148,7 @@ Step 3. Do the same query with ADQL
 Under "2. Select Query Type" select "Edit ADQL (Single Table (UI assisted)", and enter the following in the box under "ADQL Query".
 
 .. code-block:: SQL
+
    SELECT coord_dec,coord_ra,g_calibFlux,i_calibFlux,r_calibFlux 
    FROM dp02_dc2_catalogs.Object 
    WHERE detect_isPrimary =1 
