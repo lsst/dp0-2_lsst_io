@@ -68,8 +68,7 @@ RSP/IDF missing features
 Many more features are on our roadmap for the RSP and its related services (Qserv, Butler, etc.) and we have requirements to deliver them by the start of the survey.
 Some major ones to look forward in the future are:
 
-* Notebooks: We are planning on providing a filespace that you can access from your personal device (e.g., laptop) so you can use your
-favorite editor/IDE to write code in your local environment and save it in a way that makes it visible in your RSP notebook environment
+* Notebooks: We are planning on providing a filespace that you can access from your personal device (e.g., laptop) so you can use your favorite editor/IDE to write code in your local environment and save it in a way that makes it visible in your RSP notebook environment
 
 * Batch: Opportunities for parallelized/batch/non-interactive computation are not currently available
 
