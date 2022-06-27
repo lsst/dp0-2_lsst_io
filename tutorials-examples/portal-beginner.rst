@@ -14,9 +14,9 @@
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
 .. A warning will alert you of identical labels during the linkcheck process.
 
-##################################################
+###################################################
 01. Bright Stars Color-Magnitude Diagram (beginner)
-##################################################
+###################################################
 
 .. This section should provide a brief, top-level description of the page.
 
@@ -71,7 +71,7 @@ it is not necessary for this tutorial to actually retrieve the data in those col
 1.8. Click "Search" at lower left.
 
 
-.. _DP0-2-Portal-Beginner-Step-1:
+.. _DP0-2-Portal-Beginner-Step-2:
 
 Step 2. Create the color-magnitude diagram
 ==========================================

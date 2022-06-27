@@ -59,7 +59,7 @@ Rubin Science Platform accounts
 ===============================
 
 **Activation:**
-Delegates will be contacted by Rubin Observatory staff to provide their `GitHub <http://www.github.com/>`_ username.
+Delegates will be contacted by Rubin Observatory staff to provide their `GitHub <https://www.github.com>`__ username.
 All delegates will be invited to join the `rubin-dp0 GitHub Organization <https://github.com/rubin-dp0>`_ and its `delegates team <https://github.com/orgs/rubin-dp0/teams/delegates/members>`_, and must accept this invitation in order to log into the RSP at the Interim Data Facility (IDF; the Google Cloud).
 With a browser that is logged in to GitHub, navigate to `data.lsst.cloud <http://data.lsst.cloud>`_ and choose "log in" at upper right.
 A pop-up window will ask to "Authorize Rubin Science Platform IDF Production Environment".
@@ -75,7 +75,7 @@ DP0 delegates are being given access to a *shared-risk developmental version* of
 Delegates who are no longer using their accounts and would like to relinquish it to make way for others should submit a GitHub issue in the ``rubin-dp0`` GitHub Organization to let us know, and then leave the ``rubin-dp0`` GitHub Organization.
 (Log into GitHub, navigate to `github.com/settings/organizations <https://github.com/settings/organizations>`_, and click on the "Leave" button for the ``rubin-dp0`` Organization.)
 
-**For delegates who need to get a GitHub account:** go to `github.com <http://www.github.com>`_ and select “Sign up” in the upper-right corner.
+**For delegates who need to get a GitHub account:** go to `github.com <https://www.github.com>`_ and select “Sign up” in the upper-right corner.
 For participation in DP0 it is not necessary to learn how to use git as a version control system, nor any of the git workflows or command line tools.
 GitHub will not be used for RSP accounts during Rubin Observatory Operations, this is a DP0-specific implementation.
 
@@ -85,12 +85,12 @@ GitHub will not be used for RSP accounts during Rubin Observatory Operations, th
 Rubin Community Forum
 =====================
 
-The `Rubin Community Forum <http://community.lsst.org>`_ is the central hub for all virtual discussions and support.
+The `Rubin Community Forum <https://community.lsst.org>`__ is the central hub for all virtual discussions and support.
 It is the best place to post your questions about anything and everything related to DP0.
 People new to the Rubin Community Forum might appreciate `this video demonstrating how to navigate and post topics to the forum <https://www.youtube.com/watch?v=d_Z5xmkR4P4&list=PLPINAcUH0dXZSx2aY6wTIjLCWiexs3dZR&index=10>`_.
 
 **Accounts:**
-Go to `community.lsst.org <http://community.lsst.org>`_ and use the "Sign Up" button at upper-right to create an account.
+Go to `community.lsst.org <https://community.lsst.org>`_ and use the "Sign Up" button at upper-right to create an account.
 
 **Join the DP0 Delegates Group:**
 Go to `community.lsst.org/groups <https://community.lsst.org/groups>`_ and join "DP0 Delegates".
@@ -113,7 +113,7 @@ All **new** delegates in 2022 should plan to attend one of the three identical l
 
 Delegates who joined DP0 in 2021 do not need to attend a kick-off info session in 2022.
 
-**Connection Info:** `ls.st/dp0-events <http://ls.st/dp0-events>`_
+**Connection Info:** `ls.st/dp0-events <https://ls.st/dp0-events>`_
 
 **Recording:** (link to be added here)
 
@@ -145,7 +145,7 @@ Attendance at any of the following virtual seminars is optional for DP0 delegate
 DP0 delegate assemblies
 -----------------------
 
-**Connection Info:** `ls.st/dp0-events <http://ls.st/dp0-events>`_
+**Connection Info:** `ls.st/dp0-events <https://ls.st/dp0-events>`_
 
 **Time:** Biweekly on Fridays from 9am to 11am US Pacific (alternating with :ref:`DP0-Delegate-Programming-StackClub`).
 
@@ -168,7 +168,7 @@ Additional delegate assemblies to be posted.
 Stack Club
 ----------
 
-**Connection Info:**  `ls.st/dp0-events <http://ls.st/dp0-events>`_
+**Connection Info:**  `ls.st/dp0-events <https://ls.st/dp0-events>`_
 
 **Time:** Biweekly on Fridays from 9am to 11am US Pacific time (alternating with :ref:`Delegate-Homepage-DP0-Delegate-Assemblies`).
 
@@ -184,7 +184,7 @@ Everyone is welcome to attend for the full two hours, or just to drop in for a f
 Third Thursday office hour
 --------------------------
 
-**Connection Info:**  `ls.st/dp0-events <http://ls.st/dp0-events>`_
+**Connection Info:**  `ls.st/dp0-events <https://ls.st/dp0-events>`_
 
 **Time:** The third Thursday of every month at 04:00 and 14:00 UTC.
 
@@ -322,7 +322,7 @@ Rubin Observatory staff members will usually be in attendance and able to assist
 Code of conduct
 ===============
 
-Please review the Rubin Code of Conduct (CoC) at `ls.st/comms-coc <http://ls.st/comms-coc>`_.
+Please review the Rubin Code of Conduct (CoC) at `ls.st/comms-coc <https://ls.st/comms-coc>`_.
 
 | To summarize the CoC:
 | - Bullying and harassment will not be tolerated.
@@ -351,7 +351,7 @@ and potentially “DESC DC2 Data Release Note” (`arXiv:2101.04855 <https://arx
 
 **Consider extending co-authorship or acknowledgments to DP0 delegates whose work you used, or who have helped you, as appropriate.**
 Delegates are encouraged to openly share their DP0-related work and/or code during :ref:`Delegate-Homepage-DP0-Delegate-Assemblies`, via the `Community Forum <https://community.lsst.org/>`_,
-within :ref:`Delegate-Homepage-Working-Groups`, and in the shared GitHub repository `delegate-contributions-dp01 <https://github.com/rubin-dp0/delegate-contributions-dp01>`_.
+and in the shared GitHub repository `delegate-contributions-dp01 <https://github.com/rubin-dp0/delegate-contributions-dp01>`_.
 This is intended to facilitate collaboration, which requires proper acknowledgments.
 For example, if you use another delegate’s Jupyter Notebook as a starting point for your Notebook, give credit to that person at the top of your Notebook.
 If another delegate’s work contributed to your DP0-related publication, consider including an acknowledgment, citing their relevant publications, and/or extending co-authorship, as appropriate.

@@ -50,7 +50,7 @@ The Rubin Science Platform (RSP) provides access to Rubin Observatory data produ
 The :ref:`Tools-RSP-Notebook` enables programmatic interaction with, and analysis of, data products in a python environment.
 The :ref:`Tools-RSP-Portal` provides interactive query, data discovery, and visualization tools.
 
-In the DP0-era, the RSP has limited functionality (see :ref:`Data-Access-Analysis-Tools-Warnings`) compared to the Operations-era (see the RSP Vision Document, `LSE-319 <http://ls.st/lse-319>`_).
+In the DP0-era, the RSP has limited functionality (see :ref:`Data-Access-Analysis-Tools-Warnings`) compared to the Operations-era (see the RSP Vision Document, `LSE-319 <https://ls.st/lse-319>`_).
 In the Operations era, the RSP will feature additional tools in the Application Programming Interface (API) aspect and more options for using the Portal and Notebook aspects in tandem.
 
 .. figure:: /_static/RSP_home.png
