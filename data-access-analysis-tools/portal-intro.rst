@@ -27,20 +27,22 @@ Log in to the Portal Aspect by clicking on the "Portal" panel of the main landin
 The Portal's user interface
 ===========================
 
-**Try it:** Mouse-over text to view pop-up boxes with more detailed descriptions throughout the Portal interface.   
+**Try it:** Mouse-over text to view pop-up boxes with more detailed descriptions throughout the Portal interface.
+Click on any "settings" icons you see (double gears) to explore options.
+The Portal is a very powerful user interface with far more options than are covered in the introduction below.
 
 **"1. Select TAP Service"**
 Leave the default (``https://data.lsst.cloud/api/tap``) to access DP0 data.
 
 **"2. Select Query Type"**
-There are three types of queries: "Single Table (UI assisted)", "Edit ADQL (advanced)", and "Image Search (ObsTAP)".
+There are three types of queries: :ref:`Portal-Intro-Single-Table-Queries`, :ref:`Portal-Intro-ADQL-Queries`, and :ref:`Portal-Intro-Image-Queries`.
 Each of these options has a different user interface, covered in the sections below.
 
 
 .. _Portal-Intro-Single-Table-Queries:
 
-Single Table Queries
-====================
+Single Table (UI assisted)
+==========================
 
 The default query type, and default user interface, is for "Single Table (UI assisted)" queries.
 
@@ -150,8 +152,8 @@ See also :ref:`DP0-2-Tutorials-Portal` for additional demonstrations of how to u
 
 .. _Portal-Intro-ADQL-Queries:
 
-ADQL Queries
-============
+Edit ADQL (advanced)
+====================
 
 ADQL is the `Astronomical Data Query Language <https://www.ivoa.net/documents/ADQL/>`_.
 The language is used by the `IVOA <https://ivoa.net>`_ to represent astronomy queries posted to Virtual Observatory (VO) services, such as the Rubin LSST TAP service.
@@ -238,22 +240,46 @@ See also :ref:`DP0-2-Tutorials-Portal` for additional demonstrations of how to u
 
 .. _Portal-Intro-Image-Queries:
 
-Image Queries
-=============
+Image Search (ObsTAP)
+=====================
 
-This is a placeholder for further instructions about how to use the image query interface and how to interact with the search results in the Portal.
+The "Image Search (ObsTAP)" functionality has many new features -- not just new for DP0.2, but new to the Firefly interface, and DP0 Delegates are among the first to use them. 
 
-These two figures are representative of what this functionality will include.
+For more information about the image types available in the DP0.2 data set, see the :ref:`DP0-2-Data-Products-DPDD`.
 
 .. figure:: /_static/portal_ImageQueryDP02.png
     :name: portal_ImageQueryDP02
 
-    An early version of the Portal's image query interface.  
+    The default interface for the "Image Search (ObsTAP)" queries.  
 
+**Enter Constraints** 
+
+Under "Observation Type and Source", the IVOA standard options for "Calibration Level" (0, 1, 2, 3, or 4) are provided.
+For DP0.2, 1 is the raw (unprocessed) images, 2 is the processed visit images (PVIs; the calibrated single-epoch images also called calexps), and 3 are the derived image data such as difference images and deep coadds.
+
+The "Data Product Type" should be left as "Image", and the "Instrument Name", "Collection", and "Data Product Subtype" can all be left blank.
+
+Under "Location", only "Observation boundary contains point" was implemented at the time this documentation was written. 
+Recall that the central coordinates for the DC2 simulated sky region is "62, -37". 
+
+Under "Timing", users can specify a range to apply to the image acquisition dates (this is only relvant for PVIs/calexps).
+
+Under "Spectral", users can provide a wavelength in, e.g., nanometers as a means of specifying the image band.
+
+**Output Column Selection and Constraints**
+
+The default is for all columns to be selected (i.e., have blue checks in the leftmost column). 
+Users can specify which columns of image metadata to return but they **must include** the first two, "access_format" and "access_url", 
+so that the Portal's "Results View" can display the images returned by the query.
+
+**Example**
+
+The image below shows an example query for all r-band PVIs (calexps) that overlap the central coordinates of DC2, which were obtained with a modified Julian date between 60000 and 60500.
+Note that the filter constraint is applied in the table at right.
 
 .. figure:: /_static/portal_ImageQueryCoverageDP02.png
     :name: portal_ImageQueryCoverageDP02
 
-    An early version of the Portal's image query search results coverage map.  
+    An example image query for r-band PVIs in the given date range.  
 
 
