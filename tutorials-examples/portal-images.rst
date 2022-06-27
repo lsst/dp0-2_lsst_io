@@ -99,11 +99,13 @@ Notice now that zooming and panning in one image does the same in all six images
 Use the "scale" icon (hover-over text "Stretch drop down") to change the greyscale stretch and/or boundaries for the images.
 From the drop-down window, select one of the supplied image stretch options or select "Color stretch" to get a pop-up window.
 
-If the Stretch Type is set to "Log" and the upper range to 99.5% (with "Use Zscale for bounds" unselected, then click "Refresh"), there appears to be a faint - but spatially distinct - extended object at the location of the SNIa which at first was lost in the wings of the brighter galaxy, especially in the g-band image (bottom-center).
+Set the Stretch Type to "Log" and the upper range to 99.5%, and unselect the checkbox next to "Use Zscale for bounds", then click "Refresh".
+Notice that there appears to be a faint - but spatially distinct - extended object at the location of the SNIa, especially in the 
+g-band image (bottom center), which at first was not obvious due to the wings of the brighter galaxy.
 
 .. figure:: /_static/portal_tut03_step02e.png
     :name: portal_tut03_step02e
 
     Well the host association looks a little complicated!
     
- Techniques for associating SNIa with their host galaxies are beyond the scope of this tutorial, which only concerned with getting an initial look at the *potential* host galaxy.
+Techniques for associating SNIa with their host galaxies are beyond the scope of this tutorial, which only concerned with getting an initial look at the *potential* host galaxy.
