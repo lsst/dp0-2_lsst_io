@@ -112,8 +112,11 @@ Set the "X Min/Max" values to "-0.5" and "2.0", and the "Y Min/Max" values to "1
 	
 	The color-magnitude diagram.
 
-**Notice:** The default plot style is a density map, which is appropriate for very large data sets.
+**Notice:** The default plot style is a a two-dimensional histogram, which is appropriate for very large data sets.
 In this case, with only 10000 object retrieved, create a scatter plot for comparison.
+
+**Notice:** The simulated data is visibly quantized in the above plot, and this will not be the case with real data.
+The discrete sequences at red colors, (g-i) > 0.5, come from the discretized procedure used to simulate low-mass stars in the DP0.2 data set.
 
 2.4. Click on the xy plot settings icon (two gears, upper right) again, but this time choose "Add New Chart".
 Leave "Plot Type" at the default, "Scatter", and then set the "X" and "Y" to the same equation as in Step 2.2.
@@ -131,7 +134,6 @@ Use the same "Chart Options" except give it a different "Chart title", such as "
 	
 	The color-magnitude diagrams, including the new scatter plot (right).
 
-**Notice:** The simulated data is visibly quantized in the above plot, and this will not be the case with real data.
 
 2.6. Interact with the plot.
 Hover over the data points with a mouse and see the x and y values appear in a pop-up window.
