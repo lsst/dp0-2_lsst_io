@@ -56,10 +56,10 @@ illustrates what users can expect in terms of the RSP's API Aspect.
     :name: API_LGuy_slide12
 
 
-.. _Data-Access-Analysis-Tools-TAP:
+.. _Data-Access-Analysis-Tools-TAP-NB:
 
-The Table Access Protocol (TAP) service
-=======================================
+Use of TAP via the Notebook Aspect
+==================================
 
 Use of the TAP service to query catalogs via the Portal is described in :doc:`/data-access-analysis-tools/portal-intro`.
 
