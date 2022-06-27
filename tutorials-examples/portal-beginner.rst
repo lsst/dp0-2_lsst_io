@@ -30,7 +30,7 @@
 This tutorial uses the Single-Table Query interface to search for bright stars in a small region of sky,
 and then uses the Results interface to create a color-magnitude diagram.
 This is the same demonstration used to illustrate the Table Access Protocol (TAP) service in the first of the :ref:`DP0-2-Tutorials-Notebooks`.
-Beginner-level users looking for a more general overview of the Portal Aspect should refer to this :ref:`Data-Access-Analysis-Tools-Portal-Intro`.
+Beginner-level users looking for a more general overview of the Portal Aspect should refer to this :doc:`/data-access-analysis-tools/portal-intro`.
 
 
 .. _DP0-2-Portal-Beginner-Step-1:
