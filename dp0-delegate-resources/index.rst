@@ -59,9 +59,9 @@ Rubin Science Platform accounts
 ===============================
 
 **Activation:**
-Delegates will be contacted by Rubin Observatory staff to provide their `GitHub <https://www.github.com>`__ username.
-All delegates will be invited to join the `rubin-dp0 GitHub Organization <https://github.com/rubin-dp0>`_ and its `delegates team <https://github.com/orgs/rubin-dp0/teams/delegates/members>`_, and must accept this invitation in order to log into the RSP at the Interim Data Facility (IDF; the Google Cloud).
-With a browser that is logged in to GitHub, navigate to `data.lsst.cloud <http://data.lsst.cloud>`_ and choose "log in" at upper right.
+Delegates will be contacted by Rubin Observatory staff to provide their `GitHub <https://www.github.com/>`_ username.
+All delegates will be invited to join the `rubin-dp0 GitHub Organization <https://github.com/rubin-dp0>`_ and its `Delegates team <https://github.com/orgs/rubin-dp0/teams/delegates/members>`_, and must accept this invitation in order to log into the RSP at the Interim Data Facility (IDF; the Google Cloud).
+With a browser that is logged in to GitHub, navigate to `data.lsst.cloud <https://data.lsst.cloud>`_ and choose "Log in" at upper-right.
 A pop-up window will ask to "Authorize Rubin Science Platform IDF Production Environment".
 Click the green button that says "Authorize lsst-sqre".
 Note that this last authorization step will need to be performed after every logout.
@@ -350,8 +350,7 @@ If you publish work based on the DP0 data set, you must cite “CosmoDC2: A Synt
 and potentially “DESC DC2 Data Release Note” (`arXiv:2101.04855 <https://arxiv.org/abs/2101.04855>`_) if you used the Object or Truth-Match tables, which are presented in that release note.
 
 **Consider extending co-authorship or acknowledgments to DP0 delegates whose work you used, or who have helped you, as appropriate.**
-Delegates are encouraged to openly share their DP0-related work and/or code during :ref:`Delegate-Homepage-DP0-Delegate-Assemblies`, via the `Community Forum <https://community.lsst.org/>`_,
-and in the shared GitHub repository `delegate-contributions-dp01 <https://github.com/rubin-dp0/delegate-contributions-dp01>`_.
+Delegates are encouraged to openly share their DP0-related work and/or code during :ref:`Delegate-Homepage-DP0-Delegate-Assemblies`, via the `Community Forum <https://community.lsst.org/>`_, and in the shared GitHub repository `delegate-contributions-dp02 <https://github.com/rubin-dp0/delegate-contributions-dp02>`_.
 This is intended to facilitate collaboration, which requires proper acknowledgments.
 For example, if you use another delegate’s Jupyter Notebook as a starting point for your Notebook, give credit to that person at the top of your Notebook.
 If another delegate’s work contributed to your DP0-related publication, consider including an acknowledgment, citing their relevant publications, and/or extending co-authorship, as appropriate.
