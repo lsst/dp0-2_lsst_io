@@ -95,7 +95,7 @@ To view a list of packages available to you in the Notebook Aspect of the RSP, t
 .. _Tools-RSP-API:
 
 API Aspect
--------------
+----------
 
 The API (Application Programming Interface) Aspect of the RSP enables programmatic access to the Rubin data products via Virtual Observatory (VO) interfaces.
 Users will be able to remotely access the LSST data and DAC services using tools they’re already familiar with,
