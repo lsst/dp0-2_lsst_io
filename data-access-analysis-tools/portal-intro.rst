@@ -122,11 +122,12 @@ A default "xy" plot of the sky coordinates appears at upper right, and the table
 
     The default view of the search results.
 
-**Plotting Data**:
+**Maniuplating the Plotted Data**:
 To manipulate the plotted data, select the double gear "settings" icon above the x-y plot and a pop-up window will open (see the next figure).
 To create a color-magnitude diagram from the fluxes, for DP0.2 it is necessary to apply the `standard conversion from nanojansky to AB magnitude <https://en.wikipedia.org/wiki/AB_magnitude>`_ in the X and Y boxes as, e.g., "-2.5 * log10(g_calibFlux) + 31.4".
-Add a chart title and label the axes, and click "Apply" and then "Close".
 In the future, magnitudes will be available.
+
+Add a chart title and label the axes, choose a point color, and click "Apply" and then "Close".
 
 .. figure:: /_static/portal_results_xy_settings_DP02.png
     :name: portal_results_xy_settings_DP02
@@ -134,15 +135,15 @@ In the future, magnitudes will be available.
 
     The plot settings pop-up window.
 
-
-
-Additional cuts can be applied to the plotted data using the table query boxes, for instance where you select a different range of fluxes.  
-Note that corresponding plot point for the selected row in the table is differently colored, and that hovering the mouse over the plotted data will show the x- and y-values in a pop-up window.
+At this point, additional cuts can be applied to the table data being plotted.
+In the figure below, the g-band flux is limited to >100, and this imposes a sharp cutoff in the y-axis values at 26.4 mag.
+Select "xy-tbl" to view only the plot and the table data.
+Notice how the corresponding plot point for the selected row in the table is differently colored, and that hovering the mouse over the plotted data will show the x- and y-values in a pop-up window.
 
 .. figure:: /_static/portal_results_final_DP02.png
     :name: portal_results_final_DP02
 
-    An updated results view in which the xy plot uses the magnitude columns:  mag(r)-mag(i) on the x-axis, mag(g) on the y-axis.  
+    An updated results view in which the plotted data has been manipulated.  
 
 See also :ref:`DP0-2-Tutorials-Portal` for additional demonstrations of how to use the Portal's Single Table Query.
 
