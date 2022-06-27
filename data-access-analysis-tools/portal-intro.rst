@@ -324,6 +324,14 @@ Above the image use the grid icon (hover-over text "Show full grid") to show up 
 Notice that it is possible to pan and zoom in each of these grid windows.
 
 **Coverage window**: 
+Above the image, notice that the default tab view is "Data Product...", and instead click on "Coverage".
+The bounding boxes of all images listed in the table are shown, with the image in the selected row highlighted.
+At the time this documentation was created, the boxes were overlayed on 2MASS images, but in the near future the background will be DC2 images.
+
+.. figure:: /_static/portal_ImageQueryCoverageDP02.png
+    :name: portal_ImageQueryCoverageDP02
+
+    The coverage window will, in the future, be overlayed on a DC2 image and not 2MASS.
 
 **Learn More.**
 See also :ref:`DP0-2-Tutorials-Portal` for a demonstration of the Portal's image-related functionality applied to a deepCoadd.
