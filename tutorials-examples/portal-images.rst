@@ -106,4 +106,4 @@ g-band image (bottom center), which at first was not obvious due to the wings of
 
     Well the host association looks a little complicated!
 
-Techniques for associating SNIa with their host galaxies are beyond the scope of this tutorial, which only concerned with getting an initial look at the *potential* host galaxy.
+Techniques for associating SNIa with their host galaxies are beyond the scope of this tutorial, which was only concerned with getting an initial look at the *potential* host galaxy.
