@@ -62,10 +62,10 @@ Notice how the table view at lower-right will automatically update to match the 
 **4. Enter Constraints**: For "Spatial" constraints, the longitude and latitude columns do not yet automatically 
 update to be the correct column names for right ascension and declination for the selected table, and need to be 
 entered (for the Object table, they are "coord_ra" and "coord_dec").
-If a non-existent column name is entered the box will highlight red in indication of the error.
+If a non-existent column name is entered, the box will highlight red in indication of the error.
 Choose the desired shape type for a spatial search, such as "Cone", and the appropriate instructions for the search terms will appear.
 
-Keeping the search area to a minimum will keep query times short and returned subsets small and manageable as you learn.
+Keeping the search area small will keep query times short and returned manageable subsets of objects as you learn.
 It is recommended to start with 3 arcminutes.
 Note that the central coordinates for DC2, in decimal degrees, are: ``61.863 -35.790``.
 
