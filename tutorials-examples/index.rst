@@ -53,4 +53,4 @@ You can also find information about the portal aspect in the `about firefly <htt
     :glob:
 
     portal-beginner
-    portal-advanced
+    portal-intermediate
