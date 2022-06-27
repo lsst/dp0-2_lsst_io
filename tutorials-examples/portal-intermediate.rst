@@ -28,7 +28,7 @@
 
 **Introduction:** 
 This notebook explores the data for a SNIa lightcurve: the i-band photometry, the seeing for each i-band epoch, and the astrometric scatter of the i-band observations.
-The scientific motivation being considered here is that a user knows the coordinates of a low-redshift SNIa (67.4579, -44.0802), and now
+The scientific motivation here is that a user knows the coordinates of a low-redshift SNIa (67.4579, -44.0802), and now
 wants to find an i-band epoch in which this SNIa was bright *and* the seeing was good.
 The user also wants to get a sense of the scatter in the astrometric precision for the coordinates in the DiaObjects catalog.
 For example, perhaps the user knows there is pre-explosion JWST imaging of the host galaxy, and is looking for the best image from Rubin Observatory
@@ -36,7 +36,7 @@ with which to co-register with the JWST image in order to characterize the under
 
 This tutorial assumes a basic working knowledge of the Portal interface (e.g., the successful completion of the first Portal tutorial).
 This tutorial uses the Astronomy Data Query Language (ADQL) to query and retrieve data from the DP0.2 catalogs.
-ADQL is similar to SQL (Structured Query Langage), and the `documentation for ADQL <http://www.ivoa.net/documents/latest/ADQL.html`_ includes more information about syntax and keywords.
+ADQL is similar to SQL (Structured Query Langage), and the `documentation for ADQL <http://www.ivoa.net/documents/latest/ADQL.html>`_ includes more information about syntax and keywords.
 For more information about the DP0.2 catalogs, visit the :ref:`DP0-2-Data-Products-DPDD` or the `DP0.2 Catalog Schema Browser <https://dm.lsst.org/sdm_schemas/browser/dp02.html>`_.
 
 
@@ -103,21 +103,21 @@ Use the settings icon (two gears at upper right) to open the plot parameters pop
 
     Plot parameters for the lightcurve.
 
-View the r-band lightcurve for this SNIa.
+3.2. View the r-band lightcurve for this SNIa.
 
 .. figure:: /_static/portal_tut02_step03b.png
     :name: portal_tut02_step03b
 
     The r-band lightcurve for the SNIa of interest.
 
-3.2. To add a plot of time *versus* seeing: use the settings icon, choose "Add New Chart" and match the parameters shown below, then click "OK".
+3.3. To add a plot of time versus seeing: use the settings icon, choose "Add New Chart" and match the parameters shown below, then click "OK".
 
 .. figure:: /_static/portal_tut02_step03c.png
     :name: portal_tut02_step03c
 
     Plot parameters for the time *versus* seeing plot.
 
-3.3. To add a plot to visualize the astrometric precision: use the settings icon, choose "Add New Chart" and match the parameters shown below, then click "OK".
+3.4. To add a plot to visualize the astrometric precision: use the settings icon, choose "Add New Chart" and match the parameters shown below, then click "OK".
 Note that in both the X and Y parameters, the difference between the DiaSource coordinate and the DiaObject coordinate are divided by 3600, so that the plot axes are in arcseconds.
 
 .. figure:: /_static/portal_tut02_step03d.png
@@ -125,7 +125,7 @@ Note that in both the X and Y parameters, the difference between the DiaSource c
 
     Plot parameters for the astrometric precision plot.
 
-3.4. View all three plots together.
+3.5. View all three plots together.
 In the center plot, click on the r-band epoch with the best seeing (0.75 arcsec).
 Notice how the point turns orange in all three plots, and that the corresponding table row will be highlighted.
 
@@ -138,13 +138,10 @@ coordinates of DiaObjects are *derived from* the individual DiaSources.
 The point of the right-most plot is more that the overall scatter is low (less than 0.3 arcsec), and that selecting the 
 "bright / best-seeing" epoch image for co-registration with images from other facilities is a wise choice.
 
-which indicates that a co-registration of the "bright / best-seeing" epoch image with images from other facilities is 
-
-
 .. figure:: /_static/portal_tut02_step03e.png
     :name: portal_tut02_step03e
 
-    Identify the best epoch for this scientific use-case.
+    Identifying the best epoch for this scientific use-case.
 
 
 .. _DP0-2-Portal-Intermediate_Step-4:
@@ -152,3 +149,6 @@ which indicates that a co-registration of the "bright / best-seeing" epoch image
 4. Exercise for the learner: obtain the visitId
 ===============================================
 
+4.1. At this point, the user is ready to obtain the "bright / best seeing" epoch's images.
+The simplest way to do that is with the visitId, but the ADQL query did not request that from the CcdVisit table.
+Return to the ADQL query and add ccdvis.ccdVisitId and ccdvis.visitId to the query.
