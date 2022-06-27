@@ -35,6 +35,11 @@ For example, perhaps the user knows there is pre-explosion JWST imaging of the h
 with which to co-register with the JWST image in order to characterize the underlying stellar population (or progenitor star) at the SNIa's location.
 
 This tutorial assumes a basic working knowledge of the Portal interface (e.g., the successful completion of the first Portal tutorial).
+This tutorial uses the Astronomy Data Query Language (ADQL) to query and retrieve data from the DP0.2 catalogs.
+ADQL is similar to SQL (Structured Query Langage), and the `documentation for ADQL <http://www.ivoa.net/documents/latest/ADQL.html`_ includes more information about syntax and keywords.
+For more information about the DP0.2 catalogs, visit the :ref:`DP0-2-Data-Products-DPDD` or the `DP0.2 Catalog Schema Browser <https://dm.lsst.org/sdm_schemas/browser/dp02.html>`_.
+
+
 
 .. _DP0-2-Portal-Intermediate_Step-1:
 
@@ -63,10 +68,11 @@ This is definitely the SNIa of interest to the user.
 2. Query the DiaSource table
 ============================
 
-2.1. Clear the previous search and return to the main Portal interface (use the "RSP TAP Search" buttong at upper left).
+2.1. Clear the previous search and return to the main Portal interface (use the "RSP TAP Search" button at upper left).
 
 2.2. Select Query Type as "Edit ADQL (advanced)", enter the following ADQL query.
-This query will retrieve all of the DiaSource table entries for the DiaObject: all of the individual measurements on the difference images.
+This query will retrieve all of the DiaSource table entries (i.e., all of the individual measurements on the difference images) for this DiaObject.
+This query also uses the ccdVisitId to join to the CcdVisit table and obtain the mean seeing measurement for the visit.
 
 .. code-block:: SQL
 
