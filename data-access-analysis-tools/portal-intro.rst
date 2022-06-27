@@ -160,7 +160,7 @@ The language is used by the `IVOA <https://ivoa.net>`_ to represent astronomy qu
 ADQL is based on the Structured Query Language (SQL).
 
 Selecting "Edit ADQL (advanced)" will change the user interface to display an empty box where users can supply their query statement.
-Scrolling down will show several examples.
+Scrolling down in that interface will show several examples.
 
 **Turn a single table query into ADQL.**
 At any point while assembling a query using the single table query interface described above, clicking on "Edit and Populate ADQL" will transform
@@ -245,12 +245,9 @@ Image Search (ObsTAP)
 
 The "Image Search (ObsTAP)" functionality has many new features -- not just new for DP0.2, but new to the Firefly interface, and DP0 Delegates are among the first to use them. 
 
+Selecting "Image Search (ObsTAP)" will change the user interface to display query constraint options that are specific to the image data, as described below.
+
 For more information about the image types available in the DP0.2 data set, see the :ref:`DP0-2-Data-Products-DPDD`.
-
-.. figure:: /_static/portal_ImageQueryDP02.png
-    :name: portal_ImageQueryDP02
-
-    The default interface for the "Image Search (ObsTAP)" queries.  
 
 **Enter Constraints** 
 
@@ -268,18 +265,65 @@ Under "Spectral", users can provide a wavelength in, e.g., nanometers as a means
 
 **Output Column Selection and Constraints**
 
-The default is for all columns to be selected (i.e., have blue checks in the leftmost column). 
-Users can specify which columns of image metadata to return but they **must include** the first two, "access_format" and "access_url", 
-so that the Portal's "Results View" can display the images returned by the query.
+The default is for all columns to be selected (i.e., have blue checks in the leftmost column).
+It is recommended to always return all metadata because the Portal requires some columns in order for the some of the Results view functionality to work.
 
-**Example**
+**Example (PVIs/calexps)**
 
 The image below shows an example query for all r-band PVIs (calexps) that overlap the central coordinates of DC2, which were obtained with a modified Julian date between 60000 and 60500.
-Note that the filter constraint is applied in the table at right.
+Note that the filter constraint is applied in the table at right, and that a subset of the most useful image metadata columns are selected.
 
-.. figure:: /_static/portal_ImageQueryCoverageDP02.png
-    :name: portal_ImageQueryCoverageDP02
+.. figure:: /_static/portal_ImageQueryDP02.png
+    :name: portal_ImageQueryDP02
 
-    An example image query for r-band PVIs in the given date range.  
+    The default interface for the "Image Search (ObsTAP)" queries, with example search parameters.  
+    
+Click on the "Search" button.
 
+**Results View**
 
+The default results appear in the tri-view format, with the image at upper left, an xy plot at upper right, and the table of metadata below.
+The first row of the table is highlighted by default, with that image showing at upper right (and the central coordinates of other images overplotted with green boxes).
+The xy plot default is RA versus Declination, with the location of the highlighted table row shown in orange and the rest in blue.
+    
+.. figure:: /_static/portal_ImageQueryResultsDP02.png
+    :name: portal_ImageQueryResultsDP02
+
+    Results for the example search parameters.  
+
+**Manipulating the xy plot** is the same process as shown for the :ref:`Portal-Intro-Single-Table-Queries` results: click on the "settings" icon (double gears) in the upper right corner to change the column data being plotted, alter the plot style, add axes labels, etc.
+
+**Interacting with the images** begins with just hovering the mouse over the image and noting the RA, Dec, and pixel value appear at the bottom.
+Use the magnifying glass icons in the upper left corner to zoom in and out; click and drag the image to pan.
+Above the magnifying glass, use the back and forth arrows to navigate between HDU (header data units) 1, 2, and 3: the image, mask, and variance data.
+Click either on one of the green boxes (representing the central coordinats of another image in the table), or on another row in the table, to display a different image.
+At upper right, click on "img-tbl" to get ride of the xy plot and show the images and the table side-by-side.
+
+.. figure:: /_static/portal_ImageQuery_sidybyside_DP02.png
+    :name: portal_ImageQuery_sidybyside_DP02
+
+    Display the image in row three of the table (with the view format set to "img-tbl").
+
+**Image tools**: 
+Zoom in on a bright star in one of the images.
+Select the "tools" icon (wrench and ruler), and from the pop-up window choose to "Extract" using a line.
+Draw a line on the image across the star to extract the pixel values and show an approximate shape of the point-spread function for the star.
+The plot reveals that this particular star is saturated.
+Click on "Pin Table" to add a table of pixel data as a new tab in the right half of the view.
+To make the line go away, click on the "layers" icon (the one for which the hover-over text reads:  "Manipulate overlay display...") and next to "Extract Line 1 - HDU#1" click on "Delete".
+
+.. figure:: /_static/portal_ImageQuery_tools_DP02.png
+    :name: portal_ImageQuery_tools_DP02
+
+    Use the image display tool to extract a line cut.
+
+Try out some of the other tools.
+
+**Image grid display**:
+Above the image use the grid icon (hover-over text "Show full grid") to show up to eight of the images side-by-side.
+Notice that it is possible to pan and zoom in each of these grid windows.
+
+**Coverage window**: 
+
+**Learn More.**
+See also :ref:`DP0-2-Tutorials-Portal` for a demonstration of the Portal's image-related functionality applied to a deepCoadd.
