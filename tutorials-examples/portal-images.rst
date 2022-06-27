@@ -81,7 +81,8 @@ Notice now that zooming and panning in one image does the same in all six images
 
 2.4. Mark and center the SNIa.
 Choose the "center" icon (hover-over text "Image center drop down"), and in the box next to "Center On" enter the SNIa's coordinates, "67.4579, -44.0802", and then click "Go & Mark".
-If you pan away from the SNIa, recenter using the "center" icon and finding the SNIa coordinates under "Recent Positions".
+Click the magnifying glass with the "+" symbol to zoom-in on the centered location, and grab and drag to pan around the image.
+If you happen to pan away from the SNIa, recenter using the "center" icon and finding the SNIa coordinates under "Recent Positions".
 
 .. figure:: /_static/portal_tut03_step02c.png
     :name: portal_tut03_step02c
@@ -92,6 +93,11 @@ If you pan away from the SNIa, recenter using the "center" icon and finding the 
     :name: portal_tut03_step02d
 
     A zoom-in on the SNIa and its host, with linear zscaling.
+
+**Notice:** In the figure above, the images in the grid are displayed in the order they appear in the table: top row (left to right)
+then bottom row (left to right).
+In the table, notice that the filter order is y, z, i, u, g, r.
+To sort the table so that the filter order is u, g, r, i, z, y, click on the column heading for "em_min" columns.
 
 2.5. Rescale the flux to explore the underlying distribution of host galaxy light. 
 Use the "scale" icon (hover-over text "Stretch drop down") to change the greyscale stretch and/or boundaries for the images.
