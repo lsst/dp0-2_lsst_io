@@ -20,32 +20,15 @@ Introduction to the RSP API Aspect
 
 .. This section should provide a brief, top-level description of the page.
 
-On the the main landing page at `data.lsst.cloud <https://data.lsst.cloud>`_ there is an "APIs" panel however this is not yet active for DP0.
-The only Web API provided for DP0.2 is a TAP service for catalog access via the Portal and Notebook Aspects.
-Image access is not yet supported via TAP.
-Other IVOA standard APIs that we expect to support in the future include SCS for simple catalog searches, SIAv2 for image searches, SODA for image cutouts and mosaics, and VOSpace (in addition to WebDAV)
-for access to user files.
+On the the main landing page at `data.lsst.cloud <https://data.lsst.cloud>`_ there is an "APIs" panel with more information about the API Aspect.
 
+.. Important::
+    The API Aspect has a lot of new features for DP0.2, which will be added to this page after the DP0.2 release (during July 2022).
+    Check back soon for new information!
 
-.. _Data-Access-Analysis-Tools-TAP:
+The API's services for DP0.2 will include TAP, OBSTAP, SODA (image cutouts and mosaics), and HiPS (all acronyms to be defined here in future updates).
 
-The Table Access Protocol (TAP) service
-=======================================
-
-Use of the TAP service to query catalogs via the Portal is described in :doc:`/data-access-analysis-tools/portal-intro`.
-
-In the Notebook Aspect, a TAP service is instantiated in a python notebook and used to execute an ADQL query and return a result set.
-A set of utilities are provided to get a TAP service instance.
-
-.. code-block:: python
-
-   from rubin_jupyter_utils.lab.notebook import get_tap_service, retrieve_query
-   service = get_tap_service()
-   query = "SELECT TOP 100 * FROM dp01_dc2_catalogs.forced_photometry"
-   results = service.search(query)
-   results.to_table().show_in_notebook()
-
-Several of the DP0 :ref:`DP0-2-Tutorials-Notebooks` demonstrate how to use the TAP service programmatically from a python notebook.
+Longer term, Rubin Observatory will support SCS for simple catalog searches, SIAv2 for image searches, and VOSpace (in addition to WebDAV) for access to user files.
 
 
 .. _Data-Access-Analysis-Tools-TAP-TOPCAT:
@@ -63,3 +46,22 @@ Additional details can be found on Slides 11-12 of Leanne Guy's talk, `Rubin Sci
 
 
 
+.. _Data-Access-Analysis-Tools-TAP:
+
+The Table Access Protocol (TAP) service
+=======================================
+
+Use of the TAP service to query catalogs via the Portal is described in :doc:`/data-access-analysis-tools/portal-intro`.
+
+In the Notebook Aspect, a TAP service is instantiated in a python notebook and used to execute an `ADQL query <https://www.ivoa.net/documents/ADQL/>`_ and return a result set.
+A set of utilities are provided to get a TAP service instance.
+
+.. code-block:: python
+
+   from rubin_jupyter_utils.lab.notebook import get_tap_service, retrieve_query
+   service = get_tap_service()
+   query = "SELECT TOP 100 * FROM dp02_dc2_catalogs.Object"
+   results = service.search(query)
+   results.to_table().show_in_notebook()
+
+Several of the DP0 :ref:`DP0-2-Tutorials-Notebooks` demonstrate how to use the TAP service programmatically from a python notebook.
