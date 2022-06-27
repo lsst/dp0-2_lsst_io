@@ -8,19 +8,84 @@
 
 .. This is the label that can be used for cross referencing this file.
 .. Recommended title label format is "Directory Name"-"Title Name"  -- Spaces should be replaced by hyphens.
-.. _Tutorials-Examples-DP0-2-Portal-Advanced:
+.. _Tutorials-Examples-DP0-2-Portal-Intermediate:
 .. Each section should include a label for cross referencing to a given area.
 .. Recommended format for all labels is "Title Name"-"Section Name" -- Spaces should be replaced by hyphens.
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
 .. A warning will alert you of identical labels during the linkcheck process.
 
 ############################################
-Advanced TAP/ADQL Usage in the Portal Aspect
+02. Explore a SNIa Lightcurve (intermediate)
 ############################################
 
 .. This section should provide a brief, top-level description of the page.
 
-Now that you have seen the basic functionality of the Portal Aspect and some demonstrations of ADQL queries from :doc:`/data-access-analysis-tools/portal-intro`, the following tutorial demonstrates some more advanced usage of the Portal Aspect.
+**Contact authors:** Melissa Graham and Greg Madejski
+
+**Last verified to run:** 2022-06-26
+
+**Targeted learning level:** intermediate
+
+**Introduction:** 
+This notebook explores the data for a SNIa lightcurve: the i-band photometry, the seeing for each i-band epoch, and the astrometric scatter of the i-band observations.
+The scientific motivation being considered here is that a user knows the coordinates of a low-redshift SNIa (67.4579, -44.0802), and now
+wants to find an i-band epoch in which this SNIa was bright *and* the seeing was good.
+The user also wants to get a sense of the scatter in the astrometric precision for the coordinates in the DiaObjects catalog.
+For example, perhaps the user knows there is pre-explosion JWST imaging of the host galaxy, and is looking for the best image from Rubin Observatory
+with which to co-register with the JWST image in order to characterize the underlying stellar population (or progenitor star) at the SNIa's location.
+
+This tutorial assumes a basic working knowledge of the Portal interface (e.g., the successful completion of the first Portal tutorial).
+
+.. _DP0-2-Portal-Intermediate_Step-1:
+
+1. Determine the DiaObject Id
+=============================
+
+1.1. Log in to the Portal Aspect.
+
+1.2. Leave the TAP Service and Query Type as their default, and select the dp02_dc2_catalogs.DiaObject table.
+
+1.3. Check the box for spatial constraints, and use ra and decl as the longitude and latitude columns. Leave the shape type as Cone and enter the coordinates "67.4579, -44.0802". Set the radius to 2 arcseconds.
+
+1.4. In the table at right, select columns ra, decl, and diaObjectId to be returned.
+
+.. figure:: /_static/portal_tut02_step01.png
+    :name: portal_tut02_step01
+
+    Initial query to obtain the DiaObjectId.
+
+1.5. Click "Search" and view the results: there is only one DiaObject within 2 arcseconds, with coordinates "67.4579634, -44.080243" and DiaObjectId "1252220598734556212".
+This is definitely the SNIa of interest to the user.
+
+
+.. _DP0-2-Portal-Intermediate_Step-2:
+
+2. Query the DiaSource table
+============================
+
+2.1. Clear the previous search and return to the main Portal interface (use the "RSP TAP Search" buttong at upper left).
+
+2.2. Select Query Type as "Edit ADQL (advanced)", enter the following ADQL query.
+This query will retrieve all of the DiaSource table entries for the DiaObject: all of the individual measurements on the difference images.
+
+.. code-block:: SQL
+
+   SELECT diasrc.ra, diasrc.decl, 
+   diasrc.diaObjectId, diasrc.diaSourceId, 
+   diasrc.filterName, diasrc.midPointTai, 
+   scisql_nanojanskyToAbMag(diasrc.psFlux) AS psAbMag,
+   ccdvis.seeing
+   FROM dp02_dc2_catalogs.DiaSource AS diasrc
+   JOIN dp02_dc2_catalogs.CcdVisit AS ccdvis
+   ON diasrc.ccdVisitId = ccdvis.ccdVisitId
+   WHERE diasrc.diaObjectId = 1252220598734556212
+
+2.3. Click "Search".
+
+
+
+
+
 
 
 .. _DP0-2-Portal-Advanced-Table-Join:
