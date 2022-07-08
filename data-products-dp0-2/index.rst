@@ -142,8 +142,8 @@ Note that in the future, for real LSST data releases, this level of redundancy i
    * - DiaSource
      - diaSourceTable
      - Astrometric and photometric measurements for sources detected in the difference images (66 columns).
-   * - ForcedSourceOnDiaObject
-     - forcedSourceOnDiaObjectTable
+   * - ForcedSourceOnDiaObject (coming soon)
+     - forcedSourceOnDiaObjectTable (coming soon)
      - Forced photometry on the individual PVIs at the locations of all DiaObjects (35 columns).
    * - Visit
      - visitTable
