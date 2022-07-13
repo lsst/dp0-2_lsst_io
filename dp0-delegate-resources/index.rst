@@ -109,9 +109,9 @@ If you want email notifications, set your Community Forum user profile preferenc
 Kick-off info sessions for new delegates
 ========================================
 
-All **new** delegates in 2022 must review the recording if they did not attend a live session.
+All **new** delegates must review the recording if they did not attend a live session.
 
-**Recording:** `recorded presentation and slide deck <https://community.lsst.org/t/dp0-2-kick-off-info-session-slides-pre-recorded-presentation/6846>`_
+`View the recorded presentation and slide deck. <https://community.lsst.org/t/dp0-2-kick-off-info-session-slides-pre-recorded-presentation/6846>`_
 
 | **The session covered:**
 | - DP0 goals and the road to Rubin Observatory operations
