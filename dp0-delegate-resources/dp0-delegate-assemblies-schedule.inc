@@ -34,7 +34,7 @@
      - First Hour
      - Second Hour
    * - 2022-07-08
-     - :ref:`Delegate-Homepage-Kickoff` (beginner)
+     - `DP0.2 Kick-Off Info Session <https://community.lsst.org/t/dp0-2-kick-off-info-session-slides-pre-recorded-presentation/6846>`_ (beginner)
      - Introduction to the DP0.2 Time-Domain Data Products (intermediate)
    * - 2022-07-22
      - Catalog Data with the TAP Service (beginner)
