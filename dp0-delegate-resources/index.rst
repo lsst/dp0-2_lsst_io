@@ -109,7 +109,7 @@ If you want email notifications, set your Community Forum user profile preferenc
 Kick-off info sessions for new delegates
 ========================================
 
-All **new** delegates in 2022 attended one of these three identical live virtual kick-off info sessions or viewed the recording.
+All **new** delegates in 2022 must review the recording if they did not attend a live session.
 
 **Recording:** `recorded presentation and slide deck <https://community.lsst.org/t/dp0-2-kick-off-info-session-slides-pre-recorded-presentation/6846>`_
 
