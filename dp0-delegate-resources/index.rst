@@ -109,22 +109,11 @@ If you want email notifications, set your Community Forum user profile preferenc
 Kick-off info sessions for new delegates
 ========================================
 
-All **new** delegates in 2022 should plan to attend one of the three identical live virtual kick-off info sessions, or view the recording.
+All **new** delegates in 2022 attended one of these three identical live virtual kick-off info sessions or viewed the recording.
 
-Delegates who joined DP0 in 2021 do not need to attend a kick-off info session in 2022.
+**Recording:** `recorded presentation and slide deck <https://community.lsst.org/t/dp0-2-kick-off-info-session-slides-pre-recorded-presentation/6846>`_
 
-**Connection Info:** `ls.st/dp0-events <https://ls.st/dp0-events>`_
-
-.. **Recording:** (link to be added here)
-
-| **Schedule:**
-| - Session 1: Fri Jul 8 2022 at 09:00 US Pacific, Fri Jul 8 2022 at 16:00 UTC
-| - Session 2: Mon Jul 11 2022 at 21:00 US Pacific, Tue Jul 12 2022 at 04:00 UTC
-| - Session 3: Tue Jul 12 2022 at 07:00 US Pacific, Tue Jul 12 2022 at 14:00 UTC
-
-Note that the first kick-off info session, on Fri Jul 8 2022 at 09:00 US Pacific, takes place during the first hour of the first :ref:`Delegate-Homepage-DP0-Delegate-Assemblies`.
-
-| **Every session will be 1 hour and will cover:**
+| **The session covered:**
 | - DP0 goals and the road to Rubin Observatory operations
 | - RSP and Community Forum accounts
 | - introductory demo to the Portal and Notebook aspects
