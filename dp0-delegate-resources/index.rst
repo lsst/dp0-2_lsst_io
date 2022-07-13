@@ -111,7 +111,7 @@ Kick-off info sessions for new delegates
 
 All **new** delegates must review the recording if they did not attend a live session.
 
-`View the recorded presentation and slide deck. <https://community.lsst.org/t/dp0-2-kick-off-info-session-slides-pre-recorded-presentation/6846>`_
+`View the recorded presentation and slide deck. <https://community.lsst.org/t/dp0-2-kick-off-info-session-slides-pre-recorded-presentation/6846>`__
 
 | **The session covered:**
 | - DP0 goals and the road to Rubin Observatory operations
