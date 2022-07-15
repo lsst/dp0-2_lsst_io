@@ -35,7 +35,7 @@
      - Second Hour
    * - 2022-07-08
      - `DP0.2 Kick-Off Info Session <https://community.lsst.org/t/dp0-2-kick-off-info-session-slides-pre-recorded-presentation/6846>`_ (beginner)
-     - Introduction to the DP0.2 Time-Domain Data Products (intermediate)
+     - `Introduction to the DP0.2 Time-Domain Data Products <https://community.lsst.org/t/summary-delegate-assembly-fri-jul-9/6898>`__ (intermediate)
    * - 2022-07-22
      - Catalog Data with the TAP Service (beginner)
      - Time-Domain Catalogs in the TAP Service (intermediate)
