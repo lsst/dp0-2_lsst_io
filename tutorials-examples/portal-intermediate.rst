@@ -100,15 +100,15 @@ This query also uses the ccdVisitId to join to the CcdVisit table and obtain the
 3.1. If the Results view is showing three panels including a sky image at upper left, switch to the "xy-tbl" view using the buttons at upper right.
 Use the settings icon (two gears at upper right) to open the plot parameters pop-up window, match those shown below, then click "Apply" and "Close".
 
-.. figure:: /_static/portal_tut02_step03a.png
-    :name: portal_tut02_step03a
+.. figure:: /_static/portal_tut02_step03a_GM.png
+    :name: portal_tut02_step03a_GM
 
     Plot parameters for the lightcurve.
 
 3.2. View the i-band lightcurve for this SNIa.
 
-.. figure:: /_static/portal_tut02_step03b.png
-    :name: portal_tut02_step03b
+.. figure:: /_static/portal_tut02_step03b_GM.png
+    :name: portal_tut02_step03b_GM
 
     The i-band lightcurve for the SNIa of interest.
 
@@ -122,8 +122,8 @@ Use the settings icon (two gears at upper right) to open the plot parameters pop
 3.4. To add a plot to visualize the astrometric scatter: use the settings icon, choose "Add New Chart" and match the parameters shown below, then click "OK".
 Note that in both the X and Y parameters, the difference between the DiaSource coordinate and the DiaObject coordinate are divided by 3600, so that the plot axes are in arcseconds: ``((ra-67.4579634)*cos(decl*(3.14159/180)))*3600`` and ``(decl+44.080243)*3600``.
 
-.. figure:: /_static/portal_tut02_step03d.png
-    :name: portal_tut02_step03d
+.. figure:: /_static/portal_tut02_step03d_GM.png
+    :name: portal_tut02_step03d_GM
 
     Plot parameters for the astrometric scatter plot.
 
@@ -140,8 +140,8 @@ coordinates of DiaObjects are *derived from* the individual DiaSources.
 The point of the right-most plot is more that the overall scatter is less than 0.3 arcsec, and that selecting the
 "bright / best-seeing" epoch image for co-registration with images from other facilities is a wise choice.
 
-.. figure:: /_static/portal_tut02_step03e.png
-    :name: portal_tut02_step03e
+.. figure:: /_static/portal_tut02_step03e_GM.png
+    :name: portal_tut02_step03e_GM
 
     Identifying the best epoch for this scientific use-case.
 
