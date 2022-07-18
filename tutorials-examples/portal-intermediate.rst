@@ -120,7 +120,7 @@ Use the settings icon (two gears at upper right) to open the plot parameters pop
     Plot parameters for the seeing versus time plot.
 
 3.4. To add a plot to visualize the astrometric scatter: use the settings icon, choose "Add New Chart" and match the parameters shown below, then click "OK".
-Note that in both the X and Y parameters, the difference between the DiaSource coordinate and the DiaObject coordinate are divided by 3600, so that the plot axes are in arcseconds: ``(ra-67.4579634)*3600`` and ``(decl+44.080243)*3600``.
+Note that in both the X and Y parameters, the difference between the DiaSource coordinate and the DiaObject coordinate are divided by 3600, so that the plot axes are in arcseconds: ``((ra-67.4579634)*cos(decl*(3.14159/180)))*3600`` and ``(decl+44.080243)*3600``.
 
 .. figure:: /_static/portal_tut02_step03d.png
     :name: portal_tut02_step03d
