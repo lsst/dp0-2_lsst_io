@@ -27,7 +27,7 @@
 **Targeted learning level:** intermediate
 
 **Introduction:**
-This notebook explores the data for a Type Ia supernova (SNIa) lightcurve: the i-band photometry, the seeing for each i-band epoch, and the astrometric scatter of the i-band observations.
+This tutorial explores the data for a Type Ia supernova (SNIa) lightcurve: the i-band photometry, the seeing for each i-band epoch, and the astrometric scatter of the i-band observations.
 The scientific motivation here is that a user knows the coordinates of a low-redshift SNIa (67.4579, -44.0802), and now
 wants to find an i-band epoch in which this SNIa was bright *and* the seeing was good.
 The user also wants to get a sense of the scatter in the astrometry for the coordinates in the DiaObjects catalog.
