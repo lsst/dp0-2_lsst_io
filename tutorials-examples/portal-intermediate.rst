@@ -82,6 +82,7 @@ This query also uses the ccdVisitId to join to the CcdVisit table and obtain the
    diasrc.diaObjectId, diasrc.diaSourceId,
    diasrc.filterName, diasrc.midPointTai,
    scisql_nanojanskyToAbMag(diasrc.psFlux) AS psAbMag,
+   scisql_nanojanskyToAbMagSigma(diasrc.psFlux,diasrc.psFluxErr) AS psAbMagErr,
    ccdvis.seeing
    FROM dp02_dc2_catalogs.DiaSource AS diasrc
    JOIN dp02_dc2_catalogs.CcdVisit AS ccdvis
