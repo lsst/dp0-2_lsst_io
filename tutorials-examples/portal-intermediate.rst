@@ -134,7 +134,7 @@ Notice how the point turns orange in all three plots, and that the corresponding
 In the left-most plot, the lightcurve, notice that for this "best-seeing" epoch the SNIa had an apparent magnitude near its peak (around 22nd mag).
 That makes it a suitable choice for the scientific use-case outlined in the Introduction.
 
-In the right-most plot, the astrometric scatter, notice that for this "bright / best-seeing" epoch the measured sky coordinates of the DiaSource are very close to those reported for the DiaObject.
+In the right-most plot, the astrometric scatter, notice that for this "bright / best-seeing" epoch the measured sky coordinates of the DiaSource are very close to those reported for the DiaObject.  
 This *does not* necessarily mean that the coordinates for the "best-seeing" epoch are more accurate, because the
 coordinates of DiaObjects are *derived from* the individual DiaSources.
 The point of the right-most plot is more that the overall scatter is less than 0.3 arcsec, and that selecting the
