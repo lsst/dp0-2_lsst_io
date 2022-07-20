@@ -27,7 +27,7 @@
 **Targeted learning level:** intermediate
 
 **Introduction:**
-This notebook explores the data for a Type Ia supernova (SNIa) lightcurve: the i-band photometry, the seeing for each i-band epoch, and the astrometric scatter of the i-band observations.
+This tutorial explores the data for a Type Ia supernova (SNIa) lightcurve: the i-band photometry, the seeing for each i-band epoch, and the astrometric scatter of the i-band observations.
 The scientific motivation here is that a user knows the coordinates of a low-redshift SNIa (67.4579, -44.0802), and now
 wants to find an i-band epoch in which this SNIa was bright *and* the seeing was good.
 The user also wants to get a sense of the scatter in the astrometry for the coordinates in the DiaObjects catalog.
@@ -120,7 +120,7 @@ Use the settings icon (two gears at upper right) to open the plot parameters pop
     Plot parameters for the seeing versus time plot.
 
 3.4. To add a plot to visualize the astrometric scatter: use the settings icon, choose "Add New Chart" and match the parameters shown below, then click "OK".
-Note that in both the X and Y parameters, the difference between the DiaSource coordinate and the DiaObject coordinate are divided by 3600, so that the plot axes are in arcseconds: ``(ra-67.4579634)*3600`` and ``(decl+44.080243)*3600``.
+Note that in both the X and Y parameters, the difference between the DiaSource coordinate and the DiaObject coordinate are divided by 3600, so that the plot axes are in arcseconds: ``((ra-67.4579634)*cos(decl*(pi()/180)))*3600`` and ``(decl+44.080243)*3600``.
 
 .. figure:: /_static/portal_tut02_step03d.png
     :name: portal_tut02_step03d
@@ -128,16 +128,16 @@ Note that in both the X and Y parameters, the difference between the DiaSource c
     Plot parameters for the astrometric scatter plot.
 
 3.5. View all three plots together.
-In the center plot, click on the i-band epoch with the best seeing (0.75 arcsec).
+In the right-most plot, click on the i-band epoch with the best seeing (0.75 arcsec).
 Notice how the point turns orange in all three plots, and that the corresponding table row will be highlighted.
 
 In the left-most plot, the lightcurve, notice that for this "best-seeing" epoch the SNIa had an apparent magnitude near its peak (around 22nd mag).
 That makes it a suitable choice for the scientific use-case outlined in the Introduction.
 
-In the right-most plot, the astrometric scatter, notice that for this "bright / best-seeing" epoch the measured sky coordinates of the DiaSource are very close to those reported for the DiaObject.
+In the center plot, the astrometric scatter, notice that for this "bright / best-seeing" epoch the measured sky coordinates of the DiaSource are very close to those reported for the DiaObject.  
 This *does not* necessarily mean that the coordinates for the "best-seeing" epoch are more accurate, because the
 coordinates of DiaObjects are *derived from* the individual DiaSources.
-The point of the right-most plot is more that the overall scatter is less than 0.3 arcsec, and that selecting the
+The point of this plot is more that the overall scatter is less than 0.3 arcsec, and that selecting the
 "bright / best-seeing" epoch image for co-registration with images from other facilities is a wise choice.
 
 .. figure:: /_static/portal_tut02_step03e.png
@@ -148,9 +148,16 @@ The point of the right-most plot is more that the overall scatter is less than 0
 
 .. _DP0-2-Portal-Intermediate_Step-4:
 
-4. Exercise for the learner: obtain the visitId
-===============================================
+4. Exercise for the learner
+===========================
 
-4.1. At this point, the user is ready to obtain the "bright / best seeing" epoch's images.
+4.1. **Obtain the visitId.** 
+At this point, the user is ready to obtain the "bright / best seeing" epoch's images.
 The simplest way to do that is with the visitId, but the ADQL query did not request that from the CcdVisit table.
 Return to the ADQL query and add ccdvis.ccdVisitId and ccdvis.visitId to the query.
+
+4.2. **Add magnitude error bars.** 
+To retrieve magnitude errors from the DiaSource catalog, return to step 2.2 and add to the ADQL statement:
+``scisql_nanojanskyToAbMagSigma(diasrc.psFlux, diasrc.psFluxErr) AS psAbMagErr``.
+When you get to step 3.1, for the Y error choose "Symm" from the drop-down menu, and then in the new box that appears to the right, enter "psAbMagErr".
+When you click "Apply" to create the plot, the points will have error bars.
