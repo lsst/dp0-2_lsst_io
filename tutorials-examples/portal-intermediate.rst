@@ -102,6 +102,7 @@ Use the settings icon (two gears at upper right) to open the plot parameters pop
 
 .. figure:: /_static/portal_tut02_step03a.png
     :name: portal_tut02_step03a
+    :width: 400
 
     Plot parameters for the lightcurve.
 
