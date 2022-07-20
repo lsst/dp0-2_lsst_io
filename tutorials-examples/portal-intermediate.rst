@@ -102,7 +102,6 @@ Use the settings icon (two gears at upper right) to open the plot parameters pop
 
 .. figure:: /_static/portal_tut02_step03a.png
     :name: portal_tut02_step03a
-    :scale: 75 %
 
     Plot parameters for the lightcurve.
 
@@ -125,7 +124,6 @@ Note that in both the X and Y parameters, the difference between the DiaSource c
 
 .. figure:: /_static/portal_tut02_step03d.png
     :name: portal_tut02_step03d
-    :scale: 75 %
 
     Plot parameters for the astrometric scatter plot.
 
@@ -150,15 +148,16 @@ The point of the right-most plot is more that the overall scatter is less than 0
 
 .. _DP0-2-Portal-Intermediate_Step-4:
 
-4. Exercise for the learner: obtain the visitId
-===============================================
+4. Exercise for the learner
+===========================
 
-4.1. At this point, the user is ready to obtain the "bright / best seeing" epoch's images.
+4.1. **Obtain the visitId.** 
+At this point, the user is ready to obtain the "bright / best seeing" epoch's images.
 The simplest way to do that is with the visitId, but the ADQL query did not request that from the CcdVisit table.
 Return to the ADQL query and add ccdvis.ccdVisitId and ccdvis.visitId to the query.
 
-4.2. Add error bars to the lightcurve.
-Return to step 2.2 and add to the ADQL:
+4.2. **Add magnitude error bars.** 
+To retrieve magnitude errors from the DiaSource catalog, return to step 2.2 and add to the ADQL statement:
 ``scisql_nanojanskyToAbMagSigma(diasrc.psFlux, diasrc.psFluxErr) AS psAbMagErr``.
 When you get to step 3.1, for the Y error choose "Symm" from the drop-down menu, and then in the new box that appears to the right, enter "psAbMagErr".
 When you click "Apply" to create the plot, the points will have error bars.
