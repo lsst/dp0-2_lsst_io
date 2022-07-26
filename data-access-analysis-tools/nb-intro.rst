@@ -176,6 +176,30 @@ or this Community Forum thread where DP0 delegates can share `resources for pyth
 Web searches for "python *(thing you want to do)*" are usually pretty successful too.
 
 
+.. _NB-Intro-Use-A-NB-faq-environments:
+
+How do I install packages in my user environment?
+-------------------------------------------------
+
+The Rubin Science Platform (RSP) comes with the ``rubin-env`` conda environment, including the LSST Science Pipelines, pre-installed and activated within the Notebook and Terminal.
+If you need to extend the ``rubin-env`` environment by installing other Python packages to enable your work, you can use the ``pip install`` command.
+In the RSP, ``pip`` actually invokes ``conda`` to do its work, ensuring that dependencies that are already present in ``rubin-env`` are used (if compatible).
+Packages installed with ``pip`` will be placed in a subdirectory of your home directory.
+These packages are only guaranteed to work when the conda environment in which you installed them is activated.
+
+If you need to install other conda packages but don't need to use them at the same time as the ``rubin-env`` and LSST Science Pipelines packages, you can install them into a new conda environment.
+Start by doing ``source /opt/lsst/software/stack/loadLSST.bash`` to initialize conda.
+Use the ``conda create -n myenv`` command to create the new environment.
+Use the ``conda activate myenv`` command to activate this environment.
+Use the ``mamba install {package} ...`` command to install one or more packages into the environment.
+(``mamba`` is a faster version of conda for installing packages.)
+When you're done using the environment and want to revert to the ``rubin-env`` one, use ``conda deactivate``.
+
+If you need to directly extend the ``rubin-env`` environment with other conda packages, the only way to do so at present is to clone the environment.
+This is a time- and space-consuming process, so we do not recommend it.
+
+
+
 .. _NB-Intro-Use-A-NB-faq-github:
 
 Do I need to know git?
