@@ -193,6 +193,7 @@ Use the ``conda create -n myenv`` command to create the new environment.
 Use the ``conda activate myenv`` command to activate this environment.
 Use the ``mamba install {package} ...`` command to install one or more packages into the environment.
 (``mamba`` is a faster version of conda for installing packages.)
+If the package to be installed is not available from the current channels, then the channel will have to be specified, e.g., ``mamba install -c pyviz lumen``.
 When you're done using the environment and want to revert to the ``rubin-env`` one, use ``conda deactivate``.
 
 If you need to directly extend the ``rubin-env`` environment with other conda packages, the only way to do so at present is to clone the environment.
