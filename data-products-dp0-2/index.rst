@@ -100,7 +100,7 @@ A PVI which has had a template image subtracted from it.
 Any source detected in a difference image represents the *time-variable* flux component of the astrophysical object.
 
 Template images are, for DP0.2, built from the third best seeing visits from all 5 years of the DC2 simultion.
-This is not representative of the future LSST data products; the plan is for templates applied to a given year of data are built from images obtained the year before, and for the coaddition process to take care to remove transient or fast moving objects (see Section 3.4.3 of the `DPDD <ls.st/dpdd>`_).
+This is not representative of the future LSST data products; the plan is for templates applied to a given year of data are built from images obtained the year before, and for the coaddition process to take care to remove transient or fast moving objects (see Section 3.4.3 of the `DPDD <https://ls.st/dpdd/>`_).
 It is important to note that because of how the DP0.2 templates were built, there is transient flux in the template images, which leads to negative flux offsets in the measured difference-image fluxes.
 Work to help delegates identify, quantify, and correct for this issue when using the time-domain data products for DC2 Type Ia supernovae is underway.
 The documentation and tutorials will be updated in the future, and in the meantime please reach out to Melissa Graham.
