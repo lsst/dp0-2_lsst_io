@@ -97,8 +97,14 @@ Coadd images are divided into **"tracts"** (a spherical convex polygon) and trac
 
 **Difference Image**:
 A PVI which has had a template image subtracted from it.
-Template images are built from images obtained the previous year.
 Any source detected in a difference image represents the *time-variable* flux component of the astrophysical object.
+
+Template images are, for DP0.2, built from the top one-third best seeing visits from all 5 years of the DC2 simulation.
+This is not representative of the future LSST data products; the plan is for templates applied to a given year of data to be built from images obtained the year before, and for the coaddition process to take care to remove transient or fast moving objects (see Section 3.4.3 of the `DPDD <https://ls.st/dpdd/>`_).
+It is important to note that because of how the DP0.2 templates were built, there is often transient flux in the template images, which leads to negative flux offsets in the measured difference-image fluxes.
+Work to help delegates identify, quantify, and correct for this issue when using the time-domain data products for DC2 Type Ia supernovae is underway.
+The documentation and tutorials will be updated in the future, and in the meantime please reach out to Melissa Graham.
+
 In the butler, find difference exposures as "goodSeeingDiff_differenceExp", and the templates as "goodSeeingDiff_templateExp".
 
 .. _DP0-2-Data-Products-DPDD-Catalogs:
