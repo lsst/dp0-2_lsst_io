@@ -41,6 +41,12 @@ This tutorial uses the Astronomy Data Query Language (ADQL) to query and retriev
 ADQL is similar to SQL (Structured Query Language), and the `documentation for ADQL <https://www.ivoa.net/documents/latest/ADQL.html>`_ includes more information about syntax and keywords.
 For more information about the DP0.2 catalogs, visit the :ref:`DP0-2-Data-Products-DPDD` or the `DP0.2 Catalog Schema Browser <https://dm.lsst.org/sdm_schemas/browser/dp02.html>`_.
 
+**WARNING:** In this tutorial, the difference-image fluxes are converted to magnitudes in the TAP query.
+This is usually safe to do, because supernovae fluxes should never be negative in a difference image -- unless the supernova also appears in the template image.
+In the case of DP0.2, due to how the template images were built, some of the template images are contaminated with supernova flux, potentially up to 40% of DC2 SNIa.
+This leads to negative-flux difference-image detections that are significant (SNR>5), and thus an overall offset in the SNIa lightcurves.
+Work is ongoing to evaluate this issue and recommend a robust correction method (see :ref:`DP0-2-Data-Products-DPDD-Images`).
+Note that this offset is not discoverable in the following tutorial.
 
 
 .. _DP0-2-Portal-Intermediate_Step-1:
