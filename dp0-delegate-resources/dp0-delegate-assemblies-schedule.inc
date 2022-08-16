@@ -43,8 +43,8 @@
      - Visualizing Image Data (beginner)
      - *breakouts*
    * - 2022-08-19
-     - Data Query & Retrieval with the Butler (beginner)
-     - Time-Domain Data in the Butler (intermediate)
+     - Data Access with the Butler (beginner-intermediate)
+     - *breakouts*
    * - 2022-09-02
      - NO ASSEMBLY (long weekend)
      - *none*
