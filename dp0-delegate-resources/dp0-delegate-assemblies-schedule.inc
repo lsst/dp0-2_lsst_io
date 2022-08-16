@@ -47,6 +47,7 @@
      - Time-Domain Data in the Butler (intermediate)
    * - 2022-09-02
      - NO ASSEMBLY (long weekend)
+     - *none*
    * - 2022-09-16
      - Source Detection and Measurement (beginner)
      - *breakouts*
