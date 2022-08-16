@@ -43,8 +43,18 @@
      - Visualizing Image Data (beginner)
      - *breakouts*
    * - 2022-08-19
-     - Data Query & Retrieval with the Butler (beginner)
-     - Time-Domain Data in the Butler (intermediate)
+     - Data Access with the Butler (beginner-intermediate)
+     - *breakouts*
+   * - 2022-09-02
+     - NO ASSEMBLY (long weekend)
+     - *none*
+   * - 2022-09-16
+     - Source Detection and Measurement (beginner)
+     - *breakouts*
+   * - 2022-09-30
+     - Data Visualization (beginner)
+     - *breakouts*
+
 
 Additional delegate assemblies to be posted.
 Rows in *italics* are tentative topics.

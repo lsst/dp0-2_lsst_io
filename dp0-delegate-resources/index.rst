@@ -157,7 +157,9 @@ Stack Club
 
 **Connection Info:**  `ls.st/dp0-events <https://ls.st/dp0-events>`_
 
-**Time:** Biweekly on Fridays from 9am to 11am US Pacific time (alternating with :ref:`Delegate-Homepage-DP0-Delegate-Assemblies`).
+**Time:** Biweekly on Fridays from 9am to 11am US Pacific time.
+
+**Dates:** Alternating with :ref:`Delegate-Homepage-DP0-Delegate-Assemblies`. Aug 26, Sep 9, 23, Oct 7, 21, Nov 4, etc.
 
 `Stack Club <https://github.com/LSSTScienceCollaborations/StackClub>`_ is an open, drop-in session for working with the DP0 data set and/or the Rubin Observatory `LSST Science Pipelines <https://pipelines.lsst.io/>`_ (colloquially called "the Stack").
 Stack Club sessions begin with a roundtable discussion of what people want to do or learn that day, and then work proceeds as people stay connected via Zoom,
@@ -178,7 +180,8 @@ Third Thursday office hour
 These two time slots serve the Asia-Pacific (APAC) and Europe, the Middle East, and Africa (EMEA) time zones, respectively.
 Note that in the western Americas (AMER) time zone, the first slot at 04:00 UTC is actually on Wednesday evening.
 
-| **Dates:** Thu Jul 21 2022
+| **Dates:** Jul 21, Aug 18, Oct 20
+| No meeting Sep 15.
 | Additional dates TBD.
 
 These office hour sessions are open, drop-in discussions designed to compensate for the fact that the time of the Delegate Assemblies was only convenient for DP0 delegates in North and South America, Europe, and Africa.
