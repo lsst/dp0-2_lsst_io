@@ -170,5 +170,14 @@ The ``detect_isPrimary`` parameter is ``True`` if a source has no children, is i
 Setting ``detect_isPrimary`` to ``True`` will remove any duplicates, sky objects, etc.
 See `this documentation on filtering for unique, deblended sources with the detect_isPrimary flag <https://pipelines.lsst.io/getting-started/multiband-analysis.html#filtering-for-unique-deblended-sources-with-the-detect-isprimary-flag>`_ for more information.
 
+**For photometry of point sources:**
+PSF model fluxes are generally recommended, but there could be issues for objects near the edges of CCDs.  For single-visit (source) photometry, it is recommended to use ``psfFlux`` for the flux, ``psfFluxErr`` for the flux error, and ``psfFlux_flag`` for culling sources with poorly determined PSF model fluxes.  For coadd (object) photometry, it is recommended to use ``<band>_psfFlux`` for the flux, ``<band>_psfFluxErr`` for the flux error, and ``<band>_pixelFlags_inexact_psfCenter`` to identify objects which may contain sources with poorly determined PSF photometry.  (Note:  the object ``<band>_inputCount`` value can help indicate how strong this effect may be; the larger ``<band>_inputCount``, the smaller the effect.)
+
+**For photometry of extended sources:**
+``<band>_cModelFlux`` is a reasonable choice for galaxy *fluxes*, but the Gaussian aperture fluxes are generally preferred for galaxy *colors*.  Of the many Gaussian aperture fluxes, the ``<band>__gaap1p0Flux`` (1.0 aperture) seems to be a reasonable choice.  Currently, the Gaussian *optimal* aperture (``<band>_gaapOptimalFlux``) tends to fail often and is *not* generally recommended at this time.  For further information on Gaussian aperture photometry, please consult `Kuijken (2008) <https://ui.adsabs.harvard.edu/abs/2008A%26A...482.1053K/abstract>`_, `Kuiken et al. (2015) <https://ui.adsabs.harvard.edu/abs/2015MNRAS.454.3500K/abstract>`_, and/or Konrad Kuijken's talk at the March 2020 Rubin Observatory Algorithms Workshop (`link <https://project.lsst.org/meetings/law/>`_).
+
+
+
+
 **Truth catalog data** will also be available via TAP and the Butler.
 More information to come.
