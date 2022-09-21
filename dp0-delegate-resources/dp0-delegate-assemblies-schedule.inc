@@ -49,10 +49,13 @@
      - NO ASSEMBLY (long weekend)
      - *none*
    * - 2022-09-16
-     - Source Detection and Measurement (beginner)
+     - `Source Detection and Measurement <https://community.lsst.org/t/summary-delegate-assembly-fri-sep-16/7072>`__ (beginner)
      - *breakouts*
    * - 2022-09-30
      - Data Visualization (beginner)
+     - *breakouts*
+   * - 2022-10-14
+     - Delegate Presenter: Martín Rodríguez Monroy
      - *breakouts*
 
 
