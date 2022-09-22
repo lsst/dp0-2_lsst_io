@@ -57,7 +57,25 @@
    * - 2022-10-14
      - Delegate Presenter: Martín Rodríguez Monroy
      - *breakouts*
+   * - 2022-10-28
+     - *TBD: open for a volunteer presenter*
+     - *breakouts*
+   * - 2022-11-18
+     - *TBD: open for a volunteer presenter*
+     - *breakouts*
+   * - 2022-12-09
+     - DP0 2022 Year In Review: Delegate Flash Talks!
+     - *breakouts*
+   * - 2023-01-20
+     - *TBD: open for a volunteer presenter*
+     - *breakouts*
+   * - 2023-02-03
+     - *TBD: open for a volunteer presenter*
+     - *breakouts*
 
+All will be welcome to participate in the "DP0 2022 Year In Review: Delegate Flash Talks!" session on 2022-12-09. Details to be circulated.
 
 Additional delegate assemblies to be posted.
 Rows in *italics* are tentative topics.
+	
+	
