@@ -118,7 +118,7 @@ Matching the Object and Truth Tables
 
 The full details of how the matching was done are embedded in the code `matcher_probabilistic.py <https://github.com/lsst/meas_astrom/blob/main/python/lsst/meas/astrom/matcher_probabilistic.py>`_, and the configurable settings are documented in the matcher's `configuration class <https://pipelines.lsst.io/py-api/lsst.meas.astrom.MatchProbabilisticConfig.html>`_.
 
-To summarize, the algorithm starts with the brightest true objects and only attempts to match true objects with with "total magnitudes" (the AB magnitude from the summed flux in all six filters, ugrizy) brighter than 27th magnitude.
+To summarize, the algorithm starts with the brightest true objects and only attempts to match true objects with "total magnitudes" (the AB magnitude from the summed flux in all six filters, ugrizy) brighter than 27th magnitude.
 This was done to avoid spurious matches with undetectable true objects, and is why the "match_candidate" column is false for some true objects in the "MatchesTruth" table.
 
 The match radius was not changed from the default used for DP0.1, 0.5 arcseconds, and the best match is the measured object with the lowest reduced chi-squared within the match radius that has not already been matched to a brighter reference object.
