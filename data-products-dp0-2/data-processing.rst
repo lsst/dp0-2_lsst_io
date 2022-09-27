@@ -122,7 +122,11 @@ To summarize, the algorithm starts with the brightest true objects and only atte
 This was done to avoid spurious matches with undetectable true objects, and is why the "match_candidate" column is false for some true objects in the "MatchesTruth" table.
 
 The match radius was not changed from the default used for DP0.1, 0.5 arcseconds, and the best match is the measured object with the lowest reduced chi-squared within the match radius that has not already been matched to a brighter reference object.
-The "MatchesTruth" table contains the "match_chisq" column, and the matching considers both coordinates and fluxes -- although in practice, Rubin staff found that matching to photometry only made a difference for <1% of objects, because the astrometry was much more precise.
+The "MatchesTruth" table contains the "match_chisq" column, and the matching considers both coordinates and cModel fluxes -- although in practice, Rubin staff found that matching to photometry only made a difference for <1% of objects, because the astrometry was much more precise.
 The "match_chisq" column is only relevant if there are multiple measured objects considered in the matching process for the true object, or in other words, if "match_count" is greater than 1.
 
-
+As a final note, the matcher can only match on coordinate and flux columns that are finite for a given measured object (i.e., not "NaN").
+There is a default configuration setting for the matching algorithm that requires at least three finite columns to compute the (reduced) chi-squared.
+This basically requires at least one finite flux, because the two centroid columns must be finite or no match is possible.
+Therefore, any objects that had a "NaN" CModel flux in every band could not be matched, even if there was a reference object within the match radius.
+The column "match_n_chisq_finite" contains how many columns were finite.
