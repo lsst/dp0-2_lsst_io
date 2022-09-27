@@ -109,3 +109,20 @@ Once the image subtraction has been performed, similar algorithms to those used 
 These source detections and measurements make up the _DIASource_ catalog, and the _DIAObject_ table is made up of _DIASources_ associated
 by sky coordinate.
 The _DIAObject_ table includes statistical summary parameters of the associated _DIASources_ (i.e., lightcurve properties).
+
+
+.. _Data-Processing-Overview-Truth-Matching:
+
+Matching the Object and Truth Tables
+====================================
+
+The full details of how the matching was done are embedded in the code `matcher_probabilistic.py <https://github.com/lsst/meas_astrom/blob/main/python/lsst/meas/astrom/matcher_probabilistic.py>`_, and the configurable settings are documented in the matcher's `configuration class <https://pipelines.lsst.io/py-api/lsst.meas.astrom.MatchProbabilisticConfig.html>`_.
+
+To summarize, the algorithm starts with the brightest true objects and only attempts to match true objects with with "total magnitudes" (the AB magnitude from the summed flux in all six filters, ugrizy) brighter than 27th magnitude.
+This was done to avoid spurious matches with undetectable true objects, and is why the "match_candidate" column is false for some true objects in the "MatchesTruth" table.
+
+The match radius was not changed from the default used for DP0.1, 0.5 arcseconds, and the best match is the measured object with the lowest reduced chi-squared within the match radius that has not already been matched to a brighter reference object.
+The "MatchesTruth" table contains the "match_chisq" column, and the matching considers both coordinates and fluxes -- although in practice, Rubin staff found that matching to photometry only made a difference for <1% of objects, because the astrometry was much more precise.
+The "match_chisq" column is only relevant if there are multiple measured objects considered in the matching process for the true object, or in other words, if "match_count" is greater than 1.
+
+
