@@ -123,7 +123,7 @@ This was done to avoid spurious matches with undetectable true objects, and is w
 
 The match radius was not changed from the default used for DP0.1, 0.5 arcseconds, and the best match is the measured object with the lowest reduced chi-squared within the match radius that has not already been matched to a brighter reference object.
 The "MatchesTruth" table contains the "match_chisq" column, and the matching considers both coordinates and cModel fluxes -- although in practice, Rubin staff found that matching to photometry only made a difference for <1% of objects, because the astrometry was much more precise.
-The "match_chisq" column is only relevant if there are multiple measured objects considered in the matching process for the true object, or in other words, if "match_count" is greater than 1.
+The "match_chisq" column is only relevant if there are multiple measured objects considered in the matching process for the true object (i.e., if "match_count" is greater than 1).
 
 As a final note, the matcher can only match on coordinate and flux columns that are finite for a given measured object (i.e., not "NaN").
 There is a default configuration setting for the matching algorithm that requires at least three finite columns to compute the (reduced) chi-squared.
