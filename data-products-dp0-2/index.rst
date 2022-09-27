@@ -157,6 +157,12 @@ Note that in the future, for real LSST data releases, this level of redundancy i
    * - CcdVisit
      - ccdVisitTable
      - Individual CCD (detecor) information, including measured seeing, sky background, and zeropoint (30 columns).
+   * - MatchesTruth
+     - *(Use TAP)*
+     - Matches between TruthSummary and Object tables, including match statistics (8 columns).
+   * - TruthSummary
+     - *(Use TAP)*
+     - Summary properties of objects from the DESC DC2 truth catalog, as described in arXiv:2101.04855 (27 columns).
 
 |
 
@@ -176,8 +182,5 @@ PSF model fluxes are generally recommended, but there could be issues for object
 **For photometry of extended sources:**
 ``<band>_cModelFlux`` is a reasonable choice for galaxy *fluxes*, but the Gaussian aperture fluxes are generally preferred for galaxy *colors*.  Of the many Gaussian aperture fluxes, the ``<band>_gaap1p0Flux`` (the sigma=1.0-arcsec Gaussian aperture) seems to be a reasonable choice.  Currently, the Gaussian *optimal* aperture (``<band>_gaapOptimalFlux``) tends to fail often and is *not* generally recommended.  For further information on Gaussian aperture photometry, please consult `Kuijken (2008) <https://ui.adsabs.harvard.edu/abs/2008A%26A...482.1053K/abstract>`_, `Kuiken et al. (2015) <https://ui.adsabs.harvard.edu/abs/2015MNRAS.454.3500K/abstract>`_, and/or Konrad Kuijken's talk at the March 2020 Rubin Observatory Algorithms Workshop (`link <https://project.lsst.org/meetings/law/>`_).
 
-
-
-
-**Truth catalog data** will also be available via TAP and the Butler.
-More information to come.
+**Truth catalog data:** it is recommended to use the TAP service with table joins, as demonstrated in DP0.2 tutorial notebook "08_Truth_Tables.ipynb", and not the Butler, for access to truth catalog data.
+Find more information about the matching algorithm in :ref:`Data-Processing-Overview-Truth-Matching`.
