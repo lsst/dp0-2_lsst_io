@@ -259,8 +259,8 @@ People new to the Rubin Community Forum might appreciate `this video demonstrati
 
 .. _NB-Intro-Use-A-NB-faq-readonly:
 
-How do make sure my "notebooks/tutorial-notebooks" directory is read-only?
---------------------------------------------------------------------------
+How do I make sure my "notebooks/tutorial-notebooks" directory is read-only?
+----------------------------------------------------------------------------
 
 As described in :ref:`NB-Intro-Use-Tutorial-NBs`, it is recommended that all users ensure their "notebooks/tutorial-notebooks" directory is read-only.
 
