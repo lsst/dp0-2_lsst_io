@@ -262,6 +262,8 @@ People new to the Rubin Community Forum might appreciate `this video demonstrati
 How do make sure my "notebooks/tutorial-notebooks" directory is read-only?
 --------------------------------------------------------------------------
 
+As described in :ref:`NB-Intro-Use-Tutorial-NBs`, it is recommended that all users ensure their "notebooks/tutorial-notebooks" directory is read-only.
+
 1. Determine whether or not your "notebooks/tutorial-notebooks" directory is read-only.
 In the Notebook Aspect of the RSP, use the Launcher (+ button) and open a Terminal, and execute the following statements.
 
@@ -270,13 +272,14 @@ In the Notebook Aspect of the RSP, use the Launcher (+ button) and open a Termin
    cd ~/notebooks
    ls -lah
 
+
 If, on the output line for “tutorial-notebooks”, you see “dr-xr-xr-x”, this directory is read-only.
 If you see “drwxr-xr-x”, this directory is writable by the user.
 
 2. If you want to keep the current version of your “notebooks/tutorial-notebooks” directory, move it to another path in your home directory.
 In the Notebook Aspect of the RSP, use the Launcher (+ button) and open a Terminal, and execute the following statements.
 They will make a new sub-directory in your home directory called “my-work”, and then move your current “tutorial-notebooks” directory into it and rename it.
-It is crucial that you *move* (and not copy) the “tutorial-notebooks” directory, because it must be entirely gone from the “notebooks/” directory for Step 3 to work.
+It is crucial that you *move* (and not copy) the “tutorial-notebooks” directory, because it must be entirely gone from the “notebooks/” directory for the next step to work.
 
 .. code-block:: bash
 
@@ -287,6 +290,7 @@ It is crucial that you *move* (and not copy) the “tutorial-notebooks” direct
    cd my-work/my-tutorial-notebooks
    ls
 
+
 You will see the contents of your version of the “tutorial-notebooks” listed.
 
 If you don't care to keep the current version of your “notebooks/tutorial-notebooks” directory, delete it.
@@ -295,6 +299,7 @@ If you don't care to keep the current version of your “notebooks/tutorial-note
 
    cd ~/notebooks
    rm -rf tutorial-notebooks
+
 
 3. Exit the Notebook Aspect (“File” → “Save All and Exit”), log back in using the recommended image, and you will have a new read-only version of the “notebooks/tutorial-notebooks” directory.
 
