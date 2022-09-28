@@ -114,9 +114,6 @@ Type "butler --help" in any terminal to see a list of available butler functiona
 How to use a Jupyter notebook
 =============================
 
-The best way to learn how to use a Jupyter Notebook is to open the first of the tutorial notebooks which are provided in each user's home directory,
-and also available in the `tutorial-notebooks <https://github.com/rubin-dp0/tutorial-notebooks>`_ repository in the "rubin-dp0" GitHub Organization (see also :ref:`DP0-2-Tutorials-Notebooks`).
-
 **Executing code in a Notebook:**
 Jupyter notebooks provide "cells" within which you type either Python code or markdown language (for formatted text).
 Choose the cell to execute by clicking in it with your mouse (the cursor must be in the desired cell).
@@ -132,23 +129,34 @@ For some handy markdown tips, see `this blog post <https://medium.com/analytics-
     and which will come pre-populated with a handful of tutorial notebooks that users can execute on their own. The largest panel is the Jupyter notebook, where markdown and code can be entered and executed.
     You can also see that one can have multiple notebooks open in separate tabs.
 
-**The "tutorial-notebooks" directory should be read-only:**
-As of Thu Sep 29 2022, the recommended image for the RSP's Notebook Aspect was updated to "Weekly 39".
-
-For all **new RSP accounts** created on or after that day, the "notebooks/tutorial-notebooks" directory will be read-only, and it will *always* contain the most up-to-date versions of the tutorials.
-Notebooks can be edited and executed in this directory, but changes cannot be saved to this directory.
-Users wishing to edit, execute, *and save* versions of these notebooks should copy them to a different path in their home directory.
-
-For all **existing RSP accounts** that were created before Thu Sep 29 2022, the "notebooks/tutorial-notebooks" directory will remain writable, but a warning file (00_WARNING_README.md) will appear if any other file in that directory has been changed, as a reminder to take action.
-See the FAQ on :ref:`NB-Intro-Use-A-NB-faq-readonly` for more information about recommended actions.
-
 **Opening Multiple Notebooks:**
 You can have multiple notebooks and terminals open in your viewer at a time.
 This is very handy, but you can also arrange both notebooks and terminals next to or on top of each other by dragging the notebook or terminal around by the top bar.
 Arranging the windows can be convenient when working in both a terminal and notebook at the same time, or when using another notebook as a reference.
 
 **JupyterLab Autosaves Notebooks:**
-Note that JupyterLab autosaves your notebooks at a default rate of 2 minutes, as long as the notebook is in a directory with user write permission.
+Note that JupyterLab autosaves your notebooks at a default rate of 2 minutes, as long as the notebook is in a directory with user write permission (see below).
+
+
+.. _NB-Intro-Use-Tutorial-NBs:
+
+How to use the Tutorial Notebooks
+=================================
+
+The best way to learn how to use a Jupyter Notebook is to open the first of the tutorial notebooks which are provided in each user's home directory,
+and also available in the `tutorial-notebooks <https://github.com/rubin-dp0/tutorial-notebooks>`_ repository in the "rubin-dp0" GitHub Organization (see also :ref:`DP0-2-Tutorials-Notebooks`).
+
+**The "notebooks/tutorial-notebooks" directory should be read-only:**
+As of Thu Sep 29 2022, the recommended image for the RSP's Notebook Aspect was updated to "Weekly 39", and for all **new RSP accounts** created on or after that day the "notebooks/tutorial-notebooks" directory will be read-only.
+
+A read-only "notebooks/tutorial-notebooks" directory will *always* contain the most up-to-date versions of the tutorials.
+Notebooks can be edited and executed in this directory, but changes cannot be saved to this directory.
+Users wishing to edit, execute, *and save* versions of these notebooks should copy them to a different path in their home directory.
+
+For all **existing RSP accounts** that were created before Thu Sep 29 2022, the "notebooks/tutorial-notebooks" directory will remain writable, but a warning file (00_WARNING_README.md) will appear if any other file in that directory has been changed, as a reminder to take action.
+
+**It is recommended that owners of RSP accounts created prior to Thu Sep 29 2022 take action to make their "notebooks/tutorial-notebooks" directory read-only.**
+See the FAQ on :ref:`NB-Intro-Use-A-NB-faq-readonly` for more information about the recommended actions.
 
 
 .. _NB-Intro-Use-A-NB-faq:
