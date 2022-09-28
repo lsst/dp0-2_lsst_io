@@ -147,7 +147,7 @@ The best way to learn how to use a Jupyter Notebook is to open the first of the 
 and also available in the `tutorial-notebooks <https://github.com/rubin-dp0/tutorial-notebooks>`_ repository in the "rubin-dp0" GitHub Organization (see also :ref:`DP0-2-Tutorials-Notebooks`).
 
 **The "notebooks/tutorial-notebooks" directory should be read-only:**
-As of Thu Sep 29 2022, the recommended image for the RSP's Notebook Aspect was updated to "Weekly 39", and for all **new RSP accounts** created on or after that day the "notebooks/tutorial-notebooks" directory will be read-only.
+As of Thu Sep 29 2022, the recommended image for the RSP's Notebook Aspect was updated to "Weekly 40", and for all **new RSP accounts** created on or after that day the "notebooks/tutorial-notebooks" directory will be read-only.
 
 A read-only "notebooks/tutorial-notebooks" directory will *always* contain the most up-to-date versions of the tutorials.
 Notebooks can be edited and executed in this directory, but changes cannot be saved to this directory.
