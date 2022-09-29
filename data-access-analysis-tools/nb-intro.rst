@@ -114,9 +114,6 @@ Type "butler --help" in any terminal to see a list of available butler functiona
 How to use a Jupyter notebook
 =============================
 
-The best way to learn how to use a Jupyter Notebook is to open the first of the tutorial notebooks which are provided in each user's home directory,
-and also available in the `tutorial-notebooks <https://github.com/rubin-dp0/tutorial-notebooks>`_ repository in the "rubin-dp0" GitHub Organization (see also :ref:`DP0-2-Tutorials-Notebooks`).
-
 **Executing code in a Notebook:**
 Jupyter notebooks provide "cells" within which you type either Python code or markdown language (for formatted text).
 Choose the cell to execute by clicking in it with your mouse (the cursor must be in the desired cell).
@@ -138,7 +135,28 @@ This is very handy, but you can also arrange both notebooks and terminals next t
 Arranging the windows can be convenient when working in both a terminal and notebook at the same time, or when using another notebook as a reference.
 
 **JupyterLab Autosaves Notebooks:**
-Note that JupyterLab autosaves your notebooks at a default rate of 2 minutes.
+Note that JupyterLab autosaves your notebooks at a default rate of 2 minutes, as long as the notebook is in a directory with user write permission (see below).
+
+
+.. _NB-Intro-Use-Tutorial-NBs:
+
+How to use the Tutorial Notebooks
+=================================
+
+The best way to learn how to use a Jupyter Notebook is to open the first of the tutorial notebooks which are provided in each user's home directory,
+and also available in the `tutorial-notebooks <https://github.com/rubin-dp0/tutorial-notebooks>`_ repository in the "rubin-dp0" GitHub Organization (see also :ref:`DP0-2-Tutorials-Notebooks`).
+
+**The "notebooks/tutorial-notebooks" directory should be read-only:**
+As of Thu Sep 29 2022, the recommended image for the RSP's Notebook Aspect was updated to "Weekly 40", and for all **new RSP accounts** created on or after that day the "notebooks/tutorial-notebooks" directory will be read-only.
+
+A read-only "notebooks/tutorial-notebooks" directory will *always* contain the most up-to-date versions of the tutorials.
+Notebooks can be edited and executed in this directory, but changes cannot be saved to this directory.
+Users wishing to edit, execute, *and save* versions of these notebooks should copy them to a different path in their home directory.
+
+For all **existing RSP accounts** that were created before Thu Sep 29 2022, the "notebooks/tutorial-notebooks" directory will remain writable, but a warning file (00_WARNING_README.md) will appear if any other file in that directory has been changed, as a reminder to take action.
+
+**It is recommended that owners of RSP accounts created prior to Thu Sep 29 2022 take action to make their "notebooks/tutorial-notebooks" directory read-only.**
+See the FAQ on :ref:`NB-Intro-Use-A-NB-faq-readonly` for more information about the recommended actions.
 
 
 .. _NB-Intro-Use-A-NB-faq:
@@ -200,7 +218,6 @@ If you need to directly extend the ``rubin-env`` environment with other conda pa
 This is a time- and space-consuming process, so we do not recommend it.
 
 
-
 .. _NB-Intro-Use-A-NB-faq-github:
 
 Do I need to know git?
@@ -240,6 +257,53 @@ learning `python <https://community.lsst.org/t/resources-for-python-beginners/59
 People new to the Rubin Community Forum might appreciate `this video demonstrating how to navigate and post topics to the forum <https://www.youtube.com/watch?v=d_Z5xmkR4P4&list=PLPINAcUH0dXZSx2aY6wTIjLCWiexs3dZR&index=10>`_.
 
 
+.. _NB-Intro-Use-A-NB-faq-readonly:
+
+How do I make sure my "notebooks/tutorial-notebooks" directory is read-only?
+----------------------------------------------------------------------------
+
+As described in :ref:`NB-Intro-Use-Tutorial-NBs`, it is recommended that all users ensure their "notebooks/tutorial-notebooks" directory is read-only.
+
+1. Determine whether or not your "notebooks/tutorial-notebooks" directory is read-only.
+In the Notebook Aspect of the RSP, use the Launcher (+ button) and open a Terminal, and execute the following statements.
+
+.. code-block:: bash
+
+   cd ~/notebooks
+   ls -lah
+
+
+If, on the output line for “tutorial-notebooks”, you see “dr-xr-xr-x”, this directory is read-only.
+If you see “drwxr-xr-x”, this directory is writable by the user.
+
+2. If you want to keep the current version of your “notebooks/tutorial-notebooks” directory, move it to another path in your home directory.
+In the Notebook Aspect of the RSP, use the Launcher (+ button) and open a Terminal, and execute the following statements.
+They will make a new sub-directory in your home directory called “my-work”, and then move your current “tutorial-notebooks” directory into it and rename it.
+It is crucial that you *move* (and not copy) the “tutorial-notebooks” directory, because it must be entirely gone from the “notebooks/” directory for the next step to work.
+
+.. code-block:: bash
+
+   cd ~
+   mkdir my-work
+   cd ~/notebooks
+   mv tutorial-notebooks my-work/my-tutorial-notebooks
+   cd my-work/my-tutorial-notebooks
+   ls
+
+
+You will see the contents of your version of the “tutorial-notebooks” listed.
+
+If you don't care to keep the current version of your “notebooks/tutorial-notebooks” directory, delete it.
+
+.. code-block:: bash
+
+   cd ~/notebooks
+   rm -rf tutorial-notebooks
+
+
+3. Exit the Notebook Aspect (“File” → “Save All and Exit”), log back in using the recommended image, and you will have a new read-only version of the “notebooks/tutorial-notebooks” directory.
+
+
 .. _NB-Intro-Use-A-NB-tips:
 
 Troubleshooting tips
@@ -269,8 +333,13 @@ and move their ".local" file out of the way by renaming it as something else, su
 There will be no need to recreate the ".local" directory after this.
 The user should then restart the notebook (or, e.g., ipython session) and try to import the packages.
 
+
 What to do if Notebooks do not automatically update
 ---------------------------------------------------
+
+It is recommended to avoid this entire situation by making your "notebooks/tutorial-notebooks" directory read-only, as described in the FAQ above.
+
+However, if your "notebooks/tutorial-notebooks" directory is currently writable and you really want to keep it that way, follow the instructions below.
 
 New versions of the tutorial notebooks will be periodically released by the Community Engagement Team (CET).
 The contents of your "notebooks/tutorial-notebooks/" directory should automatically update when a new version of a tutorial notebook is released.
