@@ -55,13 +55,13 @@
      - Data Visualization (beginner)
      - *breakouts*
    * - 2022-10-14
-     - Delegate Presenter: Martín Rodríguez Monroy
+     - Delegate Presenter: Martín Rodríguez Monroy (50 min)
      - *breakouts*
    * - 2022-10-28
-     - *TBD: open for a volunteer presenter*
+     - Delegate Presenters: Decker French (25 min) & Brian Morsony (25 min)
      - *breakouts*
    * - 2022-11-18
-     - *TBD: open for a volunteer presenter*
+     - Delegate Presenter: Vincenzo Petrecca "Analysis of DIA sources" (50 min)
      - *breakouts*
    * - 2022-12-09
      - DP0 2022 Year In Review: Delegate Flash Talks!
