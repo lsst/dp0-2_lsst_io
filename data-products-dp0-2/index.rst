@@ -205,24 +205,24 @@ Find a demonstration of how to retrieve, display, and analyze survey property ma
    * - Name
      - Description
    * - deepCoadd_dcr_ddec_consolidated_map_weighted_mean
-     - Average effect of differential chromatic refraction (DCR) in declination direction
+     - Average effect of differential chromatic refraction (DCR) in declination direction.
    * - deepCoadd_dcr_dra_consolidated_map_weighted_mean
-     - Average effect of differential chromatic refraction (DCR) in right ascension direction
+     - Average effect of differential chromatic refraction (DCR) in right ascension direction.
    * - deepCoadd_dcr_e1_consolidated_map_weighted_mean
-     - Average effect of differential chromatic refraction (DCR) on psf e1
+     - Average effect of differential chromatic refraction (DCR) on psf e1.
    * - deepCoadd_dcr_e2_consolidated_map_weighted_mean
-     - Average effect of differential chromatic refraction (DCR) on psf e2
+     - Average effect of differential chromatic refraction (DCR) on psf e2.
    * - deepCoadd_exposure_time_consolidated_map_sum
-     - Total exposure time (seconds)
+     - Total exposure time (seconds).
    * - deepCoadd_psf_e1_consolidated_map_weighted_mean
-     - Weighted mean of psf e1 of images input to coadd
+     - Weighted mean of psf e1 of images used to make the deepCoadd.
    * - deepCoadd_psf_e2_consolidated_map_weighted_mean
-     - Weighted mean of psf e2 of images input to coadd
+     - Weighted mean of psf e2 of images used to make the deepCoadd.
    * - deepCoadd_psf_maglim_consolidated_map_weighted_mean
-     - PSF Flux 5-sigma magnitude limit (AB)
+     - PSF Flux 5-sigma magnitude limit (AB).
    * - deepCoadd_psf_size_consolidated_map_weighted_mean
-     - Weighted mean of psf size of images input to coadd (pixels)
+     - Weighted mean of psf size of images used to make the deepCoadd (pixels).
    * - deepCoadd_sky_background_consolidated_map_weighted_mean
-     - Weighted mean of sky background of images input to coadd (ADU)
+     - Weighted mean of sky background of images used to make the deepCoadd (ADU).
    * - deepCoadd_sky_noise_consolidated_map_weighted_mean
-     - Weighted mean of sky noise of images input to coadd (ADU)
+     - Weighted mean of sky noise of images used to make the deepCoadd (ADU).
