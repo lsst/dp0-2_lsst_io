@@ -52,7 +52,7 @@
      - `Source Detection and Measurement <https://community.lsst.org/t/summary-delegate-assembly-fri-sep-16/7072>`__ (beginner)
      - *breakouts*
    * - 2022-09-30
-     - Data Visualization (beginner)
+     - `Data Visualization <https://community.lsst.org/t/summary-delegate-assembly-fri-sep-30/7136>`__ (beginner)
      - *breakouts*
    * - 2022-10-14
      - Delegate Presenter: Martín Rodríguez Monroy (50 min)
