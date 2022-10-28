@@ -55,7 +55,7 @@
      - `Data Visualization <https://community.lsst.org/t/summary-delegate-assembly-fri-sep-30/7136>`__ (beginner)
      - *breakouts*
    * - 2022-10-14
-     - Delegate Presenter: Martín Rodríguez Monroy (50 min)
+     - `Survey Property Maps by Martín Rodríguez Monroy <https://community.lsst.org/t/summary-delegate-assembly-fri-oct-14/7172>`__
      - *breakouts*
    * - 2022-10-28
      - Delegate Presenters: Decker French (25 min) & Brian Morsony (25 min)
