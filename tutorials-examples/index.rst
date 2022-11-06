@@ -22,13 +22,14 @@ DP0.2 Tutorials
 
 These tutorials are for DP0 delegates using the Rubin Science Platform (RSP) deployed at the Interim Data Facility (IDF; the Google Cloud).
 
-**Delegates:** before following these tutorials, delegates should:
+Before following these tutorials, delegates should:
 
 | 1. have gotten their :ref:`Delegate-Homepage-RSP-Accounts` and be able to log in at `data.lsst.cloud <https://data.lsst.cloud/>`_,
 | 2. be familiar with this list of :doc:`/data-access-analysis-tools/rsp-warnings`,
 | 3. reviewed the basic introductions to the RSP's :ref:`Tools-RSP-Portal` or :ref:`Tools-RSP-Notebook`, and
 | 4. know their options for :ref:`Delegate-Homepage-Getting-Support`.
 
+**What's New?** See the :doc:`/tutorials-examples/major-updates-log`.
 
 .. _DP0-2-Tutorials-Portal:
 
