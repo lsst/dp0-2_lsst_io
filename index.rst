@@ -40,10 +40,9 @@ Resources for DP0 delegates
 ===========================
 
 DP0 delegates are the 600 data rights holders who have RSP accounts for access to the DP0 data set.
-Resources include a self-paced "getting started" checklist, recorded seminars, virtual events, and support channels.
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
     :glob:
 
     dp0-delegate-resources/index
@@ -71,10 +70,9 @@ DP0.2 data access and analysis tools
 
 The Rubin Science Platform (RSP) is the web-based service for Rubin data access and analysis.
 Step-by-step instructions for RSP use are provided.
-All delegates should review the :ref:`Data-Access-Analysis-Tools-Warnings`.
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 3
     :glob:
 
     data-access-analysis-tools/index
