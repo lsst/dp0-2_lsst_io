@@ -29,6 +29,9 @@ The goals of DP0 are to serve as an early integration test of the Legacy Survey 
 
 Anyone with Rubin data rights may `submit a request to participate in DP0 <https://forms.gle/hyZuXmc9S2ssTdW16>`_.
 
+.. Important::
+    **New to DP0?** Welcome! See the :ref:`Delegate-Homepage-Getting-Started-Checklist`
+
 
 .. _Rubin-Observatory-Documentation-DP0-2-Delegate-Resources:
 
