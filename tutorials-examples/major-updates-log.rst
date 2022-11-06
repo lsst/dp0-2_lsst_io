@@ -18,10 +18,14 @@
 Log of Major Tutorial Updates
 #############################
 
-**Notebook tutorial histories.** 
+How to find version histories
+=============================
+
+Notebook tutorials
+------------------
 
 All Jupyter Notebook tutorial headers contain the date "last verified to run".
-If the date in the file you are using does not match the date shown in that file in `the ``prod`` branch of the tutorial-notebooks repository <https://github.com/rubin-dp0/tutorial-notebooks/tree/prod>`_, your version is out of date.
+If the date in the file you are using does not match the date shown in that file in `the "prod" branch of the tutorial-notebooks repository <https://github.com/rubin-dp0/tutorial-notebooks/tree/prod>`_, your version is out of date.
 Follow the instructions for what to do if notebooks do not automatically update in the :ref:`NB-Intro-Use-A-NB-tips`. 
 
 A full history for all tutorial notebooks can be accessed in GitHub via this `direct link to the commit log for the
@@ -31,7 +35,8 @@ The full history for any given tutorial notebook can be accessed via GitHub by g
 (e.g., the `introduction to DP0.2 notebook <https://github.com/rubin-dp0/tutorial-notebooks/blob/main/01_Introduction_to_DP02.ipynb>`_),
 and clicking on "history" (near upper-right).
 
-**Portal tutorial histories.**
+Portal tutorials
+----------------
 
 All Portal tutorials contain the date last verified to run near the top of their page.
 
@@ -40,8 +45,12 @@ The full history for any given Portal tutorial can be accessed via GitHub by goi
 (e.g., the `beginner Portal tutorial <https://github.com/lsst/dp0-2_lsst_io/blob/main/tutorials-examples/portal-beginner.rst>`_), 
 and clicking on "history" (near upper-right).
 
+
+Major Updates Log
+=================
+
 Oct 26 2022
-===========
+-----------
 
 Notebook 03a (image display) updated to replace use of ``objectTable`` via the butler with a TAP query.
 
@@ -51,13 +60,13 @@ Notebooks 09a and 09b (custom coadds) added.
 
 
 Oct 4 2022
-==========
+----------
 
 Notebook 08 (truth tables) updated to optimize TAP query.
 
 
 Sep 29 2022
-===========
+-----------
 
 Notebook 08 (truth tables) added.
 
@@ -74,12 +83,12 @@ For details about the permission change, see :ref:`NB-Intro-Use-Tutorial-NBs` an
 
 
 Aug 20 2022
-===========
+-----------
 
 Notebooks 03c (survey property maps) and 04b (intermediate butler queries) added.
 
 
 June 27 2022
-============
+------------
 
 All tutorials updated for the release of DP0.2.
