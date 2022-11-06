@@ -222,12 +222,18 @@ Suggested delegate activities
 **Learn to use the Rubin Science Platform.**
 All delegates are encouraged to use the documentation, instructions, and tutorials to learn how to use the RSP, and its various tools for accessing and analyzing LSST data.
 
+For example, read and follow the step-by-step introductions on how to use the the RSP's :ref:`Tools-RSP-Portal` or :ref:`Tools-RSP-Notebook`.
+Then, work your way through the :ref:`Tutorials-Examples-DP0-2-Tutorials`.
+Both the Portal and Notebook tutorials are numbered in increasing in difficulty; feel free to skip any that don't interest you.
+
 **Prepare to do science with the Data Previews.**
 In the coming years, *real commissioning data* from Rubin Observatory will be released as Data Preview 1 (DP1) and DP2.
 Use the simulated LSST-like data set of DP0 to prepare your custom analysis software in preparation for doing early science.
 
-Beyond these two main activities, all delegates are invited to take on an activity that will inform and improve development of the RSP development,
-and/or extend and enhance the benefits of DP0 within the science community beyond the limited number of DP0 participants that Rubin Observatory is able to support.
+Beyond these two main activities, all delegates are invited to take on additional activities that will
+inform and improve development of the RSP development,
+and/or extend and enhance the benefits of DP0 within the science community beyond the limited number
+of DP0 participants that Rubin Observatory is able to support.
 
 Delegate activities are envisioned to be simple and enjoyable.
 They are completely voluntary and will not be tracked.
@@ -270,7 +276,7 @@ All are welcome to volunteer to facilitate a breakout room or to give a presenta
 
 **Contribute tutorial notebooks.**
 All delegates are welcome to share their own Jupyter Notebooks using the `delegates' shared repo <https://github.com/rubin-dp0/delegate-contributions-dp02>`_.
-Step-by-step tutorials that use the Portal, TAP, or command-line are also welcome.
+Step-by-step tutorials that use the Portal, API, or command-line are also welcome.
 
 **Share your DP0-related work outside of DP0.**
 For example, give a seminar about Rubin Observatory and DP0 at your home institution, give a tutorial about your RSP/DP0 experience in your Science Collaboration, or publish a paper on your DP0-related work.
