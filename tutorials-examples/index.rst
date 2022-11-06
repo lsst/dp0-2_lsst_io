@@ -22,7 +22,7 @@ DP0.2 Tutorials
 
 These tutorials are for DP0 delegates using the Rubin Science Platform (RSP) deployed at the Interim Data Facility (IDF; the Google Cloud).
 
-Before following these tutorials, delegates should:
+**Delegates:** before following these tutorials, delegates should:
 
 | 1. have gotten their :ref:`Delegate-Homepage-RSP-Accounts` and be able to log in at `data.lsst.cloud <https://data.lsst.cloud/>`_,
 | 2. be familiar with this list of :doc:`/data-access-analysis-tools/rsp-warnings`,
@@ -39,7 +39,6 @@ A beginner-level overview for the Portal Aspect is provided in this :doc:`/data-
 More information can also be found in the `about firefly <https://data.lsst.cloud/portal/app/onlinehelp/>`_ page on the `Rubin Science Platform Documentation <https://data.lsst.cloud/docs>`_ page.
 
 The tutorials below are step-by-step demonstrations of how to use the Portal Aspect for science investigations with the DP0 data set.
-
 
 .. toctree::
     :titlesonly:
@@ -60,47 +59,30 @@ More information can also be found in the `Notebook Aspect documentation <https:
 
 All Jupyter Notebook tutorials are kept in the `tutorial-notebooks repository <https://github.com/rubin-dp0/tutorial-notebooks>`_
 of the ``rubin-dp0`` GitHub Organization.
-That repository's `README file <https://github.com/rubin-dp0/tutorial-notebooks/blob/main/README.md>`_ contains descriptions of the tutorials.
-
 The contents of that repository are made available (and automatically updated) in the folder ``notebooks/tutorial-notebooks`` 
 which appears in all users' home directories. 
 
-Delegates who are new to using Jupyter Notebooks may want to review :ref:`NB-Intro-Use-A-NB`, :ref:`NB-Intro-Use-Tutorial-NBs`,
-the :ref:`NB-Intro-Use-A-NB-faq`, and :ref:`NB-Intro-Use-A-NB-tips` available in the :ref:`Data-Access-Analysis-Tools-NB-Intro`.
+**List of Notebook tutorials:** 
+See the repository's `README file <https://github.com/rubin-dp0/tutorial-notebooks/blob/main/README.md>`_ for the most up-to-date
+list of available tutorials, with descriptions.
 
-.. list-table:: Jupyter Notebook tutorials
-   :header-rows: 1
-   :widths: 1 2
-   
-   * - Jupyter Notebook
-     - Brief Description
-   * - ``01`` Introduction to DP0.2
-     - Use the Jupyter Notebooks and Rubin python packages to access LSST data products.
-   * - ``02`` Catalog Queries with TAP
-     - Explore the DP0.2 catalogs via TAP and execute complex queries to retrieve data.
-   * - ``03a`` Image Display and Manipulation
-     - Learn how to display and manipulate images using the LSST Science Pipelines.
-   * - ``03b`` Image Display with Firefly
-     - Use the Firefly interactive interface for image data.
-   * - ``03c`` Survey Property Maps
-     - Use the tools to visualize full-area survey property maps.
-   * - ``04a`` Introduction to the Butler
-     - Use the Butler to query DP0 images and catalogs.
-   * - ``04b`` Intermediate Butler Queries
-     - Learn to discover data and apply query constraints with the Butler.
-   * - ``05`` Introduction to Source Detection
-     - Access, display, and manipulate images; detect, deblend, and measure sources; and extract, plot, and use object footprints.
-   * - ``06a`` Interactive Image Visualization
-     - Create interactive image visualizations with the HoloViews and Bokeh open-source python libraries.
-   * - ``06b`` Interactive Catalog Visualization
-     - Create interactive catalog visualizations for large datasets with HoloViews, Bokeh, and Datashader.
-   * - ``07a`` DiaObject Samples
-     - Use the DiaObject table parameters to identify a sample of time-variable objects of interest.
-   * - ``07b`` Variable Star Lightcurves 
-     - Use the DP0.2 catalogs to identify variable stars and plot their lightcurves.
-   * - ``08`` Truth Tables
-     - Explore, retrieve, and compare data from the truth and measurement tables.
-   * - ``09a`` Custom Coadd
-     - Create a custom "deepCoadd" using only a subset of the input visits.
-   * - ``09b`` Custom Coadd Sources
-     - Detect and measure sources in a custom coadded image.
+Delegates who are new to using Jupyter Notebooks may want to review :ref:`NB-Intro-Use-A-NB`, :ref:`NB-Intro-Use-Tutorial-NBs`,
+the :ref:`NB-Intro-Use-A-NB-faq`, and :ref:`NB-Intro-Use-A-NB-tips` available in the :doc:`/data-access-analysis-tools/nb-intro`.
+
+
+.. _DP0-2-Tutorials-Contributed:
+
+Contributed tutorials
+=====================
+
+Everyone is welcome to contribute tutorials or science demonstrations to the shared GitHub repository `delegate-contributions-dp02 <https://github.com/rubin-dp0/delegate-contributions-dp02>`_.
+The `README <https://github.com/rubin-dp0/delegate-contributions-dp02/blob/main/README.md>`_ file for that repo contains instructions
+and best practices for contributions.
+Contributions are stored in sub-directories by topic, such as "extendedness" or "photo-z". 
+View the readme files in each sub-directory for more information about its contents and who contributed them.
+
+Rubin staff do not apply any quality control reviews to the contributed content in
+the `delegate-contributions-dp02 <https://github.com/rubin-dp0/delegate-contributions-dp02>`_ repo.
+In contrast, the Portal and Notebook Aspect tutorials in the sections above are created by Rubin staff and adhere to
+the set of guidelines and best practices described in `RTN-045 <https://rtn-045.lsst.io/>`_.
+Anyone who wants to contribute to these formal tutorial sets should get in touch with the Rubin Community Engagement team (Melissa Graham).
