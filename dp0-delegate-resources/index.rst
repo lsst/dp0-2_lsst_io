@@ -35,7 +35,7 @@ Delegates’ DP0-related activities are supported with resources and infrastruct
 |   3. Set up your account in the :ref:`Delegate-Homepage-Forum`.
 |   4. Watch the recorded :ref:`Delegate-Homepage-Kickoff` (13 minutes).
 |   5. Follow step-by-step introductions to the RSP's :ref:`Tools-RSP-Portal` or :ref:`Tools-RSP-Notebook`.
-|   6. Work at your own pace through the :doc:`tutorials-examples/index.rst`.
+|   6. Work at your own pace through the :doc:`/tutorials-examples/index`.
 |   7. Review your options for :ref:`Delegate-Homepage-Getting-Support`.
 |   8. *Optional:* attend :ref:`Delegate-Homepage-DP0-Virtual-Seminars` or watch recordings where available.
 |   9. *Optional:* consider the :ref:`Delegate-Homepage-Delegate-Activities`.
@@ -223,7 +223,7 @@ Suggested delegate activities
 All delegates are encouraged to use the documentation, instructions, and tutorials to learn how to use the RSP, and its various tools for accessing and analyzing LSST data.
 
 For example, read and follow the step-by-step introductions on how to use the the RSP's :ref:`Tools-RSP-Portal` or :ref:`Tools-RSP-Notebook`.
-Then, work your way through the :doc:`tutorials-examples/index.rst`.
+Then, work your way through the :doc:`/tutorials-examples/index`.
 Both the Portal and Notebook tutorials are numbered in increasing in difficulty; feel free to skip any that don't interest you.
 
 **Prepare to do science with the Data Previews.**
