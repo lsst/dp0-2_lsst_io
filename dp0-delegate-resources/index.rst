@@ -110,22 +110,23 @@ The `Rubin Community Forum <https://community.lsst.org>`__ is the central hub fo
 It is the best place to post your questions about anything and everything related to DP0.
 People new to the Rubin Community Forum might appreciate `this video demonstrating how to navigate and post topics to the forum <https://www.youtube.com/watch?v=d_Z5xmkR4P4&list=PLPINAcUH0dXZSx2aY6wTIjLCWiexs3dZR&index=10>`_.
 
+Participating in the Rubin Community Forum is an integral part of the :ref:`Delegate-Homepage-Delegate-Activities`,
+such as sharing your DP0-related results with Rubin staff and other delegates,
+and also of :ref:`Delegate-Homepage-Getting-Support` for your DP0-related activities.
+
 **Accounts:**
 Go to `community.lsst.org <https://community.lsst.org>`_ and use the "Sign Up" button at upper-right to create an account.
 
-**Join the DP0 delegates group:**
+**Join the DP0 delegates group to stay informed:**
 Go to `community.lsst.org/groups <https://community.lsst.org/groups>`_ and join "DP0 Delegates".
-This will ensure you have access to the private "Support - DP0 RSP Service Issues" subcategory.
-DP0-related news and events are shared as direct messages to this group.
+DP0-related news and events are shared as direct messages via the forum to this group.
 If you want email notifications, set your Community Forum user profile preference for "Email me when I am sent a personal message" to "Always".
+Joining this group also ensures that you have access to the "Support - DP0 RSP Service Issues" subcategory.
 
 **Find DP0-related content in the Forum.**
-
 The `Support - Data Preview 0 <https://community.lsst.org/c/support/dp0>`_ category is for any and all questions and discussions related to DP0.
 E.g., how to use the RSP's aspects for science; the contents of the DC2 data set; delegate activities; sharing DP0-related notebooks, plots, or results.
-
 The "Support - DP0 RSP Service Issues" is a private subcategory for technical Q&A and discussion about potential bugs, service outages, etc.
-
 It is also possible to view a list of all `topics tagged with #dp0 <https://community.lsst.org/tag/dp0>`_ across all categories.
 
 
@@ -235,7 +236,8 @@ Both the Portal and Notebook tutorials are numbered in increasing in difficulty;
 In the coming years, *real commissioning data* will be released as Data Preview 1 (DP1) and DP2,
 as described in the `plans for early science with Rubin Observatory <https://lsst.org/scientists/early-science>`_.
 
-Use the simulated LSST-like data set of DP0 to prepare your custom analysis software now, and be ready for early science with future data previews.
+For example, use the simulated LSST-like data set of DP0 to generate and test your custom analysis software now,
+so that you're more prepared for early science with future data previews.
 
 Beyond these two main activities, all delegates are invited to take on additional activities that will **inform and improve RSP development**,
 and/or **extend and enhance the benefits of DP0** within the science community beyond the limited number
@@ -256,7 +258,6 @@ Help with RSP development by suggesting new RSP features via `GitHub issues <htt
 
 **Share your experiences with Rubin Observatory staff.**
 Post about your DP0 investigations in the `Data Preview 0 Community Forum category <https://community.lsst.org/c/support/dp0>`_, so Rubin Observatory staff can see how users are doing science with the RSP.
-
 
 Extend the benefits of DP0 in the science community
 ---------------------------------------------------
@@ -295,20 +296,24 @@ Hearing about issues and receiving feedback from delegates is a key component of
 Scientific support via the Community Forum
 ------------------------------------------
 
-The `Data Preview 0 Community Forum category <https://community.lsst.org/c/support/dp0>`_ is the best place for DP0 delegates to post topics related to scientific support.
+The `Data Preview 0 Community Forum category <https://community.lsst.org/c/support/dp0>`_ is the best place for DP0 delegates
+to post topics related to scientific support.
 
-Scientific support includes questions about the DC2 simulated data set, the DP0 data products, and/or the application of the LSST Science Pipelines to the DP0 data set, as well as general discussion about DP0-related scientific analyses, or DP0 policies and guidelines.
+Scientific support includes questions about the DC2 simulated data set, the DP0 data products, and/or the application of the
+LSST Science Pipelines to the DP0 data set, as well as general discussion about DP0-related scientific analyses, or DP0 policies and guidelines.
 
-This subcategory will be monitored by the Rubin Observatory `Community Engagement Team (CET) <https://community.lsst.org/t/about-the-community-engagement-team/4526>`_.
+This subcategory is monitored by the Rubin Observatory `Community Engagement Team (CET) <https://community.lsst.org/t/about-the-community-engagement-team/4526>`_.
 DP0 delegates are especially encouraged to post new topics and reply to others' posts in this subcategory.
 
 Technical assistance via GitHub issues
 --------------------------------------
 
-Bug reports, persistent technical issues, and requests for assistance from Rubin Observatory staff should be submitted by DP0 delegates as GitHub issues in the `rubin-dp0 GitHub Organization's Support repository <https://github.com/rubin-dp0/Support>`_.
+Bug reports, persistent technical issues, and requests for assistance from Rubin Observatory staff can be submitted by DP0 delegates
+as GitHub issues in the `rubin-dp0 GitHub Organization's Support repository <https://github.com/rubin-dp0/Support>`_.
 Requests for new features or for global installations of commonly used software packages are also welcome via GitHub issues.
 
-In the horizontal menu bar at the top of that page, click on the “Issues” option (with the circled dot icon), then choose the green “New Issue” button at right.
+In the horizontal menu bar at the top of that page, click on the “Issues” option (with the circled dot icon),
+then choose the green “New Issue” button at right.
 Next to either “Bug report” or "Feature request" choose “Get started” (as appropriate for your case), and fill in the title and contents of your issue.
 In the right side-menu, do adjust the labels as appropriate, but leave the other options.
 Click “Submit new issue” when you’re ready.
