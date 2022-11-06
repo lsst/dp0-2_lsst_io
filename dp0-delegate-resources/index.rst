@@ -34,10 +34,10 @@ Delegates’ DP0-related activities are supported with resources and infrastruct
 |   2. Get one of the :ref:`Delegate-Homepage-RSP-Accounts` for DP0 delegates.
 |   3. Set up your account in the :ref:`Delegate-Homepage-Forum`.
 |   4. Watch the recorded :ref:`Delegate-Homepage-Kickoff` (13 minutes).
-|   5. Follow step-by-step instructions for using the RSP's :ref:`Tools-RSP-Portal` or :ref:`Tools-RSP-Notebook`.
+|   5. Follow step-by-step introductions to the RSP's :ref:`Tools-RSP-Portal` or :ref:`Tools-RSP-Notebook`.
 |   6. Work at your own pace through the :ref:`Tutorials-Examples-DP0-2-Tutorials`.
 |   7. Review your options for :ref:`Delegate-Homepage-Getting-Support`.
-|   8. *Optional:* attend the :ref:`Delegate-Homepage-DP0-Virtual-Seminars` or watch recordings where available.
+|   8. *Optional:* attend :ref:`Delegate-Homepage-DP0-Virtual-Seminars` or watch recordings where available.
 |   9. *Optional:* consider the :ref:`Delegate-Homepage-Delegate-Activities`.
 
 
@@ -108,16 +108,20 @@ People new to the Rubin Community Forum might appreciate `this video demonstrati
 **Accounts:**
 Go to `community.lsst.org <https://community.lsst.org>`_ and use the "Sign Up" button at upper-right to create an account.
 
-**Join the DP0 Delegates Group:**
+**Join the DP0 delegates group:**
 Go to `community.lsst.org/groups <https://community.lsst.org/groups>`_ and join "DP0 Delegates".
 This will ensure you have access to the private "Support - DP0 RSP Service Issues" subcategory.
 DP0-related news and events are shared as direct messages to this group.
 If you want email notifications, set your Community Forum user profile preference for "Email me when I am sent a personal message" to "Always".
 
-| **Find DP0-Related Content and Discussions:**
-| - `Data Preview 0 Community Forum category <https://community.lsst.org/c/support/dp0>`_: for all questions and discussions related to DP0. For example, use of the RSP's aspects for science, contents of the DC2 data set, delegate activities, brainstorm new investigations, show-and-tell DP0-related results, etc.
-| - "Support - DP0 RSP Service Issues": a private subcategory for technical Q&A and discussion about potential bugs, service outages, etc.
-| - `Topics tagged with #dp0 <https://community.lsst.org/tag/dp0>`_ across all categories.
+**Find DP0-related content in the Forum.**
+
+The `Support - Data Preview 0 <https://community.lsst.org/c/support/dp0>`_ category is for any and all questions and discussions related to DP0.
+E.g., how to use the RSP's aspects for science; the contents of the DC2 data set; delegate activities; sharing DP0-related notebooks, plots, or results.
+
+The "Support - DP0 RSP Service Issues" is a private subcategory for technical Q&A and discussion about potential bugs, service outages, etc.
+
+It is also possible to view a list of all `topics tagged with #dp0 <https://community.lsst.org/tag/dp0>`_ across all categories.
 
 
 .. _Delegate-Homepage-Kickoff:
