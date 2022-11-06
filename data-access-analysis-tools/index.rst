@@ -27,20 +27,6 @@ Throughout DP0 the RSP will be in active development by Rubin Observatory staff,
 See `Rubin Science Platform Documentation <https://data.lsst.cloud/docs>`_ page for additional information.
 
 
-.. _Data-Access-Analysis-Tools-Warnings:
-
-RSP usage: risks and responsibilities
-=====================================
-
-**All RSP users are responsible for being aware of the risks inherent in using software in active development, and must familiarize themselves with these risks.**
-
-.. toctree::
-    :maxdepth: 2
-    :glob:
-
-    rsp-warnings
-
-
 .. _Data-Access-Analysis-Tools-RSP:
 
 Rubin Science Platform (RSP)
@@ -58,6 +44,21 @@ During Rubin Observatory Operations, the RSP will feature additional tools in th
 
     Screenshot of the `data.lsst.cloud <https://data.lsst.cloud/>`_ dashboard.
     Enter an aspect using the top menu bar or by clicking on the icon.
+
+
+.. _Data-Access-Analysis-Tools-Warnings:
+
+RSP usage: risks and responsibilities
+-------------------------------------
+
+**All RSP users are responsible for being aware of the risks inherent in using software in active development, and must familiarize themselves with these risks.**
+
+.. toctree::
+    :maxdepth: 2
+    :glob:
+
+    rsp-warnings
+
 
 .. _Tools-RSP-Portal:
 
