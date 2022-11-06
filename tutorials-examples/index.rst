@@ -54,20 +54,18 @@ The tutorials below are step-by-step demonstrations of how to use the Portal Asp
 Notebook tutorials
 ==================
 
-A beginner-level overview for the Notebook Aspect is provided in this :doc:`/data-access-analysis-tools/nb-intro`.
+A beginner-level overview for the Notebook Aspect is provided in this :doc:`/data-access-analysis-tools/nb-intro`,
+along with :ref:`NB-Intro-Use-A-NB-faq` and :ref:`NB-Intro-Use-A-NB-tips`.
 More information can also be found in the `Notebook Aspect documentation <https://nb.lsst.io/>`_.
 
 All Jupyter Notebook tutorials are kept in the `tutorial-notebooks repository <https://github.com/rubin-dp0/tutorial-notebooks>`_
 of the ``rubin-dp0`` GitHub Organization.
-The contents of that repository are made available (and automatically updated) in the folder ``notebooks/tutorial-notebooks`` 
+The contents of the ``prod`` branch of that repository are made available (and automatically updated) in the folder ``notebooks/tutorial-notebooks`` 
 which appears in all users' home directories. 
 
 **List of Notebook tutorials:** 
 See the repository's `README file <https://github.com/rubin-dp0/tutorial-notebooks/blob/main/README.md>`_ for the most up-to-date
-list of available tutorials, with descriptions.
-
-Delegates who are new to using Jupyter Notebooks may want to review :ref:`NB-Intro-Use-A-NB`, :ref:`NB-Intro-Use-Tutorial-NBs`,
-the :ref:`NB-Intro-Use-A-NB-faq`, and :ref:`NB-Intro-Use-A-NB-tips` available in the :doc:`/data-access-analysis-tools/nb-intro`.
+list of available tutorials with descriptions.
 
 
 .. _DP0-2-Tutorials-Contributed:
@@ -79,7 +77,7 @@ Everyone is welcome to contribute tutorials or science demonstrations to the sha
 The `README <https://github.com/rubin-dp0/delegate-contributions-dp02/blob/main/README.md>`_ file for that repo contains instructions
 and best practices for contributions.
 Contributions are stored in sub-directories by topic, such as "extendedness" or "photo-z". 
-View the readme files in each sub-directory for more information about its contents and who contributed them.
+View the readme files in each sub-directory for more information about the contents and who contributed them.
 
 Rubin staff do not apply any quality control reviews to the contributed content in
 the `delegate-contributions-dp02 <https://github.com/rubin-dp0/delegate-contributions-dp02>`_ repo.
