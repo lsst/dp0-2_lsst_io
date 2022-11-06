@@ -227,19 +227,14 @@ Then, work your way through the :doc:`tutorials-examples/index.rst`.
 Both the Portal and Notebook tutorials are numbered in increasing in difficulty; feel free to skip any that don't interest you.
 
 **Prepare to do science with the Data Previews.**
-In the coming years, *real commissioning data* from Rubin Observatory will be released as Data Preview 1 (DP1) and DP2.
-Use the simulated LSST-like data set of DP0 to prepare your custom analysis software in preparation for doing early science.
+In the coming years, *real commissioning data* will be released as Data Preview 1 (DP1) and DP2,
+as described in the `plans for early science with Rubin Observatory <https://lsst.org/scientists/early-science>`_.
 
-Beyond these two main activities, all delegates are invited to take on additional activities that will
-inform and improve development of the RSP development,
-and/or extend and enhance the benefits of DP0 within the science community beyond the limited number
+Use the simulated LSST-like data set of DP0 to prepare your custom analysis software now, and be ready for early science with future data previews.
+
+Beyond these two main activities, all delegates are invited to take on additional activities that will **inform and improve RSP development**,
+and/or **extend and enhance the benefits of DP0** within the science community beyond the limited number
 of DP0 participants that Rubin Observatory is able to support.
-
-Delegate activities are envisioned to be simple and enjoyable.
-They are completely voluntary and will not be tracked.
-Group work is encouraged, as are delegate-designed activities.
-Have fun!
-
 
 Inform and improve the RSP
 --------------------------
