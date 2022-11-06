@@ -24,7 +24,7 @@ These tutorials are for DP0 delegates using the Rubin Science Platform (RSP) dep
 
 Before following these tutorials, delegates should:
 
-| 1. have gotten their :ref:`Delegate-Homepage-RSP-Accounts` and be able to log in at `data.lsst.cloud <data.lsst.cloud>`_,
+| 1. have gotten their :ref:`Delegate-Homepage-RSP-Accounts` and be able to log in at `data.lsst.cloud <https://data.lsst.cloud/>`_,
 | 2. be familiar with this list of :doc:`/data-access-analysis-tools/rsp-warnings`,
 | 3. reviewed the basic introductions to the RSP's :ref:`Tools-RSP-Portal` or :ref:`Tools-RSP-Notebook`, and
 | 4. know their options for :ref:`Delegate-Homepage-Getting-Support`.
