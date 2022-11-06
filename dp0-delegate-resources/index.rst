@@ -29,16 +29,21 @@ as learners, testers, and providers of feedback, and of sharing the benefits of 
 communities as teachers and colleagues.
 Delegates’ DP0-related activities are supported with resources and infrastructure described on this page.
 
-| **Get Yourself Started with DP0**
-|   1. Review the :ref:`Delegate-Homepage-Guidelines-Expectations`.
-|   2. Get one of the :ref:`Delegate-Homepage-RSP-Accounts` for DP0 delegates.
-|   3. Set up your account in the :ref:`Delegate-Homepage-Forum`.
-|   4. Watch the recorded :ref:`Delegate-Homepage-Kickoff` (13 minutes).
-|   5. Follow step-by-step introductions to the RSP's :ref:`Tools-RSP-Portal` or :ref:`Tools-RSP-Notebook`.
-|   6. Work at your own pace through the :doc:`/tutorials-examples/index`.
-|   7. Review your options for :ref:`Delegate-Homepage-Getting-Support`.
-|   8. *Optional:* attend :ref:`Delegate-Homepage-DP0-Virtual-Seminars` or watch recordings where available.
-|   9. *Optional:* consider the :ref:`Delegate-Homepage-Delegate-Activities`.
+
+.. _Delegate-Homepage-Getting-Started-Checklist:
+
+Getting started with DP0 checklist
+==================================
+
+| 1. Review the :ref:`Delegate-Homepage-Guidelines-Expectations`.
+| 2. Get one of the :ref:`Delegate-Homepage-RSP-Accounts` for DP0 delegates.
+| 3. Set up your account in the :ref:`Delegate-Homepage-Forum`.
+| 4. Watch the recorded :ref:`Delegate-Homepage-Kickoff` (13 minutes).
+| 5. Follow step-by-step introductions to the RSP's :ref:`Tools-RSP-Portal` or :ref:`Tools-RSP-Notebook`.
+| 6. Work at your own pace through the :doc:`/tutorials-examples/index`.
+| 7. Review your options for :ref:`Delegate-Homepage-Getting-Support`.
+| 8. *Optional:* attend :ref:`Delegate-Homepage-DP0-Virtual-Seminars` or watch recordings where available.
+| 9. *Optional:* consider the :ref:`Delegate-Homepage-Delegate-Activities`.
 
 
 .. _Delegate-Homepage-Guidelines-Expectations:
