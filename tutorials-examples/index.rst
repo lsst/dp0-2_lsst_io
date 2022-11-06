@@ -68,6 +68,10 @@ which appears in all users' home directories.
 Delegates who are new to using Jupyter Notebooks may want to review :ref:`NB-Intro-Use-A-NB`, :ref:`NB-Intro-Use-Tutorial-NBs`,
 the :ref:`NB-Intro-Use-A-NB-faq`, and :ref:`NB-Intro-Use-A-NB-tips` available in the :ref:`Data-Access-Analysis-Tools-NB-Intro`.
 
+.. list-table:: Jupyter Notebook tutorials
+   :header-rows: 1
+   :widths: 1 2
+   
    * - Jupyter Notebook
      - Brief Description
    * - 01. Introduction to DP0.2
