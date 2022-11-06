@@ -18,6 +18,12 @@
 Log of Major Tutorial Updates
 #############################
 
+A full history for all tutorial notebooks can be accessed in GitHub via this `direct link to the commit log for the
+tutorial-notebooks repository <https://github.com/rubin-dp0/tutorial-notebooks/commits/main>`_.
+
+The full history for any given tutorial notebook can be accessed via GitHub by going to the notebook of interest
+(e.g., the `introduction to DP0.2 notebook <https://github.com/rubin-dp0/tutorial-notebooks/blob/main/01_Introduction_to_DP02.ipynb>`_),
+and clicking on "history" (near upper-right).
 
 Oct 26 2022
 ===========
@@ -40,11 +46,16 @@ Sep 29 2022
 
 Notebook 08 (truth tables) added.
 
-The recommended image of the RSP was bumped to version Weekly 40.
+The ``ForcedSourceOnDiaObject``, ``TruthSummary``, and ``MatchesTruth`` tables were released.
+
+The recommended image of the RSP was bumped to version Weekly 40, and all notebooks were updated accordingly.
 
 Permissions for users' "notebooks/tutorial-notebooks" directory changed to read-only.
-For details, see :ref:`NB-Intro-Use-Tutorial-NBs` and :ref:`NB-Intro-Use-A-NB-faq-readonly`,
-or `this Forum topic on the permission changes <https://community.lsst.org/t/7087>`_.
+For details about the permission change, see :ref:`NB-Intro-Use-Tutorial-NBs` and :ref:`NB-Intro-Use-A-NB-faq-readonly`.
+
+| Relevant announcements in the Forum:
+|  - `Truth-Match and ForcedSourceOnDiaObject tables are available <https://community.lsst.org/t/7088>`_ 
+|  - `Permission changes for users’ “notebooks/tutorial-notebooks” directory <https://community.lsst.org/t/7087>`_
 
 
 Aug 20 2022
