@@ -91,7 +91,6 @@ Tutorials include hands-on executable tutorials and demonstrations based on scie
 .. toctree::
     :maxdepth: 2
     :glob:
-    :titlesonly:
 
     tutorials-examples/index
 
