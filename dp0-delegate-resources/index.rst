@@ -22,17 +22,23 @@ DP0 Delegate Homepage
 
 This page includes the guidelines, resources, and activities for DP0 Delegates.
 
-**DP0 delegate** is the term for the 600 scientists and students who will have accounts in the Rubin Science Platform (RSP) at the Interim Data Facility (IDF; the Google Cloud) during Data Preview 0 (DP0).
-This term has been adopted to reflect DP0 participants’ important roles of representing the broad science community as learners, testers, and providers of feedback, and of sharing the benefits of their DP0 participation with their communities as teachers and colleagues.
-Delegates’ DP0-related activities will be supported with resources and infrastructure described on this page.
+**DP0 delegate** is the term for the 600 scientists and students who have accounts in the Rubin Science Platform (RSP)
+at the Interim Data Facility (IDF; the Google Cloud) during Data Preview 0 (DP0).
+This term has been adopted to reflect DP0 participants’ important roles of representing the broad science community
+as learners, testers, and providers of feedback, and of sharing the benefits of their DP0 participation with their
+communities as teachers and colleagues.
+Delegates’ DP0-related activities are supported with resources and infrastructure described on this page.
 
-| **Delegate Checklist**
-|   1. Review the :ref:`Delegate-Homepage-Guidelines-Expectations` for DP0 participation.
+| **Get Yourself Started with DP0**
+|   1. Review the :ref:`Delegate-Homepage-Guidelines-Expectations`.
 |   2. Get one of the :ref:`Delegate-Homepage-RSP-Accounts` for DP0 delegates.
 |   3. Set up your account in the :ref:`Delegate-Homepage-Forum`.
-|   4. Attend one of the :ref:`Delegate-Homepage-Kickoff` (or watch a recording).
-|   5. Consider attending the :ref:`Delegate-Homepage-DP0-Virtual-Seminars` (optional).
-|   6. Learn about the :ref:`Delegate-Homepage-Delegate-Activities` and :ref:`Delegate-Homepage-Getting-Support` for DP0.
+|   4. Watch the recorded :ref:`Delegate-Homepage-Kickoff` (13 minutes).
+|   5. Follow step-by-step instructions for using the RSP's :ref:`Tools-RSP-Portal` or :ref:`Tools-RSP-Notebook`.
+|   6. Work at your own pace through the :ref:`Tutorials-Examples-DP0-2-Tutorials`.
+|   7. Review your options for :ref:`Delegate-Homepage-Getting-Support`.
+|   8. *Optional:* attend the :ref:`Delegate-Homepage-DP0-Virtual-Seminars` or watch recordings where available.
+|   9. *Optional:* consider the :ref:`Delegate-Homepage-Delegate-Activities`.
 
 
 .. _Delegate-Homepage-Guidelines-Expectations:
@@ -40,14 +46,17 @@ Delegates’ DP0-related activities will be supported with resources and infrast
 Guidelines and expectations
 ===========================
 
-**Rubin data rights** are required in order to hold an account in the Rubin Science Platform.
-All delegates should be aware of their data rights status (please refer to the `Rubin Observatory Data Policy <https://docushare.lsst.org/docushare/dsweb/Get/RDO-013>`_).
-
-**Understand the** :doc:`/data-access-analysis-tools/rsp-warnings` **of using the DP0 RSP on a shared-risk basis**.
+**Understand the** :ref:`Data-Access-Analysis-Tools-RSP-Warnings` **regarding using the DP0 RSP on a shared-risk basis**.
 
 **Abide by the** :ref:`Delegate-Homepage-Code-of-Conduct`.
 
 **Adhere to the** :ref:`Delegate-Homepage-PubPol`.
+
+**Rubin data rights** are required in order to hold an account in the Rubin Science Platform.
+All scientists and students affiliated with an institution in the US and Chile have data rights,
+as well as scientists and students who are named as data rights holders by an International In-kind Contribution Program.
+For more information about data rights, please refer to the
+`Rubin Observatory Data Policy <https://docushare.lsst.org/docushare/dsweb/Get/RDO-013>`_.
 
 | **Use your RSP account!**
 | If you're not sure what to do, choose from one of our :ref:`Delegate-Homepage-Delegate-Activities`.
@@ -58,10 +67,17 @@ All delegates should be aware of their data rights status (please refer to the `
 Rubin Science Platform accounts
 ===============================
 
-**Activation:**
+Anyone with Rubin data rights may `submit a request to participate in DP0 <https://forms.gle/hyZuXmc9S2ssTdW16>`_
+in order to obtain an Rubin Science Platform account.
+
+**Authorization:**
 Delegates will be contacted by Rubin Observatory staff to provide their `GitHub <https://www.github.com>`__ username.
-All delegates will be invited to join the `rubin-dp0 GitHub Organization <https://github.com/rubin-dp0>`_ and its Delegates team, and must accept this invitation in order to log into the RSP at the Interim Data Facility (IDF; the Google Cloud).
-With a browser that is logged in to GitHub, navigate to `data.lsst.cloud <https://data.lsst.cloud>`_ and choose "Log in" at upper-right.
+All delegates will be invited to join the `rubin-dp0 GitHub Organization <https://github.com/rubin-dp0>`_ and its Delegates team,
+and must accept this invitation in order be authorized to log into the RSP at the Interim Data Facility (IDF; the Google Cloud).
+
+**Log in:**
+With a browser that is logged in to GitHub, navigate to `data.lsst.cloud <https://data.lsst.cloud>`_ and choose "Log in" at upper-right,
+or choose to enter either the Portal or Notebook Aspect.
 A pop-up window will ask to "Authorize Rubin Science Platform IDF Production Environment".
 Click the green button that says "Authorize lsst-sqre".
 Note that this last authorization step will need to be performed after every logout.
@@ -106,8 +122,8 @@ If you want email notifications, set your Community Forum user profile preferenc
 
 .. _Delegate-Homepage-Kickoff:
 
-Kick-off info sessions for new delegates
-========================================
+Kick-off info session
+=====================
 
 All **new** delegates must review the recording if they did not attend a live session.
 
