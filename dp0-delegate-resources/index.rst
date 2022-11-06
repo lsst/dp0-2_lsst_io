@@ -51,7 +51,7 @@ Getting started with DP0 checklist
 Guidelines and expectations
 ===========================
 
-**Understand the** :ref:`Data-Access-Analysis-Tools-RSP-Warnings` **regarding using the DP0 RSP on a shared-risk basis**.
+**Understand the** :doc:`/data-access-analysis-tools/rsp-warnings` **regarding using the DP0 RSP on a shared-risk basis**.
 
 **Abide by the** :ref:`Delegate-Homepage-Code-of-Conduct`.
 
@@ -107,12 +107,12 @@ Rubin Community Forum
 =====================
 
 The `Rubin Community Forum <https://community.lsst.org>`__ is the central hub for all virtual discussions and support.
-It is the best place to post your questions about anything and everything related to DP0.
+It is the best place to post questions about anything and everything related to DP0.
 People new to the Rubin Community Forum might appreciate `this video demonstrating how to navigate and post topics to the forum <https://www.youtube.com/watch?v=d_Z5xmkR4P4&list=PLPINAcUH0dXZSx2aY6wTIjLCWiexs3dZR&index=10>`_.
 
 Participating in the Rubin Community Forum is an integral part of the :ref:`Delegate-Homepage-Delegate-Activities`,
-such as sharing your DP0-related results with Rubin staff and other delegates,
-and also of :ref:`Delegate-Homepage-Getting-Support` for your DP0-related activities.
+such as sharing DP0-related results with Rubin staff and other delegates,
+and also of :ref:`Delegate-Homepage-Getting-Support` for DP0-related activities.
 
 **Accounts:**
 Go to `community.lsst.org <https://community.lsst.org>`_ and use the "Sign Up" button at upper-right to create an account.
@@ -120,10 +120,10 @@ Go to `community.lsst.org <https://community.lsst.org>`_ and use the "Sign Up" b
 **Join the DP0 delegates group to stay informed:**
 Go to `community.lsst.org/groups <https://community.lsst.org/groups>`_ and join "DP0 Delegates".
 DP0-related news and events are shared as direct messages via the forum to this group.
-If you want email notifications, set your Community Forum user profile preference for "Email me when I am sent a personal message" to "Always".
+To recieve email notifications, set your Community Forum user profile preference for "Email me when I am sent a personal message" to "Always".
 Joining this group also ensures that you have access to the "Support - DP0 RSP Service Issues" subcategory.
 
-**Find DP0-related content in the Forum.**
+**Find DP0-related content in the Forum:**
 The `Support - Data Preview 0 <https://community.lsst.org/c/support/dp0>`_ category is for any and all questions and discussions related to DP0.
 E.g., how to use the RSP's aspects for science; the contents of the DC2 data set; delegate activities; sharing DP0-related notebooks, plots, or results.
 The "Support - DP0 RSP Service Issues" is a private subcategory for technical Q&A and discussion about potential bugs, service outages, etc.
@@ -229,8 +229,8 @@ Suggested delegate activities
 All delegates are encouraged to use the documentation, instructions, and tutorials to learn how to use the RSP, and its various tools for accessing and analyzing LSST data.
 
 For example, read and follow the step-by-step introductions on how to use the the RSP's :ref:`Tools-RSP-Portal` or :ref:`Tools-RSP-Notebook`.
-Then, work your way through the :doc:`/tutorials-examples/index`.
-Both the Portal and Notebook tutorials are numbered in increasing in difficulty; feel free to skip any that don't interest you.
+Then, work through the :doc:`/tutorials-examples/index`.
+Both the Portal and Notebook tutorials are numbered in increasing in difficulty.
 
 **Prepare to do science with the Data Previews.**
 In the coming years, *real commissioning data* will be released as Data Preview 1 (DP1) and DP2,
