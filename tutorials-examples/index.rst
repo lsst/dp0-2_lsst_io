@@ -74,33 +74,33 @@ the :ref:`NB-Intro-Use-A-NB-faq`, and :ref:`NB-Intro-Use-A-NB-tips` available in
    
    * - Jupyter Notebook
      - Brief Description
-   * - (01) Introduction to DP0.2
+   * - ``01`` Introduction to DP0.2
      - Use the Jupyter Notebooks and Rubin python packages to access LSST data products.
-   * - (02) Catalog Queries with TAP
+   * - ``02`` Catalog Queries with TAP
      - Explore the DP0.2 catalogs via TAP and execute complex queries to retrieve data.
-   * - (03a) Image Display and Manipulation
+   * - ``03a`` Image Display and Manipulation
      - Learn how to display and manipulate images using the LSST Science Pipelines.
-   * - (03b) Image Display with Firefly
+   * - ``03b`` Image Display with Firefly
      - Use the Firefly interactive interface for image data.
-   * - (03c) Survey Property Maps
+   * - ``03c`` Survey Property Maps
      - Use the tools to visualize full-area survey property maps.
-   * - (04a) Introduction to the Butler
+   * - ``04a`` Introduction to the Butler
      - Use the Butler to query DP0 images and catalogs.
-   * - (04b) Intermediate Butler Queries
+   * - ``04b`` Intermediate Butler Queries
      - Learn to discover data and apply query constraints with the Butler.
-   * - (05) Introduction to Source Detection
+   * - ``05`` Introduction to Source Detection
      - Access, display, and manipulate images; detect, deblend, and measure sources; and extract, plot, and use object footprints.
-   * - (06a) Interactive Image Visualization
+   * - ``06a`` Interactive Image Visualization
      - Create interactive image visualizations with the HoloViews and Bokeh open-source python libraries.
-   * - (06b) Interactive Catalog Visualization
+   * - ``06b`` Interactive Catalog Visualization
      - Create interactive catalog visualizations for large datasets with HoloViews, Bokeh, and Datashader.
-   * - (07a) DiaObject Samples
+   * - ``07a`` DiaObject Samples
      - Use the DiaObject table parameters to identify a sample of time-variable objects of interest.
-   * - (07b) Variable Star Lightcurves 
+   * - ``07b`` Variable Star Lightcurves 
      - Use the DP0.2 catalogs to identify variable stars and plot their lightcurves.
-   * - (08) Truth Tables
+   * - ``08`` Truth Tables
      - Explore, retrieve, and compare data from the truth and measurement tables.
-   * - (09a) Custom Coadd
+   * - ``09a`` Custom Coadd
      - Create a custom "deepCoadd" using only a subset of the input visits.
-   * - (09b) Custom Coadd Sources
+   * - ``09b`` Custom Coadd Sources
      - Detect and measure sources in a custom coadded image.
