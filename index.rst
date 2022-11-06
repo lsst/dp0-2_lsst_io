@@ -58,7 +58,7 @@ The data set used for DP0 is the 300 deg\ :sup:`2` of simulated, LSST-like image
 Dark Energy Science Collaboration (DESC) for their `Data Challenge 2 <https://arxiv.org/abs/2010.05926>`_ (DC2).
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
     :glob:
 
     data-products-dp0-2/index
@@ -74,7 +74,7 @@ Step-by-step instructions for RSP use are provided.
 All delegates should review the :ref:`Data-Access-Analysis-Tools-Warnings`.
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
     :glob:
 
     data-access-analysis-tools/index
@@ -91,7 +91,7 @@ Tutorials include hands-on executable tutorials and demonstrations based on scie
 .. Using reST syntax, the examples can be reproduced in other locations on this site by using the ``include`` directive.
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
     :glob:
     :titlesonly:
 
