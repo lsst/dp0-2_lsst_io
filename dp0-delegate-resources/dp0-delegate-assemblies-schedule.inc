@@ -58,7 +58,7 @@
      - `Survey Property Maps by Martín Rodríguez Monroy <https://community.lsst.org/t/summary-delegate-assembly-fri-oct-14/7172>`__
      - *breakouts*
    * - 2022-10-28
-     - Delegate Presenters: Decker French (25 min) & Brian Morsony (25 min)
+     - `Nuclear Transients by Decker French & Forced Photometry by Brian Morsony <https://community.lsst.org/t/summary-delegate-assembly-fri-oct-28/7194>`__
      - *breakouts*
    * - 2022-11-18
      - Delegate Presenter: Vincenzo Petrecca "Analysis of DIA sources" (50 min)
