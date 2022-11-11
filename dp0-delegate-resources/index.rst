@@ -22,17 +22,28 @@ DP0 Delegate Homepage
 
 This page includes the guidelines, resources, and activities for DP0 Delegates.
 
-**DP0 delegate** is the term for the 600 scientists and students who will have accounts in the Rubin Science Platform (RSP) at the Interim Data Facility (IDF; the Google Cloud) during Data Preview 0 (DP0).
-This term has been adopted to reflect DP0 participants’ important roles of representing the broad science community as learners, testers, and providers of feedback, and of sharing the benefits of their DP0 participation with their communities as teachers and colleagues.
-Delegates’ DP0-related activities will be supported with resources and infrastructure described on this page.
+**DP0 delegate** is the term for the 600 scientists and students who have accounts in the Rubin Science Platform (RSP)
+at the Interim Data Facility (IDF; the Google Cloud) during Data Preview 0 (DP0).
+This term has been adopted to reflect DP0 participants’ important roles of representing the broad science community
+as learners, testers, and providers of feedback, and of sharing the benefits of their DP0 participation with their
+communities as teachers and colleagues.
+Delegates’ DP0-related activities are supported with resources and infrastructure described on this page.
 
-| **Delegate Checklist**
-|   1. Review the :ref:`Delegate-Homepage-Guidelines-Expectations` for DP0 participation.
-|   2. Get one of the :ref:`Delegate-Homepage-RSP-Accounts` for DP0 delegates.
-|   3. Set up your account in the :ref:`Delegate-Homepage-Forum`.
-|   4. Attend one of the :ref:`Delegate-Homepage-Kickoff` (or watch a recording).
-|   5. Consider attending the :ref:`Delegate-Homepage-DP0-Virtual-Seminars` (optional).
-|   6. Learn about the :ref:`Delegate-Homepage-Delegate-Activities` and :ref:`Delegate-Homepage-Getting-Support` for DP0.
+
+.. _Delegate-Homepage-Getting-Started-Checklist:
+
+Getting started with DP0 checklist
+==================================
+
+| 1. Review the :ref:`Delegate-Homepage-Guidelines-Expectations`.
+| 2. Get one of the :ref:`Delegate-Homepage-RSP-Accounts` for DP0 delegates.
+| 3. Set up your account in the :ref:`Delegate-Homepage-Forum`.
+| 4. Watch the recorded :ref:`Delegate-Homepage-Kickoff` (13 minutes).
+| 5. Follow step-by-step introductions to the RSP's :ref:`Tools-RSP-Portal` or :ref:`Tools-RSP-Notebook`.
+| 6. Work at your own pace through the :doc:`/tutorials-examples/index`.
+| 7. Review your options for :ref:`Delegate-Homepage-Getting-Support`.
+| 8. *Optional:* attend :ref:`Delegate-Homepage-DP0-Virtual-Seminars` or watch recordings where available.
+| 9. *Optional:* consider the :ref:`Delegate-Homepage-Delegate-Activities`.
 
 
 .. _Delegate-Homepage-Guidelines-Expectations:
@@ -40,14 +51,17 @@ Delegates’ DP0-related activities will be supported with resources and infrast
 Guidelines and expectations
 ===========================
 
-**Rubin data rights** are required in order to hold an account in the Rubin Science Platform.
-All delegates should be aware of their data rights status (please refer to the `Rubin Observatory Data Policy <https://docushare.lsst.org/docushare/dsweb/Get/RDO-013>`_).
-
-**Understand the** :doc:`/data-access-analysis-tools/rsp-warnings` **of using the DP0 RSP on a shared-risk basis**.
+**Understand the** :doc:`/data-access-analysis-tools/rsp-warnings` **regarding using the DP0 RSP on a shared-risk basis**.
 
 **Abide by the** :ref:`Delegate-Homepage-Code-of-Conduct`.
 
 **Adhere to the** :ref:`Delegate-Homepage-PubPol`.
+
+**Rubin data rights** are required in order to hold an account in the Rubin Science Platform.
+All scientists and students affiliated with an institution in the US and Chile have data rights,
+as well as scientists and students who are named as data rights holders by an International In-kind Contribution Program.
+For more information about data rights, please refer to the
+`Rubin Observatory Data Policy <https://docushare.lsst.org/docushare/dsweb/Get/RDO-013>`_.
 
 | **Use your RSP account!**
 | If you're not sure what to do, choose from one of our :ref:`Delegate-Homepage-Delegate-Activities`.
@@ -58,10 +72,17 @@ All delegates should be aware of their data rights status (please refer to the `
 Rubin Science Platform accounts
 ===============================
 
-**Activation:**
+Anyone with Rubin data rights may `submit a request to participate in DP0 <https://forms.gle/hyZuXmc9S2ssTdW16>`_
+in order to obtain an Rubin Science Platform account.
+
+**Authorization:**
 Delegates will be contacted by Rubin Observatory staff to provide their `GitHub <https://www.github.com>`__ username.
-All delegates will be invited to join the `rubin-dp0 GitHub Organization <https://github.com/rubin-dp0>`_ and its Delegates team, and must accept this invitation in order to log into the RSP at the Interim Data Facility (IDF; the Google Cloud).
-With a browser that is logged in to GitHub, navigate to `data.lsst.cloud <https://data.lsst.cloud>`_ and choose "Log in" at upper-right.
+All delegates will be invited to join the `rubin-dp0 GitHub Organization <https://github.com/rubin-dp0>`_ and its Delegates team,
+and must accept this invitation in order be authorized to log into the RSP at the Interim Data Facility (IDF; the Google Cloud).
+
+**Log in:**
+With a browser that is logged in to GitHub, navigate to `data.lsst.cloud <https://data.lsst.cloud>`_ and choose "Log in" at upper-right,
+or choose to enter either the Portal or Notebook Aspect.
 A pop-up window will ask to "Authorize Rubin Science Platform IDF Production Environment".
 Click the green button that says "Authorize lsst-sqre".
 Note that this last authorization step will need to be performed after every logout.
@@ -86,28 +107,33 @@ Rubin Community Forum
 =====================
 
 The `Rubin Community Forum <https://community.lsst.org>`__ is the central hub for all virtual discussions and support.
-It is the best place to post your questions about anything and everything related to DP0.
+It is the best place to post questions about anything and everything related to DP0.
 People new to the Rubin Community Forum might appreciate `this video demonstrating how to navigate and post topics to the forum <https://www.youtube.com/watch?v=d_Z5xmkR4P4&list=PLPINAcUH0dXZSx2aY6wTIjLCWiexs3dZR&index=10>`_.
+
+Participating in the Rubin Community Forum is an integral part of the :ref:`Delegate-Homepage-Delegate-Activities`,
+such as sharing DP0-related results with Rubin staff and other delegates,
+and also of :ref:`Delegate-Homepage-Getting-Support` for DP0-related activities.
 
 **Accounts:**
 Go to `community.lsst.org <https://community.lsst.org>`_ and use the "Sign Up" button at upper-right to create an account.
 
-**Join the DP0 Delegates Group:**
+**Join the DP0 delegates group to stay informed:**
 Go to `community.lsst.org/groups <https://community.lsst.org/groups>`_ and join "DP0 Delegates".
-This will ensure you have access to the private "Support - DP0 RSP Service Issues" subcategory.
-DP0-related news and events are shared as direct messages to this group.
-If you want email notifications, set your Community Forum user profile preference for "Email me when I am sent a personal message" to "Always".
+DP0-related news and events are shared as direct messages via the forum to this group.
+To recieve email notifications, set your Community Forum user profile preference for "Email me when I am sent a personal message" to "Always".
+Joining this group also ensures that you have access to the "Support - DP0 RSP Service Issues" subcategory.
 
-| **Find DP0-Related Content and Discussions:**
-| - `Data Preview 0 Community Forum category <https://community.lsst.org/c/support/dp0>`_: for all questions and discussions related to DP0. For example, use of the RSP's aspects for science, contents of the DC2 data set, delegate activities, brainstorm new investigations, show-and-tell DP0-related results, etc.
-| - "Support - DP0 RSP Service Issues": a private subcategory for technical Q&A and discussion about potential bugs, service outages, etc.
-| - `Topics tagged with #dp0 <https://community.lsst.org/tag/dp0>`_ across all categories.
+**Find DP0-related content in the Forum:**
+The `Support - Data Preview 0 <https://community.lsst.org/c/support/dp0>`_ category is for any and all questions and discussions related to DP0.
+E.g., how to use the RSP's aspects for science; the contents of the DC2 data set; delegate activities; sharing DP0-related notebooks, plots, or results.
+The "Support - DP0 RSP Service Issues" is a private subcategory for technical Q&A and discussion about potential bugs, service outages, etc.
+It is also possible to view a list of all `topics tagged with #dp0 <https://community.lsst.org/tag/dp0>`_ across all categories.
 
 
 .. _Delegate-Homepage-Kickoff:
 
-Kick-off info sessions for new delegates
-========================================
+Kick-off info session
+=====================
 
 All **new** delegates must review the recording if they did not attend a live session.
 
@@ -202,18 +228,20 @@ Suggested delegate activities
 **Learn to use the Rubin Science Platform.**
 All delegates are encouraged to use the documentation, instructions, and tutorials to learn how to use the RSP, and its various tools for accessing and analyzing LSST data.
 
+For example, read and follow the step-by-step introductions on how to use the the RSP's :ref:`Tools-RSP-Portal` or :ref:`Tools-RSP-Notebook`.
+Then, work through the :doc:`/tutorials-examples/index`.
+Both the Portal and Notebook tutorials are numbered in increasing in difficulty.
+
 **Prepare to do science with the Data Previews.**
-In the coming years, *real commissioning data* from Rubin Observatory will be released as Data Preview 1 (DP1) and DP2.
-Use the simulated LSST-like data set of DP0 to prepare your custom analysis software in preparation for doing early science.
+In the coming years, *real commissioning data* will be released as Data Preview 1 (DP1) and DP2,
+as described in the `plans for early science with Rubin Observatory <https://lsst.org/scientists/early-science>`_.
 
-Beyond these two main activities, all delegates are invited to take on an activity that will inform and improve development of the RSP development,
-and/or extend and enhance the benefits of DP0 within the science community beyond the limited number of DP0 participants that Rubin Observatory is able to support.
+For example, use the simulated LSST-like data set of DP0 to generate and test your custom analysis software now,
+so that you're more prepared for early science with future data previews.
 
-Delegate activities are envisioned to be simple and enjoyable.
-They are completely voluntary and will not be tracked.
-Group work is encouraged, as are delegate-designed activities.
-Have fun!
-
+Beyond these two main activities, all delegates are invited to take on additional activities that will **inform and improve RSP development**,
+and/or **extend and enhance the benefits of DP0** within the science community beyond the limited number
+of DP0 participants that Rubin Observatory is able to support.
 
 Inform and improve the RSP
 --------------------------
@@ -230,7 +258,6 @@ Help with RSP development by suggesting new RSP features via `GitHub issues <htt
 
 **Share your experiences with Rubin Observatory staff.**
 Post about your DP0 investigations in the `Data Preview 0 Community Forum category <https://community.lsst.org/c/support/dp0>`_, so Rubin Observatory staff can see how users are doing science with the RSP.
-
 
 Extend the benefits of DP0 in the science community
 ---------------------------------------------------
@@ -250,7 +277,7 @@ All are welcome to volunteer to facilitate a breakout room or to give a presenta
 
 **Contribute tutorial notebooks.**
 All delegates are welcome to share their own Jupyter Notebooks using the `delegates' shared repo <https://github.com/rubin-dp0/delegate-contributions-dp02>`_.
-Step-by-step tutorials that use the Portal, TAP, or command-line are also welcome.
+Step-by-step tutorials that use the Portal, API, or command-line are also welcome.
 
 **Share your DP0-related work outside of DP0.**
 For example, give a seminar about Rubin Observatory and DP0 at your home institution, give a tutorial about your RSP/DP0 experience in your Science Collaboration, or publish a paper on your DP0-related work.
@@ -269,20 +296,24 @@ Hearing about issues and receiving feedback from delegates is a key component of
 Scientific support via the Community Forum
 ------------------------------------------
 
-The `Data Preview 0 Community Forum category <https://community.lsst.org/c/support/dp0>`_ is the best place for DP0 delegates to post topics related to scientific support.
+The `Data Preview 0 Community Forum category <https://community.lsst.org/c/support/dp0>`_ is the best place for DP0 delegates
+to post topics related to scientific support.
 
-Scientific support includes questions about the DC2 simulated data set, the DP0 data products, and/or the application of the LSST Science Pipelines to the DP0 data set, as well as general discussion about DP0-related scientific analyses, or DP0 policies and guidelines.
+Scientific support includes questions about the DC2 simulated data set, the DP0 data products, and/or the application of the
+LSST Science Pipelines to the DP0 data set, as well as general discussion about DP0-related scientific analyses, or DP0 policies and guidelines.
 
-This subcategory will be monitored by the Rubin Observatory `Community Engagement Team (CET) <https://community.lsst.org/t/about-the-community-engagement-team/4526>`_.
+This subcategory is monitored by the Rubin Observatory `Community Engagement Team (CET) <https://community.lsst.org/t/about-the-community-engagement-team/4526>`_.
 DP0 delegates are especially encouraged to post new topics and reply to others' posts in this subcategory.
 
 Technical assistance via GitHub issues
 --------------------------------------
 
-Bug reports, persistent technical issues, and requests for assistance from Rubin Observatory staff should be submitted by DP0 delegates as GitHub issues in the `rubin-dp0 GitHub Organization's Support repository <https://github.com/rubin-dp0/Support>`_.
+Bug reports, persistent technical issues, and requests for assistance from Rubin Observatory staff can be submitted by DP0 delegates
+as GitHub issues in the `rubin-dp0 GitHub Organization's Support repository <https://github.com/rubin-dp0/Support>`_.
 Requests for new features or for global installations of commonly used software packages are also welcome via GitHub issues.
 
-In the horizontal menu bar at the top of that page, click on the “Issues” option (with the circled dot icon), then choose the green “New Issue” button at right.
+In the horizontal menu bar at the top of that page, click on the “Issues” option (with the circled dot icon),
+then choose the green “New Issue” button at right.
 Next to either “Bug report” or "Feature request" choose “Get started” (as appropriate for your case), and fill in the title and contents of your issue.
 In the right side-menu, do adjust the labels as appropriate, but leave the other options.
 Click “Submit new issue” when you’re ready.
