@@ -69,6 +69,20 @@ See the repository's `README file <https://github.com/rubin-dp0/tutorial-noteboo
 list of available tutorials with descriptions.
 
 
+.. _DP0-2-Tutorials-CommandLine:
+
+Command line tutorials
+======================
+
+*Placeholder: text describing how command line tutorials are executed in Notebook aspect, etc.*
+
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    cmndline-beginner
+
+
 .. _DP0-2-Tutorials-Contributed:
 
 Contributed tutorials
