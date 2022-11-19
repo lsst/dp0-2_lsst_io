@@ -96,7 +96,8 @@ These three are discussed in detail in the paragraphs below the table, which lis
    * - ``goodSeeingDiff_differenceExp``
      - visit, detector
      - The difference image resulting from difference image analysis.
-     
+
+|
 
 **Processed Visit Image** (PVI; **calexp**):
 A fully-qualified LSST image from a single visit (in other words, a single pointing) that includes the science pixel array, a quality mask, and a variance array,
