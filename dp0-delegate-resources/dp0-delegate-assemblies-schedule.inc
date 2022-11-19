@@ -64,10 +64,10 @@
      - Delegate Presenter: Vincenzo Petrecca "Analysis of DIA sources" (50 min)
      - *breakouts*
    * - 2022-12-09
-     - DP0 2022 Year In Review: Delegate Flash Talks!
+     - DP0 2022 Year In Review with Delegate Flash Talks!
      - *breakouts*
    * - 2023-01-20
-     - *TBD: open for a volunteer presenter*
+     - Delegate Presenter: Bob Abel
      - *breakouts*
    * - 2023-02-03
      - *TBD: open for a volunteer presenter*
