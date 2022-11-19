@@ -264,6 +264,8 @@ How do I make sure my "notebooks/tutorial-notebooks" directory is read-only?
 
 As described in :ref:`NB-Intro-Use-Tutorial-NBs`, it is recommended that all users ensure their "notebooks/tutorial-notebooks" directory is read-only.
 
+The steps below should be used to obtain a new, read-only version of the "notebooks/tutorial-notebooks" directory which is up-to-date with all the latest versions of the tutorial notebooks.
+
 1. Determine whether or not your "notebooks/tutorial-notebooks" directory is read-only.
 In the Notebook Aspect of the RSP, use the Launcher (+ button) and open a Terminal, and execute the following statements.
 
@@ -275,6 +277,15 @@ In the Notebook Aspect of the RSP, use the Launcher (+ button) and open a Termin
 
 If, on the output line for “tutorial-notebooks”, you see “dr-xr-xr-x”, this directory is read-only.
 If you see “drwxr-xr-x”, this directory is writable by the user.
+
+In order to execute step 2 below (moving or removing your "notebooks/tutorial-notebooks" directory), you might have to change the user permissions on the directory to be writable (“drwxr-xr-x”) using the following command.
+
+.. code-block:: bash
+
+   cd ~/notebooks
+   chmod u+w tutorial-notebooks
+   ls -lah
+
 
 2. If you want to keep the current version of your “notebooks/tutorial-notebooks” directory, move it to another path in your home directory.
 In the Notebook Aspect of the RSP, use the Launcher (+ button) and open a Terminal, and execute the following statements.
@@ -293,7 +304,7 @@ It is crucial that you *move* (and not copy) the “tutorial-notebooks” direct
 
 You will see the contents of your version of the “tutorial-notebooks” listed.
 
-If you don't care to keep the current version of your “notebooks/tutorial-notebooks” directory, delete it.
+**Or**, If you don't care to keep the current version of your “notebooks/tutorial-notebooks” directory, delete it.
 
 .. code-block:: bash
 
