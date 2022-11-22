@@ -61,13 +61,13 @@
      - `Nuclear Transients by Decker French & Forced Photometry by Brian Morsony <https://community.lsst.org/t/summary-delegate-assembly-fri-oct-28/7194>`__
      - *breakouts*
    * - 2022-11-18
-     - Delegate Presenter: Vincenzo Petrecca "Analysis of DIA sources" (50 min)
+     - `Analysis of DIA sources by Vincenzo Petrecca <https://community.lsst.org/t/summary-delegate-assembly-fri-nov-18/7237>`__
      - *breakouts*
    * - 2022-12-09
-     - DP0 2022 Year In Review: Delegate Flash Talks!
+     - DP0 2022 Year In Review with Delegate Flash Talks!
      - *breakouts*
    * - 2023-01-20
-     - *TBD: open for a volunteer presenter*
+     - Delegate Presenter: Bob Abel
      - *breakouts*
    * - 2023-02-03
      - *TBD: open for a volunteer presenter*

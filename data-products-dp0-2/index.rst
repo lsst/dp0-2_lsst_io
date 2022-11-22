@@ -63,6 +63,41 @@ Images
 ------
 
 The three main types of images available for DP0.2 are processed visit images, coadded images, and difference images.
+These three are discussed in detail in the paragraphs below the table, which lists the image types (and their variants and/or subtracted backgrounds) that most users will find suitable for their science needs.
+
+.. list-table:: Image data available for DP0.2.
+   :widths: 100 100 390
+   :header-rows: 1
+
+   * - Butler DatasetType
+     - Minimum ``dataId``
+     - Description
+   * - ``calexp``
+     - visit, detector
+     - Processed visit image with the background subtracted.
+   * - ``calexpBackground``
+     - visit, detector
+     - The background subtracted from the ``calexp``.
+   * - ``deepCoadd``
+     - tract, patch, band
+     - The deep stack of the ``calexps``.
+   * - ``deepCoadd_calexp``
+     - tract, patch, band
+     - The deep stack of the ``calexps``, with a final small background subtracted.
+   * - ``deepCoadd_calexp_background``
+     - tract, patch, band
+     - The background subtracted from ``deepCoadd_calexp``.
+   * - ``goodSeeingCoadd``
+     - tract, patch, band
+     - The deep stack of the ``calexps`` with the top one-third best seeing visits.
+   * - ``goodSeeingDiff_templateExp``
+     - visit, detector
+     - The template image used for difference image analysis.
+   * - ``goodSeeingDiff_differenceExp``
+     - visit, detector
+     - The difference image resulting from difference image analysis.
+
+|
 
 **Processed Visit Image** (PVI; **calexp**):
 A fully-qualified LSST image from a single visit (in other words, a single pointing) that includes the science pixel array, a quality mask, and a variance array,
