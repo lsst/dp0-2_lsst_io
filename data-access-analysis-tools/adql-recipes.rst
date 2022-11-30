@@ -61,6 +61,20 @@ Additional external resources for learning about SQL, ADQL, and Qserv include:
  - `LSST Qserv User Guide <https://qserv.lsst.io/user/index.html>`__
 
 
+.. _Adql-Recipes-Explore-Tables:
+
+Exploring tables
+================
+
+When learning about the contents of a table, it can be handy to simply retrieve all columns for "a bunch" (hundreds to thousands) of rows
+and take a look at the results.
+For this use-case, it is recommended to use the ``SELECT TOP`` statement, like in the example below that just retrieves the first 100 rows of the ``Object`` table.
+
+.. code-block:: SQL
+    SELECT TOP 100 * FROM dp02_dc2_catalogs.Object
+
+
+
 .. _Adql-Recipes-Cone-Search:
 
 Cone Search
