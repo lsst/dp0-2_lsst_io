@@ -82,8 +82,9 @@ Retrieve the ``coord_dec`` and ``coord_ra`` columns from the ``Object`` table fo
 Convert fluxes to magnitudes
 ============================
 
-As above, retrieves the ``coord_dec`` and ``coord_ra`` columns from the ``Object`` table for objects within a 0.05 degree radius of RA = 62, Dec = -37,
-but also retrieves the g-band AB magnitude and magnitude error.
+As above, retrieve the ``coord_dec`` and ``coord_ra`` columns from the ``Object`` table for objects within a 0.05 degree radius of RA = 62, Dec = -37,
+and also retrieve the g-band AB magnitude and magnitude error.
+The ``scisql`` functions used below can be applied to any flux column.
 
 .. code-block:: SQL
 
@@ -100,11 +101,11 @@ but also retrieves the g-band AB magnitude and magnitude error.
 Table Joins
 ===========
 
-In the example below, the Source and CcdVisit table are joined in order to obtain the date and seeing from the CcdVisit table.
+Below, the Source and CcdVisit table are joined in order to obtain the date and seeing from the CcdVisit table.
 Any two tables can be joined so long as they have an index in common.
 
-Note that the example below demonstrates how to rename (nickname) columns and tables using ``AS``,
-and also applies a spatial constraint, a temporal constraint (using ``obsStartMJD``), 
+This query also renames (nicknames) columns and tables using ``AS``,
+and applies a spatial constraint, a temporal constraint (using ``obsStartMJD``), 
 and constraints on the band, extendedness, and flux value.
 
 Additional external resources on SQL table joins:
@@ -137,9 +138,13 @@ Additional external resources on SQL table joins:
 TruthSummary and MatchesTruth table joins
 =========================================
 
+The query below demonstrates how to retrieve the truth table identifier (``id_truth_type`` from the ``MatchesTruth`` table)
+and true redshift (from the ``TruthSummary`` table) for a particular detected object with ``ObjectId`` = 1486698050427598336 (from the ``Object`` table)
+using a triple table join.
+
+**Director vs. ref match tables:** 
 Note that the restriction for the given ``Object`` is written in the query below specifically as ``WHERE obj.objectId=1486698050427598336``.
 If we were to write ``WHERE mt.match_objectId=1486698050427598336`` instead, the query could take orders of magnitude longer to execute.
-
 This subtle difference exists because the ``TruthSummary`` and ``Object`` tables are stored in Qserv as what are known as "director" tables,
 while the ``MatchesTruth`` table used to join them is stored as a somewhat more restricted "ref match" table.
 Qserv has special mechanics to optimize queries with ``WHERE`` restrictions expressed in terms of director tables,
@@ -169,4 +174,9 @@ if expressed in terms of the "ref match" table, would necessitate a full scan of
 Individual Objects
 ==================
 
+In the above example, a single object was desired, and a statement like ``WHERE objectId=1486`` was used.
+However, more than a few single objects are desired and their ``objectId`` are known, a query built up of, e.g.,
+``OR objectId=1487 OR objectId=1488 OR objectId=1489`` and so on would work, but there's a better way: ``WHERE objectId IN ()``.
+
+Below, the 
 
