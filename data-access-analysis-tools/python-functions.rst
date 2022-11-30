@@ -29,6 +29,9 @@ All of these can be copy-pasted into notebooks or python scripts.
 Cutout coadd
 ============
 
+In the future, the RSP will have an image cutout service and this function will not be necessary.
+A demonstration of its use can be found in tutorial notebook 03a, Image Display and Manipulation.
+
 .. code-block:: python
 
     def cutout_coadd(butler, ra, dec, band='r', datasetType='deepCoadd',
@@ -84,6 +87,9 @@ Cutout coadd
 
 Cutout calexp
 =============
+
+In the future, the RSP will have an image cutout service and this function will not be necessary.
+A demonstration of its use can be found in tutorial notebook 03a, Image Display and Manipulation.
 
 .. code-block:: python
 
