@@ -112,13 +112,8 @@ The API Aspect of the RSP is very powerful and will eventually allow for federat
     api-intro
 
 
-.. _Data-Access-Analysis-Tools-Recipes:
 
-Recipes and functions
-=====================
-
-
-.. _Data-Access-Analysis-Tools-Recipes-ADQL:
+.. _Tools-ADQL-Recipes:
 
 ADQL Recipes
 ------------
@@ -130,7 +125,7 @@ ADQL Recipes
     adql-recipes
 
 
-.. _Data-Access-Analysis-Tools-Recipes-Python:
+.. _Tools-Python-Functions:
 
 Python Functions
 ----------------
