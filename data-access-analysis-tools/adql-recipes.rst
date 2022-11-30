@@ -183,6 +183,9 @@ This list could contain many more objects and be generated programmatically (e.g
 and then be included in the ADQL query statement and the TAP service would treat it the same way.
 The number of results returned will equal the length of the list of ``objectId`` passed.
 
+For this example, the 12 were selected to be bright stars with similar *g-r* and *i-z* colors,
+so the query retrieves the *g*, *r*, *i*, and *z* band fluxes, but users should modify this to their own needs.
+
 .. code-block:: python
 
     from lsst.rsp import get_tap_service, retrieve_query
