@@ -188,6 +188,10 @@ if expressed in terms of the "ref match" table, would necessitate a full scan of
 Individual objects
 ==================
 
+**Searches for individual objects can take a surprisingly long time.**
+Recall that the TAP tables are sharded by RA,Dec, and when RA,Dec constraints are not provided (as in the example below),
+the entire table must be searched, and this can take a long time despite the small amount of data returned.
+
 In the above example, a single object was desired, and a statement like ``WHERE objectId=1486`` was used.
 However, more than a few single objects are desired and their ``objectId`` are known, a query built up of, e.g.,
 ``OR objectId=1487 OR objectId=1488 OR objectId=1489`` and so on would work, but there's a better way: ``WHERE objectId IN ()``.
