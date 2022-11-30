@@ -46,9 +46,9 @@ LSST Query Services (Qserv) provides access to the LSST Database Catalogs.
 Users can query the catalogs using standard SQL query language with a few `restrictions <https://qserv.lsst.io/user/index.html#restrictions>`__.
 
 **Fast queries:** 
-Qserv stores catalog data sharded by coordinate (RA, Dec), and catalogs typically have a primary index which is an ``objectId`` (a long integer unique to the catalog).
-ADQL query statements that include constraints by coordinate or primary index thus do not requre a whole-catalog search,
-and so are typically faster (and can be *much* faster) than ADQL query statements which only include constraints for other columns.
+Qserv stores catalog data sharded by coordinate (RA, Dec).
+ADQL query statements that include constraints by coordinate do not requre a whole-catalog search,
+and are typically faster (and can be *much* faster) than ADQL query statements which only include constraints for other columns.
 
 **Recommended constraint:**
 Include ``detect_isPrimary = True`` in queries for the ``Object``, ``Source``, and ``ForcedSource`` catalogs.
@@ -98,7 +98,7 @@ The ``scisql`` functions used below can be applied to any flux column.
 
 .. _Adql-Recipes-Table-Joins:
 
-Table Joins
+Table joins
 ===========
 
 Below, the Source and CcdVisit table are joined in order to obtain the date and seeing from the CcdVisit table.
@@ -171,12 +171,31 @@ if expressed in terms of the "ref match" table, would necessitate a full scan of
 
 .. _Adql-Recipes-ObjectIds:
 
-Individual Objects
+Individual objects
 ==================
 
 In the above example, a single object was desired, and a statement like ``WHERE objectId=1486`` was used.
 However, more than a few single objects are desired and their ``objectId`` are known, a query built up of, e.g.,
 ``OR objectId=1487 OR objectId=1488 OR objectId=1489`` and so on would work, but there's a better way: ``WHERE objectId IN ()``.
 
-Below, the 
+Below, a list of just 12 ``objectId`` are put in a string called ``my_list``, formatted as a python tuple (with round brackets). 
+This list could contain many more objects and be generated programmatically (e.g., from a different query, or by user analysis),
+and then be included in the ADQL query statement and the TAP service would treat it the same way.
+The number of results returned will equal the length of the list of ``objectId`` passed.
 
+.. code-block:: python
+
+    from lsst.rsp import get_tap_service, retrieve_query
+    service = get_tap_service()
+    
+    my_list = "(1249537790362809267, 1252528461990360512, 1248772530269893180, "\
+              "1251728017525343554, 1251710425339299404, 1250030371572068167, "\
+              "1253443255664678173, 1251807182362538413, 1252607626827575504, "\
+              "1249784080967440401, 1253065023664713612, 1325835101237446771)"
+    
+    query = "SELECT objectId, g_calibFlux, r_calibFlux, i_calibFlux, z_calibFlux "\
+            "FROM dp02_dc2_catalogs.Object "\
+            "WHERE objectId IN "+my_list
+	    
+    results = service.search(query)
+    results.to_table()
