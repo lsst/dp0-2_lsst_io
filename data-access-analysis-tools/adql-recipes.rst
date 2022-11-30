@@ -33,7 +33,7 @@ Learn more about the `TAP-accessible DP0.2 catalogs <https://dp0-2.lsst.io/data-
 
 .. Important::
     If a query takes longer than you expect, please submit a `GitHub Issue <https://github.com/rubin-dp0/Support>`__
-    or post in the `DP0 RSP Service Issues <https://community.lsst.org/c/support/dp0-rsp-issues/52>`__ category of the Rubin Community Forum.
+    or post in the "DP0 RSP Service Issues" category of the Rubin Community Forum.
     Staff with familiarity with Qserv are happy to investigate and to help tweak queries for optimal execution.
 
 
