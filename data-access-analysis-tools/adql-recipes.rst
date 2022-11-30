@@ -27,6 +27,11 @@ ADQL is based on the Structured Query Language (SQL).
 
 Learn more about the `TAP-accessible DP0.2 catalogs <https://dp0-2.lsst.io/data-products-dp0-2/index.html#catalogs>`__.
 
+ADQL can be used in both the Notebook and Portal aspects of the Rubin Science Platform (RSP).
+ - :ref:`Data-Access-Analysis-Tools-TAP-NB`
+ - how to :ref:`Portal-Intro-ADQL-Queries` in the Portal aspect
+
+
 .. _Adql-Recipes-General-Advice:
 
 General Advice
