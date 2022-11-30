@@ -70,9 +70,9 @@ Retrieve the ``coord_dec`` and ``coord_ra`` columns from the ``Object`` table fo
 
 .. code-block:: SQL
 
-   SELECT coord_dec, coord_ra
-   FROM dp02_dc2_catalogs.Object
-   WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
+   SELECT coord_dec, coord_ra 
+   FROM dp02_dc2_catalogs.Object 
+   WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), 
    CIRCLE('ICRS', 62, -37, 0.05)) = 1
 
 
@@ -87,11 +87,11 @@ but also retrieves the g-band AB magnitude and magnitude error.
 
 .. code-block:: SQL
 
-   SELECT coord_dec, coord_ra,
-   scisql_nanojanskyToAbMag(g_calibFlux) AS g_calibMag,
-   scisql_nanojanskyToAbMagSigma(g_calibFlux, g_calibFluxErr) as g_calibMagErr
-   FROM dp02_dc2_catalogs.Object
-   WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
+   SELECT coord_dec, coord_ra, 
+   scisql_nanojanskyToAbMag(g_calibFlux) AS g_calibMag, 
+   scisql_nanojanskyToAbMagSigma(g_calibFlux, g_calibFluxErr) as g_calibMagErr 
+   FROM dp02_dc2_catalogs.Object 
+   WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), 
    CIRCLE('ICRS', 62, -37, 0.05)) = 1
 
 
@@ -113,20 +113,20 @@ Additional external resources on SQL table joins:
 
 .. code-block:: SQL
 
-   SELECT src.ccdVisitId AS src_ccdVisitId,
-   src.extendedness AS src_extendedness,
-   src.band AS src_band,
-   scisql_nanojanskyToAbMag(src.psfFlux) AS src_psfAbMag,
-   cv.obsStartMJD AS cv_obsStartMJD,
-   cv.seeing AS cv_seeing
-   FROM dp02_dc2_catalogs.Source AS src
-   JOIN dp02_dc2_catalogs.CcdVisit AS cv
-   ON src.ccdVisitId = cv.ccdVisitId
-   WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
-   CIRCLE('ICRS', 62.0, -37, 1)) = 1
+   SELECT src.ccdVisitId AS src_ccdVisitId, 
+   src.extendedness AS src_extendedness, 
+   src.band AS src_band, 
+   scisql_nanojanskyToAbMag(src.psfFlux) AS src_psfAbMag, 
+   cv.obsStartMJD AS cv_obsStartMJD, 
+   cv.seeing AS cv_seeing 
+   FROM dp02_dc2_catalogs.Source AS src 
+   JOIN dp02_dc2_catalogs.CcdVisit AS cv 
+   ON src.ccdVisitId = cv.ccdVisitId 
+   WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), 
+   CIRCLE('ICRS', 62.0, -37, 1)) = 1 
    AND src.band = 'i' 
    AND src.extendedness = 0 
-   AND src.psfFlux > 10000
+   AND src.psfFlux > 10000 
    AND cv.obsStartMJD > 60925 
    AND cv.obsStartMJD < 60955
 
@@ -134,8 +134,8 @@ Additional external resources on SQL table joins:
 
 .. _Adql-Recipes-Truth-Summary:
 
-TruthSummary table joins
-========================
+TruthSummary and MatchesTruth table joins
+=========================================
 
 Note that the restriction for the given ``Object`` is written in the query below specifically as ``WHERE obj.objectId=1486698050427598336``.
 If we were to write ``WHERE mt.match_objectId=1486698050427598336`` instead, the query could take orders of magnitude longer to execute.
@@ -149,16 +149,24 @@ if expressed in terms of the "ref match" table, would necessitate a full scan of
 
 .. code-block:: SQL
 
-    SELECT mt.id_truth_type AS mt_id_truth_type,
-    mt.match_objectId AS mt_match_objectId,
-    obj.objectId AS obj_objectId,
-    ts.redshift AS ts_redshift
-    FROM dp02_dc2_catalogs.MatchesTruth AS mt
-    JOIN dp02_dc2_catalogs.TruthSummary AS ts
-    ON mt.id_truth_type=ts.id_truth_type
-    JOIN dp02_dc2_catalogs.Object AS obj
-    ON mt.match_objectId=obj.objectId
-    WHERE obj.objectId=1486698050427598336
-    AND ts.truth_type=1
-    AND obj.detect_isPrimary=1
+    SELECT mt.id_truth_type AS mt_id_truth_type, 
+    mt.match_objectId AS mt_match_objectId, 
+    obj.objectId AS obj_objectId, 
+    ts.redshift AS ts_redshift 
+    FROM dp02_dc2_catalogs.MatchesTruth AS mt 
+    JOIN dp02_dc2_catalogs.TruthSummary AS ts 
+    ON mt.id_truth_type=ts.id_truth_type 
+    JOIN dp02_dc2_catalogs.Object AS obj 
+    ON mt.match_objectId=obj.objectId 
+    WHERE obj.objectId=1486698050427598336 
+    AND ts.truth_type=1 
+    AND obj.detect_isPrimary=1 
     ORDER BY obj_objectId DESC
+
+
+.. _Adql-Recipes-ObjectIds:
+
+Individual Objects
+==================
+
+
