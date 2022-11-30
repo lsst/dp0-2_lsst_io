@@ -68,7 +68,7 @@ A set of utilities are provided to get a TAP service instance.
 
 .. code-block:: python
 
-   from rubin_jupyter_utils.lab.notebook import get_tap_service, retrieve_query
+   from lsst.rsp import get_tap_service, retrieve_query
    service = get_tap_service()
    query = "SELECT TOP 100 * FROM dp02_dc2_catalogs.Object"
    results = service.search(query)
