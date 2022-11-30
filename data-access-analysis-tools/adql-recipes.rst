@@ -22,24 +22,34 @@ ADQL Recipes
 .. This section should provide a brief, top-level description of the page.
 
 ADQL is the `Astronomical Data Query Language <https://www.ivoa.net/documents/ADQL/>`_.
-The language is used by the `IVOA <https://ivoa.net>`_ to represent astronomy queries posted to Virtual Observatory (VO) services, such as the Rubin LSST TAP service.
+The language is used by the `IVOA <https://ivoa.net>`_ to represent astronomy queries posted to Virtual Observatory (VO) services, such as the Rubin LSST Table Access Protocol (TAP) service.
 ADQL is based on the Structured Query Language (SQL).
 
-
-`W3 Schools SQL Tutorial <https://www.w3schools.com/sql/default.asp>`__
-
-`LSST Qserv User Guide <https://qserv.lsst.io/user/index.html>`__
-
-
+Learn more about the `TAP-accessible DP0.2 catalogs <https://dp0-2.lsst.io/data-products-dp0-2/index.html#catalogs>`__.
 
 .. _Adql-Recipes-General-Advice:
 
 General Advice
 ==============
 
-*Detectisprimary=true*
+LSST Query Services (Qserv) provides access to the LSST Database Catalogs.
+Users can query the catalogs using standard SQL query language with a few `restrictions <https://qserv.lsst.io/user/index.html#restrictions>`__.
 
-*words about how qserv stores data by ra/dec and so that is fast but patch is not*
+**Fast queries:** 
+Qserv stores catalog data sharded by coordinate (RA, Dec), and catalogs typically have a primary index which is an ``objectId`` (a long integer unique to the catalog).
+ADQL query statements that include constraints by coordinate or primary index thus do not requre a whole-catalog search,
+and so are typically faster (and can be *much* faster) than ADQL query statements which only include constraints for other columns.
+
+**Recommended constraint:**
+Include ``detect_isPrimary = True`` in queries for the ``Object``, ``Source``, and ``ForcedSource`` catalogs.
+This parameter is ``True`` if a source has no children, is in the inner region of a coadd patch, is in the inner region of a coadd tract, and is not detected in a pseudo-filter.
+Including this constraint will remove any duplicates (i.e., will not include both the parent and the deblended children).
+
+Additional external resources for learning about SQL, ADQL, and Qserv include:
+
+ - `W3 Schools SQL Tutorial <https://www.w3schools.com/sql/default.asp>`__
+ - `IVOA's ADQL Documentation <https://www.ivoa.net/documents/ADQL/20180112/PR-ADQL-2.1-20180112.html>`__
+ - `LSST Qserv User Guide <https://qserv.lsst.io/user/index.html>`__
 
 
 
