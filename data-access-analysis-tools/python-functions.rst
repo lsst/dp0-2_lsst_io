@@ -23,6 +23,8 @@ Python Functions
 
 All of these can be copy-pasted into notebooks or python scripts.
 
+The packages that are necessary for the function are also provided.
+
 
 .. _Python-Functions-Cutout-Coadd:
 
@@ -33,6 +35,10 @@ In the future, the RSP will have an image cutout service and this function will 
 A demonstration of its use can be found in tutorial notebook 03a, Image Display and Manipulation.
 
 .. code-block:: python
+
+    import lsst.geom as geom
+    from lsst.daf.butler import Butler
+    butler = Butler('dp02', collections='2.2i/runs/DP0.2')
 
     def cutout_coadd(butler, ra, dec, band='r', datasetType='deepCoadd',
                      skymap=None, cutoutSideLength=51, **kwargs):
@@ -93,6 +99,10 @@ A demonstration of its use can be found in tutorial notebook 03a, Image Display 
 
 .. code-block:: python
 
+    import lsst.geom as geom
+    from lsst.daf.butler import Butler
+    butler = Butler('dp02', collections='2.2i/runs/DP0.2')
+
     def cutout_calexp(butler, ra, dec, visit, detector, 
                       cutoutSideLength=51, **kwargs):
 
@@ -140,7 +150,14 @@ A demonstration of its use can be found in tutorial notebook 03a, Image Display 
 Remove figure
 =============
 
+Removing large figures from a notebook when creating many data-rich figures can help to avoid problems.
+A demonstration of this function's use can be found in tutorial notebook 03a, Image Display and Manipulation.
+
+
 .. code-block:: python
+
+    import matplotlib.pyplot as plt
+    import gc
 
     def remove_figure(fig):
         """
