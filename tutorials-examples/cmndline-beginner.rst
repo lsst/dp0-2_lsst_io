@@ -24,17 +24,102 @@
 
 **Last verified to run:** 
 
-**Targeted learning level:** 
+**Targeted learning level:** Beginner
 
-**Introduction:**
-
-
+**Introduction:** This tutorial is an introduction to the terminal and command line functionality within the Rubin Science Platform. It is parallel to the 
+                  Jupyter Notebook tutorial "Introduction to DP02"
 
 .. _DP0-2-Cmndline-Beginner-Step-1:
 
-Step 1. Your step one here
+Step 1. Accessing the terminal
 ==========================
 
 1.1. Log in to the Notebook Aspect.
-1.2. Open terminal
+1.2. In the launcher window under "Other", select the terminal
+
+.. figure:: /_static/other_terminal.png
+
+1.3. Start an interactive python session
+
+.. _DP0-2-Cmndline-Beginner-Step-2:
+
+Step 2. Package imports
+==========================
+2.1. Import general packages
+
+.. code-block::
+
+    import numpy
+    import matplotlib
+    import matplotlib.pyplot as plt
+
+2.2. Import packages for Section 2.0 Catalog Accessing
+
+.. code-block::
+
+    import pandas 
+    pandas.set_option('display.max_rows', 1000)
+    from lsst.rsp import get_tap_service, retrieve_query
+
+2.3. Import packages for Section 3.0 Image Accessing
+
+.. code-block::
+
+    import lsst.daf.butler as dafButler
+    import lsst.geom
+    import lsst.afw.display as afwDisplay
+
+Step 3. Explore catalog tables and columns using TAP
+==========================
+
+3.1. Start the TAP service 
+
+.. code-block::
+
+    service = get_tap_service()
+
+3.2. Exercise 1
+
+Retrieve and display a list of all the table names and descriptions that are available via the TAP server.
+
+.. code-block::
+
+    my_adql_query = "SELECT description, table_name FROM TAP_SCHEMA.tables"
+    results = service.search(my_adql_query)
+    results_table = results.to_table().to_pandas()
+    results_table
+
+Optionally, save the table results to a text file
+
+3.3. Exercise 2
+
+Retrieve and display a list of column names in the DP0.2 Object catalog. 
+
+.. code-block::
+
+ my_adql_query = "SELECT * from TAP_SCHEMA.columns WHERE table_name = 'dp02_dc2_catalogs.Object'"
+ res = service.search(my_adql_query)
+ print(res.fieldnames)
+
+3.4. Exercise 3
+
+Retrieve and display column names, data types, description, and units for all columns in the DP0.2 Object Catalog
+
+.. code-block::
+
+ my_adql_query = "SELECT column_name, datatype, description, unit FROM TAP_SCHEMA.columns WHERE table_name = 'dp02_dc2_catalogs.Object'"
+ results = service.search(my_adql_query)
+ results_table = results.to_table().to_pandas()
+ print('Number of columns available in the Object catalog: ', len(results_table))
+
+Only display names and description for columns that contain the string 'cModelFlux'.
+
+.. code-block::
+    
+    my_string = 'cModelFlux'
+    for col,des in zip(results_table['column_name'],results_table['description']):
+        if col.find(my_string) > -1:
+            print('%-40s %-200s' % (col,des))
+
+Note about for loops and indentation on interactive python
 
