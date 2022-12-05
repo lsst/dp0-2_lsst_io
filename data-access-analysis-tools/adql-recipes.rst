@@ -34,7 +34,7 @@ Learn more about the `TAP-accessible DP0.2 catalogs <https://dp0-2.lsst.io/data-
 .. Important::
     If a query takes longer than you expect, please submit a `GitHub Issue <https://github.com/rubin-dp0/Support>`__
     or post in the "DP0 RSP Service Issues" category of the Rubin Community Forum.
-    Staff with familiarity with Qserv are happy to investigate and to help tweak queries for optimal execution.
+    Rubin staff are happy to investigate and to help tweak queries for optimal execution.
 
 
 .. _Adql-Recipes-General-Advice:
@@ -71,6 +71,7 @@ and take a look at the results.
 For this use-case, it is recommended to use the ``SELECT TOP`` statement, like in the example below that just retrieves the first 100 rows of the ``Object`` table.
 
 .. code-block:: SQL
+
     SELECT TOP 100 * FROM dp02_dc2_catalogs.Object
 
 
