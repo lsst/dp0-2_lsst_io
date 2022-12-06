@@ -112,6 +112,33 @@ The API Aspect of the RSP is very powerful and will eventually allow for federat
     api-intro
 
 
+
+.. _Tools-ADQL-Recipes:
+
+ADQL Recipes
+------------
+
+.. toctree::
+    :maxdepth: 2
+    :glob:
+
+    adql-recipes
+
+
+.. _Tools-Python-Functions:
+
+Python Functions
+----------------
+
+.. toctree::
+    :maxdepth: 2
+    :glob:
+
+    python-functions
+
+
+
+
 .. _Data-Access-Analysis-Tools-Data-Processing:
 
 Data processing tools
