@@ -29,7 +29,7 @@ ADQL can be used in both the Notebook and Portal aspects:
  - :ref:`Data-Access-Analysis-Tools-TAP-NB`
  - how to :ref:`Portal-Intro-ADQL-Queries` in the Portal aspect
 
-Learn more about the `TAP-accessible DP0.2 catalogs <https://dp0-2.lsst.io/data-products-dp0-2/index.html#catalogs>`__.
+Learn more about the `TAP-accessible DP0.2 catalogs <https://dp0-2.lsst.io/data-products-dp0-2/index.html#catalogs>`__ which are used in the examples below.
 
 .. Important::
     If a query takes longer than you expect, please submit a `GitHub Issue <https://github.com/rubin-dp0/Support>`__
@@ -160,7 +160,7 @@ using a triple table join.
 **Director vs. ref match tables:** 
 Note that the restriction for the given ``Object`` is written in the query below specifically as ``WHERE obj.objectId=1486698050427598336``.
 If we were to write ``WHERE mt.match_objectId=1486698050427598336`` instead, the query could take orders of magnitude longer to execute.
-This subtle difference exists because the ``TruthSummary`` and ``Object`` tables are stored in Qserv as what are known as "director" tables,
+This subtle difference exists because the ``TruthSummary`` and ``Object`` tables are stored in Qserv as what are known as `director tables <https://qserv.lsst.io/user/index.html#director-table>`__,
 while the ``MatchesTruth`` table used to join them is stored as a somewhat more restricted "ref match" table.
 Qserv has special mechanics to optimize queries with ``WHERE`` restrictions expressed in terms of director tables,
 and can often dispatch these queries to just a few involved data shards.
