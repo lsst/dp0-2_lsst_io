@@ -185,6 +185,7 @@ Print results
 4.3 Save the data as a pandas dataframe 
 
 .. code-block::
+    
     data = results_table.to_pandas()
 
 
@@ -194,6 +195,7 @@ Step 5. Make a color-magnitude diagram
 5.1 Plot magnitudes
 
 .. code-block::
+
     plt.plot(data['r_calibMag'].values - data['i_calibMag'].values,
          data['g_calibMag'].values, 'o', ms=2, alpha=0.2)
 
@@ -208,6 +210,7 @@ Step 5. Make a color-magnitude diagram
 5.2 Save figure
 
 .. code-block::
+
     plt.savefig('color-magnitude.pdf')
 
 Step 6. Retrieve image data using the butler
@@ -218,6 +221,7 @@ Step 6. Retrieve image data using the butler
 Define Butler configuration and collection 
 
 .. code-block::
+
     config = 'dp02'
     collection = '2.2i/runs/DP0.2'
     butler = dafButler.Butler(config, collections=collection)
@@ -225,6 +229,7 @@ Define Butler configuration and collection
 6.2 Identify and retrieve a deepCoadd
 
 .. code-block::
+
     my_ra_deg = 55.745834
     my_dec_deg = -32.269167
 
@@ -234,6 +239,7 @@ Define Butler configuration and collection
 6.3 Retrive the DC2 skymap and identify the tract and patch
 
 .. code-block::
+
     skymap = butler.get('skyMap')
     tract = skymap.findTract(my_spherePoint)
     patch = tract.findPatch(my_spherePoint)
@@ -247,15 +253,18 @@ Define Butler configuration and collection
 6.4 Retrieve the deep i-band Coadd 
 
 .. code-block::
+
     dataId = {'band': 'i', 'tract': my_tract, 'patch': my_patch}
     my_deepCoadd = butler.get('deepCoadd', dataId=dataId)
 
 6.5 Display the image with afwDisplay
 
 .. code-block::
+
     afwDisplay.setDefaultBackend('matplotlib')
 
 .. code-block::
+    
     fig = plt.figure(figsize=(10, 8))
     afw_display = afwDisplay.Display(1)
     afw_display.scale('asinh', 'zscale')
