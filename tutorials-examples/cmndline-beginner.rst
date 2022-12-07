@@ -271,3 +271,5 @@ Define Butler configuration and collection
     afw_display.mtv(my_deepCoadd.image)
     plt.gca().axis('on')
     plt.savefig('image.pdf')
+    
+6.6
