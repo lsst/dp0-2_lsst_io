@@ -31,7 +31,7 @@
 
 .. _DP0-2-Cmndline-Beginner-Step-1:
 
-Step 1. Accessing the terminal
+Step 1. Access the terminal
 ==========================
 
 1.1. Log in to the Notebook Aspect.
@@ -43,7 +43,7 @@ Step 1. Accessing the terminal
 
 .. _DP0-2-Cmndline-Beginner-Step-2:
 
-Step 2. Package imports
+Step 2. Import packages
 ==========================
 2.1. Import general packages
 
@@ -123,3 +123,142 @@ Only display names and description for columns that contain the string 'cModelFl
 
 Note about for loops and indentation on interactive python
 
+Step 4. Retrieve data using TAP
+==========================
+
+4.1 Retrieve 10 objects of any kind
+
+Retrieve the coordinates and g, r, i magnitudes for 10 objects within 0.5 degrees of the center coordinates 62, -37
+
+.. code-block::
+
+    use_center_coords = "62, -37"
+
+Create a new my_adql_query
+
+.. code-block:: 
+     my_adql_query = "SELECT coord_ra, coord_dec, detect_isPrimary, " 
+                     "r_calibFlux, r_cModelFlux, r_extendedness " 
+                     "FROM dp02_dc2_catalogs.Object "
+                     "WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), "
+                     "CIRCLE('ICRS', " + use_center_coords + ", 0.5)) = 1 "
+
+    results = service.search(my_adql_query, maxrec=10)
+    results_table = results.to_table()
+
+4.2 Convert fluxes into magnitudes
+
+.. code-block::
+   
+     results_table['r_calibMag'] = -2.50 * numpy.log10(results_table['r_calibFlux']) + 31.4
+     results_table['r_cModelMag'] = -2.50 * numpy.log10(results_table['r_cModelFlux']) + 31.4
+
+Print results
+
+.. code-block::
+
+    results
+
+4.2 Retrieve 10,000 point-like objects
+
+.. code-block::
+
+    results = service.search("SELECT coord_ra, coord_dec, "
+                         "scisql_nanojanskyToAbMag(g_calibFlux) as g_calibMag, "
+                         "scisql_nanojanskyToAbMag(r_calibFlux) as r_calibMag, "
+                         "scisql_nanojanskyToAbMag(i_calibFlux) as i_calibMag, "
+                         "scisql_nanojanskyToAbMagSigma(g_calibFlux, g_calibFluxErr) as g_calibMagErr "
+                         "FROM dp02_dc2_catalogs.Object "
+                         "WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), "
+                         "CIRCLE('ICRS', "+use_center_coords+", 1.0)) = 1 "
+                         "AND detect_isPrimary = 1 "
+                         "AND g_calibFlux > 360 "
+                         "AND r_calibFlux > 360 "
+                         "AND i_calibFlux > 360 "
+                         "AND g_extendedness = 0 "
+                         "AND r_extendedness = 0 "
+                         "AND i_extendedness = 0",
+                         maxrec=10000)
+    results_table = results.to_table()
+    print(len(results_table))
+
+4.3 Save the data as a pandas dataframe 
+
+.. code-block::
+    data = results_table.to_pandas()
+
+
+Step 5. Make a color-magnitude diagram
+==========================
+
+5.1 Plot magnitudes
+
+.. code-block::
+    plt.plot(data['r_calibMag'].values - data['i_calibMag'].values,
+         data['g_calibMag'].values, 'o', ms=2, alpha=0.2)
+
+    plt.xlabel('mag_r - mag_i', fontsize=16)
+    plt.ylabel('mag_g', fontsize=16)
+    plt.xticks(fontsize=16)
+    plt.yticks(fontsize=16)
+
+    plt.xlim([-0.5, 2.0])
+    plt.ylim([25.5, 16.5])
+
+5.2 Save figure
+
+.. code-block::
+    plt.savefig('color-magnitude.pdf')
+
+Step 6. Retrieve image data using the butler
+==========================
+
+6.1 Create an instance of the butler
+
+Define Butler configuration and collection 
+
+.. code-block::
+    config = 'dp02'
+    collection = '2.2i/runs/DP0.2'
+    butler = dafButler.Butler(config, collections=collection)
+
+6.2 Identify and retrieve a deepCoadd
+
+.. code-block::
+    my_ra_deg = 55.745834
+    my_dec_deg = -32.269167
+
+    my_spherePoint = lsst.geom.SpherePoint(my_ra_deg*lsst.geom.degrees, my_dec_deg*lsst.geom.degrees)
+    print(my_spherePoint)
+
+6.3 Retrive the DC2 skymap and identify the tract and patch
+
+.. code-block::
+    skymap = butler.get('skyMap')
+    tract = skymap.findTract(my_spherePoint)
+    patch = tract.findPatch(my_spherePoint)
+
+    my_tract = tract.tract_id
+    my_patch = patch.getSequentialIndex()
+
+    print('my_tract: ', my_tract)
+    print('my_patch: ', my_patch)
+
+6.4 Retrieve the deep i-band Coadd 
+
+.. code-block::
+    dataId = {'band': 'i', 'tract': my_tract, 'patch': my_patch}
+    my_deepCoadd = butler.get('deepCoadd', dataId=dataId)
+
+6.5 Display the image with afwDisplay
+
+.. code-block::
+    afwDisplay.setDefaultBackend('matplotlib')
+
+.. code-block::
+    fig = plt.figure(figsize=(10, 8))
+    afw_display = afwDisplay.Display(1)
+    afw_display.scale('asinh', 'zscale')
+    afw_display.mtv(my_deepCoadd.image)
+    plt.gca().axis('on')
+    plt.savefig('image.pdf')
