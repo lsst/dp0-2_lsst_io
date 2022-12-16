@@ -49,6 +49,18 @@ and clicking on "history" (near upper-right).
 Major Updates Log
 =================
 
+Dec 16 2022
+-----------
+
+Notebook 03a (image display) added cutout funtion for calexps (previously only had one for deepCoadds)
+
+Notebook 08 (truth tables) added new Section 3.3 to demonstrate an efficient single-Object search
+
+Use of warning suppression has been modified in many notebooks to align with `RTN-045 <https://rtn-045.lsst.io/>`__.
+
+:ref:`_Data-Access-Analysis-Tools-Adql-Recipes` and :ref:`_Data-Access-Analysis-Tools-Python-Functions` have been added to the DP0.2 documentation.
+They include copy-pastable functions and query recipes for users.
+
 Oct 26 2022
 -----------
 
