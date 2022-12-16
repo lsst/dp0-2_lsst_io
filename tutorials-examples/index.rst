@@ -29,7 +29,18 @@ Before following these tutorials, delegates should:
 | 3. reviewed the basic introductions to the RSP's :ref:`Tools-RSP-Portal` or :ref:`Tools-RSP-Notebook`, and
 | 4. know their options for :ref:`Delegate-Homepage-Getting-Support`.
 
-**What's New?** See the :doc:`/tutorials-examples/major-updates-log`.
+
+.. _DP0-2-Tutorials-Whats-New:
+
+Major Changes Log
+=================
+
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    major-updates-log
+
 
 .. _DP0-2-Tutorials-Portal:
 
