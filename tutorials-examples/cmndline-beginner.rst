@@ -35,6 +35,12 @@ Step 1. Access the terminal
 ==========================
 
 1.1. Log in to the Notebook Aspect.
+
+1.2 Set up the Rubin Observatory environment
+
+.. code-block::
+    setup lsst_distrib
+
 1.2. In the launcher window under "Other", select the terminal
 
 .. figure:: /_static/other_terminal.png
@@ -69,62 +75,14 @@ Step 2. Import packages
     import lsst.geom
     import lsst.afw.display as afwDisplay
 
-Step 3. Explore catalog tables and columns using TAP
+Step 4. Retrieve data using TAP
 ==========================
 
-3.1. Start the TAP service 
+4.1. Start the TAP service 
 
 .. code-block::
 
     service = get_tap_service()
-
-3.2. Exercise 1
-
-Retrieve and display a list of all the table names and descriptions that are available via the TAP server.
-
-.. code-block::
-
-    my_adql_query = "SELECT description, table_name FROM TAP_SCHEMA.tables"
-    results = service.search(my_adql_query)
-    results_table = results.to_table().to_pandas()
-    results_table
-
-Optionally, save the table results to a text file
-
-3.3. Exercise 2
-
-Retrieve and display a list of column names in the DP0.2 Object catalog. 
-
-.. code-block::
-
- my_adql_query = "SELECT * from TAP_SCHEMA.columns WHERE table_name = 'dp02_dc2_catalogs.Object'"
- res = service.search(my_adql_query)
- print(res.fieldnames)
-
-3.4. Exercise 3
-
-Retrieve and display column names, data types, description, and units for all columns in the DP0.2 Object Catalog
-
-.. code-block::
-
- my_adql_query = "SELECT column_name, datatype, description, unit FROM TAP_SCHEMA.columns WHERE table_name = 'dp02_dc2_catalogs.Object'"
- results = service.search(my_adql_query)
- results_table = results.to_table().to_pandas()
- print('Number of columns available in the Object catalog: ', len(results_table))
-
-Only display names and description for columns that contain the string 'cModelFlux'.
-
-.. code-block::
-    
-    my_string = 'cModelFlux'
-    for col,des in zip(results_table['column_name'],results_table['description']):
-        if col.find(my_string) > -1:
-            print('%-40s %-200s' % (col,des))
-
-Note about for loops and indentation on interactive python
-
-Step 4. Retrieve data using TAP
-==========================
 
 4.1 Retrieve 10 objects of any kind
 
@@ -137,14 +95,18 @@ Retrieve the coordinates and g, r, i magnitudes for 10 objects within 0.5 degree
 Create a new my_adql_query
 
 .. code-block:: 
-     my_adql_query = "SELECT coord_ra, coord_dec, detect_isPrimary, " 
-                     "r_calibFlux, r_cModelFlux, r_extendedness " 
-                     "FROM dp02_dc2_catalogs.Object "
-                     "WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), "
-                     "CIRCLE('ICRS', " + use_center_coords + ", 0.5)) = 1 "
+   my_adql_query = "SELECT coord_ra, coord_dec, detect_isPrimary, " + \
+                "r_calibFlux, r_cModelFlux, r_extendedness " + \
+                "FROM dp02_dc2_catalogs.Object " + \
+                "WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), " + \
+                "CIRCLE('ICRS', " + use_center_coords + ", 0.5)) = 1 "
+Print results
+
+.. code-block::
 
     results = service.search(my_adql_query, maxrec=10)
     results_table = results.to_table()
+    print(results_table)   
 
 4.2 Convert fluxes into magnitudes
 
@@ -153,17 +115,11 @@ Create a new my_adql_query
      results_table['r_calibMag'] = -2.50 * numpy.log10(results_table['r_calibFlux']) + 31.4
      results_table['r_cModelMag'] = -2.50 * numpy.log10(results_table['r_cModelFlux']) + 31.4
 
-Print results
-
-.. code-block::
-
-    results
-
 4.2 Retrieve 10,000 point-like objects
 
 .. code-block::
 
-    results = service.search("SELECT coord_ra, coord_dec, "
+ results = service.search("SELECT coord_ra, coord_dec, "
                          "scisql_nanojanskyToAbMag(g_calibFlux) as g_calibMag, "
                          "scisql_nanojanskyToAbMag(r_calibFlux) as r_calibMag, "
                          "scisql_nanojanskyToAbMag(i_calibFlux) as i_calibMag, "
@@ -179,8 +135,7 @@ Print results
                          "AND r_extendedness = 0 "
                          "AND i_extendedness = 0",
                          maxrec=10000)
-    results_table = results.to_table()
-    print(len(results_table))
+
 
 4.3 Save the data as a pandas dataframe 
 
@@ -257,7 +212,9 @@ Define Butler configuration and collection
     dataId = {'band': 'i', 'tract': my_tract, 'patch': my_patch}
     my_deepCoadd = butler.get('deepCoadd', dataId=dataId)
 
-6.5 Display the image with afwDisplay
+6.5 Display the image 
+
+To do this with the afwDisplay. 
 
 .. code-block::
 
@@ -272,4 +229,11 @@ Define Butler configuration and collection
     plt.gca().axis('on')
     plt.savefig('image.pdf')
     
-6.6
+To open up Firefly
+
+.. code-block::
+    afwDisplay.setDefaultBackend('firefly')
+    afw_display = afwDisplay.Display(frame=1)
+    afw_display.mtv(deepCoadd)
+
+
