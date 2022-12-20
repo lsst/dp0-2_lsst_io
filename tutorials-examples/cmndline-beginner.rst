@@ -95,6 +95,7 @@ Retrieve the coordinates and g, r, i magnitudes for 10 objects within 0.5 degree
 Create a new my_adql_query
 
 .. code-block:: 
+
    my_adql_query = "SELECT coord_ra, coord_dec, detect_isPrimary, " + \
                 "r_calibFlux, r_cModelFlux, r_extendedness " + \
                 "FROM dp02_dc2_catalogs.Object " + \
@@ -141,8 +142,8 @@ Print results
 
 .. code-block::
     
+    results_table = results.to_table()
     data = results_table.to_pandas()
-
 
 Step 5. Make a color-magnitude diagram
 ==========================
@@ -229,11 +230,12 @@ To do this with the afwDisplay.
     plt.gca().axis('on')
     plt.savefig('image.pdf')
     
-To open up Firefly
+Alternatively, open the image using Firefly
 
 .. code-block::
+
     afwDisplay.setDefaultBackend('firefly')
     afw_display = afwDisplay.Display(frame=1)
     afw_display.mtv(deepCoadd)
 
-
+For a demonstration of the Firefly interactive interface, work through tutorial notebook 3b.
