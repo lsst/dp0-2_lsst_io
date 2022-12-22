@@ -26,32 +26,43 @@
 
 **Targeted learning level:** Beginner
 
-**Introduction:** This tutorial is an introduction to the terminal and command line functionality within the Rubin Science Platform. It is parallel to the 
-                  Jupyter Notebook tutorial "Introduction to DP02"
+**Introduction:** 
+This tutorial is an introduction to the terminal and command line functionality within the Rubin Science Platform. It is parallel to the 
+Jupyter Notebook tutorial "Introduction to DP02" and demonstrates how to use the TAP service to query and retrieved catalog data; matplotlib to plot catalog data; the LSST Butler package to query and retrieve image data; and the LSST afwDisplay package to display images.
+
+This tutorial uses the Data Preview 0.2 (DP0.2) data set. This data set uses a subset of the DESC's Data Challenge 2 (DC2) simulated images, which have been reprocessed by Rubin Observatory using Version 23 of the LSST Science Pipelines. More information about the simulated data can be found in the DESC's DC2 paper and in the DP0.2 data release documentation.
 
 .. _DP0-2-Cmndline-Beginner-Step-1:
 
-Step 1. Access the terminal
+Step 1. Access the terminal and setup
 ==========================
 
 1.1. Log in to the Notebook Aspect.
-
-1.2 Set up the Rubin Observatory environment
-
-.. code-block::
-    setup lsst_distrib
 
 1.2. In the launcher window under "Other", select the terminal
 
 .. figure:: /_static/other_terminal.png
 
-1.3. Start an interactive python session
+1.3 Set up the Rubin Observatory environment
+
+.. code-block::
+
+    setup lsst_distrib
+
+1.4. Start an interactive python session
+
+.. code-block::
+
+    python
 
 .. _DP0-2-Cmndline-Beginner-Step-2:
 
 Step 2. Import packages
 ==========================
-2.1. Import general packages
+
+This tutorial makes use of several packages that will be commonly used when interacting with catalog and image data. 
+
+2.1. Import general python packages
 
 .. code-block::
 
@@ -59,7 +70,7 @@ Step 2. Import packages
     import matplotlib
     import matplotlib.pyplot as plt
 
-2.2. Import packages for Section 2.0 Catalog Accessing
+2.2. Import packages needed to access the catalog data
 
 .. code-block::
 
@@ -67,7 +78,7 @@ Step 2. Import packages
     pandas.set_option('display.max_rows', 1000)
     from lsst.rsp import get_tap_service, retrieve_query
 
-2.3. Import packages for Section 3.0 Image Accessing
+2.3. Import packages needed to access images
 
 .. code-block::
 
@@ -75,24 +86,34 @@ Step 2. Import packages
     import lsst.geom
     import lsst.afw.display as afwDisplay
 
-Step 4. Retrieve data using TAP
+Step 3. Retrieve data using TAP for 10 objects
 ==========================
 
-4.1. Start the TAP service 
+Table Access Procotol (TAP) provides standardized access to the catalog data for discovery, search, and retrieval. Full documentation for TAP is provided by the International Virtual Observatory Alliance (IVOA).
+
+The TAP service uses a query language similar to SQL (Structured Query Langage) called ADQL (Astronomical Data Query Language). The documentation for ADQL includes more information about syntax and keywords.
+
+Notice: Not all ADQL functionality is supported by the RSP for Data Preview 0.
+
+This example uses the DP0.2 Object catalog, which contains sources detected in the coadded images (also called stacked, combined, or deepCoadd images).
+
+Results from a TAP service search are best displayed using one of two functions:
+.to_table(): convert results to an astropy table. 
+.to_table().to_pandas(): convert to an astropy table and then to a Pandas dataframe.
+
+3.1. Start the TAP service 
 
 .. code-block::
 
     service = get_tap_service()
-
-4.1 Retrieve 10 objects of any kind
-
-Retrieve the coordinates and g, r, i magnitudes for 10 objects within 0.5 degrees of the center coordinates 62, -37
+    
+3.2. Define the coordinates for a cone search centered around the region covered by DC2 simulation (RA,Dec = 62,-37).
 
 .. code-block::
 
     use_center_coords = "62, -37"
 
-Create a new my_adql_query
+3.3. Create a query named my_adql_query to retrieve the coordinates and g, r, i magnitudes for 10 objects within 0.5 degrees of the center coordinates 
 
 .. code-block:: 
 
@@ -101,7 +122,8 @@ Create a new my_adql_query
                 "FROM dp02_dc2_catalogs.Object " + \
                 "WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), " + \
                 "CIRCLE('ICRS', " + use_center_coords + ", 0.5)) = 1 "
-Print results
+
+3.4. Retrieve and display the results of the query
 
 .. code-block::
 
@@ -109,14 +131,33 @@ Print results
     results_table = results.to_table()
     print(results_table)   
 
-4.2 Convert fluxes into magnitudes
+3.5. Convert fluxes into magnitudes
+
+The object and source catalogs store only fluxes. There are hundreds of flux-related columns, and to store them also as magnitudes would be redundant, and a waste of space. All flux units are nanojanskies (nJy). To convert nJy to AB magnitudes use: mAB = -2.5log(fnJy) + 31.4. 
+
+Add columns of magnitudes after retrieving columns of flux
 
 .. code-block::
    
      results_table['r_calibMag'] = -2.50 * numpy.log10(results_table['r_calibFlux']) + 31.4
      results_table['r_cModelMag'] = -2.50 * numpy.log10(results_table['r_cModelFlux']) + 31.4
+     
+Display the results table including the magnitudes
 
-4.2 Retrieve 10,000 point-like objects
+.. code-block::
+
+    print(results_table) 
+
+Step 4. Retrieve data using TAP for 10,000 objects
+==========================
+
+To retrieve columns of fluxes as magnitudes in an ADQL query, users can do this:
+scisql_nanojanskyToAbMag(g_calibFlux) as g_calibMag, and columns of magnitude errors can be retrieved with:
+scisql_nanojanskyToAbMagSigma(g_calibFlux, g_calibFluxErr) as g_calibMagErr.
+
+In addition to a cone search, impose query restrictions that detect_isPrimary is True (this will not return deblended "child" sources), that the calibrated flux is greater than 360 nJy (about 25th mag), and that the extendedness parameters are 0 (point-like sources).
+
+4.1. Retrieve g-, r- and i-band magnitudes for 10000 point-like objects.
 
 .. code-block::
 
@@ -137,8 +178,7 @@ Print results
                          "AND i_extendedness = 0",
                          maxrec=10000)
 
-
-4.3 Save the data as a pandas dataframe 
+4.2. Save the data as a pandas dataframe. 
 
 .. code-block::
     
@@ -148,12 +188,16 @@ Print results
 Step 5. Make a color-magnitude diagram
 ==========================
 
-5.1 Plot magnitudes
+5.1. Plot the color (r-i magnitudes) vs g magnitude
 
 .. code-block::
 
     plt.plot(data['r_calibMag'].values - data['i_calibMag'].values,
          data['g_calibMag'].values, 'o', ms=2, alpha=0.2)
+	 
+5.2. Define the axis labels and limits
+
+.. code-block::
 
     plt.xlabel('mag_r - mag_i', fontsize=16)
     plt.ylabel('mag_g', fontsize=16)
@@ -163,18 +207,32 @@ Step 5. Make a color-magnitude diagram
     plt.xlim([-0.5, 2.0])
     plt.ylim([25.5, 16.5])
 
-5.2 Save figure
+5.3. Save the plot as a pdf
 
 .. code-block::
 
     plt.savefig('color-magnitude.pdf')
+    
+.. figure:: /_static/cl_color-magnitude
 
 Step 6. Retrieve image data using the butler
 ==========================
 
-6.1 Create an instance of the butler
+The two most common types of images that DP0 delegates will interact with are calexps and deepCoAdds.
 
-Define Butler configuration and collection 
+calexp: A single image in a single filter.
+
+deepCoadd: A combination of single images into a deep stack or Coadd.
+
+The LSST Science Pipelines processes and stores images in tracts and patches. To retrieve and display an image at a desired coordinate, users have to specify their image type, tract, and patch.
+
+tract: A portion of sky within the LSST all-sky tessellation (sky map); divided into patches.
+
+patch: A quadrilateral sub-region of a tract, of a size that fits easily into memory on desktop computers.
+
+The butler (documentation) is an LSST Science Pipelines software package to fetch LSST data without having to know its location or format. The butler can also be used to explore and discover what data exists. Other tutorials demonstrate the full butler functionality.
+
+6.1. Define Butler configuration and collection 
 
 .. code-block::
 
@@ -182,17 +240,21 @@ Define Butler configuration and collection
     collection = '2.2i/runs/DP0.2'
     butler = dafButler.Butler(config, collections=collection)
 
-6.2 Identify and retrieve a deepCoadd
+6.2. Define the coordinates of a known galaxy cluster in the DC2. 
 
 .. code-block::
 
     my_ra_deg = 55.745834
     my_dec_deg = -32.269167
 
+6.3. Use lsst.geom to define a SpherePoint for the cluster's coordinates (lsst.geom documentation).
+
+.. code-block::
+
     my_spherePoint = lsst.geom.SpherePoint(my_ra_deg*lsst.geom.degrees, my_dec_deg*lsst.geom.degrees)
     print(my_spherePoint)
 
-6.3 Retrive the DC2 skymap and identify the tract and patch
+6.3. Retrive the DC2 skymap and identify the tract and patch
 
 .. code-block::
 
@@ -206,14 +268,21 @@ Define Butler configuration and collection
     print('my_tract: ', my_tract)
     print('my_patch: ', my_patch)
 
-6.4 Retrieve the deep i-band Coadd 
+6.4. Retrieve the deep i-band Coadd 
 
 .. code-block::
 
     dataId = {'band': 'i', 'tract': my_tract, 'patch': my_patch}
     my_deepCoadd = butler.get('deepCoadd', dataId=dataId)
 
-6.5 Display the image 
+Step 7. Display the image
+==========================
+
+Image data retrieved with the butler can be displayed several different ways.
+
+For a demonstration of the Firefly interactive interface, work through tutorial notebook 3b.
+
+7.1. Display the image using afwDisplay
 
 To do this with the afwDisplay. 
 
@@ -228,9 +297,11 @@ To do this with the afwDisplay.
     afw_display.scale('asinh', 'zscale')
     afw_display.mtv(my_deepCoadd.image)
     plt.gca().axis('on')
-    plt.savefig('image.pdf')
+    plt.savefig('my_deepCoadd.pdf')
     
-Alternatively, open the image using Firefly
+.. figure:: /_static/cl_my-deep-Coadd
+    
+7.2. Display the image using Firefly
 
 .. code-block::
 
@@ -238,4 +309,4 @@ Alternatively, open the image using Firefly
     afw_display = afwDisplay.Display(frame=1)
     afw_display.mtv(deepCoadd)
 
-For a demonstration of the Firefly interactive interface, work through tutorial notebook 3b.
+
