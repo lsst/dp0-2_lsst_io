@@ -213,7 +213,7 @@ Step 5. Make a color-magnitude diagram
 
     plt.savefig('color-magnitude.pdf')
     
-.. figure:: /_static/cl_color-magnitude
+.. figure:: /_static/cl_color-magnitude.jpg
 
 Step 6. Retrieve image data using the butler
 ==========================
@@ -299,7 +299,7 @@ To do this with the afwDisplay.
     plt.gca().axis('on')
     plt.savefig('my_deepCoadd.pdf')
     
-.. figure:: /_static/cl_my-deep-Coadd
+.. figure:: /_static/cl_my-deep-Coadd.jpg
     
 7.2. Display the image using Firefly
 
