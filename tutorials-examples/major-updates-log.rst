@@ -49,6 +49,11 @@ and clicking on "history" (near upper-right).
 Major Updates Log
 =================
 
+Dec 21 2022
+-----------
+
+Notebooks 06a and 06b (data visualization) added instructions for how to output interactive plots to interactive HTML files that can be downloaded, shared, and opened outside of the JupyterLab environment.
+
 Dec 16 2022
 -----------
 
