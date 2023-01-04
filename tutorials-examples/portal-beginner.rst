@@ -24,6 +24,8 @@
 
 **Last verified to run:** 2022-06-26
 
+**Last update in this branch:** 2023-01-03
+
 **Targeted learning level:** beginner
 
 **Introduction:**
@@ -158,5 +160,11 @@ Under "2. Select Query Type" select "Edit ADQL (Single Table (UI assisted)", and
    AND i_calibFlux >360 AND i_extendedness =0
    AND r_calibFlux >360 AND r_extendedness =0
 
-3.2. Remember to set the "Row Limit" to 10000, and then click "Search" to execute the same query as above.
-Interact with the results in the same way.
+.. _DP0-2-Portal-Beginner-Step-4:
+
+Step 4. Efficient means to transfer ADQL queries from the Portal intance to a Notebook
+===================================
+
+4.1. Now use the newly avaiable functionality for transferring querry results between the Portal and the Notebook Aspects.  Here, we will illistrate the transfer of the query from the Portal to the Notebook.  For a simple ADQL, it can just be copy - and - pasted into a Notebook.  But for more complex queries, it is possible to save the ADQL query as an URL containing the job.   For instance, you've created the query as above.  Then, once you execute it, you can click on the "info" buttom (letter "i" in a circle) - this save the job URL by clicking at the Portal (To be continued)
+
+
