@@ -136,12 +136,9 @@ Use the same "Chart Options" except give it a different "Chart title", such as "
 	
 	The color-magnitude diagrams, including the new scatter plot (right).
 
-
 2.6. Interact with the plot.
 Hover over the data points with a mouse and see the x and y values appear in a pop-up window.
 Select a row in the table and it appears as a different color in the plot, and vice-versa: select a point in the plot and it is highlighted in the table below.
-
-
 
 .. _DP0-2-Portal-Beginner-Step-3:
 
@@ -159,12 +156,34 @@ Under "2. Select Query Type" select "Edit ADQL (Single Table (UI assisted)", and
    AND g_calibFlux >360 AND g_extendedness =0
    AND i_calibFlux >360 AND i_extendedness =0
    AND r_calibFlux >360 AND r_extendedness =0
+   AND CONTAINS (POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 62.0, -37.0, 0.05)) = 1
 
 .. _DP0-2-Portal-Beginner-Step-4:
 
-Step 4. Efficient means to transfer ADQL queries from the Portal intance to a Notebook
+Step 4. Efficient means to transfer ADQL query results from the Portal instance to a Notebook
 ===================================
 
-4.1. Now use the newly avaiable functionality for transferring querry results between the Portal and the Notebook Aspects.  Here, we will illistrate the transfer of the query from the Portal to the Notebook.  For a simple ADQL, it can just be copy - and - pasted into a Notebook.  But for more complex queries, it is possible to save the ADQL query as an URL containing the job.   For instance, you've created the query as above.  Then, once you execute it, you can click on the "info" buttom (letter "i" in a circle) - this save the job URL by clicking at the Portal (To be continued)
+4.1. Now use the newly avaiable functionality for transferring query results between the Portal and the Notebook Aspects.  Here, we will illustrate such  transfer of the query results from the Portal to the Notebook.  Again, you should be working in the "RSP TAP Search" tab of the RSP Portal, and should have clicked on the button "Edit ADQL" as shown below.  You've entered the same query as in the Section 3.1:  
 
+.. figure:: /_static/portal_tut01_step04a.png
+	:name: portal_tut01_step04a
+	
+Now, clicking the "Search" button (red arrow) executes the query.  
 
+For a simple ADQL, the query result can just be copy - and - pasted into a Notebook.  But for more complex queries (for instance, complex table joins), it is possible to save the ADQL query result as an URL containing the job.   For instance, you've created the query as above.  Then, once you execute it, you can click on the "info" button (letter "i" in a circle) 
+
+.. figure:: /_static/portal_tut01_step04b.png
+	:name: portal_tut01_step04b
+
+- this saves the job URL containing the query results (it will look like https://data.lsst.cloud/api/tap/async/myjob12345) - see an example below:  
+
+.. figure:: /_static/portal_tut01_step04c.png
+	:name: portal_tut01_step04c
+
+Now that you have the result, start a notebook, and in a NB use
+
+retrieved_job = retrieve_query('https://data.lsst.cloud/api/tap/async/myjob12345')
+
+retrieved_results = retrieved_job.fetch_result().to_table().to_pandas()
+
+--and then this results in having the same data in your notebook which you had in the portal.  
