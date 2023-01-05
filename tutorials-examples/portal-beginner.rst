@@ -22,9 +22,7 @@
 
 **Contact authors:** Melissa Graham and Greg Madejski
 
-**Last verified to run:** 2022-06-26
-
-**Last update in this branch:** 2023-01-03
+**Last verified to run:** 2023-01-05
 
 **Targeted learning level:** beginner
 
