@@ -161,7 +161,7 @@ Under "2. Select Query Type" select "Edit ADQL (Single Table (UI assisted)", and
 .. _DP0-2-Portal-Beginner-Step-4:
 
 Step 4. Efficient means to transfer ADQL query results from the Portal instance to a Notebook
-===================================
+=============================================================================================
 
 4.1. Now use the newly avaiable functionality for transferring query results between the Portal and the Notebook Aspects.  Here, we will illustrate such  transfer of the query results from the Portal to the Notebook.  Again, you should be working in the "RSP TAP Search" tab of the RSP Portal, and should have clicked on the button "Edit ADQL" as shown below.  You've entered the same query as in the Section 3.1:  
 
