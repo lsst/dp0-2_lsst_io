@@ -150,12 +150,21 @@ Under "2. Select Query Type" select "Edit ADQL (Single Table (UI assisted)", and
 
    SELECT coord_dec,coord_ra,g_calibFlux,i_calibFlux,r_calibFlux
    FROM dp02_dc2_catalogs.Object
-   WHERE CONTAINS (POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 62.0, -37.0, 0.05)) = 1
+   WHERE CONTAINS (POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 62.0, -37.0, 1)) = 1
    AND detect_isPrimary =1
    AND g_calibFlux >360 AND g_extendedness =0
    AND i_calibFlux >360 AND i_extendedness =0
    AND r_calibFlux >360 AND r_extendedness =0
-   
+
+3.2. At the bottom of that page, set the "Row Limit" to 10000 and then click "Search" at lower left.
+The Portal will transition to the "Results View" as in Step 2, above.
+
+**Notice:** although the same "Row Limit" of 10000 was applied both in Step 1.7 and Step 3.2,
+the two searches will not return the exact same rows.
+Queries which return only a subset of all possible results, in this case 10000 out of all possible rows,
+will return random subsets.
+
+
 
 .. _DP0-2-Portal-Beginner-Step-4:
 
