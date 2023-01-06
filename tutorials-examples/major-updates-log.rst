@@ -49,6 +49,11 @@ and clicking on "history" (near upper-right).
 Major Updates Log
 =================
 
+Jan 05 2023
+-----------
+
+Portal Tutorial 01 updated with a new Section 4, illustrating how to copy the URL containing query results for use in a notebook.  
+
 Dec 21 2022
 -----------
 
@@ -109,3 +114,4 @@ June 27 2022
 ------------
 
 All tutorials updated for the release of DP0.2.
+

@@ -22,7 +22,7 @@
 
 **Contact authors:** Melissa Graham and Greg Madejski
 
-**Last verified to run:** 2022-06-26
+**Last verified to run:** 2023-01-05
 
 **Targeted learning level:** beginner
 
@@ -134,11 +134,9 @@ Use the same "Chart Options" except give it a different "Chart title", such as "
 	
 	The color-magnitude diagrams, including the new scatter plot (right).
 
-
 2.6. Interact with the plot.
 Hover over the data points with a mouse and see the x and y values appear in a pop-up window.
 Select a row in the table and it appears as a different color in the plot, and vice-versa: select a point in the plot and it is highlighted in the table below.
-
 
 
 .. _DP0-2-Portal-Beginner-Step-3:
@@ -153,10 +151,63 @@ Under "2. Select Query Type" select "Edit ADQL (Single Table (UI assisted)", and
 
    SELECT coord_dec,coord_ra,g_calibFlux,i_calibFlux,r_calibFlux
    FROM dp02_dc2_catalogs.Object
-   WHERE detect_isPrimary =1
+   WHERE CONTAINS (POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 62.0, -37.0, 1)) = 1
+   AND detect_isPrimary =1
    AND g_calibFlux >360 AND g_extendedness =0
    AND i_calibFlux >360 AND i_extendedness =0
    AND r_calibFlux >360 AND r_extendedness =0
 
-3.2. Remember to set the "Row Limit" to 10000, and then click "Search" to execute the same query as above.
-Interact with the results in the same way.
+3.2. At the bottom of that page, set the "Row Limit" to 10000 and then click "Search" at lower left.
+The Portal will transition to the "Results View" as in Step 2, above.
+
+**Notice:** although the same "Row Limit" of 10000 was applied both in Step 1.7 and Step 3.2,
+the two searches will not return the exact same rows.
+Queries which return only a subset of all possible results, in this case 10000 out of all possible rows,
+will return random subsets.
+
+
+
+.. _DP0-2-Portal-Beginner-Step-4:
+
+Step 4. Transfer ADQL queries or results from the Portal to the Notebook Aspect
+===============================================================================
+
+4.1. As described under Step 1.6, once a query is all set up in the Portal using the "Single Table (UI assisted)",
+click "Populate and Edit ADQL" to switch the Query Type to "Edit ADQL (advanced)" and populate the ADQL query box.
+Shown below is the same query as in Step 3.1 above:  
+
+.. figure:: /_static/portal_tut01_step04a.png  
+	:name: portal_tut01_step04a
+	
+To execute the query in the Portal, click the "Search" button.
+
+To execute the query in the Notebook Aspect, copy-paste the ADQL statement into the code cell of any notebook that
+which uses the TAP service, as demonstrated in Section 2.3 of the first tutorial notebook, 01 Introduction to DP0.2.
+
+4.2. It is also possible to obtain a URL for direct access to the query results.
+This URL can be used from the Notebook Aspect; this is an especially useful feature for 
+queries that are large, complex, or time-consuming to execute (for instance, multiple table joins),
+or for sharing query results with colleagues.
+
+As an example, the image below displays the Results View for a small query using just a 0.05 degree radius.
+
+.. figure:: /_static/portal_tut01_step04b.png  
+	:name: portal_tut01_step04b
+
+Click on the "info" button (letter "i" in a circle), and a pop-up window will appear:
+
+.. figure:: /_static/portal_tut01_step04c.png  
+	:name: portal_tut01_step04c
+
+The "Job Link" in the pop-up is the URL to the query results.
+Click on the clipboard icon to copy the URL to your clipboard.
+
+As demonstrated in Section 5.4 of the second tutorial notebook, 02 Catalog Queries with TAP,
+the URL can be pasted into a code cell and the query results retrived using the following commands:
+
+.. code-block:: SQL
+
+	retrieved_job = retrieve_query('https://data.lsst.cloud/api/tap/async/myjob12345')
+	retrieved_results = retrieved_job.fetch_result().to_table().to_pandas()
+
+This results in having the same data in your notebook which you first obtained via the Portal Aspect.
