@@ -169,8 +169,8 @@ will return random subsets.
 
 .. _DP0-2-Portal-Beginner-Step-4:
 
-Step 4. Transfer ADQL queries and results from the Portal to the Notebook Aspect
-================================================================================
+Step 4. Transfer ADQL queries or results from the Portal to the Notebook Aspect
+===============================================================================
 
 4.1. As described under Step 1.6, once a query is all set up in the Portal using the "Single Table (UI assisted)",
 click "Populate and Edit ADQL" to switch the Query Type to "Edit ADQL (advanced)" and populate the ADQL query box.
@@ -179,28 +179,35 @@ Shown below is the same query as in Step 3.1 above:
 .. figure:: /_static/portal_tut01_step04a.png  
 	:name: portal_tut01_step04a
 	
-To execute the query in the Portal, click the "Search" button (red arrow).
+To execute the query in the Portal, click the "Search" button.
 
 To execute the query in the Notebook Aspect, copy-paste the ADQL statement into the code cell of any notebook that
-which uses the TAP service, as demonstrated in Section 2.3 of the first tutorial notebook, Introduction to DP0.2.
+which uses the TAP service, as demonstrated in Section 2.3 of the first tutorial notebook, 01 Introduction to DP0.2.
 
-4.2. But for more complex queries (for instance, complex table joins), it is possible to save the ADQL query result as an URL containing the job.   
-For instance, you've created the query as above.  Then, once you execute it, you can click on the "info" button (letter "i" in a circle): 
+4.2. It is also possible to obtain a URL for direct access to the query results.
+This URL can be used from the Notebook Aspect; this is an especially useful feature for 
+queries that are large, complex, or time-consuming to execute (for instance, multiple table joins),
+or for sharing query results with colleagues.
+
+As an example, the image below displays the Results View for a small query using just a 0.05 degree radius.
 
 .. figure:: /_static/portal_tut01_step04b.png  
 	:name: portal_tut01_step04b
 
-This saves the job URL containing the query results (it will look like https://data.lsst.cloud/api/tap/async/myjob12345) - see an example below:  
+Click on the "info" button (letter "i" in a circle), and a pop-up window will appear:
 
 .. figure:: /_static/portal_tut01_step04c.png  
 	:name: portal_tut01_step04c
 
-4.3. Now that you have the result, start a notebook, and in a NB use
+The "Job Link" in the pop-up is the URL to the query results.
+Click on the clipboard icon to copy the URL to your clipboard.
+
+As demonstrated in Section 5.4 of the second tutorial notebook, 02 Catalog Queries with TAP,
+the URL can be pasted into a code cell and the query results retrived using the following commands:
 
 .. code-block:: SQL
 
 	retrieved_job = retrieve_query('https://data.lsst.cloud/api/tap/async/myjob12345')
-	
 	retrieved_results = retrieved_job.fetch_result().to_table().to_pandas()
 
-This now results in having the same data in your notebook which you had in the portal.  
+This results in having the same data in your notebook which you first obtained via the Portal Aspect.
