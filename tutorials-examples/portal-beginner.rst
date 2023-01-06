@@ -138,6 +138,7 @@ Use the same "Chart Options" except give it a different "Chart title", such as "
 Hover over the data points with a mouse and see the x and y values appear in a pop-up window.
 Select a row in the table and it appears as a different color in the plot, and vice-versa: select a point in the plot and it is highlighted in the table below.
 
+
 .. _DP0-2-Portal-Beginner-Step-3:
 
 Step 3. Do the same query with ADQL
@@ -168,20 +169,20 @@ will return random subsets.
 
 .. _DP0-2-Portal-Beginner-Step-4:
 
-Step 4. Efficient means to transfer ADQL query results from the Portal instance to a Notebook
-=============================================================================================
+Step 4. Transfer ADQL queries and results from the Portal to the Notebook Aspect
+================================================================================
 
-4.1. Now use the newly avaiable functionality for transferring query results between the Portal and the Notebook Aspects.  
-Here, we will illustrate such  transfer of the query results from the Portal to the Notebook.  
-Again, you should be working in the "RSP TAP Search" tab of the RSP Portal, and should have clicked on the button "Edit ADQL" as shown below.  
-You've entered the same query as in the Section 3.1:  
+4.1. As described under Step 1.6, once a query is all set up in the Portal using the "Single Table (UI assisted)",
+click "Populate and Edit ADQL" to switch the Query Type to "Edit ADQL (advanced)" and populate the ADQL query box.
+Shown below is the same query as in Step 3.1 above:  
 
 .. figure:: /_static/portal_tut01_step04a.png  
 	:name: portal_tut01_step04a
 	
-Now, clicking the "Search" button (red arrow) executes the query.  
+To execute the query in the Portal, click the "Search" button (red arrow).
 
-For a simple ADQL, the query result can just be copy - and - pasted into a Notebook.  
+To execute the query in the Notebook Aspect, copy-paste the ADQL statement into the code cell of any notebook that
+which uses the TAP service, as demonstrated in Section 2.3 of the first tutorial notebook, Introduction to DP0.2.
 
 4.2. But for more complex queries (for instance, complex table joins), it is possible to save the ADQL query result as an URL containing the job.   
 For instance, you've created the query as above.  Then, once you execute it, you can click on the "info" button (letter "i" in a circle): 
