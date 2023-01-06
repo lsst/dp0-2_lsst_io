@@ -51,8 +51,7 @@ Solar system objects are not included. A flat sky background is assumed in each 
 Single-image processing
 =======================
 
-The LSST DESC DC2 image processing is described in `Section 7 <https://arxiv.org/pdf/2010.05926.pdf#page=24>`_ of the `DC2 Paper <https://arxiv.org/abs/2010.05926>`_.
-The simulated images were processed with the Data Release Production (DRP) pipeline included as part of the `v23.0.1 <https://pipelines.lsst.io/v/v23_0_2/releases/v23_0_0.html>`_ release of the LSST Science Pipelines.
+For DP0.2, the images simulated by DESC were processed by Rubin staff with the Data Release Production (DRP) pipeline included as part of the `v23.0.1 <https://pipelines.lsst.io/v/v23_0_2/releases/v23_0_0.html>`_ release of the LSST Science Pipelines.
 More detailed descriptions of the LSST Science Pipelines can be found in `Bosch et al. (2018) <https://arxiv.org/abs/1705.06766>`_ and `Bosch et al. (2019) <https://arxiv.org/abs/1812.03248>`_.
 Briefly, image processing with the DRP pipeline involves four major steps – single-frame processing, calibration, image coaddition, and coadd processing. For single-frame processing, individual visits are processed on a per-CCD basis.
 This step starts with instrument signature removal (ISR) that consists of bias subtraction, crosstalk correction, non-linearity correction, flat fielding, brighter-fatter correction, and masking of bad and saturated pixels
