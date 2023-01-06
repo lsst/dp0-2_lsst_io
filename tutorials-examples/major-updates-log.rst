@@ -49,10 +49,27 @@ and clicking on "history" (near upper-right).
 Major Updates Log
 =================
 
-January 05 2023
----------------
+Jan 05 2023
+-----------
 
 Portal Tutorial 01 updated with a new Section 4, illustrating how to copy the URL containing query results for use in a notebook.  
+
+Dec 21 2022
+-----------
+
+Notebooks 06a and 06b (data visualization) added instructions for how to output interactive plots to interactive HTML files that can be downloaded, shared, and opened outside of the JupyterLab environment.
+
+Dec 16 2022
+-----------
+
+Notebook 03a (image display) added cutout funtion for calexps (previously only had one for deepCoadds)
+
+Notebook 08 (truth tables) added new Section 3.3 to demonstrate an efficient single-Object search
+
+Use of warning suppression has been modified in many notebooks to align with `RTN-045 <https://rtn-045.lsst.io/>`__.
+
+:doc:`/data-access-analysis-tools/adql-recipes` and :doc:`/data-access-analysis-tools/python-functions` have been added to the DP0.2 documentation.
+They include copy-pastable functions and query recipes for users.
 
 Oct 26 2022
 -----------

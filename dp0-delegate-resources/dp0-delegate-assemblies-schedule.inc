@@ -64,7 +64,7 @@
      - `Analysis of DIA sources by Vincenzo Petrecca <https://community.lsst.org/t/summary-delegate-assembly-fri-nov-18/7237>`__
      - *breakouts*
    * - 2022-12-09
-     - DP0 2022 Year In Review with Delegate Flash Talks!
+     - `DP0 2022 Year In Review with Delegate Flash Talks! <https://community.lsst.org/t/invitation-to-join-virtual-seminar-dp0-2-half-year-review-with-delegate-flash-talks-fri-dec-9-9am-pst/7267>`__
      - *breakouts*
    * - 2023-01-20
      - Delegate Presenter: Bob Abel
@@ -72,8 +72,9 @@
    * - 2023-02-03
      - *TBD: open for a volunteer presenter*
      - *breakouts*
-
-All will be welcome to participate in the "DP0 2022 Year In Review: Delegate Flash Talks!" session on 2022-12-09. Details to be circulated.
+   * - 2023-02-17
+     - *TBD: open for a volunteer presenter*
+     - *breakouts*
 
 Additional delegate assemblies to be posted.
 Rows in *italics* are tentative topics.

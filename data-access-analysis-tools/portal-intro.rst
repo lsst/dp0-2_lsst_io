@@ -33,10 +33,10 @@ The Portal's user interface
 Click on any "settings" icons you see (double gears) to explore options.
 The Portal is a very powerful user interface with far more options than are covered in the introduction below.
 
-**"1. Select TAP Service"**
+**Select TAP Service**
 Leave the default (``https://data.lsst.cloud/api/tap``) to access DP0 data.
 
-**"2. Select Query Type"**
+**Select Query Type**
 There are three types of queries: :ref:`Portal-Intro-Single-Table-Queries`, :ref:`Portal-Intro-ADQL-Queries`, and :ref:`Portal-Intro-Image-Queries`.
 Each of these options has a different user interface, covered in the sections below.
 
@@ -53,13 +53,13 @@ The default query type, and default user interface, is for "Single Table (UI ass
 
     The default view of the Portal's user interface for single table queries.
     
-**3. Select Table**: Drop down menus of available tables.
+**Select Table**: Drop down menus of available tables.
 For DP0 data, choose the "Table Collection (Schema): dp02_dc2_catalogs" in the left drop-down menu.
 The default table in the right drop-down menu is the Object table.
 See the :ref:`DP0-2-Data-Products-DPDD` for table descriptions and schema.
 Notice how the table view at lower-right will automatically update to match the selected table.
 
-**4. Enter Constraints**: For "Spatial" constraints, the longitude and latitude columns do not yet automatically
+**Enter Constraints**: For "Spatial" constraints, the longitude and latitude columns do not yet automatically
 update to be the correct column names for right ascension and declination for the selected table, and need to be
 entered (for the Object table, they are "coord_ra" and "coord_dec").
 If a non-existent column name is entered, the box will highlight red in indication of the error.
@@ -114,6 +114,8 @@ The search might take a few moments.
 
     This will show while the search is executing.
 
+**Cancel**: It is possible to cancel a query while it is executing by clicking the "Cancel" button.
+
 **Results view**: The search results will populate the results view, as shown in the figure below.
 There are many icons that control the display settings; hover the mouse over any of them to see a pop-up description.
 At upper right, notice the options "tri-view", "img-tbl", "img-xy", and "xy-tbl".
@@ -125,6 +127,14 @@ A default "xy" plot of the sky coordinates appears at upper right, and the table
     :name: portal_search_results_DP02
 
     The default view of the search results.
+
+**Multiple queries and results**: From the results view page (see figure above), if you click on the "RSP TAP Search" button at upper left
+you can go back to the query page and execute another query by entering constraints and clicking "Search".
+(Click "Cancel" on the TAP search page to return to the results view without executing a new query).
+The new query's results will appear as a new tab in the table of the results view page.
+In the image above, you can see that this has been done, because the results view table has two tabs.
+Switching between table tabs will also cause the image and xy plot to switch to show the selected query results.
+Delete the results for a given query by clicking on the x in the table tab.
 
 **Maniuplating the plotted data and converting fluxes to magnitudes**:
 To manipulate the plotted data, select the double gear "settings" icon above the x-y plot and a pop-up window will open (see the next figure).
