@@ -67,13 +67,28 @@
      - `DP0 2022 Year In Review with Delegate Flash Talks! <https://community.lsst.org/t/invitation-to-join-virtual-seminar-dp0-2-half-year-review-with-delegate-flash-talks-fri-dec-9-9am-pst/7267>`__
      - *breakouts*
    * - 2023-01-20
-     - Delegate Presenter: Bob Abel
-     - *breakouts*
+     - `Stellar Classification by Bob Abel <https://community.lsst.org/t/summary-delegate-assembly-fri-jan-20-2023/7371>`__
+     - Continued stellar classification discussions. General Q&A.
    * - 2023-02-03
-     - *TBD: open for a volunteer presenter*
+     - Milky Way halo science (Jeff Carlin)
      - *breakouts*
    * - 2023-02-17
-     - *TBD: open for a volunteer presenter*
+     - Creating custom coadds (Melissa Graham)
+     - *breakouts*
+   * - 2023-03-02
+     - Truth data (Jeff Carlin & Melissa Graham)
+     - *breakouts*
+   * - 2023-03-17
+     - Time domain science (Ryan Lau)
+     - *breakouts*
+   * - 2023-03-31
+     - *tbd; delegate volunteers welcome*
+     - *breakouts*
+   * - 2023-04-14
+     - *tbd; delegate volunteers welcome*
+     - *breakouts*
+   * - 2023-04-28
+     - *tbd; delegate volunteers welcome*
      - *breakouts*
 
 Additional delegate assemblies to be posted.
