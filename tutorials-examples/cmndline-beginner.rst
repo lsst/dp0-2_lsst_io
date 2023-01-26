@@ -28,9 +28,9 @@
 
 **Introduction:** 
 This tutorial is an introduction to the terminal and command line functionality within the Rubin Science Platform. It is parallel to the 
-Jupyter Notebook tutorial "Introduction to DP02" and demonstrates how to use the TAP service to query and retrieved catalog data; matplotlib to plot catalog data; the LSST Butler package to query and retrieve image data; and the LSST afwDisplay package to display images.
+Jupyter Notebook tutorial "Introduction to DP02" and demonstrates how to use the TAP service to query and retrieve catalog data; matplotlib to plot catalog data; the LSST Butler package to query and retrieve image data; and the LSST afwDisplay image package.
 
-This tutorial uses the Data Preview 0.2 (DP0.2) data set. This data set uses a subset of the DESC's Data Challenge 2 (DC2) simulated images, which have been reprocessed by Rubin Observatory using Version 23 of the LSST Science Pipelines. More information about the simulated data can be found in the DESC's DC2 paper and in the DP0.2 data release documentation.
+This tutorial uses the Data Preview 0.2 (DP0.2) data set. This data set uses a subset of the DESC's Data Challenge 2 (DC2) simulated images, which have been reprocessed by Rubin Observatory using Version 23 of the LSST Science Pipelines. More information about the simulated data can be found in the DESC's `DC2 paper <https://ui.adsabs.harvard.edu/abs/2021ApJS..253...31L/abstract>`_ and in the `DP0.2 data release documentation <https://dp0-2.lsst.io>`_.
 
 .. _DP0-2-Cmndline-Beginner-Step-1:
 
@@ -49,7 +49,7 @@ Step 1. Access the terminal and setup
 
     setup lsst_distrib
 
-1.4. Start an interactive python session
+1.4. Start an interactive Python session
 
 .. code-block::
 
@@ -89,17 +89,11 @@ This tutorial makes use of several packages that will be commonly used when inte
 Step 3. Retrieve data using TAP for 10 objects
 ==========================
 
-Table Access Procotol (TAP) provides standardized access to the catalog data for discovery, search, and retrieval. Full documentation for TAP is provided by the International Virtual Observatory Alliance (IVOA).
-
-The TAP service uses a query language similar to SQL (Structured Query Langage) called ADQL (Astronomical Data Query Language). The documentation for ADQL includes more information about syntax and keywords.
+Table Access Procotol (TAP) provides standardized access to the catalog data for discovery, search, and retrieval. `Full documentation for TAP <https://www.ivoa.net/documents/TAP/>`_ is provided by the International Virtual Observatory Alliance (IVOA). The TAP service uses a query language similar to SQL (Structured Query Langage) called ADQL (Astronomical Data Query Language). The `documentation for ADQL <https://www.ivoa.net/documents/latest/ADQL.html>`_ includes more information about syntax and keywords.
 
 Notice: Not all ADQL functionality is supported by the RSP for Data Preview 0.
 
 This example uses the DP0.2 Object catalog, which contains sources detected in the coadded images (also called stacked, combined, or deepCoadd images).
-
-Results from a TAP service search are best displayed using one of two functions:
-.to_table(): convert results to an astropy table. 
-.to_table().to_pandas(): convert to an astropy table and then to a Pandas dataframe.
 
 3.1. Start the TAP service 
 
@@ -107,13 +101,13 @@ Results from a TAP service search are best displayed using one of two functions:
 
     service = get_tap_service()
     
-3.2. Define the coordinates for a cone search centered around the region covered by DC2 simulation (RA,Dec = 62,-37).
+3.2. Define the coordinates for a cone search centered around the region covered by the DC2 simulation (RA,Dec = 62,-37).
 
 .. code-block::
 
     use_center_coords = "62, -37"
 
-3.3. Create a query named my_adql_query to retrieve the coordinates and g, r, i magnitudes for 10 objects within 0.5 degrees of the center coordinates 
+3.3. Create a query named my_adql_query to retrieve the coordinates and g, r, i magnitudes for objects within 0.5 degrees of the center coordinates 
 
 .. code-block:: 
 
@@ -123,7 +117,7 @@ Results from a TAP service search are best displayed using one of two functions:
                 "WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), " + \
                 "CIRCLE('ICRS', " + use_center_coords + ", 0.5)) = 1 "
 
-3.4. Retrieve and display the results of the query
+3.4. Retrieve and display the results of the query for 10 objects
 
 .. code-block::
 
@@ -133,7 +127,10 @@ Results from a TAP service search are best displayed using one of two functions:
 
 3.5. Convert fluxes into magnitudes
 
-The object and source catalogs store only fluxes. There are hundreds of flux-related columns, and to store them also as magnitudes would be redundant, and a waste of space. All flux units are nanojanskies (nJy). To convert nJy to AB magnitudes use: mAB = -2.5log(fnJy) + 31.4. 
+The object and source catalogs store only fluxes. There are hundreds of flux-related columns, and to store them also as magnitudes would be redundant, and a waste of space. All flux units are nanojanskies (nJy). To convert nJy to AB magnitudes use: |mab| = -2.5log(|fnJy|) + 31.4. 
+
+.. |mab| replace:: m\ :sub:`AB`\ 
+.. |fnJy| replace:: f\ :sub:`nJy`\
 
 Add columns of magnitudes after retrieving columns of flux
 
@@ -155,9 +152,9 @@ To retrieve columns of fluxes as magnitudes in an ADQL query, users can do this:
 scisql_nanojanskyToAbMag(g_calibFlux) as g_calibMag, and columns of magnitude errors can be retrieved with:
 scisql_nanojanskyToAbMagSigma(g_calibFlux, g_calibFluxErr) as g_calibMagErr.
 
-In addition to a cone search, impose query restrictions that detect_isPrimary is True (this will not return deblended "child" sources), that the calibrated flux is greater than 360 nJy (about 25th mag), and that the extendedness parameters are 0 (point-like sources).
-
 4.1. Retrieve g-, r- and i-band magnitudes for 10000 point-like objects.
+
+In addition to a cone search, impose query restrictions that detect_isPrimary is True (this will not return deblended "child" sources), that the calibrated flux is greater than 360 nJy (about 25th mag), and that the extendedness parameters are 0 (point-like sources).
 
 .. code-block::
 
@@ -230,15 +227,13 @@ tract: A portion of sky within the LSST all-sky tessellation (sky map); divided 
 
 patch: A quadrilateral sub-region of a tract, of a size that fits easily into memory on desktop computers.
 
-The butler (documentation) is an LSST Science Pipelines software package to fetch LSST data without having to know its location or format. The butler can also be used to explore and discover what data exists. Other tutorials demonstrate the full butler functionality.
+The butler (`butler documentation <https://pipelines.lsst.io/modules/lsst.daf.butler/index.html>`_) is an LSST Science Pipelines software package to fetch LSST data without having to know its location or format. The butler can also be used to explore and discover what data exists. Other tutorials demonstrate the full butler functionality.
 
-6.1. Define Butler configuration and collection 
+6.1. Define a butler configuration and collection 
 
 .. code-block::
 
-    config = 'dp02'
-    collection = '2.2i/runs/DP0.2'
-    butler = dafButler.Butler(config, collections=collection)
+    butler = dafButler.Butler('dp02', collections='2.2i/runs/DP0.2')
 
 6.2. Define the coordinates of a known galaxy cluster in the DC2. 
 
@@ -247,14 +242,14 @@ The butler (documentation) is an LSST Science Pipelines software package to fetc
     my_ra_deg = 55.745834
     my_dec_deg = -32.269167
 
-6.3. Use lsst.geom to define a SpherePoint for the cluster's coordinates (lsst.geom documentation).
+6.3. Use lsst.geom to define a SpherePoint for the cluster's coordinates (`lsst.geom documentation <https://pipelines.lsst.io/modules/lsst.geom/index.html>`_).
 
 .. code-block::
 
     my_spherePoint = lsst.geom.SpherePoint(my_ra_deg*lsst.geom.degrees, my_dec_deg*lsst.geom.degrees)
     print(my_spherePoint)
 
-6.3. Retrive the DC2 skymap and identify the tract and patch
+6.3. Retrive the DC2 skymap (`skymap documentation <https://pipelines.lsst.io/modules/lsst.skymap/index.html>`_) and identify the tract and patch
 
 .. code-block::
 
@@ -280,11 +275,7 @@ Step 7. Display the image
 
 Image data retrieved with the butler can be displayed several different ways.
 
-For a demonstration of the Firefly interactive interface, work through tutorial notebook 3b.
-
-7.1. Display the image using afwDisplay
-
-To do this with the afwDisplay. 
+7.1. Display the image using afwDisplay (`afwDisplay documentation <https://pipelines.lsst.io/modules/lsst.afw.display/index.html>`_).
 
 .. code-block::
 
@@ -301,12 +292,14 @@ To do this with the afwDisplay.
     
 .. figure:: /_static/cl_my-deep-Coadd.jpg
     
-7.2. Display the image using Firefly
+7.2. Display the image using Firefly (`Firefly documentation <https://pipelines.lsst.io/v/daily/modules/lsst.display.firefly/index.html>`_). 
 
 .. code-block::
 
     afwDisplay.setDefaultBackend('firefly')
     afw_display = afwDisplay.Display(frame=1)
     afw_display.mtv(deepCoadd)
+   
+Optional: For a demonstration of the Firefly interactive interface, work through tutorial notebook 3b.
 
 
