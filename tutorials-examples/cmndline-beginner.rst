@@ -298,7 +298,7 @@ Image data retrieved with the butler can be displayed several different ways.
 
     afwDisplay.setDefaultBackend('firefly')
     afw_display = afwDisplay.Display(frame=1)
-    afw_display.mtv(deepCoadd)
+    afw_display.mtv(my_deepCoadd)
    
 Optional: For a demonstration of the Firefly interactive interface, work through tutorial notebook 3b.
 
