@@ -155,6 +155,21 @@ DP0 virtual seminars
 Attendance at any of the following virtual seminars is optional for DP0 delegates.
 
 
+.. _Delegate-Homepage-DP0-Virtual-Summer-School-2023:
+
+DP0 virtual summer school 2023
+------------------------------
+
+Planning is currently in progress.
+
+.. toctree::
+    :maxdepth: 2
+    :glob:
+
+    virtual-summer-school-2023
+
+
+
 .. _Delegate-Homepage-DP0-Delegate-Assemblies:
 
 DP0 delegate assemblies
