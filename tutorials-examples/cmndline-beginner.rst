@@ -340,4 +340,9 @@ Double click on the filename to open and view the image.
    
 Optional: For a demonstration of the Firefly interactive interface, work through "03b Image Display with Firefly" of the :ref:`DP0-2-Tutorials-Notebooks`.
 
+7.3. When you're done, exit python to return to the regular command line.
+
+.. code-block::
+
+    exit()
 
