@@ -74,7 +74,7 @@ list of available tutorials with descriptions.
 Command line tutorials
 ======================
 
-*Placeholder: text describing how command line tutorials are executed in Notebook aspect, etc.*
+Much of the contents of the tutorial notebooks (above) can also be executed via the terminal in the Notebook Aspect of the RSP.
 
 .. toctree::
     :titlesonly:
