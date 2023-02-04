@@ -14,55 +14,62 @@
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
 .. A warning will alert you of identical labels during the linkcheck process.
 
-###########################
-01. Command Line (beginner)
-###########################
+####################################
+01. Introduction to DP0.2 (beginner)
+####################################
 
 .. This section should provide a brief, top-level description of the page.
 
-**Contact authors:** Gloria Fonseca Alvarez
+**Contact author:** Gloria Fonseca Alvarez
 
 **Last verified to run:** 02/01/2023
 
 **Targeted learning level:** Beginner
 
-**Introduction:** 
-This tutorial is an introduction to the terminal and command line functionality within the Rubin Science Platform. It is parallel to the 
-Jupyter Notebook tutorial "Introduction to DP02" and demonstrates how to use the TAP service to query and retrieve catalog data; matplotlib to plot catalog data; the LSST Butler package to query and retrieve image data; and the LSST afwDisplay image package.
+**Container size:** medium
 
-This tutorial uses the Data Preview 0.2 (DP0.2) data set. This data set uses a subset of the DESC's Data Challenge 2 (DC2) simulated images, which have been reprocessed by Rubin Observatory using Version 23 of the LSST Science Pipelines. More information about the simulated data can be found in the DESC's `DC2 paper <https://ui.adsabs.harvard.edu/abs/2021ApJS..253...31L/abstract>`_ and in the `DP0.2 data release documentation <https://dp0-2.lsst.io>`_.
+**Introduction:** 
+This tutorial is an introduction to the terminal and command line functionality within the Rubin Science Platform.
+It is parallel to the Jupyter Notebook tutorial "Introduction to DP02" and demonstrates how to use the TAP service to query and retrieve catalog data;
+matplotlib to plot catalog data; the LSST Butler package to query and retrieve image data; and the LSST afwDisplay image package.
+
+This tutorial uses the Data Preview 0.2 (DP0.2) data set.
+This data set uses a subset of the DESC's Data Challenge 2 (DC2) simulated images, which have been reprocessed by Rubin Observatory using Version 23 of the LSST Science Pipelines.
+More information about the simulated data can be found in the DESC's `DC2 paper <https://ui.adsabs.harvard.edu/abs/2021ApJS..253...31L/abstract>`_ and in the `DP0.2 data release documentation <https://dp0-2.lsst.io>`_.
+
 
 .. _DP0-2-Cmndline-Beginner-Step-1:
 
 Step 1. Access the terminal and setup
-==========================
+=====================================
 
 1.1. Log in to the Notebook Aspect.
 
-1.2. In the launcher window under "Other", select the terminal
+1.2. In the launcher window under "Other", select the terminal.
 
 .. figure:: /_static/other_terminal.png
 
-1.3 Set up the Rubin Observatory environment
+1.3. Set up the Rubin Observatory environment.
 
 .. code-block::
 
     setup lsst_distrib
 
-1.4. Start an interactive Python session
+1.4. Start an interactive Python session.
 
 .. code-block::
 
     python
 
+
 .. _DP0-2-Cmndline-Beginner-Step-2:
 
 Step 2. Import packages
-==========================
+=======================
 
 This tutorial makes use of several packages that will be commonly used when interacting with catalog and image data. 
 
-2.1. Import general python packages
+2.1. Import general python packages.
 
 .. code-block::
 
@@ -70,7 +77,7 @@ This tutorial makes use of several packages that will be commonly used when inte
     import matplotlib
     import matplotlib.pyplot as plt
 
-2.2. Import packages needed to access the catalog data
+2.2. Import packages needed to access the catalog data.
 
 .. code-block::
 
@@ -78,7 +85,7 @@ This tutorial makes use of several packages that will be commonly used when inte
     pandas.set_option('display.max_rows', 1000)
     from lsst.rsp import get_tap_service, retrieve_query
 
-2.3. Import packages needed to access images
+2.3. Import packages needed to access images.
 
 .. code-block::
 
@@ -86,16 +93,23 @@ This tutorial makes use of several packages that will be commonly used when inte
     import lsst.geom
     import lsst.afw.display as afwDisplay
 
-Step 3. Retrieve data using TAP for 10 objects
-==========================
 
-Table Access Procotol (TAP) provides standardized access to the catalog data for discovery, search, and retrieval. `Full documentation for TAP <https://www.ivoa.net/documents/TAP/>`_ is provided by the International Virtual Observatory Alliance (IVOA). The TAP service uses a query language similar to SQL (Structured Query Langage) called ADQL (Astronomical Data Query Language). The `documentation for ADQL <https://www.ivoa.net/documents/latest/ADQL.html>`_ includes more information about syntax and keywords.
+
+.. _DP0-2-Cmndline-Beginner-Step-3:
+
+Step 3. Retrieve data using TAP for 10 objects
+==============================================
+
+Table Access Procotol (TAP) provides standardized access to the catalog data for discovery, search, and retrieval.
+`Full documentation for TAP <https://www.ivoa.net/documents/TAP/>`_ is provided by the International Virtual Observatory Alliance (IVOA).
+The TAP service uses a query language similar to SQL (Structured Query Langage) called ADQL (Astronomical Data Query Language).
+The `documentation for ADQL <https://www.ivoa.net/documents/latest/ADQL.html>`_ includes more information about syntax and keywords.
 
 Notice: Not all ADQL functionality is supported by the RSP for Data Preview 0.
 
 This example uses the DP0.2 Object catalog, which contains sources detected in the coadded images (also called stacked, combined, or deepCoadd images).
 
-3.1. Start the TAP service 
+3.1. Start the TAP service .
 
 .. code-block::
 
@@ -107,7 +121,7 @@ This example uses the DP0.2 Object catalog, which contains sources detected in t
 
     use_center_coords = "62, -37"
 
-3.3. Create a query named my_adql_query to retrieve the coordinates and g, r, i magnitudes for objects within 0.5 degrees of the center coordinates 
+3.3. Create a query named my_adql_query to retrieve the coordinates and g, r, i magnitudes for objects within 0.5 degrees of the center coordinates.
 
 .. code-block:: 
 
@@ -117,7 +131,7 @@ This example uses the DP0.2 Object catalog, which contains sources detected in t
                 "WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), " + \
                 "CIRCLE('ICRS', " + use_center_coords + ", 0.5)) = 1 "
 
-3.4. Retrieve and display the results of the query for 10 objects
+3.4. Retrieve and display the results of the query for 10 objects.
 
 .. code-block::
 
@@ -125,31 +139,39 @@ This example uses the DP0.2 Object catalog, which contains sources detected in t
     results_table = results.to_table()
     print(results_table)   
 
-3.5. Convert fluxes into magnitudes
+3.5. Convert fluxes into magnitudes.
 
-The object and source catalogs store only fluxes. There are hundreds of flux-related columns, and to store them also as magnitudes would be redundant, and a waste of space. All flux units are nanojanskies (nJy). To convert nJy to AB magnitudes use: |mab| = -2.5log(|fnJy|) + 31.4. 
+The object and source catalogs store only fluxes.
+There are hundreds of flux-related columns, and to store them also as magnitudes would be redundant, and a waste of space.
+All flux units are nanojanskies (nJy).
+To convert nJy to AB magnitudes use: |mab| = -2.5log(|fnJy|) + 31.4. 
 
 .. |mab| replace:: m\ :sub:`AB`\ 
 .. |fnJy| replace:: f\ :sub:`nJy`\
 
-Add columns of magnitudes after retrieving columns of flux
+Add columns of magnitudes after retrieving columns of flux.
 
 .. code-block::
    
      results_table['r_calibMag'] = -2.50 * numpy.log10(results_table['r_calibFlux']) + 31.4
      results_table['r_cModelMag'] = -2.50 * numpy.log10(results_table['r_cModelFlux']) + 31.4
      
-Display the results table including the magnitudes
+Display the results table including the magnitudes.
 
 .. code-block::
 
     print(results_table) 
 
+
+
+.. _DP0-2-Cmndline-Beginner-Step-4:
+
 Step 4. Retrieve data using TAP for 10,000 objects
-==========================
+==================================================
 
 To retrieve columns of fluxes as magnitudes in an ADQL query, users can do this:
-scisql_nanojanskyToAbMag(g_calibFlux) as g_calibMag, and columns of magnitude errors can be retrieved with:
+scisql_nanojanskyToAbMag(g_calibFlux) as g_calibMag,
+and columns of magnitude errors can be retrieved with:
 scisql_nanojanskyToAbMagSigma(g_calibFlux, g_calibFluxErr) as g_calibMagErr.
 
 4.1. Retrieve g-, r- and i-band magnitudes for 10000 point-like objects.
@@ -175,24 +197,28 @@ In addition to a cone search, impose query restrictions that detect_isPrimary is
                          "AND i_extendedness = 0",
                          maxrec=10000)
 
-4.2. Save the data as a pandas dataframe. 
+4.2. Store the data as a pandas dataframe. 
 
 .. code-block::
     
     results_table = results.to_table()
     data = results_table.to_pandas()
 
-Step 5. Make a color-magnitude diagram
-==========================
 
-5.1. Plot the color (r-i magnitudes) vs g magnitude
+
+.. _DP0-2-Cmndline-Beginner-Step-5:
+
+Step 5. Make a color-magnitude diagram
+======================================
+
+5.1. Plot the color (r-i magnitudes) vs g magnitude.
 
 .. code-block::
 
     plt.plot(data['r_calibMag'].values - data['i_calibMag'].values,
          data['g_calibMag'].values, 'o', ms=2, alpha=0.2)
 	 
-5.2. Define the axis labels and limits
+5.2. Define the axis labels and limits.
 
 .. code-block::
 
@@ -204,16 +230,22 @@ Step 5. Make a color-magnitude diagram
     plt.xlim([-0.5, 2.0])
     plt.ylim([25.5, 16.5])
 
-5.3. Save the plot as a pdf
+5.3. Save the plot as a pdf.
 
 .. code-block::
 
     plt.savefig('color-magnitude.pdf')
+
+Use the file navigator on the left-hand side of the Notebook Aspect to navigate to the file "color-magnitude.pdf".
+Double click on the filename to open and view the plot.
     
 .. figure:: /_static/cl_color-magnitude.jpg
 
+
+.. _DP0-2-Cmndline-Beginner-Step-6:
+
 Step 6. Retrieve image data using the butler
-==========================
+============================================
 
 The two most common types of images that DP0 delegates will interact with are calexps and deepCoAdds.
 
@@ -229,7 +261,7 @@ patch: A quadrilateral sub-region of a tract, of a size that fits easily into me
 
 The butler (`butler documentation <https://pipelines.lsst.io/modules/lsst.daf.butler/index.html>`_) is an LSST Science Pipelines software package to fetch LSST data without having to know its location or format. The butler can also be used to explore and discover what data exists. Other tutorials demonstrate the full butler functionality.
 
-6.1. Define a butler configuration and collection 
+6.1. Define a butler configuration and collection.
 
 .. code-block::
 
@@ -249,7 +281,7 @@ The butler (`butler documentation <https://pipelines.lsst.io/modules/lsst.daf.bu
     my_spherePoint = lsst.geom.SpherePoint(my_ra_deg*lsst.geom.degrees, my_dec_deg*lsst.geom.degrees)
     print(my_spherePoint)
 
-6.3. Retrive the DC2 skymap (`skymap documentation <https://pipelines.lsst.io/modules/lsst.skymap/index.html>`_) and identify the tract and patch
+6.3. Retrive the DC2 skymap (`skymap documentation <https://pipelines.lsst.io/modules/lsst.skymap/index.html>`_) and identify the tract and patch.
 
 .. code-block::
 
@@ -263,15 +295,18 @@ The butler (`butler documentation <https://pipelines.lsst.io/modules/lsst.daf.bu
     print('my_tract: ', my_tract)
     print('my_patch: ', my_patch)
 
-6.4. Retrieve the deep i-band Coadd 
+6.4. Retrieve the deep i-band Coadd.
 
 .. code-block::
 
     dataId = {'band': 'i', 'tract': my_tract, 'patch': my_patch}
     my_deepCoadd = butler.get('deepCoadd', dataId=dataId)
 
+
+.. _DP0-2-Cmndline-Beginner-Step-7:
+
 Step 7. Display the image
-==========================
+=========================
 
 Image data retrieved with the butler can be displayed several different ways.
 
@@ -290,6 +325,9 @@ Image data retrieved with the butler can be displayed several different ways.
     plt.gca().axis('on')
     plt.savefig('my_deepCoadd.pdf')
     
+Use the file navigator on the left-hand side of the Notebook Aspect to navigate to the file "my_deepCoadd.pdf".
+Double click on the filename to open and view the image.
+    
 .. figure:: /_static/cl_my-deep-Coadd.jpg
     
 7.2. Display the image using Firefly (`Firefly documentation <https://pipelines.lsst.io/v/daily/modules/lsst.display.firefly/index.html>`_). 
@@ -300,6 +338,6 @@ Image data retrieved with the butler can be displayed several different ways.
     afw_display = afwDisplay.Display(frame=1)
     afw_display.mtv(my_deepCoadd)
    
-Optional: For a demonstration of the Firefly interactive interface, work through tutorial notebook 3b.
+Optional: For a demonstration of the Firefly interactive interface, work through "03b Image Display with Firefly" of the :ref:`DP0-2-Tutorials-Notebooks`.
 
 
