@@ -26,7 +26,7 @@ Times: TBD
 
 Location: virtual (Zoom)
 
-
+Delegate Feedback form for Virtual Summer School 2023 Planning: https://docs.google.com/forms/d/e/1FAIpQLSdCsYb0TxaGANRIwi-f50JnLJIm3eehggjyMd5ybPv9eMuukQ/viewform
 
 .. Important::
     Information about the agenda and registration are coming soon.
