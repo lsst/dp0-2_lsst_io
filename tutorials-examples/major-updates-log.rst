@@ -35,19 +35,26 @@ The full history for any given tutorial notebook can be accessed via GitHub by g
 (e.g., the `introduction to DP0.2 notebook <https://github.com/rubin-dp0/tutorial-notebooks/blob/main/01_Introduction_to_DP02.ipynb>`_),
 and clicking on "history" (near upper-right).
 
-Portal tutorials
-----------------
+Portal and command line tutorials
+---------------------------------
 
-All Portal tutorials contain the date last verified to run near the top of their page.
+All Portal and command line tutorials contain the date last verified to run near the top of their page.
 
-All tutorials for the Portal aspect are kept in the `dp0-2_lsst_io repository <https://github.com/lsst/dp0-2_lsst_io>`_.
-The full history for any given Portal tutorial can be accessed via GitHub by going to the Portal tutorial of interest
+All tutorials for the Portal aspect, and for the command line (Notebook Aspect)
+are kept in the `dp0-2_lsst_io repository <https://github.com/lsst/dp0-2_lsst_io>`_.
+
+The full history for any given tutorial can be accessed via GitHub by going to the tutorial of interest
 (e.g., the `beginner Portal tutorial <https://github.com/lsst/dp0-2_lsst_io/blob/main/tutorials-examples/portal-beginner.rst>`_), 
 and clicking on "history" (near upper-right).
 
 
 Major Updates Log
 =================
+
+Feb 06 2023
+-----------
+
+Command line tutorial 01 created and released.
 
 Jan 05 2023
 -----------
