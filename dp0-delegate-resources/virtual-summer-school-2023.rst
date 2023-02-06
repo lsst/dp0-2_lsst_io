@@ -66,4 +66,4 @@ Coming soon.
 
 Contact
 ======
-If you have any questions about the DP0.2 Virtual Summer School 2023, please feel free to contact the SOC at [email].
+If you have any questions about the DP0.2 Virtual Summer School 2023, please feel free to contact Melissa Graham via direct message in the Rubin Community Forum (preferred) or via email mlg3k AT uw DOT edu.
