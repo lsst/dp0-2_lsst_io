@@ -80,6 +80,20 @@ See the repository's `README file <https://github.com/rubin-dp0/tutorial-noteboo
 list of available tutorials with descriptions.
 
 
+.. _DP0-2-Tutorials-CommandLine:
+
+Command line tutorials
+======================
+
+Much of the contents of the tutorial notebooks (above) can also be executed via the terminal in the Notebook Aspect of the RSP.
+
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    cmndline-beginner
+
+
 .. _DP0-2-Tutorials-Contributed:
 
 Contributed tutorials
