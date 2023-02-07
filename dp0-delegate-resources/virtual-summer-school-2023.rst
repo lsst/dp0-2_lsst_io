@@ -58,12 +58,16 @@ The primary meeting platform will be Zoom.
 **Eligibility**: All DP0 delegates will be eligible to participate in the DP0 Virtual Summer School.
 For more information about how to become a delegate, see the :ref:`Delegate-Homepage-Getting-Started-Checklist`.
 
-.. _DP0-Delegate-Resources-VSS2023-SOC:
+
+.. _DP0-Delegate-Resources-VSS2023-Registration:
 
 Registration Form
-========
+=================
 
 Coming soon.
+
+
+.. _DP0-Delegate-Resources-VSS2023-SOC:
 
 Science Organizing Committee
 ============================
@@ -81,6 +85,11 @@ Agenda
 
 Coming soon.
 
+
+
+.. _DP0-Delegate-Resources-VSS2023-Contact:
+
 Contact
-======
-If you have any questions about the DP0.2 Virtual Summer School 2023, please feel free to contact Melissa Graham via direct message in the Rubin `Community Forum <https://community.lsst.org>`_ (preferred) or via email mlg3k AT uw DOT edu.
+=======
+
+If you have any questions please contact Melissa Graham via direct message in the Rubin `Community Forum <https://community.lsst.org>`_ (preferred) or via email mlg3k AT uw DOT edu.
