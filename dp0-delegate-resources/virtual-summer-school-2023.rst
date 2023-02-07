@@ -26,7 +26,7 @@ DP0 Virtual Summer School 2023
 
 **Location**: virtual (Zoom)
 
-`Delegate Feedback form for Virtual Summer School 2023 Planning <https://forms.gle/YVom6TD4nKYxocHz5>` (open until Fri Feb 17)
+`Delegate Feedback form for Virtual Summer School 2023 Planning <https://forms.gle/YVom6TD4nKYxocHz5>`_ (open until Fri Feb 17)
 
 .. Important::
     Information about the agenda and registration are coming soon.
