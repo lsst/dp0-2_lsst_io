@@ -82,10 +82,10 @@
      - Time domain science (Ryan Lau)
      - *breakouts*
    * - 2023-03-31
-     - Variability in YSOs (Sabina Ustamujic)
+     - *tbd; delegate volunteers welcome*
      - *breakouts*
    * - 2023-04-14
-     - *tbd; delegate volunteers welcome*
+     - Variability in YSOs (Sabina Ustamujic)
      - *breakouts*
    * - 2023-04-28
      - *tbd; delegate volunteers welcome*
