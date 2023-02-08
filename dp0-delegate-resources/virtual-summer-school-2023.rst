@@ -44,8 +44,8 @@ These data products can be accessed and analyzed by the web-based Rubin Science 
 (`RSP <https://dp0-2.lsst.io/data-access-analysis-tools/index.html#rubin-science-platform-rsp>`_).
 
 The goal of this DP0 Virtual Summer School is to introduce any data-right holding scientist 
-(from undergraduate student to tenured faculty/staff) to the `DP0.2 dataset <https://dp0-2.lsst.io/data-products-dp0-2/index.html#the-desc-dc2-data-set>`_ 
-and the RSP and to provide an accelerated learning experience enabling research on the DP0.2 dataset and future data previews/releases. 
+(from undergraduate student to faculty/staff) to the `DP0.2 dataset <https://dp0-2.lsst.io/data-products-dp0-2/index.html#the-desc-dc2-data-set>`_ 
+and the RSP and to provide an accelerated learning experience enabling research on Rubin data with a focus on the DP0.2 dataset. 
 In order to develop a thriving Rubin science community, another key goal of the Virtual Summer School is to provide opportunities 
 for networking, collaboration, and new-skill acquisition for participants.
 
