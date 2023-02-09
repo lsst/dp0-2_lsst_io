@@ -70,7 +70,7 @@
      - `Stellar Classification by Bob Abel <https://community.lsst.org/t/summary-delegate-assembly-fri-jan-20-2023/7371>`__
      - Continued stellar classification discussions. General Q&A.
    * - 2023-02-03
-     - Milky Way halo science (Jeff Carlin)
+     - `Milky Way halo science (Jeff Carlin) <https://community.lsst.org/t/summary-delegate-assembly-fri-feb-3-2023/7405>`__
      - *breakouts*
    * - 2023-02-17
      - Creating custom coadds (Melissa Graham)
