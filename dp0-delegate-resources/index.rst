@@ -98,18 +98,12 @@ DP0 delegates are being given access to a *shared-risk developmental version* of
 Rubin Community Forum
 =====================
 
-The `Rubin Community Forum <https://community.lsst.org>`__ is the central hub for all virtual discussions and support.
-It is the best place to post questions about anything and everything related to DP0.
-People new to the Rubin Community Forum might appreciate `this video demonstrating how to navigate and post topics to the forum <https://www.youtube.com/watch?v=d_Z5xmkR4P4&list=PLPINAcUH0dXZSx2aY6wTIjLCWiexs3dZR&index=10>`_.
-
-Participating in the Rubin Community Forum is an integral part of the :ref:`Delegate-Homepage-Delegate-Activities`,
-such as sharing DP0-related results with Rubin staff and other delegates,
-and also of :ref:`Delegate-Homepage-Getting-Support` for DP0-related activities.
+The `Rubin Community Forum <https://community.lsst.org>`__ is the central hub for all virtual discussions and support related to DP0.
 
 **Accounts:**
 Go to `community.lsst.org <https://community.lsst.org>`_ and use the "Sign Up" button at upper-right to create an account.
 
-**Join the DP0 delegates group to stay informed:**
+**Join the "DP0 Delegates" group to stay informed:**
 Go to `community.lsst.org/groups <https://community.lsst.org/groups>`_ and join "DP0 Delegates".
 DP0-related news and events are shared as direct messages via the forum to this group.
 To recieve email notifications, set your Community Forum user profile preference for "Email me when I am sent a personal message" to "Always".
@@ -120,6 +114,14 @@ The `Support - Data Preview 0 <https://community.lsst.org/c/support/dp0>`_ categ
 E.g., how to use the RSP's aspects for science; the contents of the DC2 data set; delegate activities; sharing DP0-related notebooks, plots, or results.
 The "Support - DP0 RSP Service Issues" is a private subcategory for technical Q&A and discussion about potential bugs, service outages, etc.
 It is also possible to view a list of all `topics tagged with #dp0 <https://community.lsst.org/tag/dp0>`_ across all categories.
+
+Participating in the Rubin Community Forum is an integral part of the :ref:`Delegate-Homepage-Delegate-Activities`,
+such as sharing DP0-related results with Rubin staff and other delegates,
+and also of :ref:`Delegate-Homepage-Getting-Support` for DP0-related activities.
+
+**For new Forum members:**
+People new to the Rubin Community Forum might appreciate `this video demonstrating how to navigate and post topics to the forum <https://www.youtube.com/watch?v=d_Z5xmkR4P4&list=PLPINAcUH0dXZSx2aY6wTIjLCWiexs3dZR&index=10>`_.
+
 
 
 .. _Delegate-Homepage-Kickoff:
