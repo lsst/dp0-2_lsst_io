@@ -28,7 +28,7 @@ Data Preview 0 (DP0) is the first of three data previews during the period leadi
 The goals of DP0 are to serve as an early integration test of the Legacy Survey of Space and Time (LSST) Science Pipelines and the Rubin Science Platform (RSP), and to enable a limited number of astronomers and students to begin early preparations for science with the LSST.
 
 .. Important::
-    **New to DP0?** Welcome! See the :ref:`Delegate-Homepage-Getting-Started-Checklist`. Anyone with Rubin data rights may submit a request to participate in DP0 using `this form <https://forms.gle/hyZuXmc9S2ssTdW16>`_.
+    **New to DP0?** Welcome! See the :ref:`Delegate-Homepage-Getting-Started-Checklist`.
 
 Term definitions are provided on the `Rubin Observatory Glossary & Acronyms webpage <https://www.lsst.org/scientists/glossary-acronyms>`__.
 
@@ -37,7 +37,9 @@ Term definitions are provided on the `Rubin Observatory Glossary & Acronyms webp
 Resources for DP0 delegates
 ===========================
 
-DP0 delegates are the 600 data rights holders who have RSP accounts for access to the DP0 data set.
+"Delegates" are the 600 data rights holders who have access to the DP0 data set.
+
+To become a delegate, see the :ref:`Delegate-Homepage-Getting-Started-Checklist`.
 
 .. toctree::
     :maxdepth: 2
