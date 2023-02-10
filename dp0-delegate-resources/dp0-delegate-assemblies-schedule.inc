@@ -75,7 +75,7 @@
    * - 2023-02-17
      - Creating custom coadds (Melissa Graham)
      - *breakouts*
-   * - 2023-03-02
+   * - 2023-03-03
      - Truth data (Jeff Carlin & Melissa Graham)
      - *breakouts*
    * - 2023-03-17
