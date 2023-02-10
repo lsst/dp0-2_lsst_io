@@ -44,6 +44,7 @@ Getting started with DP0 checklist
 | 7. Review your options for :ref:`Delegate-Homepage-Getting-Support`.
 | 8. *Optional:* attend :ref:`Delegate-Homepage-DP0-Virtual-Seminars` or watch recordings where available.
 | 9. *Optional:* consider the :ref:`Delegate-Homepage-Delegate-Activities`.
+| 10. *Optional:* be aware that the `Rubin Users Committee <https://lsst.org/scientists/users-committee>`_ are your advocates.
 
 
 .. _Delegate-Homepage-Guidelines-Expectations:
