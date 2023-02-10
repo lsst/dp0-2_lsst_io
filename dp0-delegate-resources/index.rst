@@ -72,33 +72,25 @@ For more information about data rights, please refer to the
 Rubin Science Platform accounts
 ===============================
 
-Anyone with Rubin data rights may `submit a request to participate in DP0 <https://forms.gle/hyZuXmc9S2ssTdW16>`_
-in order to obtain an Rubin Science Platform account.
+Anyone with Rubin data rights may petition for an account in the Rubin Science Platform (RSP).
 
-**Authorization:**
-Delegates will be contacted by Rubin Observatory staff to provide their `GitHub <https://www.github.com>`__ username.
-All delegates will be invited to join the `rubin-dp0 GitHub Organization <https://github.com/rubin-dp0>`_ and its Delegates team,
-and must accept this invitation in order be authorized to log into the RSP at the Interim Data Facility (IDF; the Google Cloud).
+**Petition and data rights authentication:**
+Follow the instructions at LINK HERE to submit a petition for an RSP account.
+Using your institutional email address will facilitate the data rights authentication process.
+It might take a few days for your data rights to be verified and your petition accepted.
 
 **Log in:**
-With a browser that is logged in to GitHub, navigate to `data.lsst.cloud <https://data.lsst.cloud>`_ and choose "Log in" at upper-right,
+Navigate to `data.lsst.cloud <https://data.lsst.cloud>`_ and choose "Log in" at upper-right,
 or choose to enter either the Portal or Notebook Aspect.
-A pop-up window will ask to "Authorize Rubin Science Platform IDF Production Environment".
-Click the green button that says "Authorize lsst-sqre".
-Note that this last authorization step will need to be performed after every logout.
+In most cases, the authorization will be done via your institutional login.
 
 **Policies:**
 RSP accounts are not transferable and delegates must not share their password with others.
 DP0 delegates are being given access to a *shared-risk developmental version* of the RSP and the accompanying documentation.
 **Everyone is responsible for their own safe usage of the RSP** and must be familiar with this list of :doc:`/data-access-analysis-tools/rsp-warnings`.
 
-**Deactivation:**
-Delegates who are no longer using their accounts and would like to relinquish it to make way for others should submit a GitHub issue in the ``rubin-dp0`` GitHub Organization to let us know, and then leave the ``rubin-dp0`` GitHub Organization.
-(Log into GitHub, navigate to `github.com/settings/organizations <https://github.com/settings/organizations>`_, and click on the "Leave" button for the ``rubin-dp0`` Organization.)
-
-**For delegates who need to get a GitHub account:** go to `github.com <https://www.github.com>`_ and select “Sign up” in the upper-right corner.
-For participation in DP0 it is not necessary to learn how to use git as a version control system, nor any of the git workflows or command line tools.
-GitHub will not be used for RSP accounts during Rubin Observatory Operations, this is a DP0-specific implementation.
+**Deactivating or canceling accounts:**
+???
 
 
 .. _Delegate-Homepage-Forum:
