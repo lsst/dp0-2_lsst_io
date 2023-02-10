@@ -60,12 +60,13 @@ Guidelines and expectations
 
 **Rubin data rights** are required in order to hold an account in the Rubin Science Platform.
 All scientists and students affiliated with an institution in the US and Chile have data rights,
-as well as scientists and students who are named as data rights holders by an International In-kind Contribution Program.
+as well as the international scientists and students whose names appear on the
+`list of international data rights holders <https://lsst.org/scientists/international-drh-list>`_.
 For more information about data rights, please refer to the
 `Rubin Observatory Data Policy <https://docushare.lsst.org/docushare/dsweb/Get/RDO-013>`_.
 
-| **Use your RSP account!**
-| If you're not sure what to do, choose from one of our :ref:`Delegate-Homepage-Delegate-Activities`.
+**Use your RSP account!**
+If you're not sure what to do, choose one of the :ref:`Delegate-Homepage-Delegate-Activities`.
 
 
 .. _Delegate-Homepage-RSP-Accounts:
@@ -73,7 +74,7 @@ For more information about data rights, please refer to the
 Rubin Science Platform accounts
 ===============================
 
-Anyone with Rubin data rights may petition for an account in the Rubin Science Platform (RSP).
+Anyone with Rubin data rights (see above) may petition for an account in the Rubin Science Platform (RSP).
 
 **Petition and data rights authentication:**
 Follow the instructions at LINK HERE to submit a petition for an RSP account.
