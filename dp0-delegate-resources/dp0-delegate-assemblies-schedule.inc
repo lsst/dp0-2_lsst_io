@@ -82,7 +82,7 @@
      - Time domain science (Ryan Lau)
      - *breakouts*
    * - 2023-03-31
-     - *tbd; delegate volunteers welcome*
+     - Deblender Data Products (Christina Williams)
      - *breakouts*
    * - 2023-04-14
      - Variability in YSOs (Sabina Ustamujic)
