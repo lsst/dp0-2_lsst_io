@@ -61,10 +61,10 @@ are undergoing major redevelopment to start the reprocessing for custom coadds a
 
 Notebook 04b, Section 3.3.1 has been updated to show a plot of the bounding boxes of patches which overlap with a calexp.
 
-Notebook 06a, Section 2.1 has been updated to use `"calexp.visitInfo.id` and `calexp.filter.bandLabel`.
+Notebook 06a, Section 2.1 has been updated to use ``calexp.visitInfo.id`` and ``calexp.filter.bandLabel``.
 
-Many notebooks have had minor updates to use `SELECT TOP` instead of `MAXREC` (the latter produces an unavoidable but non-fatal warning)
-and/or remove the use of the `%%time` magic as all code cells now have an execution time display built-in.
+Many notebooks have had minor updates to use ``SELECT TOP`` instead of ``MAXREC`` (the latter produces an unavoidable but non-fatal warning)
+and/or remove the use of the ``%%time`` magic as all code cells now have an execution time display built-in.
 
 
 Feb 06 2023
