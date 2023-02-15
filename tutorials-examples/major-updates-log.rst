@@ -51,6 +51,22 @@ and clicking on "history" (near upper-right).
 Major Updates Log
 =================
 
+Feb 16 2023
+-----------
+
+The recommended image of the RSP at data.lsst.cloud was bumped to Weekly 2023_07.
+
+Notebooks 09a and 09b have been temporarily removed from the tutorial-notebooks repository and
+are undergoing major redevelopment to start the reprocessing for custom coadds at earlier stages of the pipeline.
+
+Notebook 04b, Section 3.3.1 has been updated to show a plot of the bounding boxes of patches which overlap with a calexp.
+
+Notebook 06a, Section 2.1 has been updated to use `"calexp.visitInfo.id` and `calexp.filter.bandLabel`.
+
+Many notebooks have had minor updates to use `SELECT TOP` instead of `MAXREC` (the latter produces an unavoidable but non-fatal warning)
+and/or remove the use of the `%%time` magic as all code cells now have an execution time display built-in.
+
+
 Feb 06 2023
 -----------
 
