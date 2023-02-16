@@ -73,10 +73,10 @@
      - `Milky Way halo science (Jeff Carlin) <https://community.lsst.org/t/summary-delegate-assembly-fri-feb-3-2023/7405>`__
      - *breakouts*
    * - 2023-02-17
-     - Creating custom coadds (Melissa Graham)
+     - Truth data (Jeff Carlin & Melissa Graham)
      - *breakouts*
    * - 2023-03-03
-     - Truth data (Jeff Carlin & Melissa Graham)
+     - *tbd; delegate volunteers welcome*
      - *breakouts*
    * - 2023-03-17
      - Time domain science (Ryan Lau)
