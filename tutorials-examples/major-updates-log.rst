@@ -35,19 +35,42 @@ The full history for any given tutorial notebook can be accessed via GitHub by g
 (e.g., the `introduction to DP0.2 notebook <https://github.com/rubin-dp0/tutorial-notebooks/blob/main/01_Introduction_to_DP02.ipynb>`_),
 and clicking on "history" (near upper-right).
 
-Portal tutorials
-----------------
+Portal and command line tutorials
+---------------------------------
 
-All Portal tutorials contain the date last verified to run near the top of their page.
+All Portal and command line tutorials contain the date last verified to run near the top of their page.
 
-All tutorials for the Portal aspect are kept in the `dp0-2_lsst_io repository <https://github.com/lsst/dp0-2_lsst_io>`_.
-The full history for any given Portal tutorial can be accessed via GitHub by going to the Portal tutorial of interest
+All tutorials for the Portal aspect, and for the command line (Notebook Aspect)
+are kept in the `dp0-2_lsst_io repository <https://github.com/lsst/dp0-2_lsst_io>`_.
+
+The full history for any given tutorial can be accessed via GitHub by going to the tutorial of interest
 (e.g., the `beginner Portal tutorial <https://github.com/lsst/dp0-2_lsst_io/blob/main/tutorials-examples/portal-beginner.rst>`_), 
 and clicking on "history" (near upper-right).
 
 
 Major Updates Log
 =================
+
+Feb 16 2023
+-----------
+
+The recommended image of the RSP at data.lsst.cloud was bumped to Weekly 2023_07.
+
+Notebooks 09a and 09b have been temporarily removed from the tutorial-notebooks repository and
+are undergoing major redevelopment to start the reprocessing for custom coadds at earlier stages of the pipeline.
+
+Notebook 04b, Section 3.3.1 has been updated to show a plot of the bounding boxes of patches which overlap with a calexp.
+
+Notebook 06a, Section 2.1 has been updated to use ``calexp.visitInfo.id`` and ``calexp.filter.bandLabel``.
+
+Many notebooks have had minor updates to use ``SELECT TOP`` instead of ``MAXREC`` (the latter produces an unavoidable but non-fatal warning)
+and/or remove the use of the ``%%time`` magic as all code cells now have an execution time display built-in.
+
+
+Feb 06 2023
+-----------
+
+Command line tutorial 01 created and released.
 
 Jan 05 2023
 -----------
