@@ -135,7 +135,8 @@ This is very handy, but you can also arrange both notebooks and terminals next t
 Arranging the windows can be convenient when working in both a terminal and notebook at the same time, or when using another notebook as a reference.
 
 **JupyterLab Autosaves Notebooks:**
-Note that JupyterLab autosaves your notebooks at a default rate of 2 minutes, as long as the notebook is in a directory with user write permission (see below).
+Note that JupyterLab autosaves your notebooks at a default rate of 2 minutes
+unless you are working in the directory "notebooks/tutorial-notebooks/", which is read-only (see next section).
 
 
 .. _NB-Intro-Use-Tutorial-NBs:
