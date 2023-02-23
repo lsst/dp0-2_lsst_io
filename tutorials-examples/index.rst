@@ -109,4 +109,4 @@ Rubin staff do not apply any quality control reviews to the contributed content 
 the `delegate-contributions-dp02 <https://github.com/rubin-dp0/delegate-contributions-dp02>`_ repo.
 In contrast, the Portal and Notebook Aspect tutorials in the sections above are created by Rubin staff and adhere to
 the set of guidelines and best practices described in `RTN-045 <https://rtn-045.lsst.io/>`_.
-Anyone who wants to contribute to these formal tutorial sets should get in touch with the Rubin Community Engagement team (Melissa Graham).
+Anyone who wants to contribute to these formal tutorial sets should get in touch with the Lead Community Scientist (Melissa Graham).
