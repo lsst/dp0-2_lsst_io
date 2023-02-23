@@ -223,7 +223,7 @@ This is a time- and space-consuming process, so we do not recommend it.
 Do I need to know git?
 ----------------------
 
-Although use of git and GitHub are not necessary for DP0 participation, most Rubin Observatory staff and LSST Science Collaborations use git and GitHub, and it is highly recommended by the Community Engagement Team for all RSP users.
+Although use of git and GitHub are not necessary for DP0 participation, most Rubin Observatory staff and LSST Science Collaborations use git and GitHub, and it is highly recommended for all RSP users.
 Git is free open-sourced software for change-tracking and version control of any set of files that are edited by one or more contributors.
 GitHub is a web-based provider for git functionality, plus it offers a few of its own features.
 In this Community Forum thread, everyone can find and share `resources for learning about git and GitHub <https://community.lsst.org/t/resources-for-github/6153>`_.
@@ -352,7 +352,7 @@ It is recommended to avoid this entire situation by making your "notebooks/tutor
 
 However, if your "notebooks/tutorial-notebooks" directory is currently writable and you really want to keep it that way, follow the instructions below.
 
-New versions of the tutorial notebooks will be periodically released by the Community Engagement Team (CET).
+New versions of the tutorial notebooks will be periodically released.
 The contents of your "notebooks/tutorial-notebooks/" directory should automatically update when a new version of a tutorial notebook is released.
 There are several reasons why this might not occur, and, correspondingly, several ways for you to update the contents of your "notebooks/tutorial-notebooks/" directory.
 
