@@ -39,9 +39,9 @@ Getting started with DP0 checklist
 | 2. Get one of the :ref:`Delegate-Homepage-RSP-Accounts` for DP0 delegates.
 | 3. Set up your account in the :ref:`Delegate-Homepage-Forum`.
 | 4. Watch the recorded :ref:`Delegate-Homepage-Kickoff` (13 minutes).
-| 5. Follow step-by-step introductions to the RSP's :ref:`Tools-RSP-Portal` or :ref:`Tools-RSP-Notebook`.
-| 6. Work at your own pace through the :doc:`/tutorials-examples/index`.
-| 7. Review your options for :ref:`Delegate-Homepage-Getting-Support`.
+| 5. Review your options for :ref:`Delegate-Homepage-Getting-Support`.
+| 6. *Optional:* follow step-by-step introductions to the RSP's :ref:`Tools-RSP-Portal` or :ref:`Tools-RSP-Notebook`.
+| 7. *Optional:* work at your own pace through the :doc:`/tutorials-examples/index`.
 | 8. *Optional:* attend :ref:`Delegate-Homepage-DP0-Virtual-Seminars` or watch recordings where available.
 | 9. *Optional:* consider the :ref:`Delegate-Homepage-Delegate-Activities`.
 | 10. *Optional:* be aware that the `Rubin Users Committee <https://lsst.org/scientists/users-committee>`_ are your advocates.
@@ -105,14 +105,14 @@ for instructions on how to delete your RSP account.
 Rubin Community Forum
 =====================
 
-The `Rubin Community Forum <https://community.lsst.org>`__ is the central hub for all virtual discussions and support related to DP0.
+The `Rubin Community Forum <https://community.lsst.org>`__ is the central hub for all news, discussions, and support related to DP0.
 
 **Accounts:**
 Go to `community.lsst.org <https://community.lsst.org>`_ and use the "Sign Up" button at upper-right to create an account.
 
 **Join the "DP0 Delegates" group to stay informed:**
 Go to `community.lsst.org/groups <https://community.lsst.org/groups>`_ and join "DP0 Delegates".
-DP0-related news and events are shared as direct messages via the forum to this group.
+DP0-related news and events are shared as direct messages via the forum to this group (not via email).
 To recieve email notifications, set your Community Forum user profile preference for "Email me when I am sent a personal message" to "Always".
 Joining this group also ensures that you have access to the "Support - DP0 RSP Service Issues" subcategory.
 
