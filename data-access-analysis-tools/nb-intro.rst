@@ -135,7 +135,8 @@ This is very handy, but you can also arrange both notebooks and terminals next t
 Arranging the windows can be convenient when working in both a terminal and notebook at the same time, or when using another notebook as a reference.
 
 **JupyterLab Autosaves Notebooks:**
-Note that JupyterLab autosaves your notebooks at a default rate of 2 minutes, as long as the notebook is in a directory with user write permission (see below).
+Note that JupyterLab autosaves your notebooks at a default rate of 2 minutes
+unless you are working in the directory "notebooks/tutorial-notebooks/", which is read-only (see next section).
 
 
 .. _NB-Intro-Use-Tutorial-NBs:
@@ -144,19 +145,13 @@ How to use the Tutorial Notebooks
 =================================
 
 The best way to learn how to use a Jupyter Notebook is to open the first of the tutorial notebooks which are provided in each user's home directory,
-and also available in the `tutorial-notebooks <https://github.com/rubin-dp0/tutorial-notebooks>`_ repository in the "rubin-dp0" GitHub Organization (see also :ref:`DP0-2-Tutorials-Notebooks`).
+and also available in the `tutorial-notebooks <https://github.com/rubin-dp0/tutorial-notebooks>`_ repository in the 
+"rubin-dp0" GitHub Organization (see also :ref:`DP0-2-Tutorials-Notebooks`).
 
-**The "notebooks/tutorial-notebooks" directory should be read-only:**
-As of Thu Sep 29 2022, the recommended image for the RSP's Notebook Aspect was updated to "Weekly 40", and for all **new RSP accounts** created on or after that day the "notebooks/tutorial-notebooks" directory will be read-only.
-
-A read-only "notebooks/tutorial-notebooks" directory will *always* contain the most up-to-date versions of the tutorials.
-Notebooks can be edited and executed in this directory, but changes cannot be saved to this directory.
+**The "notebooks/tutorial-notebooks" directory is read-only:**
+The read-only "notebooks/tutorial-notebooks" directory will *always* contain the most up-to-date versions of the tutorials.
+Notebooks can be edited and executed in this directory, but **changes cannot be saved to this directory**.
 Users wishing to edit, execute, *and save* versions of these notebooks should copy them to a different path in their home directory.
-
-For all **existing RSP accounts** that were created before Thu Sep 29 2022, the "notebooks/tutorial-notebooks" directory will remain writable, but a warning file (00_WARNING_README.md) will appear if any other file in that directory has been changed, as a reminder to take action.
-
-**It is recommended that owners of RSP accounts created prior to Thu Sep 29 2022 take action to make their "notebooks/tutorial-notebooks" directory read-only.**
-See the FAQ on :ref:`NB-Intro-Use-A-NB-faq-readonly` for more information about the recommended actions.
 
 
 .. _NB-Intro-Use-A-NB-faq:
@@ -257,63 +252,6 @@ learning `python <https://community.lsst.org/t/resources-for-python-beginners/59
 People new to the Rubin Community Forum might appreciate `this video demonstrating how to navigate and post topics to the forum <https://www.youtube.com/watch?v=d_Z5xmkR4P4&list=PLPINAcUH0dXZSx2aY6wTIjLCWiexs3dZR&index=10>`_.
 
 
-.. _NB-Intro-Use-A-NB-faq-readonly:
-
-How do I make sure my "notebooks/tutorial-notebooks" directory is read-only?
-----------------------------------------------------------------------------
-
-As described in :ref:`NB-Intro-Use-Tutorial-NBs`, it is recommended that all users ensure their "notebooks/tutorial-notebooks" directory is read-only.
-
-The steps below should be used to obtain a new, read-only version of the "notebooks/tutorial-notebooks" directory which is up-to-date with all the latest versions of the tutorial notebooks.
-
-1. Determine whether or not your "notebooks/tutorial-notebooks" directory is read-only.
-In the Notebook Aspect of the RSP, use the Launcher (+ button) and open a Terminal, and execute the following statements.
-
-.. code-block:: bash
-
-   cd ~/notebooks
-   ls -lah
-
-
-If, on the output line for “tutorial-notebooks”, you see “dr-xr-xr-x”, this directory is read-only.
-If you see “drwxr-xr-x”, this directory is writable by the user.
-
-In order to execute step 2 below (moving or removing your "notebooks/tutorial-notebooks" directory), you might have to change the user permissions on the directory to be writable (“drwxr-xr-x”) using the following command.
-
-.. code-block:: bash
-
-   cd ~/notebooks
-   chmod u+w tutorial-notebooks
-   ls -lah
-
-
-2. If you want to keep the current version of your “notebooks/tutorial-notebooks” directory, move it to another path in your home directory.
-In the Notebook Aspect of the RSP, use the Launcher (+ button) and open a Terminal, and execute the following statements.
-They will make a new sub-directory in your home directory called “my-work”, and then move your current “tutorial-notebooks” directory into it and rename it.
-It is crucial that you *move* (and not copy) the “tutorial-notebooks” directory, because it must be entirely gone from the “notebooks/” directory for the next step to work.
-
-.. code-block:: bash
-
-   cd ~
-   mkdir my-work
-   cd ~/notebooks
-   mv tutorial-notebooks my-work/my-tutorial-notebooks
-   cd my-work/my-tutorial-notebooks
-   ls
-
-
-You will see the contents of your version of the “tutorial-notebooks” listed.
-
-**Or**, If you don't care to keep the current version of your “notebooks/tutorial-notebooks” directory, delete it.
-
-.. code-block:: bash
-
-   cd ~/notebooks
-   rm -rf tutorial-notebooks
-
-
-3. Exit the Notebook Aspect (“File” → “Save All and Exit”), log back in using the recommended image, and you will have a new read-only version of the “notebooks/tutorial-notebooks” directory.
-
 
 .. _NB-Intro-Use-A-NB-tips:
 
@@ -343,81 +281,6 @@ and move their ".local" file out of the way by renaming it as something else, su
 
 There will be no need to recreate the ".local" directory after this.
 The user should then restart the notebook (or, e.g., ipython session) and try to import the packages.
-
-
-What to do if Notebooks do not automatically update
----------------------------------------------------
-
-It is recommended to avoid this entire situation by making your "notebooks/tutorial-notebooks" directory read-only, as described in the FAQ above.
-
-However, if your "notebooks/tutorial-notebooks" directory is currently writable and you really want to keep it that way, follow the instructions below.
-
-New versions of the tutorial notebooks will be periodically released.
-The contents of your "notebooks/tutorial-notebooks/" directory should automatically update when a new version of a tutorial notebook is released.
-There are several reasons why this might not occur, and, correspondingly, several ways for you to update the contents of your "notebooks/tutorial-notebooks/" directory.
-
-All of the options below require that you first configure git for your GitHub account using the terminal in the RSP Notebook Aspect.
-First, check whether your GitHub user name and email are configured correctly in the ".gitconfig" file in your home directory.
-To do this, use the following command in the terminal window of the RSP Notebook Aspect:
-
-.. code-block:: bash
-
-   egrep 'email|name' ~/.gitconfig
-
-If nothing is returned, then your GitHub email and user name have not been set up.
-You may set them up by typing in the following commands (remember to use the same GitHub account information you use to access the RSP):
-
-.. code-block:: bash
-
-   git config --global user.email yourEmail@yourdomain
-   git config --global user.name GitUsername
-
-From here, you have three options to update the contents of your "notebooks/tutorial-notebooks/" directory.
-
-**Option 1** (if you have not saved changed versions of the notebooks) - Fully log out, stop the server, and log back in again.
-This will automatically refresh the contents of your "notebooks/tutorial-notebooks/" directory.
-To fully stop your server, use the control panel at `data.lsst.cloud/nb/hub/home <https://data.lsst.cloud/nb/hub/home>`_.
-Click the red button that says "Stop My Server".
-
-**Option 2** (if you have saved changed versions of the notebooks that you want to keep) - The first option, above, will not result in you having the most up-to-date versions of all the notebooks if you have made and saved changes to any of the notebooks.
-To check if files have been modified, use this command from a terminal in the "notebooks/tutorial-notebooks/" directory.
-
-.. code-block:: bash
-
-   git status
-
-If it says in red text, e.g., "both modified: 01_Intro_to_DP0_Notebooks.ipynb", then changes have been made to this file (recall that executing the notebook counts as making changes,
-and note that Jupyter auto-saves changes on a ~2 minute cadence), but Rubin Observatory staff have also updated it (e.g., bug fixes).
-Since the file has been twice modified, git has gone ahead and annotated file with all the conflicting lines between the two versions.
-This essentially ruins a ".ipynb" file's functionality (but it is a very useful built-in git feature for, e.g., ascii and code files).
-A git-annotated ".ipynb" file might not even load or run for you anymore.
-On the command line, do
-
-.. code-block:: bash
-
-   git diff 01_Intro_to_DP0_Notebooks.ipynb
-   
-and all the differences will be listed.
-
-Use the following commands in the terminal window to restore the version in which you made changes (this takes it out of 'staged' status and will avoid future errors),
-copy your version into a different directory and rename it, and then restore the new version of the notebook that was updated by Rubin Observatory staff.
-
-.. code-block:: bash
-
-   git restore --staged 01_Intro_to_DP0_Notebooks.ipynb
-   cp 01_Intro_to_DP0_Notebooks.ipynb ~/my-notebooks/01_my_version.ipynb
-   git restore 01_Intro_to_DP0_Notebooks.ipynb
-
-Now your notebooks/tutorial-notebooks directory only contains the most up-to-date versions of the tutorial notebooks, with none of your changes.
-
-**Option 3** (if you don't care about keeping changed versions of the notebooks) - To get a completely new version of all the tutorial notebooks in your "notebooks/tutorial-notebooks/" directory, use the following commands:
-
-.. code-block:: bash
-
-   git reset --hard origin/prod
-   git pull
-
-Using any of the above options is the preferred method to update your tutorial notebooks, but as a last resort, you can delete the entire "tutorial-notebooks/" directory, log out and stop the server, and then log back in again.
 
 
 How to make git stop asking for my password

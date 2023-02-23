@@ -39,11 +39,12 @@ Getting started with DP0 checklist
 | 2. Get one of the :ref:`Delegate-Homepage-RSP-Accounts` for DP0 delegates.
 | 3. Set up your account in the :ref:`Delegate-Homepage-Forum`.
 | 4. Watch the recorded :ref:`Delegate-Homepage-Kickoff` (13 minutes).
-| 5. Follow step-by-step introductions to the RSP's :ref:`Tools-RSP-Portal` or :ref:`Tools-RSP-Notebook`.
-| 6. Work at your own pace through the :doc:`/tutorials-examples/index`.
-| 7. Review your options for :ref:`Delegate-Homepage-Getting-Support`.
+| 5. Review your options for :ref:`Delegate-Homepage-Getting-Support`.
+| 6. *Optional:* follow step-by-step introductions to the RSP's :ref:`Tools-RSP-Portal` or :ref:`Tools-RSP-Notebook`.
+| 7. *Optional:* work at your own pace through the :doc:`/tutorials-examples/index`.
 | 8. *Optional:* attend :ref:`Delegate-Homepage-DP0-Virtual-Seminars` or watch recordings where available.
 | 9. *Optional:* consider the :ref:`Delegate-Homepage-Delegate-Activities`.
+| 10. *Optional:* be aware that the `Rubin Users Committee <https://lsst.org/scientists/users-committee>`_ are your advocates.
 
 
 .. _Delegate-Homepage-Guidelines-Expectations:
@@ -51,20 +52,13 @@ Getting started with DP0 checklist
 Guidelines and expectations
 ===========================
 
-**Understand the** :doc:`/data-access-analysis-tools/rsp-warnings` **regarding using the DP0 RSP on a shared-risk basis**.
+**Rubin data rights** are required to participate in DP0 (see description below).
+
+**Understand the** :doc:`/data-access-analysis-tools/rsp-warnings` **regarding using the DP0-era RSP**.
 
 **Abide by the** :ref:`Delegate-Homepage-Code-of-Conduct`.
 
 **Adhere to the** :ref:`Delegate-Homepage-PubPol`.
-
-**Rubin data rights** are required in order to hold an account in the Rubin Science Platform.
-All scientists and students affiliated with an institution in the US and Chile have data rights,
-as well as scientists and students who are named as data rights holders by an International In-kind Contribution Program.
-For more information about data rights, please refer to the
-`Rubin Observatory Data Policy <https://docushare.lsst.org/docushare/dsweb/Get/RDO-013>`_.
-
-| **Use your RSP account!**
-| If you're not sure what to do, choose from one of our :ref:`Delegate-Homepage-Delegate-Activities`.
 
 
 .. _Delegate-Homepage-RSP-Accounts:
@@ -72,33 +66,35 @@ For more information about data rights, please refer to the
 Rubin Science Platform accounts
 ===============================
 
-Anyone with Rubin data rights may `submit a request to participate in DP0 <https://forms.gle/hyZuXmc9S2ssTdW16>`_
-in order to obtain an Rubin Science Platform account.
+**Rubin data rights** are required in order to hold an account in the Rubin Science Platform.
+All scientists and students affiliated with an institution in the US and Chile have data rights,
+as well as the international scientists and students whose names appear on the
+`list of international data rights holders <https://lsst.org/scientists/international-drh-list>`_.
+For more information about data rights, please refer to the
+`Rubin Observatory Data Policy <https://docushare.lsst.org/docushare/dsweb/Get/RDO-013>`_.
+If you're not sure if you have data rights, contact Melissa Graham at mlg3k@uw.ed or 
+with a direct message in the `Rubin Community Forum <https://community.lsst.org/>`_.
 
-**Authorization:**
-Delegates will be contacted by Rubin Observatory staff to provide their `GitHub <https://www.github.com>`__ username.
-All delegates will be invited to join the `rubin-dp0 GitHub Organization <https://github.com/rubin-dp0>`_ and its Delegates team,
-and must accept this invitation in order be authorized to log into the RSP at the Interim Data Facility (IDF; the Google Cloud).
+**Petition and data rights authentication:**
+Follow the instructions on `how to get an RSP account <https://rsp.lsst.io/guides/getting-started/get-an-account.html>`_ 
+to submit a petition.
+Using your full professional name and your institutional email address in your petition will facilitate the data rights authentication process.
+It might take a few days for your data rights to be verified and your petition accepted.
 
 **Log in:**
-With a browser that is logged in to GitHub, navigate to `data.lsst.cloud <https://data.lsst.cloud>`_ and choose "Log in" at upper-right,
+Navigate to `data.lsst.cloud <https://data.lsst.cloud>`_ and choose "Log in" at upper-right,
 or choose to enter either the Portal or Notebook Aspect.
-A pop-up window will ask to "Authorize Rubin Science Platform IDF Production Environment".
-Click the green button that says "Authorize lsst-sqre".
-Note that this last authorization step will need to be performed after every logout.
+In most cases, the authorization will be done via your institutional login.
 
 **Policies:**
 RSP accounts are not transferable and delegates must not share their password with others.
 DP0 delegates are being given access to a *shared-risk developmental version* of the RSP and the accompanying documentation.
 **Everyone is responsible for their own safe usage of the RSP** and must be familiar with this list of :doc:`/data-access-analysis-tools/rsp-warnings`.
 
-**Deactivation:**
-Delegates who are no longer using their accounts and would like to relinquish it to make way for others should submit a GitHub issue in the ``rubin-dp0`` GitHub Organization to let us know, and then leave the ``rubin-dp0`` GitHub Organization.
-(Log into GitHub, navigate to `github.com/settings/organizations <https://github.com/settings/organizations>`_, and click on the "Leave" button for the ``rubin-dp0`` Organization.)
-
-**For delegates who need to get a GitHub account:** go to `github.com <https://www.github.com>`_ and select “Sign up” in the upper-right corner.
-For participation in DP0 it is not necessary to learn how to use git as a version control system, nor any of the git workflows or command line tools.
-GitHub will not be used for RSP accounts during Rubin Observatory Operations, this is a DP0-specific implementation.
+**Deactivating or canceling accounts:**
+Please contact Melissa Graham at mlg3k@uw.ed or 
+with a direct message in the `Rubin Community Forum <https://community.lsst.org/>`_
+for instructions on how to delete your RSP account.
 
 
 .. _Delegate-Homepage-Forum:
@@ -106,20 +102,14 @@ GitHub will not be used for RSP accounts during Rubin Observatory Operations, th
 Rubin Community Forum
 =====================
 
-The `Rubin Community Forum <https://community.lsst.org>`__ is the central hub for all virtual discussions and support.
-It is the best place to post questions about anything and everything related to DP0.
-People new to the Rubin Community Forum might appreciate `this video demonstrating how to navigate and post topics to the forum <https://www.youtube.com/watch?v=d_Z5xmkR4P4&list=PLPINAcUH0dXZSx2aY6wTIjLCWiexs3dZR&index=10>`_.
-
-Participating in the Rubin Community Forum is an integral part of the :ref:`Delegate-Homepage-Delegate-Activities`,
-such as sharing DP0-related results with Rubin staff and other delegates,
-and also of :ref:`Delegate-Homepage-Getting-Support` for DP0-related activities.
+The `Rubin Community Forum <https://community.lsst.org>`__ is the central hub for all news, discussions, and support related to DP0.
 
 **Accounts:**
 Go to `community.lsst.org <https://community.lsst.org>`_ and use the "Sign Up" button at upper-right to create an account.
 
-**Join the DP0 delegates group to stay informed:**
+**Join the "DP0 Delegates" group to stay informed:**
 Go to `community.lsst.org/groups <https://community.lsst.org/groups>`_ and join "DP0 Delegates".
-DP0-related news and events are shared as direct messages via the forum to this group.
+DP0-related news and events are shared as direct messages via the forum to this group (not via email).
 To recieve email notifications, set your Community Forum user profile preference for "Email me when I am sent a personal message" to "Always".
 Joining this group also ensures that you have access to the "Support - DP0 RSP Service Issues" subcategory.
 
@@ -128,6 +118,14 @@ The `Support - Data Preview 0 <https://community.lsst.org/c/support/dp0>`_ categ
 E.g., how to use the RSP's aspects for science; the contents of the DC2 data set; delegate activities; sharing DP0-related notebooks, plots, or results.
 The "Support - DP0 RSP Service Issues" is a private subcategory for technical Q&A and discussion about potential bugs, service outages, etc.
 It is also possible to view a list of all `topics tagged with #dp0 <https://community.lsst.org/tag/dp0>`_ across all categories.
+
+Participating in the Rubin Community Forum is an integral part of the :ref:`Delegate-Homepage-Delegate-Activities`,
+such as sharing DP0-related results with Rubin staff and other delegates,
+and also of :ref:`Delegate-Homepage-Getting-Support` for DP0-related activities.
+
+**For new Forum members:**
+People new to the Rubin Community Forum might appreciate `this video demonstrating how to navigate and post topics to the forum <https://www.youtube.com/watch?v=d_Z5xmkR4P4&list=PLPINAcUH0dXZSx2aY6wTIjLCWiexs3dZR&index=10>`_.
+
 
 
 .. _Delegate-Homepage-Kickoff:
