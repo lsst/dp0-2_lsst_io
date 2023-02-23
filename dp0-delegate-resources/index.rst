@@ -314,7 +314,7 @@ to post topics related to scientific support.
 Scientific support includes questions about the DC2 simulated data set, the DP0 data products, and/or the application of the
 LSST Science Pipelines to the DP0 data set, as well as general discussion about DP0-related scientific analyses, or DP0 policies and guidelines.
 
-This subcategory is monitored by the Rubin Observatory `Community Engagement Team (CET) <https://community.lsst.org/t/about-the-community-engagement-team/4526>`_.
+This subcategory is monitored by the Rubin Observatory `Community Science team (CST) <https://community.lsst.org/g/CST>`_.
 DP0 delegates are especially encouraged to post new topics and reply to others' posts in this subcategory.
 
 Technical assistance via GitHub issues

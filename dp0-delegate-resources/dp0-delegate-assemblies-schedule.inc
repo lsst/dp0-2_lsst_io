@@ -70,19 +70,19 @@
      - `Stellar Classification by Bob Abel <https://community.lsst.org/t/summary-delegate-assembly-fri-jan-20-2023/7371>`__
      - Continued stellar classification discussions. General Q&A.
    * - 2023-02-03
-     - Milky Way halo science (Jeff Carlin)
+     - `Milky Way halo science (Jeff Carlin) <https://community.lsst.org/t/summary-delegate-assembly-fri-feb-3-2023/7405>`__
      - *breakouts*
    * - 2023-02-17
-     - Creating custom coadds (Melissa Graham)
-     - *breakouts*
-   * - 2023-03-02
      - Truth data (Jeff Carlin & Melissa Graham)
+     - *breakouts*
+   * - 2023-03-03
+     - *tbd; delegate volunteers welcome*
      - *breakouts*
    * - 2023-03-17
      - Time domain science (Ryan Lau)
      - *breakouts*
    * - 2023-03-31
-     - *tbd; delegate volunteers welcome*
+     - Deblender Data Products (Christina Williams)
      - *breakouts*
    * - 2023-04-14
      - Variability in YSOs (Sabina Ustamujic)

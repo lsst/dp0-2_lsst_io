@@ -218,7 +218,7 @@ This is a time- and space-consuming process, so we do not recommend it.
 Do I need to know git?
 ----------------------
 
-Although use of git and GitHub are not necessary for DP0 participation, most Rubin Observatory staff and LSST Science Collaborations use git and GitHub, and it is highly recommended by the Community Engagement Team for all RSP users.
+Although use of git and GitHub are not necessary for DP0 participation, most Rubin Observatory staff and LSST Science Collaborations use git and GitHub, and it is highly recommended for all RSP users.
 Git is free open-sourced software for change-tracking and version control of any set of files that are edited by one or more contributors.
 GitHub is a web-based provider for git functionality, plus it offers a few of its own features.
 In this Community Forum thread, everyone can find and share `resources for learning about git and GitHub <https://community.lsst.org/t/resources-for-github/6153>`_.

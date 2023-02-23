@@ -72,10 +72,10 @@ More information can also be found in the `Notebook Aspect documentation <https:
 
 All Jupyter Notebook tutorials are kept in the `tutorial-notebooks repository <https://github.com/rubin-dp0/tutorial-notebooks>`_
 of the ``rubin-dp0`` GitHub Organization.
-The contents of the ``prod`` branch of that repository are made available (and automatically updated) in the folder ``notebooks/tutorial-notebooks`` 
-which appears in all users' home directories. 
+The contents of the ``prod`` branch of that repository are made available (and automatically updated) in the folder ``notebooks/tutorial-notebooks``
+which appears in all users' home directories.
 
-**List of Notebook tutorials:** 
+**List of Notebook tutorials:**
 See the repository's `README file <https://github.com/rubin-dp0/tutorial-notebooks/blob/main/README.md>`_ for the most up-to-date
 list of available tutorials with descriptions.
 
@@ -91,7 +91,7 @@ Much of the contents of the tutorial notebooks (above) can also be executed via 
     :titlesonly:
     :glob:
 
-    cmndline-beginner
+    cmdline-beginner
 
 
 .. _DP0-2-Tutorials-Contributed:
@@ -102,11 +102,11 @@ Contributed tutorials
 Everyone is welcome to contribute tutorials or science demonstrations to the shared GitHub repository `delegate-contributions-dp02 <https://github.com/rubin-dp0/delegate-contributions-dp02>`_.
 The `README <https://github.com/rubin-dp0/delegate-contributions-dp02/blob/main/README.md>`_ file for that repo contains instructions
 and best practices for contributions.
-Contributions are stored in sub-directories by topic, such as "extendedness" or "photo-z". 
+Contributions are stored in sub-directories by topic, such as "extendedness" or "photo-z".
 View the readme files in each sub-directory for more information about the contents and who contributed them.
 
 Rubin staff do not apply any quality control reviews to the contributed content in
 the `delegate-contributions-dp02 <https://github.com/rubin-dp0/delegate-contributions-dp02>`_ repo.
 In contrast, the Portal and Notebook Aspect tutorials in the sections above are created by Rubin staff and adhere to
 the set of guidelines and best practices described in `RTN-045 <https://rtn-045.lsst.io/>`_.
-Anyone who wants to contribute to these formal tutorial sets should get in touch with the Rubin Community Engagement team (Melissa Graham).
+Anyone who wants to contribute to these formal tutorial sets should get in touch with the Lead Community Scientist (Melissa Graham).
