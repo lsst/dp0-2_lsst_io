@@ -54,14 +54,11 @@ Guidelines and expectations
 
 **Rubin data rights** are required to participate in DP0 (see description below).
 
-**Understand the** :doc:`/data-access-analysis-tools/rsp-warnings` **regarding using the DP0 RSP on a shared-risk basis**.
+**Understand the** :doc:`/data-access-analysis-tools/rsp-warnings` **regarding using the DP0-era RSP**.
 
 **Abide by the** :ref:`Delegate-Homepage-Code-of-Conduct`.
 
 **Adhere to the** :ref:`Delegate-Homepage-PubPol`.
-
-**Use your RSP account!**
-If you're not sure what to do, choose one of the :ref:`Delegate-Homepage-Delegate-Activities`.
 
 
 .. _Delegate-Homepage-RSP-Accounts:
