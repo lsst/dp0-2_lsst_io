@@ -39,8 +39,7 @@ Resources for DP0 delegates
 
 "Delegates" are the 600 data rights holders who have access to the DP0 data set.
 
-.. Important::
-    **Want to become a delegate?** See the :ref:`Delegate-Homepage-Getting-Started-Checklist`.
+**Want to become a delegate?** See the :ref:`Delegate-Homepage-Getting-Started-Checklist`.
     
 .. toctree::
     :maxdepth: 2
