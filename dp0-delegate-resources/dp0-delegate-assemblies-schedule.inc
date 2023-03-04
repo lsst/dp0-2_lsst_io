@@ -88,7 +88,7 @@
      - Variability in YSOs (Sabina Ustamujic)
      - *breakouts*
    * - 2023-04-28
-     - *tbd; delegate volunteers welcome*
+     - Antonio Vanzanella (15 min; topic tbd) *additional delegate volunteers welcome*
      - *breakouts*
 
 Additional delegate assemblies to be posted.
