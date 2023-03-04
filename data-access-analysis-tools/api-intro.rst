@@ -37,7 +37,7 @@ Longer term, Rubin Observatory will support SCS for simple catalog searches, SIA
 Use of TOPCAT with the RSP TAP service
 ======================================
 
-One popular and useful TAP utility is `TOPCAT <http://www.star.bris.ac.uk/~mbt/topcat/>`_.
+<!-- markdown-link-check-disable-line --> One popular and useful TAP utility is `TOPCAT <http://www.star.bris.ac.uk/~mbt/topcat/>`_.
 
 To access DP0.2 from the TAP utility, one needs to have an RSP access token.
 How to generate and use an RSP access token is described by the `Rubin Science Platform APIs <https://data-int.lsst.cloud/api-aspect>`_ webpage and
