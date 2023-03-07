@@ -58,6 +58,7 @@ linkcheck_timeout = 5  # seconds
 linkcheck_ignore = [
     r"^https://arxiv.org/pdf/.*#",
     r"^http://localhost",
+    r"^http://www.star.bris.ac.uk/~mbt/topcat/",  # site temporarily down
 ]
 
 
