@@ -294,7 +294,7 @@ First, using a terminal in the Notebook aspect, set the global git configuration
    git config --global user.email yourEmail@yourdomain
    git config --global user.name GitUsername
 
-Then, using a terminal in the Notebook aspect, follow these instructions for `generating a new SSH key and adding it to the ssh-agent <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent>`_.
+Then, using a terminal in the Notebook aspect, follow these instructions for `generating a new SSH key and adding it to the ssh-agent <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=linux>`_.
 Be sure to follow the instructions for the Linux environment (i.e., the RSP environment), regardless of your personal computer's environment, because you are generating an SSH key *for your account in the RSP*.
 
 When you `git clone` new repositories, use the SSH link.
