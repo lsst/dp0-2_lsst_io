@@ -51,6 +51,14 @@ and clicking on "history" (near upper-right).
 Major Updates Log
 =================
 
+Mar 7 2023
+----------
+
+Notebook 10 on deblender data products created and released.
+
+Notebook 07b has been updated to use the ``ForcedSourceOnDiaObjects`` table.
+
+
 Feb 16 2023
 -----------
 
