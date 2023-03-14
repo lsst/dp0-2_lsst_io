@@ -48,7 +48,8 @@ A1.4.  For "Location" constraint, you need to select the query "Observation boun
 
 A1.5 Next, click on the "Search" button on the bottom left.  
 
-**Screenshot**
+.. figure:: /static/Portal_tut_04_1.png
+	:name: Portal_tut_04_1
 
 .. _DP0-2-Portal-Histogram-Step-A2:
 
@@ -61,7 +62,9 @@ A2.2  Now you can examine images corresponding to those pointings, but hovering 
 
 A2.3.  The table contains a large amount of information.  For the purpose of this exercise, the most interesting are the "lsst_band" - this is a filter used for the given pointing.  The "lsst_detector" is telling you which detector contains that data point (ranging from 1 to 189), and "t_min" is the start time (in MJD) of the pointing.  
 
-**Screenshot**
+.. figure:: /static/Portal_tut_04_2.png
+	:name: Portal_tut_04_2
+
 
 .. _DP0-2-Portal-Histogram-Step-A3
 
@@ -70,7 +73,8 @@ Step A3.  Generating a histogram of start times of visits at the selected locati
 
 A3.1.  To generate such a histogram, click on the "Add Chart" buttom on the top of your window.  
 
-**Screenshot**
+.. figure:: /static/Portal_tut_04_3.png
+	:name: Portal_tut_04_2
 
 A new window will appear asking for the plot type.  Select "Histogram" here.  For the "Column or expression" select "t_min."  You can select any number of bins in the histogram - say, 100.  You will be given the full range of t_min times (Min and Max) in your table - which you can override.  Clicking "OK" will generate a new panel with a plot of history of Rubin observations at location (62.0, -37.0).  As you can see on the plot below, there is a clear seasonal pattern of the Rubin Observatory visits to your selected location.  You can augment the plot with a title and labels for axis by clicking the "Chart Options" 
 
