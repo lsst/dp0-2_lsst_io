@@ -22,7 +22,7 @@
 
 **Contact authors:** Greg Madejski
 
-**Last verified to run:** 2023-0x-xx
+**Last verified to run:** 2023-03-15
 
 **Targeted learning level:** beginner
 
@@ -67,7 +67,7 @@ A2.3.  The table contains a large amount of information.  For the purpose of thi
 	:name: portal_tut04_step02
 
 
-.. _DP0-2-Portal-Histogram-Step-A3
+.. _DP0-2-Portal-Histogram-Step-A3:
 
 Step A3.  Generating a histogram of start times of visits at the selected location
 ==================================================================================
@@ -128,11 +128,5 @@ This will result of a plot similar to the one below.
 	:name: portal_tut04_step08
 
 Beginner-level users looking for a more general overview of the Portal Aspect should refer to this :doc:`/data-access-analysis-tools/portal-intro`.
-
-
-.. _DP0-2-Portal-4-Step-1:
-
-.. Step 1. TBD
-.. ===========
 
 
