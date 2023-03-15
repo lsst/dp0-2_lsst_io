@@ -14,9 +14,9 @@
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
 .. A warning will alert you of identical labels during the linkcheck process.
 
-#######
+############################################
 04. Plotting Histograms in the Portal Aspect
-#######
+############################################
 
 .. This section should provide a brief, top-level description of the page.
 
@@ -29,6 +29,7 @@
 **Introduction:**
 This brief tutorial will illustrate how to use the histogram function in the Portal aspect of the Rubin Science Platform.  It will consist of two parts.  One ("A") will request all observations of a given location on the sky, and will provide a histogram of the number of visits as a function of time throughout the entire time span covered in the DP0.2 data set. The other ("B") will return the histogram of logarithm of fluxes of objects in a selected region of the sky.  
 
+.. _DP0-2-Portal-Histogram-Part-A:
 
 Part A:  Generate a histogram illustrating the frequency of visits to a specific location 
 =========================================================================================
@@ -86,6 +87,9 @@ The default histogram includes visits with any filter.  You can select, for inst
 .. figure:: /_static/portal_tut04_step05.png
 	:name: portal_tut04_step05
 
+.. _DP0-2-Portal-Histogram-Part-B:
+
+
 Part B:  Generate a histogram of fluxes of objects in a selected region of the sky 
 ==================================================================================
 
@@ -107,6 +111,8 @@ B2.1.  To reduce the number of returned objects, you might want to restrict the 
 
 .. figure:: /_static/portal_tut04_step06.png
 	:name: portal_tut04_step06
+
+.. _DP0-2-Portal-Histogram-Step-B3:
 
 Step B3.  Generate the histogram of g-band fluxes
 =================================================
