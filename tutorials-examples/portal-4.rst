@@ -48,7 +48,7 @@ A1.4.  For "Location" constraint, you need to select the query "Observation boun
 
 A1.5 Next, click on the "Search" button on the bottom left.  
 
-.. figure:: /static/portal_tut04_step01.png
+.. figure:: /_static/portal_tut04_step01.png
 	:name: portal_tut04_step01
 
 .. _DP0-2-Portal-Histogram-Step-A2:
@@ -62,7 +62,7 @@ A2.2  Now you can examine images corresponding to those pointings, but hovering 
 
 A2.3.  The table contains a large amount of information.  For the purpose of this exercise, the most interesting are the "lsst_band" - this is a filter used for the given pointing.  The "lsst_detector" is telling you which detector contains that data point (ranging from 1 to 189), and "t_min" is the start time (in MJD) of the pointing.  
 
-.. figure:: /static/portal_tut04_step02.png
+.. figure:: /_static/portal_tut04_step02.png
 	:name: portal_tut04_step02
 
 
@@ -73,17 +73,17 @@ Step A3.  Generating a histogram of start times of visits at the selected locati
 
 A3.1.  To generate such a histogram, click on the "Add Chart" button on the top of your window.  
 
-.. figure:: /static/portal_tut04_step03.png
+.. figure:: /_static/portal_tut04_step03.png
 	:name: portal_tut04_step03
 
 A new window will appear asking for the plot type.  Select "Histogram" here.  For the "Column or expression" select "t_min."  You can select any number of bins in the histogram - say, 100.  You will be given the full range of t_min times (Min and Max) in your table - which you can override.  Clicking "OK" will generate a new panel with a plot of history of Rubin observations at location (62.0, -37.0).  As you can see on the plot below, there is a clear seasonal pattern of the Rubin Observatory visits to your selected location.  You can augment the plot with a title and labels for axis by clicking the "Chart Options" 
 
-.. figure:: /static/portal_tut04_step04.png
+.. figure:: /_static/portal_tut04_step04.png
 	:name: portal_tut04_step04
 
 The default histogram includes visits with any filter.  You can select, for instance, the "u" filter by entering it into the header of the table at the bottom of your window. This will significantly reduce the number of entries in your table - not surprising, as the DP0.2 data set has many fewer observtions with the "u" filter as they can be made only in the dark time.  
 
-.. figure:: /static/portal_tut04_step05.png
+.. figure:: /_static/portal_tut04_step05.png
 	:name: portal_tut04_step05
 
 Part B:  Generate a histogram of fluxes of objects in a selected region of the sky 
@@ -105,7 +105,7 @@ Step B2.  Enter the search constraints
 
 B2.1.  To reduce the number of returned objects, you might want to restrict the radius to 360 arcseconds by entering this into the "Spatial Constraints" box.  Likewise, you might wish to consider only bright-ish objects, say with a flux greater than 360 nJy.  Tho this end, in the "Output Column Selection and Constraints" for the g_calibFlux, i_calibFlux, and r_calibFlux rows, enter >360 as the constraints.  Clicking "Search" as below will return a table of ~ 4000 objects.  
 
-.. figure:: /static/portal_tut04_step06.png
+.. figure:: /_static/portal_tut04_step06.png
 	:name: portal_tut04_step06
 
 Step B3.  Generate the histogram of g-band fluxes
@@ -113,12 +113,12 @@ Step B3.  Generate the histogram of g-band fluxes
 
 B3.1.  To generate such a histogram - as you did in part A - click on the "Add Chart" buttom on the top of your window.  In the window which just apeared, select "Histogram."  For the "Column or expression" enter "log10(g_calibFlux)" - and, if you wish you can select "log" for the Chart Options of the plot.  
 
-.. figure:: /static/portal_tut04_step07.png
+.. figure:: /_static/portal_tut04_step07.png
 	:name: portal_tut04_step07
 	
 This will result of a plot similar to the one below.  
 
-.. figure:: /static/portal_tut04_step08.png
+.. figure:: /_static/portal_tut04_step08.png
 	:name: portal_tut04_step08
 
 Beginner-level users looking for a more general overview of the Portal Aspect should refer to this :doc:`/data-access-analysis-tools/portal-intro`.
