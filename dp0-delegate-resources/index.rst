@@ -92,7 +92,7 @@ DP0 delegates are being given access to a *shared-risk developmental version* of
 **Everyone is responsible for their own safe usage of the RSP** and must be familiar with this list of :doc:`/data-access-analysis-tools/rsp-warnings`.
 
 **Deactivating or canceling accounts:**
-Please contact Melissa Graham at mlg3k@uw.ed or 
+Please contact Melissa Graham at mlg3k@uw.edu or 
 with a direct message in the `Rubin Community Forum <https://community.lsst.org/>`_
 for instructions on how to delete your RSP account.
 
