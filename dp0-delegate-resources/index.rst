@@ -72,7 +72,7 @@ as well as the international scientists and students whose names appear on the
 `list of international data rights holders <https://lsst.org/scientists/international-drh-list>`_.
 For more information about data rights, please refer to the
 `Rubin Observatory Data Policy <https://docushare.lsst.org/docushare/dsweb/Get/RDO-013>`_.
-If you're not sure if you have data rights, contact Melissa Graham at mlg3k@uw.ed or 
+If you're not sure if you have data rights, contact Melissa Graham at mlg3k@uw.edu or 
 with a direct message in the `Rubin Community Forum <https://community.lsst.org/>`_.
 
 **Petition and data rights authentication:**
