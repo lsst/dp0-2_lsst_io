@@ -36,7 +36,8 @@ The Rubin Science Platform (RSP) provides access to Rubin Observatory data produ
 The :ref:`Tools-RSP-Notebook` enables programmatic interaction with, and analysis of, data products in a python environment.
 The :ref:`Tools-RSP-Portal` provides interactive query, data discovery, and visualization tools.
 
-Note that the contents of this page address the current, DP0-era functionality. During DP0, the RSP has limited functionality (see :ref:`Data-Access-Analysis-Tools-Warnings`) compared to the Operations-era (see the RSP Vision Document, `LSE-319 <https://ls.st/lse-319>`_).
+Note that the contents of this page address the current, DP0-era functionality.
+During DP0, the RSP has limited functionality (see :ref:`Data-Access-Analysis-Tools-Warnings`) compared to the Operations-era (see the RSP Vision Document, `LSE-319 <https://ls.st/lse-319>`_).
 During Rubin Observatory Operations, the RSP will feature additional tools in the Application Programming Interface (API) aspect and more options for using the Portal and Notebook aspects in tandem.
 
 .. figure:: /_static/RSP_home.png
@@ -147,3 +148,10 @@ Data processing tools
 Documentation for the LSST Science Pipelines, a software package which is available to all RSP users via the Notebook Aspect, can be found at `pipelines.lsst.io <https://pipelines.lsst.io>`_.
 
 A brief summary of how the LSST Science Pipelines were used to create the DP0.2 data products can be found in this :doc:`/data-products-dp0-2/data-processing`.
+
+.. _RSP-Future-Functionality-FAQ:
+
+RSP Future Functionality FAQ
+============================
+
+For FAQs, please take a look at this page.
