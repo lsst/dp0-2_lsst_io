@@ -5,8 +5,16 @@ Reference: LSE-319
 Q: will I be able to install custom software?
 A: 
 
-Q: Will there be GPUs?
-A: 
+Q: Will there be GPUs in addition to CPUs?
+A: K-T "I believe we are not yet planning to include GPUs as part of the resources made available on-project.  We are expecting to provide a mechanism for users to "bring their own" Google resources to the RSP, including GPU VMs."
 
 Q: will I be able to download data?
 A:
+
+Q: Can I work offline with the RSP? (Jupyter notebooks / Portal / )
+
+Q: is it possible to connect Jypter aspect with GitHub? 
+NERSC
+
+Q: People use IDE's to develop notebooks (e.g., VS Code), how can this be done? Can it be done at this RSP? 
+https://blog.jupyter.org/connect-to-a-jupyterhub-from-visual-studio-code-ed7ed3a31bcb 
