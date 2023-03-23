@@ -154,4 +154,4 @@ A brief summary of how the LSST Science Pipelines were used to create the DP0.2 
 RSP Future Functionality FAQ
 ============================
 
-For FAQs, please take a look at this page.
+For FAQs, please take a look at the following page: :doc:`data-access-analysis-tools/rsp-future-faq.rst`.
