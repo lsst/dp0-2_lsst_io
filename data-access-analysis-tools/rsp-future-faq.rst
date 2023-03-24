@@ -1,20 +1,24 @@
-Q: Will there be batch resources available to users?
-A: Yes. The RSP will provide a shared computing cluster for users to perform analysis through its Portal, Notebook, and Web API Aspects. The cluster will be managed by a workload management system based on predetermined policies to allocate resources to individual users or groups. LSST users will have an initial allocation of batch CPU time, with the possibility of applying for additional quota through a Resource Allocation Committee. The size of the batch computing resource is determined by the requirement to provide 10% of the total LSST computing and storage resources to users. Users can launch jobs primarily through the APIs exposed in Notebook and Web API Aspects, and the Portal may potentially use the batch computing cluster too. 
-Reference: LSE-319 
+**Q: Will there be batch resources available to users?**
 
-Q: will I be able to install custom software?
-A: 
+**A**: Yes. The RSP will provide a shared computing cluster for users to perform analysis through its Portal, Notebook, and Web API Aspects. The cluster will be managed by a workload management system based on predetermined policies to allocate resources to individual users or groups. LSST users will have an initial allocation of batch CPU time, with the possibility of applying for additional quota through a Resource Allocation Committee. The size of the batch computing resource is determined by the requirement to provide 10% of the total LSST computing and storage resources to users. Users can launch jobs primarily through the APIs exposed in Notebook and Web API Aspects, and the Portal may potentially use the batch computing cluster too. Reference: Science Platform Vision Document (`LSE-319 <https://ls.st/lse-319>`_).
 
-Q: Will there be GPUs in addition to CPUs?
-A: K-T "I believe we are not yet planning to include GPUs as part of the resources made available on-project.  We are expecting to provide a mechanism for users to "bring their own" Google resources to the RSP, including GPU VMs."
 
-Q: will I be able to download data?
-A:
+**Q: Will I be able to install custom software?**
 
-Q: Can I work offline with the RSP? (Jupyter notebooks / Portal / )
+**A**: In the current DP0 era of the RSP, DP0 delegates are able to install custom software into their own homespace (limited by individual quotas).  In addition, during the operations-era RSP there will be a process for users to request certain popular packages to be added to the common environment for use by all.
 
-Q: is it possible to connect Jypter aspect with GitHub? 
-NERSC
+**Q: Will there be GPUs (Graphics processing units) available in addition to CPUs (Central Processing Units)?**
 
-Q: People use IDE's to develop notebooks (e.g., VS Code), how can this be done? Can it be done at this RSP? 
-IDEs such as VSCode support connections to a JupyterLab server. However, this doesn't work with the Notebook Aspect of the Rubin Science Platform due to how authentication works. Unfortunately it's challenging to make work in our environment at the moment. 
+**A**: We are not yet planning to include GPUs as part of the resources made available on-project.  However, we are expecting to provide a mechanism for users to "bring their own" Google resources to the RSP, including GPU virtual machines. 
+
+**Q: Will I be able to download LSST data?**
+
+**A**: Yes, for limited subsets of the data. However, it will be impracticable to downaload the full amount of data that the LSST will produce, and the RSP, in particular its Notebook Aspect, are designed to provide the users with resources  at the LSST Data Access Centers such that computation and analyses can be performed "next to the data". 
+
+**Q: Will I be able to work offline with the RSP?**
+**A** The notebooks in the Notebook Aspect of the RSP can certainly be downloaded and modified offline, working with a subset of the data. However, the full functionality of the RSP Aspects will require an online connection in order to access the LSST data and perform analyses on them. 
+
+**Q: Will I be able to use integrated development environments (IDEs, e.g., VSCode, DataSpell, etc.) to develop Jupyter Notebooks at the RSP?**
+
+**A**: IDEs such as VSCode support connections to a JupyterLab server. However, this currently doesn't work with the Notebook Aspect of the Rubin Science Platform. Unfortunately, it's challenging to make this work in our environment at the moment, and this feature is not currenyly a priority in the current RSP developement. 
+
