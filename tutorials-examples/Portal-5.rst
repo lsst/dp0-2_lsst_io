@@ -113,7 +113,7 @@ This query will return forced flux measurements at all epochs of Rubin visits to
 
 2.5.  Possbly plot two traces on the same plot - one with fsodoAbMag and another with fsodoDiffAbMag ?
 
-Exercises fir the learner
+Exercises for the learner
 =========================
 
-Add error bars to the lightcurves. Magnitude errors can be retrieved during a TAP survey with, e.g., scisql_nanojanskyToAbMagSigma(psFlux, psFluxErr) as psAbMagErr.
+Add error bars to the lightcurves. Magnitude errors can be retrieved during the execution of the ADQL command, with, e.g., scisql_nanojanskyToAbMagSigma(psFlux, psFluxErr) as psAbMagErr.
