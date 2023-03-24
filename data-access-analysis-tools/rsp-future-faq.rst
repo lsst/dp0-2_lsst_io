@@ -17,4 +17,4 @@ Q: is it possible to connect Jypter aspect with GitHub?
 NERSC
 
 Q: People use IDE's to develop notebooks (e.g., VS Code), how can this be done? Can it be done at this RSP? 
-https://blog.jupyter.org/connect-to-a-jupyterhub-from-visual-studio-code-ed7ed3a31bcb 
+IDEs such as VSCode support connections to a JupyterLab server. However, this doesn't work with the Notebook Aspect of the Rubin Science Platform due to how authentication works. Unfortunately it's challenging to make work in our environment at the moment. 
