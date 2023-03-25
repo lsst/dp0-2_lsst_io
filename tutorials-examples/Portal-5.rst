@@ -70,6 +70,8 @@ AND diasrc.filterName = 'i'
 
 1.4. Click "Search"
 
+**Screenshot**
+
 This will return the results as on the screenshot below.  
 
 **Screenshot**
@@ -103,11 +105,17 @@ AND fsodo.band = 'i'
 
 2.3. Click "Search"
 
-This query will return forced flux measurements at all epochs of Rubin visits to our supernova location, but to plot such a light curve (rather than the default  of your table), you need to modify the settings of the plot by clicking the settings icon as below:  
+**Screenshot**
+
+This query will return forced flux measurements at all epochs of Rubin visits to our supernova location, but to plot such a light curve (rather than the default  of your table), you need to modify the settings of the plot by clicking the settings icon as above.  
 
 **Screenshot**
 
-2.4.  Restrict the MJD range of your Forced Photometry search to the range covered in DiaObject, to compare the light curves retrieved from the two tables by changing the plot parameters as below:  
+Here, you need to request the appropriate columns:  
+
+**Screenshot**
+
+2.4.  Restrict the MJD range of your Forced Photometry search to the range covered in DiaObject, to compare the light curves retrieved from the two tables by changing the plot parameters in the "chart settings" window such as 930 < MJD-60000 < 1010 - this will retun the plot below:  
 
 **Screenshot** 
 
