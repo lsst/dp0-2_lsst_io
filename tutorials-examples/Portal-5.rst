@@ -69,26 +69,23 @@ Step 1. Set the query constraints and plot the light curve from the DiaSource ta
 
 1.4. Click "Search"
 
-**Screenshot**
-
 .. figure:: /_static/portal_tut05_step01a.png
     :name: portal_tut05_step01a
 
 
 This will return the results as on the screenshot below.  
 
-**Screenshot**
-
 .. figure:: /_static/portal_tut05_step01b.png
     :name: portal_tut05_step01b
 
-
-
 1.5.  You can modify the content of the plot on the upper right-hand side, by clicking the settings icon (two gears as marked on the screenshot above).    Once you clicked on it, you can modify trace as shown on the screenshot below.  Note that the scisql_nanojanskyToAbMag function is smart enough not to return any value when the argument of flux is negative.  
 
-**Screenshot** 
-
 .. figure:: /_static/portal_tut05_step01c.png
+    :name: portal_tut05_step01c
+    
+Clicking on "Apply" will result in the screen as below:  
+
+.. figure:: /_static/portal_tut05_step01d.png
     :name: portal_tut05_step01c
 
 
@@ -117,28 +114,20 @@ Step 2. Set the query constraints and plot the light curve from the ForcedSource
 
 2.3. Click "Search"
 
-**Screenshot**
-
 .. figure:: /_static/portal_tut05_step02a.png
     :name: portal_tut05_step02a
 
 This query will return forced flux measurements at all epochs of Rubin visits to our supernova location, but to plot such a light curve (rather than the default  of your table), you need to modify the settings of the plot by clicking the settings icon as above.  
-
-**Screenshot**
 
 .. figure:: /_static/portal_tut05_step02b.png
     :name: portal_tut05_step02b
 
 Here, you need to request the appropriate columns:  
 
-**Screenshot**
-
 .. figure:: /_static/portal_tut05_step02c.png
     :name: portal_tut05_step02c
 
 2.4.  Restrict the MJD range of your Forced Photometry search to the range covered in DiaObject, to compare the light curves retrieved from the two tables by changing the plot parameters in the "chart settings" window such as 930 < MJD-60000 < 1010 - this will retun the plot below:  
-
-**Screenshot** 
 
 .. figure:: /_static/portal_tut05_step02d.png
     :name: portal_tut05_step02d
