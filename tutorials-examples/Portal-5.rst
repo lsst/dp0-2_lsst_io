@@ -10,7 +10,7 @@
 
 .. This is the label that can be used for cross referencing this file.
 .. Recommended title label format is "Directory Name"-"Title Name" -- Spaces should be replaced by hyphens.
-.. _Tutorials-Examples-DP0-2-Portal-Beginner:
+.. _Tutorials-Examples-DP0-2-Portal05-Beginner:
 .. Each section should include a label for cross referencing to a given area.
 .. Recommended format for all labels is "Title Name"-"Section Name" -- Spaces should be replaced by hyphens.
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
@@ -26,10 +26,9 @@
 
 **Last verified to run:** 2023-03-24
 
-**Targeted learning level:** beginner/intermediate 
+**Targeted learning level:** intermediate 
 
 **Introduction:**
-
 Generally, the DiaSource table can be used to plot light curves, but it only includes detections with SNR > 5 in the difference images. 
 If your science goal requires lower-SNR measurements (e.g. including fluxes of a given object measured during all visits to its location, for instance before and after a flare or explosion), then one can use the forced photometry in the ForcedSourceOnDiaObjects table instead.  
 
@@ -57,28 +56,41 @@ Step 1. Set the query constraints and plot the light curve from the DiaSource ta
 
 .. code-block:: SQL 
 
-SELECT diasrc.ra, diasrc.decl,
-diasrc.diaObjectId, diasrc.diaSourceId, 
-diasrc.filterName, diasrc.midPointTai,
-scisql_nanojanskyToAbMag(diasrc.psFlux) AS psAbMag,
-ccdvis.seeing
-FROM dp02_dc2_catalogs.DiaSource AS diasrc
-JOIN dp02_dc2_catalogs.CcdVisit AS ccdvis
-ON diasrc.ccdVisitId = ccdvis.ccdVisitId
-WHERE diasrc.diaObjectId = 1252220598734556212
-AND diasrc.filterName = 'i'
+   SELECT diasrc.ra, diasrc.decl,
+   diasrc.diaObjectId, diasrc.diaSourceId, 
+   diasrc.filterName, diasrc.midPointTai,
+   scisql_nanojanskyToAbMag(diasrc.psFlux) AS psAbMag,
+   ccdvis.seeing
+   FROM dp02_dc2_catalogs.DiaSource AS diasrc
+   JOIN dp02_dc2_catalogs.CcdVisit AS ccdvis
+   ON diasrc.ccdVisitId = ccdvis.ccdVisitId
+   WHERE diasrc.diaObjectId = 1252220598734556212
+   AND diasrc.filterName = 'i'
 
 1.4. Click "Search"
 
 **Screenshot**
 
+.. figure:: /_static/portal_tut05_step01a.png
+    :name: portal_tut05_step01a
+
+
 This will return the results as on the screenshot below.  
 
 **Screenshot**
 
+.. figure:: /_static/portal_tut05_step01b.png
+    :name: portal_tut05_step01b
+
+
+
 1.5.  You can modify the content of the plot on the upper right-hand side, by clicking the settings icon (two gears as marked on the screenshot above).    Once you clicked on it, you can modify trace as shown on the screenshot below.  Note that the scisql_nanojanskyToAbMag function is smart enough not to return any value when the argument of flux is negative.  
 
 **Screenshot** 
+
+.. figure:: /_static/portal_tut05_step01c.png
+    :name: portal_tut05_step01c
+
 
 This will plot the apparent magnitude of the object as a function of time.  This looks interesting enough that you might wish to follow up with Forced Photometry!  Can you detect the progenitor prior to the explosion?  
 
@@ -91,33 +103,45 @@ Step 2. Set the query constraints and plot the light curve from the ForcedSource
 
 .. code-block:: SQL 
 
-SELECT fsodo.coord_ra, fsodo.coord_dec, 
-fsodo.diaObjectId, fsodo.ccdVisitId, fsodo.band, 
-fsodo.psfDiffFlux, fsodo.psfDiffFluxErr, 
-fsodo.psfFlux, fsodo.psfFluxErr, 
-cv.expMidptMJD, 
-scisql_nanojanskyToAbMag(fsodo.psfFlux) AS fsodoAbMag,
-scisql_nanojanskyToAbMag(fsodo.psfDiffFlux) AS fsodoDiffAbMag
-FROM dp02_dc2_catalogs.ForcedSourceOnDiaObject as fsodo 
-JOIN dp02_dc2_catalogs.CcdVisit as cv ON cv.ccdVisitId = fsodo.ccdVisitId 
-WHERE fsodo.diaObjectId = 1252220598734556212 
-AND fsodo.band = 'i'
+   SELECT fsodo.coord_ra, fsodo.coord_dec, 
+   fsodo.diaObjectId, fsodo.ccdVisitId, fsodo.band, 
+   fsodo.psfDiffFlux, fsodo.psfDiffFluxErr, 
+   fsodo.psfFlux, fsodo.psfFluxErr, 
+   cv.expMidptMJD, 
+   scisql_nanojanskyToAbMag(fsodo.psfFlux) AS fsodoAbMag,
+   scisql_nanojanskyToAbMag(fsodo.psfDiffFlux) AS fsodoDiffAbMag
+   FROM dp02_dc2_catalogs.ForcedSourceOnDiaObject as fsodo 
+   JOIN dp02_dc2_catalogs.CcdVisit as cv ON cv.ccdVisitId = fsodo.ccdVisitId 
+   WHERE fsodo.diaObjectId = 1252220598734556212 
+   AND fsodo.band = 'i'
 
 2.3. Click "Search"
 
 **Screenshot**
 
+.. figure:: /_static/portal_tut05_step02a.png
+    :name: portal_tut05_step02a
+
 This query will return forced flux measurements at all epochs of Rubin visits to our supernova location, but to plot such a light curve (rather than the default  of your table), you need to modify the settings of the plot by clicking the settings icon as above.  
 
 **Screenshot**
+
+.. figure:: /_static/portal_tut05_step02b.png
+    :name: portal_tut05_step02b
 
 Here, you need to request the appropriate columns:  
 
 **Screenshot**
 
+.. figure:: /_static/portal_tut05_step02c.png
+    :name: portal_tut05_step02c
+
 2.4.  Restrict the MJD range of your Forced Photometry search to the range covered in DiaObject, to compare the light curves retrieved from the two tables by changing the plot parameters in the "chart settings" window such as 930 < MJD-60000 < 1010 - this will retun the plot below:  
 
 **Screenshot** 
+
+.. figure:: /_static/portal_tut05_step02d.png
+    :name: portal_tut05_step02d
 
 2.5.  Possbly plot two traces on the same plot - one with fsodoAbMag and another with fsodoDiffAbMag ?
 
