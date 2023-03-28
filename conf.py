@@ -54,7 +54,7 @@ intersphinx_mapping = {
 # -- Options for linkcheck builder ----------------------------------------
 
 linkcheck_retries = 2
-linkcheck_timeout = 5  # seconds
+linkcheck_timeout = 15  # seconds
 linkcheck_ignore = [
     r"^https://arxiv.org/pdf/.*#",
     r"^http://localhost",
