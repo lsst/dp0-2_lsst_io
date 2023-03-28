@@ -44,7 +44,7 @@ Getting started with DP0 checklist
 | 7. *Optional:* work at your own pace through the :doc:`/tutorials-examples/index`.
 | 8. *Optional:* attend :ref:`Delegate-Homepage-DP0-Virtual-Seminars` or watch recordings where available.
 | 9. *Optional:* consider the :ref:`Delegate-Homepage-Delegate-Activities`.
-| 10. *Optional:* be aware that the `Rubin Users Committee <https://lsst.org/scientists/users-committee>`_ are your advocates.
+| 10. *Optional:* be aware that the `Rubin Users Committee <https://www.lsst.org/scientists/users-committee>`_ are your advocates.
 
 
 .. _Delegate-Homepage-Guidelines-Expectations:
@@ -69,7 +69,7 @@ Rubin Science Platform accounts
 **Rubin data rights** are required in order to hold an account in the Rubin Science Platform.
 All scientists and students affiliated with an institution in the US and Chile have data rights,
 as well as the international scientists and students whose names appear on the
-`list of international data rights holders <https://lsst.org/scientists/international-drh-list>`_.
+`list of international data rights holders <https://www.lsst.org/scientists/international-drh-list>`_.
 For more information about data rights, please refer to the
 `Rubin Observatory Data Policy <https://docushare.lsst.org/docushare/dsweb/Get/RDO-013>`_.
 If you're not sure if you have data rights, contact Melissa Graham at mlg3k@uw.edu or 
@@ -246,7 +246,7 @@ Both the Portal and Notebook tutorials are numbered in increasing in difficulty.
 
 **Prepare to do science with the Data Previews.**
 In the coming years, *real commissioning data* will be released as Data Preview 1 (DP1) and DP2,
-as described in the `plans for early science with Rubin Observatory <https://lsst.org/scientists/early-science>`_.
+as described in the `plans for early science with Rubin Observatory <https://www.lsst.org/scientists/early-science>`_.
 
 For example, use the simulated LSST-like data set of DP0 to generate and test your custom analysis software now,
 so that you're more prepared for early science with future data previews.
@@ -378,7 +378,7 @@ Citation policies
 
 **Cite the DESC’s publications for the DC2 simulated data set**, which is being used for DP0.
 If you publish work based on the DP0 data set, you must cite “CosmoDC2: A Synthetic Sky Catalog for Dark Energy Science with LSST”
-(`Korytov et al 2019 <https://ui.adsabs.harvard.edu/abs/2019ApJS..245...26K/abstract>`_), “The LSST DESC DC2 Simulated Sky Survey” (`arXiv:2010.05926 <https://arxiv.org/abs/2010.05926>`_),
+(`Korytov et al 2019 <https://www.ui.adsabs.harvard.edu/abs/2019ApJS..245...26K/abstract>`_), “The LSST DESC DC2 Simulated Sky Survey” (`arXiv:2010.05926 <https://arxiv.org/abs/2010.05926>`_),
 and potentially “DESC DC2 Data Release Note” (`arXiv:2101.04855 <https://arxiv.org/abs/2101.04855>`_) if you used the Object or Truth-Match tables, which are presented in that release note.
 
 **Consider extending co-authorship or acknowledgments to DP0 delegates whose work you used, or who have helped you, as appropriate.**
