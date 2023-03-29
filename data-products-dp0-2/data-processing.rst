@@ -33,7 +33,7 @@ Image simulation
 The DESC DC2 image simulations are described in `Section 6 <https://arxiv.org/pdf/2010.05926.pdf#page=19>`_ of the `DC2 Paper <https://arxiv.org/abs/2010.05926>`_.
 These data consist of simulated LSST images generated for 5 years of LSST wide-fast-deep observations covering ~300 \deg\ :sup:`2` of the sky centered at ``(RA, DEC)`` = ``55.064, −29.783`` degrees.
 Images are simulated by the `imSim <https://github.com/LSSTDESC/imSim>`_ software package, a modular Python code that calls the GalSim software library (`Rowe et al. 2015 <https://arxiv.org/abs/1407.7676>`_) for astronomical object rendering
-and is run in the LSST Science Pipelines and LSST Simulation Framework software environment (`Connolly et al. 2014 <https://ui.adsabs.harvard.edu/abs/2014SPIE.9150E..14C>`_).
+and is run in the LSST Science Pipelines and LSST Simulation Framework software environment (`Connolly et al. 2014 <https://ui.adsabs.harvard.edu/abs/2014SPIE.9150E..14C/abstract>`_).
 The LSST software libraries provide the telescope and hardware-specific information necessary to simulate an LSST exposure, such as pixel coordinates on the focal plane, telescope filter characteristics, and the brightness of the sky.
 Using that description of LSSTCam, imSim produces output files that simulate the pixel data after readout.
 While imSim includes many realistic aspects of the LSST imaging (e.g., CCD geometry, electronic readout, cosmic rays, and bleed trails), there are some aspects such as scattered and reflected light from bright objects that are not included.

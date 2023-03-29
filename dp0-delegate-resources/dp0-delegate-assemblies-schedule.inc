@@ -88,7 +88,7 @@
      - Variability in YSOs (Sabina Ustamujic)
      - *breakouts*
    * - 2023-04-28
-     - Dan Ryczanowski (30 min; "Lensed Explosive Transients with DP0.2") and Antonio Vanzanella (15 min; topic tbd)
+     - Dan Ryczanowski (30 min; "Lensed Explosive Transients with DP0.2") and Antonio Vanzanella (15 min; "Finding long-period Solar System or interstellar objects with machine learning in LSST.")
      - *breakouts*
 
 Additional delegate assemblies to be posted.
