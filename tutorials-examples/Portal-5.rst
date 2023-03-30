@@ -35,47 +35,48 @@ If your science goal requires lower-SNR measurements (e.g. including fluxes of a
 Let's say there is a specific object whose DiaSource light curve looks particularly interesting. 
 In order to explore the flux of the object in all sets of single-epoch visit images as well as difference images, one can use the 
 ForcedSourceOnDiaObject catalog.  The table in this catalog contains point-source forced-photometry measurements on individual 
-single-epoch visit images and difference images, based on and linked to the entries in the DiaObject table.  
-We will use the JOIN command to the CcdVisit table to obtain the exposure time mid-point in the 
-Modified Julian Date (MJD) format (expMidptMJD)
+single-epoch visit images and difference images, based on and linked to the entries in the DiaObject table.  We will use an ADQL query, where 
+we will use the JOIN command to the CcdVisit table to obtain the exposure time mid-point in the 
+Modified Julian Date (MJD) format (expMidptMJD).  
 
 In this tutorial, we will create a Forced Photometry light curve of the supernova we considered in Portal Tutorial 02, one with the DiaObjectId "1252220598734556212".  There, we used the following ADQL query:  
 
 .. code-block:: SQL
 
-SELECT diasrc.ra, diasrc.decl,
-diasrc.diaObjectId, diasrc.diaSourceId,
-diasrc.filterName, diasrc.midPointTai,
-scisql_nanojanskyToAbMag(diasrc.psFlux) AS psAbMag,
-ccdvis.seeing
-FROM dp02_dc2_catalogs.DiaSource AS diasrc
-JOIN dp02_dc2_catalogs.CcdVisit AS ccdvis
-ON diasrc.ccdVisitId = ccdvis.ccdVisitId
-WHERE diasrc.diaObjectId = 1252220598734556212
-AND diasrc.filterName = 'i'
+   SELECT diasrc.ra, diasrc.decl,
+   diasrc.diaObjectId, diasrc.diaSourceId,
+   diasrc.filterName, diasrc.midPointTai,
+   scisql_nanojanskyToAbMag(diasrc.psFlux) AS psAbMag,
+   ccdvis.seeing
+   FROM dp02_dc2_catalogs.DiaSource AS diasrc
+   JOIN dp02_dc2_catalogs.CcdVisit AS ccdvis
+   ON diasrc.ccdVisitId = ccdvis.ccdVisitId
+   WHERE diasrc.diaObjectId = 1252220598734556212
+   AND diasrc.filterName = 'i'
 
 Executing this query returned the table on the bottom of the screenshot below.  After appropriately modifying the chart options, we could plot the DiaSource light curve of the supernova - it is on the top part of the screenshot.  
 
 .. figure:: /_static/portal_tut05_step00.png
     :name: portal_tut05_step00
 
-Below, we will be examining its flux history in the ForcedSourceOnDiaObjects table.  We will employ the Astronomical Data Query Language (ADQL) to query and retrieve the data.  
+Below, we will be examining its flux history in the ForcedSourceOnDiaObjects table.  Again, we will employ the Astronomical Data Query Language (ADQL) to query and retrieve the data.  
 
-For more information, see the schema of the ForcedSourceOnDiaObject catalog.
+For more information, see `schema <https://dm.lsst.org/sdm_schemas/browser/dp02.html#ForcedSourceOnDiaObject>`_ of the ForcedSourceOnDiaObject catalog.  
 
 .. _DP0-2-Portal-5-Step-1:
 
-Step 1. Set the query constraints and plot the light curve from the ForcedSourceOnDiaObjects table 
-==================================================================================================
+Step 1. Set the query constraints and plot the single-band light curve from the ForcedSourceOnDiaObjects table 
+==============================================================================================================
 
 1.1.  Log in to the Portal Aspect of the Rubin Science Platform.  
 
-1.2.  Click on "Edit ADQL" (advanced) button, as above.  Clear the content of the ADQL query box, if it is not empty.  
+1.2.  Click on "Edit ADQL" (advanced) button in the Select Query line.  Clear the content of the ADQL query box, if it is not empty.  
 
 1.3.  Enter a different ADQL query than the one given in the Intrduction - the new query is below.  This query will retrieve all of the ForcedSourceOnDiaObjects table entries for the supernova for which we retrieved the DiaSource fluxes in the plot above.  
 
 The ForcedSourceOnDiaObject contains forced photometry on both the difference image (psfDiffFlux, psfDiffFluxErr) 
 and the processed visit image (PVI), also called the "direct" image (psfFlux, psfFluxErr).  Below, we retrieve both types of fluxes for our DiaObject.  
+For starters, we will work with the psfFlux entries - furter down in the tutorial, we will explain the meaning and use of the psfDiffFlux.  
 
 The JOIN command in this query is used for the ccdVisitId to join to the CcdVisit table to obtain the expMidptMJD (MJD of the mid-point of the exposure).  
 
@@ -114,9 +115,9 @@ You night want to click on "xy-tbl" in the upper right hand part of the display.
 .. figure:: /_static/portal_tut05_step01d.png
     :name: portal_tut05_step01d
     
-Here, a warning is warranted:  converting difference-image fluxes to magnitudes using the scisql_nanojanskyToAbMag() function can be dangerous.  This is because the nanojanskyToAbMag() function does not return any value for a negative flux as an argument, and thus any negative fluxes will be lost. This is especially important for variability studies, when a negative value of flux is (within errors) consistent with non-deection might be scientifically interesting.  
+Here, a warning is warranted:  converting fluxes from the ForcedSourceOnDiaObject table to magnitudes using the scisql_nanojanskyToAbMag() function can be dangerous.  This is because the nanojanskyToAbMag() function does not return any value for a negative flux as an argument, and thus any negative fluxes will be lost. This is especially important for variability studies, when a negative value of flux is (within errors) consistent with non-deection might be scientifically interesting.  
 
-1.4.  Restrict the MJD range of your Forced Photometry search to the range covered in DiaObject, to compare the light curves retrieved from the two tables by changing the plot parameters in the "chart settings" window such as 930 < MJD-60000 < 1010 - this will retun the plot below:  
+1.4.  If you wish, you can restrict the MJD range of your Forced Photometry search to the range covered in DiaObject shown in the Ingtroduction).  This will allow you to compare the light curves retrieved from the two tables.  You can do this by changing the plot parameters in the "chart settings" window such as 930 < MJD-60000 < 1010 - this will retun the plot below:  
 
 .. figure:: /_static/portal_tut05_step01e.png
     :name: portal_tut05_step01e
