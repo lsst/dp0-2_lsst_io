@@ -59,7 +59,7 @@ Executing this query returned the table on the bottom of the screenshot below.  
 .. figure:: /_static/portal_tut05_step00.png
     :name: portal_tut05_step00
 
-Below, we will be examining its flux history in the ForcedSourceOnDiaObjects table.  Again, we will employ the Astronomical Data Query Language (ADQL) to query and retrieve the data.  
+Below, we will be examining its light curve in the ForcedSourceOnDiaObjects table in all availavble Rubin visits.  Again, we will employ the Astronomical Data Query Language (ADQL) to query and retrieve the data.  
 
 For more information, see `schema <https://dm.lsst.org/sdm_schemas/browser/dp02.html#ForcedSourceOnDiaObject>`_ of the ForcedSourceOnDiaObject catalog.  
 
@@ -72,7 +72,7 @@ Step 1. Set the query constraints and plot the single-band light curve from the 
 
 1.2.  Click on "Edit ADQL" (advanced) button in the Select Query line.  Clear the content of the ADQL query box, if it is not empty.  
 
-1.3.  Enter a different ADQL query than the one given in the Intrduction - the new query is below.  This query will retrieve all of the ForcedSourceOnDiaObjects table entries for the supernova for which we retrieved the DiaSource fluxes in the plot above.  
+1.3.  Enter a different ADQL query than the one given in the Intrduction - the new query is below.  This query will retrieve all of the ForcedSourceOnDiaObjects table entries for the supernova for which we retrieved the DiaSource fluxes (converted into magnitudes) in the plot above.  
 
 The ForcedSourceOnDiaObject contains forced photometry on both the difference image (psfDiffFlux, psfDiffFluxErr) 
 and the processed visit image (PVI), also called the "direct" image (psfFlux, psfFluxErr).  Below, we retrieve both types of fluxes for our DiaObject.  
@@ -115,7 +115,7 @@ You night want to click on "xy-tbl" in the upper right hand part of the display.
 .. figure:: /_static/portal_tut05_step01d.png
     :name: portal_tut05_step01d
     
-Here, a warning is warranted:  converting fluxes from the ForcedSourceOnDiaObject table to magnitudes using the scisql_nanojanskyToAbMag() function can be dangerous.  This is because the nanojanskyToAbMag() function does not return any value for a negative flux as an argument, and thus any negative fluxes will be lost. This is especially important for variability studies, when a negative value of flux is (within errors) consistent with non-deection might be scientifically interesting.  
+Here, a warning is warranted:  converting fluxes from the ForcedSourceOnDiaObject table to magnitudes using the scisql_nanojanskyToAbMag() function can be dangerous.  This is because the nanojanskyToAbMag() function does not return any value for a negative flux as an argument, and thus any negative fluxes will be lost. This is especially important for variability studies, when a negative value of flux is (within errors) consistent with non-detection might be scientifically interesting.  
 
 1.4.  If you wish, you can restrict the MJD range of your Forced Photometry search to the range covered in DiaObject shown in the Ingtroduction).  This will allow you to compare the light curves retrieved from the two tables.  You can do this by changing the plot parameters in the "chart settings" window such as 930 < MJD-60000 < 1010 - this will retun the plot below:  
 
