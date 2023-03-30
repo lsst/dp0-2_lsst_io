@@ -120,6 +120,7 @@ Step B3.  Generate the histogram of g-band fluxes
 =================================================
 
 B3.1.  To generate such a histogram - as you did in part A - click on the "Add Chart" buttom on the top of your window.  In the window which just apeared, select "Histogram."  For the "Column or expression" enter "log10(g_calibFlux).
+
 .. figure:: /_static/portal_tut04_step07.png
 	:name: portal_tut04_step07
 	
