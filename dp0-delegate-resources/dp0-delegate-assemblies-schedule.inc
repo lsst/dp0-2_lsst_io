@@ -79,7 +79,7 @@
      - Account setup in the RSP's new identity management system
      - *breakouts*
    * - 2023-03-17
-     - Time domain science (Ryan Lau)
+     - `Time domain science (Ryan Lau) <https://www.youtube.com/watch?v=nzhvtpEU5e4>`__
      - *breakouts*
    * - 2023-03-31
      - Deblender Data Products (Christina Williams)
