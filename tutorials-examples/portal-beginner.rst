@@ -112,15 +112,15 @@ Set the "X Min/Max" values to "-0.5" and "2.0", and the "Y Min/Max" values to "1
 	
 	The color-magnitude diagram.
 
-**Notice:** The default plot style is a a two-dimensional histogram, which is appropriate for very large data sets.
-In this case, with only 10000 object retrieved, create a scatter plot for comparison.
+**Notice:** The default plot style is a scatter plot, which is appropriate for our data set of a modest size (such as 10000 objects retrieved here).  
+It is also possible to create a two-dimensional histogram, appropriate for large data sets (a "heat map") which we will make in Step 2.4.  
 
 **Notice:** The simulated data is visibly quantized in the above plot, and this will not be the case with real data.
 The discrete sequences at red colors, (g-i) > 0.5, come from the discretized procedure used to simulate low-mass stars in the DP0.2 data set.
 
-2.4. Click on the xy plot settings icon (two gears, upper right) again, but this time choose "Add New Chart".
-Leave "Plot Type" at the default, "Scatter", and then set the "X" and "Y" to the same equation as in Step 2.2.
-Use the same "Chart Options" except give it a different "Chart title", such as "Scatter CMD".
+2.4. Click on the xy plot settings icon (two gears, upper right) again, but this time choose "Add New Chart."  
+Change the "Plot Type" to "Heatmap", and then set the "X" and "Y" to the same equation as in Step 2.2.
+Use the same "Chart Options" except give it a different "Chart title", such as "Heatmap Color-Magnitude Diagram."  
 
 .. figure:: /_static/portal_tut01_step02d.png
 	:name: portal_tut01_step02d
@@ -132,7 +132,7 @@ Use the same "Chart Options" except give it a different "Chart title", such as "
 .. figure:: /_static/portal_tut01_step02e.png
 	:name: portal_tut01_step02e
 	
-	The color-magnitude diagrams, including the new scatter plot (right).
+	The color-magnitude diagrams, including the previously made scatter plot (left) and the heatmap (right).
 
 2.6. Interact with the plot.
 Hover over the data points with a mouse and see the x and y values appear in a pop-up window.
