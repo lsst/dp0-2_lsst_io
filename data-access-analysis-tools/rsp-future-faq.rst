@@ -27,12 +27,17 @@ Users interested in GPUs shoudl contact the Independect Data Access Centers prog
 
 **Q: Will I be able to download LSST data?**
 
-**A**: Yes, for limited subsets of the data. However, it will be impracticable to downaload the full amount of data that the LSST will produce, and the RSP, in particular its Notebook Aspect, are designed to provide the users with resources  at the LSST Data Access Centers such that computation and analyses can be performed "next to the data". 
+**A**: Yes, for limited subsets of the data.
+However, it will be impractical to download the full amount of data that the LSST will produce, and the RSP, in particular its Notebook Aspect, are designed to provide the users with resources at the LSST Data Access Centers such that computation and analyses can be performed "next to the data".
 
 **Q: Will I be able to work offline with the RSP?**
-**A** The notebooks in the Notebook Aspect of the RSP can certainly be downloaded and modified offline, working with a subset of the data. However, the full functionality of the RSP Aspects will require an online connection in order to access the LSST data and perform analyses on them. 
+
+**A** The full functionality of the RSP Aspects will require an online connection in order to access the LSST data and perform analyses on them.
 
 **Q: Will I be able to use integrated development environments (IDEs, e.g., VSCode, DataSpell, etc.) to develop Jupyter Notebooks at the RSP?**
 
-**A**: IDEs such as VSCode support connections to a JupyterLab server. However, this currently doesn't work with the Notebook Aspect of the Rubin Science Platform. Unfortunately, it's challenging to make this work in our environment at the moment, and this feature is not currenyly a priority in the current RSP developement. 
+**A**: IDEs such as VSCode support connections to a JupyterLab server.
+However, this currently doesn't work with the Notebook Aspect of the Rubin Science Platform.
+Unfortunately, it's challenging to make this work in our environment at the moment, and this feature is not currenyly a priority in the current RSP developement.
 
+To ask additional questions, please use the "Support -- Rubin Science Platform" category in the Rubin Observatory `Community Forum <https://community.lsst.org/c/support/lsp/39>`_.
