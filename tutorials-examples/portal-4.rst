@@ -29,7 +29,7 @@
 **Introduction:**
 This brief tutorial will illustrate how to use the histogram function in the Portal aspect of the Rubin Science Platform.  It will consist of two parts.  One ("A") will request all observations of a given location on the sky, and will provide a histogram of the number of visits as a function of time throughout the entire time span covered in the DP0.2 data set. This might be particularly valuable for studies of variability of celestial sources, for instance the measurement of a power density spectrum, used in determining periodograms of their fluxes.  This is because the density of visits affects the window function which must be accounted for in developing a power density spectrum.  
 
-The other ("B") will return the histogram of logarithm of fluxes of objects in a selected region of the sky.  Here, one science case might be the contribution of discrete sources (for instance those studied at a limited-size patch of the sky at high esensitivity and high spatial resolution) to background radiation from unresolved sources over a large area of the sky, which might appear as a diffuse emission.  
+The other ("B") will return the histogram of logarithm of fluxes of objects in a selected region of the sky.  Here, one science case might be the contribution of discrete sources (for instance those studied at a limited-size patch of the sky at high sensitivity and high spatial resolution) to background radiation from unresolved sources determined over a large area of the sky but at a lower angular resolution, which then might appear as a diffuse emission.  
 
 .. _DP0-2-Portal-Histogram-Part-A:
 
@@ -45,7 +45,7 @@ A1.1.  Log into the Portal Aspect
 
 A1.2.  Once you've logged in, you should be (by default) in the query type "Single Table (UI assisted)."  Change this to "Image Search (ObsTAP)" - the third button.  
 
-A1.3 In the "Constraints" section, select the "Calibration Level" as "2" - this is for single-epoch images (Processed Visit Images, or PVIs).  You should be (by default) in the "Images" part of the Data Product Type list - if not, that's what you need to select.  
+A1.3 In the "Constraints" section, select the "Calibration Level" as "2" - this is for single-epoch images (Processed Visit Images, or PVIs).  You should be (by default) in the "Image" part of the Data Product Type list - if not, that's what you need to select.  
 
 A1.4.  For "Location" constraint, you need to select the query "Observation boundary contains point" (should be the default).  You can select any location which is within the DP0.2 sky area, say 62.0, -37.0 .  In the large table on the right, you should leave the "Output Column Selection and Constraints" as was defaulted by the Portal aspect.  
 
@@ -124,7 +124,7 @@ B3.1.  To generate such a histogram - as you did in part A - click on the "Add C
 .. figure:: /_static/portal_tut04_step07.png
 	:name: portal_tut04_step07
 	
-This will result in the plot on the upper right panel on the screenshot below.  If you wish you can add a chart with the same settings as the previous one, but select "log" for the Chart Options of the plot (left panel).  Such plot is often called "log(N) - Log (S).  
+This will result in the plot on the upper right panel on the screenshot below.  If you wish you can add a chart with the same settings as the previous one, but with log axis fir the number, select "log" for the Chart Options of the plot ( as is in the left panel).  Such plot is often called "log(N) - Log (S)."  
 
 .. figure:: /_static/portal_tut04_step08.png
 	:name: portal_tut04_step08
