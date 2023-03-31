@@ -11,7 +11,6 @@ DMTN-223: User batch - possibilities and plans (`DMTN-223 <https://dmtn-223.lsst
 DMTN-202: Use cases and science requirements on a user batch facility (`DMTN-202 <https://dmtn-202.lsst.io/>`_).
 LSE-319: Science Platform Vision Document (`LSE-319 <https://ls.st/lse-319>`_).
 
-
 **Q: Will I be able to install custom software?**
 
 **A**: In the current DP0 era of the RSP, DP0 delegates are able to install custom software into their own homespace (limited by individual quotas).
@@ -40,4 +39,37 @@ However, it will be impractical to download the full amount of data that the LSS
 However, this currently doesn't work with the Notebook Aspect of the Rubin Science Platform.
 Unfortunately, it's challenging to make this work in our environment at the moment, and this feature is not currenyly a priority in the current RSP developement.
 
-To ask additional questions, please use the "Support -- Rubin Science Platform" category in the Rubin Observatory `Community Forum <https://community.lsst.org/c/support/lsp/39>`_.
+**Q: What are the main technical differences between the DP0-era RSP and the operations-era RSP as described in the RSP Vision Document?**
+
+**A**: A description of the operations-era RSP for future users is provided in the `RSP Vision Document <https://docushare.lsst.org/docushare/dsweb/Get/LSE-319>`_.
+The DP0-era RSP will have limited features in many respects, as it is still under active development.
+Some of the more notable differences of the DP0-era RSP are:
+
+* Authentication will be performed using Github as the identity provider.
+  DP0 delegates will have to create a GitHub account if they do not already have one.
+  During operations, authentication will be done with, e.g., US university (InCommon) identity.
+
+* Some major usability features will not be available, such as support for user database tables; support for parallelized or batch computation; the ability to sync files between RSP accounts and personal devices; and the ability to manage the sharing of data within private groups.
+
+* For the Notebook aspect, only python notebooks and the terminal interface are supported, and RSP users will not be able to access their Portal queries from the Notebook aspect for DP0.2.
+
+* For the API aspect, only the Table Access Protocol (TAP) will be available for DP0 (i.e., catalog queries).
+
+* For the Portal Aspect, only catalog queries will be available. 
+  Note that the Portal Aspect has not been under active development recently and it is expected to evolve significantly before the first LSST annual data release (DR1).
+
+* A number of safeguards for avoiding uptime or temporary data loss will not be present – the resources are still in “trusted user” mode.
+
+* DP0 delegates will be provided with guidelines that they must follow for safe usage of the RSP during DP0.
+
+* Performance during DP0 may not reflect the performance of the final system, and the resources made available to DP0 delegates may not reflect the final user quotas of the operations-era RSP.
+
+**Q: Will it be possible to prove that algorithms can scale using the DP0-era RSP?**
+
+**A**: No access to user batch or parallelization are available in DP0.
+Resources provided as part of DP0.2 are limited and meaningful scalability testing of algorithms is not practical.
+
+Addition references: 
+* `FAQ: Technical Aspects of Rubin Science Platform Accounts for DP0 <https://community.lsst.org/t/faq-technical-aspects-of-rubin-science-platform-accounts-for-dp0/4791>`_
+
+To ask additional questions, please use the "Support -- Rubin Science Platform" category in the Rubin Observatory `Community Forum <https://community.lsst.org/c/support/lsp/39>`_
