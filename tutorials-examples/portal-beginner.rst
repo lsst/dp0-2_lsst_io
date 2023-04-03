@@ -22,7 +22,7 @@
 
 **Contact authors:** Melissa Graham and Greg Madejski
 
-**Last verified to run:** 2023-03-24
+**Last verified to run:** 2023-04-03
 
 **Targeted learning level:** beginner
 
@@ -127,7 +127,7 @@ Use the same "Chart Options" except give it a different "Chart title", such as "
 	
 	Set the new chart parameters for a scatter plot.
 
-2.5. Click "OK" and "Close", and look at the new color-magnitude plot.
+2.5. Click "OK" and "Close", and look at the new color-magnitude plot.  For completeness, you might wish to update the title of the plot you generated previously to "Scatter Color-Magnitude Diagram."  
 
 .. figure:: /_static/portal_tut01_step02e.png
 	:name: portal_tut01_step02e
