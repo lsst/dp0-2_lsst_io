@@ -125,7 +125,7 @@ Use the same "Chart Options" except give it a different "Chart title", such as "
 .. figure:: /_static/portal_tut01_step02d.png
 	:name: portal_tut01_step02d
 	
-	Set the new chart parameters for a scatter plot.
+	Above, we set the new chart parameters for a heatmap plot.
 
 2.5. Click "OK" and "Close", and look at the new color-magnitude plot.  For completeness, you might wish to update the title of the plot you generated previously to "Scatter Color-Magnitude Diagram."  
 
