@@ -117,12 +117,29 @@ You night want to click on "xy-tbl" in the upper right hand part of the display.
     
 Here, a warning is warranted:  converting fluxes from the ForcedSourceOnDiaObject table to magnitudes using the scisql_nanojanskyToAbMag() function can be dangerous.  This is because the nanojanskyToAbMag() function does not return any value for a negative flux as an argument, and thus any negative fluxes will be lost. This is especially important for variability studies, when a negative value of flux is (within errors) consistent with non-detection might be scientifically interesting.  
 
-1.4.  If you wish, you can restrict the MJD range of your Forced Photometry search to the range covered in DiaObject shown in the Ingtroduction).  This will allow you to compare the light curves retrieved from the two tables.  You can do this by changing the plot parameters in the "chart settings" window such as 930 < MJD-60000 < 1010 - this will retun the plot below:  
+1.4.  If you wish, you can restrict the MJD range of your Forced Photometry search to the range covered in DiaObject shown in the Introduction).  This will allow you to compare the light curves retrieved from the two tables.  You can do this by changing the plot parameters in the "chart settings" window such as 930 < MJD-60000 < 1010 - this will retun the plot below:  
 
 .. figure:: /_static/portal_tut05_step01e.png
     :name: portal_tut05_step01e
 
-Step 2.  The Distinction Between fsodo.psfFlux and fsodo.psfDiffFlux
+Step 2.  Making a multi-band light curve on a single plot
+=========================================================
+
+2.1.  Our goal here is to plot a multi-band light curve with flux measurements in different bands appearing in different colors.  This is not currently supported by the Portal functionality, but is in the Portal development plan.  Beyond various bands appearing in different colors, it is envisioned that it will be possible to add a legend in the plot.  However, currently there is a relatively simple workaround - see below for the necessary steps.  
+
+2.2  One can add an additional column to the table generated in the previous seach.  This new column would be an ASCII value of the "band" entry, which is currently in the "character" format.  To add a new column one needs to click on the 5th icon in the retireved table, as below:  
+
+**Screenshot**
+
+This brings a new window, where you should enter a new name of the column (here it is "bands_ascii") and enter an expression converting the character in the "band" column to its ASCII value, namely ASCII("band").  It is also necessary to specify the data type - it needs to be "long" - see the screenshot below.  
+
+**Screenshot**
+
+Clicking on "Add Column" results in a new column in a numeric format, corresponding to the ASCII value of the character in the "band" column(the rightmost on the screenshot below.  
+
+2.3.  Now in order to have data in various filters appear in different colors, 
+
+Step 3.  The Distinction Between fsodo.psfFlux and fsodo.psfDiffFlux
 ====================================================================
 
 Note that we plotted just the psfFlux on the plot above, but we extracted two fluxes - the psfFlux as well as the psfDiffFlux.  The former (plotted above) is essentially a measurement of a "forced" flux measurement at a specified location.   The psfDiffFlux is a flux determined by subtracting some fiducial flux from the psfFlux.  
