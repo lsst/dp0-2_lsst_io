@@ -69,8 +69,8 @@ including GPU virtual machines, users interested in GPUs should contact the Inde
 (see, e.g., `Contributed  Computing Resources <https://www.lsst.org/scientists/in-kind-program/cec>`_).
 
 Definitions:
-* GPU: graphics processing unit
-* CPU: central processing unit
+ * GPU: graphics processing unit
+ * CPU: central processing unit
 
 
 
