@@ -109,17 +109,6 @@ Definitions:
 OTHER
 -----
 
-**Q: Will it be possible to prove that algorithms can scale using the DP0-era RSP?**
-
-**A**: No access to user batch or parallelization are available in DP0.
-Resources provided as part of DP0.2 are limited and meaningful scalability testing of algorithms is not practical.
-
-Addition references: 
-* `FAQ: Technical Aspects of Rubin Science Platform Accounts for DP0 <https://community.lsst.org/t/faq-technical-aspects-of-rubin-science-platform-accounts-for-dp0/4791>`_
-
-To ask additional questions, please use the "Support -- Rubin Science Platform" category in the Rubin Observatory `Community Forum <https://community.lsst.org/c/support/lsp/39>`_
-
-
 **Q: What are the main technical differences between the DP0-era RSP and the operations-era RSP as described in the RSP Vision Document?**
 
 **A**: A description of the operations-era RSP for future users is provided in the `RSP Vision Document <https://docushare.lsst.org/docushare/dsweb/Get/LSE-319>`_.
@@ -144,4 +133,7 @@ Some of the more notable differences of the DP0-era RSP are:
 * DP0 delegates will be provided with guidelines that they must follow for safe usage of the RSP during DP0.
 
 * Performance during DP0 may not reflect the performance of the final system, and the resources made available to DP0 delegates may not reflect the final user quotas of the operations-era RSP.
+
+To ask additional questions, please use the "Support -- Rubin Science Platform" category in the Rubin Observatory `Community Forum <https://community.lsst.org/c/support/lsp/39>`_
+
 
