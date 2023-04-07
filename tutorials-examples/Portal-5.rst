@@ -125,9 +125,9 @@ Here, a warning is warranted:  converting fluxes from the ForcedSourceOnDiaObjec
 Step 2.  Making a multi-band light curve on a single plot
 =========================================================
 
-2.1.  Our goal here is to plot a multi-band light curve with flux measurements in different bands appearing in different colors.  This is not currently supported by the Portal functionality, but is in the Portal development plan.  Beyond various bands appearing in different colors, it is envisioned that it will be possible to add a legend in the plot.  However, currently there is a relatively simple workaround - see below for the necessary steps.  
+2.1.  Our goal here is to plot a multi-band light curve with flux measurements in different bands appearing in different colors.  This is not currently supported by the Portal functionality, but is in the Portal development plan, to be implemented in the future.  Beyond various bands appearing in different colors, it is envisioned that it will be possible to add a legend in the plot.  However, currently there is a relatively simple workaround - see below for the necessary steps.  
 
-2.2  One can add an additional column to the table generated in the previous seach.  This new column would be an ASCII value of the "band" entry, which is currently in the "character" format.  To add a new column one needs to click on the 5th icon in the retireved table, as below:  
+2.2  One can add an additional column to the table generated in the previous search.  This new column would be an ASCII value of the "band" entry, which is currently in the "character" format.  To add a new column in the table, one needs to click on the 5th icon in the retireved table, as below:  
 
 **Screenshot**
 
@@ -135,9 +135,21 @@ This brings a new window, where you should enter a new name of the column (here 
 
 **Screenshot**
 
-Clicking on "Add Column" results in a new column in a numeric format, corresponding to the ASCII value of the character in the "band" column(the rightmost on the screenshot below.  
+Clicking on "Add Column" results in a new column in a numeric format, corresponding to the ASCII value of the character in the "band" column (now the rightmost on the screenshot below).  
 
-2.3.  Now in order to have data in various filters appear in different colors, 
+**Screenshot**
+
+2.3.  Now in order to have data in various filters appear in different colors, you need to change the plot parameters by clicking the two gears.  This brings a window as below, where you need to click on "Trace Options" and enter "bands_ascii" in the "Color Map" line, and "Rainbow" in the "Color Scale" line.  
+
+**Screenshot**
+
+Once you click on "Apply" - you will see the plot of the supernova light curve in various bands.  
+
+**Screenshot**
+
+Instead of plotting the fluxes, you can take advantage of the fact that in the ADQL query you requested a new column, where the fluxes are converted to AB magnitudes, as below.  But a comparison of the two light curves - one in flux units, and the other in magnitudes - reveals that the flux conversion routine in ADQL you've used in the ADQL search ignores negative fluxes, meaning there is no entry for those.  This can be dangerous, since in some cases, a non-detection is actually scientifically interesting!  
+
+**Screenshot**
 
 Step 3.  The Distinction Between fsodo.psfFlux and fsodo.psfDiffFlux
 ====================================================================
