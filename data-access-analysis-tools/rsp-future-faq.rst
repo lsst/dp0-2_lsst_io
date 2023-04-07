@@ -115,22 +115,11 @@ OTHER
 The DP0-era RSP will have limited features in many respects, as it is still under active development.
 Some of the more notable differences of the DP0-era RSP are:
 
-* Authentication will be performed using Github as the identity provider.
-  DP0 delegates will have to create a GitHub account if they do not already have one.
-  During operations, authentication will be done with, e.g., US university (InCommon) identity.
-
-* Some major usability features will not be available, such as support for user database tables; support for parallelized or batch computation; the ability to sync files between RSP accounts and personal devices; and the ability to manage the sharing of data within private groups.
+* Some major usability features will not be available, such as support for user database tables, and the ability to manage the sharing of data within private groups.
 
 * For the Notebook aspect, only python notebooks and the terminal interface are supported, and RSP users will not be able to access their Portal queries from the Notebook aspect for DP0.2.
 
-* For the API aspect, only the Table Access Protocol (TAP) will be available for DP0 (i.e., catalog queries).
-
-* For the Portal Aspect, only catalog queries will be available. 
-  Note that the Portal Aspect has not been under active development recently and it is expected to evolve significantly before the first LSST annual data release (DR1).
-
-* A number of safeguards for avoiding uptime or temporary data loss will not be present – the resources are still in “trusted user” mode.
-
-* DP0 delegates will be provided with guidelines that they must follow for safe usage of the RSP during DP0.
+* The Portal Aspect has not been under active development recently and it is expected to evolve significantly before the first LSST annual data release (DR1).
 
 * Performance during DP0 may not reflect the performance of the final system, and the resources made available to DP0 delegates may not reflect the final user quotas of the operations-era RSP.
 
