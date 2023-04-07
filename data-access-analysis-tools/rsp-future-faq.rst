@@ -36,9 +36,11 @@ The size of the batch computing resource is determined by the requirement to pro
 Users will be able to launch jobs primarily through the APIs exposed in Notebook and Web API Aspects, and the Portal may potentially use the batch computing cluster too.
 
 References:
- * `DMTN-223 <https://dmtn-223.lsst.io/>`_: User batch - possibilities and plans
+ * `LSE-319 <https://ls.st/lse-319>`_: Science Platform Vision Document
+
+See also:
  * `DMTN-202 <https://dmtn-202.lsst.io/>`_: Use cases and science requirements on a user batch facility
- * `LSE-319 <https://ls.st/lse-319>`_LSE-319: Science Platform Vision Document
+ * `DMTN-223 <https://dmtn-223.lsst.io/>`_: User batch - possibilities and plans
 
 
 
@@ -59,16 +61,16 @@ References:
 Will GPUs be available in addition to CPUs?
 -------------------------------------------
 
-* GPU: graphics processing unit
-* CPU: central processing unit
-
-No.
+No plan at this time.
 
 As of 2023, there are no plans to include GPUs as part of the resources made available on-project (including "bring-your-own" resources).
 At this time, although there are early discussions about providing a mechanism for users to "bring their own" Google resources to the RSP,
 including GPU virtual machines, users interested in GPUs should contact the Independect Data Access Centers program
 (see, e.g., `Contributed  Computing Resources <https://www.lsst.org/scientists/in-kind-program/cec>`_).
 
+Definitions:
+* GPU: graphics processing unit
+* CPU: central processing unit
 
 
 
@@ -95,11 +97,13 @@ The full functionality of the RSP Aspects will require an online connection in o
 Will use of IDEs be enabled?
 ----------------------------
 
-* IDE: integrated development environment (e.g., VSCode, DataSpell)
-
 IDEs such as VSCode support connections to a JupyterLab server.
 However, this currently doesn't work with the Notebook Aspect of the Rubin Science Platform.
 Unfortunately, it's challenging to make this work in our environment at the moment, and this feature is not currenyly a priority in the current RSP developement.
+
+Definitions:
+ * IDE: integrated development environment (e.g., VSCode, DataSpell)
+
 
 
 OTHER
