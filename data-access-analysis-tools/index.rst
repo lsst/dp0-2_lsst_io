@@ -149,9 +149,14 @@ Documentation for the LSST Science Pipelines, a software package which is availa
 
 A brief summary of how the LSST Science Pipelines were used to create the DP0.2 data products can be found in this :doc:`/data-products-dp0-2/data-processing`.
 
+
 .. _RSP-Future-Functionality-FAQ:
 
 RSP Future Functionality FAQ
 ============================
 
-For FAQs, please take a look at the following page: :doc:`data-access-analysis-tools/rsp-future-faq.rst`.
+.. toctree::
+    :maxdepth: 2
+    :glob:
+
+    rsp-future-faq
