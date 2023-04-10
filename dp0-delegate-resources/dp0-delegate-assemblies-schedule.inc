@@ -73,16 +73,16 @@
      - `Milky Way halo science (Jeff Carlin) <https://community.lsst.org/t/summary-delegate-assembly-fri-feb-3-2023/7405>`__
      - *breakouts*
    * - 2023-02-17
-     - `Truth data (Jeff Carlin & Melissa Graham) <https://www.youtube.com/watch?v=Sd3SWRNPDPw>`__
+     - `Truth data (Jeff Carlin & Melissa Graham) <https://community.lsst.org/t/summary-delegate-assembly-fri-feb-17/7549>`__
      - *breakouts*
    * - 2023-03-03
      - Account setup in the RSP's new identity management system
      - *breakouts*
    * - 2023-03-17
-     - `Time domain science (Ryan Lau) <https://www.youtube.com/watch?v=nzhvtpEU5e4>`__
+     - `Time domain science (Ryan Lau) <https://community.lsst.org/t/summary-delegate-assembly-fri-mar-17-2023/7522>`__
      - *breakouts*
    * - 2023-03-31
-     - `Deblender Data Products (Christina Williams) <https://www.youtube.com/watch?v=3fN4zi-8IXc>`__
+     - `Deblender Data Products (Christina Williams) <https://community.lsst.org/t/summary-delegate-assembly-fri-mar-31-2023/7550>`__
      - *breakouts*
    * - 2023-04-14
      - Variability in YSOs (Sabina Ustamujic)
