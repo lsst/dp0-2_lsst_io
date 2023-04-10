@@ -105,23 +105,18 @@ Definitions:
  * IDE: integrated development environment (e.g., VSCode, DataSpell)
 
 
+Will users be able to share within groups? 
+-------------------------------------------
 
-OTHER
------
+Yes.
 
-**Q: What are the main technical differences between the DP0-era RSP and the operations-era RSP as described in the RSP Vision Document?**
+The future RSP will support collaborative work, and users will be able to link accounts into groups in order to share workspaces (Section 3.6, `LSE-319 <https://ls.st/lse-319>`_). Users and groups "will be able to store selected or transformed subsets of the LSST dataset, or upload related datasets for joining to the LSST dataset" (Section 4.1,  `LSE-319 <https://ls.st/lse-319>`_).
 
-**A**: A description of the operations-era RSP for future users is provided in the `RSP Vision Document <https://docushare.lsst.org/docushare/dsweb/Get/LSE-319>`_.
-The DP0-era RSP will have limited features in many respects, as it is still under active development.
-Some of the more notable differences of the DP0-era RSP are:
 
-* Some major usability features will not be available, such as support for user database tables, and the ability to manage the sharing of data within private groups.
 
-* For the Notebook aspect, only python notebooks and the terminal interface are supported, and RSP users will not be able to access their Portal queries from the Notebook aspect for DP0.2.
+Additonal Questions
+-------------------
 
-* The Portal Aspect has not been under active development recently and it is expected to evolve significantly before the first LSST annual data release (DR1).
-
-* Performance during DP0 may not reflect the performance of the final system, and the resources made available to DP0 delegates may not reflect the final user quotas of the operations-era RSP.
 
 To ask additional questions, please use the "Support -- Rubin Science Platform" category in the Rubin Observatory `Community Forum <https://community.lsst.org/c/support/lsp/39>`_
 
