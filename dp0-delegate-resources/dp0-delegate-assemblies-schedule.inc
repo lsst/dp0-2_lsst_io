@@ -82,7 +82,7 @@
      - `Time domain science (Ryan Lau) <https://www.youtube.com/watch?v=nzhvtpEU5e4>`__
      - *breakouts*
    * - 2023-03-31
-     - Deblender Data Products (Christina Williams)
+     - `Deblender Data Products (Christina Williams) <https://www.youtube.com/watch?v=3fN4zi-8IXc>`__
      - *breakouts*
    * - 2023-04-14
      - Variability in YSOs (Sabina Ustamujic)
