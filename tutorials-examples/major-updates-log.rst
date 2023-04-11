@@ -51,7 +51,7 @@ and clicking on "history" (near upper-right).
 Major Updates Log
 =================
 
-Mar 7 2023
+Mar 07 2023
 ----------
 
 Notebook 10 on deblender data products created and released.
@@ -112,7 +112,7 @@ Notebook 07a (DiaObject samples) updated to use the recently released ``ForcedSo
 Notebooks 09a and 09b (custom coadds) added.
 
 
-Oct 4 2022
+Oct 04 2022
 ----------
 
 Notebook 08 (truth tables) updated to optimize TAP query.
