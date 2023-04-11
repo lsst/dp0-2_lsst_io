@@ -170,14 +170,14 @@ Planning is currently in progress.
 
 .. _Delegate-Homepage-DP0-Delegate-Assemblies:
 
-DP0 delegate assemblies
+DP0 Delegate Assemblies
 -----------------------
 
 **Connection Info:** `ls.st/dp0-events <https://ls.st/dp0-events>`_
 
 **Time:** Biweekly on Fridays from 9am to 11am US Pacific (alternating with :ref:`DP0-Delegate-Programming-StackClub`).
 
-The delegate assemblies are live, virtual seminars for DP0 delegates to learn more about DP0, the RSP, and the DC2 data set.
+The Delegate Assemblies are live, virtual seminars for DP0 delegates to learn more about DP0, the RSP, and the DC2 data set.
 Attendance is optional and all are welcome.
 
 Typically, the first hour contains a presentation or hands-on tutorial, and the second hour is spent in breakout rooms for discussion or co-working on topics suggested by delegates.
