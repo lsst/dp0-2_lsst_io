@@ -47,7 +47,7 @@ The contents of your homespace will not be deleted without attempting to notify 
 Data in ``/scratch`` is not backed up.
 
 Data in ``/projects`` is available for use in the situation where you wish to share files with other RSP users.
-For this data preview, any files in you put in ``/projects`` are readable and writeable by all users.
+For this data preview, any files you put in ``/projects`` are readable and writeable by all users.
 Take care you do not delete other people's files.
 
 For this data preview there are no file quotas applied, however usage will be monitored and users may be asked to reduce their footprint, either in their home space or shared data spaces.
@@ -60,13 +60,13 @@ Be very careful when using the Butler prune collection feature and in particular
 You can reduce the risk of accidents by following the convention documented in `DMTN-167 <https://dmtn-167.lsst.io/>`__ and only write to your own ``u/<username>/*`` collections.
 
 You should only access our Butler repositories using standard Butler APIs provided in the Rubin Stack.
-This is both to prevent accidents but also to fulfill your role in helping us evaluate our software.
+This is both to prevent accidents and to fulfill your role in helping us evaluate our software.
 
 RSP/IDF missing features
 ------------------------
 
 Many more features are on our roadmap for the RSP and its related services (Qserv, Butler, etc.) and we have requirements to deliver them by the start of the survey.
-Some major ones to look forward in the future are:
+Some major ones to look forward to in the future are:
 
 * Notebooks: We are planning on providing a filespace that you can access from your personal device (e.g., laptop) so you can use your favorite editor/IDE to write code in your local environment and save it in a way that makes it visible in your RSP notebook environment
 
@@ -93,4 +93,4 @@ Our `Acceptable Use Policy <https://data-dev.lsst.cloud/terms>`_ applies: We’r
 You can lose your access if you misuse our resources, interfere with other users, or otherwise do anything that would bring the observatory into disrepute.
 
 One of the main goals of the Data Preview program is to allow us to assess user interactions with our services.
-Bypassing use of our services (such as attempting to bulk download data or trying to defeat the Butler APIs) violate the spirit of the exercise.
+Bypassing use of our services (such as attempting to bulk download data or trying to defeat the Butler APIs) violates the spirit of the exercise.
