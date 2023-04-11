@@ -203,7 +203,7 @@ The "Job Link" in the pop-up is the URL to the query results.
 Click on the clipboard icon to copy the URL to your clipboard.
 
 As demonstrated in Section 5.4 of the second tutorial notebook, 02 Catalog Queries with TAP,
-the URL can be pasted into a code cell and the query results retrived using the following commands:
+the URL can be pasted into a code cell and the query results retrieved using the following commands:
 
 .. code-block:: SQL
 
