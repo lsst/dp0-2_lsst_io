@@ -97,7 +97,7 @@ If you happen to pan away from the SNIa, recenter using the "center" icon and fi
 **Notice:** In the figure above, the images in the grid are displayed in the order they appear in the table: top row (left to right)
 then bottom row (left to right).
 In the table, notice that the filter order is y, z, i, u, g, r.
-To sort the table so that the filter order is u, g, r, i, z, y, click on the column heading for "em_min" columns.
+To sort the table so that the filter order is u, g, r, i, z, y, click on the column heading for the "em_min" column.
 
 2.5. Rescale the flux to explore the underlying distribution of host galaxy light.
 Use the "scale" icon (hover-over text "Stretch drop down") to change the greyscale stretch and/or boundaries for the images.
