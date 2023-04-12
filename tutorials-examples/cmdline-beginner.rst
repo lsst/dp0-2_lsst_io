@@ -43,7 +43,7 @@ More information about the simulated data can be found in the DESC's `DC2 paper 
 Step 1. Access the terminal and setup
 =====================================
 
-1.1. Log in to the Notebook Aspect.
+1.1. Log in to the Notebook Aspect. The terminal is a subcomponent of the Notebook Aspect.
 
 1.2. In the launcher window under "Other", select the terminal.
 
