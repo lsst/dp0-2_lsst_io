@@ -59,6 +59,7 @@ linkcheck_ignore = [
     r"^https://arxiv.org/pdf/.*#",
     r"^http://localhost",
     r"^http://www.star.bris.ac.uk/~mbt/topcat/",  # site temporarily down
+    r"https://ui.adsabs.harvard.edu/abs/2014SPIE.9150E..14C/abstract", # ADS issue presumed temporary
 ]
 
 
