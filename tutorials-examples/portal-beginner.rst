@@ -145,7 +145,7 @@ Step 3. Do the same query with ADQL
 ===================================
 
 3.1. Clear the search results and return to the main Portal interface.
-Under "2. Select Query Type" select "Edit ADQL (Single Table (UI assisted)", and enter the following in the box under "ADQL Query".
+Under "2. Select Query Type" select "Edit ADQL (advanced)", and enter the following in the box under "ADQL Query".
 
 .. code-block:: SQL
 
