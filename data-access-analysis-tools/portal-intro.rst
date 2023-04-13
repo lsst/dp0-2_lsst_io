@@ -304,10 +304,10 @@ The xy plot default is RA versus Declination, with the location of the highlight
 **Manipulating the xy plot** is the same process as shown for the :ref:`Portal-Intro-Single-Table-Queries` results: click on the "settings" icon (double gears) in the upper right corner to change the column data being plotted, alter the plot style, add axes labels, etc.
 
 **Interacting with the images** begins with just hovering the mouse over the image and noting the RA, Dec, and pixel value appear at the bottom.
-Use the magnifying glass icons in the upper left corner to zoom in and out; click and drag the image to pan.
-Above the magnifying glass, use the back and forth arrows to navigate between HDU (header data units) 1, 2, and 3: the image, mask, and variance data.
+Use the magnifying glass icons in the upper left corner to zoom in and out. You may need to hover over the image for these upper left magnifying glasses to appear. Click and drag the image to pan.
+Above the magnifying glass icons, use the back and forth arrows to navigate between HDU (header data units) 1, 2, and 3: the image, mask, and variance data.
 Click either on one of the green boxes (representing the central coordinates of another image in the table), or on another row in the table, to display a different image.
-At upper right, click on "img-tbl" to get ride of the xy plot and show the images and the table side-by-side.
+At upper right, click on "img-tbl" to get rid of the xy plot and show the images and the table side-by-side.
 
 .. figure:: /_static/portal_ImageQuery_sidebyside_DP02.png
     :name: portal_ImageQuery_sidebyside_DP02
