@@ -28,7 +28,7 @@ On the the main landing page at `data.lsst.cloud <https://data.lsst.cloud>`_ the
 
 The API's services for DP0.2 will include `TAP <https://www.ivoa.net/documents/TAP/>`_, `ObsTAP <https://www.ivoa.net/documents/ObsCore/>`_, `SODA <https://www.ivoa.net/documents/SODA/>`_ (image cutouts and mosaics), and `HiPS <https://aladin.u-strasbg.fr/hips/>`_.
 
-Longer term, Rubin Observatory will support SCS for simple catalog searches, SIAv2 for image searches, and VOSpace (in addition to WebDAV) for access to user files.
+Longer term, Rubin Observatory will support SCS for simple catalog searches, `SIAv2 <https://www.ivoa.net/documents/SIA/20150730/index.html>`_ for image searches, and VOSpace (in addition to WebDAV) for access to user files.
 
 
 .. _Data-Access-Analysis-Tools-TAP-TOPCAT:
