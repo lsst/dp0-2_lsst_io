@@ -219,7 +219,8 @@ Third Thursday office hour
 These two time slots serve the Asia-Pacific (APAC) and Europe, the Middle East, and Africa (EMEA) time zones, respectively.
 Note that in the western Americas (AMER) time zone, the first slot at 04:00 UTC is actually on Wednesday evening.
 
-| **Dates (2023):** Feb 16, Mar 16, Apr 20.
+| **Dates (2023):** Apr 20, May 18.
+| There will NOT be office hours Thu Jun 15.
 | Additional dates TBD.
 
 These office hour sessions are open, drop-in discussions designed to compensate for the fact that the time of the Delegate Assemblies was only convenient for DP0 delegates in North and South America, Europe, and Africa.
