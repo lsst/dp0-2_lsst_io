@@ -31,7 +31,7 @@ Image simulation
 ================
 
 The DESC DC2 image simulations are described in `Section 6 <https://arxiv.org/pdf/2010.05926.pdf#page=19>`_ of the `DC2 Paper <https://arxiv.org/abs/2010.05926>`_.
-These data consist of simulated LSST images generated for 5 years of LSST wide-fast-deep observations covering ~300 \deg\ :sup:`2` of the sky centered at ``(RA, DEC)`` = ``55.064, −29.783`` degrees.
+These data consist of simulated LSST images generated for 5 years of LSST wide-fast-deep observations covering ~300 \deg\ :sup:`2` of the sky centered at ``(RA, DEC)`` = ``61.863, -35.790`` degrees.
 Images are simulated by the `imSim <https://github.com/LSSTDESC/imSim>`_ software package, a modular Python code that calls the GalSim software library (`Rowe et al. 2015 <https://arxiv.org/abs/1407.7676>`_) for astronomical object rendering
 and is run in the LSST Science Pipelines and LSST Simulation Framework software environment (`Connolly et al. 2014 <https://ui.adsabs.harvard.edu/abs/2014SPIE.9150E..14C/abstract>`_).
 The LSST software libraries provide the telescope and hardware-specific information necessary to simulate an LSST exposure, such as pixel coordinates on the focal plane, telescope filter characteristics, and the brightness of the sky.
@@ -77,7 +77,7 @@ When producing the coadded images variable sources and artifacts are removed usi
 As described in `Aihara et al. (2019) <https://arxiv.org/abs/1905.12221>`_, each image is resampled, PSF-matched, and stacked into a 2.5-sigma-clipped mean coadd that serves as a model of the static scene.
 A difference image was created for each image with respect to this model to identify regions associated with transient detections that only appear in a small number of epochs.
 With these regions identified, the final coadded image is created as a weighted mean stack of images where the transient detections are ignored.
-The PSF at any location point in the coadded image is calculated by taking a weighted sum of the PSFs from individual visits that have been resampled and weighted in the same way as the coadds.
+The PSF at a given location in the coadded image is calculated by taking a weighted sum of the PSFs from individual visits that have been resampled and weighted in the same way as the coadds.
 Regions that have clipped areas will not have the correct PSF, and these are flagged for individual objects.
 Before individual images are combined to form the coadd, an empirical background model is fit to the entire focal plane to control the extent to which extended features are included in the background model.
 
@@ -99,12 +99,12 @@ Difference Image Analysis (DIA) production
 ==========================================
 
 The version (23.0.1) of the LSST Science Pipelines that was used for DP0.2 processing now includes portions of the Prompt Processing pipelines,
-which centers on template image subtraction and transient detection on the resulting "difference images."
-Each science observation is subtracted from a template coadd image covering the same area of the sky (in LSST survey operations,
+which centers on template image subtraction and transient detection on the resulting difference images.
+A template coadd image is subtracted from each science observation (in LSST survey operations,
 templates will be created from the previous year of observations).
 The template images are resampled to the coordinate system of the science image, then convolved with a kernel to produce an image whose PSF matches
 that of the new science image.
-Once the image subtraction has been performed, similar algorithms to those used in Data Release Processing are used to detect and measure sources on the resulting "difference image."
+Once the image subtraction has been performed, similar algorithms to those used in Data Release Processing are used to detect and measure sources on the resulting difference image.
 These source detections and measurements make up the _DIASource_ catalog, and the _DIAObject_ table is made up of _DIASources_ associated
 by sky coordinate.
 The _DIAObject_ table includes statistical summary parameters of the associated _DIASources_ (i.e., lightcurve properties).
@@ -123,7 +123,7 @@ This was done to avoid spurious matches with undetectable true objects, and is w
 The maximum match radius was not changed from the default used for DP0.1, 0.5 arcseconds, and the best match is the measured object with the lowest reduced chi-squared within the maximum match radius that has not already been matched to a brighter reference object.
 The "MatchesTruth" table contains the "match_chisq" column, and the matching considers both coordinates and cModel fluxes -- although in practice, Rubin staff found that matching to photometry only made a difference for <1% of objects, because the astrometry was much more precise, and because most true objects only had one match candidate within the maximum match radius anyway.
 The "match_chisq" column is only relevant if there are multiple measured objects considered in the matching process for the true object (i.e., if "match_count" is greater than 1).
-As a side note, the matching was actually done in pixel coordinates due to the current lack of errors for sky coordinates (but in the future, RA and Dec will have errors).
+As a side note, the matching was actually done in pixel coordinates due to the current lack of uncertainties for sky coordinates (but in the future, RA and Dec will have uncertainties).
 
 As a final note, the matcher can only match on coordinate and flux columns that are finite for a given measured object (i.e., not "NaN").
 There is a default configuration setting for the matching algorithm that requires at least three finite columns to compute the (reduced) chi-squared.
