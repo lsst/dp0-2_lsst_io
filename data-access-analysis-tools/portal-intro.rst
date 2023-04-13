@@ -136,8 +136,8 @@ In the image above, you can see that this has been done, because the results vie
 Switching between table tabs will also cause the image and xy plot to switch to show the selected query results.
 Delete the results for a given query by clicking on the x in the table tab.
 
-**Maniuplating the plotted data and converting fluxes to magnitudes**:
-To manipulate the plotted data, select the double gear "settings" icon above the x-y plot and a pop-up window will open (see the next figure).
+**Manipulating the plotted data and converting fluxes to magnitudes**:
+To manipulate the plotted data, select the double gear "settings" icon above the xy plot and a pop-up window will open (see the next figure).
 To create a color-magnitude diagram from the fluxes, for DP0.2 it is necessary to apply the `standard conversion from nanojansky to AB magnitude <https://en.wikipedia.org/wiki/AB_magnitude>`_ in the X and Y boxes as, e.g., "-2.5 * log10(g_calibFlux) + 31.4".
 In the future, magnitudes will be available.
 
@@ -191,8 +191,6 @@ For example, to get the detailed list of columns available in the "Object" table
    tap_schema.columns.description
    FROM tap_schema.columns
    WHERE tap_schema.columns.table_name = 'dp02_dc2_catalogs.Object'
-
-In the results view,
 
 **Query the Object table,** as done with the single table query interface above, with the following ADQL:
 
@@ -269,7 +267,7 @@ For DP0.2, 1 is the raw (unprocessed) images, 2 is the processed visit images (P
 The "Data Product Type" should be left as "Image", and the "Instrument Name", "Collection", and "Data Product Subtype" can all be left blank.
 
 Under "Location", only "Observation boundary contains point" was implemented at the time this documentation was written.
-Recall that the central coordinates for the DC2 simulated sky region is "62, -37".
+Recall that the central (RA, Dec) coordinates for the DC2 simulated sky region are "62, -37".
 
 Under "Timing", users can specify a range to apply to the image acquisition dates (this is only relevant for PVIs/calexps).
 
@@ -295,7 +293,7 @@ Click on the "Search" button.
 **Results View**
 
 The default results appear in the tri-view format, with the image at upper left, an xy plot at upper right, and the table of metadata below.
-The first row of the table is highlighted by default, with that image showing at upper right (and the central coordinates of other images overplotted with green boxes).
+The first row of the table is highlighted by default, with that image showing at upper left (and the central coordinates of other images overplotted with green boxes).
 The xy plot default is RA versus Declination, with the location of the highlighted table row shown in orange and the rest in blue.
     
 .. figure:: /_static/portal_ImageQueryResultsDP02.png
