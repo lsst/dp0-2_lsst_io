@@ -215,14 +215,14 @@ This is a time- and space-consuming process, so we do not recommend it.
 
 .. _NB-Intro-Use-A-NB-faq-github:
 
-Do I need to know git?
+Do I need to know Git?
 ----------------------
 
-Although use of git and GitHub are not necessary for DP0 participation, most Rubin Observatory staff and LSST Science Collaborations use git and GitHub, and it is highly recommended for all RSP users.
+Although use of Git and GitHub are not necessary for DP0 participation, most Rubin Observatory staff and LSST Science Collaborations use Git and GitHub, and it is highly recommended for all RSP users.
 Git is free open-sourced software for change-tracking and version control of any set of files that are edited by one or more contributors.
-GitHub is a web-based provider for git functionality, plus it offers a few of its own features.
-In this Community Forum thread, everyone can find and share `resources for learning about git and GitHub <https://community.lsst.org/t/resources-for-github/6153>`_.
-A few of the :ref:`NB-Intro-Use-A-NB-tips` below involve the use of git.
+GitHub is a web-based provider for Git functionality, plus it offers a few of its own features.
+In this Community Forum thread, everyone can find and share `resources for learning about Git and GitHub <https://community.lsst.org/t/resources-for-github/6153>`_.
+A few of the :ref:`NB-Intro-Use-A-NB-tips` below involve the use of Git.
 
 
 .. _NB-Intro-Use-A-NB-faq-butler:
@@ -283,11 +283,11 @@ There will be no need to recreate the ".local" directory after this.
 The user should then restart the notebook (or, e.g., ipython session) and try to import the packages.
 
 
-How to make git stop asking for my password
+How to make Git stop asking for my password
 -------------------------------------------
 
-It is recommended that all git users working in the RSP configure git and set up an SSH key.
-First, using a terminal in the Notebook aspect, set the global git configurations.
+It is recommended that all Git users working in the RSP configure Git and set up an SSH key.
+First, using a terminal in the Notebook aspect, set the global Git configurations.
 
 .. code-block:: bash
 
@@ -297,5 +297,5 @@ First, using a terminal in the Notebook aspect, set the global git configuration
 Then, using a terminal in the Notebook aspect, follow these instructions for `generating a new SSH key and adding it to the ssh-agent <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=linux>`_.
 Be sure to follow the instructions for the Linux environment (i.e., the RSP environment), regardless of your personal computer's environment, because you are generating an SSH key *for your account in the RSP*.
 
-When you `git clone` new repositories, use the SSH key.
-If successful, you will be able to git fetch and push without entering your git password.
+When you ``git clone`` new repositories, use the SSH key.
+If successful, you will be able to ``git fetch`` and ``git push`` without entering your Git password.
