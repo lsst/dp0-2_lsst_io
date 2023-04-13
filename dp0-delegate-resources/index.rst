@@ -198,7 +198,7 @@ Stack Club
 
 **Time:** Biweekly on Fridays from 9am to 11am US Pacific time.
 
-**Dates:** Jan 27, Feb 10, 24, Mar 10, 24, Apr 7, 21 (alternating with :ref:`Delegate-Homepage-DP0-Delegate-Assemblies`).
+**Dates:** Apr 7, 21, May 5, 19, June 2, 30, July 14, 28 (alternating with :ref:`Delegate-Homepage-DP0-Delegate-Assemblies`).
 
 `Stack Club <https://github.com/LSSTScienceCollaborations/StackClub>`_ is an open, drop-in session for working with the DP0 data set and/or the Rubin Observatory `LSST Science Pipelines <https://pipelines.lsst.io/>`_ (colloquially called "the Stack").
 Stack Club sessions begin with a roundtable discussion of what people want to do or learn that day, and then work proceeds as people stay connected via Zoom,
