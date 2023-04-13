@@ -271,7 +271,7 @@ The "Data Product Type" should be left as "Image", and the "Instrument Name", "C
 Under "Location", only "Observation boundary contains point" was implemented at the time this documentation was written.
 Recall that the central coordinates for the DC2 simulated sky region is "62, -37".
 
-Under "Timing", users can specify a range to apply to the image acquisition dates (this is only relvant for PVIs/calexps).
+Under "Timing", users can specify a range to apply to the image acquisition dates (this is only relevant for PVIs/calexps).
 
 Under "Spectral", users can provide a wavelength in, e.g., nanometers as a means of specifying the image band.
 
