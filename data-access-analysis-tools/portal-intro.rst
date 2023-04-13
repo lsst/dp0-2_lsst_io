@@ -65,9 +65,9 @@ entered (for the Object table, they are "coord_ra" and "coord_dec").
 If a non-existent column name is entered, the box will highlight red in indication of the error.
 Choose the desired shape type for a spatial search, such as "Cone", and the appropriate instructions for the search terms will appear.
 
-Keeping the search area small will keep query times short and returned manageable subsets of objects as you learn.
+Keeping the search area small will keep query times short and return manageable subsets of objects as you learn.
 It is recommended to start with 3 arcminutes.
-Note that the central coordinates for DC2, in decimal degrees, are: ``61.863 -35.790``.
+Note that the central (RA, Dec) coordinates for DC2, in decimal degrees, are: ``61.863 -35.790``.
 
 **The table view**:
 The table to the right of "Enter Constraints" enables users to apply additional search constraints on the columns in the selected catalog table.
@@ -96,7 +96,7 @@ Queries with only a row limit can run for much longer than one might intuitively
 likely to return a result more quickly.
 
 **Example single-table query**:
-The image below presents and example of how to search the DP0.2 Object catalog using a 3 arcminute cone near the DC2's central coordinates,
+The image below presents an example of how to search the DP0.2 Object catalog using a 3 arcminute cone near the DC2's central coordinates,
 returning only the five data columns "coord_ra", "coord_dec", and "g" "r" and "i_calibFlux",
 and imposing the contraints that the flux must be between 20 and 1000 nanojansky (i.e., between 24th and 28th magnitude).
 
@@ -267,7 +267,7 @@ For DP0.2, 1 is the raw (unprocessed) images, 2 is the processed visit images (P
 The "Data Product Type" should be left as "Image", and the "Instrument Name", "Collection", and "Data Product Subtype" can all be left blank.
 
 Under "Location", only "Observation boundary contains point" was implemented at the time this documentation was written.
-Recall that the central (RA, Dec) coordinates for the DC2 simulated sky region are "62, -37".
+Recall that the central (RA, Dec) coordinates for the DC2 simulated sky region are ``61.863 -35.790``.
 
 Under "Timing", users can specify a range to apply to the image acquisition dates (this is only relevant for PVIs/calexps).
 
@@ -306,7 +306,7 @@ The xy plot default is RA versus Declination, with the location of the highlight
 **Interacting with the images** begins with just hovering the mouse over the image and noting the RA, Dec, and pixel value appear at the bottom.
 Use the magnifying glass icons in the upper left corner to zoom in and out; click and drag the image to pan.
 Above the magnifying glass, use the back and forth arrows to navigate between HDU (header data units) 1, 2, and 3: the image, mask, and variance data.
-Click either on one of the green boxes (representing the central coordinats of another image in the table), or on another row in the table, to display a different image.
+Click either on one of the green boxes (representing the central coordinates of another image in the table), or on another row in the table, to display a different image.
 At upper right, click on "img-tbl" to get ride of the xy plot and show the images and the table side-by-side.
 
 .. figure:: /_static/portal_ImageQuery_sidebyside_DP02.png
