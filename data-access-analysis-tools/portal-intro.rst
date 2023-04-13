@@ -120,7 +120,7 @@ The search might take a few moments.
 There are many icons that control the display settings; hover the mouse over any of them to see a pop-up description.
 At upper right, notice the options "tri-view", "img-tbl", "img-xy", and "xy-tbl".
 The default is "tri-view", which is shown below, with a sky image at upper left.
-Notice that at the time this documentation was created, the sky image was 2MASS and not a simulated DC2 image.
+The color-composite image shows the relevant DC2 simulated sky region.
 A default "xy" plot of the sky coordinates appears at upper right, and the table of results along the bottom.
 
 .. figure:: /_static/portal_search_results_DP02.png
@@ -337,12 +337,12 @@ Notice that it is possible to pan and zoom in each of these grid windows.
 **Coverage window**:
 Above the image, notice that the default tab view is "Data Product...", and instead click on "Coverage".
 The bounding boxes of all images listed in the table are shown, with the image in the selected row highlighted.
-At the time this documentation was created, the boxes were overlayed on 2MASS images, but in the near future the background will be DC2 images.
+The color-composite background shows the relevant DC2 simulated sky region.
 
 .. figure:: /_static/portal_ImageQueryCoverageDP02.png
     :name: portal_ImageQueryCoverageDP02
 
-    The coverage window will, in the future, be overlayed on a DC2 image and not 2MASS.
+    The coverage outlines of images returned by the ObsTAP search, overlayed on the relevant DC2 simulated sky region.
 
 **Learn More.**
 See also :ref:`DP0-2-Tutorials-Portal` for a tutorial using additional image types and more of the Portal's image-related functionality.
