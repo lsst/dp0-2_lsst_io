@@ -38,7 +38,7 @@ The number of delegates is currently limited to 600, but space is available.
 Getting started with DP0 checklist
 ==================================
 
-Becoming a delegate is as easy as following this checklist and getting an account in the Rubin Science Platform (RSP).
+Becoming a delegate and accessing the DP0 data is as easy as following this checklist and getting an account in the Rubin Science Platform (RSP).
 
 There is no application process.
 The only prerequisite is to be a Rubin data rights holder.
