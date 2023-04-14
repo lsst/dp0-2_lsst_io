@@ -22,12 +22,15 @@ DP0 Delegate Homepage
 
 This page includes the guidelines, resources, and activities for DP0 Delegates.
 
-**DP0 delegate** is the term for the 600 scientists and students who have accounts in the Rubin Science Platform (RSP)
+"**DP0 delegates**" are the scientists and students who have accounts in the Rubin Science Platform (RSP)
 at the Interim Data Facility (IDF; the Google Cloud) during Data Preview 0 (DP0).
-This term has been adopted to reflect DP0 participants’ important roles of representing the broad science community
+
+The term "delegate" has been adopted for DP0 to reflect participants’ important roles of representing the broad science community
 as learners, testers, and providers of feedback, and of sharing the benefits of their DP0 participation with their
 communities as teachers and colleagues.
-Delegates’ DP0-related activities are supported with resources and infrastructure described on this page.
+Delegates’ DP0-related activities are supported with resources and infrastructure as described on this page.
+
+The number of delegates is currently limited to 600, but space is available.
 
 
 .. _Delegate-Homepage-Getting-Started-Checklist:
@@ -35,16 +38,28 @@ Delegates’ DP0-related activities are supported with resources and infrastruct
 Getting started with DP0 checklist
 ==================================
 
+Becoming a delegate and accessing the DP0 data is as easy as following this checklist and getting an account in the Rubin Science Platform (RSP).
+
+There is no application process.
+The only prerequisite is to be a Rubin data rights holder.
+Although the number of delegates is currently limited to 600, there is space available and all petitions are being accepted.
+If that changes this page will be updated.
+
+Mandatory steps to becoming a delegate:
+
 | 1. Review the :ref:`Delegate-Homepage-Guidelines-Expectations`.
-| 2. Get one of the :ref:`Delegate-Homepage-RSP-Accounts` for DP0 delegates.
+| 2. Submit a petition for one of the :ref:`Delegate-Homepage-RSP-Accounts`.
 | 3. Set up your account in the :ref:`Delegate-Homepage-Forum`.
 | 4. Watch the recorded :ref:`Delegate-Homepage-Kickoff` (13 minutes).
 | 5. Review your options for :ref:`Delegate-Homepage-Getting-Support`.
-| 6. *Optional:* follow step-by-step introductions to the RSP's :ref:`Tools-RSP-Portal` or :ref:`Tools-RSP-Notebook`.
-| 7. *Optional:* work at your own pace through the :doc:`/tutorials-examples/index`.
-| 8. *Optional:* attend :ref:`Delegate-Homepage-DP0-Virtual-Seminars` or watch recordings where available.
-| 9. *Optional:* consider the :ref:`Delegate-Homepage-Delegate-Activities`.
-| 10. *Optional:* be aware that the `Rubin Users Committee <https://www.lsst.org/scientists/users-committee>`_ are your advocates.
+
+Optional (but recommended) steps for delegates:
+
+| 6. Follow step-by-step introductions to the RSP's :ref:`Tools-RSP-Portal` or :ref:`Tools-RSP-Notebook`.
+| 7. Work at your own pace through the :doc:`/tutorials-examples/index`.
+| 8. Attend :ref:`Delegate-Homepage-DP0-Virtual-Seminars` or watch recordings where available.
+| 9. Consider the :ref:`Delegate-Homepage-Delegate-Activities`.
+| 10. Be aware that the `Rubin Users Committee <https://www.lsst.org/scientists/users-committee>`_ are your advocates.
 
 
 .. _Delegate-Homepage-Guidelines-Expectations:
@@ -52,7 +67,16 @@ Getting started with DP0 checklist
 Guidelines and expectations
 ===========================
 
-**Rubin data rights** are required to participate in DP0 (see description below).
+**Rubin data rights** are required to hold an account in the Rubin Science Platform.
+
+**Who has Rubin data rights?**
+All scientists and students affiliated with an institution in the US and Chile have data rights,
+as well as the international scientists and students whose names appear on the
+`list of international data rights holders <https://www.lsst.org/scientists/international-drh-list>`_.
+For more information about data rights, please refer to the
+`Rubin Observatory Data Policy <https://docushare.lsst.org/docushare/dsweb/Get/RDO-013>`_.
+If you're not sure if you have data rights, contact Melissa Graham at mlg3k@uw.edu or 
+with a direct message in the `Rubin Community Forum <https://community.lsst.org/>`_.
 
 **Understand the** :doc:`/data-access-analysis-tools/rsp-warnings` **regarding using the DP0-era RSP**.
 
@@ -66,20 +90,16 @@ Guidelines and expectations
 Rubin Science Platform accounts
 ===============================
 
-**Rubin data rights** are required in order to hold an account in the Rubin Science Platform.
-All scientists and students affiliated with an institution in the US and Chile have data rights,
-as well as the international scientists and students whose names appear on the
-`list of international data rights holders <https://www.lsst.org/scientists/international-drh-list>`_.
-For more information about data rights, please refer to the
-`Rubin Observatory Data Policy <https://docushare.lsst.org/docushare/dsweb/Get/RDO-013>`_.
-If you're not sure if you have data rights, contact Melissa Graham at mlg3k@uw.edu or 
-with a direct message in the `Rubin Community Forum <https://community.lsst.org/>`_.
-
-**Petition and data rights authentication:**
+**Petition for your RSP account:**
 Follow the instructions on `how to get an RSP account <https://rsp.lsst.io/guides/getting-started/get-an-account.html>`_ 
 to submit a petition.
-Using your full professional name and your institutional email address in your petition will facilitate the data rights authentication process.
-It might take a few days for your data rights to be verified and your petition accepted.
+Using your full professional name and your institutional email address will facilitate the process.
+It might take a few days for your Rubin data rights to be verified and your petition accepted.
+
+**Petition approved? You are now a DP0 delegate!**
+Once your petition is approved and you can log in to `data.lsst.cloud <https://data.lsst.cloud>`_, you are a DP0 delegate.
+Welcome!
+Please continue to read the information below and complete the checklist above.
 
 **Log in:**
 Navigate to `data.lsst.cloud <https://data.lsst.cloud>`_ and choose "Log in" at upper-right,
