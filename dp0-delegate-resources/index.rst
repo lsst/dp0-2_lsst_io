@@ -22,12 +22,15 @@ DP0 Delegate Homepage
 
 This page includes the guidelines, resources, and activities for DP0 Delegates.
 
-**DP0 delegate** is the term for the 600 scientists and students who have accounts in the Rubin Science Platform (RSP)
+"**DP0 delegates**" are the scientists and students who have accounts in the Rubin Science Platform (RSP)
 at the Interim Data Facility (IDF; the Google Cloud) during Data Preview 0 (DP0).
-This term has been adopted to reflect DP0 participants’ important roles of representing the broad science community
+
+The term "delegate" has been adopted for DP0 to reflect participants’ important roles of representing the broad science community
 as learners, testers, and providers of feedback, and of sharing the benefits of their DP0 participation with their
 communities as teachers and colleagues.
-Delegates’ DP0-related activities are supported with resources and infrastructure described on this page.
+Delegates’ DP0-related activities are supported with resources and infrastructure as described on this page.
+
+The number of delegates is currently limited to 600, but space is available.
 
 
 .. _Delegate-Homepage-Getting-Started-Checklist:
@@ -35,8 +38,13 @@ Delegates’ DP0-related activities are supported with resources and infrastruct
 Getting started with DP0 checklist
 ==================================
 
+Becoming a delegate is as easy as following this checklist and getting an account in the Rubin Science Platform (RSP).
+
+There is no application process.
+The only prerequisite is to be a Rubin data rights holder.
+
 | 1. Review the :ref:`Delegate-Homepage-Guidelines-Expectations`.
-| 2. Get one of the :ref:`Delegate-Homepage-RSP-Accounts` for DP0 delegates.
+| 2. Submit a petition for one of the :ref:`Delegate-Homepage-RSP-Accounts`.
 | 3. Set up your account in the :ref:`Delegate-Homepage-Forum`.
 | 4. Watch the recorded :ref:`Delegate-Homepage-Kickoff` (13 minutes).
 | 5. Review your options for :ref:`Delegate-Homepage-Getting-Support`.
@@ -52,7 +60,16 @@ Getting started with DP0 checklist
 Guidelines and expectations
 ===========================
 
-**Rubin data rights** are required to participate in DP0 (see description below).
+**Rubin data rights** are required to hold an account in the Rubin Science Platform.
+
+**Who has Rubin data rights?**
+All scientists and students affiliated with an institution in the US and Chile have data rights,
+as well as the international scientists and students whose names appear on the
+`list of international data rights holders <https://www.lsst.org/scientists/international-drh-list>`_.
+For more information about data rights, please refer to the
+`Rubin Observatory Data Policy <https://docushare.lsst.org/docushare/dsweb/Get/RDO-013>`_.
+If you're not sure if you have data rights, contact Melissa Graham at mlg3k@uw.edu or 
+with a direct message in the `Rubin Community Forum <https://community.lsst.org/>`_.
 
 **Understand the** :doc:`/data-access-analysis-tools/rsp-warnings` **regarding using the DP0-era RSP**.
 
@@ -66,20 +83,11 @@ Guidelines and expectations
 Rubin Science Platform accounts
 ===============================
 
-**Rubin data rights** are required in order to hold an account in the Rubin Science Platform.
-All scientists and students affiliated with an institution in the US and Chile have data rights,
-as well as the international scientists and students whose names appear on the
-`list of international data rights holders <https://www.lsst.org/scientists/international-drh-list>`_.
-For more information about data rights, please refer to the
-`Rubin Observatory Data Policy <https://docushare.lsst.org/docushare/dsweb/Get/RDO-013>`_.
-If you're not sure if you have data rights, contact Melissa Graham at mlg3k@uw.edu or 
-with a direct message in the `Rubin Community Forum <https://community.lsst.org/>`_.
-
-**Petition and data rights authentication:**
+**Petition for your RSP account:**
 Follow the instructions on `how to get an RSP account <https://rsp.lsst.io/guides/getting-started/get-an-account.html>`_ 
 to submit a petition.
-Using your full professional name and your institutional email address in your petition will facilitate the data rights authentication process.
-It might take a few days for your data rights to be verified and your petition accepted.
+Using your full professional name and your institutional email address will facilitate the process.
+It might take a few days for your Rubin data rights to be verified and your petition accepted.
 
 **Log in:**
 Navigate to `data.lsst.cloud <https://data.lsst.cloud>`_ and choose "Log in" at upper-right,
@@ -90,6 +98,10 @@ In most cases, the authorization will be done via your institutional login.
 RSP accounts are not transferable and delegates must not share their password with others.
 DP0 delegates are being given access to a *shared-risk developmental version* of the RSP and the accompanying documentation.
 **Everyone is responsible for their own safe usage of the RSP** and must be familiar with this list of :doc:`/data-access-analysis-tools/rsp-warnings`.
+
+**You are now a DP0 delegate!**
+Once your petition is approved and you can log in to `data.lsst.cloud <https://data.lsst.cloud>`_, you are a DP0 delegate.
+Please continue with the checklist steps.
 
 **Deactivating or canceling accounts:**
 Please contact Melissa Graham at mlg3k@uw.edu or 
