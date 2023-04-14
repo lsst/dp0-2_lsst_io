@@ -91,6 +91,11 @@ to submit a petition.
 Using your full professional name and your institutional email address will facilitate the process.
 It might take a few days for your Rubin data rights to be verified and your petition accepted.
 
+**Petition approved? You are now a DP0 delegate!**
+Once your petition is approved and you can log in to `data.lsst.cloud <https://data.lsst.cloud>`_, you are a DP0 delegate.
+Welcome!
+Please continue to read the information below and complete the checklist above.
+
 **Log in:**
 Navigate to `data.lsst.cloud <https://data.lsst.cloud>`_ and choose "Log in" at upper-right,
 or choose to enter either the Portal or Notebook Aspect.
@@ -100,11 +105,6 @@ In most cases, the authorization will be done via your institutional login.
 RSP accounts are not transferable and delegates must not share their password with others.
 DP0 delegates are being given access to a *shared-risk developmental version* of the RSP and the accompanying documentation.
 **Everyone is responsible for their own safe usage of the RSP** and must be familiar with this list of :doc:`/data-access-analysis-tools/rsp-warnings`.
-
-**Petition approved? You are now a DP0 delegate!**
-Once your petition is approved and you can log in to `data.lsst.cloud <https://data.lsst.cloud>`_, you are a DP0 delegate.
-Welcome!
-Please continue with the checklist steps.
 
 **Deactivating or canceling accounts:**
 Please contact Melissa Graham at mlg3k@uw.edu or 
