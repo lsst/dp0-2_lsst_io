@@ -45,16 +45,19 @@ The only prerequisite is to be a Rubin data rights holder.
 Although the number of delegates is currently limited to 600, there is space available and all petitions are being accepted.
 If that changes this page will be updated.
 
+Mandatory steps to becoming a delegate:
 | 1. Review the :ref:`Delegate-Homepage-Guidelines-Expectations`.
 | 2. Submit a petition for one of the :ref:`Delegate-Homepage-RSP-Accounts`.
 | 3. Set up your account in the :ref:`Delegate-Homepage-Forum`.
 | 4. Watch the recorded :ref:`Delegate-Homepage-Kickoff` (13 minutes).
 | 5. Review your options for :ref:`Delegate-Homepage-Getting-Support`.
-| 6. *Optional:* follow step-by-step introductions to the RSP's :ref:`Tools-RSP-Portal` or :ref:`Tools-RSP-Notebook`.
-| 7. *Optional:* work at your own pace through the :doc:`/tutorials-examples/index`.
-| 8. *Optional:* attend :ref:`Delegate-Homepage-DP0-Virtual-Seminars` or watch recordings where available.
-| 9. *Optional:* consider the :ref:`Delegate-Homepage-Delegate-Activities`.
-| 10. *Optional:* be aware that the `Rubin Users Committee <https://www.lsst.org/scientists/users-committee>`_ are your advocates.
+
+Optional (but recommended) steps for delegates:
+| 6. Follow step-by-step introductions to the RSP's :ref:`Tools-RSP-Portal` or :ref:`Tools-RSP-Notebook`.
+| 7. Work at your own pace through the :doc:`/tutorials-examples/index`.
+| 8. Attend :ref:`Delegate-Homepage-DP0-Virtual-Seminars` or watch recordings where available.
+| 9. Consider the :ref:`Delegate-Homepage-Delegate-Activities`.
+| 10. Be aware that the `Rubin Users Committee <https://www.lsst.org/scientists/users-committee>`_ are your advocates.
 
 
 .. _Delegate-Homepage-Guidelines-Expectations:
