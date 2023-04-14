@@ -42,6 +42,8 @@ Becoming a delegate is as easy as following this checklist and getting an accoun
 
 There is no application process.
 The only prerequisite is to be a Rubin data rights holder.
+Although the number of delegates is currently limited to 600, there is space available and all petitions are being accepted.
+If that changes this page will be updated.
 
 | 1. Review the :ref:`Delegate-Homepage-Guidelines-Expectations`.
 | 2. Submit a petition for one of the :ref:`Delegate-Homepage-RSP-Accounts`.
@@ -99,8 +101,9 @@ RSP accounts are not transferable and delegates must not share their password wi
 DP0 delegates are being given access to a *shared-risk developmental version* of the RSP and the accompanying documentation.
 **Everyone is responsible for their own safe usage of the RSP** and must be familiar with this list of :doc:`/data-access-analysis-tools/rsp-warnings`.
 
-**You are now a DP0 delegate!**
+**Petition approved? You are now a DP0 delegate!**
 Once your petition is approved and you can log in to `data.lsst.cloud <https://data.lsst.cloud>`_, you are a DP0 delegate.
+Welcome!
 Please continue with the checklist steps.
 
 **Deactivating or canceling accounts:**
