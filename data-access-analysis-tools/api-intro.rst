@@ -26,9 +26,9 @@ On the the main landing page at `data.lsst.cloud <https://data.lsst.cloud>`_ the
     The API Aspect has a lot of new features for DP0.2, which will be added to this page after the DP0.2 release (during July 2022).
     Check back soon for new information!
 
-The API's services for DP0.2 will include TAP, OBSTAP, SODA (image cutouts and mosaics), and HiPS (all acronyms to be defined here in future updates).
+The API's services for DP0.2 will include `TAP <https://www.ivoa.net/documents/TAP/>`_, `ObsTAP <https://www.ivoa.net/documents/ObsCore/>`_, `SODA <https://www.ivoa.net/documents/SODA/>`_ (image cutouts and mosaics), and `HiPS <https://aladin.u-strasbg.fr/hips/>`_.
 
-Longer term, Rubin Observatory will support SCS for simple catalog searches, SIAv2 for image searches, and VOSpace (in addition to WebDAV) for access to user files.
+Longer term, Rubin Observatory will support `SCS <https://www.ivoa.net/documents/latest/ConeSearch.html>`_ for simple catalog searches, `SIAv2 <https://www.ivoa.net/documents/SIA/20150730/index.html>`_ for image searches, and `VOSpace <https://www.ivoa.net/documents/VOSpace/>`_ (in addition to `WebDAV <https://en.wikipedia.org/wiki/WebDAV>`_) for access to user files.
 
 
 .. _Data-Access-Analysis-Tools-TAP-TOPCAT:

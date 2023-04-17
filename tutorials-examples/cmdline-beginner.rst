@@ -43,7 +43,7 @@ More information about the simulated data can be found in the DESC's `DC2 paper 
 Step 1. Access the terminal and setup
 =====================================
 
-1.1. Log in to the Notebook Aspect.
+1.1. Log in to the Notebook Aspect. The terminal is a subcomponent of the Notebook Aspect.
 
 1.2. In the launcher window under "Other", select the terminal.
 
@@ -143,7 +143,7 @@ This example uses the DP0.2 Object catalog, which contains sources detected in t
 
 The object and source catalogs store only fluxes.
 There are hundreds of flux-related columns, and to store them also as magnitudes would be redundant, and a waste of space.
-All flux units are nanojanskies (nJy).
+All flux units are nanojanskys (nJy).
 To convert nJy to AB magnitudes use: |mab| = -2.5log(|fnJy|) + 31.4. 
 
 .. |mab| replace:: m\ :sub:`AB`\ 
@@ -247,7 +247,7 @@ Double click on the filename to open and view the plot.
 Step 6. Retrieve image data using the butler
 ============================================
 
-The two most common types of images that DP0 delegates will interact with are calexps and deepCoAdds.
+The two most common types of images that DP0 delegates will interact with are calexps and deepCoadds.
 
 calexp: A single image in a single filter.
 
@@ -281,7 +281,7 @@ The butler (`butler documentation <https://pipelines.lsst.io/modules/lsst.daf.bu
     my_spherePoint = lsst.geom.SpherePoint(my_ra_deg*lsst.geom.degrees, my_dec_deg*lsst.geom.degrees)
     print(my_spherePoint)
 
-6.3. Retrive the DC2 skymap (`skymap documentation <https://pipelines.lsst.io/modules/lsst.skymap/index.html>`_) and identify the tract and patch.
+6.3. Retrieve the DC2 skymap (`skymap documentation <https://pipelines.lsst.io/modules/lsst.skymap/index.html>`_) and identify the tract and patch.
 
 .. code-block::
 

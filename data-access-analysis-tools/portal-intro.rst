@@ -65,9 +65,9 @@ entered (for the Object table, they are "coord_ra" and "coord_dec").
 If a non-existent column name is entered, the box will highlight red in indication of the error.
 Choose the desired shape type for a spatial search, such as "Cone", and the appropriate instructions for the search terms will appear.
 
-Keeping the search area small will keep query times short and returned manageable subsets of objects as you learn.
+Keeping the search area small will keep query times short and return manageable subsets of objects as you learn.
 It is recommended to start with 3 arcminutes.
-Note that the central coordinates for DC2, in decimal degrees, are: ``61.863 -35.790``.
+Note that the central (RA, Dec) coordinates for DC2, in decimal degrees, are: ``61.863 -35.790``.
 
 **The table view**:
 The table to the right of "Enter Constraints" enables users to apply additional search constraints on the columns in the selected catalog table.
@@ -96,7 +96,7 @@ Queries with only a row limit can run for much longer than one might intuitively
 likely to return a result more quickly.
 
 **Example single-table query**:
-The image below presents and example of how to search the DP0.2 Object catalog using a 3 arcminute cone near the DC2's central coordinates,
+The image below presents an example of how to search the DP0.2 Object catalog using a 3 arcminute cone near the DC2's central coordinates,
 returning only the five data columns "coord_ra", "coord_dec", and "g" "r" and "i_calibFlux",
 and imposing the contraints that the flux must be between 20 and 1000 nanojansky (i.e., between 24th and 28th magnitude).
 
@@ -120,7 +120,7 @@ The search might take a few moments.
 There are many icons that control the display settings; hover the mouse over any of them to see a pop-up description.
 At upper right, notice the options "tri-view", "img-tbl", "img-xy", and "xy-tbl".
 The default is "tri-view", which is shown below, with a sky image at upper left.
-Notice that at the time this documentation was created, the sky image was 2MASS and not a simulated DC2 image.
+The color-composite image shows the relevant DC2 simulated sky region.
 A default "xy" plot of the sky coordinates appears at upper right, and the table of results along the bottom.
 
 .. figure:: /_static/portal_search_results_DP02.png
@@ -136,8 +136,8 @@ In the image above, you can see that this has been done, because the results vie
 Switching between table tabs will also cause the image and xy plot to switch to show the selected query results.
 Delete the results for a given query by clicking on the x in the table tab.
 
-**Maniuplating the plotted data and converting fluxes to magnitudes**:
-To manipulate the plotted data, select the double gear "settings" icon above the x-y plot and a pop-up window will open (see the next figure).
+**Manipulating the plotted data and converting fluxes to magnitudes**:
+To manipulate the plotted data, select the double gear "settings" icon above the xy plot and a pop-up window will open (see the next figure).
 To create a color-magnitude diagram from the fluxes, for DP0.2 it is necessary to apply the `standard conversion from nanojansky to AB magnitude <https://en.wikipedia.org/wiki/AB_magnitude>`_ in the X and Y boxes as, e.g., "-2.5 * log10(g_calibFlux) + 31.4".
 In the future, magnitudes will be available.
 
@@ -191,8 +191,6 @@ For example, to get the detailed list of columns available in the "Object" table
    tap_schema.columns.description
    FROM tap_schema.columns
    WHERE tap_schema.columns.table_name = 'dp02_dc2_catalogs.Object'
-
-In the results view,
 
 **Query the Object table,** as done with the single table query interface above, with the following ADQL:
 
@@ -269,9 +267,9 @@ For DP0.2, 1 is the raw (unprocessed) images, 2 is the processed visit images (P
 The "Data Product Type" should be left as "Image", and the "Instrument Name", "Collection", and "Data Product Subtype" can all be left blank.
 
 Under "Location", only "Observation boundary contains point" was implemented at the time this documentation was written.
-Recall that the central coordinates for the DC2 simulated sky region is "62, -37".
+Recall that the central (RA, Dec) coordinates for the DC2 simulated sky region are ``61.863 -35.790``.
 
-Under "Timing", users can specify a range to apply to the image acquisition dates (this is only relvant for PVIs/calexps).
+Under "Timing", users can specify a range to apply to the image acquisition dates (this is only relevant for PVIs/calexps).
 
 Under "Spectral", users can provide a wavelength in, e.g., nanometers as a means of specifying the image band.
 
@@ -295,7 +293,7 @@ Click on the "Search" button.
 **Results View**
 
 The default results appear in the tri-view format, with the image at upper left, an xy plot at upper right, and the table of metadata below.
-The first row of the table is highlighted by default, with that image showing at upper right (and the central coordinates of other images overplotted with green boxes).
+The first row of the table is highlighted by default, with that image showing at upper left (and the central coordinates of other images overplotted with green boxes).
 The xy plot default is RA versus Declination, with the location of the highlighted table row shown in orange and the rest in blue.
     
 .. figure:: /_static/portal_ImageQueryResultsDP02.png
@@ -306,10 +304,10 @@ The xy plot default is RA versus Declination, with the location of the highlight
 **Manipulating the xy plot** is the same process as shown for the :ref:`Portal-Intro-Single-Table-Queries` results: click on the "settings" icon (double gears) in the upper right corner to change the column data being plotted, alter the plot style, add axes labels, etc.
 
 **Interacting with the images** begins with just hovering the mouse over the image and noting the RA, Dec, and pixel value appear at the bottom.
-Use the magnifying glass icons in the upper left corner to zoom in and out; click and drag the image to pan.
-Above the magnifying glass, use the back and forth arrows to navigate between HDU (header data units) 1, 2, and 3: the image, mask, and variance data.
-Click either on one of the green boxes (representing the central coordinats of another image in the table), or on another row in the table, to display a different image.
-At upper right, click on "img-tbl" to get ride of the xy plot and show the images and the table side-by-side.
+Use the magnifying glass icons in the upper left corner to zoom in and out. You may need to hover over the image for these upper left magnifying glasses to appear. Click and drag the image to pan.
+Above the magnifying glass icons, use the back and forth arrows to navigate between HDU (header data units) 1, 2, and 3: the image, mask, and variance data.
+Click either on one of the green boxes (representing the central coordinates of another image in the table), or on another row in the table, to display a different image.
+At upper right, click on "img-tbl" to get rid of the xy plot and show the images and the table side-by-side.
 
 .. figure:: /_static/portal_ImageQuery_sidebyside_DP02.png
     :name: portal_ImageQuery_sidebyside_DP02
@@ -337,12 +335,12 @@ Notice that it is possible to pan and zoom in each of these grid windows.
 **Coverage window**:
 Above the image, notice that the default tab view is "Data Product...", and instead click on "Coverage".
 The bounding boxes of all images listed in the table are shown, with the image in the selected row highlighted.
-At the time this documentation was created, the boxes were overlayed on 2MASS images, but in the near future the background will be DC2 images.
+The color-composite background shows the relevant DC2 simulated sky region.
 
 .. figure:: /_static/portal_ImageQueryCoverageDP02.png
     :name: portal_ImageQueryCoverageDP02
 
-    The coverage window will, in the future, be overlayed on a DC2 image and not 2MASS.
+    The coverage outlines of images returned by the ObsTAP search, overlayed on the relevant DC2 simulated sky region.
 
 **Learn More.**
 See also :ref:`DP0-2-Tutorials-Portal` for a tutorial using additional image types and more of the Portal's image-related functionality.

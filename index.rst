@@ -97,10 +97,10 @@ Tutorials include hands-on executable tutorials and demonstrations based on scie
 
 .. _Rubin-Observatory-Documentation-DP0-2-Documentation-Project-Information:
 
-Documentation project information
-=================================
+DP0.2 Documentation project information
+=======================================
 
-Information is provided on this documentation project and how to contribute to it.
+Information is provided on this DP0.2 documentation project and how to contribute to it.
 
 .. toctree::
     :maxdepth: 1

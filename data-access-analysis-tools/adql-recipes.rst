@@ -197,10 +197,10 @@ Recall that the TAP tables are sharded by RA,Dec, and when RA,Dec constraints ar
 the entire table must be searched, and this can take a long time despite the small amount of data returned.
 
 In the above example, a single object was desired, and a statement like ``WHERE objectId=1486`` was used.
-However, more than a few single objects are desired and their ``objectId`` are known, a query built up of, e.g.,
+However, if more than a few single objects are desired and their ``objectId`` are known, a query built up of, e.g.,
 ``OR objectId=1487 OR objectId=1488 OR objectId=1489`` and so on would work, but there's a better way: ``WHERE objectId IN ()``.
 
-Below, a list of just 12 ``objectId`` are put in a string called ``my_list``, formatted as a python tuple (with round brackets). 
+Below, a list of just 12 ``objectId`` is put in a string called ``my_list``, formatted as a python tuple (with round brackets). 
 This list could contain many more objects and be generated programmatically (e.g., from a different query, or by user analysis),
 and then be included in the ADQL query statement and the TAP service would treat it the same way.
 The number of results returned will equal the length of the list of ``objectId`` passed.
