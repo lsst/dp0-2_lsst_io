@@ -90,7 +90,26 @@
    * - 2023-04-28
      - Dan Ryczanowski (30 min; "Lensed Explosive Transients with DP0.2") and Antonio Vanzanella (15 min; "Finding long-period Solar System or interstellar objects with machine learning in LSST.")
      - *breakouts*
+   * - 2023-05-12
+     - *tbd, delegate volunteers welcome*
+     - *breakouts*
+   * - 2023-05-26
+     - *tbd, delegate volunteers welcome*
+     - *breakouts*
+   * - 2023-06-09
+     - *tbd, delegate volunteers welcome*
+     - *breakouts*
+   * - 2023-06-23
+     - *tbd, delegate volunteers welcome*
+     - *breakouts*
+   * - 2023-07-07
+     - *tbd, delegate volunteers welcome*
+     - *breakouts*
+   * - 2023-07-21
+     - *tbd, delegate volunteers welcome*
+     - *breakouts*
 
+	
 Additional delegate assemblies to be posted.
 Rows in *italics* are tentative topics.
 	
