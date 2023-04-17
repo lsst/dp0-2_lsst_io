@@ -102,7 +102,7 @@ API Aspect
 ----------
 
 The API (Application Programming Interface) Aspect of the RSP enables programmatic access to the Rubin data products via Virtual Observatory (VO) interfaces.
-Users will be able to remotely access the LSST data and DAC services using tools they’re already familiar with,
+Users will be able to remotely access the LSST data and `Data Access Center <https://www.lsst.org/about/dm/facilities>`_ (DAC) services using tools they’re already familiar with,
 e.g. `TOPCAT <http://www.star.bris.ac.uk/~mbt/topcat/>`__ or libraries such as `Astropy <https://www.astropy.org>`__.
 The Portal and Notebook Aspects of the RSP make use of the same APIs to internally access the LSST datasets.
 
