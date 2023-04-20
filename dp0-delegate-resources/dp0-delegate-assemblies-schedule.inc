@@ -85,7 +85,7 @@
      - `Deblender Data Products (Christina Williams) <https://community.lsst.org/t/summary-delegate-assembly-fri-mar-31-2023/7550>`__
      - *breakouts*
    * - 2023-04-14
-     - Variability in YSOs (Sabina Ustamujic)
+     - `Variability in YSOs (Sabina Ustamujic) <https://community.lsst.org/t/summary-delegate-assembly-fri-apr-14-2023/7578>`__
      - *breakouts*
    * - 2023-04-28
      - Dan Ryczanowski (30 min; "Lensed Explosive Transients with DP0.2") and Antonio Vanzanella (15 min; "Finding long-period Solar System or interstellar objects with machine learning in LSST.")
