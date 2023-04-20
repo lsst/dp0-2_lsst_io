@@ -31,7 +31,7 @@ This brief tutorial will illustrate how to use the histogram function in the Por
 
 The second ("B") will return the histogram of logarithm of fluxes of objects in a selected region of the sky.  Here, one science case might be the contribution of discrete sources (for instance those studied at a limited-size patch of the sky at high sensitivity and high spatial resolution) to background radiation from unresolved sources determined over a large area of the sky but at a lower angular resolution, which then might appear as a diffuse emission.  
 
-The third ("C") part will illustrate how to generate a histogram of two variables.  Such two-dimentional histograms are sometimes called the "heat maps."  The third dimension, representing the frequency of occurence for a specific pair of variables, is displayed via greyscale or color.  Here, we will illustrate the distribution of objects in two spectral bands in a specified region of the sky.   
+The third ("C") part will illustrate how to generate a histogram of two variables.  Such two-dimentional histograms are sometimes called the "heat maps."  The third dimension, representing the frequency of occurence for a specific pair of variables, is displayed via greyscale or color.  Here, we will illustrate the distribution of fluxes objects in two spectral bands in a specified region of the sky.   
 
 .. _DP0-2-Portal-Histogram-Part-A:
 
