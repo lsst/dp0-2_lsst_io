@@ -142,7 +142,17 @@ C1.1.  Here, we will use a somewhat more complex query than in parts A and B.  B
 Step C2.  Enter the search constraints 
 ======================================
 
-C2.1.  For this part, we will need a larger number of objects, which will make the color distribution more clear.  This time, restrict the radius to 1 degree  by entering this into the "Spatial Constraints" box.  As you did before, select only bright-ish objects:  in the "Output Column Selection and Constraints" for the g_calibFlux, i_calibFlux, and r_calibFlux rows, enter >360 as the constraints.  This time, add two other constraints:  enter =1 for detect_isPrimary row (to exclude blended objects), and enter =1 for the g_extendedness row.  Clicking "Search" as below will return a table of ~ 4000 objects.  
+C2.1.  For this part, we will need a larger number of objects, which will make the color distribution more clear.  This time, restrict the radius to 1   degree by entering this into the "Spatial Constraints" box.  As you did before, select only bright-ish objects:  in the "Output Column Selection and Constraints" for the g_calibFlux, i_calibFlux, and r_calibFlux rows, enter >360 as the constraints.  
+
+C2.2.  This time, add two other constraints:  enter =1 for detect_isPrimary row (to exclude blended objects), and enter =1 for the g_extendedness row.  Such constraints presumably will favor un-blended extended objects such as galaxies.  You can un-click the box under the little funnel (filter icon) for the detect_isPrimary and g_extendedness rows since you only need to select on those parameters and don't need to have them returned in the output table.   Clicking "Search" as below will take about a minute, and will return a table of ~ 160000 objects.  
+
+**Screenshot** 
+
+Step C3.  Plot the 2-dimensional color histogram
+================================================
+
+C3.1.  Click on the two gears on the upper right-hand side pf tje screen, to set the plot parameters.  
+For X, enter "-2.5 * log10(u_calibFux) - (-2.5 * log10(u_calibFux))" and for Y, enter "-2.5 * log10(g_calibFux) - (-2.5 * log10(r_calibFux))" - this will convert fluxes to magnitudes (and their differences) in selected bands.  
 
 Beginner-level users looking for a more general overview of the Portal Aspect should refer to this :doc:`/data-access-analysis-tools/portal-intro`.
 
