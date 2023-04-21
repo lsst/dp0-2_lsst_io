@@ -126,7 +126,7 @@ B3.1.  To generate such a histogram - as you did in part A - click on the "Add C
 .. figure:: /_static/portal_tut04_step07.png
 	:name: portal_tut04_step07
 	
-This will result in the plot on the upper right panel on the screenshot below.  If you wish you can add a chart with the same settings as the previous one, but with log axis fir the number, select "log" for the Chart Options of the plot ( as is in the left panel).  Such plot is often called "log(N) - Log (S)."  
+This will result in the plot on the upper right panel on the screenshot below.  If you wish you can add a chart with the same settings as the previous one, but with log axis for the number, select "log" for the Chart Options of the plot (as is in the left panel).  Such plot is often called "log(N) - log (S)."  
 
 .. figure:: /_static/portal_tut04_step08.png
 	:name: portal_tut04_step08
