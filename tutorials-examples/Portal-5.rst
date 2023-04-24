@@ -59,7 +59,7 @@ Executing this query returned the table on the bottom of the screenshot below.  
 .. figure:: /_static/portal_tut05_step00.png
     :name: portal_tut05_step00
 
-Below, we will be examining its light curve in the ForcedSourceOnDiaObjects table in all availavble Rubin visits.  Again, we will employ the Astronomical Data Query Language (ADQL) to query and retrieve the data.  
+Below in Step 1, we will be examining its light curve in the ForcedSourceOnDiaObjects table in all availavble Rubin visits.  Again, we will employ the Astronomical Data Query Language (ADQL) to query and retrieve the data.  In Step 2, we will plot the light curve of this supernova as measured in various bands on the same plot.  
 
 For more information, see `schema <https://dm.lsst.org/sdm_schemas/browser/dp02.html#ForcedSourceOnDiaObject>`_ of the ForcedSourceOnDiaObject catalog.  
 
@@ -72,7 +72,7 @@ Step 1. Set the query constraints and plot the single-band light curve from the 
 
 1.2.  Click on "Edit ADQL" (advanced) button in the Select Query line.  Clear the content of the ADQL query box, if it is not empty.  
 
-1.3.  Enter a different ADQL query than the one given in the Intrduction - the new query is below.  This query will retrieve all of the ForcedSourceOnDiaObjects table entries for the supernova for which we retrieved the DiaSource fluxes (converted into magnitudes) in the plot above.  
+1.3.  Enter a different ADQL query than the one given in the Intrduction - the new query is below.  This query will retrieve all of the ForcedSourceOnDiaObjects table entries for the supernova for which we retrieved the DiaSource fluxes (converted into magnitudes) in the plot in the Introduction.  
 
 The ForcedSourceOnDiaObject contains forced photometry on both the difference image (psfDiffFlux, psfDiffFluxErr) 
 and the processed visit image (PVI), also called the "direct" image (psfFlux, psfFluxErr).  Below, we retrieve both types of fluxes for our DiaObject.  
@@ -117,7 +117,7 @@ You night want to click on "xy-tbl" in the upper right hand part of the display.
     
 Here, a warning is warranted:  converting fluxes from the ForcedSourceOnDiaObject table to magnitudes using the scisql_nanojanskyToAbMag() function can be dangerous.  This is because the nanojanskyToAbMag() function does not return any value for a negative flux as an argument, and thus any negative fluxes will be lost. This is especially important for variability studies, when a negative value of flux is (within errors) consistent with non-detection might be scientifically interesting.  
 
-1.4.  If you wish, you can restrict the MJD range of your Forced Photometry search to the range covered in DiaObject shown in the Introduction).  This will allow you to compare the light curves retrieved from the two tables.  You can do this by changing the plot parameters in the "chart settings" window such as 930 < MJD-60000 < 1010 - this will retun the plot below:  
+1.4.  If you wish, you can restrict the MJD range of your Forced Photometry search to the range covered in DiaObject (shown in the Introduction).  This will allow you to compare the light curves retrieved from the two tables.  You can do this by changing the plot parameters in the "chart settings" window such as 930 < MJD-60000 < 1010 - this will retun the plot below:  
 
 .. figure:: /_static/portal_tut05_step01e.png
     :name: portal_tut05_step01e
@@ -125,21 +125,25 @@ Here, a warning is warranted:  converting fluxes from the ForcedSourceOnDiaObjec
 Step 2.  Making a multi-band light curve on a single plot
 =========================================================
 
-2.1.  Our goal here is to plot a multi-band light curve with flux measurements in different bands appearing in different colors.  This is not currently supported by the Portal functionality, but is in the Portal development plan, to be implemented in the future.  Beyond various bands appearing in different colors, it is envisioned that it will be possible to add a legend in the plot.  However, currently there is a relatively simple workaround - see below for the necessary steps.  
+2.1.  Our goal here is to plot a multi-band light curve with flux measurements in different bands appearing in different colors on the same plot.  This is not currently supported by the Portal functionality, but is in the Portal development plan, to be implemented in the future.  Beyond various bands appearing in different colors, it is envisioned that it will be possible to add a legend in the plot.  However, currently there is a relatively simple workaround - see below for the necessary steps.  We will start with the same query as previously, but with the last line (specifically, AND fsodo.band = 'i') missing (meaning we will not select just the "i" band data).  
 
 2.2  One can add an additional column to the table generated in the previous search.  This new column would be an ASCII value of the "band" entry, which is currently in the "character" format.  To add a new column in the table, one needs to click on the 5th icon in the retireved table, as below:  
 
-**Screenshot**
 
-This brings a new window, where you should enter a new name of the column (here it is "bands_ascii") and enter an expression converting the character in the "band" column to its ASCII value, namely ASCII("band").  It is also necessary to specify the data type - it needs to be "long" - see the screenshot below.  
+.. figure:: /_static/portal_tut05_step02a.png
+    :name: portal_tut05_step02a
 
-**Screenshot**
+This brings a new window, where you should enter a new name of the column (here it is "bands_ascii") and enter an expression converting the character in the "band" column to its ASCII value, namely ASCII("band").  It is also necessary to specify the data type - it needs to be "long" - see the screenshot below.  Click on "Add column" as below:  
 
-Clicking on "Add Column" results in a new column in a numeric format, corresponding to the ASCII value of the character in the "band" column (now the rightmost on the screenshot below).  
+.. figure:: /_static/portal_tut05_step02b.png
+    :name: portal_tut05_step02b
 
-**Screenshot**
+Clicking on "Add Column" will result in a new column in a numeric format, corresponding to the ASCII value of the character in the "band" column (now the rightmost column on the screenshot below, marked with (1)).  
 
-2.3.  Now in order to have data in various filters appear in different colors, you need to change the plot parameters by clicking the two gears.  This brings a window as below, where you need to click on "Trace Options" and enter "bands_ascii" in the "Color Map" line, and "Rainbow" in the "Color Scale" line.  
+.. figure:: /_static/portal_tut05_step02c.png
+    :name: portal_tut05_step02c
+
+2.3.  Now in order to have data in various filters appear in different colors, you need to change the plot parameters by clicking the two gears (marked as a red arrow with "(2) above).  This brings a window as below, where you need to click on "Trace Options" and enter "bands_ascii" in the "Color Map" line, and "Rainbow" in the "Color Scale" line.  
 
 **Screenshot**
 
