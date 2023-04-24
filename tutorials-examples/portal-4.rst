@@ -47,7 +47,7 @@ A1.1.  Log into the Portal Aspect
 
 A1.2.  Once you've logged in, you should be (by default) in the query type "Single Table (UI assisted)."  Change this to "Image Search (ObsTAP)" - the third button.  
 
-A1.3 In the "Constraints" section, select the "Calibration Level" as "2" - this is for single-epoch images (Processed Visit Images, or PVIs).  You should be (by default) in the "Image" part of the Data Product Type list - if not, that's what you need to select.  
+A1.3. In the "Constraints" section, select the "Calibration Level" as "2" - this is for single-epoch images (Processed Visit Images, or PVIs).  You should be (by default) in the "Image" part of the Data Product Type list - if not, that's what you need to select.  
 
 A1.4.  For "Location" constraint, you need to select the query "Observation boundary contains point" (should be the default).  You can select any location which is within the DP0.2 sky area, say 62.0, -37.0 .  In the large table on the right, you should leave the "Output Column Selection and Constraints" as was defaulted by the Portal aspect.  
 
@@ -63,7 +63,7 @@ Step A2.  Images of the location on the sky
 
 A2.1.  This search will result in a number of rows in a table at the bottom of the window - you should see about 500 entries, each corresponding to a visit containing the location selected by you.  The upper left-hand window will display a rendered image of a single (4k x 4k) detector, which is the unit of "data delivery."  The upper right-hand window will show a scatter plot of the central locations of Rubin pointings on the sky which contain the data from the location selected by you (62.0, -37.0).  
 
-A2.2  Now you can examine images corresponding to those pointings by hovering with your computer mouse over the blue dots on the upper right-hand panel.  Once you click on any of the dots - this will highlight a row on the table on the bottom, and will render an image corresponding to the selected pointing.  Conversely, you can select a row in the table at the bottom - this will turn the location of the point on the upper left-hand plot to orange.  
+A2.2.  Now you can examine images corresponding to those pointings by hovering with your computer mouse over the blue dots on the upper right-hand panel.  Once you click on any of the dots - this will highlight a row on the table on the bottom, and will render an image corresponding to the selected pointing.  Conversely, you can select a row in the table at the bottom - this will turn the location of the point on the upper left-hand plot to orange.  
 
 A2.3.  The table contains a large amount of information.  For the purpose of this exercise, the most interesting are the "lsst_band" - this is a filter used for the given pointing.  The "lsst_detector" is telling you which detector contains that data point (ranging from 1 to 189), and "t_min" is the start time (in MJD) of the pointing.  
 
@@ -81,7 +81,7 @@ A3.1.  To generate such a histogram, click on the "Add Chart" button on the top 
 .. figure:: /_static/portal_tut04_step03.png
 	:name: portal_tut04_step03
 
-A new window will appear asking for the plot type.  Select "Histogram" here.  For the "Column or expression" select "t_min."  You can select any number of bins in the histogram - say, 100.  You will be given the full range of t_min times (Min and Max) in your table - which you can override.  Clicking "OK" will generate a new panel with a plot of history of Rubin observations at location (62.0, -37.0).  As you can see on the plot below, there is a clear seasonal pattern of the Rubin Observatory visits to your selected location.  You can augment the plot with a title and labels for axis by clicking the "Chart Options" 
+A new window will appear asking for the plot type.  Select "Histogram" here.  For the "Column or expression" select "t_min."  You can select any number of bins in the histogram - say, 100.  You will be given the full range of t_min times (Min and Max) in your table - which you can override.  Clicking "OK" will generate a new panel with a plot of history of Rubin observations at location (62.0, -37.0).  As you can see on the plot below, there is a clear seasonal pattern of the Rubin Observatory visits to your selected location.  You can augment the plot with a title and labels for axis by clicking the "Chart Options" as below.   
 
 .. figure:: /_static/portal_tut04_step04.png
 	:name: portal_tut04_step04
