@@ -31,7 +31,7 @@ This brief tutorial will illustrate how to use the histogram function in the Por
 
 The second ("B") will return the histogram of logarithm of fluxes of objects in a selected region of the sky.  Here, one science case might be the contribution of discrete sources (for instance those studied at a limited-size patch of the sky at high sensitivity and high spatial resolution) to background radiation from unresolved sources determined over a large area of the sky but at a lower angular resolution, which then might appear as a diffuse emission.  
 
-The third ("C") part will illustrate how to generate a histogram of two variables.  Such two-dimentional histograms are sometimes called "heat maps."  The third dimension, representing the frequency of occurence for a specific pair of variables, is displayed via greyscale or color.  Here, we will illustrate the frequency of occurence of objects as a function of two colors.  In this example, we will use the colors represented by a difference between g and r band magnitudes (x axis) vs. difference between u and g magnitudes (y axis) in a specified region of the sky.  One use case might be to select different classes of galaxies based on their colors.  
+The third ("C") part will illustrate how to generate a histogram of two variables.  Such two-dimentional histograms are sometimes called "heat maps."  The third dimension, representing the frequency of occurence for a specific pair of variables, is displayed via greyscale or color.  Here, we will plot the frequency of occurence of objects as a function of their color (difference between i and u magnitudes on y axis) against their apparent g magnitude (x axis) in a specified region of the sky.  One use case might be to select different classes of galaxies (e.g. spirals vs. ellipticals) based on their color.  
 
 .. _DP0-2-Portal-Histogram-Part-A:
 
@@ -133,7 +133,7 @@ This will result in the plot on the upper right panel on the screenshot below.  
 
 .. _DP0-2-Portal-Histogram-Part-C:  
 
-Part C:  Generate a two-dimensional color - color histogram ("heat map") of extended sources
+Part C:  Generate a two-dimensional color - magnitude histogram ("heat map") of extended sources
 ============================================================================================
 
 .. _DP0-2-Portal-Histogram-Step-C1:
@@ -149,7 +149,7 @@ C1.1.  Here, we will use a somewhat more complex query than in parts A and B.  B
 Step C2.  Enter the search constraints 
 ======================================
 
-C2.1.  For this part, we will need a larger number of objects, which will make the distribution of object colors more clear.  To this end, restrict the  radius to 1 degree by entering this into the "Spatial Constraints" box.  As you did before, select only bright-ish objects:  in the "Output Column Selection and Constraints" for the g_calibFlux, i_calibFlux, u_calibFlux, and r_calibFlux rows, enter >360 as the constraints.  
+C2.1.  For this part, we will need a larger number of objects, which will make the distribution of object color vs. magnitude more clear.  To this end, restrict the  radius to 1 degree by entering this into the "Spatial Constraints" box.  As you did before, select only bright-ish objects:  in the "Output Column Selection and Constraints" for the g_calibFlux, i_calibFlux, u_calibFlux, and r_calibFlux rows, enter >360 as the constraints.  
 
 C2.2.  This time, add two additional constraints:  enter =1 for detect_isPrimary row (to exclude blended objects), and enter =1 for the g_extendedness row.  Such constraints presumably will favor un-blended extended objects such as individual galaxies.  You can un-click the box under the little funnel (filter icon) for the "detect_isPrimary" and "g_extendedness" rows since you only need to select on those parameters and don't need to have them returned in the output table.   Clicking "Search" as below will take about a minute, and will return a table of ~ 160000 objects.  
 
@@ -163,16 +163,17 @@ Step C3.  Plot the 2-dimensional color histogram
 ================================================
 
 C3.1.  Click on the two gears on the upper right-hand side of the screen, to set the plot parameters.  
-For X, enter "-2.5 * log10(u_calibFux) - (-2.5 * log10(g_calibFux))" and for Y, enter "-2.5 * log10(g_calibFux) - (-2.5 * log10(r_calibFux))" - this will convert fluxes to magnitudes (and their differences) in the selected bands.  You can enter any color scale - whichever you find most compelling.  In the "Chart Options" part you can enter the chart title and axis labels.  Click "Apply" and then "Close."  
+For X, enter "-2.5 * log10(g_calibFux)+ 31.4" and for Y, enter "-2.5 * log10(i_calibFux) - (-2.5 * log10(u_calibFux))" - this will convert fluxes to magnitudes (and their differences) in the selected bands.  You can enter any color scale - whichever you find most compelling.  In the "Chart Options" part you can enter the chart title and axis labels.  Click "Apply" and then "Close."  
 
 .. figure:: /_static/portal_tut04_step10.png
 	:name: portal_tut04_step10
 
-C3.2.  The resulting color-color diagram of objects in your search area will look as below.  
+C3.2.  The resulting color-magnitude diagram of objects in your search area will look as below.  
 
 .. figure:: /_static/portal_tut04_step11.png
 	:name: portal_tut04_step11
-
+	
+You can see the distribution of galaxy colors as a function of their apparent magnitudes is not uniform.  Can you think of why?  
 
 Beginner-level users looking for a more general overview of the Portal Aspect should refer to this :doc:`/data-access-analysis-tools/portal-intro`.
 
