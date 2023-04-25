@@ -143,17 +143,24 @@ Clicking on "Add Column" will result in a new column in a numeric format, corres
 .. figure:: /_static/portal_tut05_step02c.png
     :name: portal_tut05_step02c
 
-2.3.  Now in order to have data in various filters appear in different colors, you need to change the plot parameters by clicking the two gears (marked as a red arrow with "(2) above).  This brings a window as below, where you need to click on "Trace Options" and enter "bands_ascii" in the "Color Map" line, and "Rainbow" in the "Color Scale" line.  
+2.3.  Now in order to have data in various filters appear in different colors, you need to change the plot parameters by clicking the two gears (marked as a red arrow with "(2)" above).  This brings a window as below, where you need to click on "Trace Options" and enter "bands_ascii" in the "Color Map" line, and "Rainbow" in the "Color Scale" line.  
 
-**Screenshot**
+.. figure:: /_static/portal_tut05_step02d.png
+    :name: portal_tut05_step02d
 
 Once you click on "Apply" - you will see the plot of the supernova light curve in various bands.  
 
-**Screenshot**
+.. figure:: /_static/portal_tut05_step02e.png
+    :name: portal_tut05_step02e
+
 
 Instead of plotting the fluxes, you can take advantage of the fact that in the ADQL query you requested a new column, where the fluxes are converted to AB magnitudes, as below.  But a comparison of the two light curves - one in flux units, and the other in magnitudes - reveals that the flux conversion routine in ADQL you've used in the ADQL search ignores negative fluxes, meaning there is no entry for those.  This can be dangerous, since in some cases, a non-detection is actually scientifically interesting!  
 
-**Screenshot**
+Now you can compare the new, multi-band light curve to the one you prepared at the end of Step 1, plotting the AB magnitudes rather than fluxes, over the restricted MJD range (see the first screenshot of the Tutorial).  It will look as the screenshot below:  
+
+.. figure:: /_static/portal_tut05_step02f.png
+    :name: portal_tut05_step02f
+
 
 Step 3.  The Distinction Between fsodo.psfFlux and fsodo.psfDiffFlux
 ====================================================================
