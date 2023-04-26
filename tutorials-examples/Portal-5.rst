@@ -76,7 +76,7 @@ Step 1. Set the query constraints and plot the single-band light curve from the 
 
 The ForcedSourceOnDiaObject contains forced photometry on both the difference image (psfDiffFlux, psfDiffFluxErr) 
 and the processed visit image (PVI), also called the "direct" image (psfFlux, psfFluxErr).  Below, we retrieve both types of fluxes for our DiaObject.  
-For starters, we will work with the psfFlux entries - furter down in the tutorial, we will explain the meaning and use of the psfDiffFlux.  
+For starters, we will work with the psfDiffFlux entries - furter down in the tutorial, we will explain the meaning and use of the psfFlux and the differences between the two.  
 
 The JOIN command in this query is used for the ccdVisitId to join to the CcdVisit table to obtain the expMidptMJD (MJD of the mid-point of the exposure).  
 
