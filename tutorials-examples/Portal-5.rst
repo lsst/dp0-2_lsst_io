@@ -110,7 +110,7 @@ Here, you need to request the appropriate columns:
 .. figure:: /_static/portal_tut05_step01c.png
     :name: portal_tut05_step01c
     
-You night want to click on "xy-tbl" in the upper right hand part of the display.  Tthe his will result in a plot as below:  
+You night want to click on "xy-tbl" in the upper right hand part of the display.  This will result in a plot as below:  
 
 .. figure:: /_static/portal_tut05_step01d.png
     :name: portal_tut05_step01d
@@ -127,8 +127,7 @@ Step 2.  Making a multi-band light curve on a single plot
 
 2.1.  Our goal here is to plot a multi-band light curve with flux measurements in different bands appearing in different colors on the same plot.  This is not currently supported by the Portal functionality, but is in the Portal development plan, to be implemented in the future.  Beyond various bands appearing in different colors, it is envisioned that it will be possible to add a legend in the plot.  However, currently there is a relatively simple workaround - see below for the necessary steps.  We will start with the same query as previously, but with the last line (specifically, AND fsodo.band = 'i') missing (meaning we will not select just the "i" band data).  
 
-2.2  One can add an additional column to the table generated in the previous search.  This new column would be an ASCII value of the "band" entry, which is currently in the "character" format.  To add a new column in the table, one needs to click on the 5th icon in the retireved table, as below:  
-
+2.2  One can add an additional column to the table generated in the previous search.  This new column would be an ASCII value of the "band" entry, which is currently in the "character" format.  To add a new column in the table, one needs to click on the 5th icon in the retrieved table, as below.  Note that in the plot below, we alread changed the plot parameters to plot the flux vs.  MJD.  
 
 .. figure:: /_static/portal_tut05_step02a.png
     :name: portal_tut05_step02a
