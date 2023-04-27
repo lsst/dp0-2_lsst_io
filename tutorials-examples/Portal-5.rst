@@ -164,17 +164,15 @@ Now you can compare the new, multi-band light curve to the one you prepared at t
 Step 3.  The Distinction Between fsodo.psfFlux and fsodo.psfDiffFlux
 ====================================================================
 
-Note that we plotted just the psfDiffFlux on the plot above, but we extracted two fluxes - the psfFlux as well as the psfDiffFlux.  The psfFlux is essentially a measurement of a "forced" flux measurement at a specified location.   The psfDiffFlux is a differential flux (which is what we plot in Step 2) which is determined by measuring the flux from a difference image.  This should be essentially equivalent to subtracting some fiducial flux from the psfFlux.  In principle, there should be a fixed offset between the two quantities, but this is not the case for our object.  Might be because the psfDiffFlux subtracts a flux which is not constant.  Another possibility is that this is within the measurement errors.  I will investigate further.  
-
-.. figure:: /_static/portal_tut05_step02g.png
-    :name: portal_tut05_step02g
-
-
-FROM THE DESCRIPTIONS IN THE ForcedSourceOnDiaObject TABLE: 
+FROM THE DESCRIPTIONS OF COLUMNS IN THE ForcedSourceOnDiaObject TABLE: 
 
 psfDiffFlux - Flux derived from linear least-squares fit of psf model forced on the image difference
 
 psfFlux - Flux derived from linear least-squares fit of psf model forced on the calexp
+
+Note that we plotted just the psfDiffFlux on the plot above, but we extracted two fluxes - the psfFlux as well as the psfDiffFlux.  The psfFlux is essentially a measurement of a "forced" flux of a surce measurement at a specified location.   The psfDiffFlux is a differential flux (which is what we plot in Step 2) which is determined by measuring the flux from a difference image.  To study variability of celestial sources, you should use the psfDiffFlux.  
+
+
 
 Exercises for the learner
 =========================
