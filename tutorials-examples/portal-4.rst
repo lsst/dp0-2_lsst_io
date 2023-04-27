@@ -81,7 +81,7 @@ A3.1.  To generate such a histogram, click on the "Add Chart" button on the top 
 .. figure:: /_static/portal_tut04_step03.png
 	:name: portal_tut04_step03
 
-A new window will appear asking for the plot type.  Select "Histogram" here.  For the "Column or expression" select "t_min."  You can select any number of bins in the histogram - say, 100.  You will be given the full range of t_min times (Min and Max) in your table - which you can override.  Clicking "OK" will generate a new panel with a plot of history of Rubin observations at location (62.0, -37.0).  As you can see on the plot below, there is a clear seasonal pattern of the Rubin Observatory visits to your selected location.  You can augment the plot with a title and labels for axis by clicking the "Chart Options" as below.   
+A new window will appear asking for the plot type.  Select "Histogram" here.  For the "Column or expression" select "t_min."  You can select any number of bins in the histogram - say, 100.  You will be given the full range of t_min times (Min and Max) in your table - which you can override.  Clicking "OK" will generate a new panel with a plot of history of Rubin observations at location (62.0, -37.0).  As you can see on the plot below, there is a clear seasonal pattern of the Rubin Observatory visits to your selected location.  You can augment the plot with a title and labels for axis by clicking the two gears on upper right, and then modifying "Chart Options."    
 
 .. figure:: /_static/portal_tut04_step04.png
 	:name: portal_tut04_step04
@@ -121,7 +121,7 @@ B2.1.  To reduce the number of returned objects, you might want to restrict the 
 Step B3.  Generate the histogram of g-band fluxes
 =================================================
 
-B3.1.  To generate such a histogram - as you did in part A - click on the "Add Chart" buttom on the top of your window.  In the window which just apeared, select "Histogram."  For the "Column or expression" enter "log10(g_calibFlux).
+B3.1.  To generate such a histogram - as you did in part A - click on the "Add Chart" buttom on the top of your window.  In the window which just apeared, select "Histogram."  For the "Column or expression" enter "log10(g_calibFlux)."  
 
 .. figure:: /_static/portal_tut04_step07.png
 	:name: portal_tut04_step07
