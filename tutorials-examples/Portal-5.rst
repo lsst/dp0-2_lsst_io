@@ -65,8 +65,8 @@ For more information, see `schema <https://dm.lsst.org/sdm_schemas/browser/dp02.
 
 .. _DP0-2-Portal-5-Step-1:
 
-Step 1. Set the query constraints and plot the single-band light curve from the ForcedSourceOnDiaObjects table 
-==============================================================================================================
+Step 1. Set the query constraints for the ForcedSourceOnDiaObjects table 
+========================================================================
 
 1.1.  Log in to the Portal Aspect of the Rubin Science Platform.  
 
@@ -76,7 +76,7 @@ Step 1. Set the query constraints and plot the single-band light curve from the 
 
 The ForcedSourceOnDiaObject contains forced photometry on both the difference image (psfDiffFlux, psfDiffFluxErr) 
 and the processed visit image (PVI), also called the "direct" image (psfFlux, psfFluxErr).  Below, we retrieve both types of fluxes for our DiaObject.  
-For starters, we will work with the psfDiffFlux entries - furter down in the tutorial, we will explain the meaning and use of the psfFlux and the differences between the two.  
+Here, we will work with the psfDiffFlux entries - furter down in the tutorial, we will explain the meaning and use of the psfFlux and the differences between the two.  
 
 The JOIN command in this query is used for the ccdVisitId to join to the CcdVisit table to obtain the expMidptMJD (MJD of the mid-point of the exposure).  
 
@@ -100,7 +100,12 @@ The JOIN command in this query is used for the ccdVisitId to join to the CcdVisi
 .. figure:: /_static/portal_tut05_step01a.png
     :name: portal_tut05_step01a
 
-This query will return forced flux measurements at all epochs of Rubin visits to our supernova location, but to plot such a light curve (rather than the default of your table), you need to modify the settings of the plot by clicking the settings icon as above.  
+.. _DP0-2-Portal-5-Step-2: 
+
+Step 2. Plot the single-band light curve 
+========================================
+
+2.1.  This query will return forced flux measurements at all epochs of Rubin visits to our supernova location, but to plot such a light curve (rather than the default of your table), you need to modify the settings of the plot by clicking the settings icon as below.  
 
 .. figure:: /_static/portal_tut05_step01b.png
     :name: portal_tut05_step01b
@@ -110,24 +115,26 @@ Here, you need to request the appropriate columns:
 .. figure:: /_static/portal_tut05_step01c.png
     :name: portal_tut05_step01c
     
-You night want to click on "xy-tbl" in the upper right hand part of the display.  This will result in a plot as below:  
+You might want to click on "xy-tbl" in the upper right hand part of the display.  This will result in a plot as below:  
 
 .. figure:: /_static/portal_tut05_step01d.png
     :name: portal_tut05_step01d
     
 Here, a warning is warranted:  converting fluxes from the ForcedSourceOnDiaObject table to magnitudes using the scisql_nanojanskyToAbMag() function can be dangerous.  This is because the nanojanskyToAbMag() function does not return any value for a negative flux as an argument, and thus any negative fluxes will be lost. This is especially important for variability studies, when a negative value of flux is (within errors) consistent with non-detection might be scientifically interesting.  
 
-1.4.  If you wish, you can restrict the MJD range of your Forced Photometry search to the range covered in DiaObject (shown in the Introduction).  This will allow you to compare the light curves retrieved from the two tables.  You can do this by changing the plot parameters in the "chart settings" window such as 930 < MJD-60000 < 1010 - this will retun the plot below:  
+2.2.  If you wish, you can restrict the MJD range of your Forced Photometry search to the range covered in DiaObject (shown in the Introduction).  This will allow you to compare the light curves retrieved from the two tables.  You can do this by changing the plot parameters in the "chart settings" window such as 930 < MJD-60000 < 1010 - this will retun the plot below:  
 
 .. figure:: /_static/portal_tut05_step01e.png
     :name: portal_tut05_step01e
 
-Step 2.  Making a multi-band light curve on a single plot
+.. _DP0-2-Portal-5-Step-3: 
+
+Step 3.  Making a multi-band light curve on a single plot
 =========================================================
 
-2.1.  Our goal here is to plot a multi-band light curve with flux measurements in different bands appearing in different colors on the same plot.  This is not currently supported by the Portal functionality, but is in the Portal development plan, to be implemented in the future.  Beyond various bands appearing in different colors, it is envisioned that it will be possible to add a legend in the plot.  However, currently there is a relatively simple workaround - see below for the necessary steps.  We will start with the same query as previously, but with the last line (specifically, AND fsodo.band = 'i') missing (meaning we will not select just the "i" band data).  
+3.1.  Our goal here is to plot a multi-band light curve with flux measurements in different bands appearing in different colors on the same plot.  This is not currently supported by the Portal functionality, but is in the Portal development plan, to be implemented in the future.  Beyond various bands appearing in different colors, it is envisioned that it will be possible to add a legend in the plot.  However, currently there is a relatively simple workaround - see below for the necessary steps.  We will start with the same query as previously, but with the last line (specifically, AND fsodo.band = 'i') missing (meaning we will not select just the "i" band data).  
 
-2.2  One can add an additional column to the table generated in the previous search.  This new column would be an ASCII value of the "band" entry, which is currently in the "character" format.  To add a new column in the table, one needs to click on the 5th icon in the retrieved table, as below.  Note that in the plot below, we already changed the plot parameters to plot the flux vs.  MJD.  
+3.2  One can add an additional column to the table generated in the previous search.  This new column would be an ASCII value of the "band" entry, which is currently in the "character" format.  To add a new column in the table, one needs to click on the 5th icon in the retrieved table, as below.  Note that in the plot below, we already changed the plot parameters to plot the flux vs.  MJD.  
 
 .. figure:: /_static/portal_tut05_step02a.png
     :name: portal_tut05_step02a
@@ -137,12 +144,12 @@ This brings a new window, where you should enter a new name of the column (here 
 .. figure:: /_static/portal_tut05_step02b.png
     :name: portal_tut05_step02b
 
-Clicking on "Add Column" will result in a new column in a numeric format, corresponding to the ASCII value of the character in the "band" column (now the rightmost column on the screenshot below, marked with (1)).  
+3.3.  Clicking on "Add Column" will result in a new column in a numeric format, corresponding to the ASCII value of the character in the "band" column (now the rightmost column on the screenshot below, marked with (1)).  
 
 .. figure:: /_static/portal_tut05_step02c.png
     :name: portal_tut05_step02c
 
-2.3.  Now in order to have data in various filters appear in different colors, you need to change the plot parameters by clicking the two gears (marked as a red arrow with "(2)" above).  This brings a window as below, where you need to click on "Trace Options" and enter "bands_ascii" in the "Color Map" line, and "Rainbow" in the "Color Scale" line.  
+3.4.  Now in order to have data in various filters appear in different colors, you need to change the plot parameters by clicking the two gears (marked as a red arrow with "(2)" above).  This brings a window as below, where you need to click on "Trace Options" and enter "bands_ascii" in the "Color Map" line, and "Rainbow" in the "Color Scale" line.  
 
 .. figure:: /_static/portal_tut05_step02d.png
     :name: portal_tut05_step02d
@@ -152,16 +159,16 @@ Once you click on "Apply" - you will see the plot of the supernova light curve i
 .. figure:: /_static/portal_tut05_step02e.png
     :name: portal_tut05_step02e
 
-
-Instead of plotting the fluxes, you can take advantage of the fact that in the ADQL query you requested a new column, where the fluxes are converted to AB magnitudes, as below.  But a comparison of the two light curves - one in flux units, and the other in magnitudes - reveals that the flux conversion routine in ADQL you've used in the ADQL search ignores negative fluxes, meaning there is no entry for those.  This can be dangerous, since in some cases, a non-detection is actually scientifically interesting!  
+3.5.  Instead of plotting the fluxes, you can take advantage of the fact that in the ADQL query you requested a new column, where the fluxes are converted to AB magnitudes, as below.  But a comparison of the two light curves - one in flux units, and the other in magnitudes - reveals that the flux conversion routine in ADQL you've used in the ADQL search ignores negative fluxes, meaning there is no entry for those.  This can be dangerous, since in some cases, a non-detection is actually scientifically interesting!  
 
 Now you can compare the new, multi-band light curve to the one you prepared at the end of Step 1, plotting the AB magnitudes rather than fluxes, over the restricted MJD range (see the first screenshot of the Tutorial).  It will look as the screenshot below:  
 
 .. figure:: /_static/portal_tut05_step02f.png
     :name: portal_tut05_step02f
 
+.. _DP0-2-Portal-5-Step-4: 
 
-Step 3.  The Distinction Between fsodo.psfFlux and fsodo.psfDiffFlux
+Step 4.  The Distinction Between fsodo.psfFlux and fsodo.psfDiffFlux
 ====================================================================
 
 FROM THE DESCRIPTIONS OF COLUMNS IN THE ForcedSourceOnDiaObject TABLE: 
@@ -171,7 +178,6 @@ psfDiffFlux - Flux derived from linear least-squares fit of psf model forced on 
 psfFlux - Flux derived from linear least-squares fit of psf model forced on the calexp
 
 Note that we plotted just the psfDiffFlux on the plot above, but we extracted two fluxes - the psfFlux as well as the psfDiffFlux.  The psfFlux is essentially a measurement of a "forced" flux of a surce measurement at a specified location.   The psfDiffFlux is a differential flux (which is what we plot in Step 2) which is determined by measuring the flux from a difference image.  To study variability of celestial sources, you should use the psfDiffFlux.  
-
 
 
 Exercises for the learner
