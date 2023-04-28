@@ -95,7 +95,7 @@ The JOIN command in this query is used for the ccdVisitId to join to the CcdVisi
    WHERE fsodo.diaObjectId = 1252220598734556212 
    AND fsodo.band = 'i'
 
-1.3. Click "Search"
+1.4. Click "Search"
 
 .. figure:: /_static/portal_tut05_step01a.png
     :name: portal_tut05_step01a
@@ -110,7 +110,7 @@ Step 2. Plot the single-band light curve
 .. figure:: /_static/portal_tut05_step02a.png
     :name: portal_tut05_step02a
 
-Here, you need to request the appropriate columns:  
+Here, you need to request the appropriate columns and provide axis labels:   
 
 .. figure:: /_static/portal_tut05_step02b.png
     :name: portal_tut05_step02b
@@ -132,9 +132,11 @@ Here, a warning is warranted:  converting fluxes from the ForcedSourceOnDiaObjec
 Step 3.  Making a multi-band light curve on a single plot
 =========================================================
 
-3.1.  Our goal here is to plot a multi-band light curve with flux measurements in different bands appearing in different colors on the same plot.  This is not currently supported by the Portal functionality, but is in the Portal development plan, to be implemented in the future.  Beyond various bands appearing in different colors, it is envisioned that it will be possible to add a legend in the plot.  However, currently there is a relatively simple workaround - see below for the necessary steps.  We will start with the same query as previously, but with the last line (specifically, AND fsodo.band = 'i') missing (meaning we will not select just the "i" band data).  
+3.1.  Our goal here is to plot a multi-band light curve with flux measurements in different bands appearing in different colors on the same plot.  This is not currently supported by the Portal functionality, but is in the Portal development plan, to be implemented in the future.  Beyond various bands appearing in different colors, it is envisioned that it will be possible to add a legend in the plot.  However, currently there is a relatively simple workaround - see below for the necessary steps.  
 
-3.2  One can add an additional column to the table generated in the previous search.  This new column would be an ASCII value of the "band" entry, which is currently in the "character" format.  To add a new column in the table, one needs to click on the 5th icon in the retrieved table, as below.  Note that in the plot below, we already changed the plot parameters to plot the flux vs.  MJD.  
+3.2. We will start with the same query as previously, but with the last line (specifically, AND fsodo.band = 'i') missing (meaning we will not select just the "i" band data).  First, we can plot the multi-band light curve with identical color markers for all bands, following the steps outlined in Step 2.1 to plot flux vs. MJD.  This will return the plot as on the top of the screenshot below.  Note that there are many more points on the plot than you had in Step 2 - this is because you didn't restrict the ADQL search to only band "i."  
+
+3.3  To distinguish vairous bands in the lightcurve, one can use the following trick:  one can add an additional column to the table generated in the previous search.  This new column would be an ASCII value of the "band" entry, which is currently in the "character" format.  To add a new column in the table, one needs to click on the 5th icon in the retrieved table, as below.  
 
 .. figure:: /_static/portal_tut05_step03a.png
     :name: portal_tut05_step03a
@@ -144,12 +146,12 @@ This brings a new window, where you should enter a new name of the column (here 
 .. figure:: /_static/portal_tut05_step03b.png
     :name: portal_tut05_step03b
 
-3.3.  Clicking on "Add Column" will result in a new column in a numeric format, corresponding to the ASCII value of the character in the "band" column (now the rightmost column on the screenshot below, marked with (1)).  
+3.4.  Clicking on "Add Column" will result in a new column in a numeric format, corresponding to the ASCII value of the character in the "band" column (now the rightmost column on the screenshot below, marked with (1)).  
 
 .. figure:: /_static/portal_tut05_step03c.png
     :name: portal_tut05_step03c
 
-3.4.  Now in order to have data in various filters appear in different colors, you need to change the plot parameters by clicking the two gears (marked as a red arrow with "(2)" above).  This brings a window as below, where you need to click on "Trace Options" and enter "bands_ascii" in the "Color Map" line, and "Rainbow" in the "Color Scale" line.  
+3.5.  Now in order to have data in various filters appear in different colors, you need to change the plot parameters by clicking the two gears (marked as a red arrow with "(2)" above).  This brings a window as below, where you need to click on "Trace Options" and enter "bands_ascii" in the "Color Map" line, and "Rainbow" in the "Color Scale" line.  
 
 .. figure:: /_static/portal_tut05_step03d.png
     :name: portal_tut05_step03d
@@ -159,7 +161,7 @@ Once you click on "Apply" - you will see the plot of the supernova light curve i
 .. figure:: /_static/portal_tut05_step03e.png
     :name: portal_tut05_step03e
 
-3.5.  Instead of plotting the fluxes, you can take advantage of the fact that in the ADQL query you requested a new column, where the fluxes are converted to AB magnitudes, as below.  But a comparison of the two light curves - one in flux units, and the other in magnitudes - reveals that the flux conversion routine in ADQL you've used in the ADQL search ignores negative fluxes, meaning there is no entry for those.  This can be dangerous, since in some cases, a non-detection is actually scientifically interesting!  
+3.6.  Instead of plotting the fluxes, you can take advantage of the fact that in the ADQL query you requested a new column, where the fluxes are converted to AB magnitudes, as below.  But a comparison of the two light curves - one in flux units, and the other in magnitudes - reveals that the flux conversion routine in ADQL you've used in the ADQL search ignores negative fluxes, meaning there is no entry for those.  This can be dangerous, since in some cases, a non-detection is actually scientifically interesting!  
 
 Now you can compare the new, multi-band light curve to the one you prepared at the end of Step 1, plotting the AB magnitudes rather than fluxes, over the restricted MJD range (see the first screenshot of the Tutorial).  It will look as the screenshot below:  
 
