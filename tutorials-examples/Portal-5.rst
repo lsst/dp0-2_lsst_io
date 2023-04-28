@@ -59,7 +59,7 @@ Executing this query returned the table on the bottom of the screenshot below.  
 .. figure:: /_static/portal_tut05_step00.png
     :name: portal_tut05_step00
 
-Below in Step 1, we will be examining its light curve in the ForcedSourceOnDiaObjects table in all availavble Rubin visits.  Again, we will employ the Astronomical Data Query Language (ADQL) to query and retrieve the data.  In Step 2, we will plot the light curve of this supernova as measured in various bands on the same plot.  
+Below in Step 1, we will be examining its light curve in the ForcedSourceOnDiaObjects table in all availavble Rubin visits.  Again, we will employ the Astronomical Data Query Language (ADQL) to query and retrieve the data.  We will plot it in step 2.  In Step 3, we will plot the light curve of this supernova as measured in various bands on the same plot.  
 
 For more information, see `schema <https://dm.lsst.org/sdm_schemas/browser/dp02.html#ForcedSourceOnDiaObject>`_ of the ForcedSourceOnDiaObject catalog.  
 
@@ -107,25 +107,25 @@ Step 2. Plot the single-band light curve
 
 2.1.  This query will return forced flux measurements at all epochs of Rubin visits to our supernova location, but to plot such a light curve (rather than the default of your table), you need to modify the settings of the plot by clicking the settings icon as below.  
 
-.. figure:: /_static/portal_tut05_step01b.png
-    :name: portal_tut05_step01b
+.. figure:: /_static/portal_tut05_step02a.png
+    :name: portal_tut05_step02a
 
 Here, you need to request the appropriate columns:  
 
-.. figure:: /_static/portal_tut05_step01c.png
-    :name: portal_tut05_step01c
+.. figure:: /_static/portal_tut05_step02b.png
+    :name: portal_tut05_step02b
     
 You might want to click on "xy-tbl" in the upper right hand part of the display.  This will result in a plot as below:  
 
-.. figure:: /_static/portal_tut05_step01d.png
-    :name: portal_tut05_step01d
+.. figure:: /_static/portal_tut05_step02c.png
+    :name: portal_tut05_step02c
     
 Here, a warning is warranted:  converting fluxes from the ForcedSourceOnDiaObject table to magnitudes using the scisql_nanojanskyToAbMag() function can be dangerous.  This is because the nanojanskyToAbMag() function does not return any value for a negative flux as an argument, and thus any negative fluxes will be lost. This is especially important for variability studies, when a negative value of flux is (within errors) consistent with non-detection might be scientifically interesting.  
 
 2.2.  If you wish, you can restrict the MJD range of your Forced Photometry search to the range covered in DiaObject (shown in the Introduction).  This will allow you to compare the light curves retrieved from the two tables.  You can do this by changing the plot parameters in the "chart settings" window such as 930 < MJD-60000 < 1010 - this will retun the plot below:  
 
-.. figure:: /_static/portal_tut05_step01e.png
-    :name: portal_tut05_step01e
+.. figure:: /_static/portal_tut05_step02d.png
+    :name: portal_tut05_step02d
 
 .. _DP0-2-Portal-5-Step-3: 
 
@@ -136,35 +136,35 @@ Step 3.  Making a multi-band light curve on a single plot
 
 3.2  One can add an additional column to the table generated in the previous search.  This new column would be an ASCII value of the "band" entry, which is currently in the "character" format.  To add a new column in the table, one needs to click on the 5th icon in the retrieved table, as below.  Note that in the plot below, we already changed the plot parameters to plot the flux vs.  MJD.  
 
-.. figure:: /_static/portal_tut05_step02a.png
-    :name: portal_tut05_step02a
+.. figure:: /_static/portal_tut05_step03a.png
+    :name: portal_tut05_step03a
 
 This brings a new window, where you should enter a new name of the column (here it is "bands_ascii") and enter an expression converting the character in the "band" column to its ASCII value, namely ASCII("band").  It is also necessary to specify the data type - it needs to be "long" - see the screenshot below.  Click on "Add column" as below:  
 
-.. figure:: /_static/portal_tut05_step02b.png
-    :name: portal_tut05_step02b
+.. figure:: /_static/portal_tut05_step03b.png
+    :name: portal_tut05_step03b
 
 3.3.  Clicking on "Add Column" will result in a new column in a numeric format, corresponding to the ASCII value of the character in the "band" column (now the rightmost column on the screenshot below, marked with (1)).  
 
-.. figure:: /_static/portal_tut05_step02c.png
-    :name: portal_tut05_step02c
+.. figure:: /_static/portal_tut05_step03c.png
+    :name: portal_tut05_step03c
 
 3.4.  Now in order to have data in various filters appear in different colors, you need to change the plot parameters by clicking the two gears (marked as a red arrow with "(2)" above).  This brings a window as below, where you need to click on "Trace Options" and enter "bands_ascii" in the "Color Map" line, and "Rainbow" in the "Color Scale" line.  
 
-.. figure:: /_static/portal_tut05_step02d.png
-    :name: portal_tut05_step02d
+.. figure:: /_static/portal_tut05_step03d.png
+    :name: portal_tut05_step03d
 
 Once you click on "Apply" - you will see the plot of the supernova light curve in various bands.  
 
-.. figure:: /_static/portal_tut05_step02e.png
-    :name: portal_tut05_step02e
+.. figure:: /_static/portal_tut05_step03e.png
+    :name: portal_tut05_step03e
 
 3.5.  Instead of plotting the fluxes, you can take advantage of the fact that in the ADQL query you requested a new column, where the fluxes are converted to AB magnitudes, as below.  But a comparison of the two light curves - one in flux units, and the other in magnitudes - reveals that the flux conversion routine in ADQL you've used in the ADQL search ignores negative fluxes, meaning there is no entry for those.  This can be dangerous, since in some cases, a non-detection is actually scientifically interesting!  
 
 Now you can compare the new, multi-band light curve to the one you prepared at the end of Step 1, plotting the AB magnitudes rather than fluxes, over the restricted MJD range (see the first screenshot of the Tutorial).  It will look as the screenshot below:  
 
-.. figure:: /_static/portal_tut05_step02f.png
-    :name: portal_tut05_step02f
+.. figure:: /_static/portal_tut05_step03f.png
+    :name: portal_tut05_step03f
 
 .. _DP0-2-Portal-5-Step-4: 
 
