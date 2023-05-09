@@ -122,7 +122,7 @@ You might want to click on "xy-tbl" in the upper right hand part of the display.
     
 Here, a warning is warranted:  converting fluxes from the ForcedSourceOnDiaObject table to magnitudes using the scisql_nanojanskyToAbMag() function can be dangerous.  This is because the nanojanskyToAbMag() function does not return any value for a negative flux as an argument, and thus any negative fluxes will be lost. This is especially important for variability studies, when a negative value of flux is (within errors) consistent with non-detection might be scientifically interesting.  
 
-2.2.  If you wish, you can restrict the MJD range of your Forced Photometry search to the range covered in DiaObject (shown in the Introduction).  This will allow you to compare the light curves retrieved from the two tables.  You can do this by changing the plot parameters in the "chart settings" window such as 930 < MJD-60000 < 1010 - this will retun the plot below:  
+2.2.  If you wish, you can restrict the MJD range of your Forced Photometry search to the range covered in DiaObject (shown in the Introduction).  This will allow you to compare the light curves retrieved from the two tables.  You can do this by changing the plot parameters in the "Plot Parameters" window (in Chart Options) such as X Min = 930, X Max = 1010 - this will retun the plot below:  
 
 .. figure:: /_static/portal_tut05_step02d.png
     :name: portal_tut05_step02d
@@ -136,7 +136,7 @@ Step 3.  Making a multi-band light curve on a single plot
 
 3.2. We will start with the same query as previously, but with the last line (specifically, AND fsodo.band = 'i') missing (meaning we will not select just the "i" band data).  First, we can plot the multi-band light curve with identical color markers for all bands, following the steps outlined in Step 2.1 to plot flux vs. MJD.  This will return the plot as on the top of the screenshot below.  Note that there are many more points on the plot than you had in Step 2 - this is because you didn't restrict the ADQL search to only band "i."  
 
-3.3  To distinguish vairous bands in the lightcurve, one can use the following trick:  one can add an additional column to the table generated in the previous search.  This new column would be an ASCII value of the "band" entry, which is currently in the "character" format.  To add a new column in the table, one needs to click on the 5th icon in the retrieved table, as below.  
+3.3  To distinguish various bands in the lightcurve, one can use the following trick:  one can add an additional column to the table generated in the previous search.  This new column would be an ASCII value of the "band" entry, which is currently in the "character" format.  To add a new column in the table, one needs to click on the 5th icon in the retrieved table, as below.  
 
 .. figure:: /_static/portal_tut05_step03a.png
     :name: portal_tut05_step03a
