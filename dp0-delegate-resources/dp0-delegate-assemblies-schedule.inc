@@ -94,7 +94,7 @@
      - 23A Meeting of the `Rubin Users Committee <https://www.lsst.org/scientists/users-committee>`__
      - *breakouts*
    * - 2023-05-26
-     - *tbd, delegate volunteers welcome*
+     - ChatGPT & Jupyter Notebooks by Allan Jackson
      - *breakouts*
    * - 2023-06-09
      - *tbd, delegate volunteers welcome*
