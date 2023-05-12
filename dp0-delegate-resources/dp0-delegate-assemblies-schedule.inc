@@ -88,13 +88,13 @@
      - `Variability in YSOs (Sabina Ustamujic) <https://community.lsst.org/t/summary-delegate-assembly-fri-apr-14-2023/7578>`__
      - *breakouts*
    * - 2023-04-28
-     - Dan Ryczanowski (30 min; "Lensed Explosive Transients with DP0.2") and Antonio Vanzanella (15 min; "Finding long-period Solar System or interstellar objects with machine learning in LSST.")
+     - `Dan Ryczanowski (30 min; "Lensed Explosive Transients with DP0.2") and Antonio Vanzanella (15 min; "Finding long-period Solar System or interstellar objects with machine learning in LSST.") <https://community.lsst.org/t/summary-delegate-assembly-fri-apr-28/7633>`__
      - *breakouts*
    * - 2023-05-12
-     - *tbd, delegate volunteers welcome*
+     - 23A Meeting of the `Rubin Users Committee <https://www.lsst.org/scientists/users-committee>`__
      - *breakouts*
    * - 2023-05-26
-     - *tbd, delegate volunteers welcome*
+     - ChatGPT & Jupyter Notebooks by Allan Jackson
      - *breakouts*
    * - 2023-06-09
      - *tbd, delegate volunteers welcome*
