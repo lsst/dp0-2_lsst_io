@@ -97,6 +97,7 @@ Agenda
 
 Click here to download the agenda as a pdf file :download:`pdf </_static/DP02_Virtual_Summer_School_agenda.pdf>`
 
+Note that all times are given in the PDT (Pacific Daylight Time) time zone. For conversion to your local time, try <a href="https://www.timeanddate.com/worldclock/converter.html" this time zone converter</a>.
 
 Accessibility
 =============
