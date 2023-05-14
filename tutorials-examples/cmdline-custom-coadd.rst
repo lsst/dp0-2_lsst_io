@@ -29,7 +29,7 @@ This custom coadd tutorial will only run with LSST Science Pipelines version Wee
 
 To find out which version of the LSST Science Pipelines you are using, look in the footer bar.
 
-If you are using ``w_2022_40``, you may proceed with executing the custom coadd notebooks.
+If you are using ``w_2022_40``, you may proceed with executing this custom coadd tutorial.
 
 If you are **not** using ``w_2022_40`` you **must** log out and start a new server:
  1. At top left in the menu bar choose File then Save All and Exit.
