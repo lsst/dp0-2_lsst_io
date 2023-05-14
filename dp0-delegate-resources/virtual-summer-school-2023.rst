@@ -106,7 +106,7 @@ Download the agenda as a pdf file: |agenda PDF|
    :download:`ellipses.py </_images/mplplots/ellipses.py>`
 
 
-Note that all times are given in the PDT (Pacific Daylight Time) time zone. For conversion to your local time, try `this time zone converter href="https://www.timeanddate.com/worldclock/converter.html"`__.
+Note that all times are given in the PDT (Pacific Daylight Time) time zone. For conversion to your local time, try `this time zone converter <https://www.timeanddate.com/worldclock/converter.html>`__.
 
 Accessibility
 =============
