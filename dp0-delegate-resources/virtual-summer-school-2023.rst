@@ -100,8 +100,7 @@ Agenda
 .. .. |agenda.pdf| replace::
     :download:`agenda.pdf </_static/DP02_Virtual_Summer_School_agenda.pdf>`
 
-Download the agenda as a pdf file:
-:download:`agenda_PDF </_static/DP02_Virtual_Summer_School_agenda.pdf>`.
+Download the agenda as a pdf file: :download:`agenda_PDF </_static/DP0_Virtual_Summer_School_agenda.pdf>`.
 
 .. * matplotlib example: |ellipses.py| (published as `ellipses.py`_)
 
