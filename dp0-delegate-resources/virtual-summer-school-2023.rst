@@ -95,7 +95,16 @@ Agenda
 
     <iframe height="800" width="100%" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSjY-QNzC4MBiYcBjvqFiNK0PM9j_DqnL6jB56FcTB4YYHtdWckIW-IHlw2IrQ0sf01d1qQHxr7Ljj2/pubhtml?gid=1347880957&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
 
-Click here to download the agenda as a pdf file: :download:`agenda pdf </_static/DP02_Virtual_Summer_School_agenda.pdf>`
+Download the agenda as a pdf file: |agenda PDF|
+
+.. |agenda PDF| replace::
+    :download:`agenda PDF </_static/DP02_Virtual_Summer_School_agenda.pdf>`
+
+.. * matplotlib example: |ellipses.py| (published as `ellipses.py`_)
+
+.. .. |ellipses.py| replace::
+   :download:`ellipses.py </_images/mplplots/ellipses.py>`
+
 
 Note that all times are given in the PDT (Pacific Daylight Time) time zone. For conversion to your local time, try `this time zone converter href="https://www.timeanddate.com/worldclock/converter.html"`__.
 
