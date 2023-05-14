@@ -425,7 +425,7 @@ In addition to generating and printing out the ``QuantumGraph`` you can also vis
     
 This command executes very fast (roughly 5 seconds), again because it is not performing any search through the DP0.2 data set for e.g., input exposures. The ``pipeline.dot`` output is essentially an intermediate temporary file which you may wish to delete. The PDF you make (shown below) can be opened by double clicking on its file name in the JupyterHub file browser.
 
-.. image:: makeWarpAssembleCoadd.png
+.. figure:: /_static/makeWarpAssembleCoadd.png
   :width: 1500
   :alt: QuantumGraph diagram for custom coaddition
 
