@@ -76,9 +76,9 @@ Register via `this Google Form <https://forms.gle/pzRZA9Q3jLi8NFB19>`_
 Science Organizing Committee
 ============================
 
-CST Members: Jeff Carlin, Gloria Fonseca Alvarez, Melissa Graham, Ryan Lau, Douglas Tucker
+**CST Members:** Jeff Carlin, Gloria Fonseca Alvarez, Melissa Graham, Ryan Lau, Douglas Tucker
 
-Delegate Members: Louise Edwards, Nandini Hazra, Vincenzo Petrecca, Fabio Ragosta
+**Delegate Members:** Louise Edwards, Nandini Hazra, Vincenzo Petrecca, Fabio Ragosta
 
 
 
@@ -89,7 +89,8 @@ Agenda
 
 .. raw:: html
 
-    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSjY-QNzC4MBiYcBjvqFiNK0PM9j_DqnL6jB56FcTB4YYHtdWckIW-IHlw2IrQ0sf01d1qQHxr7Ljj2/pubhtml?gid=1347880957&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSjY-QNzC4MBiYcBjvqFiNK0PM9j_DqnL6jB56FcTB4YYHtdWckIW-IHlw2IrQ0sf01d1qQHxr7Ljj2/pubhtml?gid=1347880957&amp;single=true&amp;widget=true&amp;headers=false;frameborder="0";allowfullscreen"></iframe>
+
 
 Accessibility
 =============
