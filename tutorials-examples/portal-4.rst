@@ -14,62 +14,79 @@
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
 .. A warning will alert you of identical labels during the linkcheck process.
 
-############################################
-04. Plotting Histograms in the Portal Aspect
-############################################
+#########################################################
+04. Exploring Extended Object Populations with Histograms
+#########################################################
 
 .. This section should provide a brief, top-level description of the page.
 
-**Contact authors:** Greg Madejski
+**Contact authors:** Melissa Graham and Greg Madejski
 
-**Last verified to run:** 2023-04-21
+**Last verified to run:** 2023-05-14
 
-**Targeted learning level:** beginner
+**Targeted learning level:** intermediate
 
-**Introduction:**
-This brief tutorial will illustrate how to use the histogram function in the Portal aspect of the Rubin Science Platform.  It will consist of three parts.  One ("A") will request all observations of a given location on the sky, and will provide a histogram of the number of visits as a function of time throughout the entire time span covered in the DP0.2 data set. This might be particularly valuable for studies of variability of celestial sources, for instance the measurement of a power density spectrum, used in determining periodograms of their fluxes.  This is because the density of visits affects the window function which must be accounted for in developing a power density spectrum.  
+**Introduction:** This tutorial demonstrates how to retrieve apparent magnitudes and cluster offsets for a sample of extended objects around a rich galaxy cluster, and use 1- and 2-dimensional histograms to explore their apparent magnitude and color distributions.
 
-The second ("B") will return the histogram of logarithm of fluxes of objects in a selected region of the sky.  Here, one science case might be the contribution of discrete sources (for instance those studied at a limited-size patch of the sky at high sensitivity and high spatial resolution) to background radiation from unresolved sources determined over a large area of the sky but at a lower angular resolution, which then might appear as a diffuse emission.  
+This tutorial assumes the successful completion of the beginner-level Portal tutorial 01, and uses the Astronomy Data Query Language (ADQL), which is similar to SQL (Structured Query Language).
 
-The third ("C") part will illustrate how to generate a histogram of two variables.  Such two-dimentional histograms are sometimes called "heat maps."  The third dimension, representing the frequency of occurence for a specific pair of variables, is displayed via greyscale or color.  Here, we will plot the frequency of occurence of objects as a function of their color (difference between i and u magnitudes on y axis) against their apparent g magnitude (x axis) in a specified region of the sky.  One use case might be to select different classes of galaxies (e.g. spirals vs. ellipticals) based on their color.  
+For more information about the DP0.2 catalogs, tables, and columns, visit the DP0.2 Data Products Definition Document (DPDD) or the DP0.2 Catalog Schema Browser.
 
-.. _DP0-2-Portal-Histogram-Part-A:
+.. _DP0-2-Portal-Histogram-Step-1:
 
-Part A:  Generate a histogram illustrating the frequency of visits to a specific location 
-=========================================================================================
+Step 1.  Execute the ADQL query
+===============================
 
-.. _DP0-2-Portal-Histogram-Step-A1:
+1.1.  Log into the Portal Aspect.  
 
-Step A1.  Enter the parameters of the query
-===========================================
+1.2.  Next to “2. Select Query Type," switch from the default “Single Table (UI assisted)” to “Edit ADQL (advanced)”.
 
-A1.1.  Log into the Portal Aspect
+1.3. Enter the following ADQL code into the “ADQL Query” box:  
 
-A1.2.  Once you've logged in, you should be (by default) in the query type "Single Table (UI assisted)."  Change this to "Image Search (ObsTAP)" - the third button.  
+.. code-block:: SQL 
 
-A1.3. In the "Constraints" section, select the "Calibration Level" as "2" - this is for single-epoch images (Processed Visit Images, or PVIs).  You should be (by default) in the "Image" part of the Data Product Type list - if not, that's what you need to select.  
+   SELECT coord_dec, coord_ra, detect_isPrimary, 
+   scisql_nanojanskyToAbMag(g_calibFlux) as gmag, 
+   scisql_nanojanskyToAbMag(r_calibFlux) as rmag, 
+   g_extendedness as gext, 
+   r_extendedness as rext, 
+   DISTANCE(POINT('ICRS', coord_ra, coord_dec), POINT('ICRS', 55.75, -32.27)) as radial_offset 
+   FROM dp02_dc2_catalogs.Object 
+   WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 55.75, -32.27, 1.0)) = 1 
+   AND detect_isPrimary = 1 
+   AND g_extendedness = 1 
+   AND r_extendedness = 1 
+   AND scisql_nanojanskyToAbMag(g_calibFlux) < 25 
+   AND scisql_nanojanskyToAbMag(r_calibFlux) < 25 
 
-A1.4.  For "Location" constraint, you need to select the query "Observation boundary contains point" (should be the default).  You can select any location which is within the DP0.2 sky area, say 62.0, -37.0 .  In the large table on the right, you should leave the "Output Column Selection and Constraints" as was defaulted by the Portal aspect.  
+1.4. Notice how the ADQL query above retrieves the g- and r-band `calibFlux` columns from the Object catalog as apparent AB magnitudes, and renames them as `gmag` and `rmag`. The `calibFlux` is the flux within a 12 pixel aperture; aperture fluxes are appropriate to use when calculating extended object colors, as is done in this tutorial. The query also retrieves the g- and r-band extendedness parameters as `gext` and `rext`, and the distance of the object from the search center, RA 55.75, Dec -32.27 degrees (the center of a rich galaxy cluster) as `radial_offset` (the units will be degrees).
 
-A1.5 Next, click on the "Search" button on the bottom left.  
+1.5. Notice how the ADQL query above places a condition that returned objects must be within 1 degree of the search center; must have the `detect_isPrimary` flag equal to 1; must have the g- and r-band extendedness parameters equal to 1 (i.e., be extended and not point-like); and have g- and r-band apparent magnitudes brighter than 25. These conditions will return only bright, deblended, extended objects (i.e., individual galaxies).
+
+1.6. Set the “Row Limit” at the bottom of the page to 300,000, and click “Search” in the lower left corner.  
 
 .. figure:: /_static/portal_tut04_step01.png
 	:name: portal_tut04_step01
 
-.. _DP0-2-Portal-Histogram-Step-A2:
 
-Step A2.  Images of the location on the sky
-===========================================
+.. _DP0-2-Portal-Histogram-Step-2:
 
-A2.1.  This search will result in a number of rows in a table at the bottom of the window - you should see about 500 entries, each corresponding to a visit containing the location selected by you.  The upper left-hand window will display a rendered image of a single (4k x 4k) detector, which is the unit of "data delivery."  The upper right-hand window will show a scatter plot of the central locations of Rubin pointings on the sky which contain the data from the location selected by you (62.0, -37.0).  
+Step 2.  Explore the default results view
+==========================================
 
-A2.2.  Now you can examine images corresponding to those pointings by hovering with your computer mouse over the blue dots on the upper right-hand panel.  Once you click on any of the dots - this will highlight a row on the table on the bottom, and will render an image corresponding to the selected pointing.  Conversely, you can select a row in the table at the bottom - this will turn the location of the point on the upper left-hand plot to orange.  
+2.1. The above query should have returned 229,570 objects and the default results “tri-view” interface should look like the image below, with the sky image at left, a default xy plot of Dec vs. RA at right, and the tabular results along the bottom.
 
-A2.3.  The table contains a large amount of information.  For the purpose of this exercise, the most interesting are the "lsst_band" - this is a filter used for the given pointing.  The "lsst_detector" is telling you which detector contains that data point (ranging from 1 to 189), and "t_min" is the start time (in MJD) of the pointing.  
+.. figure:: /_static/portal_tut04_step02a.png
+	:name: portal_tut04_step02a
 
-.. figure:: /_static/portal_tut04_step02.png
-	:name: portal_tut04_step02
+2.2. Notice in the sky image at left (above) that not all galaxies appear to be marked with a square as a returned object. (You might have to use the magnifying glass icon with the + sign at upper left to zoom in). This seems to suggest that objects are missing from the results table, when in fact not all returned objects are shown with markers in the sky image.
 
+2.3. In the table view, add a constraint of `radial_offset < 0.03` as shown below, and see how the sky image plot updates to show that all extended members of the rich galaxy cluster were returned by the query (below). So the fact that above, not all are marked with icons, is not an issue for concern.
+
+.. figure:: /_static/portal_tut04_step02b.png
+	:name: portal_tut04_step02b
+
+2.4. Delete the “< 0.03” constraint on the `radial_offset` column and press enter to reset the results view.
 
 .. _DP0-2-Portal-Histogram-Step-A3:
 
