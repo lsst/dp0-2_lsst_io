@@ -88,110 +88,90 @@ Step 2.  Explore the default results view
 
 2.4. Delete the “< 0.03” constraint on the `radial_offset` column and press enter to reset the results view.
 
-.. _DP0-2-Portal-Histogram-Step-A3:
+.. _DP0-2-Portal-Histogram-Step-3:
 
-Step A3.  Generating a histogram of start times of visits at the selected location
-==================================================================================
+Step 3.  Change the heatmap to a color-magnitude diagram
+========================================================
 
-A3.1.  To generate such a histogram, click on the "Add Chart" button on the top of your window.  
+Galaxy color-magnitude diagrams (CMDs) are a standard and widely-used diagnostic plot type, and use of the g-r color vs. g-band magnitude are standard choices for axes. This type of plot is created below.  
 
-.. figure:: /_static/portal_tut04_step03.png
-	:name: portal_tut04_step03
+3.1. Change the settings of the default xy plot of RA and Dec. At upper right, click the double-gears (settings) icon to open the "Plot Parameters" pop-up window. Select “Overplot New Trace”, and fill in the boxes as shown below.
 
-A new window will appear asking for the plot type.  Select "Histogram" here.  For the "Column or expression" select "t_min."  You can select any number of bins in the histogram - say, 100.  You will be given the full range of t_min times (Min and Max) in your table - which you can override.  Clicking "OK" will generate a new panel with a plot of history of Rubin observations at location (62.0, -37.0).  As you can see on the plot below, there is a clear seasonal pattern of the Rubin Observatory visits to your selected location.  You can augment the plot with a title and labels for axis by clicking the two gears on upper right, and then modifying "Chart Options."    
+.. figure:: /_static/portal_tut04_step03a.png
+	:name: portal_tut04_step03a
 
-.. figure:: /_static/portal_tut04_step04.png
-	:name: portal_tut04_step04
+3.2. See that now the plot has both the color-magnitude diagram and the RA vs. Dec. This is not very useful!  But, the purpose of showing this is to demonstrate the flexibility of the Portal’s plotting capabilities.
 
-The default histogram includes visits with any filter.  You can select, for instance, the "u" filter by entering it into the header of the table at the bottom of your window. You would do it by clicking on the litle black arrow in the "lsst_band" column, selecting "u" there, and clicking on the "filter" text again.  This will significantly reduce the number of entries in your table - not surprising, as the DP0.2 data set has many fewer observtions with the "u" filter as they can be made only in the dark time.  
-
-.. figure:: /_static/portal_tut04_step05.png
-	:name: portal_tut04_step05
-
-.. _DP0-2-Portal-Histogram-Part-B:
-
-
-Part B:  Generate a histogram of fluxes of objects in a selected region of the sky 
-==================================================================================
-
-.. _DP0-2-Portal-Histogram-Step-B1:
-
-Step B1.  Enter the parameters of the query
-===========================================
-
-B1.1.  Here, we will execute a smiple query, extracting fluxes of all sources in the selected region of the sky.  Once the Portal aspect is started, in the "Select Query Type" select the "Single Table (UI assisted)."  In the "Select Table" field, for the "Table Collection" select "dp02_dc2_catalogs" and for the "Table" select "dp02_dc2_catalogs.Object."  
-
-B1.2.  In the field "Enter Constraints" select "Spatial" with "Longitude Column" to be "coord_ra" and "Lattitude Column" to be "coord_dec."  For coordinates - you can enter any location that is within the DP0.2 footprint, say 62.0, -37.0.  
-
-.. _DP0-2-Portal-Histogram-Step-B2:
-
-Step B2.  Enter the search constraints
-======================================
-
-B2.1.  To reduce the number of returned objects, you might want to restrict the radius to 360 arcseconds by entering this into the "Spatial Constraints" box.  Likewise, you might wish to consider only bright-ish objects, say with a flux greater than 360 nJy.  To this end, in the "Output Column Selection and Constraints" for the g_calibFlux, i_calibFlux, and r_calibFlux rows, enter >360 as the constraints.  Clicking "Search" as below will return a table of ~ 4000 objects.  
-
-.. figure:: /_static/portal_tut04_step06.png
-	:name: portal_tut04_step06
-
-.. _DP0-2-Portal-Histogram-Step-B3:
-
-Step B3.  Generate the histogram of g-band fluxes
-=================================================
-
-B3.1.  To generate such a histogram - as you did in part A - click on the "Add Chart" buttom on the top of your window.  In the window which just apeared, select "Histogram."  For the "Column or expression" enter "log10(g_calibFlux)."  
-
-.. figure:: /_static/portal_tut04_step07.png
-	:name: portal_tut04_step07
+.. figure:: /_static/portal_tut04_step03b.png
+	:name: portal_tut04_step03b
 	
-This will result in the plot on the upper right panel on the screenshot below.  If you wish you can add a chart with the same settings as the previous one, but with log axis for the number, select "log" for the Chart Options of the plot (as is in the left panel).  Such plot is often called "log(N) - log(S)."  
+3.3. Remove the default “trace 0” (RA vs. Dec) from the plot. Click on the double-gears icon again. In the pop-up window, with "Modify Trace" selected, from the "Choose Trace" drop-down menu select "trace 0", and then from the top row choose "Remove Active Trace", and then click "OK". Now, the “CMD” trace created in step 3.1 is the only one.
 
-.. figure:: /_static/portal_tut04_step08.png
-	:name: portal_tut04_step08
-
-.. _DP0-2-Portal-Histogram-Part-C:  
-
-Part C:  Generate a two-dimensional color - magnitude histogram ("heat map") of extended sources
-============================================================================================
-
-.. _DP0-2-Portal-Histogram-Step-C1:
-
-Step C1.  Enter the parameters of the query
-===========================================
-
-C1.1.  Here, we will use a somewhat more complex query than in parts A and B.  But for starters, as we did in the previous parts, in the "Select Query Type" select the "Single Table (UI assisted)."  In the "Select Table" field, for the "Table Collection" select "dp02_dc2_catalogs" and for the "Table" select "dp02_dc2_catalogs.Object."  In the field "Enter Constraints" select "Spatial" with "Longitude Column" to be "coord_ra" and "Lattitude Column" to be "coord_dec."  For coordinates - you can enter any location that is within the DP0.2 footprint, say 62.0, -37.0.  
-
-
-.. _DP0-2-Portal-Histogram-Step-C2
-
-Step C2.  Enter the search constraints 
-======================================
-
-C2.1.  For this part, we will need a larger number of objects, which will make the distribution of object color vs. magnitude more clear.  To this end, restrict the  radius to 1 degree by entering this into the "Spatial Constraints" box.  As you did before, select only bright-ish objects:  in the "Output Column Selection and Constraints" for the g_calibFlux, i_calibFlux, u_calibFlux, and r_calibFlux rows, enter >360 as the constraints.  
-
-C2.2.  This time, add two additional constraints:  enter =1 for detect_isPrimary row (to exclude blended objects), and enter =1 for the g_extendedness row.  Such constraints presumably will favor un-blended extended objects such as individual galaxies.  You can un-click the box under the little funnel (filter icon) for the "detect_isPrimary" and "g_extendedness" rows since you only need to select on those parameters and don't need to have them returned in the output table.   Clicking "Search" as below will take about a minute, and will return a table of ~ 160000 objects.  
-
-.. figure:: /_static/portal_tut04_step09.png
-	:name: portal_tut04_step09
-
-
-.. _DP0-2-Portal-Histogram-Step-C3:
-
-Step C3.  Plot the 2-dimensional color histogram
-================================================
-
-C3.1.  Click on the two gears on the upper right-hand side of the screen, to set the plot parameters.  
-For X, enter "-2.5 * log10(g_calibFux)+ 31.4" and for Y, enter "-2.5 * log10(i_calibFux) - (-2.5 * log10(u_calibFux))" - this will convert fluxes to magnitudes (and their differences) in the selected bands.  You can enter any color scale - whichever you find most compelling.  In the "Chart Options" part you can enter the chart title and axis labels.  Click "Apply" and then "Close."  
-
-.. figure:: /_static/portal_tut04_step10.png
-	:name: portal_tut04_step10
-
-C3.2.  The resulting color-magnitude diagram of objects in your search area will look as below.  
-
-.. figure:: /_static/portal_tut04_step11.png
-	:name: portal_tut04_step11
+.. figure:: /_static/portal_tut04_step03c.png
+	:name: portal_tut04_step03c
 	
-You can see the distribution of galaxy colors as a function of their apparent magnitudes is not uniform.  Can you think of why?  
+3.4. Change the grey-scale color palette to something more exciting. Click on the double-gears icon again and in the drop-down menu next to “Color Scale” choose “YlOrRd”. Notice that the color bar at right has the name of the trace, “CMD”, and represents the number of objects per 2-dimensional bin.
 
-Beginner-level users looking for a more general overview of the Portal Aspect should refer to this :doc:`/data-access-analysis-tools/portal-intro`.
+.. figure:: /_static/portal_tut04_step03d.png
+	:name: portal_tut04_step03d
 
+3.5. Interact with the plot. At upper right, select the magnifying glass with the + sign icon and click-and-drag over the data to zoom in on a small area. Select the four-arrows-pointing-out icon and click-and-drag to navigate around the plot. Select the magnifying glass with 1x icon to return the plot to the default axes limits.
+
+3.6. Be aware that clicking the half-circle upwards-pointing “go back” or “refresh” icon will return the xy plot to its default display of RA vs. Dec. Do not click it.
+
+3.7. Notice the sharp cutoffs at the bright end (around g=17, g-r=0.5) and the faint end (around g=24.5, g-r=0.2), and recall that the DP0.2 data set is based on simulated astrophysical objects and simulated images. Notice that a clear red sequence, blue cloud, and green valley is not very obvious in this galaxy CMD. A real LSST color-magnitude diagram for galaxies might look quite different.
+
+.. _DP0-2-Portal-Histogram-Step-4:
+
+Step 4.  Add a plot showing histograms of apparent magnitude
+============================================================
+
+Distributions of apparent magnitude are another standard type of plot that gives an at-a-glance impression of the brightness and completeness of a population of galaxies.
+
+4.1. Add a new plot. At upper right, click on the double-gears icon and select “Add New Chart” in the "Plot Parameters" pop-up window. Select a Plot Type of Histogram from the drop-down menu, and set the other boxes to match the screenshot below. 
+
+.. figure:: /_static/portal_tut04_step04a.png
+	:name: portal_tut04_step04a
+
+4.2. Notice the histogram options available. In this demo, as shown above, a “Uniform binning” is used instead of “Bayesian blocks” (quantiles defined by the data itself); a set bin width of 0.2 mag is selected; and the minimum and maximum values are defined. However, users do have the option to instead choose the number of bins, and allow the bin size and the min/max values will be set automatically.
+
+4.3. Review the g-band apparent magnitude distribution. Since the ADQL query only retrieved extended objects brighter than 25th magnitude, and the coadded images of DP0.2 (and thus the Object table) goes deeper than 25th mag, no turn-over due to detection incompleteness is seen in the apparent magnitude distribution. 
+
+.. figure:: /_static/portal_tut04_step04b.png
+	:name: portal_tut04_step04b
+
+4.4. Add the r-band apparent magnitude distribution to the new plot. With the right-most plot selected (click on plot to select plot; selected plot has an orange outline), click on the double-gears icon at upper right. In the "Plot Parameters" pop-up window, select “Overplot New Trace”, fill out the remaining boxes as shown below (notice that the option to log the y-axis has been selected), and click “OK”.
+
+.. figure:: /_static/portal_tut04_step04c.png
+	:name: portal_tut04_step04c
+
+4.5. Update the trace names and colors. The default colors used for g-band and r-band are inappropriate, and the g-band trace is still named “trace 0”. Click on the double-gears icon and use the "Plot Parameters" pop-up window to edit trace name and color. Click on the magnifying glass to the right of “Color” under “Trace Options” to get the “Color Picker” pop-up window. Choose green for g-band and orange for r-band.
+
+.. figure:: /_static/portal_tut04_step04d.png
+	:name: portal_tut04_step04d
+
+4.6. Review the final plot. Notice that it is possible to change which trace is “in front” using the drop-down menu to the left of the magnifying glass icon. Bring the g-band trace to the front.
+
+.. figure:: /_static/portal_tut04_step04e.png
+	:name: portal_tut04_step04e
+
+Step 5.  Restrict all plots to objects near the rich cluster
+============================================================
+
+5.1. View the sky image, the color-magnitude diagram, and the apparent magnitude histograms for the full set of returned objects.
+
+.. figure:: /_static/portal_tut04_step05a.png
+	:name: portal_tut04_step05a
+
+5.2. Restrict the results to only those objects within < 0.05 degrees of the cluster center by entering “< 0.05” into the constraints box for the `radial_offset` column and clicking enter. Notice how all of the plots automatically update. The CMD (center) shows the red sequence of cluster galaxies, and the histogram (right) shows the over-density of bright objects in the cluster. Cool!
+
+.. figure:: /_static/portal_tut04_step05b.png
+	:name: portal_tut04_step05b
+
+Step 6.  Exercises for the learner
+==================================
+
+6.1. Return to the ADQL query in step 1.3, and re-do this tutorial but include faint extended objects down to 28th magnitude. Notice how the histograms change in shape.
+
+6.2. Return to the ADQL query in step 1.3, and add u, i, z, and y-bands to the retrieved columns. Create an apparent magnitude histogram with all six filters. Create a color-magnitude diagram (or a color-color diagram!!) with the bands of your choice.
 
