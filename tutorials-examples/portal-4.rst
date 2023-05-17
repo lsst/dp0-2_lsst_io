@@ -30,7 +30,7 @@
 
 This tutorial assumes the successful completion of the beginner-level Portal tutorial 01, and uses the Astronomy Data Query Language (ADQL), which is similar to SQL (Structured Query Language).
 
-For more information about the DP0.2 catalogs, tables, and columns, visit the DP0.2 Data Products Definition Document (DPDD) :ref:`DP0-2-Data-Products-DPDD` or the DP0.2 Catalog Schema Browser.
+For more information about the DP0.2 catalogs, tables, and columns, visit the DP0.2 Data Products Definition Document (DPDD) :ref:`DP0-2-Data-Products-DPDD` or the DP0.2 Catalog Schema Browser (it is at https://dm.lsst.org/sdm_schemas/browser/dp02.html ).  
 
 .. _DP0-2-Portal-Histogram-Step-1:
 
