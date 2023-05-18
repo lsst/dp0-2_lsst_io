@@ -75,8 +75,7 @@ The JOIN command in this query is used for the ccdVisitId to join to the CcdVisi
    SELECT fsodo.coord_ra, fsodo.coord_dec, 
    fsodo.diaObjectId, fsodo.ccdVisitId, fsodo.band, 
    fsodo.psfDiffFlux, fsodo.psfDiffFluxErr, 
-   cv.expMidptMJD, 
-   scisql_nanojanskyToAbMag(fsodo.psfFlux) AS fsodoAbMag,
+   cv.expMidptMJD
    FROM dp02_dc2_catalogs.ForcedSourceOnDiaObject as fsodo 
    JOIN dp02_dc2_catalogs.CcdVisit as cv 
    ON cv.ccdVisitId = fsodo.ccdVisitId 
@@ -98,7 +97,7 @@ Here, you need to request the appropriate columns and provide axis labels:
 .. figure:: /_static/portal_tut05_step02b.png
     :name: portal_tut05_step02b
     
-You might want to click on "xy-tbl" in the upper right hand part of the display.  This will result in a plot as below:  
+You might want to click on "xy-tbl" in the upper right hand part of the display.  This will result in a plot as below.  Note that we requested a grid line on "y" to illustrate that "off-peak" (non-detection) points can be negative, resulting by the subtraction of two images.  
 
 .. figure:: /_static/portal_tut05_step02c.png
     :name: portal_tut05_step02c
@@ -107,13 +106,15 @@ You might want to click on "xy-tbl" in the upper right hand part of the display.
 
 .. figure:: /_static/portal_tut05_step02d.png
     :name: portal_tut05_step02d
+    
+Note that a statistical analysis of the data you've extracted (such as fitting to a temporal template, or subset statistics) is currently not possible, but future versions of the Portal might allow for some such functions.  
 
 .. _DP0-2-Portal-5-Step-2: 
 
 Step 2.  Making a multi-band light curve on a single plot
 =========================================================
 
-2.1.  Our goal here is to plot a multi-band light curve with flux measurements in different bands appearing in different colors on the same plot.  This is not currently supported by the Portal functionality, but is in the Portal development plan, to be implemented in the future.  Beyond various bands appearing in different colors, it is envisioned that it will be possible to add a legend in the plot.  However, currently there is a relatively simple workaround - see below for the necessary steps.  
+2.1.  Our goal here is to plot a multi-band light curve with flux measurements in different bands appearing in different colors on the same plot.  This is not currently supported by the Portal functionality, but is in the Portal development plan, to be implemented in the future.  Beyond various bands appearing in different colors, it is envisioned that it will be possible to add a legend in the plot.  However, currently there is a relatively simple workaround - see below for the necessary steps (but if needed for e.g. making the plot publication-ready), legend needs to be added separately.  
 
 2.2. We will start with the same query as previously, but with the last line (specifically, AND fsodo.band = 'i') missing (meaning we will not select just the "i" band data).  First, we can plot the multi-band light curve with identical color markers for all bands, following the steps outlined in Step 2.1 to plot flux vs. MJD.  This will return the plot as on the top of the screenshot below.  Note that there are many more points on the plot than you had in Step 2 - this is because you didn't restrict the ADQL search to only band "i."  
 
