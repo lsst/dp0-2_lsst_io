@@ -24,7 +24,7 @@
 
 **Contact authors:** Melissa Graham and Greg Madejski
 
-**Last verified to run:** 2023-03-24
+**Last verified to run:** 2023-05-18
 
 **Targeted learning level:** intermediate 
 
@@ -49,9 +49,9 @@ Step 1. Plot the single-band light curve
 
 1.1.  Log in to the Portal Aspect of the Rubin Science Platform.  
 
-1.2.  Click on "Edit ADQL" (advanced) button in the Select Query line.  Clear the content of the ADQL query box, if it is not empty.  
+1.2.  In the upper right, click on the "Edit ADQL" box.  Clear the content of the ADQL query box, if it is not empty.  
 
-1.3.  Enter the query as below.  This query will retrieve all of the ForcedSourceOnDiaObjects table entries for the supernova (and convert the fluxes into magnitudes) in the plot made in Portal Tutorial 02.  
+1.3.  Enter the query as below.  This query will retrieve all of the ForcedSourceOnDiaObjects table entries for the supernova which was considered in Portal Tutorial 02.  
 
 The ForcedSourceOnDiaObject contains forced photometry on both the difference image (psfDiffFlux, psfDiffFluxErr) 
 and the processed visit image (PVI), also called the "direct" image (psfFlux, psfFluxErr).  For our specific ("supernova") application, we 
@@ -66,7 +66,6 @@ can be dangerous and should not be used.  This is because the scisql_nanojanskyT
 and thus any negative fluxes will be lost. This is especially important for variability studies, when a negative value of flux is (within errors) 
 consistent with non-detection might be scientifically interesting.  However, it is OK to 
 convert fluxes extracted from psfFlux entry in the ForcedSourceOnDiaObject table to magnitudes using the scisql_nanojanskyToAbMag() as such fluxes are always positive.  
-Just for illustration of the scisql_nanojanskyToAbMag() function, we extract the psfFlux and psfFluxErr entries, but we will not use those in ths Tutorial.  
 
 The JOIN command in this query is used for the ccdVisitId to join to the CcdVisit table to obtain the expMidptMJD (MJD of the mid-point of the exposure).  
 
@@ -97,7 +96,7 @@ Here, you need to request the appropriate columns and provide axis labels:
 .. figure:: /_static/portal_tut05_step01c.png
     :name: portal_tut05_step01c
     
-You might want to click on "xy-tbl" in the upper right hand part of the display.  This will result in a plot as below.  Note that we requested a grid line on "y" to illustrate that "off-peak" (non-detection) points can be negative, resulting by the subtraction of two images.  
+You might want to click on "Bi-view Tables"" in the upper right hand part of the display.  This will result in a plot as below.  Note that we requested a grid line on "y" to illustrate that "off-peak" (non-detection) points can be negative, resulting from the subtraction of two images.  
 
 .. figure:: /_static/portal_tut05_step01d.png
     :name: portal_tut05_step01d
@@ -145,7 +144,7 @@ Once you click on "Apply" - you will see the plot of the supernova light curve i
     
 Note that the colors displayed above are arbitrarily assigned to a given ascii value for each filter.  You can hover over the infividual points on the plot, and the displayed values will be the ascii value of the data point, and not the filter.  
 
-2.6  Now you can select data obtained by a single filter or combination of filters without re-issuing the ADQL query.  You can constrain it to display only e.g. the "r" filter data by inserting r into the little box below the headng of the "band" column on the table on the left, and pressing return.  Note that the color of data points on the plot for a single filter will always appear in green.  You can select multiple filters (say r in addition to i) via inserting r OR i - this will always display the data points in orange and mauve (see below).  While this is a drawback, the future releases of the Portal will bring further improvements.  
+2.6  Now you can select data obtained by a single filter or combination of filters without re-issuing the ADQL query.  You can constrain it to display only e.g. the "r" filter data by inserting r into the little box below the headng of the "band" column on the table on the left, and pressing return.  Note that the color of data points on the plot for a single filter will always appear in green.  You can select multiple filters (say r in addition to i) via inserting r OR i - this will always display the data points in orange and mauve (see below).  While not being able to choose your own symbols  or coloors for data points on the plot is a drawback, the future releases of the Portal will bring further improvements.  
 
 .. figure:: /_static/portal_tut05_step02f.png
     :name: portal_tut05_step02f
