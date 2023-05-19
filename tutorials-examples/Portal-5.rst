@@ -115,7 +115,7 @@ Step 2.  Making a multi-band light curve on a single plot
 
 2.1.  Our goal here is to plot a multi-band light curve with flux measurements in different bands appearing in different colors on the same plot.  This is not currently supported by the Portal functionality, but is in the Portal development plan, to be implemented in the future.  Beyond various bands appearing in different colors, it is envisioned that it will be possible to add a legend in the plot.  However, currently there is a relatively simple workaround - see below for the necessary steps (but if needed for e.g. making the plot publication-ready, the legend needs to be added separately).  
 
-2.2. We will start with the same query as previously, but with the last line (specifically, AND fsodo.band = 'i') missing (meaning we will not select just the "i" band data).  First, we can plot the multi-band light curve with identical color markers for all bands, following the steps outlined in Step 2.1 to plot flux vs. MJD.  This will return the plot as on the top of the screenshot below.  Note that there are many more points on the plot than you had in Step 1 - this is because you didn't restrict the ADQL search to only band "i" but chose all bands.  
+2.2. We will start with the same query as previously, but with the last line (specifically, AND fsodo.band = 'i') missing (meaning we will not select just the "i" band data).  First, we can plot the multi-band light curve with identical color markers for all bands, following the steps outlined in Step 1.5 to plot flux vs. MJD.  This will return the plot as on the right hand side of the screenshot below.  Note that there are many more points on the plot than you had in Step 1 - this is because you didn't restrict the ADQL search to only band "i" but chose all bands.  
 
 2.3  To distinguish various bands in the lightcurve, one can use the following trick:  one can add an additional column to the table generated in the previous search.  This new column would be an ASCII value of the "band" entry, which is currently in the "character" format.  To add a new column in the table, one needs to click on the 5th icon in the retrieved table, as below.  
 
@@ -144,7 +144,7 @@ Once you click on "Apply" - you will see the plot of the supernova light curve i
     
 Note that the colors displayed above are arbitrarily assigned to a given ascii value for each filter.  You can hover over the infividual points on the plot, and the displayed values will be the ascii value of the data point, and not the filter.  
 
-2.6  Now you can select data obtained by a single filter or combination of filters without re-issuing the ADQL query.  You can constrain it to display only e.g. the "r" filter data by inserting r into the little box below the headng of the "band" column on the table on the left, and pressing return.  Note that the color of data points on the plot for a single filter will always appear in green.  You can select multiple filters (say r in addition to i) via inserting r OR i - this will always display the data points in orange and mauve (see below).  While not being able to choose your own symbols  or coloors for data points on the plot is a drawback, the future releases of the Portal will bring further improvements.  
+2.6  Now you can select data obtained by a single filter or combination of filters without re-issuing the ADQL query.  You can constrain it to display only e.g. the "r" filter data by inserting r into the little box below the headng of the "band" column on the table on the left, and pressing return.  Note that the color of data points on the plot for a single filter will always appear in green.  You can select multiple filters (say r in addition to i) via inserting r OR i - this will always display the data points in orange and mauve (see below).  While not being able to choose your own symbols  or colors for data points on the plot is a drawback, the future releases of the Portal will bring further improvements.  
 
 .. figure:: /_static/portal_tut05_step02f.png
     :name: portal_tut05_step02f
@@ -152,4 +152,4 @@ Note that the colors displayed above are arbitrarily assigned to a given ascii v
 Exercises for the learner
 =========================
 
-Add error bars to the lightcurves. Magnitude errors can be retrieved during the execution of the ADQL command, with, e.g., scisql_nanojanskyToAbMagSigma(psFlux, psFluxErr) as psAbMagErr.
+Add error bars to the lightcurves. You can also try another supernova and follow the steps above: you can try one with the ObjectId 1250953961339360185.  
