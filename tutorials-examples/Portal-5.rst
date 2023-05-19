@@ -142,6 +142,8 @@ Once you click on "Apply" - you will see the plot of the supernova light curve i
 
 .. figure:: /_static/portal_tut05_step03e.png
     :name: portal_tut05_step03e
+    
+Note that the colors displayed above are arbitrarily assigned to a given ascii value for each filter.  You can hover over the infividual points on the plot, and the displayed values will be the ascii value of the data point, and not the filter
 
 Exercises for the learner
 =========================
