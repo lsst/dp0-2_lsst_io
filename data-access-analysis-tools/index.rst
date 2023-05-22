@@ -43,6 +43,8 @@ The :ref:`Tools-RSP-Portal` provides interactive query, data discovery, and visu
 
 .. figure:: /_static/RSP_home.png
     :name: RSP_home
+    :alt: Screenshot of the rubin science platform login screen.  Image has a menu on the top for the user to select the portal, notebooks, api, documentation, or community forum.
+        The center of the image shows three panels to allow the user to select the portal, notebook, or API apsects.
 
     Screenshot of the `data.lsst.cloud <https://data.lsst.cloud/>`_ dashboard.
     Enter an aspect using the top menu bar or by clicking on the icon.
