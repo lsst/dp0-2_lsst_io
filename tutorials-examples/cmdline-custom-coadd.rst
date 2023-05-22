@@ -327,7 +327,7 @@ Now you have a directory called ``logs`` into which you can save the pipeline ou
     -d "tract = 4431 AND patch = 17 AND visit in (919515,924057,924085,924086,929477,930353) AND skymap = 'DC2'"; \
     date | tee -a $LOGFILE
     
-It may be desirable to save this shell script to a file and then launch the shell script, rather than attempting to copy all of this into the terminal prompt at once. Call the shell script ``dp02_custom_coadd_1patch.sh``. This ``dp02_custom_coadd_1patch.sh`` script takes 30-35 minutes to run from start to finish. For brevity, the :doc:`full output </tutorials-examples/pipetask-run-printouts>` of running the above ``pipetask run`` script is on a separate page.
+For users familiar with using `shell scripts <https://en.wikipedia.org/wiki/Shell_script>`_, you can save the above commands to a shell script file and then launch that shell script. You could name the shell script file, for instance, ``dp02_custom_coadd_1patch.sh``. If you are not familiar with shell scripts, you can simply copy and paste the above commands into the terminal and hit the "return" key. The above commands take 30-35 minutes to run from start to finish. For brevity, the :doc:`full output </tutorials-examples/pipetask-run-printouts>` of running the above ``pipetask run`` script is on a separate page.
 
 The last line (before the timestamp printout) says "Executed 7 quanta successfully, 0 failed and 0 remain out of total 7 quanta". So that means every subcomponent of this custom coadd processing was successful.
 
