@@ -51,6 +51,11 @@ and clicking on "history" (near upper-right).
 Major Updates Log
 =================
 
+May 15 2023
+-----------
+
+Added command line version of Notebook 09a, with a warning that it must be run with uncached RSP image Weekly 2022_40.
+
 Apr 12 2023
 -----------
 
