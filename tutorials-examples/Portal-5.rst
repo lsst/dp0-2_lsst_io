@@ -47,22 +47,13 @@ Step 1. Plot the single-band light curve
 
 1.1.  Log in to the Portal Aspect of the Rubin Science Platform.  
 
-1.2.  In the upper right, click on the "Edit ADQL" box.  Clear the content of the ADQL query box, if it is not empty.  
+1.2.  In the upper right, click on the "Edit ADQL" box (the red arrow with "(1)" next to it).  Clear the content of the ADQL query box, if it is not empty.  
+
+
+.. figure:: /_static/portal_tut05_step01a.png
+    :name: portal_tut05_step01a
 
 1.3.  Enter the query as below.  This query will retrieve all of the ``ForcedSourceOnDiaObjects`` table entries for the supernova which was considered in Portal Tutorial 02.  
-
-The ``ForcedSourceOnDiaObject`` contains forced photometry on both the difference image (``psfDiffFlux``, ``psfDiffFluxErr``) and the processed visit image (PVI), also called the "direct" image (``psfFlux``, ``psfFluxErr``).  
-For our specific ("supernova") application, we want to use the ``psfDiffFlux``.  
-Specifically, the ``psfDiffFlux`` is a differential flux determined by measuring the flux from a difference image and therefore automatically removes the flux of the host galaxy of the supernova.  Note that since ``psfDiffFlux`` is a difference flux, it can go negative, and it will be apparent in a screenshot in one of the subsequent steps.  
-On the other hand, if you are interested in measuring the flux history of a variable star, you shouldn't use ``psfDiffFlux`` - this is becasue ``psfDiffFlux`` will subtract the average component of the star's flux.  
-For such application, you should use ``psfFlux``.  
-
-Here, another warning is warranted:  converting fluxes from the ``ForcedSourceOnDiaObject`` table to magnitudes using the ``scisql_nanojanskyToAbMag()`` function can be dangerous and should not be used.  
-This is because the ``scisql_nanojanskyToAbMag()`` function does not return any value for a negative flux as an argument, and thus any negative fluxes will be lost.  
-This is especially important for variability studies, when a negative value of flux is (within errors) consistent with non-detection might be scientifically interesting.  
-However, it is OK to convert fluxes extracted from ``psfFlux`` entry in the ``ForcedSourceOnDiaObject`` table to magnitudes using the ``scisql_nanojanskyToAbMag()`` as such fluxes are always positive.  
-
-The ``JOIN`` command in this query is used for the ccdVisitId to join to the ``CcdVisit`` table to obtain the ``expMidptMJD`` (MJD of the mid-point of the exposure).  
 
 .. code-block:: SQL 
 
@@ -76,10 +67,20 @@ The ``JOIN`` command in this query is used for the ccdVisitId to join to the ``C
    WHERE fsodo.diaObjectId = 1252220598734556212 
    AND fsodo.band = 'i'
 
-1.4. Click "Search"
+The ``ForcedSourceOnDiaObject`` contains forced photometry on both the difference image (``psfDiffFlux``, ``psfDiffFluxErr``) and the processed visit image (PVI), also called the "direct" image (``psfFlux``, ``psfFluxErr``).  
+For our specific ("supernova") application, we want to use the ``psfDiffFlux``.  
+Specifically, the ``psfDiffFlux`` is a differential flux determined by measuring the flux from a difference image and therefore automatically removes the flux of the host galaxy of the supernova.  Note that since ``psfDiffFlux`` is a difference flux, it can go negative, and it will be apparent in a screenshot in one of the subsequent steps.  
+On the other hand, if you are interested in measuring the flux history of a variable star, you shouldn't use ``psfDiffFlux`` - this is becasue ``psfDiffFlux`` will subtract the average component of the star's flux.  
+For such application, you should use ``psfFlux``.  
 
-.. figure:: /_static/portal_tut05_step01a.png
-    :name: portal_tut05_step01a
+Here, another warning is warranted:  converting fluxes from the ``ForcedSourceOnDiaObject`` table to magnitudes using the ``scisql_nanojanskyToAbMag()`` function can be dangerous and should not be done.  
+This is because the ``scisql_nanojanskyToAbMag()`` function does not return any value for a negative flux as an argument, and thus any negative fluxes will be lost.  
+This is especially important for variability studies, when a negative value of flux is (within errors) consistent with non-detection might be scientifically interesting.  
+However, it is generally OK to convert fluxes extracted from ``psfFlux`` entry in the ``ForcedSourceOnDiaObject`` table to magnitudes using the ``scisql_nanojanskyToAbMag()`` but even then, forced photometry can return negative flux values.  It is only ever fully safe to perform such conversion when using *detections* (not forced) in direct images.
+
+The ``JOIN`` command in this query is used for the ccdVisitId to join to the ``CcdVisit`` table to obtain the ``expMidptMJD`` (MJD of the mid-point of the exposure).  
+
+1.4. Click "Search" (the red arrow with (2) on the screenshot above).  
 
 1.5.  This query will return forced flux measurements at all epochs of Rubin visits to our supernova location, but to plot such a light curve (rather than the default of your table), you need to modify the settings of the plot by clicking the settings icon as below.  
 
@@ -91,14 +92,14 @@ Here, you need to request the appropriate columns and provide axis labels:
 .. figure:: /_static/portal_tut05_step01c.png
     :name: portal_tut05_step01c
     
-You might want to click on ``Bi-view Tables`` in the upper right hand part of the display.  
+1.6.  Click on ``Bi-view Tables`` in the upper right hand part of the display.  
 This will result in a plot as below.  
 Note that we requested a grid line on "y" to illustrate that "off-peak" (non-detection) points can be negative, resulting from the subtraction of two images.  
 
 .. figure:: /_static/portal_tut05_step01d.png
     :name: portal_tut05_step01d
     
-1.6.  If you wish, you can restrict the MJD range of your Forced Photometry search to the range covered in ``DiaObject``.  
+1.7.  Restrict the MJD range of your Forced Photometry search to the range covered in ``DiaObject``.  
 This will allow you to compare the light curve you've retrieved vis-a-vis the one in Portal Tutorial 2.  
 You can do this by changing the plot parameters in the "Plot Parameters" window (in Chart Options) such as X Min = 930, X Max = 1010 - this will return the plot below:  
 
@@ -112,13 +113,25 @@ Note that a statistical analysis of the data you've extracted (such as fitting t
 Step 2.  Making a multi-band light curve on a single plot
 =========================================================
 
-2.1.  Our goal here is to plot a multi-band light curve with flux measurements in different bands appearing in different colors on the same plot.  
+Our goal here is to plot a multi-band light curve with flux measurements in different bands appearing in different colors on the same plot.  
 This is not currently supported by the Portal functionality, but is in the Portal development plan, to be implemented in the future.  
 Beyond various bands appearing in different colors, it is envisioned that it will be possible to add a legend in the plot.  
 However, currently there is a relatively simple workaround - see below for the necessary steps (but if needed for e.g. making the plot publication-ready, the legend needs to be added separately).  
 
-2.2. We will start with the same query as previously, but with the last line (specifically, ``AND fsodo.band = 'i'``) missing (meaning we will not select just the i-band data).  
-First, we can plot the multi-band light curve with identical color markers for all bands, following the steps outlined in Step 1.5 to plot flux vs. MJD.  
+2.1. We will start with the same ADQL query as previously, but with the last line (specifically, ``AND fsodo.band = 'i'``) missing (meaning we will not select just the i-band data).  Start with entering the query below into the ADQL query box:  
+
+.. code-block:: SQL 
+
+   SELECT fsodo.coord_ra, fsodo.coord_dec, 
+   fsodo.diaObjectId, fsodo.ccdVisitId, fsodo.band, 
+   fsodo.psfDiffFlux, fsodo.psfDiffFluxErr, 
+   cv.expMidptMJD
+   FROM dp02_dc2_catalogs.ForcedSourceOnDiaObject as fsodo 
+   JOIN dp02_dc2_catalogs.CcdVisit as cv 
+   ON cv.ccdVisitId = fsodo.ccdVisitId 
+   WHERE fsodo.diaObjectId = 1252220598734556212 
+
+2.2.  First, we can plot the multi-band light curve with identical color markers for all bands, following the steps outlined in Step 1.5 to plot flux vs. MJD.  
 This will return the plot as on the right hand side of the screenshot below.  
 Note that there are many more points on the plot than you had in Step 1 - this is because you didn't restrict the ADQL search to only i-band but chose all bands.  
 
@@ -164,7 +177,11 @@ While not being able to choose your own symbols  or colors for data points on th
 .. figure:: /_static/portal_tut05_step02f.png
     :name: portal_tut05_step02f
 
-Exercises for the learner
-=========================
+.. _DP0-2-Portal-5-Step-3:  
 
-Add error bars to the lightcurves. You can also try another supernova and follow the steps above: you can try one with the ObjectId ``1250953961339360185``.  
+Step 3.  Exercises for the learner
+==================================
+
+3.1.  Add error bars to the lightcurves. 
+
+3.2.  Try another supernova and follow the steps above: you can try one with the ObjectId ``1250953961339360185``.  
