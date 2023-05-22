@@ -52,7 +52,9 @@ Step 1. Access the terminal and set up
 
 Per `notebook 9a <https://github.com/rubin-dp0/tutorial-notebooks/blob/main/09_Custom_Coadds/09a_Custom_Coadd.ipynb>`_, a (hypothetical) supernova went off at (RA, Dec) = (55.745834, -32.269167) degrees on MJD = 60960. You wish to make a custom coadd of input DESC DC2 simulated exposures corresponding to a specific MJD range, nicknamed "Window1": 60925 < MJD < 60955, roughly the month leading up to the explosion. The science goal is to search for any potential supernova precursor in the pre-explosion imaging, without contamination by the post-explosion transient.
 
-1.1. Log in to the Notebook Aspect. The terminal is a subcomponent of the Notebook Aspect.
+1.1. Log in to the Notebook Aspect. 
+The terminal is a subcomponent of the Notebook Aspect.
+Choose "w_2022_40" from the drop-down list under image and a "Large" container. 
 
 1.2. In the launcher window under "Other", select the terminal.
 
