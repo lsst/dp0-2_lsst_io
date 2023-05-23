@@ -33,10 +33,10 @@ Generally, the ``DiaSource`` table can be used to plot light curves, but it only
 If your science goal requires lower-SNR measurements (e.g. including fluxes of a given object measured during all visits to its location, 
 for instance before and after a flare or explosion), then one can use the forced photometry in the ``ForcedSourceOnDiaObject`` table instead.  
 
-Let's say there is a specific object whose DiaSource light curve looks particularly interesting. 
+Let's say there is a specific object whose ``DiaSource`` light curve looks particularly interesting. 
 In order to explore the flux of the object in all sets of single-epoch visit images as well as difference images, one can use the ``ForcedSourceOnDiaObject`` catalog.  
 The table in this catalog contains point-source forced-photometry measurements on individual single-epoch visit images and difference images, based on and linked to the entries in the ``DiaObject`` table.  
-We will use an ADQL query, where we will use the ``JOIN`` command to the ``CcdVisit`` table to obtain the exposure time mid-point in the Modified Julian Date (MJD) format (expMidptMJD).  
+We will use an ADQL query, where we will use the ``JOIN`` command to the ``CcdVisit`` table to obtain the exposure time mid-point in the Modified Julian Date (MJD) format (``expMidptMJD``).  
 
 In this tutorial, we will create a Forced Photometry light curve of the supernova we considered in Portal Tutorial 02, one with the DiaObjectId ``1252220598734556212``.  
 
@@ -78,7 +78,7 @@ This is because the ``scisql_nanojanskyToAbMag()`` function does not return any 
 This is especially important for variability studies, when a negative value of flux is (within errors) consistent with non-detection might be scientifically interesting.  
 However, it is generally OK to convert fluxes extracted from ``psfFlux`` entry in the ``ForcedSourceOnDiaObject`` table to magnitudes using the ``scisql_nanojanskyToAbMag()`` but even then, forced photometry can return negative flux values.  It is only ever fully safe to perform such conversion when using *detections* (not forced) in direct images.
 
-The ``JOIN`` command in this query is used for the ccdVisitId to join to the ``CcdVisit`` table to obtain the ``expMidptMJD`` (MJD of the mid-point of the exposure).  
+The ``JOIN`` command in this query is used for the ``ccdVisitId`` to join to the ``CcdVisit`` table to obtain the ``expMidptMJD`` (MJD of the mid-point of the exposure).  
 
 1.4. Click "Search" (the red arrow with (2) on the screenshot above).  
 
@@ -142,7 +142,7 @@ To add a new column in the table, one needs to click on the 5th icon in the retr
 .. figure:: /_static/portal_tut05_step02a.png
     :name: portal_tut05_step02a
 
-This brings a new window, where you should enter a new name of the column (here it is "bands_ascii") and enter an expression converting the character in the "band" column to its ASCII value, namely ASCII("band").  
+This brings a new window, where you should enter a new name of the column (here it is "bands_ascii") and enter an expression converting the character in the "band" column to its ASCII value, namely ``ascii("band")``.  
 It is also necessary to specify the data type - it needs to be "long" - see the screenshot below.  
 Click on "Add column" as below:  
 
@@ -166,7 +166,7 @@ Once you click on "Apply" - you will see the plot of the supernova light curve i
     :name: portal_tut05_step02e
     
 Note that the colors displayed above are arbitrarily assigned to a given ascii value for each filter.  
-You can hover over the infividual points on the plot, and the displayed values will be the ascii value of the data point, and not the filter.  
+You can hover over the individual points on the plot, and the displayed values will be the ascii value of the data point, and not the filter.  
 
 2.6  Now you can select data obtained by a single filter or combination of filters without re-issuing the ADQL query.  
 You can constrain it to display only e.g. the r-band filter data by inserting "r" into the little box below the headng of the "band" column on the table on the left, and pressing return.  
