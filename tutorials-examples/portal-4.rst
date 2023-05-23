@@ -39,7 +39,7 @@ Step 1.  Execute the ADQL query
 
 1.1.  Log into the Portal Aspect.  
 
-1.2.  Next to “2. Select Query Type," switch from the default “Single Table (UI assisted)” to “Edit ADQL (advanced)”.
+1.2. By default, you will see the "UI assisted" view.  On the upper right, click on "Edit ADQL."  
 
 1.3. Enter the following ADQL code into the “ADQL Query” box:  
 
@@ -59,9 +59,10 @@ Step 1.  Execute the ADQL query
    AND scisql_nanojanskyToAbMag(g_calibFlux) < 25 
    AND scisql_nanojanskyToAbMag(r_calibFlux) < 25 
 
-1.4. Notice how the ADQL query above retrieves the g- and r-band `calibFlux` columns from the Object catalog as apparent AB magnitudes, and renames them as `gmag` and `rmag`. The `calibFlux` is the flux within a 12 pixel aperture; aperture fluxes are appropriate to use when calculating extended object colors, as is done in this tutorial. The query also retrieves the g- and r-band extendedness parameters as `gext` and `rext`, and the distance of the object from the search center, RA 55.75, Dec -32.27 degrees (the center of a rich galaxy cluster) as `radial_offset` (the units will be degrees).
+1.4. Notice how the ADQL query above retrieves the g- and r-band ``calibFlux`` columns from the Object catalog as apparent AB magnitudes, and renames them as `gmag` and `rmag`. 
+The ``calibFlux`` is the flux within a 12 pixel aperture; aperture fluxes are appropriate to use when calculating extended object colors, as is done in this tutorial. The query also retrieves the g- and r-band extendedness parameters as `gext` and `rext`, and the distance of the object from the search center, RA 55.75, Dec -32.27 degrees (the center of a rich galaxy cluster) as `radial_offset` (the units will be degrees).
 
-1.5. Notice how the ADQL query above places a condition that returned objects must be within 1 degree of the search center; must have the `detect_isPrimary` flag equal to 1; must have the g- and r-band extendedness parameters equal to 1 (i.e., be extended and not point-like); and have g- and r-band apparent magnitudes brighter than 25. These conditions will return only bright, deblended, extended objects (i.e., individual galaxies).
+1.5. Notice how the ADQL query above places a condition that returned objects must be within 1 degree of the search center; must have the ``detect_isPrimary`` flag equal to 1; must have the g- and r-band extendedness parameters equal to 1 (i.e., be extended and not point-like); and have g- and r-band apparent magnitudes brighter than 25. These conditions will return only bright, deblended, extended objects (i.e., individual galaxies).
 
 1.6. Set the “Row Limit” at the bottom of the page to 300,000, and click “Search” in the lower left corner.  
 
@@ -79,9 +80,11 @@ Step 2.  Explore the default results view
 .. figure:: /_static/portal_tut04_step02a.png
 	:name: portal_tut04_step02a
 
-2.2. Notice in the sky image at left (above) that not all galaxies appear to be marked with a square as a returned object. (You might have to use the magnifying glass icon with the + sign at upper left to zoom in). This seems to suggest that objects are missing from the results table, when in fact not all returned objects are shown with markers in the sky image.
+2.2. Notice in the sky image at left (above) that not all galaxies appear to be marked with a square as a returned object. 
+(You might have to use the magnifying glass icon with the + sign at upper left to zoom in). 
+This seems to suggest that objects are missing from the results table, when in fact not all returned objects are shown with markers in the sky image.
 
-2.3. In the table view, add a constraint of `radial_offset < 0.03` as shown below, and see how the sky image plot updates to show that all extended members of the rich galaxy cluster were returned by the query (below). So the fact that above, not all are marked with icons, is not an issue for concern.
+2.3. In the table view, add a constraint of "radial_offset < 0.03" as shown below, and see how the sky image plot updates to show that all extended members of the rich galaxy cluster were returned by the query (below).  So the fact that above, not all are marked with icons, is not an issue for concern.  (To view the results as shown on the screenshot below, you need to select "Bi-view Tables" on the upper right, and click on the "Coverage" tab to bring it into view.)  
 
 .. figure:: /_static/portal_tut04_step02b.png
 	:name: portal_tut04_step02b
@@ -95,7 +98,7 @@ Step 3.  Change the heatmap to a color-magnitude diagram
 
 Galaxy color-magnitude diagrams (CMDs) are a standard and widely-used diagnostic plot type, and use of the g-r color vs. g-band magnitude are standard choices for axes. This type of plot is created below.  
 
-3.1. Change the settings of the default xy plot of RA and Dec. At upper right, click the double-gears (settings) icon to open the "Plot Parameters" pop-up window. Select “Overplot New Trace”, and fill in the boxes as shown below.
+3.1. On the right-hand part of your current display, click on the "Active Chart" tab.  Change the settings of the default xy plot of RA and Dec. At upper right, click the double-gears (settings) icon to open the "Plot Parameters" pop-up window. Select “Overplot New Trace”, and fill in the boxes as shown below.
 
 .. figure:: /_static/portal_tut04_step03a.png
 	:name: portal_tut04_step03a
