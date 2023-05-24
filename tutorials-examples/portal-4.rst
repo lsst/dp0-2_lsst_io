@@ -59,16 +59,17 @@ Step 1.  Execute the ADQL query
    AND scisql_nanojanskyToAbMag(g_calibFlux) < 25 
    AND scisql_nanojanskyToAbMag(r_calibFlux) < 25 
 
-1.4. Notice how the ADQL query above retrieves the g- and r-band ``calibFlux`` columns from the Object catalog as apparent AB magnitudes, and renames them as `gmag` and `rmag`. 
-The ``calibFlux`` is the flux within a 12 pixel aperture; aperture fluxes are appropriate to use when calculating extended object colors, as is done in this tutorial. The query also retrieves the g- and r-band extendedness parameters as `gext` and `rext`, and the distance of the object from the search center, RA 55.75, Dec -32.27 degrees (the center of a rich galaxy cluster) as `radial_offset` (the units will be degrees).
+1.4. Notice how the ADQL query above retrieves the g- and r-band ``calibFlux`` columns from the ``Object`` catalog as apparent AB magnitudes, and renames them as ``gmag`` and ``rmag``. 
+The ``calibFlux`` is the flux within a 12 pixel aperture; aperture fluxes are appropriate to use when calculating extended object colors, as is done in this tutorial.  
+The query also retrieves the g- and r-band extendedness parameters as ``gext`` and ``rext``, and the distance of the object from the search center, RA 55.75, Dec -32.27 degrees (the center of a rich galaxy cluster) as ``radial_offset`` (the units will be degrees).
 
-1.5. Notice how the ADQL query above places a condition that returned objects must be within 1 degree of the search center; must have the ``detect_isPrimary`` flag equal to 1; must have the g- and r-band extendedness parameters equal to 1 (i.e., be extended and not point-like); and have g- and r-band apparent magnitudes brighter than 25. These conditions will return only bright, deblended, extended objects (i.e., individual galaxies).
+1.5. Notice how the ADQL query above places a condition that returned objects must be within 1 degree of the search center; must have the ``detect_isPrimary`` flag equal to 1; must have the g- and r-band ``extendedness`` parameters equal to 1 (i.e., be extended and not point-like); and have g- and r-band apparent magnitudes brighter than 25. 
+These conditions will return only bright, deblended, extended objects (i.e., individual galaxies).
 
 1.6. Set the “Row Limit” at the bottom of the page to 300,000, and click “Search” in the lower left corner.  
 
 .. figure:: /_static/portal_tut04_step01.png
 	:name: portal_tut04_step01
-
 
 .. _DP0-2-Portal-Histogram-Step-2:
 
@@ -84,45 +85,63 @@ Step 2.  Explore the default results view
 (You might have to use the magnifying glass icon with the + sign at upper left to zoom in). 
 This seems to suggest that objects are missing from the results table, when in fact not all returned objects are shown with markers in the sky image.
 
-2.3. In the table view, add a constraint of "radial_offset < 0.03" as shown below, and see how the sky image plot updates to show that all extended members of the rich galaxy cluster were returned by the query (below).  So the fact that above, not all are marked with icons, is not an issue for concern.  (To view the results as shown on the screenshot below, you need to select "Bi-view Tables" on the upper right, and click on the "Coverage" tab to bring it into view.)  
+2.3. In the table view, add a constraint of "radial_offset < 0.03" as shown below, and see how the sky image plot updates to show that all extended members of the rich galaxy cluster were returned by the query (below).  
+So the fact that above, not all are marked with icons, is not an issue for concern.  
+(To view the results as shown on the screenshot below, you need to select "Bi-view Tables" on the upper right, and click on the "Coverage" tab to bring it into view.)  
 
 .. figure:: /_static/portal_tut04_step02b.png
 	:name: portal_tut04_step02b
 
-2.4. Delete the “< 0.03” constraint on the `radial_offset` column and press enter to reset the results view.
+2.4. Delete the “< 0.03” constraint on the ``radial_offset`` column and press enter to reset the results view.
 
 .. _DP0-2-Portal-Histogram-Step-3:
 
 Step 3.  Change the heatmap to a color-magnitude diagram
 ========================================================
 
-Galaxy color-magnitude diagrams (CMDs) are a standard and widely-used diagnostic plot type, and use of the g-r color vs. g-band magnitude are standard choices for axes. This type of plot is created below.  
+Galaxy color-magnitude diagrams (CMDs) are a standard and widely-used diagnostic plot type, and use of the g-r color vs. g-band magnitude are standard choices for axes. 
+This type of plot is created below.  
 
-3.1. On the right-hand part of your current display, click on the "Active Chart" tab.  Change the settings of the default xy plot of RA and Dec. At upper right, click the double-gears (settings) icon to open the "Plot Parameters" pop-up window. Select “Overplot New Trace”, and fill in the boxes as shown below.
+3.1. On the right-hand part of your current display, click on the "Active Chart" tab.  
+Change the settings of the default xy plot of RA and Dec. 
+At upper right, click the double-gears (settings) icon to open the "Plot Parameters" pop-up window. 
+Select “Overplot New Trace”, and fill in the boxes as shown below.
 
 .. figure:: /_static/portal_tut04_step03a.png
 	:name: portal_tut04_step03a
 
-3.2. See that now the plot has both the color-magnitude diagram and the RA vs. Dec. This is not very useful!  But, the purpose of showing this is to demonstrate the flexibility of the Portal’s plotting capabilities.
+3.2. See that now the plot has both the color-magnitude diagram and the RA vs. Dec. 
+This is not very useful!  
+But, the purpose of showing this is to demonstrate the flexibility of the Portal’s plotting capabilities.
 
 .. figure:: /_static/portal_tut04_step03b.png
 	:name: portal_tut04_step03b
 	
-3.3. Remove the default “trace 0” (RA vs. Dec) from the plot. Click on the double-gears icon again. In the pop-up window, with "Modify Trace" selected, from the "Choose Trace" drop-down menu select "trace 0", and then from the top row choose "Remove Active Trace", and then click "OK". Now, the “CMD” trace created in step 3.1 is the only one.
+3.3. Remove the default “trace 0” (RA vs. Dec) from the plot. 
+Click on the double-gears icon again.  In the pop-up window, with "Modify Trace" selected, from the "Choose Trace" drop-down menu select "trace 0", and then from the top row choose "Remove Active Trace", and then click "Apply". 
+Now, the “CMD” trace created in step 3.1 is the only one.
 
 .. figure:: /_static/portal_tut04_step03c.png
 	:name: portal_tut04_step03c
 	
-3.4. Change the grey-scale color palette to something more exciting. Click on the double-gears icon again and in the drop-down menu next to “Color Scale” choose “YlOrRd”. Notice that the color bar at right has the name of the trace, “CMD”, and represents the number of objects per 2-dimensional bin.
+3.4. Change the grey-scale color palette to something more exciting. 
+Click on the double-gears icon again and in the drop-down menu next to “Color Scale” choose “YlOrRd”. 
+Notice that the color bar at right has the name of the trace, “CMD”, and represents the number of objects per 2-dimensional bin.
 
 .. figure:: /_static/portal_tut04_step03d.png
 	:name: portal_tut04_step03d
 
-3.5. Interact with the plot. At upper right, select the magnifying glass with the + sign icon and click-and-drag over the data to zoom in on a small area. Select the four-arrows-pointing-out icon and click-and-drag to navigate around the plot. Select the magnifying glass with 1x icon to return the plot to the default axes limits.
+3.5. Interact with the plot. 
+At upper right, select the magnifying glass with the + sign icon and click-and-drag over the data to zoom in on a small area. 
+Select the four-arrows-pointing-out icon and click-and-drag to navigate around the plot. 
+Select the magnifying glass with 1x icon to return the plot to the default axes limits.
 
-3.6. Be aware that clicking the half-circle upwards-pointing “go back” or “refresh” icon will return the xy plot to its default display of RA vs. Dec. Do not click it.
+3.6. Be aware that clicking the half-circle upwards-pointing “go back” or “refresh” icon will return the xy plot to its default display of RA vs. Dec. 
+Do not click it.
 
-3.7. Notice the sharp cutoffs at the bright end (around g=17, g-r=0.5) and the faint end (around g=24.5, g-r=0.2), and recall that the DP0.2 data set is based on simulated astrophysical objects and simulated images. Notice that a clear red sequence, blue cloud, and green valley is not very obvious in this galaxy CMD. A real LSST color-magnitude diagram for galaxies might look quite different.
+3.7. Notice the sharp cutoffs at the bright end (around g=17, g-r=0.5) and the faint end (around g=24.5, g-r=0.2), and recall that the DP0.2 data set is based on simulated astrophysical objects and simulated images. 
+Notice that a clear red sequence, blue cloud, and green valley is not very obvious in this galaxy CMD. 
+A real LSST color-magnitude diagram for galaxies might look quite different.
 
 .. _DP0-2-Portal-Histogram-Step-4:
 
@@ -131,29 +150,41 @@ Step 4.  Add a plot showing histograms of apparent magnitude
 
 Distributions of apparent magnitude are another standard type of plot that gives an at-a-glance impression of the brightness and completeness of a population of galaxies.
 
-4.1. Add a new plot. At upper right, click on the double-gears icon and select “Add New Chart” in the "Plot Parameters" pop-up window. Select a Plot Type of Histogram from the drop-down menu, and set the other boxes to match the screenshot below. 
+4.1. Add a new plot. At upper right, click on the double-gears icon and select “Add New Chart” in the "Plot Parameters" pop-up window. 
+Select a Plot Type of "Histogram" from the drop-down menu, and set the other boxes to match the screenshot below. 
 
 .. figure:: /_static/portal_tut04_step04a.png
 	:name: portal_tut04_step04a
 
-4.2. Notice the histogram options available. In this demo, as shown above, a “Uniform binning” is used instead of “Bayesian blocks” (quantiles defined by the data itself); a set bin width of 0.2 mag is selected; and the minimum and maximum values are defined. However, users do have the option to instead choose the number of bins, and allow the bin size and the min/max values will be set automatically.
+4.2. Notice the histogram options available. 
+In this demo, as shown above, a “Uniform binning” is used instead of “Bayesian blocks” (quantiles defined by the data itself); a set bin width of 0.2 mag is selected; and the minimum and maximum values are defined. 
+However, users do have the option to instead choose the number of bins, and allow the bin size and the min/max values will be set automatically.
 
-4.3. Review the g-band apparent magnitude distribution. Since the ADQL query only retrieved extended objects brighter than 25th magnitude, and the coadded images of DP0.2 (and thus the Object table) goes deeper than 25th mag, no turn-over due to detection incompleteness is seen in the apparent magnitude distribution. 
+4.3. Review the g-band apparent magnitude distribution. 
+Since the ADQL query only retrieved extended objects brighter than 25th magnitude, and the coadded images of DP0.2 (and thus the Object table) goes deeper than 25th mag, no turn-over due to detection incompleteness is seen in the apparent magnitude distribution. 
 
 .. figure:: /_static/portal_tut04_step04b.png
 	:name: portal_tut04_step04b
 
-4.4. Add the r-band apparent magnitude distribution to the new plot. With the right-most plot selected (click on plot to select plot; selected plot has an orange outline), click on the double-gears icon at upper right. In the "Plot Parameters" pop-up window, select “Overplot New Trace”, fill out the remaining boxes as shown below (notice that the option to log the y-axis has been selected), and click “OK”.
+4.4. Add the r-band apparent magnitude distribution to the new plot. 
+With the right-most plot selected (click on plot to select plot; selected plot has an orange outline), click on the double-gears icon at upper right. 
+In the "Plot Parameters" pop-up window, select “Overplot New Trace”, fill out the remaining boxes as shown below (notice that the option to log the y-axis has been selected), and click “OK”.
 
 .. figure:: /_static/portal_tut04_step04c.png
 	:name: portal_tut04_step04c
 
-4.5. Update the trace names and colors. The default colors used for g-band and r-band are inappropriate, and the g-band trace is still named “trace 0”. Click on the double-gears icon and use the "Plot Parameters" pop-up window to edit trace name and color. Click on the magnifying glass to the right of “Color” under “Trace Options” to get the “Color Picker” pop-up window. Choose green for g-band and orange for r-band.
+4.5. Update the trace names and colors. 
+The default colors used for g-band and r-band are inappropriate, and the g-band trace is still named “trace 0”. 
+Click on the double-gears icon and use the "Plot Parameters" pop-up window to edit trace name and color. 
+Click on the magnifying glass to the right of “Color” under “Trace Options” to get the “Color Picker” pop-up window. 
+Choose green for g-band and orange for r-band.
 
 .. figure:: /_static/portal_tut04_step04d.png
 	:name: portal_tut04_step04d
 
-4.6. Review the final plot. Notice that it is possible to change which trace is “in front” using the drop-down menu to the left of the magnifying glass icon. Bring the g-band trace to the front.
+4.6. Review the final plot. 
+Notice that it is possible to change which trace is “in front” using the drop-down menu to the left of the magnifying glass icon. 
+Bring the g-band trace to the front.
 
 .. figure:: /_static/portal_tut04_step04e.png
 	:name: portal_tut04_step04e
@@ -166,7 +197,10 @@ Step 5.  Restrict all plots to objects near the rich cluster
 .. figure:: /_static/portal_tut04_step05a.png
 	:name: portal_tut04_step05a
 
-5.2. Restrict the results to only those objects within < 0.05 degrees of the cluster center by entering “< 0.05” into the constraints box for the `radial_offset` column and clicking enter. Notice how all of the plots automatically update. The CMD (center) shows the red sequence of cluster galaxies, and the histogram (right) shows the over-density of bright objects in the cluster. Cool!
+5.2. Restrict the results to only those objects within < 0.05 degrees of the cluster center by entering “< 0.05” into the constraints box for the ``radial_offset`` column and clicking enter. 
+Notice how all of the plots automatically update. 
+The CMD (center) shows the red sequence of cluster galaxies, and the histogram (right) shows the over-density of bright objects in the cluster. 
+Cool!
 
 .. figure:: /_static/portal_tut04_step05b.png
 	:name: portal_tut04_step05b
@@ -174,7 +208,10 @@ Step 5.  Restrict all plots to objects near the rich cluster
 Step 6.  Exercises for the learner
 ==================================
 
-6.1. Return to the ADQL query in step 1.3, and re-do this tutorial but include faint extended objects down to 28th magnitude. Notice how the histograms change in shape.
+6.1. Return to the ADQL query in step 1.3, and re-do this tutorial but include faint extended objects down to 28th magnitude. 
+Notice how the histograms change in shape.
 
-6.2. Return to the ADQL query in step 1.3, and add u, i, z, and y-bands to the retrieved columns. Create an apparent magnitude histogram with all six filters. Create a color-magnitude diagram (or a color-color diagram!!) with the bands of your choice.
+6.2. Return to the ADQL query in step 1.3, and add u, i, z, and y-bands to the retrieved columns. 
+Create an apparent magnitude histogram with all six filters. 
+Create a color-magnitude diagram (or a color-color diagram!) with the bands of your choice.
 
