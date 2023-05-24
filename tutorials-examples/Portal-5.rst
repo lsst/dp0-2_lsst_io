@@ -50,8 +50,8 @@ Step 1. Plot the single-band light curve
 1.2.  In the upper right, click on the "Edit ADQL" box (the red arrow with "(1)" next to it).  Clear the content of the ADQL query box, if it is not empty.  
 
 
-.. figure:: /_static/portal_tut05_step01b.png
-    :name: portal_tut05_step01b
+.. figure:: /_static/portal_tut05_step01a.png
+    :name: portal_tut05_step01a
 
 1.3.  Enter the query as below.  This query will retrieve all of the ``ForcedSourceOnDiaObjects`` table entries for the supernova which was considered in Portal Tutorial 02.  
 
