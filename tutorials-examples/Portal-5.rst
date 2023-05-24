@@ -92,7 +92,7 @@ Here, you need to request the appropriate columns and provide axis labels:
 .. figure:: /_static/portal_tut05_step01c.png
     :name: portal_tut05_step01c
     
-1.6.  Click on ``Bi-view Tables`` in the upper right hand part of the display.  
+1.6.  Click on "Bi-view Tables" in the upper right hand part of the display.  
 This will result in a plot as below.  
 Note that we requested a grid line on "y" to illustrate that "off-peak" (non-detection) points can be negative, resulting from the subtraction of two images.  
 
