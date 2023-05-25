@@ -139,7 +139,7 @@ Use the same "Chart Options" except give it a different "Chart title", such as "
 
 .. figure:: /_static/portal_tut01_step02d.png
 	:name: portal_tut01_step02d
-	:alt: 
+	:alt: Screenshot of dialog box where the user can set new chart parameters for the heat map.
 	
 	Above, we set the new chart parameters for a heatmap plot.
 
@@ -147,6 +147,7 @@ Use the same "Chart Options" except give it a different "Chart title", such as "
 
 .. figure:: /_static/portal_tut01_step02e.png
 	:name: portal_tut01_step02e
+	:alt: Color magnitude diagrams generated from the previously mad scatter plot and heatmap.
 	
 	The color-magnitude diagrams, including the previously made scatter plot (left) and the heatmap (right).
 
@@ -194,6 +195,7 @@ Shown below is the same query as in Step 3.1 above:
 
 .. figure:: /_static/portal_tut01_step04a.png  
 	:name: portal_tut01_step04a
+	:alt: Screenshot of the RSP portal query where the user will click the search button.
 	
 To execute the query in the Portal, click the "Search" button.
 
@@ -209,11 +211,13 @@ As an example, the image below displays the Results View for a small query using
 
 .. figure:: /_static/portal_tut01_step04b.png  
 	:name: portal_tut01_step04b
+	:alt: Screenshot of the results view from the above query.  
 
 Click on the "info" button (letter "i" in a circle), and a pop-up window will appear:
 
 .. figure:: /_static/portal_tut01_step04c.png  
 	:name: portal_tut01_step04c
+	:alt: Pop-up window when the info button is clicked.
 
 The "Job Link" in the pop-up is the URL to the query results.
 Click on the clipboard icon to copy the URL to your clipboard.
