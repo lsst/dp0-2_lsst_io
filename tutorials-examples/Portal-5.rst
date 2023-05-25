@@ -22,38 +22,42 @@
 
 .. This section should provide a brief, top-level description of the page.
 
-**Contact authors:** Melissa Graham and Greg Madejski
+**Contact authors:** Greg Madejski and Melissa Graham
 
 **Last verified to run:** 2023-05-24
 
 **Targeted learning level:** intermediate 
 
 **Introduction:**
-Generally, the ``DiaSource`` table can be used to plot light curves, but it only includes detections with SNR > 5 in the difference images. 
+In Portal Tutorial 02, a supernova lightcurve was plotted using the measurements in the ``DiaSource`` table,
+but the ``DiaSource`` table only contains measurements when the supernova is detected with ``SNR > 5`` 
+in the difference image.
 If your science goal requires lower-SNR measurements (e.g. including fluxes of a given object measured during all visits to its location, 
-for instance before and after a flare or explosion), then one can use the forced photometry in the ``ForcedSourceOnDiaObject`` table instead.  
+for instance before and after a flare or explosion), then use the forced photometry in the ``ForcedSourceOnDiaObject`` table instead.  
 
-Let's say there is a specific object whose ``DiaSource`` light curve looks particularly interesting. 
-In order to explore the flux of the object in all sets of single-epoch visit images as well as difference images, one can use the ``ForcedSourceOnDiaObject`` catalog.  
-The table in this catalog contains point-source forced-photometry measurements on individual single-epoch visit images and difference images, based on and linked to the entries in the ``DiaObject`` table.  
-We will use an ADQL query, where we will use the ``JOIN`` command to the ``CcdVisit`` table to obtain the exposure time mid-point in the Modified Julian Date (MJD) format (``expMidptMJD``).  
-
-In this tutorial, we will create a Forced Photometry light curve of the supernova we considered in Portal Tutorial 02, one with the DiaObjectId ``1252220598734556212``.  
+This tutorial demonstrates how to create a forced photometry lightcurve for the same supernova used in
+Portal Tutorial 02, which has a ``DiaObjectId`` of ``1252220598734556212``.
 
 .. _DP0-2-Portal-5-Step-1:
 
-Step 1. Plot the single-band light curve 
-========================================
+Step 1. Plot the single-band lightcurve 
+=======================================
 
-1.1.  Log in to the Portal Aspect of the Rubin Science Platform.  
+1.1. Log in to the Portal Aspect of the Rubin Science Platform.  
 
-1.2.  In the upper right, click on the "Edit ADQL" box (the red arrow with "(1)" next to it).  Clear the content of the ADQL query box, if it is not empty.  
-
+1.2. At upper right on the main Portal user interface, click "Edit ADQL" to switch to the ADQL query view.
+(In the figure below, see the red arrow labeled number one).
+Clear the content of the ADQL query box, if it is not empty.  
 
 .. figure:: /_static/portal_tut05_step01a.png
     :name: portal_tut05_step01a
+    :alt: A screenshot of the ADQL Query view of the Portal user interface.
 
-1.3.  Enter the query as below.  This query will retrieve all of the ``ForcedSourceOnDiaObjects`` table entries for the supernova which was considered in Portal Tutorial 02.  
+1.3. In the ADQL Query box, enter the query as below.
+This query will retrieve the coordinates, DIA object identifier, CCD visit identifier, band, and forced difference-image flux 
+and its error for all rows of the ``ForcedSourceOnDiaObjects`` table which are associated with the ``diaObject`` of interest,
+for i-band visits only.
+It also retrieves the exposure time midpoint modified julian date for all visits by joining to the ``CcdVisit`` table.
 
 .. code-block:: SQL 
 
@@ -67,53 +71,65 @@ Step 1. Plot the single-band light curve
    WHERE fsodo.diaObjectId = 1252220598734556212 
    AND fsodo.band = 'i'
 
-The ``ForcedSourceOnDiaObject`` contains forced photometry on both the difference image (``psfDiffFlux``, ``psfDiffFluxErr``) and the processed visit image (PVI), also called the "direct" image (``psfFlux``, ``psfFluxErr``).  
-For our specific ("supernova") application, we want to use the ``psfDiffFlux``.  
-Specifically, the ``psfDiffFlux`` is a differential flux determined by measuring the flux from a difference image and therefore automatically removes the flux of the host galaxy of the supernova.  Note that since ``psfDiffFlux`` is a difference flux, it can go negative, and it will be apparent in a screenshot in one of the subsequent steps.  
-On the other hand, if you are interested in measuring the flux history of a variable star, you shouldn't use ``psfDiffFlux`` - this is becasue ``psfDiffFlux`` will subtract the average component of the star's flux.  
-For such application, you should use ``psfFlux``.  
+**Note:** The ``ForcedSourceOnDiaObject`` table contains forced photometry on both the difference image, 
+``psfDiffFlux``, and the processed visit image (PVI; "direct" image), ``psfFlux``.
+As this tutorial is using a supernova it uses the ``psfDiffFlux``, which is the forced photometry on the difference image,
+in which the static-sky component (the host galaxy) has been subtracted.
+However, the ``psfFlux`` would be more appropriate for generating the lightcurve of a variable star, as there is no
+need to subtract the static component (in this case, the variable star's average flux).
 
-Here, another warning is warranted:  converting fluxes from the ``ForcedSourceOnDiaObject`` table to magnitudes using the ``scisql_nanojanskyToAbMag()`` function can be dangerous and should not be done.  
-This is because the ``scisql_nanojanskyToAbMag()`` function does not return any value for a negative flux as an argument, and thus any negative fluxes will be lost.  
-This is especially important for variability studies, when a negative value of flux is (within errors) consistent with non-detection might be scientifically interesting.  
-However, it is generally OK to convert fluxes extracted from ``psfFlux`` entry in the ``ForcedSourceOnDiaObject`` table to magnitudes using the ``scisql_nanojanskyToAbMag()`` but even then, forced photometry can return negative flux values.  It is only ever fully safe to perform such conversion when using *detections* (not forced) in direct images.
+**WARNING:** Do not use the ADQL function ``scisql_nanojanskyToAbMag()`` to convert difference image fluxes to magnitudes.
+This is very dangerous! 
+This function does not return any value for a negative flux, and difference image fluxes can be negative (e.g., either the
+object has declined in brightness compared to the template, or it is a non-detection and the flux is very small and negative).
+Using the ``scisql_nanojanskyToAbMag()`` function on columns like ``psfDiffFlux`` can result in missing data.
+While it is generally safe to convert forced fluxes from the PVI to magnitudes, there might be edge cases where the direct image
+forced photometry is negative 
+(e.g., rare cases where the source is faint or gone *and* in a region of slightly oversubtracted sky background).
+It is only ever fully safe to use this function when using ``SNR > 5`` *detections* in PVIs.
 
-The ``JOIN`` command in this query is used for the ``ccdVisitId`` to join to the ``CcdVisit`` table to obtain the ``expMidptMJD`` (MJD of the mid-point of the exposure).  
+1.4. Click "Search". (In the figure above, see the red arrow labeled number two).  
 
-1.4. Click "Search" (the red arrow with (2) on the screenshot above).  
-
-1.5.  This query will return forced flux measurements at all epochs of Rubin visits to our supernova location, but to plot such a light curve (rather than the default of your table), you need to modify the settings of the plot by clicking the settings icon as below.  
+1.5. In the results view, see that the query has returned forced flux measurements in the table (bottom of the figure below).
+To plot the lightcurve instead of the default xy plot of RA vs. Dec, open the plot parameters pop-up window by clicking on 
+the settings icon (double gears, as the red arrow points in the figure below).  
 
 .. figure:: /_static/portal_tut05_step01b.png
     :name: portal_tut05_step01b
+    :alt: A screenshot of the default results view that is returned for the query.
 
-Here, you need to request the appropriate columns and provide axis labels:   
+1.6. Update the plot parameters as shown in the figure below.
+Note that the grid line in the y-axis is selected.
 
 .. figure:: /_static/portal_tut05_step01c.png
+    :width: 300
     :name: portal_tut05_step01c
+    :alt: A screenshot of the plot parameters pop-up window, with the parameters set to display the i-band lightcurve.
     
-1.6.  Click on "Bi-view Tables" in the upper right hand part of the display.  
-This will result in a plot as below.  
-Note that we requested a grid line on "y" to illustrate that "off-peak" (non-detection) points can be negative, resulting from the subtraction of two images.  
+1.7. Remove the sky image panel of the results view by clicking on the "Bi-view Tables" button at upper right in the figure below.
+Note how the grid lines in the y-axis illustrate that "off-peak" (non-detection) forced fluxes can be negative.  
 
 .. figure:: /_static/portal_tut05_step01d.png
     :name: portal_tut05_step01d
+    :alt: A screenshot of the results view showing only the table and the i-band lightcurve.
     
-1.7.  Restrict the MJD range of your Forced Photometry search to the range covered in ``DiaObject``.  
-This will allow you to compare the light curve you've retrieved vis-a-vis the one in Portal Tutorial 2.  
-You can do this by changing the plot parameters in the "Plot Parameters" window (in Chart Options) such as X Min = 930, X Max = 1010 - this will return the plot below:  
+1.8.  Restrict the x-axis (MJD range) to only show the lightcurve around the dates of peak brightness:
+reopen the plot parameters pop-up window, and under Chart Options set the ``X Min`` to be 930 and ``X Max`` to be 1010.
+The result can be directly compared to the lightcurve in Portal Tutorial 2.  
 
 .. figure:: /_static/portal_tut05_step01e.png
     :name: portal_tut05_step01e
+    :alt: A screenshot of the results view in which the lightcurve date range has been limited.
     
-Note that a statistical analysis of the data you've extracted (such as fitting to a temporal template, or subset statistics) is currently not possible, but future versions of the Portal might allow for some such functions.  
+**Note:** A statistical analysis of the lightcurve (e.g., goodness-of-fit to a template; timeseries features) is currently not possible
+in the Portal, and should be done in the Notebook Aspect.
 
 .. _DP0-2-Portal-5-Step-2: 
 
-Step 2.  Making a multi-band light curve on a single plot
-=========================================================
+Step 2.  Making a multi-band lightcurve on a single plot
+========================================================
 
-Our goal here is to plot a multi-band light curve with flux measurements in different bands appearing in different colors on the same plot.  
+Our goal here is to plot a multi-band lightcurve with flux measurements in different bands appearing in different colors on the same plot.  
 This is not currently supported by the Portal functionality, but is in the Portal development plan, to be implemented in the future.  
 Beyond various bands appearing in different colors, it is envisioned that it will be possible to add a legend in the plot.  
 However, currently there is a relatively simple workaround - see below for the necessary steps (but if needed for e.g. making the plot publication-ready, the legend needs to be added separately).  
@@ -131,7 +147,7 @@ However, currently there is a relatively simple workaround - see below for the n
    ON cv.ccdVisitId = fsodo.ccdVisitId 
    WHERE fsodo.diaObjectId = 1252220598734556212 
 
-2.2.  First, we can plot the multi-band light curve with identical color markers for all bands, following the steps outlined in Step 1.5 to plot flux vs. MJD.  
+2.2.  First, we can plot the multi-band lightcurve with identical color markers for all bands, following the steps outlined in Step 1.5 to plot flux vs. MJD.  
 This will return the plot as on the right hand side of the screenshot below.  
 Note that there are many more points on the plot than you had in Step 1 - this is because you didn't restrict the ADQL search to only i-band but chose all bands.  
 
@@ -160,7 +176,7 @@ This brings a window as below, where you need to click on "Trace Options" and en
 .. figure:: /_static/portal_tut05_step02d.png
     :name: portal_tut05_step02d
 
-Once you click on "Apply" - you will see the plot of the supernova light curve in various bands.  
+Once you click on "Apply" - you will see the plot of the supernova lightcurve in various bands.  
 
 .. figure:: /_static/portal_tut05_step02e.png
     :name: portal_tut05_step02e
