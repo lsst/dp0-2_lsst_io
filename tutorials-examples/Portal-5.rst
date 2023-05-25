@@ -189,8 +189,7 @@ Click "Apply".
 
 .. figure:: /_static/portal_tut05_step02d.png
     :name: portal_tut05_step02d
-    :alt: A screenshot of the plot parameters pop-up window that shows the trace options set for a rainbow colorscale
-    based on the new column of ascii values.
+    :alt: A screenshot of the plot parameters pop-up window that shows the trace options set for a rainbow colorscale based on the new column of ascii values.
 
 2.7. View the new version of the lightcurve with the points colored by band, as in the figure below.
 Use the mouse to hover-over points in the plot, and notice that the pop-up info box for a given point includes only the
@@ -202,7 +201,7 @@ data included in the plot: x-axis value, y-axis value, and the ``bands_ascii`` v
     
 2.8. Restrict the multi-band lightcurve back down to a single filter without redoing the ADQL query.
 Apply a filter to the ``band`` column of the table by entering ``= 'r'`` into the box below the header row (top of the column), 
-and press enter (or return) on the keyboard.
+and press enter (or return) on the keyboard (see the table view figure below).
 Do it again for ``= 'g'``, and notice that the points are different, but are green both times.
 The point colors are not assigned in an absolute sense, but rather the color scaling is reapplied every time the plot changes.
 
