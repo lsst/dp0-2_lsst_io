@@ -51,6 +51,11 @@ and clicking on "history" (near upper-right).
 Major Updates Log
 =================
 
+May 24 2023
+-----------
+
+Released Portal tutorials 04 and 05.
+
 May 15 2023
 -----------
 
