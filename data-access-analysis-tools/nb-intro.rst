@@ -74,6 +74,10 @@ The JupyterLab landing page in the figure below is the launch pad for all Jupyte
 Return to this launch pad at any time by clicking the plus symbol at upper-left.
 
 .. figure:: /_static/RSP_NB_launcher_options.png
+    :alt: This image is a screenshot of the main work area of the Notebook Aspect, as it appears when a user starts a new server. 
+    	Across the top is the main menu, with options such as file, edit, view, run, kernel, rubin, tabs, settings, and help. 
+	The left sidebar offers options to browse the file system, open files, and upload data. At right, in the main work area, one tab is open. 
+	It is the launcher tab, which offers options to open a new notebook, coding console, terminal, text file, markdown file, python file, or help file.
     :width: 400
     :name: RSP_NB_launcher_options
 
@@ -131,10 +135,14 @@ For some handy markdown tips, see `this blog post <https://medium.com/analytics-
 
 .. figure:: /_static/notebook.png
     :name: notebook_aspect
+    :alt: This image is a screenshot of tutorial notebook 01, titled introduction to DP0.2. 
+    	The notebook has been scrolled down to Section 3.3, which contains both markdown text and code cells which have been executed. 
+	The last code cell has produced a greyscale image of a rich galaxy cluster. Across the top of the notebook there is a menu bar of actions for users. 
+	Actions include save notebook, set cell type, and insert, cut, copy, paste, run, or interrupt cells. 
 
-    An example of what users see in the Notebook Aspect. The left panel is a file tree from which you can access your personal files,
-    and which will come pre-populated with a handful of tutorial notebooks that users can execute on their own. The largest panel is the Jupyter notebook, where markdown and code can be entered and executed.
-    You can also see that one can have multiple notebooks open in separate tabs.
+    A screenshot from the end of tutorial notebook 01 “Introduction to DP0.2”, showing the panel of the Notebook Aspect where multiple interface tabs can be open at once. 
+    In this case, the first tab is a command-line terminal, the second is the Launcher interface, and the third (which is currently selected) is an executed version of tutorial notebook 01. 
+    Multiple notebooks can be opened in separate tabs.
 
 **Opening Multiple Notebooks:**
 You can have multiple notebooks and terminals open in your viewer at a time.
