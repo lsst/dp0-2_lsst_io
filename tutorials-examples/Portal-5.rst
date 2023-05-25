@@ -188,6 +188,7 @@ Under "Trace Options" "bands_ascii" for the "Color Map" and "Rainbow" for the "C
 Click "Apply".
 
 .. figure:: /_static/portal_tut05_step02d.png
+    :width: 300
     :name: portal_tut05_step02d
     :alt: A screenshot of the plot parameters pop-up window that shows the trace options set for a rainbow colorscale based on the new column of ascii values.
 
