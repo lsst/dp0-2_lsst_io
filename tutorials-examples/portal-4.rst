@@ -127,7 +127,7 @@ At upper right, click the double-gears (settings) icon to open the "Plot Paramet
 Select “Overplot New Trace”, and fill in the boxes as shown below.
 
 .. figure:: /_static/portal_tut04_step03a.png
-	:width: 200
+	:width: 300
 	:name: portal_tut04_step03a
 	:alt: A screenshot of the plot parameters pop-up window showing how the parameters should be set to create the heatmap.
 
@@ -183,7 +183,7 @@ completeness of a population of galaxies.
 Select a Plot Type of "Histogram" from the drop-down menu, and set the other boxes to match the screenshot below. 
 
 .. figure:: /_static/portal_tut04_step04a.png
-        :width: 200
+        :width: 300
 	:name: portal_tut04_step04a
 	:alt: A screenshot of the plot parameters pop-up window showing how the parameters should be set to create the histogram.
 
