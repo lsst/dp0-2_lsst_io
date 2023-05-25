@@ -22,12 +22,15 @@ DP0 Delegate Homepage
 
 This page includes the guidelines, resources, and activities for DP0 Delegates.
 
-**DP0 delegate** is the term for the 600 scientists and students who have accounts in the Rubin Science Platform (RSP)
+"**DP0 delegates**" are the scientists and students who have accounts in the Rubin Science Platform (RSP)
 at the Interim Data Facility (IDF; the Google Cloud) during Data Preview 0 (DP0).
-This term has been adopted to reflect DP0 participants’ important roles of representing the broad science community
+
+The term "delegate" has been adopted for DP0 to reflect participants’ important roles of representing the broad science community
 as learners, testers, and providers of feedback, and of sharing the benefits of their DP0 participation with their
 communities as teachers and colleagues.
-Delegates’ DP0-related activities are supported with resources and infrastructure described on this page.
+Delegates’ DP0-related activities are supported with resources and infrastructure as described on this page.
+
+The number of delegates is currently limited to 600, but space is available.
 
 
 .. _Delegate-Homepage-Getting-Started-Checklist:
@@ -35,16 +38,28 @@ Delegates’ DP0-related activities are supported with resources and infrastruct
 Getting started with DP0 checklist
 ==================================
 
+Becoming a delegate and accessing the DP0 data is as easy as following this checklist and getting an account in the Rubin Science Platform (RSP).
+
+There is no application process.
+The only prerequisite is to be a Rubin data rights holder.
+Although the number of delegates is currently limited to 600, there is space available and all petitions are being accepted.
+If that changes this page will be updated.
+
+Mandatory steps to becoming a delegate:
+
 | 1. Review the :ref:`Delegate-Homepage-Guidelines-Expectations`.
-| 2. Get one of the :ref:`Delegate-Homepage-RSP-Accounts` for DP0 delegates.
+| 2. Submit a petition for one of the :ref:`Delegate-Homepage-RSP-Accounts`.
 | 3. Set up your account in the :ref:`Delegate-Homepage-Forum`.
 | 4. Watch the recorded :ref:`Delegate-Homepage-Kickoff` (13 minutes).
 | 5. Review your options for :ref:`Delegate-Homepage-Getting-Support`.
-| 6. *Optional:* follow step-by-step introductions to the RSP's :ref:`Tools-RSP-Portal` or :ref:`Tools-RSP-Notebook`.
-| 7. *Optional:* work at your own pace through the :doc:`/tutorials-examples/index`.
-| 8. *Optional:* attend :ref:`Delegate-Homepage-DP0-Virtual-Seminars` or watch recordings where available.
-| 9. *Optional:* consider the :ref:`Delegate-Homepage-Delegate-Activities`.
-| 10. *Optional:* be aware that the `Rubin Users Committee <https://www.lsst.org/scientists/users-committee>`_ are your advocates.
+
+Optional (but recommended) steps for delegates:
+
+| 6. Follow step-by-step introductions to the RSP's :ref:`Tools-RSP-Portal` or :ref:`Tools-RSP-Notebook`.
+| 7. Work at your own pace through the :doc:`/tutorials-examples/index`.
+| 8. Attend :ref:`Delegate-Homepage-DP0-Virtual-Seminars` or watch recordings where available.
+| 9. Consider the :ref:`Delegate-Homepage-Delegate-Activities`.
+| 10. Be aware that the `Rubin Users Committee <https://www.lsst.org/scientists/users-committee>`_ are your advocates.
 
 
 .. _Delegate-Homepage-Guidelines-Expectations:
@@ -52,7 +67,16 @@ Getting started with DP0 checklist
 Guidelines and expectations
 ===========================
 
-**Rubin data rights** are required to participate in DP0 (see description below).
+**Rubin data rights** are required to hold an account in the Rubin Science Platform.
+
+**Who has Rubin data rights?**
+All scientists and students affiliated with an institution in the US and Chile have data rights,
+as well as the international scientists and students whose names appear on the
+`list of international data rights holders <https://www.lsst.org/scientists/international-drh-list>`_.
+For more information about data rights, please refer to the
+`Rubin Observatory Data Policy <https://docushare.lsst.org/docushare/dsweb/Get/RDO-013>`_.
+If you're not sure if you have data rights, contact Melissa Graham at mlg3k@uw.edu or 
+with a direct message in the `Rubin Community Forum <https://community.lsst.org/>`_.
 
 **Understand the** :doc:`/data-access-analysis-tools/rsp-warnings` **regarding using the DP0-era RSP**.
 
@@ -66,20 +90,16 @@ Guidelines and expectations
 Rubin Science Platform accounts
 ===============================
 
-**Rubin data rights** are required in order to hold an account in the Rubin Science Platform.
-All scientists and students affiliated with an institution in the US and Chile have data rights,
-as well as the international scientists and students whose names appear on the
-`list of international data rights holders <https://www.lsst.org/scientists/international-drh-list>`_.
-For more information about data rights, please refer to the
-`Rubin Observatory Data Policy <https://docushare.lsst.org/docushare/dsweb/Get/RDO-013>`_.
-If you're not sure if you have data rights, contact Melissa Graham at mlg3k@uw.ed or 
-with a direct message in the `Rubin Community Forum <https://community.lsst.org/>`_.
-
-**Petition and data rights authentication:**
+**Petition for your RSP account:**
 Follow the instructions on `how to get an RSP account <https://rsp.lsst.io/guides/getting-started/get-an-account.html>`_ 
 to submit a petition.
-Using your full professional name and your institutional email address in your petition will facilitate the data rights authentication process.
-It might take a few days for your data rights to be verified and your petition accepted.
+Using your full professional name and your institutional email address will facilitate the process.
+It might take a few days for your Rubin data rights to be verified and your petition accepted.
+
+**Petition approved? You are now a DP0 delegate!**
+Once your petition is approved and you can log in to `data.lsst.cloud <https://data.lsst.cloud>`_, you are a DP0 delegate.
+Welcome!
+Please continue to read the information below and complete the checklist above.
 
 **Log in:**
 Navigate to `data.lsst.cloud <https://data.lsst.cloud>`_ and choose "Log in" at upper-right,
@@ -92,7 +112,7 @@ DP0 delegates are being given access to a *shared-risk developmental version* of
 **Everyone is responsible for their own safe usage of the RSP** and must be familiar with this list of :doc:`/data-access-analysis-tools/rsp-warnings`.
 
 **Deactivating or canceling accounts:**
-Please contact Melissa Graham at mlg3k@uw.ed or 
+Please contact Melissa Graham at mlg3k@uw.edu or 
 with a direct message in the `Rubin Community Forum <https://community.lsst.org/>`_
 for instructions on how to delete your RSP account.
 
@@ -170,14 +190,14 @@ Planning is currently in progress.
 
 .. _Delegate-Homepage-DP0-Delegate-Assemblies:
 
-DP0 delegate assemblies
+DP0 Delegate Assemblies
 -----------------------
 
 **Connection Info:** `ls.st/dp0-events <https://ls.st/dp0-events>`_
 
 **Time:** Biweekly on Fridays from 9am to 11am US Pacific (alternating with :ref:`DP0-Delegate-Programming-StackClub`).
 
-The delegate assemblies are a live, virtual seminars for DP0 delegates to learn more about DP0, the RSP, and the DC2 data set.
+The Delegate Assemblies are live, virtual seminars for DP0 delegates to learn more about DP0, the RSP, and the DC2 data set.
 Attendance is optional and all are welcome.
 
 Typically, the first hour contains a presentation or hands-on tutorial, and the second hour is spent in breakout rooms for discussion or co-working on topics suggested by delegates.
@@ -198,7 +218,7 @@ Stack Club
 
 **Time:** Biweekly on Fridays from 9am to 11am US Pacific time.
 
-**Dates:** Jan 27, Feb 10, 24, Mar 10, 24, Apr 7, 21 (alternating with :ref:`Delegate-Homepage-DP0-Delegate-Assemblies`).
+**Dates:** Apr 7, 21, May 5, 19, June 2, 30, July 14, 28 (alternating with :ref:`Delegate-Homepage-DP0-Delegate-Assemblies`).
 
 `Stack Club <https://github.com/LSSTScienceCollaborations/StackClub>`_ is an open, drop-in session for working with the DP0 data set and/or the Rubin Observatory `LSST Science Pipelines <https://pipelines.lsst.io/>`_ (colloquially called "the Stack").
 Stack Club sessions begin with a roundtable discussion of what people want to do or learn that day, and then work proceeds as people stay connected via Zoom,
@@ -219,7 +239,8 @@ Third Thursday office hour
 These two time slots serve the Asia-Pacific (APAC) and Europe, the Middle East, and Africa (EMEA) time zones, respectively.
 Note that in the western Americas (AMER) time zone, the first slot at 04:00 UTC is actually on Wednesday evening.
 
-| **Dates (2023):** Feb 16, Mar 16, Apr 20.
+| **Dates (2023):** Apr 20, May 18.
+| There will NOT be office hours Thu Jun 15.
 | Additional dates TBD.
 
 These office hour sessions are open, drop-in discussions designed to compensate for the fact that the time of the Delegate Assemblies was only convenient for DP0 delegates in North and South America, Europe, and Africa.
@@ -242,7 +263,7 @@ All delegates are encouraged to use the documentation, instructions, and tutoria
 
 For example, read and follow the step-by-step introductions on how to use the the RSP's :ref:`Tools-RSP-Portal` or :ref:`Tools-RSP-Notebook`.
 Then, work through the :doc:`/tutorials-examples/index`.
-Both the Portal and Notebook tutorials are numbered in increasing in difficulty.
+Both the Portal and Notebook tutorials are numbered in order of increasing difficulty.
 
 **Prepare to do science with the Data Previews.**
 In the coming years, *real commissioning data* will be released as Data Preview 1 (DP1) and DP2,

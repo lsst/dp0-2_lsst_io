@@ -45,15 +45,18 @@ General Advice
 LSST Query Services (Qserv) provides access to the LSST Database Catalogs.
 Users can query the catalogs using standard SQL query language with a few `restrictions <https://qserv.lsst.io/user/index.html#restrictions>`__.
 
-**Fast queries:** 
+**Use spatial constraints on RA and Dec.**
+It is recommended to always start with spatial constraints for a small radius and then expand the search area.
 Qserv stores catalog data sharded by coordinate (RA, Dec).
 ADQL query statements that include constraints by coordinate do not requre a whole-catalog search,
 and are typically faster (and can be *much* faster) than ADQL query statements which only include constraints for other columns.
 
-**Recommended constraint:**
-Include ``detect_isPrimary = True`` in queries for the ``Object``, ``Source``, and ``ForcedSource`` catalogs.
+**Use ``dectect_isPrimary`` = True.**
+It is recommended to include ``detect_isPrimary = True`` in queries for the ``Object``, ``Source``, and ``ForcedSource`` catalogs.
 This parameter is ``True`` if a source has no children, is in the inner region of a coadd patch, is in the inner region of a coadd tract, and is not detected in a pseudo-filter.
-Including this constraint will remove any duplicates (i.e., will not include *both* a parent and its deblended children).
+Including this constraint will remove any duplicates:
+it will not include the parent *and* its deblended children (only deblended children), and
+it will not include detections in the overlapping patch edge regions (only the non-overlapping inner regions).
 
 Additional external resources for learning about SQL, ADQL, and Qserv include:
  - `W3 School's SQL Tutorial <https://www.w3schools.com/sql/default.asp>`__
@@ -194,10 +197,10 @@ Recall that the TAP tables are sharded by RA,Dec, and when RA,Dec constraints ar
 the entire table must be searched, and this can take a long time despite the small amount of data returned.
 
 In the above example, a single object was desired, and a statement like ``WHERE objectId=1486`` was used.
-However, more than a few single objects are desired and their ``objectId`` are known, a query built up of, e.g.,
+However, if more than a few single objects are desired and their ``objectId`` are known, a query built up of, e.g.,
 ``OR objectId=1487 OR objectId=1488 OR objectId=1489`` and so on would work, but there's a better way: ``WHERE objectId IN ()``.
 
-Below, a list of just 12 ``objectId`` are put in a string called ``my_list``, formatted as a python tuple (with round brackets). 
+Below, a list of just 12 ``objectId`` is put in a string called ``my_list``, formatted as a python tuple (with round brackets). 
 This list could contain many more objects and be generated programmatically (e.g., from a different query, or by user analysis),
 and then be included in the ADQL query statement and the TAP service would treat it the same way.
 The number of results returned will equal the length of the list of ``objectId`` passed.

@@ -30,7 +30,7 @@
 This tutorial explores the data for a Type Ia supernova (SNIa) lightcurve: the i-band photometry, the seeing for each i-band epoch, and the astrometric scatter of the i-band observations.
 The scientific motivation here is that a user knows the coordinates of a low-redshift SNIa (67.4579, -44.0802), and now
 wants to find an i-band epoch in which this SNIa was bright *and* the seeing was good.
-The user also wants to get a sense of the scatter in the astrometry for the coordinates in the DiaObjects catalog.
+The user also wants to get a sense of the scatter in the astrometry for the coordinates in the DiaObject catalog.
 For example, perhaps the user knows there is pre-explosion JWST imaging of the host galaxy, and is looking for the best image from Rubin Observatory
 with which to co-register with the JWST image in order to characterize the underlying stellar population at the SNIa's location.
 (Note that typically, laser adaptive optics is necessary to obtain ground-based images of SNe that have high enough astrometric precision to
@@ -126,7 +126,7 @@ Use the settings icon (two gears at upper right) to open the plot parameters pop
     Plot parameters for the seeing versus time plot.
 
 3.4. To add a plot to visualize the astrometric scatter: use the settings icon, choose "Add New Chart" and match the parameters shown below, then click "OK".
-Note that in both the X and Y parameters, the difference between the DiaSource coordinate and the DiaObject coordinate are divided by 3600, so that the plot axes are in arcseconds: ``((ra-67.4579634)*cos(decl*(pi()/180)))*3600`` and ``(decl+44.080243)*3600``.
+Note that in both the X and Y parameters, the difference between the DiaSource coordinate and the DiaObject coordinate are multiplied by 3600, so that the plot axes are in arcseconds: ``((ra-67.4579634)*cos(decl*(pi()/180)))*3600`` and ``(decl+44.080243)*3600``.
 
 .. figure:: /_static/portal_tut02_step03d.png
     :name: portal_tut02_step03d

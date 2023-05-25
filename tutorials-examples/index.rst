@@ -94,6 +94,7 @@ Much of the contents of the tutorial notebooks (above) can also be executed via 
     :glob:
 
     cmdline-beginner
+    cmdline-custom-coadd
 
 
 .. _DP0-2-Tutorials-Contributed:

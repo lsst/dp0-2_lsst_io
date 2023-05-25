@@ -49,7 +49,7 @@ A demonstration of its use can be found in tutorial notebook 03a, Image Display 
         Parameters
         ----------
         butler: lsst.daf.persistence.Butler
-            Servant providing access to a data repository
+            Helper object providing access to a data repository
         ra: float
             Right ascension of the center of the cutout, in degrees
         dec: float
@@ -114,7 +114,7 @@ A demonstration of its use can be found in tutorial notebook 03a, Image Display 
         Parameters
         ----------
         butler: lsst.daf.persistence.Butler
-            Servant providing access to a data repository
+            Helper object providing access to a data repository
         ra: float
             Right ascension of the center of the cutout, in degrees
         dec: float

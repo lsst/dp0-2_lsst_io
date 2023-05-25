@@ -69,7 +69,7 @@ Templates
 
 A template folder is located in the :doc:`documentation project directory </project/index>`.
 It contains template pages for the Documentation for DP0.2, including a directory index.
-Review the README in the template folder for instructions, then update the contents accordingly.
+Review the template folder contents for instructions, then update the contents accordingly.
 
 .. _Documentation-DP0-2-Style-Guide-Titles-and-Headings:
 

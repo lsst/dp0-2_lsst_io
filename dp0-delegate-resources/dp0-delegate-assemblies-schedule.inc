@@ -73,24 +73,43 @@
      - `Milky Way halo science (Jeff Carlin) <https://community.lsst.org/t/summary-delegate-assembly-fri-feb-3-2023/7405>`__
      - *breakouts*
    * - 2023-02-17
-     - `Truth data (Jeff Carlin & Melissa Graham) <https://www.youtube.com/watch?v=Sd3SWRNPDPw>`__
+     - `Truth data (Jeff Carlin & Melissa Graham) <https://community.lsst.org/t/summary-delegate-assembly-fri-feb-17/7549>`__
      - *breakouts*
    * - 2023-03-03
      - Account setup in the RSP's new identity management system
      - *breakouts*
    * - 2023-03-17
-     - Time domain science (Ryan Lau)
+     - `Time domain science (Ryan Lau) <https://community.lsst.org/t/summary-delegate-assembly-fri-mar-17-2023/7522>`__
      - *breakouts*
    * - 2023-03-31
-     - Deblender Data Products (Christina Williams)
+     - `Deblender Data Products (Christina Williams) <https://community.lsst.org/t/summary-delegate-assembly-fri-mar-31-2023/7550>`__
      - *breakouts*
    * - 2023-04-14
-     - Variability in YSOs (Sabina Ustamujic)
+     - `Variability in YSOs (Sabina Ustamujic) <https://community.lsst.org/t/summary-delegate-assembly-fri-apr-14-2023/7578>`__
      - *breakouts*
    * - 2023-04-28
-     - *tbd; delegate volunteers welcome*
+     - `Dan Ryczanowski (30 min; "Lensed Explosive Transients with DP0.2") and Antonio Vanzanella (15 min; "Finding long-period Solar System or interstellar objects with machine learning in LSST.") <https://community.lsst.org/t/summary-delegate-assembly-fri-apr-28/7633>`__
+     - *breakouts*
+   * - 2023-05-12
+     - 23A Meeting of the `Rubin Users Committee <https://www.lsst.org/scientists/users-committee>`__
+     - *breakouts*
+   * - 2023-05-26
+     - ChatGPT & Jupyter Notebooks by Allan Jackson
+     - *breakouts*
+   * - 2023-06-09
+     - *tbd, delegate volunteers welcome*
+     - *breakouts*
+   * - 2023-06-23
+     - *tbd, delegate volunteers welcome*
+     - *breakouts*
+   * - 2023-07-07
+     - *tbd, delegate volunteers welcome*
+     - *breakouts*
+   * - 2023-07-21
+     - *tbd, delegate volunteers welcome*
      - *breakouts*
 
+	
 Additional delegate assemblies to be posted.
 Rows in *italics* are tentative topics.
 	

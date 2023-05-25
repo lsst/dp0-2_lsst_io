@@ -14,13 +14,13 @@
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
 .. A warning will alert you of identical labels during the linkcheck process.
 
-#################################
-Documentation Project Information
-#################################
+#######################################
+DP0.2 Documentation Project Information
+#######################################
 
 .. This section should provide a brief, top-level description of the page.
 
-This page includes information on the documentation project, including how to contribute.
+This page includes information on the DP0.2 documentation project, including how to contribute.
 
 .. toctree::
     :maxdepth: 2 

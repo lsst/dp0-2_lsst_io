@@ -56,6 +56,22 @@ May 24 2023
 
 Released Portal tutorials 04 and 05.
 
+May 15 2023
+-----------
+
+Added command line version of Notebook 09a, with a warning that it must be run with uncached RSP image Weekly 2022_40.
+
+Apr 12 2023
+-----------
+
+Notebooks 09a and 09b have been reinstated, with a warning that they must be run with uncached RSP image Weekly 2022_40.
+
+Mar 07 2023
+-----------
+
+Notebook 10 on deblender data products created and released.
+
+Notebook 07b has been updated to use the ``ForcedSourceOnDiaObjects`` table.
 
 Feb 16 2023
 -----------
@@ -71,7 +87,6 @@ Notebook 06a, Section 2.1 has been updated to use ``calexp.visitInfo.id`` and ``
 
 Many notebooks have had minor updates to use ``SELECT TOP`` instead of ``MAXREC`` (the latter produces an unavoidable but non-fatal warning)
 and/or remove the use of the ``%%time`` magic as all code cells now have an execution time display built-in.
-
 
 Feb 06 2023
 -----------
@@ -110,7 +125,7 @@ Notebook 07a (DiaObject samples) updated to use the recently released ``ForcedSo
 Notebooks 09a and 09b (custom coadds) added.
 
 
-Oct 4 2022
+Oct 04 2022
 ----------
 
 Notebook 08 (truth tables) updated to optimize TAP query.

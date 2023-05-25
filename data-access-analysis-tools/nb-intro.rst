@@ -22,7 +22,7 @@ Introduction to the RSP Notebook Aspect
 
 Most RSP users will find Jupyter Notebooks to be the most efficient and powerful way to interact with the LSST data sets.
 
-**Always save and shutdown all notebooks and log out of JupyterLab when you are done your day's work.**
+**Always save and shutdown all notebooks and log out of JupyterLab when you are done with your day's work.**
 This is important to preserve resources for other users and to ensure you re-enter the RSP in a known state every time.
 To help users avoid issues with stale instances, sessions will be automatically shut-down after 5 days of inactivity, or after 25 days.
 
@@ -106,7 +106,7 @@ As described in the default message that appears in all newly-launched terminals
    setup lsst_distrib
 
 For example, to query and retrieve data sets using the Butler (see :ref:`NB-Intro-Use-A-NB-faq-butler`, below), command-line tools are available as `documented here <https://pipelines.lsst.io/v/weekly/modules/lsst.daf.butler/scripts/butler.html>`_.
-Type "butler --help" in any terminal to see a list of available butler functionality.
+Type ``butler --help`` in any terminal to see a list of available butler functionality.
 
 
 .. _NB-Intro-Use-A-NB:
@@ -135,7 +135,7 @@ This is very handy, but you can also arrange both notebooks and terminals next t
 Arranging the windows can be convenient when working in both a terminal and notebook at the same time, or when using another notebook as a reference.
 
 **JupyterLab Autosaves Notebooks:**
-Note that JupyterLab autosaves your notebooks at a default rate of 2 minutes
+Note that JupyterLab autosaves your notebooks at a default interval of 2 minutes
 unless you are working in the directory "notebooks/tutorial-notebooks/", which is read-only (see next section).
 
 
@@ -215,14 +215,14 @@ This is a time- and space-consuming process, so we do not recommend it.
 
 .. _NB-Intro-Use-A-NB-faq-github:
 
-Do I need to know git?
+Do I need to know Git?
 ----------------------
 
-Although use of git and GitHub are not necessary for DP0 participation, most Rubin Observatory staff and LSST Science Collaborations use git and GitHub, and it is highly recommended for all RSP users.
+Although use of Git and GitHub are not necessary for DP0 participation, most Rubin Observatory staff and LSST Science Collaborations use Git and GitHub, and it is highly recommended for all RSP users.
 Git is free open-sourced software for change-tracking and version control of any set of files that are edited by one or more contributors.
-GitHub is a web-based provider for git functionality, plus it offers a few of its own features.
-In this Community Forum thread, everyone can find and share `resources for learning about git and GitHub <https://community.lsst.org/t/resources-for-github/6153>`_.
-A few of the :ref:`NB-Intro-Use-A-NB-tips` below involve the use of git.
+GitHub is a web-based provider for Git functionality, plus it offers a few of its own features.
+In this Community Forum thread, everyone can find and share `resources for learning about Git and GitHub <https://community.lsst.org/t/resources-for-github/6153>`_.
+A few of the :ref:`NB-Intro-Use-A-NB-tips` below involve the use of Git.
 
 
 .. _NB-Intro-Use-A-NB-faq-butler:
@@ -262,7 +262,7 @@ How to recover from package import errors (ImportError)
 -------------------------------------------------------
 
 **The Problem:** In this case the problem manifests when a package cannot be properly imported.
-This leads to an ImportError for which the last line of the traceback actually points to the file it is trying to import from, and it is in the users ".local" directory.
+This leads to an ImportError for which the last line of the traceback actually points to the file it is trying to import from, and it is in the user's ".local" directory.
 
 If a user sees a mention of ".local" anywhere in the exception, there is a chance they have installed packages that are polluting stack environments, and this is a big red flag that following the solution below will be necessary.
 
@@ -283,19 +283,19 @@ There will be no need to recreate the ".local" directory after this.
 The user should then restart the notebook (or, e.g., ipython session) and try to import the packages.
 
 
-How to make git stop asking for my password
+How to make Git stop asking for my password
 -------------------------------------------
 
-It is recommended that all git users working in the RSP to configure git and set up an SSH key.
-First, using a terminal in the Notebook aspect, set the global git configurations.
+It is recommended that all Git users working in the RSP configure Git and set up an SSH key.
+First, using a terminal in the Notebook aspect, set the global Git configurations.
 
 .. code-block:: bash
 
    git config --global user.email yourEmail@yourdomain
    git config --global user.name GitUsername
 
-Then, using a terminal in the Notebook aspect, follow these instructions for `generating a new SSH key and adding it to the ssh-agent <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent>`_.
+Then, using a terminal in the Notebook aspect, follow these instructions for `generating a new SSH key and adding it to the ssh-agent <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=linux>`_.
 Be sure to follow the instructions for the Linux environment (i.e., the RSP environment), regardless of your personal computer's environment, because you are generating an SSH key *for your account in the RSP*.
 
-When you `git clone` new repositories, use the SSH link.
-If successful, you will be able to git fetch and push without entering your git password.
+When you ``git clone`` new repositories, use the SSH key.
+If successful, you will be able to ``git fetch`` and ``git push`` without entering your Git password.

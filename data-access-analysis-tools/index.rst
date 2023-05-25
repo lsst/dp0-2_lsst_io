@@ -26,6 +26,10 @@ Throughout DP0 the RSP will be in active development by Rubin Observatory staff,
 
 See `Rubin Science Platform Documentation <https://data.lsst.cloud/docs>`_ page for additional information.
 
+Note that the contents of this page address the current, DP0-era functionality.
+Use of the DP0-era RSP comes with some risks and responsibilities, as described below.
+Scroll down to the bottom of this page for more information about the future RSP functionality.
+
 
 .. _Data-Access-Analysis-Tools-RSP:
 
@@ -36,8 +40,6 @@ The Rubin Science Platform (RSP) provides access to Rubin Observatory data produ
 The :ref:`Tools-RSP-Notebook` enables programmatic interaction with, and analysis of, data products in a python environment.
 The :ref:`Tools-RSP-Portal` provides interactive query, data discovery, and visualization tools.
 
-During DP0, the RSP has limited functionality (see :ref:`Data-Access-Analysis-Tools-Warnings`) compared to the Operations-era (see the RSP Vision Document, `LSE-319 <https://ls.st/lse-319>`_).
-During Rubin Observatory Operations, the RSP will feature additional tools in the Application Programming Interface (API) aspect and more options for using the Portal and Notebook aspects in tandem.
 
 .. figure:: /_static/RSP_home.png
     :name: RSP_home
@@ -74,6 +76,7 @@ Note that the Portal Aspect is expected to evolve significantly before the first
 
     portal-intro
 
+
 .. _Tools-RSP-Notebook:
 
 Notebook Aspect
@@ -99,7 +102,7 @@ API Aspect
 ----------
 
 The API (Application Programming Interface) Aspect of the RSP enables programmatic access to the Rubin data products via Virtual Observatory (VO) interfaces.
-Users will be able to remotely access the LSST data and DAC services using tools they’re already familiar with,
+Users will be able to remotely access the LSST data and `Data Access Center <https://www.lsst.org/about/dm/facilities>`_ (DAC) services using tools they’re already familiar with,
 e.g. `TOPCAT <http://www.star.bris.ac.uk/~mbt/topcat/>`__ or libraries such as `Astropy <https://www.astropy.org>`__.
 The Portal and Notebook Aspects of the RSP make use of the same APIs to internally access the LSST datasets.
 
@@ -147,3 +150,27 @@ Data processing tools
 Documentation for the LSST Science Pipelines, a software package which is available to all RSP users via the Notebook Aspect, can be found at `pipelines.lsst.io <https://pipelines.lsst.io>`_.
 
 A brief summary of how the LSST Science Pipelines were used to create the DP0.2 data products can be found in this :doc:`/data-products-dp0-2/data-processing`.
+
+
+
+.. _Data-Access-Analysis-Tools-Future:
+
+RSP Future Functionality
+========================
+
+During DP0, the RSP has limited functionality (see :ref:`Data-Access-Analysis-Tools-Warnings`) compared to the Operations-era RSP
+as described in the RSP Vision Document, `LSE-319 <https://ls.st/lse-319>`_.
+
+For example, during Rubin Observatory Operations, the RSP will feature more tools in the Application Programming Interface (API) aspect than are described above, 
+and more options for using the Portal and Notebook aspects in tandem.
+
+See the following FAQ (and references therein) for more details on the future functionality of the RSP.
+
+
+.. toctree::
+    :maxdepth: 2
+    :glob:
+
+    rsp-future-faq
+
+
