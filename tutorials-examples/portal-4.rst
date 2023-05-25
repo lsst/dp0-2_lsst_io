@@ -79,8 +79,7 @@ These conditions will return only bright, deblended, extended objects (i.e., ind
 
 .. figure:: /_static/portal_tut04_step01a.png
 	:name: portal_tut04_step01a
-	:alt: Screenshot of the Portal Aspect's ADQL query entry page, showing the query given above pasted into the
-	query box and the Search button at lower left.
+	:alt: Screenshot of the Portal Aspect's ADQL query entry page, showing the query given above pasted into the query box and the Search button at lower left.
 
 .. _DP0-2-Portal-Histogram-Step-2:
 
@@ -218,8 +217,7 @@ Choose green for g-band and orange for r-band.
 
 .. figure:: /_static/portal_tut04_step04d.png
 	:name: portal_tut04_step04d
-	:alt: A screenshot of the plot parameters and color picker pop-up windows showing how to adjust the visual aspects
-	of the histograms.
+	:alt: A screenshot of the plot parameters and color picker pop-up windows showing how to adjust the visual aspects of the histograms.
 
 4.6. Review the final plot. 
 Notice that it is possible to change which trace is “in front” using the drop-down menu to the left of the magnifying glass icon. 
@@ -237,8 +235,7 @@ Step 5.  Restrict all plots to objects near the rich cluster
 
 .. figure:: /_static/portal_tut04_step05a.png
 	:name: portal_tut04_step05a
-	:alt: A screenshot of the portal's results view showing both the color-magnitude heatmap and the magnitude histograms
-	for all galaxies returned by the original search.
+	:alt: A screenshot of the portal's results view showing both the color-magnitude heatmap and the magnitude histograms for all galaxies returned by the original search.
 
 5.2. Restrict the results to only those objects within < 0.05 degrees of the cluster center by entering “< 0.05” into the constraints 
 box for the ``radial_offset`` column and clicking enter. 
@@ -249,8 +246,7 @@ Cool!
 
 .. figure:: /_static/portal_tut04_step05b.png
 	:name: portal_tut04_step05b
-	:alt: A screenshot of the portal's results view showing both the color-magnitude heatmap and the magnitude histograms
-	for all galaxies within 0.03 degrees of the original search coordinates.
+	:alt: A screenshot of the portal's results view showing both the color-magnitude heatmap and the magnitude histograms for all galaxies within 0.03 degrees of the original search coordinates.
 
 Step 6.  Exercises for the learner
 ==================================
