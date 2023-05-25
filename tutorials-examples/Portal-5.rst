@@ -40,8 +40,10 @@ Portal Tutorial 02, which has a ``DiaObjectId`` of ``1252220598734556212``.
 
 .. _DP0-2-Portal-5-Step-1:
 
-Step 1. Plot the single-band lightcurve 
-=======================================
+Step 1. Plot a single-band lightcurve 
+=====================================
+
+This first step is a repeat of Portal Tutorial 02, and can be skipped.
 
 1.1. Log in to the Portal Aspect of the Rubin Science Platform.  
 
@@ -100,6 +102,7 @@ the settings icon (double gears, as the red arrow points in the figure below).
 
 1.6. Update the plot parameters as shown in the figure below.
 Note that the grid line in the y-axis is selected.
+Click "Apply".
 
 .. figure:: /_static/portal_tut05_step01c.png
     :width: 300
@@ -126,15 +129,18 @@ in the Portal, and should be done in the Notebook Aspect.
 
 .. _DP0-2-Portal-5-Step-2: 
 
-Step 2.  Making a multi-band lightcurve on a single plot
-========================================================
+Step 2.  Plot a multi-band lightcurve
+=====================================
 
-Our goal here is to plot a multi-band lightcurve with flux measurements in different bands appearing in different colors on the same plot.  
-This is not currently supported by the Portal functionality, but is in the Portal development plan, to be implemented in the future.  
-Beyond various bands appearing in different colors, it is envisioned that it will be possible to add a legend in the plot.  
-However, currently there is a relatively simple workaround - see below for the necessary steps (but if needed for e.g. making the plot publication-ready, the legend needs to be added separately).  
+**WARNING:** The Portal does not yet have the built-in functionality to plot a multi-band lightcurve (i.e., to color lightcurve points
+by their bandpass and add a legend).
+What follows is a demonstration of a temporary work-around for Portal users: convert the band (u, g, r, i, z, or y) into an
+ASCII value (e.g., 121, 114, 105) and then set a colorbar for the points based on these values.
+For the Notebook Aspect, see tutorial notebook 07a and 07b for multi-band lightcurve demonstrations.
 
-2.1. We will start with the same ADQL query as previously, but with the last line (specifically, ``AND fsodo.band = 'i'``) missing (meaning we will not select just the i-band data).  Start with entering the query below into the ADQL query box:  
+2.1. Return to (or start at, if Step 1 was skipped) the ADQL Query interface and enter the query below.
+Note that the only difference here compared to Step 1 is that the last line (``AND fsodo.band = 'i'``) is missing,
+so that data for all bands will be returned.
 
 .. code-block:: SQL 
 
@@ -147,57 +153,75 @@ However, currently there is a relatively simple workaround - see below for the n
    ON cv.ccdVisitId = fsodo.ccdVisitId 
    WHERE fsodo.diaObjectId = 1252220598734556212 
 
-2.2.  First, we can plot the multi-band lightcurve with identical color markers for all bands, following the steps outlined in Step 1.5 to plot flux vs. MJD.  
-This will return the plot as on the right hand side of the screenshot below.  
-Note that there are many more points on the plot than you had in Step 1 - this is because you didn't restrict the ADQL search to only i-band but chose all bands.  
+2.2. Follow steps 1.4, 1.5, and 1.6 to plot the multi-band lightcurve with identical color markers for all bands. 
+The plot will appear as in the right hand side of the figure below. 
+Note that there are many more points on the new plot, because all bands are included instead of just i-band.
 
-2.3  To distinguish various bands in the lightcurve, one can use the following trick:  one can add an additional column to the table generated in the previous search.  
-This new column would be an ASCII value of the "band" entry, which is currently in the "character" format.  
-To add a new column in the table, one needs to click on the 5th icon in the retrieved table, as below.  
+2.3. The work-around to convert the band (u, g, r, i, z, or y) into an ASCII value (e.g., 121, 114, 105) starts with
+adding a column, and setting it to be the ASCII value of the ``band`` column.
+To add a new column, click the 5th icon in the results table (the vertical rectangle with a + sign), as shown in the figure below.  
 
 .. figure:: /_static/portal_tut05_step02a.png
     :name: portal_tut05_step02a
+    :alt: The results view table, with a red arrow pointing to the icon to add a column.
 
-This brings a new window, where you should enter a new name of the column (here it is "bands_ascii") and enter an expression converting the character in the "band" column to its ASCII value, namely ``ascii("band")``.  
-It is also necessary to specify the data type - it needs to be "long" - see the screenshot below.  
-Click on "Add column" as below:  
+2.4. In the "Add a column" pop-up window, enter a name for the new column (``bands_ascii``) and the expression to convert
+the character in column ``band`` into its ASCII value: ``ascii("band")``. 
+Set the "Data Type" to long, then click on "Add column", as shown in the figure below.  
 
 .. figure:: /_static/portal_tut05_step02b.png
+    :width: 300
     :name: portal_tut05_step02b
+    :alt: A screenshot of the pop-up window for adding a new column that is the ascii for the band.
 
-2.4.  Clicking on "Add Column" will result in a new column in a numeric format, corresponding to the ASCII value of the character in the "band" column (now the rightmost column on the screenshot below, marked with (1)).  
+2.5. In the results view, see the new column in a numeric format: the corresponding ASCII value of the character in the ``band`` column.
+In the figure below, the new column named ``bands_ascii`` is marked with a red arrow labeled with the number one.
 
 .. figure:: /_static/portal_tut05_step02c.png
     :name: portal_tut05_step02c
+    :alt: A screenshot of the results view page showing a new column named bands_ascii.
 
-2.5.  Now in order to have data in various filters appear in different colors, you need to change the plot parameters by clicking the two gears (marked as a red arrow with "(2)" above).  
-This brings a window as below, where you need to click on "Trace Options" and enter "bands_ascii" in the "Color Map" line, and "Rainbow" in the "Color Scale" line.  
+2.6. Set the colorbar for the points based on the values in the new column ``bands_ascii``. 
+Open the "Plot Parameters" pop-up window by clicking on the settings icon 
+(marked with a red arrow labeled with the number two in the figure above).
+Under "Trace Options" "bands_ascii" for the "Color Map" and "Rainbow" for the "Color Scale", as shown in the figure below.
+Click "Apply".
 
 .. figure:: /_static/portal_tut05_step02d.png
     :name: portal_tut05_step02d
+    :alt: A screenshot of the plot parameters pop-up window that shows the trace options set for a rainbow colorscale
+    based on the new column of ascii values.
 
-Once you click on "Apply" - you will see the plot of the supernova lightcurve in various bands.  
+2.7. View the new version of the lightcurve with the points colored by band, as in the figure below.
+Use the mouse to hover-over points in the plot, and notice that the pop-up info box for a given point includes only the
+data included in the plot: x-axis value, y-axis value, and the ``bands_ascii`` value. 
 
 .. figure:: /_static/portal_tut05_step02e.png
     :name: portal_tut05_step02e
+    :alt: A screenshot of the results table and the multi-band lightcurve with points colored by band.
     
-Note that the colors displayed above are arbitrarily assigned to a given ascii value for each filter.  
-You can hover over the individual points on the plot, and the displayed values will be the ascii value of the data point, and not the filter.  
+2.8. Restrict the multi-band lightcurve back down to a single filter without redoing the ADQL query.
+Apply a filter to the ``band`` column of the table by entering ``= 'r'`` into the box below the header row (top of the column), 
+and press enter (or return) on the keyboard.
+Do it again for ``= 'g'``, and notice that the points are different, but are green both times.
+The point colors are not assigned in an absolute sense, but rather the color scaling is reapplied every time the plot changes.
 
-2.6  Now you can select data obtained by a single filter or combination of filters without re-issuing the ADQL query.  
-You can constrain it to display only e.g. the r-band filter data by inserting "r" into the little box below the headng of the "band" column on the table on the left, and pressing return.  
-Note that the color of data points on the plot for a single filter will always appear in green.  
-You can select multiple filters (say "r" in addition to "i") via inserting "r OR i" - this will always display the data points in orange and mauve (see below).  
-While not being able to choose your own symbols  or colors for data points on the plot is a drawback, the future releases of the Portal will bring further improvements.  
+2.9. Restrict the multi-band lightcurve to two filters by entering ``= 'r' or 'i'``. 
+See how the point colors are orange and mauve (as in the figure below). 
 
 .. figure:: /_static/portal_tut05_step02f.png
     :name: portal_tut05_step02f
+    :alt: A screenshot of the results table and a two-band lightcurve.
+
+**Note:** While not being able to choose your own symbols or colors for data points on the plot is a temporary drawback
+of the Portal, the future releases will bring improved functionality.
+
 
 .. _DP0-2-Portal-5-Step-3:  
 
 Step 3.  Exercises for the learner
 ==================================
 
-3.1.  Add error bars to the lightcurves. 
+3.1. Add error bars to the lightcurve. 
 
-3.2.  Try another supernova and follow the steps above: you can try one with the ObjectId ``1250953961339360185``.  
+3.2. Try another supernova and follow the steps above (e.g., use ``diaObjectId = 1250953961339360185``).
