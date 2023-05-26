@@ -97,7 +97,7 @@
      - ChatGPT & Jupyter Notebooks by Allan Jackson
      - *breakouts*
    * - 2023-06-09
-     - `Portal Tutorial 04 (histograms) and Portal 05 (multi-band light curves) (Greg Madejski)`
+     - Portal Tutorial 04 (histograms) and Portal 05 (multi-band light curves) (Greg Madejski)
      - *breakouts*
    * - 2023-06-23
      - *tbd, delegate volunteers welcome*
