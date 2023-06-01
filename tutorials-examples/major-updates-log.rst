@@ -51,6 +51,17 @@ and clicking on "history" (near upper-right).
 Major Updates Log
 =================
 
+June 1 2023
+-----------
+
+The recommended image of the RSP at data.lsst.cloud was bumped to Weekly 2023_21.
+
+In notebooks 02 and 06b, deprecated Bokeh keyword arguments "plot_height" and "plot_width" were replaced with "height" and "width". The same two notebooks were updated to cast the objectId to a string, because Bokeh was not able to handle such large integers.
+
+An update that was required in many notebooks was replacing "get_tap_service()" with "get_tap_service("tap")" (due to deprecation of the former syntax).
+
+Finally, calls to the deprecated method "butler.getDirect()" were replaced with "butler.get()" in a few places.
+
 May 24 2023
 -----------
 
