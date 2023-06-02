@@ -77,39 +77,43 @@ it is not necessary for this tutorial to actually retrieve the data in those col
 Step 2. Create the color-magnitude diagram
 ==========================================
 
-The default Results view shows a sky-image at upper left (with the coordinates of returned objects marked on it),
-a xy table at upper right, and a table of the results values along the bottom.
-At the time this tutorial was created, the sky-image was still 2MASS and not a DC2 simulated image, so this tutorial does not involve use of the sky-image.
-
-2.1. In the upper left corner, click "xy-tbl" to show only the default xy plot along the top (in this case, plotting the two sky coordinates columns), and the table along the bottom of the screen.
-
-**Notice:** The objects retrieved *do not* fill in the search area (a 1 degree radius) in the xy plot of "coord_ra" versus "coord_dec".
-This is because a row limit of 10000 objects was applied, and the data is partitioned into files by sky coordinate.
-The query accessed these files until 10000 objects were found (i.e., the query *does not* find *all objects* that satisfy the query parameters and then choose 10000 random objects to return).
+The default "Tri-view" layout shows a sky coverage map from DESC DC2 simulation at upper left, an active chart showing the spatial distribution of returned 
+objects at upper right, and a table of the search results along the bottom.
 
 .. figure:: /_static/portal_tut01_step02a.png
 	:name: portal_tut01_step02a
 	
-	The Results view with "xy-tbl" selected.
+	The default Results view with "Tri-view".
+
+2.1. In the upper right corner, click "Bi-view Tables" to show only either the active chart or the sky coverage map (switching between the two by clicking the tap "Active Chart"/"Coverage") in the right along with the table in the left of the screen.
+
+**Notice:** The objects retrieved *do not* fill in the search area (a 1 degree radius) in the default active chart of "coord_ra" versus "coord_dec".
+This is because a row limit of 10000 objects was applied, and the data is partitioned into files by sky coordinate.
+The query accessed these files until 10000 objects were found (i.e., the query *does not* find *all objects* that satisfy the query parameters and then choose 10000 random objects to return).
+
+.. figure:: /_static/portal_tut01_step02b.png
+	:name: portal_tut01_step02b
+	
+	The Results view with "Bi-view Tables" selected.
 	
 
 **Notice:** In order to plot color (r-i magnitude) versus magnitude (g), the fluxes (which are in units of nanojansky) are being converted to AB magnitudes in the next step. The `AB Magnitudes Wikipedia <https://en.wikipedia.org/wiki/AB_magnitude>`_ page provides a concise resource for users who are unfamiliar with AB magnitudes and fluxes in units of janskys.
 
-2.2. Click on the xy plot settings icon (two gears, upper right) in order to "modify trace", which means to change the plot parameters.
+2.2. Click on the Active Chart settings icon (two gears, upper right) in order to "modify trace", which means to change the plot parameters.
 Set "X" to be "(-2.5 * log10(r_calibFlux)) - (-2.5 * log10(i_calibFlux))", and "Y" to be "-2.5 * log10(g_calibFlux) + 31.4".
-Leave the color scale and the bins as they are, and click on "Chart Options" to show the options.
+Leave the options on "Trace Options" as they are, and click on "Chart Options" to show the options.
 For "Chart title" enter "Color-Magnitude Diagram"; set "X Label" to "color (r-i)"; set "Y Label" to "magnitude (g)", and underneath check the "Options" box for "reverse".
 Set the "X Min/Max" values to "-0.5" and "2.0", and the "Y Min/Max" values to "16.5" and "25.5".
 
-.. figure:: /_static/portal_tut01_step02b.png
-	:name: portal_tut01_step02b
+.. figure:: /_static/portal_tut01_step02c.png
+	:name: portal_tut01_step02c
 	
 	Set the plot parameters.
 
 2.3. Click "Apply" and then "Close" the pop-up window, and look at the color-magnitude plot.
 
-.. figure:: /_static/portal_tut01_step02c.png
-	:name: portal_tut01_step02c
+.. figure:: /_static/portal_tut01_step02d.png
+	:name: portal_tut01_step02d
 	
 	The color-magnitude diagram.
 
@@ -123,21 +127,21 @@ The discrete sequences at red colors, (g-i) > 0.5, come from the discretized pro
 Change the "Plot Type" to "Heatmap", and then set the "X" and "Y" to the same equation as in Step 2.2.
 Use the same "Chart Options" except give it a different "Chart title", such as "Heatmap Color-Magnitude Diagram."  
 
-.. figure:: /_static/portal_tut01_step02d.png
-	:name: portal_tut01_step02d
+.. figure:: /_static/portal_tut01_step02e.png
+	:name: portal_tut01_step02e
 	
 	Above, we set the new chart parameters for a heatmap plot.
 
 2.5. Click "OK" and "Close", and look at the new color-magnitude plot.  For completeness, you might wish to update the title of the plot you generated previously to "Scatter Color-Magnitude Diagram."  
 
-.. figure:: /_static/portal_tut01_step02e.png
-	:name: portal_tut01_step02e
+.. figure:: /_static/portal_tut01_step02f.png
+	:name: portal_tut01_step02f
 	
 	The color-magnitude diagrams, including the previously made scatter plot (left) and the heatmap (right).
 
 2.6. Interact with the plot.
-Hover over the data points with a mouse and see the x and y values appear in a pop-up window.
-Select a row in the table and it appears as a different color in the plot, and vice-versa: select a point in the plot and it is highlighted in the table below.
+Hover over the data points with a mouse either on the Coverage map (see the coordinates change in the bottom of the map) or the Active Chart (see the x and y values appear in a pop-up window). 
+Select a row in the table and it appears as a different color in the plot(s), and vice-versa: select a point in a plot and it is highlighted in the table below.
 
 
 .. _DP0-2-Portal-Beginner-Step-3:
