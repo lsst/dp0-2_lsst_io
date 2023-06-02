@@ -40,16 +40,17 @@ Step 1. Set the query constraints
 
 1.1. Log in to the Portal Aspect.
 
-1.2. Under "TAP Searches", leave "1. Select TAP Service" at its default "LSST RSP \https://data.lsst.cloud/api/tap", and leave "2. Select Query Type" at its default "Single Table (UI assisted)".
+1.2. Under "TAP Searches", leave the "Use Image Search (ObsTAP)" box unchecked, and leave "View" at its default "UI assisted".
 
-1.3. Next to "3. Select Table", choose the Table Collection to be "dp02_dc2_catalogs" (left drop-down menu) and the Table to be "dp02_dc2_catalogs.Object" (right drop-down menu).
+1.3. Next to "LSST DP0.2 DC2 Tables", choose the Table Collection to be "dp02_dc2_catalogs" (left drop-down menu) and the Table to be "dp02_dc2_catalogs.Object" (right drop-down menu).
 
-1.4. Under "4. Enter Constraints", select the box to the left of "Spatial".
-Set the "Longitude Column" to "coord_ra", the "Latitude Column" to "coord_dec", to match the sky coordinates column names in the Object table.
-Leave the "Shape Type" as the default "Cone", and for "Coordinates or Object Name" use the central coordinates of the DC2 simulation area "62, -37".
+1.4. Under "Enter Constraints", select the box to the left of "Spatial".
+Leave the "Shape Type" as the default "Cone", and for "Coords or Obj Name" use the central coordinates of the DC2 simulation area "62, -37".
 Next to "Radius", from the drop down menu choose "degrees" *and then* enter "1" in the box and press enter to set the search radius to 1 degree.
 
-1.5. In the table at right, under "Output Column Selection and Constraints", click the box in the left-most column to select "column_names" "coord_ra", "coord_dec", "detect_isPrimary", "g" "r" and "i_calibFlux", and "g" "r" and "i_extendedness".
+1.5. In the table at right, under "Output Column Selection and Constraints", click the box in the left-most column to select "coord_ra", "coord_dec", "detect_isPrimary", "g" "r" and "i_calibFlux", and "g" "r" and "i_extendedness". Column names are searchable. To avoid scrolling a long column list, 
+enter a keyword (e.g., "calibFlux") in the box right below the "Name" column. It will list all the column names containing the given keyword. 
+After selecting the needed columns (e.g., "g" "r" and "i_calibFlux"), clear the box and hit the return key to continue selecting other columns. 
 Click on the funnel symbol at the top of the checkbox column to filter the table view to show selected columns only.
 
 1.6. In the "constraints" column, enter "=1" for the "detect_isPrimary", ">360" for the fluxes, and "=0" for the extendedness parameters.
@@ -59,7 +60,7 @@ in the g, r, and i filters, and which appear to be point-like (not extended, but
 At this point the boxes selecting the "extendedness" and "detect_isPrimary" parameters can be unchecked, because
 it is not necessary for this tutorial to actually retrieve the data in those columns, only to constrain the query based on their values.
 
-**Notice:** At this point, with the query all set up, clicking "Populate and Edit ADQL" will switch the Query Type to "Edit ADQL (advanced)" and populate the ADQL query box, as shown in Step 3 below.
+**Notice:** At this point, with the query all set up, clicking "Populate and Edit ADQL" will switch the Query Type to "Edit ADQL" and populate the ADQL query box, as shown in Step 3 below.
 
 1.7. Set the "Row Limit" to 10000, to only retrieve 10000 objects for this demonstration.
 
