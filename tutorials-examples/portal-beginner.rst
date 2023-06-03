@@ -150,7 +150,7 @@ Step 3. Do the same query with ADQL
 ===================================
 
 3.1. Clear the search results and return to the main Portal interface.
-Under "2. Select Query Type" select "Edit ADQL (advanced)", and enter the following in the box under "ADQL Query".
+In the upper right, select "Edit ADQL" for "View", and enter the following in the box under "ADQL Query".
 
 .. code-block:: SQL
 
@@ -177,8 +177,8 @@ will return random subsets.
 Step 4. Transfer ADQL queries or results from the Portal to the Notebook Aspect
 ===============================================================================
 
-4.1. As described under Step 1.6, once a query is all set up in the Portal using the "Single Table (UI assisted)",
-click "Populate and Edit ADQL" to switch the Query Type to "Edit ADQL (advanced)" and populate the ADQL query box.
+4.1. As described under Step 1.6, once a query is all set up in the Portal using the "UI assisted",
+click "Populate and Edit ADQL" to switch the Query Type to "Edit ADQL" and populate the ADQL query box.
 Shown below is the same query as in Step 3.1 above:  
 
 .. figure:: /_static/portal_tut01_step04a.png  
@@ -204,7 +204,7 @@ Click on the "info" button (letter "i" in a circle), and a pop-up window will ap
 .. figure:: /_static/portal_tut01_step04c.png  
 	:name: portal_tut01_step04c
 
-The "Job Link" in the pop-up is the URL to the query results.
+The "UWS JOB URL" in the pop-up is the URL to the query results.
 Click on the clipboard icon to copy the URL to your clipboard.
 
 As demonstrated in Section 5.4 of the second tutorial notebook, 02 Catalog Queries with TAP,
@@ -212,7 +212,7 @@ the URL can be pasted into a code cell and the query results retrieved using the
 
 .. code-block:: SQL
 
-	retrieved_job = retrieve_query('https://data.lsst.cloud/api/tap/async/myjob12345')
+	retrieved_job = retrieve_query('my_portal_url')
 	retrieved_results = retrieved_job.fetch_result().to_table().to_pandas()
 
 This results in having the same data in your notebook which you first obtained via the Portal Aspect.
