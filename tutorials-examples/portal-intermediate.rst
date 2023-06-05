@@ -64,6 +64,8 @@ Note that this offset is not discoverable in the following tutorial.
 
 .. figure:: /_static/portal_tut02_step01.png
     :name: portal_tut02_step01
+    :alt: Screenshot of RSP portal interface DC2 difference image analysis object catalog query. 
+    	Within this dialog box, the user can select the type of search, the image table collections, and various parameters to select information under investigation. (?)
 
     Initial query to obtain the DiaObjectId.
 
