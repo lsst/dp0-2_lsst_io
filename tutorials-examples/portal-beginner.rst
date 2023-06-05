@@ -106,6 +106,7 @@ For "Chart title" enter "Color-Magnitude Diagram"; set "X Label" to "color (r-i)
 Set the "X Min/Max" values to "-0.5" and "2.0", and the "Y Min/Max" values to "16.5" and "25.5".
 
 .. figure:: /_static/portal_tut01_step02c.png
+	:width: 300
 	:name: portal_tut01_step02c
 	
 	Set the plot parameters.
@@ -128,6 +129,7 @@ Change the "Plot Type" to "Heatmap", and then set the "X" and "Y" to the same eq
 Use the same "Chart Options" except give it a different "Chart title", such as "Heatmap Color-Magnitude Diagram."  
 
 .. figure:: /_static/portal_tut01_step02e.png
+	:width: 300
 	:name: portal_tut01_step02e
 	
 	Above, we set the new chart parameters for a heatmap plot.
@@ -192,7 +194,7 @@ which uses the TAP service, as demonstrated in Section 2.3 of the first tutorial
 4.2. It is also possible to obtain a URL for direct access to the query results.
 This URL can be used from the Notebook Aspect; this is an especially useful feature for 
 queries that are large, complex, or time-consuming to execute (for instance, multiple table joins),
-or for sharing query results with colleagues.
+or for sharing query results with colleagues. The current lifetime of a URL is 30 days.
 
 As an example, the image below displays the Results View for a small query using just a 0.05 degree radius.
 
