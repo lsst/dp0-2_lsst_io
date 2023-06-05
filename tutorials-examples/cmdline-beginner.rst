@@ -48,6 +48,8 @@ Step 1. Access the terminal and setup
 1.2. In the launcher window under "Other", select the terminal.
 
 .. figure:: /_static/other_terminal.png
+	:alt: Options visible in the section of the launcher entitled other within the notebook aspect.  
+		Selections from the left are: terminal launcher, text file, markdown file, python file, and a help button. 
 
 1.3. Set up the Rubin Observatory environment.
 
@@ -240,6 +242,8 @@ Use the file navigator on the left-hand side of the Notebook Aspect to navigate 
 Double click on the filename to open and view the plot.
     
 .. figure:: /_static/cl_color-magnitude.jpg
+	:alt: Color-magnitude diagram plotting magnitude g on the y-axis and magnitude r minus magnitude i color on the x-axis.  
+		There are a number of vertical bands representing various color magnitudes ranging from 0.6 to 1.7.  This feature is unique to this simulated data set. 
 
 
 .. _DP0-2-Cmndline-Beginner-Step-6:
@@ -329,6 +333,8 @@ Use the file navigator on the left-hand side of the Notebook Aspect to navigate 
 Double click on the filename to open and view the image.
     
 .. figure:: /_static/cl_my-deep-Coadd.jpg
+	:alt: A four thousand by four thousand pixel screen capture of an astronomical image that has been plotted in a Jupyter notebook.  
+		A large concentration of elongated points is concentrated at the lower-left quadrant and suggests a cluster of galaxies.  
     
 7.2. Display the image using Firefly (`Firefly documentation <https://pipelines.lsst.io/v/daily/modules/lsst.display.firefly/index.html>`_). 
 
