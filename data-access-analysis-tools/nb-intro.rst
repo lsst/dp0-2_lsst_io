@@ -42,10 +42,14 @@ The first page offers a choice of software environment version (left) and server
 Most users will choose the recommended software version and a medium server size.
 
 .. figure:: /_static/RSP_NB_select_a_server.png
+    :alt: This image is a screenshot of the Server Options page that users encounter first when they log into the Notebook Aspect. At left, users can select the version of the LSST Science 
+    	Pipelines that they want to use, with the recommended version pre-selected as the default. At right, users can select a server size of small, medium, or large. 
+	Small is pre-selected as the default. Two additional options to enable debug logs or clear the user’s dot-local directory also appear at right. Neither of these options are pre-selected. 
+	At the bottom is a button marked start.
     :width: 400
     :name: RSP_NB_select_a_server
 
-    Most users will choose the recommended software version and a medium size.
+    A screenshot of the server options available to RSP users, with the default options selected as indicated by the blue filled circles. Users should choose the recommended software version and a medium size.
 
 The term "image" atop the left box refers to a "Docker image" that defines the software packages and their versions which will be automatically loaded in the server environment.
 The "recommended" image will be updated on a regular (monthly) basis to encourage users to adapt to using software that is in active development, and to benefit from the bug fixes and updates made by Rubin Observatory staff.
@@ -57,16 +61,23 @@ RSP users who are doing a lot of image processing might need to select a large s
 Pressing the orange "Start" button to start the server returns this page with a blue progress bar:
 
 .. figure:: /_static/RSP_NB_progress_bar.png
+    :alt: This image is a screenshot of the progress bar that displays for a minute or two while a user’s server is starting up in the Notebook Aspect. 
+    	At the top there is text that says “Your server is starting up” and “You will be redirected automatically when it’s ready for you.” Below that is a progress bar. 
+	Underneath the bar, the date and time is shown. This page is not interactive and is replaced by the main work area of the Notebook Aspect once the server has started.
     :width: 400
     :name: RSP_NB_progress_bar
 
-    Be patient. Sometimes it takes a couple of minutes to start a server.
+    A screenshot of the progress bar that will show while the server is starting up. Be patient. Sometimes it takes a couple of minutes to start a server.
 
 **Navigating the JupyterLab Interface:**
 The JupyterLab landing page in the figure below is the launch pad for all JupyterLab functionality (e.g., Notebook, Terminal, Python console).
 Return to this launch pad at any time by clicking the plus symbol at upper-left.
 
 .. figure:: /_static/RSP_NB_launcher_options.png
+    :alt: This image is a screenshot of the main work area of the Notebook Aspect, as it appears when a user starts a new server. 
+    	Across the top is the main menu, with options such as file, edit, view, run, kernel, rubin, tabs, settings, and help. 
+	The left sidebar offers options to browse the file system, open files, and upload data. At right, in the main work area, one tab is open. 
+	It is the launcher tab, which offers options to open a new notebook, coding console, terminal, text file, markdown file, python file, or help file.
     :width: 400
     :name: RSP_NB_launcher_options
 
@@ -124,10 +135,14 @@ For some handy markdown tips, see `this blog post <https://medium.com/analytics-
 
 .. figure:: /_static/notebook.png
     :name: notebook_aspect
+    :alt: This image is a screenshot of tutorial notebook 01, titled introduction to DP0.2. 
+    	The notebook has been scrolled down to Section 3.3, which contains both markdown text and code cells which have been executed. 
+	The last code cell has produced a greyscale image of a rich galaxy cluster. Across the top of the notebook there is a menu bar of actions for users. 
+	Actions include save notebook, set cell type, and insert, cut, copy, paste, run, or interrupt cells. 
 
-    An example of what users see in the Notebook Aspect. The left panel is a file tree from which you can access your personal files,
-    and which will come pre-populated with a handful of tutorial notebooks that users can execute on their own. The largest panel is the Jupyter notebook, where markdown and code can be entered and executed.
-    You can also see that one can have multiple notebooks open in separate tabs.
+    A screenshot from the end of tutorial notebook 01 “Introduction to DP0.2”, showing the panel of the Notebook Aspect where multiple interface tabs can be open at once. 
+    In this case, the first tab is a command-line terminal, the second is the Launcher interface, and the third (which is currently selected) is an executed version of tutorial notebook 01. 
+    Multiple notebooks can be opened in separate tabs.
 
 **Opening Multiple Notebooks:**
 You can have multiple notebooks and terminals open in your viewer at a time.
