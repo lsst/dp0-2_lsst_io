@@ -219,5 +219,5 @@ the URL can be pasted into a code cell and the query results retrieved using the
 
 This results in having the same data in your notebook which you first obtained via the Portal Aspect.
 
-We not that URLs will not be accessible indefinitely, but rather are intended to serve the use case of immediate access and analysis. 
-To preserve and recreate queries at a later date, it is recommended to save the ADQL-formatted query as described in step 1.6
+We note that URLs will not be accessible indefinitely, but rather are intended to serve the use case of immediate access and analysis. 
+To preserve and recreate queries at a later date, it is recommended to save the ADQL-formatted query as described in step 1.6.
