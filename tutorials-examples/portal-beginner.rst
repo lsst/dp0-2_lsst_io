@@ -194,7 +194,7 @@ which uses the TAP service, as demonstrated in Section 2.3 of the first tutorial
 4.2. It is also possible to obtain a URL for direct access to the query results.
 This URL can be used from the Notebook Aspect; this is an especially useful feature for 
 queries that are large, complex, or time-consuming to execute (for instance, multiple table joins),
-or for sharing query results with colleagues. The current lifetime of a URL is 30 days.
+or for sharing query results with colleagues. 
 
 As an example, the image below displays the Results View for a small query using just a 0.05 degree radius.
 
@@ -218,3 +218,6 @@ the URL can be pasted into a code cell and the query results retrieved using the
 	retrieved_results = retrieved_job.fetch_result().to_table().to_pandas()
 
 This results in having the same data in your notebook which you first obtained via the Portal Aspect.
+
+We not that URLs will not be accessible indefinitely, but rather are intended to serve the use case of immediate access and analysis. 
+To preserve and recreate queries at a later date, it is recommended to save the ADQL-formatted query as described in step 1.6
