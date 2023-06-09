@@ -113,6 +113,8 @@ The search might take a few moments.
 
 .. figure:: /_static/portal_intro_DP02c.png
     :name: portal_search_working
+    :alt: A screenshot alerting the user that the query is being executed.  The user can select to send the query to background or cancel the query.
+    :width: 200
 
     This will show while the search is executing.
 
@@ -153,6 +155,9 @@ Add a chart title and label the axes, choose a point color, and click "Apply" an
 
 .. figure:: /_static/portal_intro_DP02e.png
     :name: portal_results_xy_settings_DP02
+    :alt: Screenshot of the plot settings pop up window where the user can select various values and plot types to display the data from a query.  
+    	From here, the user can select parameters, lable the x and y axes, and add a new plot, overplot, or modify a previous plot
+    :width: 200
 
     The plot settings pop-up window.
 
