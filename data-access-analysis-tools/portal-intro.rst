@@ -113,7 +113,7 @@ The search might take a few moments.
 
 .. figure:: /_static/portal_intro_DP02c.png
     :name: portal_search_working
-    :width: 200
+    :width: 300
 
     This will show while the search is executing.
 
@@ -154,7 +154,7 @@ Add a chart title and label the axes, choose a point color, and click "Apply" an
 
 .. figure:: /_static/portal_intro_DP02e.png
     :name: portal_results_xy_settings_DP02
-    :width: 200
+    :width: 300
 
     The plot settings pop-up window.
 
@@ -329,16 +329,17 @@ At upper right, click on "Bi-view Tables" to show a choice of the Active Chart p
 .. figure:: /_static/portal_intro_DP02i.png
     :name: portal_ImageQuery_sidebyside_DP02
 
-    Display the image in row three of the table (with the view format set to "Bi-view Tables").
+    Display the image in row two of the table (with the view format set to "Bi-view Tables").
 
 **Image tools**:
 There are many tools available for users, the following demonstrates use of just one.
 First, zoom in on a bright star in one of the images.
 Select the "tools" icon (wrench and ruler), and from the pop-up window choose to "Extract" using a line.
-Draw a line on the image across the star to extract the pixel values and show an approximate shape of the point-spread function for the star.
+Draw a line on the image across the star to extract the pixel values and show an approximate shape of the point-spread function (PSF) for the star.
 The plot reveals that this particular star is saturated.
-Click on "Pin Table" to add a table of pixel data as a new tab in the right half of the view.
-To make the line go away, click on the "layers" icon (the one for which the hover-over text reads:  "Manipulate overlay display...") and in the pop-up window, next to "Extract Line 1 - HDU#1", click on "Delete".
+Click on "Pin Chart/Table" to add a table of pixel data as a new tab in the right half of the view as well as the PSF profile plot as a 
+new tab next to Active Chart plot. To make the line go away, click on the "layers" icon (the one for which the hover-over text reads:  
+"Manipulate overlay display...") and in the pop-up window, next to "Extract Line 1 - HDU#1", click on "Delete".
 
 .. figure:: /_static/portal_intro_DP02j.png
     :name: portal_ImageQuery_tools_DP02
