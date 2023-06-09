@@ -117,7 +117,7 @@ Set the "X Min/Max" values to "-0.5" and "2.0", and the "Y Min/Max" values to "1
 	:alt: A screenshot of the portal aspect showing the interface that allows the user to create charts from the data returned by the query. 
 		Creating plots from the data in this way is an easy and functional way to explore the data. 
 		The interface allows the user to: input functions of the returned data to plot, choose a color scheme, edit the binning, create labels and edit the axis scaling. 
-  :width: 300
+        :width: 300
 	
 	Set the plot parameters.
 
@@ -146,7 +146,7 @@ Use the same "Chart Options" except give it a different "Chart title", such as "
 .. figure:: /_static/portal_tut01_step02e.png
 	:name: portal_tut01_step02e
 	:alt: Screenshot of dialog box where the user can set new chart parameters for the heat map.
-  :width: 300
+        :width: 300
 	
 	Above, we set the new chart parameters for a heatmap plot.
 
