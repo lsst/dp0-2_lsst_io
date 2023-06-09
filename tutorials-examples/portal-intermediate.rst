@@ -56,9 +56,9 @@ Note that this offset is not discoverable in the following tutorial.
 
 1.1. Log in to the Portal Aspect.
 
-1.2. Leave the TAP Service and Query Type as their default, and select the `dp02_dc2_catalogs.DiaObject <https://dm.lsst.org/sdm_schemas/browser/dp02.html#DiaObject>`_ table.
+1.2. Under “TAP Searches”, leave the “Use Image Search (ObsTAP)” box unchecked, leave the Schema as its default, leave “View” at its default “UI assisted”, and select the `dp02_dc2_catalogs.DiaObject <https://dm.lsst.org/sdm_schemas/browser/dp02.html#DiaObject>`_ table.
 
-1.3. Check the box for spatial constraints, and use ra and decl as the longitude and latitude columns. Leave the shape type as Cone and enter the coordinates ``67.4579, -44.0802``. Set the radius to 2 arcsec.
+1.3. Under “Enter Constraints”, select the box to the left of “Spatial”. Leave the “Shape Type” as the default “Cone”, and for “Coords or Obj Name” enter the coordinates ``67.4579, -44.0802``. Set the "Radius" to 2 arcsec. 
 
 1.4. In the table at right, select columns ra, decl, and diaObjectId to be returned.
 
@@ -78,7 +78,7 @@ This is definitely the SNIa of interest to the user.
 
 2.1. Clear the previous search and return to the main Portal interface (use the "RSP TAP Search" button at upper left).
 
-2.2. Select Query Type as "Edit ADQL (advanced)", enter the following ADQL query.
+2.2. Select "View" as "Edit ADQL", enter the following ADQL query.
 This query will retrieve all of the DiaSource table entries (i.e., all of the individual measurements on the difference images) for this DiaObject.
 This query also uses the ccdVisitId to join to the CcdVisit table and obtain the mean seeing measurement for the visit.
 
@@ -103,7 +103,7 @@ This query also uses the ccdVisitId to join to the CcdVisit table and obtain the
 3. Make the three plots
 =======================
 
-3.1. If the Results view is showing three panels including a sky image at upper left, switch to the "xy-tbl" view using the buttons at upper right.
+3.1. If the Results view is showing three panels including a sky image at upper left, switch to the "Bi-view Tables" view using the buttons at upper right.
 Use the settings icon (two gears at upper right) to open the plot parameters pop-up window, match those shown below, then click "Apply" and "Close".
 
 .. figure:: /_static/portal_tut02_step03a.png
