@@ -178,7 +178,7 @@ Attendance at any of the following virtual seminars is optional for DP0 delegate
 DP0 virtual summer school 2023
 ------------------------------
 
-Planning is currently in progress.
+To be held June 12-16, 2023. Stay tuned for links to recordings of the tutorials after the Summer School has ended.
 
 .. toctree::
     :maxdepth: 2
