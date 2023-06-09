@@ -49,6 +49,8 @@ For more information about the DP0.2 catalogs and images, visit the :ref:`DP0-2-
 
 .. figure:: /_static/portal_tut03_step01.png
     :name: portal_tut03_step01
+    :alt: The default view of the RSP Portal’s user interface is shown in this image.  
+    	From this window a user can select information to customize their search parameters for type of service, type of tables, search constraints, and select the number of rows to return.
 
     Query for the deepCoadds that cover the SNIa location.
 
@@ -67,6 +69,8 @@ In this example the compass has been enabled using the "Tools" icon (wrench and 
 
 .. figure:: /_static/portal_tut03_step02a.png
     :name: portal_tut03_step02a
+    :alt: A screenshot of the default view for image display of six separate co-add images. 
+    	The side panel on the right has a list of each of the coadd images and some of the descriptive information for the images. 
 
     The default view centers the image display on the patch center.
 
@@ -76,6 +80,7 @@ Notice now that zooming and panning in one image does the same in all six images
 
 .. figure:: /_static/portal_tut03_step02b.png
     :name: portal_tut03_step02b
+    :alt: Image alignment dropdown is clicked which is the icon second from the right. A menu appears with nine alignment and locking options. Align and lock options by WCS is selected.
 
     Choose to align and lock on WCS.
 
@@ -86,11 +91,16 @@ If you happen to pan away from the SNIa, recenter using the "center" icon and fi
 
 .. figure:: /_static/portal_tut03_step02c.png
     :name: portal_tut03_step02c
+    :alt: This image is a pop up selection box and pan by table row is selected.  The center of the selection box allows the user to enter the coordinates on which to center the image.  
+    	In this case, the quote Center on unquote coordinates are for the known position of a supernova.  
+	To the right of the input area are buttons for go and go and mark, which will mark the coordinate position on the resulting image
 
     Center on and mark the coordinates of the SNIa.
 
 .. figure:: /_static/portal_tut03_step02d.png
     :name: portal_tut03_step02d
+    :alt: Six image panels showing each of the filter bands for y, z, i, u, g, and r bands. 
+    	A large blob and smaller blob vary in size between each of the filters.  The images show that there is more intensity in the i and r bands than there is in the u band.  
 
     A zoom-in on the SNIa and its host, with linear zscaling.
 
@@ -108,6 +118,8 @@ Notice that there appears to be a faint - but spatially distinct - extended obje
 
 .. figure:: /_static/portal_tut03_step02e.png
     :name: portal_tut03_step02e
+    :alt: Six panel displays each of which shows a close up zoom of the supernova and possible host galaxy.  
+    	To the right of the display is a pop-up window to modify the settings for the images.  The settings allows the user to select type type of stretch and the range used for the stretch.
 
     Well the host association looks a little complicated!
 

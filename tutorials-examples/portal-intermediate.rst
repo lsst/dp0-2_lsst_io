@@ -64,6 +64,8 @@ Note that this offset is not discoverable in the following tutorial.
 
 .. figure:: /_static/portal_tut02_step01.png
     :name: portal_tut02_step01
+    :alt: Screenshot of RSP portal interface DC2 difference image analysis object catalog query. 
+    	Within this dialog box, the user can select the type of search, the image table collections, and various parameters to select information under investigation. (?)
 
     Initial query to obtain the DiaObjectId.
 
@@ -109,6 +111,7 @@ Use the settings icon (two gears at upper right) to open the plot parameters pop
 .. figure:: /_static/portal_tut02_step03a.png
     :width: 300
     :name: portal_tut02_step03a
+    :alt: Plot parameters pop-up window, user can select various parameters then click apply and close to generate a light curve.
 
     Plot parameters for the lightcurve.
 
@@ -116,6 +119,7 @@ Use the settings icon (two gears at upper right) to open the plot parameters pop
 
 .. figure:: /_static/portal_tut02_step03b.png
     :name: portal_tut02_step03b
+    :alt: Image of the i-band lightcurve for the supernova being investigated.
 
     The i-band lightcurve for the SNIa of interest.
 
@@ -124,6 +128,7 @@ Use the settings icon (two gears at upper right) to open the plot parameters pop
 .. figure:: /_static/portal_tut02_step03c.png
     :width: 300
     :name: portal_tut02_step03c
+    :alt: Screenshot for dialog box to add a new chart, user can select parameters and click okay to generate a new plot.
 
     Plot parameters for the seeing versus time plot.
 
@@ -133,6 +138,7 @@ Note that in both the X and Y parameters, the difference between the DiaSource c
 .. figure:: /_static/portal_tut02_step03d.png
     :width: 300
     :name: portal_tut02_step03d
+    :alt: Dialog box to add plot parameters for an astrometric scatter plot.
 
     Plot parameters for the astrometric scatter plot.
 
@@ -153,6 +159,7 @@ The point of this plot is more that the overall scatter is less than 0.3 arcsec,
 .. figure:: /_static/portal_tut02_step03e.png
     :width: 1200
     :name: portal_tut02_step03e
+    :alt: Image demonstrating how selecting a row can provide information for making decisions.
 
     Identifying the best epoch for this scientific use-case.
 

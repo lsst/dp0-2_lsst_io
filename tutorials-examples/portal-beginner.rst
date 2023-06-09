@@ -66,6 +66,10 @@ it is not necessary for this tutorial to actually retrieve the data in those col
 
 .. figure:: /_static/portal_tut01_step01.png
 	:name: portal_tut01_step01
+	:alt: A screenshot of how to input search criteria in the portal aspect.  
+		The portal is a convenient way to query the Rubin database through a graphical user interface without any python or command line scripting. 
+		Each row is a separate category characterizing the tap search criteria to be used, including: the tap service; the query type; 
+		the table collection and specific table to be used and the constraints to be used for the query. The portal search can be performed by hitting the search button on the bottom left. 
 	
 	The above screenshot shows the constraints before clicking "Search".
 	
@@ -94,8 +98,8 @@ The query accessed these files until 10000 objects were found (i.e., the query *
 .. figure:: /_static/portal_tut01_step02b.png
 	:name: portal_tut01_step02b
 	:alt: This screenshot of the portal after a search query is run.  The top image shows the density of selected sources within the search area. 
-	  In this case, a circle of radius that is selected by the user centered at the right ascension and declination location selected by the user. 
-	  The bottom panel displays the returned objects from the search query as a table.
+		In this case, a circle of radius that is selected by the user centered at the right ascension and declination location selected by the user. 
+		The bottom panel displays the returned objects from the search query as a table. 
 	
 	The Results view with "Bi-view Tables" selected.
 	
@@ -111,9 +115,9 @@ Set the "X Min/Max" values to "-0.5" and "2.0", and the "Y Min/Max" values to "1
 .. figure:: /_static/portal_tut01_step02c.png
 	:name: portal_tut01_step02c
 	:alt: A screenshot of the portal aspect showing the interface that allows the user to create charts from the data returned by the query. 
-	  Creating plots from the data in this way is an easy and functional way to explore the data. 
-	  The interface allows the user to: input functions of the returned data to plot, choose a color scheme, edit the binning, create labels and edit the axis scaling. 
-	:width: 300
+		Creating plots from the data in this way is an easy and functional way to explore the data. 
+		The interface allows the user to: input functions of the returned data to plot, choose a color scheme, edit the binning, create labels and edit the axis scaling. 
+  :width: 300
 	
 	Set the plot parameters.
 
@@ -122,10 +126,10 @@ Set the "X Min/Max" values to "-0.5" and "2.0", and the "Y Min/Max" values to "1
 .. figure:: /_static/portal_tut01_step02d.png
 	:name: portal_tut01_step02d
 	:alt: A screenshot of the chart created from the data returned by the query using the xy interface of the portal aspect. 
-	  The chart shows a color magnitude diagram, g-band AB magnitude vs r-band minus i-band color, for the objects returned by the search query. 
-	  This example demonstrates how to quickly explore the data returned in the search query. 
-	  The plot shows a large density of stars at low r-i color, and discrete bins at redder r-i color because the simulated data is 
-	  based on discrete red stellar models that were used as input into DP0.2. Real data is expected to instead show a smooth distribution of colors.
+		The chart shows a color magnitude diagram, g-band AB magnitude vs r-band minus i-band color, for the objects returned by the search query. 
+		This example demonstrates how to quickly explore the data returned in the search query. 
+		The plot shows a large density of stars at low r-i color, and discrete bins at redder r-i color because the simulated data is 
+		based on discrete red stellar models that were used as input into DP0.2. Real data is expected to instead show a smooth distribution of colors.
 	
 	The color-magnitude diagram.
 
@@ -142,7 +146,7 @@ Use the same "Chart Options" except give it a different "Chart title", such as "
 .. figure:: /_static/portal_tut01_step02e.png
 	:name: portal_tut01_step02e
 	:alt: Screenshot of dialog box where the user can set new chart parameters for the heat map.
-	:width: 300
+  :width: 300
 	
 	Above, we set the new chart parameters for a heatmap plot.
 
@@ -198,6 +202,7 @@ Shown below is the same query as in Step 3.1 above:
 
 .. figure:: /_static/portal_tut01_step04a.png  
 	:name: portal_tut01_step04a
+	:alt: Screenshot of the RSP portal query where the user will click the search button.
 	
 To execute the query in the Portal, click the "Search" button.
 
@@ -213,11 +218,13 @@ As an example, the image below displays the Results View for a small query using
 
 .. figure:: /_static/portal_tut01_step04b.png  
 	:name: portal_tut01_step04b
+	:alt: Screenshot of the results view from the above query.  
 
 Click on the "info" button (letter "i" in a circle), and a pop-up window will appear:
 
 .. figure:: /_static/portal_tut01_step04c.png  
 	:name: portal_tut01_step04c
+	:alt: Pop-up window when the info button is clicked.
 
 The "UWS JOB URL" in the pop-up is the URL to the query results.
 Click on the clipboard icon to copy the URL to your clipboard.

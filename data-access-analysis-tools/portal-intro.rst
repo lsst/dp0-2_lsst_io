@@ -50,6 +50,8 @@ The default query type, and default user interface, is for "UI assisted" queries
 
 .. figure:: /_static/portal_intro_DP02a.png
     :name: portal_default_view_DP02
+    :alt: Screenshot of the defult view of the rubin science platform portal interface for single table queries. From this window the user can select the type of search, tables to search, 
+    	select various constraints, and can select the number of rows to return.  
 
     The default view of the Portal's user interface for UI assisted queries.
     
@@ -105,6 +107,8 @@ between 24th and 28th magnitude).
 
 .. figure:: /_static/portal_intro_DP02b.png
     :name: portal_example_search_DP02
+    :alt: Screenshot of the rubin science platform portal query page.  The user can select the type of service, the table from which to gather data, and select attributes
+    	from the table and put constraints on those attributes.  The user may also select the number of data entries to return.
 
     An example query of the DC2 Object catalog.
 
@@ -130,6 +134,8 @@ the bottom.
 
 .. figure:: /_static/portal_intro_DP02d.png
     :name: portal_search_results_DP02
+    :alt: Rubin science platform portal search results are displayed in this image.  The left top panel shows an image of the sky.  The right to panel has a scatter plot of objects and the 
+    	bottom panel shows the data table from the search.
 
     The default view of the search results.
 
@@ -169,6 +175,8 @@ hovering the mouse over the plotted data will show the x- and y-values in a pop-
 
 .. figure:: /_static/portal_intro_DP02f.png
     :name: portal_results_final_DP02
+    :alt: Screenshot of the results from the query described above.  The top image shows a color magnitude diagram with magnitude g brightness plotted against the color r minus color i magnitude.
+    	Below the plot is the data table generated during the query.
 
     An updated results view in which the plotted data has been manipulated.
 
@@ -303,6 +311,7 @@ Note that the "r" filter constraint is applied in the table at right.
 
 .. figure:: /_static/portal_intro_DP02g.png
     :name: portal_ImageQueryDP02
+    :alt: Screenshot of the user interface query for the portal aspect.  The user can select the type of service to use for the query and enter constraints to access the data they need.
 
     The default interface for the "Image Search (ObsTAP)" queries, with example search parameters.
     
@@ -316,6 +325,8 @@ The Active Chart plot default is RA versus Declination, with the location of the
     
 .. figure:: /_static/portal_intro_DP02h.png
     :name: portal_ImageQueryResultsDP02
+    :alt: A screenshot of the results view from submitting the query described above.  The upper left image is an image of the sky.  The upper right image shows the cartesian
+    	scatter plot resulting from the query.  The bottom section is the data table resulting from the query.
 
     Results for the example search parameters.
 
@@ -331,6 +342,7 @@ At upper right, click on "Bi-view Tables" to show a choice of the Active Chart p
 
 .. figure:: /_static/portal_intro_DP02i.png
     :name: portal_ImageQuery_sidebyside_DP02
+    :alt: Screenshot of a portal query.  The left image shows and image of the sky.  The right image shows the data table with one row selected, that row selects the image on the left.
 
     Display the image in row two of the table (with the view format set to "Bi-view Tables").
 
@@ -346,6 +358,9 @@ new tab next to Active Chart plot. To make the line go away, click on the "layer
 
 .. figure:: /_static/portal_intro_DP02j.png
     :name: portal_ImageQuery_tools_DP02
+    :alt: A screenshot of the image display used to extract a line cut in the portal. On the left, is an image of the sky with an inverted color lookup table.
+    	There is one large star in the image.  A horizontal arrow has been manually drawn over it by the user.  A data table is to the right.  
+	Sitting over the data table is a graph, constructed from the red arrow, showing data numbers versus offset in arcseconds.  
 
     Use the image display tool to extract a line cut.
 
@@ -361,8 +376,12 @@ The color-composite background shows the relevant DC2 simulated sky region.
 
 .. figure:: /_static/portal_intro_DP02k.png
     :name: portal_ImageQueryCoverageDP02
+    :alt: This image is a screenshot of a results interface display in the Portal aspect. At left the bounding boxes for images returned by the query are drawn onto
+    	an image of the night sky. At right there is a table which lists metadata such as visit identifier and units for the images returned by the query.
+	The image demonstrates how users can click on a row in the table at right and the corresponding bounding box will be highlighted at left. 
 
-    The coverage outlines of images returned by the ObsTAP search, overlayed on the relevant DC2 simulated sky region.
+    The Portal results interface shows the bounding boxes of the retrieved DP0.2 image overplotted on a 2MASS image (in the future, the underlay will be LSST data) at left, and the table
+    table of retrieved DP0.2 image metadata at right.  The orange box at left corresponds to the yellow row at right.
 
 **Learn More.**
 See also :ref:`DP0-2-Tutorials-Portal` for a tutorial using additional image types and more of the Portal's image-related functionality.
