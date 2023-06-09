@@ -93,6 +93,9 @@ The query accessed these files until 10000 objects were found (i.e., the query *
 
 .. figure:: /_static/portal_tut01_step02b.png
 	:name: portal_tut01_step02b
+	:alt: This screenshot of the portal after a search query is run.  The top image shows the density of selected sources within the search area. 
+	   In this case, a circle of radius that is selected by the user centered at the right ascension and declination location selected by the user. 
+	   The bottom panel displays the returned objects from the search query as a table.
 	
 	The Results view with "Bi-view Tables" selected.
 	
@@ -108,6 +111,10 @@ Set the "X Min/Max" values to "-0.5" and "2.0", and the "Y Min/Max" values to "1
 .. figure:: /_static/portal_tut01_step02c.png
 	:width: 300
 	:name: portal_tut01_step02c
+	:alt: A screenshot of the portal aspect showing the interface that allows the user to create charts from the data returned by the query. 
+	  Creating plots from the data in this way is an easy and functional way to explore the data. 
+	  The interface allows the user to: input functions of the returned data to plot, choose a color scheme, edit the binning, create labels and edit 
+	  the axis scaling. 
 	
 	Set the plot parameters.
 
@@ -115,6 +122,11 @@ Set the "X Min/Max" values to "-0.5" and "2.0", and the "Y Min/Max" values to "1
 
 .. figure:: /_static/portal_tut01_step02d.png
 	:name: portal_tut01_step02d
+	:alt: A screenshot of the chart created from the data returned by the query using the xy interface of the portal aspect. 
+	  The chart shows a color magnitude diagram, g-band AB magnitude vs r-band minus i-band color, for the objects returned by the search query. 
+	  This example demonstrates how to quickly explore the data returned in the search query. 
+	  The plot shows a large density of stars at low r-i color, and discrete bins at redder r-i color because the simulated data is 
+	  based on discrete red stellar models that were used as input into DP0.2. Real data is expected to instead show a smooth distribution of colors.
 	
 	The color-magnitude diagram.
 
@@ -131,6 +143,7 @@ Use the same "Chart Options" except give it a different "Chart title", such as "
 .. figure:: /_static/portal_tut01_step02e.png
 	:width: 300
 	:name: portal_tut01_step02e
+	:alt: Screenshot of dialog box where the user can set new chart parameters for the heat map.
 	
 	Above, we set the new chart parameters for a heatmap plot.
 
@@ -138,6 +151,7 @@ Use the same "Chart Options" except give it a different "Chart title", such as "
 
 .. figure:: /_static/portal_tut01_step02f.png
 	:name: portal_tut01_step02f
+	:alt: Color magnitude diagrams generated from the previously mad scatter plot and heatmap.
 	
 	The color-magnitude diagrams, including the previously made scatter plot (left) and the heatmap (right).
 
