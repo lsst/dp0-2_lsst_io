@@ -37,7 +37,7 @@ The Portal is a very powerful user interface with far more options than are cove
 Leave the default (https://data.lsst.cloud/api/tap) to access DP0.2 data.
 
 **Select Query Type**
-There are three types of queries: :ref:`Portal-Intro-Single-Table-Queries`, :ref:`Portal-Intro-ADQL-Queries`, and :ref:`Portal-Intro-Image-Queries`.
+There are three types of queries: :ref:`Portal-Intro-Single-Table-Queries` and :ref:`Portal-Intro-ADQL-Queries` in "View", and :ref:`Portal-Intro-Image-Queries` under "LSST DP0.2 DC2 Tables".
 Each of these options has a different user interface, covered in the sections below.
 
 
