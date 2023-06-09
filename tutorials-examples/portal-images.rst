@@ -27,7 +27,7 @@
 **Targeted learning level:** intermediate
 
 **Introduction:**
-This portal demonstrates how to get an initial look at the potential host galaxy of a SNIa in the six (ugrizy) deepCoadd images.
+This portal tutorial demonstrates how to get an initial look at the potential host galaxy of a SNIa in the six (ugrizy) deepCoadd images.
 
 This tutorial assumes a basic working knowledge of the Portal interface (e.g., review of the :ref:`Portal-Intro-Image-Queries` instructions or the successful completion of the first Portal tutorial).
 For more information about the DP0.2 catalogs and images, visit the :ref:`DP0-2-Data-Products-DPDD`.
