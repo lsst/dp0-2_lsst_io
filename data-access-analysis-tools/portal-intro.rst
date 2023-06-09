@@ -113,7 +113,6 @@ The search might take a few moments.
 
 .. figure:: /_static/portal_intro_DP02c.png
     :name: portal_search_working
-    :width: 300
 
     This will show while the search is executing.
 
@@ -154,7 +153,6 @@ Add a chart title and label the axes, choose a point color, and click "Apply" an
 
 .. figure:: /_static/portal_intro_DP02e.png
     :name: portal_results_xy_settings_DP02
-    :width: 300
 
     The plot settings pop-up window.
 
