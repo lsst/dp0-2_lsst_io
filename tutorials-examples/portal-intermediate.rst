@@ -107,6 +107,7 @@ This query also uses the ccdVisitId to join to the CcdVisit table and obtain the
 Use the settings icon (two gears at upper right) to open the plot parameters pop-up window, match those shown below, then click "Apply" and "Close".
 
 .. figure:: /_static/portal_tut02_step03a.png
+    :width: 300
     :name: portal_tut02_step03a
 
     Plot parameters for the lightcurve.
@@ -121,6 +122,7 @@ Use the settings icon (two gears at upper right) to open the plot parameters pop
 3.3. To add a plot of seeing versus time: use the settings icon, choose "Add New Chart" and match the parameters shown below, then click "OK".
 
 .. figure:: /_static/portal_tut02_step03c.png
+    :width: 300
     :name: portal_tut02_step03c
 
     Plot parameters for the seeing versus time plot.
@@ -129,6 +131,7 @@ Use the settings icon (two gears at upper right) to open the plot parameters pop
 Note that in both the X and Y parameters, the difference between the DiaSource coordinate and the DiaObject coordinate are multiplied by 3600, so that the plot axes are in arcseconds: ``((ra-67.4579634)*cos(decl*(pi()/180)))*3600`` and ``(decl+44.080243)*3600``.
 
 .. figure:: /_static/portal_tut02_step03d.png
+    :width: 300
     :name: portal_tut02_step03d
 
     Plot parameters for the astrometric scatter plot.
@@ -148,6 +151,7 @@ The point of this plot is more that the overall scatter is less than 0.3 arcsec,
 "bright / best-seeing" epoch image for co-registration with images from other facilities is a wise choice.
 
 .. figure:: /_static/portal_tut02_step03e.png
+    :width: 1200
     :name: portal_tut02_step03e
 
     Identifying the best epoch for this scientific use-case.
