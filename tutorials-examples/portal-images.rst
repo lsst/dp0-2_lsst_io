@@ -27,7 +27,7 @@
 **Targeted learning level:** intermediate
 
 **Introduction:**
-This notebook demonstrates how to get an initial look at the potential host galaxy of a SNIa in the six (ugrizy) deepCoadd images.
+This portal tutorial demonstrates how to get an initial look at the potential host galaxy of a SNIa in the six (ugrizy) deepCoadd images.
 
 This tutorial assumes a basic working knowledge of the Portal interface (e.g., review of the :ref:`Portal-Intro-Image-Queries` instructions or the successful completion of the first Portal tutorial).
 For more information about the DP0.2 catalogs and images, visit the :ref:`DP0-2-Data-Products-DPDD`.
@@ -39,7 +39,7 @@ For more information about the DP0.2 catalogs and images, visit the :ref:`DP0-2-
 1. Query for Images
 ===================
 
-1.1. Log into the Portal Aspect and select query type "Image Search (Obs TAP)".
+1.1. Log into the Portal Aspect and check the “Use Image Search (ObsTAP)” box below “LSST DP0.2 DC2 Tables”.
 
 1.2. Under "Observation Type and Source", choose "Calibration Level" 3, which is for derived images such as deepCoadds and difference images. Leave the other options to their default settings except for the "Data Product Subtype" enter "lsst.deepCoadd_calexp".
 
@@ -62,10 +62,10 @@ For more information about the DP0.2 catalogs and images, visit the :ref:`DP0-2-
 2. Interact with the deepCoadds
 ===============================
 
-2.1. In the results view, click on "img-tbl" in the upper right corner to remove the "xy plot" from the display as it is not needed.
-
-2.2. Above the image, click on the grid icon (hover-over text "Show full grid") to simultaneously view all six filters' deepCoadds. The default view is to center all deepCoadds on the center of the patch.
+2.1. Above the image, click on the grid icon (hover-over text "Tile all images in the search result table") to simultaneously view all six filters' deepCoadds. The default view is to center all deepCoadds on the center of the patch.
 In this example the compass has been enabled using the "Tools" icon (wrench and ruler, hover-over text "Tools drop down").
+
+2.2. And then click on "Bi-view Tables" in the upper right corner to show just one image and the table side-by-side. To display the six filters' deepCoadds, select "Data Product" tab. 
 
 .. figure:: /_static/portal_tut03_step02a.png
     :name: portal_tut03_step02a
@@ -75,7 +75,7 @@ In this example the compass has been enabled using the "Tools" icon (wrench and 
     The default view centers the image display on the patch center.
 
 2.3. Align and lock by WCS.
-Click on the "align" icon above the image (hover-over text "Image alignment drop down...") and under "Align and Lock Options" select "WCS".
+Click on the "align" icon above the image (hover-over text "Image alignment drop down...") and under "Align and Lock Options" select "by WCS".
 Notice now that zooming and panning in one image does the same in all six images.
 
 .. figure:: /_static/portal_tut03_step02b.png
@@ -114,8 +114,7 @@ Use the "scale" icon (hover-over text "Stretch drop down") to change the greysca
 From the drop-down window, select one of the supplied image stretch options or select "Color stretch" to get a pop-up window.
 
 Set the Stretch Type to "Log" and the upper range to 99.5%, and unselect the checkbox next to "Use Zscale for bounds", then click "Refresh".
-Notice that there appears to be a faint - but spatially distinct - extended object at the location of the SNIa, especially in the
-g-band image (bottom center), which at first was not obvious due to the wings of the brighter galaxy.
+Notice that there appears to be a faint - but spatially distinct - extended object at the location of the SNIa, especially in the g-band image (bottom center), which at first was not obvious due to the wings of the brighter galaxy.
 
 .. figure:: /_static/portal_tut03_step02e.png
     :name: portal_tut03_step02e

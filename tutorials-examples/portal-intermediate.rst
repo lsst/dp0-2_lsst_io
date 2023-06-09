@@ -56,9 +56,9 @@ Note that this offset is not discoverable in the following tutorial.
 
 1.1. Log in to the Portal Aspect.
 
-1.2. Leave the TAP Service and Query Type as their default, and select the `dp02_dc2_catalogs.DiaObject <https://dm.lsst.org/sdm_schemas/browser/dp02.html#DiaObject>`_ table.
+1.2. Under “TAP Searches”, leave the “Use Image Search (ObsTAP)” box unchecked, leave the Schema as its default, leave “View” at its default “UI assisted”, and select the `dp02_dc2_catalogs.DiaObject <https://dm.lsst.org/sdm_schemas/browser/dp02.html#DiaObject>`_ table.
 
-1.3. Check the box for spatial constraints, and use ra and decl as the longitude and latitude columns. Leave the shape type as Cone and enter the coordinates ``67.4579, -44.0802``. Set the radius to 2 arcsec.
+1.3. Under “Enter Constraints”, select the box to the left of “Spatial”. Leave the “Shape Type” as the default “Cone”, and for “Coords or Obj Name” enter the coordinates ``67.4579, -44.0802``. Set the "Radius" to 2 arcsec. 
 
 1.4. In the table at right, select columns ra, decl, and diaObjectId to be returned.
 
@@ -80,7 +80,7 @@ This is definitely the SNIa of interest to the user.
 
 2.1. Clear the previous search and return to the main Portal interface (use the "RSP TAP Search" button at upper left).
 
-2.2. Select Query Type as "Edit ADQL (advanced)", enter the following ADQL query.
+2.2. Select "View" as "Edit ADQL", enter the following ADQL query.
 This query will retrieve all of the DiaSource table entries (i.e., all of the individual measurements on the difference images) for this DiaObject.
 This query also uses the ccdVisitId to join to the CcdVisit table and obtain the mean seeing measurement for the visit.
 
@@ -105,10 +105,11 @@ This query also uses the ccdVisitId to join to the CcdVisit table and obtain the
 3. Make the three plots
 =======================
 
-3.1. If the Results view is showing three panels including a sky image at upper left, switch to the "xy-tbl" view using the buttons at upper right.
+3.1. If the Results view is showing three panels including a sky image at upper left, switch to the "Bi-view Tables" view using the buttons at upper right.
 Use the settings icon (two gears at upper right) to open the plot parameters pop-up window, match those shown below, then click "Apply" and "Close".
 
 .. figure:: /_static/portal_tut02_step03a.png
+    :width: 300
     :name: portal_tut02_step03a
     :alt: Plot parameters pop-up window, user can select various parameters then click apply and close to generate a light curve.
 
@@ -125,6 +126,7 @@ Use the settings icon (two gears at upper right) to open the plot parameters pop
 3.3. To add a plot of seeing versus time: use the settings icon, choose "Add New Chart" and match the parameters shown below, then click "OK".
 
 .. figure:: /_static/portal_tut02_step03c.png
+    :width: 300
     :name: portal_tut02_step03c
     :alt: Screenshot for dialog box to add a new chart, user can select parameters and click okay to generate a new plot.
 
@@ -134,6 +136,7 @@ Use the settings icon (two gears at upper right) to open the plot parameters pop
 Note that in both the X and Y parameters, the difference between the DiaSource coordinate and the DiaObject coordinate are multiplied by 3600, so that the plot axes are in arcseconds: ``((ra-67.4579634)*cos(decl*(pi()/180)))*3600`` and ``(decl+44.080243)*3600``.
 
 .. figure:: /_static/portal_tut02_step03d.png
+    :width: 300
     :name: portal_tut02_step03d
     :alt: Dialog box to add plot parameters for an astrometric scatter plot.
 
@@ -154,6 +157,7 @@ The point of this plot is more that the overall scatter is less than 0.3 arcsec,
 "bright / best-seeing" epoch image for co-registration with images from other facilities is a wise choice.
 
 .. figure:: /_static/portal_tut02_step03e.png
+    :width: 1200
     :name: portal_tut02_step03e
     :alt: Image demonstrating how selecting a row can provide information for making decisions.
 
