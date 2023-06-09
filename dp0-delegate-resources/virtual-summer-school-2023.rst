@@ -28,7 +28,7 @@ Session A: 8:00-11:00 PDT (15:00-18:00 UTC)
 
 Session B: 19:00-21:00 PDT (02:00-04:00 UTC; +1 day)
 
-**Location**: virtual (Zoom)
+**Location**: virtual (_`Zoom <http://ls.st/dp0-events>`_)
 
 **Eligibility**: All DP0 delegates are eligible to register for the DP0 Virtual Summer School.
 There is currently space available for new DP0 delegates:
