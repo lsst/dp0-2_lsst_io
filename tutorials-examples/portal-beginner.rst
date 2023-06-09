@@ -94,8 +94,8 @@ The query accessed these files until 10000 objects were found (i.e., the query *
 .. figure:: /_static/portal_tut01_step02b.png
 	:name: portal_tut01_step02b
 	:alt: This screenshot of the portal after a search query is run.  The top image shows the density of selected sources within the search area. 
-	   In this case, a circle of radius that is selected by the user centered at the right ascension and declination location selected by the user. 
-	   The bottom panel displays the returned objects from the search query as a table.
+	  In this case, a circle of radius that is selected by the user centered at the right ascension and declination location selected by the user. 
+	  The bottom panel displays the returned objects from the search query as a table.
 	
 	The Results view with "Bi-view Tables" selected.
 	
@@ -109,12 +109,11 @@ For "Chart title" enter "Color-Magnitude Diagram"; set "X Label" to "color (r-i)
 Set the "X Min/Max" values to "-0.5" and "2.0", and the "Y Min/Max" values to "16.5" and "25.5".
 
 .. figure:: /_static/portal_tut01_step02c.png
-	:width: 300
 	:name: portal_tut01_step02c
 	:alt: A screenshot of the portal aspect showing the interface that allows the user to create charts from the data returned by the query. 
 	  Creating plots from the data in this way is an easy and functional way to explore the data. 
-	  The interface allows the user to: input functions of the returned data to plot, choose a color scheme, edit the binning, create labels and edit 
-	  the axis scaling. 
+	  The interface allows the user to: input functions of the returned data to plot, choose a color scheme, edit the binning, create labels and edit the axis scaling. 
+	:width: 300
 	
 	Set the plot parameters.
 
@@ -141,9 +140,9 @@ Change the "Plot Type" to "Heatmap", and then set the "X" and "Y" to the same eq
 Use the same "Chart Options" except give it a different "Chart title", such as "Heatmap Color-Magnitude Diagram."  
 
 .. figure:: /_static/portal_tut01_step02e.png
-	:width: 300
 	:name: portal_tut01_step02e
 	:alt: Screenshot of dialog box where the user can set new chart parameters for the heat map.
+	:width: 300
 	
 	Above, we set the new chart parameters for a heatmap plot.
 
