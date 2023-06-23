@@ -109,7 +109,7 @@ Note that all times are given in the PDT (Pacific Daylight Time) time zone. For 
 Videos
 ======
 
-For information about the topics covered in each of these sessions, see the :ref:`agenda in the section above this one <DP0-Delegate-Resources-VSS2023-Agenda>`.
+For information about the topics covered in each of these sessions, see the :ref:`agenda <DP0-Delegate-Resources-VSS2023-Agenda>` in the section above this one.
 
 `Monday, June 12, Session A <https://youtu.be/ndNwbC1LADA>`__
 
