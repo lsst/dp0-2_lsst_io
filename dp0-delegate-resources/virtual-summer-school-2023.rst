@@ -20,6 +20,15 @@ DP0 Virtual Summer School 2023
 
 .. This section should provide a brief, top-level description of the page.
 
+.. _DP0-Delegate-Resources-VSS2023-update:
+
+Post-summer school update
+=========================
+
+**Update, June 23, 2023:** This meeting has already taken place. See :ref:`below <DP0-Delegate-Resources-VSS2023-Videos>` for links to video recordings of all sessions.  
+
+----
+
 **Dates**: June 12-16, 2023
 
 **Times** (delegates may attend either session):
@@ -28,7 +37,7 @@ Session A: 8:00-11:00 PDT (15:00-18:00 UTC)
 
 Session B: 19:00-21:00 PDT (02:00-04:00 UTC; +1 day)
 
-**Location**: virtual (`Zoom <http://ls.st/dp0-events>`_)
+**Location**: virtual
 
 **Eligibility**: All DP0 delegates are eligible to register for the DP0 Virtual Summer School.
 There is currently space available for new DP0 delegates:
@@ -68,7 +77,7 @@ The primary meeting platform will be Zoom.
 Registration Form
 =================
 
-Register via `this Google Form <https://forms.gle/pzRZA9Q3jLi8NFB19>`_
+Registration is closed, as the Summer School has already taken place.
 
 
 .. _DP0-Delegate-Resources-VSS2023-SOC:
@@ -94,6 +103,31 @@ Agenda
 Download the agenda as a pdf file: :download:`agenda </_static/DP0_Virtual_Summer_School_agenda.pdf>`.
 
 Note that all times are given in the PDT (Pacific Daylight Time) time zone. For conversion to your local time, try `this time zone converter <https://www.timeanddate.com/worldclock/converter.html>`__ (use Los Angeles as the anchor for PDT).
+
+.. _DP0-Delegate-Resources-VSS2023-Videos:
+
+Videos
+======
+
+For information about the topics covered in each of these sessions, see the :ref:`agenda <DP0-Delegate-Resources-VSS2023-Agenda>` in the section above this one.
+
+`Monday, June 12, Session A <https://youtu.be/ndNwbC1LADA>`__
+
+`Monday, June 12, Session B <https://youtu.be/IAx74kMrC0E>`__
+
+`Tuesday, June 13, Session A <https://youtu.be/4bge8CN5Ojg>`__
+
+`Tuesday, June 13, Session B <https://youtu.be/R2QbRmqsiEw>`__
+
+`Wednesday, June 14, Session A <https://youtu.be/dnXPTfybf0w>`__
+
+`Wednesday, June 14, Session B <https://youtu.be/tuGrMPvFp-Y>`__
+
+`Thursday, June 15, Session A <https://youtu.be/FrtXr3RGuKk>`__
+
+`Thursday, June 15, Session B <https://youtu.be/pycrXcNij8M>`__
+
+`Friday, June 16, Session A <https://youtu.be/26eqXwZp_64>`__
 
 
 Accessibility
