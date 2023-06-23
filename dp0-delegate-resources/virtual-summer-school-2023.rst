@@ -20,6 +20,11 @@ DP0 Virtual Summer School 2023
 
 .. This section should provide a brief, top-level description of the page.
 
+.. _DP0-Delegate-Resources-VSS2023-update:
+
+Post-summer school update
+=========================
+
 **Update, June 23, 2023:** This meeting has already taken place. See :ref:`below <DP0-Delegate-Resources-VSS2023-Videos>` for links to video recordings of all sessions.  
 
 ----
