@@ -20,7 +20,7 @@ DP0 Virtual Summer School 2023
 
 .. This section should provide a brief, top-level description of the page.
 
-**Update, 23 June 2023:** This meeting has already taken place. See :ref:`below <DP0-Delegate-Resources-VSS2023-Videos>` for links to video recordings of all sessions.  
+**Update, June 23, 2023:** This meeting has already taken place. See :ref:`below <DP0-Delegate-Resources-VSS2023-Videos>` for links to video recordings of all sessions.  
 
 ----
 
@@ -104,16 +104,24 @@ Note that all times are given in the PDT (Pacific Daylight Time) time zone. For 
 Videos
 ======
 
-For information about the contents covered in each of these sessions, see the agenda in the section above this one.
+For information about the topics covered in each of these sessions, see the :ref:`agenda in the section above this one <DP0-Delegate-Resources-VSS2023-Agenda>`.
 
 `Monday, June 12, Session A <https://youtu.be/ndNwbC1LADA>`__
+
 `Monday, June 12, Session B <https://youtu.be/IAx74kMrC0E>`__
+
 `Tuesday, June 13, Session A <https://youtu.be/4bge8CN5Ojg>`__
+
 `Tuesday, June 13, Session B <https://youtu.be/R2QbRmqsiEw>`__
+
 `Wednesday, June 14, Session A <https://youtu.be/dnXPTfybf0w>`__
+
 `Wednesday, June 14, Session B <https://youtu.be/tuGrMPvFp-Y>`__
+
 `Thursday, June 15, Session A <https://youtu.be/FrtXr3RGuKk>`__
+
 `Thursday, June 15, Session B <https://youtu.be/pycrXcNij8M>`__
+
 `Friday, June 16, Session A <https://youtu.be/26eqXwZp_64>`__
 
 
