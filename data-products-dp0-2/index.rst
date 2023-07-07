@@ -32,6 +32,10 @@ For more information about the LSST regions and cadence see `Ivezic et al. (2019
 
 **Simulated Objects and Images:**
 The DC2's WFD simulated images include galaxies (with large-scale structure), Type Ia supernovae, and stars (10% of which are variable).
+Variable stars have type ``applyRRly`` (periodic variables such as RR Lyrae and Cepheids); 
+``MLT`` (non-periodic, such as microlensing events, flaring M-dwarfs, cataclysmic variables); and
+``kplr`` (stars with no definitive variability class whose variability is modeled after Kepler lightcurves).
+
 DP0.2 does not include AGN, strong lenses, solar system objects, non-Ia extragalactic transients, or diffuse features (e.g., tidal streams, intracluster light).
 The DESC simulated the DC2 images using the `imSim <https://github.com/LSSTDESC/imSim>`__ package.
 
