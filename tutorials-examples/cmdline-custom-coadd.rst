@@ -23,7 +23,7 @@ This tutorial uses the Data Preview 0.2 (DP0.2) data set.
 This data set uses a subset of the DESC's Data Challenge 2 (DC2) simulated images, which have been reprocessed by Rubin Observatory using Version 23 of the LSST Science Pipelines.
 More information about the simulated data can be found in the DESC's `DC2 paper <https://ui.adsabs.harvard.edu/abs/2021ApJS..253...31L/abstract>`_ and in the `DP0.2 data release documentation <https://dp0-2.lsst.io>`_.
 
-A `shell script version <https://github.com/rubin-dp0/tutorial-notebooks/blob/main/09_Custom_Coadds/09a_Custom_Coadd.sh>`_ of this command line tutorial is also available.
+A `shell script version <https://github.com/rubin-dp0/tutorial-notebooks/tree/main/DP02_09_Custom_Coadds>`_ of this command line tutorial is also available.
 
 **WARNING:
 This custom coadd tutorial will only run with LSST Science Pipelines version Weekly 2022_40.**
