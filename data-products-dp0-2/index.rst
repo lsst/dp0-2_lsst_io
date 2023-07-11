@@ -223,7 +223,7 @@ PSF model fluxes are generally recommended, but there could be issues for object
 **For photometry of extended sources:**
 ``<band>_cModelFlux`` is a reasonable choice for galaxy *fluxes*, but the Gaussian aperture fluxes are generally preferred for galaxy *colors*.  Of the many Gaussian aperture fluxes, the ``<band>_gaap1p0Flux`` (the sigma=1.0-arcsec Gaussian aperture) seems to be a reasonable choice.  Currently, the Gaussian *optimal* aperture (``<band>_gaapOptimalFlux``) tends to fail often and is *not* generally recommended.  For further information on Gaussian aperture photometry, please consult `Kuijken (2008) <https://ui.adsabs.harvard.edu/abs/2008A%26A...482.1053K/abstract>`_, `Kuiken et al. (2015) <https://ui.adsabs.harvard.edu/abs/2015MNRAS.454.3500K/abstract>`_, and/or Konrad Kuijken's talk at the March 2020 Rubin Observatory Algorithms Workshop (`link <https://project.lsst.org/meetings/law/>`_).
 
-**Truth catalog data:** it is recommended to use the TAP service with table joins, as demonstrated in DP0.2 tutorial notebook "08_Truth_Tables.ipynb", and not the Butler, for access to truth catalog data.
+**Truth catalog data:** it is recommended to use the TAP service with table joins, as demonstrated in DP0.2 `tutorial notebook <https://github.com/rubin-dp0/tutorial-notebooks>`_ "DP02_08_Truth_Tables.ipynb", and not the Butler, for access to truth catalog data.
 Find more information about the matching algorithm in :ref:`Data-Processing-Overview-Truth-Matching`.
 
 
@@ -237,7 +237,7 @@ They take the form of sparse HEALPix maps, where the survey property at each spa
 Each map represents a `healsparse <https://healsparse.readthedocs.io/en/latest/>`_ map containing the value of an individual survey property, for a given band.
 Note that the DCR maps are proportionality maps; that is, the expected effect will be proportional to the value in the map with an arbitrary/empirically derived constant of proportionality.
 All survey property maps are available via the Butler.
-Find a demonstration of how to retrieve, display, and analyze survey property maps in tutorial notebook 03c_survey_property_maps.ipynb.
+Find a demonstration of how to retrieve, display, and analyze survey property maps in `tutorial notebook <https://github.com/rubin-dp0/tutorial-notebooks>`_ "DP02_03c_Survey_Property_Maps.ipynb".
 
 .. list-table:: Survey property maps available for DP0.2.
    :widths: 150 400
