@@ -94,13 +94,13 @@
      - 23A Meeting of the `Rubin Users Committee <https://www.lsst.org/scientists/users-committee>`__
      - *breakouts*
    * - 2023-05-26
-     - ChatGPT & Jupyter Notebooks by Allan Jackson
+     - `ChatGPT & Jupyter Notebooks (Allan Jackson) <https://community.lsst.org/t/summary-delegate-assembly-fri-may-26-2023/7693>`__
      - *breakouts*
    * - 2023-06-09
      - Portal Tutorial 04 (histograms) and Portal 05 (multi-band light curves) (Greg Madejski)
      - *breakouts*
    * - 2023-07-21
-     - *TBD*
+     - Inserting Kilonovae into DP0.2 Images (Matt Wiesner)
      - *breakouts*
 
 	
