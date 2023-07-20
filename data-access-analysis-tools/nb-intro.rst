@@ -273,11 +273,11 @@ In a python shell or notebook environment, you should then be able to execute th
 
 .. code-block:: bash
 
-from lsst.rsp import get_tap_service, retrieve_query
-service = get_tap_service()
-query = "SELECT * FROM tap_schema.schemas"
-results = service.search(query).to_table()
-print(results)
+   from lsst.rsp import get_tap_service, retrieve_query
+   service = get_tap_service()
+   query = "SELECT * FROM tap_schema.schemas"
+   results = service.search(query).to_table()
+   print(results)
 
 
 *Although the LSST environment can be run locally, we strongly recommend to use it in the RSP environment.*
