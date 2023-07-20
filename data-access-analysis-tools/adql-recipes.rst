@@ -50,6 +50,8 @@ It is recommended to always start with spatial constraints for a small radius an
 Qserv stores catalog data sharded by coordinate (RA, Dec).
 ADQL query statements that include constraints by coordinate do not requre a whole-catalog search,
 and are typically faster (and can be *much* faster) than ADQL query statements which only include constraints for other columns.
+It is recommended to use either an ADQL :ref:`Adql-Recipes-Cone-Search` or a :ref:`Adql-Recipes-Polygon-Search`,
+and to not use a ``WHERE ... BETWEEN`` statement to set boundaries on RA and Dec.
 
 **Use ``dectect_isPrimary`` = True.**
 It is recommended to include ``detect_isPrimary = True`` in queries for the ``Object``, ``Source``, and ``ForcedSource`` catalogs.
