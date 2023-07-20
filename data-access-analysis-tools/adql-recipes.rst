@@ -108,7 +108,7 @@ within a box defined by vertices (RA, Dec) = (59.58, -36.95), (59.58, -36.65), (
 
    SELECT coord_ra, coord_dec
    FROM dp02_dc2_catalogs.Object
-   WHERE CONTAINS(POINT('ICRS', obj.coord_ra, obj.coord_dec), 
+   WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), 
    POLYGON('ICRS', 59.58, -36.95, 59.58, -36.65, 59.96, -36.65, 59.96, -36.95))=1
 
 
