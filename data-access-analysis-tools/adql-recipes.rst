@@ -53,7 +53,7 @@ and are typically faster (and can be *much* faster) than ADQL query statements w
 It is recommended to use either an ADQL :ref:`Adql-Recipes-Cone-Search` or a :ref:`Adql-Recipes-Polygon-Search`,
 and to not use a ``WHERE ... BETWEEN`` statement to set boundaries on RA and Dec.
 
-**Use ``dectect_isPrimary`` = True.**
+**Use** ``dectect_isPrimary``**= True.**
 It is recommended to include ``detect_isPrimary = True`` in queries for the ``Object``, ``Source``, and ``ForcedSource`` catalogs.
 This parameter is ``True`` if a source has no children, is in the inner region of a coadd patch, is in the inner region of a coadd tract, and is not detected in a pseudo-filter.
 Including this constraint will remove any duplicates:
