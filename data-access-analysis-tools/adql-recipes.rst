@@ -115,9 +115,9 @@ within a box defined by vertices (RA, Dec) = (59.58, -36.95), (59.58, -36.65), (
 Qserv is designed to efficiently execute queries over limited spatial areas, 
 but it does not currently recognize the above ADQL syntax as a spatial query.
 This causes the query to be executed as a full-table scan instead, which takes orders of magnitude 
-more resources and can cause all user queries to be slow or stall.
-In the future this will not be a concern, but for now it is one of the 
-:ref:`Data-Access-Analysis-Tools-RSP-Warnings` related to using the DP0-era RSP.
+more resources and can cause other queries to be slow or stall.
+In the future there will be safeguards to help users avoid this, but for now it is one of the 
+`RSP Risks and Caveats`_ for DP0 delegates.
 
 
 .. _Adql-Recipes-FluxToMags:
