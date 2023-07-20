@@ -258,9 +258,16 @@ Can you install the lsst.rsp module outside the RSP?
 ---------------------------------------
 
 Yes, you can indeed install ``lsst.rsp`` on your own computer and run it locally. It is a standard PyPi package (https://pypi.org/project/lsst-rsp/) and can be installed by using ``pip install lsst-rsp``. 
+
 Note that if you want to use it to access data that is hosted at the IDF, you will also need a security token. See this documentation here: https://nb.lsst.io/environment/tokens.html for how to get a security token.
 
-As an example, we will walk through how you can access the Rubin LSST TAP service locally. After getting an access token, set the value of the environment variable ``ACCESS_TOKEN`` to the path to your token. Then set the TAP URL endpoint ``EXTERNAL_TAP_URL`` to ``"https://data.lsst.cloud/api/tap"``. In a python shell or notebook environment, you should then be able to execute the following:
+As an example, we will walk through how you can access the Rubin LSST TAP service locally. 
+
+After getting an access token, set the value of the environment variable ``ACCESS_TOKEN`` to the path to your token. 
+
+Then set the TAP URL endpoint ``EXTERNAL_TAP_URL`` to ``"https://data.lsst.cloud/api/tap"``. 
+
+In a python shell or notebook environment, you should then be able to execute the following:
 
 ``from lsst.rsp import get_tap_service, retrieve_query``
 
