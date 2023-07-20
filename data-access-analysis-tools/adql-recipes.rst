@@ -50,8 +50,10 @@ It is recommended to always start with spatial constraints for a small radius an
 Qserv stores catalog data sharded by coordinate (RA, Dec).
 ADQL query statements that include constraints by coordinate do not requre a whole-catalog search,
 and are typically faster (and can be *much* faster) than ADQL query statements which only include constraints for other columns.
+It is recommended to use either an ADQL :ref:`Adql-Recipes-Cone-Search` or a :ref:`Adql-Recipes-Polygon-Search`,
+and to not use a ``WHERE ... BETWEEN`` statement to set boundaries on RA and Dec.
 
-**Use ``dectect_isPrimary`` = True.**
+**Use** ``dectect_isPrimary``**= True.**
 It is recommended to include ``detect_isPrimary = True`` in queries for the ``Object``, ``Source``, and ``ForcedSource`` catalogs.
 This parameter is ``True`` if a source has no children, is in the inner region of a coadd patch, is in the inner region of a coadd tract, and is not detected in a pseudo-filter.
 Including this constraint will remove any duplicates:
@@ -93,6 +95,31 @@ Retrieve the ``coord_dec`` and ``coord_ra`` columns from the ``Object`` table fo
    WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), 
    CIRCLE('ICRS', 62, -37, 0.05)) = 1
 
+
+.. _Adql-Recipes-Polygon-Search:
+
+Polygon Search
+==============
+
+Retrieve the ``coord_dec`` and ``coord_ra`` columns from the ``Object`` table for objects 
+within a box defined by vertices (RA, Dec) = (59.58, -36.95), (59.58, -36.65), (59.96, -36.65), and (59.96, -36.95).
+
+.. code-block:: SQL
+
+   SELECT coord_ra, coord_dec
+   FROM dp02_dc2_catalogs.Object
+   WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), 
+   POLYGON('ICRS', 59.58, -36.95, 59.58, -36.65, 59.96, -36.65, 59.96, -36.95))=1
+
+
+**Warning! Avoid ``WHERE`` statements that use the ``BETWEEN`` clause on sky coordinates**, such as
+``WHERE obj.coord_ra BETWEEN 59.58 AND 59.96 AND obj.coord_dec BETWEEN -36.95 AND -36.65``.
+Qserv is designed to efficiently execute queries over limited spatial areas, 
+but it does not currently recognize the above ADQL syntax as a spatial query.
+This causes the query to be executed as a full-table scan instead, which takes orders of magnitude 
+more resources and can cause other queries to be slow or stall.
+In the future there will be safeguards to help users avoid this, but for now consider it one of the
+:doc:`risks and caveats </data-access-analysis-tools/rsp-warnings>` of using the in-development DP0-era RSP.
 
 
 .. _Adql-Recipes-FluxToMags:
