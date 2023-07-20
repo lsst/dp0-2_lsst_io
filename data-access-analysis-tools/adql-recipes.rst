@@ -116,8 +116,8 @@ Qserv is designed to efficiently execute queries over limited spatial areas,
 but it does not currently recognize the above ADQL syntax as a spatial query.
 This causes the query to be executed as a full-table scan instead, which takes orders of magnitude 
 more resources and can cause other queries to be slow or stall.
-In the future there will be safeguards to help users avoid this, but for now it is one of the 
-`RSP Risks and Caveats`_ for DP0 delegates.
+In the future there will be safeguards to help users avoid this, but for now consider it one of the
+:doc:`risks and caveats </data-access-analysis-tools/rsp-warnings>` of using the in-development DP0-era RSP.
 
 
 .. _Adql-Recipes-FluxToMags:
