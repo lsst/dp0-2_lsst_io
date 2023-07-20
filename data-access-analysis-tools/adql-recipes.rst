@@ -94,6 +94,31 @@ Retrieve the ``coord_dec`` and ``coord_ra`` columns from the ``Object`` table fo
    CIRCLE('ICRS', 62, -37, 0.05)) = 1
 
 
+.. _Adql-Recipes-Polygon-Search:
+
+Polygon Search
+==============
+
+Retrieve the ``coord_dec`` and ``coord_ra`` columns from the ``Object`` table for objects 
+within a box defined by vertices (RA, Dec) = (59.58, -36.95), (59.58, -36.65), (59.96, -36.65), and (59.96, -36.95).
+
+.. code-block:: SQL
+
+   SELECT coord_ra, coord_dec
+   FROM dp02_dc2_catalogs.Object
+   WHERE CONTAINS(POINT('ICRS', obj.coord_ra, obj.coord_dec), 
+   POLYGON('ICRS', 59.58, -36.95, 59.58, -36.65, 59.96, -36.65, 59.96, -36.95))=1
+
+
+**Warning! Avoid ``WHERE`` statements that use the ``BETWEEN`` clause on sky coordinates**, such as
+``WHERE obj.coord_ra BETWEEN 59.58 AND 59.96 AND obj.coord_dec BETWEEN -36.95 AND -36.65``.
+Qserv is designed to efficiently execute queries over limited spatial areas, 
+but it does not currently recognize the above ADQL syntax as a spatial query.
+This causes the query to be executed as a full-table scan instead, which takes orders of magnitude 
+more resources and can cause all user queries to be slow or stall.
+In the future this will not be a concern, but for now it is one of the 
+:ref:`Data-Access-Analysis-Tools-RSP-Warnings` related to using the DP0-era RSP.
+
 
 .. _Adql-Recipes-FluxToMags:
 
