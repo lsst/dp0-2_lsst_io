@@ -265,7 +265,10 @@ As an example, we will walk through how you can access the Rubin LSST TAP servic
 
 After getting an access token, set the value of the environment variable ``ACCESS_TOKEN`` to the path to your token. 
 
-Then set the TAP URL endpoint ``EXTERNAL_TAP_URL`` to ``"https://data.lsst.cloud/api/tap"``. 
+Then set the TAP URL endpoint ``EXTERNAL_TAP_URL`` to ``"https://data.lsst.cloud/api/tap"`` (e.g. for macOS, execute the following)
+
+.. code-block:: bash
+   export EXTERNAL_TAP_URL="https://data.lsst.cloud/api/tap"
 
 In a python shell or notebook environment, you should then be able to execute the following:
 
