@@ -42,16 +42,13 @@ and with different analysis options.
 
 The :ref:`Tools-RSP-Portal` provides a GUI (graphical user interface) that enables access and visualization without ADQL or python, 
 however, analysis tools such as trend regression are not currently available.
-
 The :ref:`Tools-RSP-Notebook` enables programmatic analysis of the data products in a python environment that includes the 
 LSST Science Pipelines and common packages like numpy, scipy, bokeh, and datashader.
-
 The :ref:`Tools-RSP-API` offers remote access via Virtual Observatory (VO) interfaces such as TOPCAT.
 
-Read on below for more details of what is possible with each of the RSP's three aspects. 
-
 **Still unsure which aspect to choose?** 
-Try working through the first Portal and Notebook :doc:`DP0.2 tutorials </tutorials-examples/index>`.
+Read on below for more details of what is possible with each of the RSP's three aspects, or
+try working through the introductory Portal and Notebook :doc:`DP0.2 tutorials </tutorials-examples/index>`.
 
 
 .. figure:: /_static/RSP_home.png
