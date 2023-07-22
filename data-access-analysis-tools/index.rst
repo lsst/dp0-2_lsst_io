@@ -36,9 +36,22 @@ Scroll down to the bottom of this page for more information about the future RSP
 Rubin Science Platform (RSP)
 ============================
 
-The Rubin Science Platform (RSP) provides access to Rubin Observatory data products.
-The :ref:`Tools-RSP-Notebook` enables programmatic interaction with, and analysis of, data products in a python environment.
-The :ref:`Tools-RSP-Portal` provides interactive query, data discovery, and visualization tools.
+The Rubin Science Platform (RSP) provides access to Rubin Observatory data products via three aspects: Portal, Notebooks, and API.
+All three aspects enable users to query, retrieve, and visualize the image and catalog data, but in different ways, 
+and with different analysis options.
+
+The :ref:`Tools-RSP-Portal` provides a GUI (graphical user interface) that enables access and visualization without ADQL or python, 
+however, analysis tools such as trend regression are not currently available.
+
+The :ref:`Tools-RSP-Notebook` enables programmatic analysis of the data products in a python environment that includes the 
+LSST Science Pipelines and common packages like numpy, scipy, bokeh, and datashader.
+
+The :ref:`Tools-RSP-API` offers remote access via Virtual Observatory (VO) interfaces such as TOPCAT.
+
+Read on below for more details of what is possible with each of the RSP's three aspects. 
+
+**Still unsure which aspect to choose?** 
+Try working through the first Portal and Notebook :doc:`tutorials_examples/index`.
 
 
 .. figure:: /_static/RSP_home.png
