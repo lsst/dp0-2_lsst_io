@@ -51,7 +51,9 @@ The :ref:`Tools-RSP-API` offers remote access via Virtual Observatory (VO) inter
 Read on below for more details of what is possible with each of the RSP's three aspects. 
 
 **Still unsure which aspect to choose?** 
-Try working through the first Portal and Notebook :doc:`tutorials_examples/index`.
+Try working through the first Portal and Notebook :doc:`DP0.2 tutorials </tutorials-examples/index>`.
+
+:doc:`tutorials_examples/index`.
 
 
 .. figure:: /_static/RSP_home.png
