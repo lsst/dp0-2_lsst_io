@@ -51,6 +51,11 @@ and clicking on "history" (near upper-right).
 Major Updates Log
 =================
 
+July 31 2023
+------------
+
+Released new tutorial notebook 11 on working with user packages.
+
 June 1 2023
 -----------
 
