@@ -42,7 +42,7 @@ Becoming a delegate and accessing the DP0 data is as easy as following this chec
 
 There is no application process.
 The only prerequisite is to be a Rubin data rights holder.
-Although the number of delegates is currently limited to 600, there is space available and all petitions are being accepted.
+Although the number of delegates is currently limited to 900, there is space available and all petitions are being accepted.
 If that changes this page will be updated.
 
 Mandatory steps to becoming a delegate:
