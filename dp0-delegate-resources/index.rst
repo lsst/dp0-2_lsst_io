@@ -20,7 +20,7 @@ DP0 Delegate Homepage
 
 .. This section should provide a brief, top-level description of the page.
 
-This page includes the guidelines, resources, and activities for DP0 Delegates.
+This page includes the guidelines, resources, and activities for DP0 delegates using the DP0.2 and/or DP0.3 data sets.
 
 "**DP0 delegates**" are the scientists and students who have accounts in the Rubin Science Platform (RSP)
 at the Interim Data Facility (IDF; the Google Cloud) during Data Preview 0 (DP0).
@@ -50,16 +50,17 @@ Mandatory steps to becoming a delegate:
 | 1. Review the :ref:`Delegate-Homepage-Guidelines-Expectations`.
 | 2. Submit a petition for one of the :ref:`Delegate-Homepage-RSP-Accounts`.
 | 3. Set up your account in the :ref:`Delegate-Homepage-Forum`.
-| 4. Watch the recorded :ref:`Delegate-Homepage-Kickoff` (13 minutes).
+| 4. Watch the recorded DP0.2 :ref:`Delegate-Homepage-Kickoff` (13 minutes).
 | 5. Review your options for :ref:`Delegate-Homepage-Getting-Support`.
 
 Optional (but recommended) steps for delegates:
 
-| 6. Follow step-by-step introductions to the RSP's :ref:`Tools-RSP-Portal` or :ref:`Tools-RSP-Notebook`.
-| 7. Work at your own pace through the :doc:`/tutorials-examples/index`.
-| 8. Attend :ref:`Delegate-Homepage-DP0-Virtual-Seminars` or watch recordings where available.
-| 9. Consider the :ref:`Delegate-Homepage-Delegate-Activities`.
-| 10. Be aware that the `Rubin Users Committee <https://www.lsst.org/scientists/users-committee>`_ are your advocates.
+| 6. Work at your own pace through the DP0.2 :doc:`/tutorials-examples/index` or `DP0.3 Tutorials <https://dp0-3.lsst.io/tutorials-dp0-3/index.html>`_.
+| 7. Review the data products definitions documentation for `DP0.2 <https://dp0-2.lsst.io/data-products-dp0-2/index.html#dp0-2-data-products-definition-document-dpdd>`_ and/or `DP0.3 <https://dp0-3.lsst.io/data-products-dp0-3/index.html#dp0-3-data-products-definition-document-dpdd>`_.
+| 8. Follow step-by-step introductions to the RSP's :ref:`Tools-RSP-Portal` or :ref:`Tools-RSP-Notebook`.
+| 9. Attend :ref:`Delegate-Homepage-DP0-Virtual-Seminars` or watch recordings where available.
+| 10. Consider the :ref:`Delegate-Homepage-Delegate-Activities`.
+| 11. Be aware that the `Rubin Users Committee <https://www.lsst.org/scientists/users-committee>`_ are your advocates.
 
 
 .. _Delegate-Homepage-Guidelines-Expectations:
@@ -164,6 +165,9 @@ All **new** delegates must review the recording if they did not attend a live se
 | - RSP hazards and delegate expectations
 | - resources and support for delegates
 
+This session occurred at the time of the release of DP0.2, but remains relevent for delegates
+who are only interested in DP0.3.
+
 
 .. _Delegate-Homepage-DP0-Virtual-Seminars:
 
@@ -178,10 +182,10 @@ Attendance at any of the following virtual seminars is optional for DP0 delegate
 DP0 virtual summer school 2023
 ------------------------------
 
-To be held June 12-16, 2023. Stay tuned for links to recordings of the tutorials after the Summer School has ended.
+Held June 12-16, 2023.
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :glob:
 
     virtual-summer-school-2023
@@ -218,9 +222,9 @@ Stack Club
 
 **Time:** Biweekly on Fridays from 9am to 11am US Pacific time.
 
-**Dates:** Apr 7, 21, May 5, 19, June 2, 30, July 14, 28 (alternating with :ref:`Delegate-Homepage-DP0-Delegate-Assemblies`).
+**Dates:** Aug 25, Sept 8, 22 (alternating with :ref:`Delegate-Homepage-DP0-Delegate-Assemblies`).
 
-`Stack Club <https://github.com/LSSTScienceCollaborations/StackClub>`_ is an open, drop-in session for working with the DP0 data set and/or the Rubin Observatory `LSST Science Pipelines <https://pipelines.lsst.io/>`_ (colloquially called "the Stack").
+`Stack Club <https://github.com/LSSTScienceCollaborations/StackClub>`_ is an open, drop-in session for working with the DP0 data sets and/or the Rubin Observatory `LSST Science Pipelines <https://pipelines.lsst.io/>`_ (colloquially called "the Stack").
 Stack Club sessions begin with a roundtable discussion of what people want to do or learn that day, and then work proceeds as people stay connected via Zoom,
 asking questions or having discussions in the main room or breakout rooms as need arises.
 Rubin Observatory staff are always present to provide support for DP0 and the RSP.
@@ -239,9 +243,7 @@ Third Thursday office hour
 These two time slots serve the Asia-Pacific (APAC) and Europe, the Middle East, and Africa (EMEA) time zones, respectively.
 Note that in the western Americas (AMER) time zone, the first slot at 04:00 UTC is actually on Wednesday evening.
 
-| **Dates (2023):** Apr 20, May 18.
-| There will NOT be office hours Thu Jun 15.
-| Additional dates TBD.
+| **Dates (2023):** *Additional dates TBD.*
 
 These office hour sessions are open, drop-in discussions designed to compensate for the fact that the time of the Delegate Assemblies was only convenient for DP0 delegates in North and South America, Europe, and Africa.
 Everyone is welcome to attend any of these sessions, instead of or in addition to the Delegate Assemblies and the Stack Club sessions.
@@ -397,8 +399,8 @@ If you experience or witness a violation of the CoC in another venue, please rea
 Citation policies
 =================
 
-**Cite the DESC’s publications for the DC2 simulated data set**, which is being used for DP0.
-If you publish work based on the DP0 data set, you must cite “CosmoDC2: A Synthetic Sky Catalog for Dark Energy Science with LSST”
+**Cite the DESC’s publications for the DC2 simulated data set**, which is being used for DP0.1 and DP0.2.
+If you publish work based on the DP0.1 or DP0.2 data set, you must cite “CosmoDC2: A Synthetic Sky Catalog for Dark Energy Science with LSST”
 (`Korytov et al 2019 <https://ui.adsabs.harvard.edu/abs/2019ApJS..245...26K/abstract>`_), “The LSST DESC DC2 Simulated Sky Survey” (`arXiv:2010.05926 <https://arxiv.org/abs/2010.05926>`_),
 and potentially “DESC DC2 Data Release Note” (`arXiv:2101.04855 <https://arxiv.org/abs/2101.04855>`_) if you used the Object or Truth-Match tables, which are presented in that release note.
 
