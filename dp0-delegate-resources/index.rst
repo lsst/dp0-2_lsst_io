@@ -155,7 +155,7 @@ Kick-off info session
 =====================
 
 All **new** delegates must review the recording if they did not attend a live session.
-This session occurred at the time of the release of DP0.2, but remains relevent for delegates
+This session occurred at the time of the release of DP0.2, but remains relevant for delegates
 who are only interested in DP0.3.
 
 `View the recorded presentation and slide deck. <https://community.lsst.org/t/dp0-2-kick-off-info-session-slides-pre-recorded-presentation/6846>`__
@@ -357,7 +357,7 @@ These issues will be addressed by Rubin Observatory staff.
 Minor or ambiguous RSP service and access issues
 ------------------------------------------------
 
-Please feel free post even small questions as new topics in the "Support - DP0 RSP Service Issues" private subcategory of the Community Forum.
+Please feel free to post even small questions as new topics in the "Support - DP0 RSP Service Issues" private subcategory of the Community Forum.
 
 This subcategory enables DP0 delegates to determine if others are experiencing the same issue (e.g., *"is this local or general network outage?"*, *"my query is taking a long time, is this a real problem or did I do it wrong?"*),
 crowd-source solutions to technical issues from each other when possible, and have a non-public venue for DP0-related questions.
