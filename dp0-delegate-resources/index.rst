@@ -30,7 +30,7 @@ as learners, testers, and providers of feedback, and of sharing the benefits of 
 communities as teachers and colleagues.
 Delegates’ DP0-related activities are supported with resources and infrastructure as described on this page.
 
-The number of delegates is currently limited to 600, but space is available.
+The number of delegates is currently limited to 900, but space is available.
 
 
 .. _Delegate-Homepage-Getting-Started-Checklist:
