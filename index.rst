@@ -40,7 +40,7 @@ Resources for DP0 delegates
 
 The term "**delegate**" refers to the 600 data rights holders who have accounts in the Rubin Science Platform (RSP) and access to the DP0 data sets.
 
-**Want to become a delegate?** Space is available. See the :ref:`Delegate-Homepage-Getting-Started-Checklist`.
+**Want access to the DP0 data sets?** Space is available. See the :ref:`Delegate-Homepage-Getting-Started-Checklist`.
     
 .. toctree::
     :maxdepth: 2
@@ -84,7 +84,7 @@ Step-by-step instructions for RSP use are provided.
 Tutorials
 =========
 
-Tutorials include hands-on executable tutorials and demonstrations based on science use cases for learning to use the RSP and the LSST Science Pipelines.
+DP0.2 tutorials include hands-on executable tutorials and demonstrations based on science use cases for learning to use the RSP and the LSST Science Pipelines.
 
 .. Examples of accessing or processing data products are separated from other locations in the repository to provide a single location of all examples.
 .. Using reST syntax, the examples can be reproduced in other locations on this site by using the ``include`` directive.
