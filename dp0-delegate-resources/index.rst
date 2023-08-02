@@ -207,7 +207,7 @@ Rubin Observatory staff are always available in the main room to answer question
 
 Contributed presentations, tutorials, or advance suggestions for breakouts are encouraged from DP0 delegates and Rubin Observatory staff (contact Melissa Graham).
 
-A list of topics and links to recordings for Delegate Assemblies from July 2022 through July 2023.
+Topics and recordings for :doc:`/dp0-delegate-resources/assembly-recordings.rst`.
 
 .. include:: dp0-delegate-assemblies-schedule.inc
 
