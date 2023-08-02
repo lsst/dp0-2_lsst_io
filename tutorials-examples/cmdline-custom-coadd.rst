@@ -12,7 +12,7 @@
 
 **Container size:** large
 
-**Credit:** This command line tutorial is based on the `corresponding notebook tutorial <https://github.com/rubin-dp0/tutorial-notebooks>`_ by Melissa Graham. The command line approach is heavily influenced by Shenming Fu's recipe for reducing `DECam <https://noirlab.edu/science/programs/ctio/instruments/Dark-Energy-Camera>`_ data with the Gen3 LSST Science Pipelines, which is in turn based on `Lee Kelvin's Merian processing instructions <https://hackmd.io/@lsk/merian>`_.
+**Credit:** This command line tutorial is based on the `corresponding notebook tutorial <https://github.com/rubin-dp0/tutorial-notebooks>`_ by Melissa Graham. The command line approach is heavily influenced by Shenming Fu's recipe for reducing DECam data with the Gen3 LSST Science Pipelines, which is in turn based on `Lee Kelvin's Merian processing instructions <https://hackmd.io/@lsk/merian>`_.
 
 **Introduction:** 
 This tutorial shows how to use command line ``pipetask`` invocations to produce custom coadds from simulated single-exposure Rubin/LSST images. It is meant to parallel the corresponding Jupyter Notebook tutorial entitled `Construct a Custom Coadded Image <https://github.com/rubin-dp0/tutorial-notebooks>`_.
