@@ -55,7 +55,7 @@ Mandatory steps to becoming a delegate:
 
 Optional (but recommended) steps for delegates:
 
-| 6. Work at your own pace through the DP0.2 :doc:`/tutorials-examples/index` or `DP0.3 Tutorials <https://dp0-3.lsst.io/tutorials-dp0-3/index.html>`_.
+| 6. Work at your own pace through the :doc:`/tutorials-examples/index` or `DP0.3 Tutorials <https://dp0-3.lsst.io/tutorials-dp0-3/index.html>`_.
 | 7. Review the data products definitions documentation for `DP0.2 <https://dp0-2.lsst.io/data-products-dp0-2/index.html#dp0-2-data-products-definition-document-dpdd>`_ and/or `DP0.3 <https://dp0-3.lsst.io/data-products-dp0-3/index.html#dp0-3-data-products-definition-document-dpdd>`_.
 | 8. Follow step-by-step introductions to the RSP's :ref:`Tools-RSP-Portal` or :ref:`Tools-RSP-Notebook`.
 | 9. Attend :ref:`Delegate-Homepage-DP0-Virtual-Seminars` or watch recordings where available.
@@ -155,18 +155,14 @@ Kick-off info session
 =====================
 
 All **new** delegates must review the recording if they did not attend a live session.
+This session occurred at the time of the release of DP0.2, but remains relevent for delegates
+who are only interested in DP0.3.
 
 `View the recorded presentation and slide deck. <https://community.lsst.org/t/dp0-2-kick-off-info-session-slides-pre-recorded-presentation/6846>`__
 
-| **The session covered:**
-| - DP0 goals and the road to Rubin Observatory operations
-| - RSP and Community Forum accounts
-| - introductory demo to the Portal and Notebook aspects
-| - RSP hazards and delegate expectations
-| - resources and support for delegates
-
-This session occurred at the time of the release of DP0.2, but remains relevent for delegates
-who are only interested in DP0.3.
+The session covered: DP0 goals and the road to Rubin Observatory operations; 
+RSP and Community Forum accounts; introductory demo to the Portal and Notebook aspects;
+RSP hazards and delegate expectations; and resources and support for delegates.
 
 
 .. _Delegate-Homepage-DP0-Virtual-Seminars:
@@ -204,11 +200,14 @@ DP0 Delegate Assemblies
 The Delegate Assemblies are live, virtual seminars for DP0 delegates to learn more about DP0, the RSP, and the DC2 data set.
 Attendance is optional and all are welcome.
 
-Typically, the first hour contains a presentation or hands-on tutorial, and the second hour is spent in breakout rooms for discussion or co-working on topics suggested by delegates.
+Typically, the first hour contains a presentation or hands-on tutorial, and the second hour is spent in breakout rooms for 
+discussion or co-working on topics suggested by delegates.
 
 Rubin Observatory staff are always available in the main room to answer questions and provide assistance with DP0-related work during breakouts.
 
 Contributed presentations, tutorials, or advance suggestions for breakouts are encouraged from DP0 delegates and Rubin Observatory staff (contact Melissa Graham).
+
+A list of topics and links to recordings for Delegate Assemblies from July 2022 through July 2023.
 
 .. include:: dp0-delegate-assemblies-schedule.inc
 
