@@ -36,10 +36,10 @@
    * - 2023-08-18
      - DP0.3 Kick-Off Info Session
      - *general Q&A, breakouts*
-   * - 2022-09-01
+   * - 2023-09-01
      - *TBD*
      - *general Q&A, breakouts*
-   * - 2022-09-15
+   * - 2023-09-15
      - *TBD*
      - *general Q&A, breakouts*
 
