@@ -38,7 +38,7 @@ Term definitions are provided on the `Rubin Observatory Glossary & Acronyms webp
 Resources for DP0 delegates
 ===========================
 
-The term "**delegate**" refers to the 600 data rights holders who have accounts in the Rubin Science Platform (RSP) and access to the DP0 data sets.
+The term "**delegate**" refers to the 900 data rights holders who have accounts in the Rubin Science Platform (RSP) and access to the DP0 data sets.
 
 **Want access to the DP0 data sets?** Space is available. See the :ref:`Delegate-Homepage-Getting-Started-Checklist`.
     
