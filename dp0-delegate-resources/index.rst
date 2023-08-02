@@ -131,7 +131,7 @@ Go to `community.lsst.org <https://community.lsst.org>`_ and use the "Sign Up" b
 **Join the "DP0 Delegates" group to stay informed:**
 Go to `community.lsst.org/groups <https://community.lsst.org/groups>`_ and join "DP0 Delegates".
 DP0-related news and events are shared as direct messages via the forum to this group (not via email).
-To recieve email notifications, set your Community Forum user profile preference for "Email me when I am sent a personal message" to "Always".
+To receive email notifications, set your Community Forum user profile preference for "Email me when I am sent a personal message" to "Always".
 Joining this group also ensures that you have access to the "Support - DP0 RSP Service Issues" subcategory.
 
 **Find DP0-related content in the Forum:**
