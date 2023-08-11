@@ -209,6 +209,9 @@ Web searches for "python *(thing you want to do)*" are usually pretty successful
 How do I install packages in my user environment?
 -------------------------------------------------
 
+Basic User Installs
+~~~~~~~~~~~~~~~~~~~
+
 The Rubin Science Platform (RSP) comes with the ``rubin-env`` conda environment, including the LSST Science Pipelines, pre-installed and activated within the Notebook and Terminal.
 If you need to extend the ``rubin-env`` environment by installing other Python packages to enable your work, you can use the ``pip install`` command.
 In the RSP, ``pip`` actually invokes ``conda`` to do its work, ensuring that dependencies that are already present in ``rubin-env`` are used (if compatible).
@@ -226,6 +229,57 @@ When you're done using the environment and want to revert to the ``rubin-env`` o
 
 If you need to directly extend the ``rubin-env`` environment with other conda packages, the only way to do so at present is to clone the environment.
 This is a time- and space-consuming process, so we do not recommend it.
+
+More Complex User Installs
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Suppose one wishes to install a user package on the RSP that has dependencies on non-python libraries.
+Typically, these non-python libraries must be installed and built separately, and the ``LD_LIBRARY_PATH`` must be updated.
+Leanne Guy created a simple and effective `tutorial notebook for working with user packages <https://github.com/rubin-dp0/tutorial-notebooks/>`_,  using the install of the ``bagpipes`` Bayesian Analysis of Galaxies package as an example.
+(The ``bagpipes`` package depends on ``PyMultiNest``, a python interface to the ``MultiNest`` package, which is written in C++.)
+The tutorial notebook runs through the steps to user install the ``bagpipes`` package and build its dependencies on the RSP so that it can be used both from the python command line shell and from inside a notebook.
+
+The basic steps are:
+
+1. Open a terminal in the Notebook aspect of the RSP. 
+
+2. Install the bagpipes package with :command:`pip`:
+
+   .. code-block:: bash
+
+      pip install --user bagpipes
+
+   (The ``--user`` flag is necessary because you don’t have root access.)
+
+   Among other packages, the above command installs ``PyMultiNest``, a python interface for MultiNest. The ``MultiNest`` package itself is not included. 
+   Before we can use the ``bagpipes`` package, we must install MultiNest and update the ``LD_LIBRARY`` environment variable.
+
+3. Install and build the dependencies -- in this case, the ``MultiNest`` package -- in your ``~/local`` direcotry.  In a terminal, execute:
+
+   .. code-block:: bash
+
+	cd ~/local
+	git clone https://github.com/JohannesBuchner/MultiNest
+	cd MultiNest/build
+	cmake ..
+	make
+
+4. Update the ``LD_LIBRARY_PATH` in your ``~/.bashrc`` file (for terminal-based access):
+
+   .. code-block:: bash
+
+	export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${HOME}/local/MultiNest/lib
+
+5. Update the ``LD_LIBRARY_PATH` in your ``~/notebooks/.user_setups`` file (for notebook access):
+
+   .. code-block:: bash
+
+	export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${HOME}/local/MultiNest/lib
+
+6. The first time you perfom Steps 4 and/or 5, log out and log back into the RSP.
+
+For more information, please consult `tutorial notebook for working with user packages <https://github.com/rubin-dp0/tutorial-notebooks/>`_.
+
 
 
 .. _NB-Intro-Use-A-NB-faq-github:
