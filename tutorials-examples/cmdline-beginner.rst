@@ -336,7 +336,7 @@ Double click on the filename to open and view the image.
 	:alt: A four thousand by four thousand pixel screen capture of an astronomical image that has been plotted in a Jupyter notebook.  
 		A large concentration of elongated points is concentrated at the lower-left quadrant and suggests a cluster of galaxies.  
     
-7.2. Display the image using Firefly (`Firefly documentation <https://pipelines.lsst.io/v/daily/modules/lsst.display.firefly/index.html>`_). 
+7.2. Display the image using Firefly (`Firefly documentation <https://pipelines.lsst.io/modules/lsst.display.firefly/index.html`_). 
 
 .. code-block::
 
