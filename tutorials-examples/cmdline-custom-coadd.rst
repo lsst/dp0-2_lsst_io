@@ -6,18 +6,18 @@
 
 **Contact author:** Aaron Meisner
 
-**Last verified to run:** 05/14/2023
+**Last verified to run:** 08/17/2023
 
 **Targeted learning level:** Advanced
 
 **Container size:** large
 
-**Credit:** This command line tutorial is based on the `corresponding notebook tutorial <https://github.com/rubin-dp0/tutorial-notebooks>`_ by Melissa Graham. The command line approach is heavily influenced by Shenming Fu's recipe for reducing DECam data with the Gen3 LSST Science Pipelines, which is in turn based on `Lee Kelvin's Merian processing instructions <https://hackmd.io/@lsk/merian>`_.
+**Credit:** This command line tutorial is based on the `corresponding notebook tutorial <https://github.com/rubin-dp0/tutorial-notebooks>`_ by Melissa Graham. The command line approach is heavily influenced by Shenming Fu's recipe for reducing DECam data with the Gen3 LSST Science Pipelines, which is in turn based on `Lee Kelvin's Merian processing notes <https://hackmd.io/@lsk/merian>`_.
 
 **Introduction:** 
 This tutorial shows how to use command line ``pipetask`` invocations to produce custom coadds from simulated single-exposure Rubin/LSST images. It is meant to parallel the corresponding Jupyter Notebook tutorial entitled `Construct a Custom Coadded Image <https://github.com/rubin-dp0/tutorial-notebooks>`_.
 
-The peak memory of this custom coadd processing is between 8 and 9 GB, hence a large container is necessary.
+The peak memory of this custom coadd processing is between 8 and 9 GB, hence a large container is appropriate.
 
 This tutorial uses the Data Preview 0.2 (DP0.2) data set.
 This data set uses a subset of the DESC's Data Challenge 2 (DC2) simulated images, which have been reprocessed by Rubin Observatory using Version 23 of the LSST Science Pipelines.
@@ -74,106 +74,36 @@ In this tutorial, the ``$`` sign is used to indicate a command issued at the RSP
      $ eups list lsst_distrib
      g0b29ad24fb+9b30730ed8       current w_2022_40 setup
 
-Step 2. Create your custom coaddition pipeline
-=============================================
+Step 2. Show your pipeline and its configurations
+=================================================
 
 As you saw in `DP0.2 tutorial notebook 9a <https://github.com/rubin-dp0/tutorial-notebooks>`_, you do not need to rerun the entire DP0.2 data processing in order to obtain custom coadds. You only need to run a subset of the tasks that make up ``step3`` of the DP0.2 processing, where ``step3`` refers to coadd-level processing. Specifically, you want to rerun only the ``makeWarp`` and ``assembleCoadd`` tasks.
 
-The strategy for running these custom coadds via the command line is to start with the "Data Release Production" (DRP) pipeline used for DP0.2 processing and make relatively minor edits to isolate the specific ``makeWarp`` and ``assembleCoadd`` tasks of interest.
-
-2.1. Inspect the DP0.2 YAML pipeline definition
-
-Ensure that you're in the working directory on RSP that you've chosen to be the place from which you will run the custom coadd processing. Let's start by making a local copy of the DRP YAML pipeline definition file for DP0.2. It is conventional to put pipeline definition YAML files in a ``pipelines`` subdirectory, so let's make one in your current working directory:
-
-.. code-block::
-
-    $ mkdir pipelines
-
-Now make yourself a local copy of the full DP0.2 pipeline definition YAML:
-
-.. code-block::
-
-    $ pipetask build -p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml \
-    --show pipeline > pipelines/MakeWarpAssembleCoadd.yaml
-
-The above is the first of several ``pipetask`` commands used throughout this tutorial. `pipetask <https://pipelines.lsst.io/modules/lsst.ctrl.mpexec/pipetask.html>`_ commands are provided as part of the LSST Science Pipelines software stack and are used to build, visualize, and run processing pipelines from the terminal. When used as above with the ``--show pipeline`` option, ``pipetask build`` simply assembles and prints out the YAML pipeline definition specified via the ``-p`` argument.
-
-Now let's take a look at your newly created ``pipelines/MakeWarpAssembleCoadd.yaml`` pipeline definition file. There are multiple ways to view an `ASCII <https://en.wikipedia.org/wiki/ASCII>`_ (plain text) file such as ``pipelines/MakeWarpAssembleCoadd.yaml`` from a Linux terminal. Let's use a program called `head <https://en.wikipedia.org/wiki/Head_(Unix)>`_.
-
-
-.. code-block::
-
-    $ head -3151 pipelines/MakeWarpAssembleCoadd.yaml  |tail -19
-      step3:
-        subset:
-            - writeObjectTable
-            - forcedPhotCoadd
-            - templateGen
-            - measure
-            - healSparsePropertyMaps
-            - mergeMeasurements
-            - consolidateObjectTable
-            - mergeDetections
-            - makeWarp
-            - deblend
-            - detection
-            - assembleCoadd
-            - selectGoodSeeingVisits
-            - transformObjectTable
-            description: |
-              Tasks that can be run together, but only after the 'step1' and 'step2'
-              subsets.
-
-The specific arguments to ``head`` and ``tail`` here are used to only show the relevant lines of the full YAML file. Reading through other sections of ``pipelines/MakeWarpAssembleCoadd.yaml`` is left as an optional exercise for the learner.
-
-2.2. Edit the YAML pipeline definition for making custom coadds
-    
-Now let's edit your ``pipelines/MakeWarpAssembleCoadd.yaml`` pipeline definition file. There are multiple ways to edit a text file in a Linux environment, such as `nano <https://www.nano-editor.org/>`_, `emacs <https://www.gnu.org/software/emacs/>`_, and `vim <https://www.vim.org/>`_, all of which are available to you at the RSP terminal.
-
-Using whichever text editor option you prefer, edit the ``step3`` section of ``pipelines/MakeWarpAssembleCoadd.yaml`` so that only the ``makeWarp`` and ``assembleCoadd`` tasks remain. To do this, you should delete exactly 12 lines of YAML from within the ``step3`` section, specifically the lines containing: ``- detection``, ``- mergeDetections``, ``- deblend``, ``- measure``, ``- mergeMeasurements``, ``- forcedPhotCoadd``, ``- transformObjectTable``, ``- writeObjectTable``, ``- consolidateObjectTable``, ``- healSparsePropertyMaps``, ``- selectGoodSeeingVisits``, and ``- templateGen``. Now the `step3` YAML section shown above in Section 2.1 should look like this:
-
-.. code-block::
-
-      step3:
-        subset:
-          - makeWarp
-          - assembleCoadd
-          description: |
-            Tasks that can be run together, but only after the 'step1' and 'step2'
-            subsets.
-
-Make sure to save your changes when you exit the text editor! Also make sure that you did not change any of the indentation in the ``pipelines/MakeWarpAssembleCoadd.yaml`` file, for the lines that remain. Note that the ordering of the ``- makeWarp`` and ``- assembleCoadd`` lines relative to each other `does not matter <https://pipelines.lsst.io/modules/lsst.pipe.base/creating-a-pipeline.html#a-basic-pipeline>`_.
-
-Step 3. Show your pipeline and its configurations
-=================================================
-
-3.1 Choose an output collection name/location
-
-.. probably want to change where this appears relative to other items, figure out later
+2.1 Choose an output collection name/location
 
 Some of the ``pipetask`` commands later in this tutorial require you to specify an output collection where your new coadds will eventually be written to. As described in the notebook version of `tutorial 9a <https://github.com/rubin-dp0/tutorial-notebooks>`_, you want to name your output collection as something like ``u/<Your User Name>/<Collection Identifier>``. As a concrete example, throughout the rest of this tutorial ``u/$USER/custom_coadd_window1_cl00`` is used as the collection name (``$USER`` is a Linux environment variable that stores your RSP user name).
 
-3.2 Build your custom-defined pipeline
+2.2 Build the pipeline
 
-Let's not jump straight into running the pipeline, but rather start by checking whether the pipeline will first ``build``. To ``build`` a pipeline, you use a command starting with ``pipetask build`` and specify the ``-p`` argument telling ``pipetask`` which specific YAML pipeline definition file you want it to build. If there are syntax or other errors in the YAML file's pipeline definition, then ``pipetask build`` will fail with an error about the problem. If ``pipetask build`` succeeds, it will run without generating errors and print a YAML version of the pipeline to `standard output <https://en.wikipedia.org/wiki/Standard_streams#Standard_output_(stdout)>`_. Here is the exact syntax:
+Let's not jump straight into running the pipeline, but rather start by verifying that the pipeline will first ``build``. To ``build`` a pipeline, you use a command starting with ``pipetask build`` and specify the ``-p`` argument telling ``pipetask`` which specific YAML pipeline definition `URI <https://en.wikipedia.org/wiki/Uniform_Resource_Identifier>`_ you want it to build. If there are syntax or other errors in the pipeline definition/specification, then ``pipetask build`` will fail with an error about the problem. If ``pipetask build`` succeeds, it will run without generating errors and print a YAML version of the pipeline to `standard output <https://en.wikipedia.org/wiki/Standard_streams#Standard_output_(stdout)>`_. Here is the exact syntax:
 
 .. code-block::
 
     $ pipetask build \
-    -p pipelines/MakeWarpAssembleCoadd.yaml#step3 \
+    -p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#makeWarp,assembleCoadd \
     --show pipeline
     
 This is all one single terminal (shell) command, but spread out over three input lines using ``\`` for line continuation. It would be entirely equivalent to run:
 
 .. code-block::
 
-    $ pipetask build -p pipelines/MakeWarpAssembleCoadd.yaml#step3 --show pipeline
+    $ pipetask build -p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#makeWarp,assembleCoadd --show pipeline
     
-The ``-p`` parameter of ``pipetask`` is short for ``--pipeline`` and it is critical that this parameter be specified as the new ``pipelines/MakeWarpAssembleCoadd.yaml`` file made in section 2.2. It is also critical that the ``-p`` argument contain the string ``#step3`` appended at the end of the config file name. This is because you want to only run the coaddition step to make custom coadds. Run the above command. The :doc:`full output </tutorials-examples/pipetask-build-printouts>` is shown on a separate page for brevity.
+The ``-p`` parameter of ``pipetask`` is short for ``--pipeline`` and it is critical that this parameter be specified as shown above. The :doc:`full output </tutorials-examples/pipetask-build-printouts>` is shown on a separate page for brevity.
 
 ``pipetask --help`` provides documentation about ``pipetask``, if you are (optionally) interested in learning more about ``pipetask`` and its command line options.
 
-3.3 Customize and inspect the coaddition configurations
+2.3 Customize and inspect the coaddition configurations
 
 As mentioned in `DP0.2 tutorial notebook 9a <https://github.com/rubin-dp0/tutorial-notebooks>`_, there are a couple of specific coaddition configuration parameters that need to be set in order to accomplish the desired custom coaddition. In detail, the ``makeWarp`` `Task` needs two of its configuration parameters modified: ``doApplyFinalizedPsf`` and ``connections.visitSummary``. First, let's try an experiment of simply finding out what the default value of ``doApplyFinalizedPsf`` is, so that you can appreciate the results of having modified this parameteter later on. To view the configuration parameters, you need to use a ``pipetask run`` command, not a ``pipetask build`` command. The command used is shown here, and will be explained below:
 
@@ -181,7 +111,7 @@ As mentioned in `DP0.2 tutorial notebook 9a <https://github.com/rubin-dp0/tutori
 
     $ pipetask run \
     -b dp02 \
-    -p pipelines/MakeWarpAssembleCoadd.yaml#step3 \
+    -p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#makeWarp,assembleCoadd \
     --show config=makeWarp::doApplyFinalizedPsf
     
 Notice that the ``-p`` parameter passed to ``pipetask`` has remained the same. But in order for ``pipetask run`` to operate, it also needs to know what Butler repository it's dealing with. That's why the ``-b dp02`` argument has been added. ``dp02`` is an alias that points to the `S3 <https://en.wikipedia.org/wiki/Amazon_S3>`_ location of the DP0.2 Butler repository.
@@ -194,7 +124,7 @@ Now let's look at what happens when you run the above ``pipetask command``:
 
     $ pipetask run \
     > -b dp02 \
-    > -p pipelines/MakeWarpAssembleCoadd.yaml#step3 \
+    > -p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#makeWarp,assembleCoadd \
     > --show config=makeWarp::doApplyFinalizedPsf
     Matching "doApplyFinalizedPsf" without regard to case (append :NOIGNORECASE to prevent this)
     ### Configuration for task `makeWarp'
@@ -208,7 +138,7 @@ Ignore the lines about "No quantum graph" and "NOIGNORECASE" -- for the present 
 
     $ pipetask run \
     -b dp02 \
-    -p pipelines/MakeWarpAssembleCoadd.yaml#step3 \
+    -p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#makeWarp,assembleCoadd \
     -c makeWarp:doApplyFinalizedPsf=False \
     --show config=makeWarp::doApplyFinalizedPsf
     
@@ -218,7 +148,7 @@ The penultimate line (``-c makeWarp:doApplyFinalizedPsf=False \``) is newly adde
 
     $ pipetask run \
     > -b dp02 \
-    > -p pipelines/MakeWarpAssembleCoadd.yaml#step3 \
+    > -p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#makeWarp,assembleCoadd \
     > -c makeWarp:doApplyFinalizedPsf=False \
     > --show config=makeWarp::doApplyFinalizedPsf
     Matching "doApplyFinalizedPsf" without regard to case (append :NOIGNORECASE to prevent this)
@@ -234,7 +164,7 @@ Notice that the printed configuration parameter value is indeed ``False`` i.e., 
 
     -c makeWarp:connections.visitSummary="visitSummary" \
     
-Step 4. Explore and visualize the ``QuantumGraph``
+Step 3. Explore and visualize the ``QuantumGraph``
 ==================================================
 
 Before actually deploying the custom coaddition, let's take some time to understand the ``QuantumGraph`` of the processing to be run. The ``QuantumGraph`` is `a tool <https://pipelines.lsst.io/py-api/lsst.pipe.base.QuantumGraph.html#lsst.pipe.base.QuantumGraph>`_ used by the LSST Science Pipelines to break a large processing into relatively "bite-sized" quanta and arrange these quanta into a sequence such that all inputs needed by a given quantum are available for the execution of that quantum. In the present case, you will not be doing an especially large processing, but for production deployments it makes sense to inspect and validate the ``QuantumGraph`` before proceeding straight to full-scale processing launch.
@@ -245,7 +175,7 @@ So far, you've seen ``pipetask build`` and ``pipetask run``. For the ``QuantumGr
 
     tract = 4431 AND patch = 17 AND visit in (919515,924057,924085,924086,929477,930353) AND skymap = 'DC2'
 
-4.1 What are the quanta?
+3.1 What are the quanta?
 
 `DP0.2 tutorial notebook 9a <https://github.com/rubin-dp0/tutorial-notebooks>`_ shows that the desired custom coaddition entails executing 7 quanta (6 for ``makeWarp`` -- one per input exposure -- plus one for ``assembleCoadd``). Hopefully the command line version of this processing has the same number (and list) of quanta! 
 
@@ -256,7 +186,7 @@ You can find out full details about all quanta with a ``pipetask qgraph`` comman
     $ pipetask qgraph \
     -b dp02 \
     -i 2.2i/runs/DP0.2 \
-    -p pipelines/MakeWarpAssembleCoadd.yaml#step3 \
+    -p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#makeWarp,assembleCoadd \
     -c makeWarp:doApplyFinalizedPsf=False \
     -c makeWarp:connections.visitSummary="visitSummary" \
     -d "tract = 4431 AND patch = 17 AND visit in (919515,924057,924085,924086,929477,930353) AND skymap = 'DC2'" \
@@ -264,7 +194,6 @@ You can find out full details about all quanta with a ``pipetask qgraph`` comman
     
 Be aware that this takes approximately 15 minutes to run. 
 No output might appear for most of that time, and it may seem as if nothing is happening.
-If you are familiar with the ``top`` command, you'll notice that running this in a new terminal will also seem to show no activity.
 
 Note a few things about this command:
 
@@ -272,7 +201,7 @@ Note a few things about this command:
 
 * the input data set ``collection`` within DP0.2 is specified via the argument ``-i 2.2i/runs/DP0.2``. It's necessary to know about the input ``collection`` in order for ``pipetask`` and Butler to figure out how many (and which) quanta are expected.
 
-* The same custom pipeline as always is specified, ``-p pipelines/MakeWarpAssembleCoadd.yaml#step3 \``.
+* The same pipeline URI as always is specified, ``-p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#makeWarp,assembleCoadd \``.
 
 * ``-c`` is used twice, to override the default configuration parameter settings for both ``doApplyFinalizedPsf`` and ``connections.visitSummary``.
 
@@ -282,7 +211,7 @@ For brevity, the :doc:`full output </tutorials-examples/quantumgraph-printouts>`
 
 As expected, there are 7 quanta (lines starting with ``Quantum N``), where ``N`` runs from 0-5 (inclusive) for ``makeWarp`` and then there's another ``N`` = 0 quantum for ``assembleCoadd``. Note that the exact order in which the quanta get printed out is not always guaranteed to be the same.
 
-4.2 Visualizing the ``QuantumGraph``
+3.2 Visualizing the ``QuantumGraph``
 
 In addition to generating and printing out the ``QuantumGraph`` you can also visualize the ``QuantumGraph`` as a "flowchart" style diagram. Perhaps counterintuitively, visualization of the ``QuantumGraph`` is performed with ``pipetask build`` rather than ``pipetask qgraph``. This is because the ``QuantumGraph`` visualization depends only on the structure of the pipeline definition, and not on details of exactly which patches/tracts/exposures will be processed. For this same reason, you don't need to specify all of the command line parameters (like the Butler query string) when generating the ``QuantumGraph`` visualization. The ``pipetask build`` command to generate the ``QuantumGraph`` visualization of your custom coadd processing is:
 
@@ -290,7 +219,7 @@ In addition to generating and printing out the ``QuantumGraph`` you can also vis
 .. code-block::
 
     $ pipetask build \
-    -p pipelines/MakeWarpAssembleCoadd.yaml#step3 \
+    -p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#makeWarp,assembleCoadd \
     --pipeline-dot pipeline.dot; \
     dot pipeline.dot -Tpdf > makeWarpAssembleCoadd.pdf
     
@@ -302,7 +231,7 @@ This command executes very fast (roughly 5 seconds), again because it is not per
 
 Light gray rectangles with rounded corners represent data, whereas darker gray rectangles with sharp corners represent pipeline Tasks. The arrows connecting the data and Tasks illustrate the data processing flow. The data processing starts at the top, with the ``calexp`` calibrated single-exposure images (also known as Processed Visit Images; PVIs). The ``makeWarp`` Task is applied to generate reprojected "warp" images from the various input ``calexp`` images, and finally the ``assembleCoadd`` Task combines the warps into ``deepCoadd`` coadded products (light gray boxes along the bottom row). 
 
-Step 5. Deploy your custom coadd processing
+Step 4. Deploy your custom coadd processing
 ===========================================
 
 As you might guess, the custom coadd processing is run via the ``pipetask run`` command. Because this processing takes longer than prior steps, it's worth adding a little bit of "infrastructure" around your ``pipetask run`` command to perform logging and timing. First, let's start by making a directory into which you'll send the log file of the coaddition processing:
@@ -322,7 +251,7 @@ Now you have a directory called ``logs`` into which you can save the pipeline ou
     -b dp02 \
     -i 2.2i/runs/DP0.2 \
     -o u/$USER/custom_coadd_window1_cl00 \
-    -p pipelines/MakeWarpAssembleCoadd.yaml#step3 \
+    -p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#makeWarp,assembleCoadd \
     -c makeWarp:doApplyFinalizedPsf=False \
     -c makeWarp:connections.visitSummary="visitSummary" \
     -d "tract = 4431 AND patch = 17 AND visit in (919515,924057,924085,924086,929477,930353) AND skymap = 'DC2'"; \
