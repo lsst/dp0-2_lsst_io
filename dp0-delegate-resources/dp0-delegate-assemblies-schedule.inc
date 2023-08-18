@@ -34,13 +34,13 @@
      - First Hour
      - Second Hour
    * - 2023-08-18
-     - DP0.3 Kick-Off Info Session
+     - DP0.3 Kick-Off Info Session (Melissa Graham)
      - *general Q&A, breakouts*
    * - 2023-09-01
-     - *TBD*
+     - DP0.3 Portal tutorials 01 and 02 (Greg Madejski)
      - *general Q&A, breakouts*
    * - 2023-09-15
-     - *TBD*
+     - DP0.3 Notebook tutoria 02: Main Belt Asteroids (Jeff Carlin)
      - *general Q&A, breakouts*
 
 
