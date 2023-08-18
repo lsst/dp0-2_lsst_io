@@ -42,6 +42,18 @@
    * - 2023-09-15
      - DP0.3 Notebook tutorial 02: Main Belt Asteroids (Jeff Carlin)
      - *general Q&A, breakouts*
+   * - 2023-09-29
+     - DP0.3 Simulation Overview: Populations, Easter Eggs, Etc. (Pedro Bernardinelli, Jake Kurlander)
+     - *general Q&A, breakouts*
+   * - 2023-10-13
+     - *TBD*
+     - *general Q&A, breakouts*
+   * - **2023-10-20**
+     - **Special Assembly:** SSSC Mini-Sprint Preparation (Meg Schwamb)
+     - *general Q&A, breakouts*
+   * - 2023-10-27
+     - *TBD*
+     - *general Q&A, breakouts*
 
 
 Additional delegate assemblies to be posted.
