@@ -42,12 +42,6 @@
    * - 2023-09-15
      - DP0.3 Notebook tutorial 02: Main Belt Asteroids (Jeff Carlin)
      - *general Q&A, breakouts*
-   * - 2023-09-01
-     - DP0.3 Portal tutorials 01 and 02 (Greg Madejski)
-     - *general Q&A, breakouts*
-   * - 2023-09-15
-     - DP0.3 Notebook tutorial 02: Main Belt Asteroids (Jeff Carlin)
-     - *general Q&A, breakouts*
    * - 2023-09-29
      - DP0.3 Simulation Overview: Populations, Easter Eggs, Etc. (Pedro Bernardinelli, Jake Kurlander)
      - *general Q&A, breakouts*
