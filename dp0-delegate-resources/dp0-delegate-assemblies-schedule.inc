@@ -34,7 +34,7 @@
      - First Hour
      - Second Hour
    * - 2023-08-18
-     - DP0.3 Kick-Off Info Session (Melissa Graham)
+     - `DP0.3 Kick-Off Info Session <https://community.lsst.org/t/summary-delegate-assembly-on-fri-aug-18-2023-dp0-3-kick-off-info-session/7916>`_ (Melissa Graham)
      - *general Q&A, breakouts*
    * - 2023-09-01
      - DP0.3 Portal tutorials 01 and 02 (Greg Madejski)
