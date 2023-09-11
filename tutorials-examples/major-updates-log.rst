@@ -51,13 +51,18 @@ and clicking on "history" (near upper-right).
 Major Updates Log
 =================
 
-July 31 2023
-------------
+Sep 14 2023
+-----------
+
+The recommended image of the RSP at data.lsst.cloud was bumped to Weekly 2023_35.
+
+Jul 31 2023
+-----------
 
 Released new tutorial notebook 11 on working with user packages.
 
-June 1 2023
------------
+Jun 1 2023
+----------
 
 The recommended image of the RSP at data.lsst.cloud was bumped to Weekly 2023_21.
 
