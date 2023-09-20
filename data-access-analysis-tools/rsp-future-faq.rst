@@ -65,8 +65,8 @@ No plan at this time.
 
 As of 2023, there are no plans to include GPUs as part of the resources made available on-project (including "bring-your-own" resources).
 At this time, although there are early discussions about providing a mechanism for users to "bring their own" Google resources to the RSP,
-including GPU virtual machines, users interested in GPUs should contact the Independect Data Access Centers program
-(see, e.g., `Contributed  Computing Resources <https://www.lsst.org/scientists/in-kind-program/cec>`_).
+including GPU virtual machines, users interested in GPUs should contact the Independent Data Access Centers program
+(see, e.g., `Contributed  Computing Resources <https://www.lsst.org/scientists/in-kind-program/contribution-evaluation-committee-cec>`_).
 
 Definitions:
  * GPU: graphics processing unit
