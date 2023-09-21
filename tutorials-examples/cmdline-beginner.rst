@@ -22,7 +22,9 @@
 
 **Contact author:** Gloria Fonseca Alvarez
 
-**Last verified to run:** 02/01/2023
+**Last verified to run:** Sep 11 2023
+
+**LSST Science Pipelines version:** Weekly 2023_35
 
 **Targeted learning level:** Beginner
 
@@ -103,7 +105,7 @@ Step 3. Retrieve data using TAP for 10 objects
 ==============================================
 
 Table Access Procotol (TAP) provides standardized access to the catalog data for discovery, search, and retrieval.
-`Full documentation for TAP <https://www.ivoa.net/documents/TAP/>`_ is provided by the International Virtual Observatory Alliance (IVOA).
+`Full documentation for TAP <https://www.ivoa.net/documents/TAP/20190927/index.html>`_ is provided by the International Virtual Observatory Alliance (IVOA).
 The TAP service uses a query language similar to SQL (Structured Query Langage) called ADQL (Astronomical Data Query Language).
 The `documentation for ADQL <https://www.ivoa.net/documents/latest/ADQL.html>`_ includes more information about syntax and keywords.
 
@@ -115,7 +117,7 @@ This example uses the DP0.2 Object catalog, which contains sources detected in t
 
 .. code-block::
 
-    service = get_tap_service()
+    service = get_tap_service("tap")
     
 3.2. Define the coordinates for a cone search centered around the region covered by the DC2 simulation (RA,Dec = 62,-37).
 
@@ -127,7 +129,7 @@ This example uses the DP0.2 Object catalog, which contains sources detected in t
 
 .. code-block:: 
 
-   my_adql_query = "SELECT coord_ra, coord_dec, detect_isPrimary, " + \
+   my_adql_query = "SELECT TOP 10 coord_ra, coord_dec, detect_isPrimary, " + \
                 "r_calibFlux, r_cModelFlux, r_extendedness " + \
                 "FROM dp02_dc2_catalogs.Object " + \
                 "WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), " + \
@@ -137,7 +139,7 @@ This example uses the DP0.2 Object catalog, which contains sources detected in t
 
 .. code-block::
 
-    results = service.search(my_adql_query, maxrec=10)
+    results = service.search(my_adql_query)
     results_table = results.to_table()
     print(results_table)   
 
@@ -182,7 +184,7 @@ In addition to a cone search, impose query restrictions that detect_isPrimary is
 
 .. code-block::
 
- results = service.search("SELECT coord_ra, coord_dec, "
+ results = service.search("SELECT TOP 10000 coord_ra, coord_dec, "
                          "scisql_nanojanskyToAbMag(g_calibFlux) as g_calibMag, "
                          "scisql_nanojanskyToAbMag(r_calibFlux) as r_calibMag, "
                          "scisql_nanojanskyToAbMag(i_calibFlux) as i_calibMag, "
@@ -196,8 +198,7 @@ In addition to a cone search, impose query restrictions that detect_isPrimary is
                          "AND i_calibFlux > 360 "
                          "AND g_extendedness = 0 "
                          "AND r_extendedness = 0 "
-                         "AND i_extendedness = 0",
-                         maxrec=10000)
+                         "AND i_extendedness = 0")
 
 4.2. Store the data as a pandas dataframe. 
 
