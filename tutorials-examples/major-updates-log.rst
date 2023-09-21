@@ -56,6 +56,8 @@ Sep 21 2023
 
 The recommended image of the RSP at data.lsst.cloud was bumped to Weekly 2023_37.
 
+New tutorial notebooks 12a and 12b on the Point Spread Function data products and their analysis were released.
+
 Jul 31 2023
 -----------
 
