@@ -37,7 +37,7 @@
      - `DP0.3 Kick-Off Info Session <https://community.lsst.org/t/summary-delegate-assembly-on-fri-aug-18-2023-dp0-3-kick-off-info-session/7916>`_ (Melissa Graham)
      - *general Q&A, breakouts*
    * - 2023-09-01
-     - DP0.3 Portal tutorials 01 and 02 (Greg Madejski)
+     - `DP0.3 Portal tutorials 01 and 02 <https://community.lsst.org/t/summary-delegate-assembly-on-friday-september-1-rsp-portal-tutorials-01-and-02-for-the-dp0-3/7934>`_ (Greg Madejski)
      - *general Q&A, breakouts*
    * - 2023-09-15
      - DP0.3 Notebook tutorial 02: Main Belt Asteroids (Jeff Carlin)
