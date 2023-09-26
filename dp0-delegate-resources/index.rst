@@ -233,7 +233,7 @@ Rubin Observatory staff are always present to provide support for DP0 and the RS
 Everyone is welcome to attend for the full two hours, or join for a few minutes and ask a question (like an office hour).
 
 The original impetus for Stack Club's formation was, in part, to create "tutorials for users by users".
-Stack Club is a great place to work :ref:`DP0-2-Tutorials-Contributed`, either individually or in collaboration with others.
+Stack Club is a great place to work on :ref:`DP0-2-Tutorials-Contributed`, either individually or in collaboration with others.
 
 
 .. _DP0-Delegate-Programming-ThirdThursday:
