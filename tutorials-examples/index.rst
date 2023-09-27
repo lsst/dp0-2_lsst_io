@@ -26,8 +26,15 @@ Before following these tutorials, delegates should:
 
 | 1. have gotten their :ref:`Delegate-Homepage-RSP-Accounts` and be able to log in at `data.lsst.cloud <https://data.lsst.cloud/>`_,
 | 2. be familiar with this list of :doc:`/data-access-analysis-tools/rsp-warnings`,
-| 3. reviewed the basic introductions to the RSP's :ref:`Tools-RSP-Portal` or :ref:`Tools-RSP-Notebook`, and
+| 3. have reviewed the basic introductions to the RSP's :ref:`Tools-RSP-Portal` or :ref:`Tools-RSP-Notebook`, and
 | 4. know their options for :ref:`Delegate-Homepage-Getting-Support`.
+
+
+All RSP tutorials are created by Rubin staff and adhere to
+the set of guidelines and best practices described in `RTN-045 <https://rtn-045.lsst.io/>`_,
+unless otherwise noted (e.g., the :ref:`DP0-2-Tutorials-Contributed`).
+
+`Suggest a new tutorial topic <https://community.lsst.org/t/suggest-a-new-dp0-2-tutorial/6556>`_.
 
 
 .. _DP0-2-Tutorials-Whats-New:
@@ -97,19 +104,46 @@ Much of the contents of the tutorial notebooks (above) can also be executed via 
     cmdline-custom-coadd
 
 
+.. _DP0-2-Tutorials-API:
+
+API tutorials
+=============
+
+Coming soon!
+
+
 .. _DP0-2-Tutorials-Contributed:
 
 Contributed tutorials
 =====================
 
-Everyone is welcome to contribute tutorials or science demonstrations to the shared GitHub repository `delegate-contributions-dp02 <https://github.com/rubin-dp0/delegate-contributions-dp02>`_.
-The `README <https://github.com/rubin-dp0/delegate-contributions-dp02/blob/main/README.md>`_ file for that repo contains instructions
-and best practices for contributions.
-Contributions are stored in sub-directories by topic, such as "extendedness" or "photo-z".
+**Where do contributed tutorials go?** 
+In the shared GitHub repository `delegate-contributions-dp02 <https://github.com/rubin-dp0/delegate-contributions-dp02>`_.
+Contributions are stored in sub-directories by topic, such as "extendedness" or "variable stars".
 View the readme files in each sub-directory for more information about the contents and who contributed them.
 
-Rubin staff do not apply any quality control reviews to the contributed content in
-the `delegate-contributions-dp02 <https://github.com/rubin-dp0/delegate-contributions-dp02>`_ repo.
-In contrast, the Portal and Notebook Aspect tutorials in the sections above are created by Rubin staff and adhere to
-the set of guidelines and best practices described in `RTN-045 <https://rtn-045.lsst.io/>`_.
-Anyone who wants to contribute to these formal tutorial sets should get in touch with the Lead Community Scientist (Melissa Graham).
+**Who can contribute a tutorial?**
+Everyone is welcome to contribute tutorials or science demonstrations to this repo.
+All are welcome to drop in to a :ref:`DP0-Delegate-Programming-StackClub` session to workshop a tutorial topic or get assistance.
+
+**How are contributions made?**
+The `README <https://github.com/rubin-dp0/delegate-contributions-dp02/blob/main/README.md>`_ file for this repo 
+contains instructions and best practices for contributions.
+Rubin staff do not apply any quality control reviews to the contributed content in this repo.
+
+**What topics can be contributed?**
+Any and all topics are welcome, so long as they can be covered by the DP0.2 data set. 
+Here is a short list of potential science topics that DP0.2 could be useful for.
+
+ - TAP catalog queries that access external catalogs
+ - galaxy shape parameter analysis (weak lensing?)
+ - options for Milky Way dust corrections
+ - supernova host galaxy association
+ - supernova lightcurve fits (cosmology)
+ - photometric redshifts
+ - galaxy cluster detection and analysis
+ - large scale structure (cosmology)
+ - variable star lightcurves analysis
+ - astrometry-based analyses
+
+
