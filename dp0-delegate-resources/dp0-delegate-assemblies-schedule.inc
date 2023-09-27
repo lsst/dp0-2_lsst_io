@@ -46,7 +46,7 @@
      - DP0.3 Simulation Overview: Populations, Easter Eggs, Etc. (Pedro Bernardinelli, Jake Kurlander)
      - *general Q&A, breakouts*
    * - 2023-10-13
-     - *TBD*
+     - DP0.3 Notebook tutorial 03: Trans-Neptunian Objects (Andrés A. Plazas Malagón, Sarah Greenstreet)
      - *general Q&A, breakouts*
    * - **2023-10-20**
      - **Special Assembly:** SSSC Mini-Sprint Preparation (Meg Schwamb)
