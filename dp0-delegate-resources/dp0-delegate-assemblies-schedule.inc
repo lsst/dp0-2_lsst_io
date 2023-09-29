@@ -43,8 +43,8 @@
      - DP0.3 Notebook tutorial 02: Main Belt Asteroids (Jeff Carlin)
      - *general Q&A, breakouts*
    * - 2023-09-29
-     - DP0.3 Simulation Overview: Populations, Easter Eggs, Etc. (Pedro Bernardinelli, Jake Kurlander)
-     - *general Q&A, breakouts*
+     - `DP0.3 Simulation Overview: Populations, Easter Eggs, Etc. <https://community.lsst.org/t/summary-delegate-assembly-fri-sep-29-dp0-3-simulation-overview/7954>`_ (Pedro Bernardinelli, Jake Kurlander)
+     - no breakouts this week
    * - 2023-10-13
      - DP0.3 Notebook tutorial 03: Trans-Neptunian Objects (Andrés A. Plazas Malagón, Sarah Greenstreet)
      - *general Q&A, breakouts*
