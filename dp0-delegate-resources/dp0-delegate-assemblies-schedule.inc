@@ -52,7 +52,7 @@
      - **Special Assembly:** SSSC Mini-Sprint Preparation (Meg Schwamb)
      - *general Q&A, breakouts*
    * - 2023-10-27
-     - *TBD*
+     - DP0.3 Notebook tutorial 04a/b: Introduction to phase curves and advanced phase curve modeling (Yumi Choi, Christina Williams)
      - *general Q&A, breakouts*
 
 
