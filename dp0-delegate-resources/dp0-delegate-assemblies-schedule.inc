@@ -40,7 +40,7 @@
      - `DP0.3 Portal tutorials 01 and 02 <https://community.lsst.org/t/summary-delegate-assembly-on-friday-september-1-rsp-portal-tutorials-01-and-02-for-the-dp0-3/7934>`_ (Greg Madejski)
      - *general Q&A, breakouts*
    * - 2023-09-15
-     - DP0.3 Notebook tutorial 02: Main Belt Asteroids (Jeff Carlin)
+     - `DP0.3 Notebook tutorial 02: Main Belt Asteroids <https://community.lsst.org/t/summary-dp0-delegate-assembly-fri-sep-15-2023-main-belt-asteroids-in-dp0-3/7956>`_ (Jeff Carlin)
      - *general Q&A, breakouts*
    * - 2023-09-29
      - `DP0.3 Simulation Overview: Populations, Easter Eggs, Etc. <https://community.lsst.org/t/summary-delegate-assembly-fri-sep-29-dp0-3-simulation-overview/7954>`_ (Pedro Bernardinelli, Jake Kurlander)
