@@ -227,9 +227,11 @@ Stack Club
 
 `Stack Club <https://github.com/LSSTScienceCollaborations/StackClub>`_ is an open, drop-in session for working with the DP0 data sets and/or the 
 Rubin Observatory `LSST Science Pipelines <https://pipelines.lsst.io/>`_ (colloquially called "the Stack").
-Stack Club sessions begin with a roundtable discussion of what people want to do or learn that day, and then work proceeds as people stay connected via Zoom,
-asking questions or having discussions in the main room or breakout rooms as need arises.
-Rubin Observatory staff are always present to provide support for DP0 and the RSP.
+Stack Club sessions begin with a roundtable discussion of what people want to do or learn or get assistance with that day.
+Then some people either go into breakout rooms to co-work and discuss, or work individually while staying connected 
+to the main room where they can ask questions if and when they arise. 
+Rubin Observatory staff are always present to provide support for DP0 and the RSP, or more generally for 
+preparations for LSST science (e.g., grant proposals, grad/undergrad courses).
 Everyone is welcome to attend for the full two hours, or join for a few minutes and ask a question (like an office hour).
 
 The original impetus for Stack Club's formation was, in part, to create "tutorials for users by users".
