@@ -54,6 +54,9 @@
    * - 2023-10-27
      - DP0.3 Notebook tutorial 04a/b: Introduction to phase curves and advanced phase curve modeling (Yumi Choi, Christina Williams)
      - *general Q&A, breakouts*
+   * - 2023-11-10
+     - Accessibility Hackathon for Notebooks (Jenn Kotler, Andrés A. Plazas Malagón)
+     - *breakouts: bring your own notebook, add accessibility features!*
 
 
 Additional delegate assemblies to be posted.
