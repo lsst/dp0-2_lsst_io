@@ -60,6 +60,16 @@ linkcheck_ignore = [
     r"^http://localhost",
     r"^http://www.star.bris.ac.uk/~mbt/topcat/",  # site temporarily down
     r"https://ui.adsabs.harvard.edu/abs/2014SPIE.9150E..14C/abstract", # ADS issue presumed temporary
+    r"https://www.ivoa.net/", r"https://ivoa.net/", # links too slow  
+    r"https://www.ivoa.net/documents/SIA/20150730/index.html",
+    r"https://www.ivoa.net/documents/ADQL/",
+    r"https://www.ivoa.net/documents/ADQL/20180112/PR-ADQL-2.1-20180112.html",
+    r"https://www.ivoa.net/documents/ObsCore/",
+    r"https://www.ivoa.net/documents/SODA/20170517/index.html",
+    r"https://www.ivoa.net/documents/VOSpace/",
+    r"https://www.ivoa.net/documents/latest/ConeSearch.html",  
+    r"https://www.ivoa.net/documents/TAP/20190927/index.html",   
+    r"https://www.ivoa.net/documents/latest/ADQL.html"
 ]
 
 
