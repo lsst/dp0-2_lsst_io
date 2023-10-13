@@ -102,6 +102,12 @@ Once your petition is approved and you can log in to `data.lsst.cloud <https://d
 Welcome!
 Please continue to read the information below and complete the checklist above.
 
+**Problems with the petition?**
+Please contact Melissa Graham at mlg3k@uw.edu or Heather Shaughnessy at sheather@slac.stanford.edu,
+or post a new Topic requesting assistance in the `Support - Data Preview 0 <https://community.lsst.org/c/support/dp0>`_ 
+category of the `Rubin Community Forum <https://community.lsst.org/>`_,
+or submit a `GitHub issue in the rubin-dp0 Support repo <https://github.com/rubin-dp0/Support>`_.
+
 **Log in:**
 Navigate to `data.lsst.cloud <https://data.lsst.cloud>`_ and choose "Log in" at upper-right,
 or choose to enter either the Portal or Notebook Aspect.
