@@ -46,7 +46,7 @@
      - `DP0.3 Simulation Overview: Populations, Easter Eggs, Etc. <https://community.lsst.org/t/summary-delegate-assembly-fri-sep-29-dp0-3-simulation-overview/7954>`_ (Pedro Bernardinelli, Jake Kurlander)
      - no breakouts this week
    * - 2023-10-13
-     - DP0.3 Notebook tutorial 03: Trans-Neptunian Objects <https://community.lsst.org/t/summary-dp0-delegate-assembly-friday-oct-13-2023-trans-neptunian-objects-in-dp0-3/7997>`_ (Andrés A. Plazas Malagón, Sarah Greenstreet)
+     - `DP0.3 Notebook tutorial 03: Trans-Neptunian Objects <https://community.lsst.org/t/summary-dp0-delegate-assembly-friday-oct-13-2023-trans-neptunian-objects-in-dp0-3/7997>`_ (Andrés A. Plazas Malagón, Sarah Greenstreet)
      - *general Q&A, breakouts*
    * - **2023-10-20**
      - **Special Assembly:** SSSC Mini-Sprint Preparation (Meg Schwamb)
