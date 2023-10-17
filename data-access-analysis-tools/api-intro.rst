@@ -43,11 +43,12 @@ To access DP0.2 from the TAP utility, one needs to have an RSP access token.
 How to generate and use an RSP access token is described by the `Rubin Science Platform APIs <https://data-int.lsst.cloud/api-aspect>`_ webpage and
 by the `Science Platform Tokens <https://nb.lsst.io/environment/tokens.html>`_ webpage.
 
-A step-by-step API tutorial like the one available in `this Rubin Community Forum post <https://community.lsst.org/t/will-there-be-external-tap-access-to-rsp-dp0-2-tables/6660/7>`_ will be added here soon.
+A TOPCAT-based Step-by-Step Guide
+---------------------------------
 
-In the meantime these two slides from a talk by Leanne Guy, `Rubin Science Platform – what to expect
-<https://docushare.lsstcorp.org/docushare/dsweb/Get/presentation-1694/PST-SC%20-%20Rubin%20Science%20Platform%20-%20LeanneGuy%20-%2020220413.pdf>`_,
-illustrates what users can expect in terms of the RSP's API Aspect.
+1. Start up TOPCAT (see `TOPCAT homepage <http://www.star.bris.ac.uk/~mbt/topcat/>`_).
+
+2. Click on "Table Access Protocal (TAP) Query" under the “VO” menu.
 
 .. figure:: /_static/API_LGuy_slide11.png
     :name: API_LGuy_slide11
@@ -56,7 +57,25 @@ illustrates what users can expect in terms of the RSP's API Aspect.
 	The first shows that the Table Access Protocol or TAP Query interface can be selected from the Virtual Observatory or VO menu. 
 	The second shows that Rubin’s DP0.2 can be selected from TOPCAT’s TAP Query interface. The third demonstrates how users enter their credentials in order to access the DP0.2 data.
 
-.. figure:: /_static/API_LGuy_slide12.png
+
+.. Commented out
+   A step-by-step API tutorial like the one available in `this Rubin Community Forum post <https://community.lsst.org/t/will-there-be-external-tap-access-to-rsp-dp0-2-tables/6660/7>`_ will be added here soon.
+
+.. Commented out:
+   In the meantime these two slides from a talk by Leanne Guy, `Rubin Science Platform – what to expect
+   <https://docushare.lsstcorp.org/docushare/dsweb/Get/presentation-1694/PST-SC%20-%20Rubin%20Science%20Platform%20-%20LeanneGuy%20-%2020220413.pdf>`_,
+   illustrates what users can expect in terms of the RSP's API Aspect.
+
+.. Commented out:
+   figure:: /_static/API_LGuy_slide11.png
+    :name: API_LGuy_slide11
+    :alt: This image is a slide from a presentation about the Rubin Science Platform. It shows the Rubin logo at upper left and is titled Remote Query of the LSST Archive Tools. 
+    	The footer contains text that says PST Science Collaborations Talk 13 April 2022. In the center of the slide are three screenshots of the TOPCAT interface. 
+	The first shows that the Table Access Protocol or TAP Query interface can be selected from the Virtual Observatory or VO menu. 
+	The second shows that Rubin’s DP0.2 can be selected from TOPCAT’s TAP Query interface. The third demonstrates how users enter their credentials in order to access the DP0.2 data.
+
+.. Commented out:
+   figure:: /_static/API_LGuy_slide12.png
     :name: API_LGuy_slide12
 
 This slide demonstrates how TOPCAT can be used to remotely query the LSST archive and download data sets for local analysis.
