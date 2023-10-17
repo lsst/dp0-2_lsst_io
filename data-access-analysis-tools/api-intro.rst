@@ -50,29 +50,30 @@ A TOPCAT-based Step-by-Step Guide
 
 2. Click on "Table Access Protocal (TAP) Query" under the “VO” menu.
 
-.. figure:: /_static/TOPCAT_API_DLT_1.png
-    :name: TOPCAT_API_DLT_1
+.. figure:: /_static/API_TOPCAT_DLT_1.png
+    :name: API_TOPCAT_DLT_1
+    :alt: TBD
+
+3.  Fill in `https://data.lsst.cloud/api/tap` in the “TAP URL” window and click the “Use Service” button.
+
+.. figure:: /_static/API_TOPCAT_DLT_2.png
+    :name: API_TOPCAT_DLT_2
+    :alt: TBD
+
+4. Fill in your security token under “User” in the Authentication window that pops up. Leave the “Password” blank. Click OK.
+
+.. figure:: /_static/API_TOPCAT_DLT_3.png
+    :name: API_TOPCAT_DLT_3
+    :alt: TBD
+
+5. Now you have access to the RSP TAP service from TOPCAT.
+
+.. figure:: /_static/API_TOPCAT_DLT_4.png
+    :name: API_TOPCAT_DLT_4
     :alt: TBD
 
 
-.. Commented out
-   A step-by-step API tutorial like the one available in `this Rubin Community Forum post <https://community.lsst.org/t/will-there-be-external-tap-access-to-rsp-dp0-2-tables/6660/7>`_ will be added here soon.
 
-.. Commented out:
-   In the meantime these two slides from a talk by Leanne Guy, `Rubin Science Platform – what to expect
-   <https://docushare.lsstcorp.org/docushare/dsweb/Get/presentation-1694/PST-SC%20-%20Rubin%20Science%20Platform%20-%20LeanneGuy%20-%2020220413.pdf>`_,
-   illustrates what users can expect in terms of the RSP's API Aspect.
-
-.. Commented out:
-   figure:: /_static/TOPCAT_API_DLT_1.png
-    :name: TOPCAT_API_DLT_1
-    :alt: TBD
-
-.. Commented out:
-   figure:: /_static/API_LGuy_slide12.png
-    :name: API_LGuy_slide12
-
-This slide demonstrates how TOPCAT can be used to remotely query the LSST archive and download data sets for local analysis.
 
 .. _Data-Access-Analysis-Tools-TAP-NB:
 
