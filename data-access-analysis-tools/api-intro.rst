@@ -50,12 +50,9 @@ A TOPCAT-based Step-by-Step Guide
 
 2. Click on "Table Access Protocal (TAP) Query" under the “VO” menu.
 
-.. figure:: /_static/API_LGuy_slide11.png
-    :name: API_LGuy_slide11
-    :alt: This image is a slide from a presentation about the Rubin Science Platform. It shows the Rubin logo at upper left and is titled Remote Query of the LSST Archive Tools. 
-    	The footer contains text that says PST Science Collaborations Talk 13 April 2022. In the center of the slide are three screenshots of the TOPCAT interface. 
-	The first shows that the Table Access Protocol or TAP Query interface can be selected from the Virtual Observatory or VO menu. 
-	The second shows that Rubin’s DP0.2 can be selected from TOPCAT’s TAP Query interface. The third demonstrates how users enter their credentials in order to access the DP0.2 data.
+.. figure:: /_static/TOPCAT_API_DLT_1.png
+    :name: TOPCAT_API_DLT_1
+    :alt: TBD
 
 
 .. Commented out
@@ -67,12 +64,9 @@ A TOPCAT-based Step-by-Step Guide
    illustrates what users can expect in terms of the RSP's API Aspect.
 
 .. Commented out:
-   figure:: /_static/API_LGuy_slide11.png
-    :name: API_LGuy_slide11
-    :alt: This image is a slide from a presentation about the Rubin Science Platform. It shows the Rubin logo at upper left and is titled Remote Query of the LSST Archive Tools. 
-    	The footer contains text that says PST Science Collaborations Talk 13 April 2022. In the center of the slide are three screenshots of the TOPCAT interface. 
-	The first shows that the Table Access Protocol or TAP Query interface can be selected from the Virtual Observatory or VO menu. 
-	The second shows that Rubin’s DP0.2 can be selected from TOPCAT’s TAP Query interface. The third demonstrates how users enter their credentials in order to access the DP0.2 data.
+   figure:: /_static/TOPCAT_API_DLT_1.png
+    :name: TOPCAT_API_DLT_1
+    :alt: TBD
 
 .. Commented out:
    figure:: /_static/API_LGuy_slide12.png
