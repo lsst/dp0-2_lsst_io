@@ -299,9 +299,13 @@ A few of the :ref:`NB-Intro-Use-A-NB-tips` below involve the use of Git.
 What is the Butler, and when do I use it?
 -----------------------------------------
 
-The Butler is a `middleware <https://pipelines.lsst.io/middleware/index.html>`_ component of the Data Management System (DMS) for persisting and retrieving datasets.
+The Butler is a `middleware <https://pipelines.lsst.io/middleware/index.html>`_ component of the 
+Data Management System (DMS) for persisting and retrieving datasets.
 The third generation "Gen3" Butler is being used for DP0.2.
-Full `Butler documentation <https://pipelines.lsst.io/modules/lsst.daf.butler/index.html>`_ is available, and several of the :ref:`DP0-2-Tutorials-Notebooks` demonstrate Butler use as well.
+Full `Butler documentation <https://pipelines.lsst.io/modules/lsst.daf.butler/index.html>`_ is available, 
+and several of the :ref:`DP0-2-Tutorials-Notebooks` demonstrate Butler use as well.
+The Butler is also described in the paper `The Vera C. Rubin Observatory Data Butler and Pipeline
+Execution System <https://ui.adsabs.harvard.edu/abs/2022SPIE12189E..11J/abstract>`_ (Jenness et al. 2022).
 
 The Butler is only accessible via the Notebook Aspect, whereas the Table Access Protocol (TAP) service can be
 used via all three aspects.
@@ -313,7 +317,6 @@ The Butler is also used when doing any kind of image reprocessing (e.g., re-doin
 because in that situation the Butler is used for image access and the result is a user-generated catalog persisted by and accessible with Butler.
 Furthermore, a few data products are only available via the Butler, such as survey property maps, 
 raw images, and source footprints.
-
 
 .. _NB-Intro-Use-A-NB-faq-questions:
 
