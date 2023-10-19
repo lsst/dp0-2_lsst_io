@@ -228,7 +228,7 @@ Stack Club
 
 **Time:** Biweekly on Fridays from 9am to 11am US Pacific time.
 
-**Dates:** Aug 25, Sept 8, 22, Oct 6, (but **not** Oct 20, which will be a special Delegate Assembly), Nov 3 
+**Dates:** Nov 3, 17, Dec 1, 15
 (i.e., generally alternating with :ref:`Delegate-Homepage-DP0-Delegate-Assemblies`).
 
 `Stack Club <https://github.com/LSSTScienceCollaborations/StackClub>`_ is an open, drop-in session for working with the DP0 data sets and/or the 
@@ -249,14 +249,12 @@ Stack Club is a great place to work on :ref:`DP0-2-Tutorials-Contributed`, eithe
 Third Thursday office hour
 --------------------------
 
-**Connection Info:**  `ls.st/dp0-events <https://ls.st/dp0-events>`_
-
-**Time:** The third Thursday of every month at 04:00 and 14:00 UTC.
-
+These sessions are postponed for the remainer of 2023. 
+In the past, they were held on the third Thursday of every month at 04:00 and 14:00 UTC.
 These two time slots serve the Asia-Pacific (APAC) and Europe, the Middle East, and Africa (EMEA) time zones, respectively.
 Note that in the western Americas (AMER) time zone, the first slot at 04:00 UTC is actually on Wednesday evening.
 
-| **Dates (2023):** *Additional dates TBD.*
+| **Dates:** *Additional dates TBD.*
 
 These office hour sessions are open, drop-in discussions designed to compensate for the fact that the time of the Delegate Assemblies was only convenient for DP0 delegates in North and South America, Europe, and Africa.
 Everyone is welcome to attend any of these sessions, instead of or in addition to the Delegate Assemblies and the Stack Club sessions.
