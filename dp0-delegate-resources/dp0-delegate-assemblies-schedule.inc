@@ -57,6 +57,9 @@
    * - 2023-11-10
      - Accessibility Hackathon for Notebooks (Jenn Kotler, Andrés A. Plazas Malagón)
      - *breakouts: bring your own notebook, add accessibility features!*
+   * - 2023-12-08
+     - *topic tbd*
+     - *general Q&A, breakouts*
 
 
 Additional delegate assemblies to be posted.
