@@ -49,7 +49,7 @@
      - `DP0.3 Notebook tutorial 03: Trans-Neptunian Objects <https://community.lsst.org/t/summary-dp0-delegate-assembly-friday-oct-13-2023-trans-neptunian-objects-in-dp0-3/7997>`_ (Andrés A. Plazas Malagón, Sarah Greenstreet)
      - *general Q&A, breakouts*
    * - **2023-10-20**
-     - **Special Assembly:** SSSC Mini-Sprint Preparation (Meg Schwamb)
+     - **Special Assembly:** `SSSC Mini-Sprint Preparation (Meg Schwamb) <https://community.lsst.org/t/dp0-delegate-assembly-fri-oct-20-sssc-mini-sprint-preparation-meg-schwamb/8005/2>`_
      - *general Q&A, breakouts*
    * - 2023-10-27
      - DP0.3 Notebook tutorial 04a/b: Introduction to phase curves and advanced phase curve modeling (Yumi Choi, Christina Williams)
