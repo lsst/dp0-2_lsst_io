@@ -26,6 +26,9 @@ On the the main landing page at `data.lsst.cloud <https://data.lsst.cloud>`_ the
     The API Aspect has a lot of new features for DP0.2, which will eventually be added to this page.
     Check back soon for new information!
 
+
+** Explain more about tokens and need to keep 'em safe!**
+
 **(Is this true?  I don't know anything about the ObsTAP, SODA, or HiPS services.)** 
 The API's services for DP0.2 include `TAP <https://www.ivoa.net/documents/TAP/20190927/index.html>`_, 
 `ObsTAP <https://www.ivoa.net/documents/ObsCore/>`_, `SODA <https://www.ivoa.net/documents/SODA/20170517/index.html>`_ 
