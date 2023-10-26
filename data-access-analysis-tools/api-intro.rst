@@ -26,6 +26,7 @@ On the the main landing page at `data.lsst.cloud <https://data.lsst.cloud>`_ the
     The API Aspect has a lot of new features for DP0.2, which will eventually be added to this page.
     Check back soon for new information!
 
+**DEFINE WHAT API MEANS!**
 
 The API's services for DP0.2 include `TAP <https://www.ivoa.net/documents/TAP/20190927/index.html>`_, 
 `ObsTAP <https://www.ivoa.net/documents/ObsCore/>`_, `SODA <https://www.ivoa.net/documents/SODA/20170517/index.html>`_ 
@@ -87,8 +88,8 @@ A TOPCAT-based Step-by-Step Guide
    <https://rsp.lsst.io/guides/auth/creating-user-tokens.html>`_ for a step-by-step guide 
    for creating an RSP access token.  It is recommended that the token you create has the
    following propoerties:  a name that includes "TOPCAT" as a substring, a scope of ``read:tap``, 
-   and no expiration date.)  It is highly recommended to cut-and-paste the token somewhere
-   secure for future reference.
+   and no expiration date.)  *It is highly recommended to cut-and-paste the token somewhere
+   secure for future reference.*
   
 1. Start up TOPCAT (see `TOPCAT homepage <http://www.star.bris.ac.uk/~mbt/topcat/>`_).
 
