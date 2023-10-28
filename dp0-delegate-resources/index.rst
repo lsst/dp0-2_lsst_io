@@ -265,6 +265,25 @@ collaborate on DP0-related science, and get support from Rubin Observatory staff
 
 Please see `this Rubin Community Forum topic <https://community.lsst.org/t/invitation-to-join-third-thursday-dp0-office-hours-for-apac-and-emea-timezones/6418>`__ for more information about the Third Thursdays.
 
+.. _DP0-Delegate-Programming-CustomSeminars:
+
+Custom virtual or in person seminars
+------------------------------------
+
+In addition to the virtual seminars and the publicly available recordings, additional requests for custom hands-on activities (virtual or in person) can be considered. Due to the limited resources, priority will be given to requests from scientists at small and/or underserved institutions (SUIs). 
+
+**Example requests:** 
+
+* Group "onboarding" (account set ups, learning about Rubin in general, learning about specific resources) for students at PUIs.
+* Invitations to provide virtual or in person tutorials related to DP0 at a workshop.  
+
+To broaden the participation of the Rubin community in the activity: 
+
+* The request should have a specific plan to include scientists and/or students at SUIs. For example, the activity could take place at a SUI or include funding access to the activity for scientists from SUIs.
+* The main activity, not including q&a, should be recorded and made publicly available to be linked on this page. Alternatively, the recording can be shared to be posted by the Community Science Team.
+* Requests sent at least 6 weeks in advance are more likely to be accommodated. 
+
+Contact method: Contact Melissa Graham (mlg3k@uw.edu) or send a direct message to the Community Science Team via the Rubin Community Forum. 
 
 .. _Delegate-Homepage-Delegate-Activities:
 
