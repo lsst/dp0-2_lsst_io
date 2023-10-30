@@ -86,7 +86,7 @@ objects at upper right, and a table of the search results along the bottom.
 
 .. figure:: /_static/portal_tut01_step02a.png
 	:name: portal_tut01_step02a
-	:alt: A screenshot of the results from the previous query.  
+	:alt: A screenshot of the previous query's results.  
 	
 	The default Results view with "Tri-view".
 
