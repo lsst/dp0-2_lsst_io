@@ -50,7 +50,7 @@ The default query type, and default user interface, is for "UI assisted" queries
 
 .. figure:: /_static/portal_intro_DP02a.png
     :name: portal_default_view_DP02
-    :alt: Screenshot of the defult view of the rubin science platform portal interface for single table queries. From this window the user can select the type of search, tables to search, 
+    :alt: Screenshot of the default view of the rubin science platform portal interface for single table queries. From this window the user can select the type of search, tables to search, 
     	select various constraints, and can select the number of rows to return.  
 
     The default view of the Portal's user interface for UI assisted queries.
