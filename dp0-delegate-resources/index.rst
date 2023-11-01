@@ -270,20 +270,23 @@ Please see `this Rubin Community Forum topic <https://community.lsst.org/t/invit
 Custom virtual or in person seminars
 ------------------------------------
 
-In addition to the virtual seminars and the publicly available recordings, additional requests for custom hands-on activities (virtual or in person) can be considered. Due to the limited resources, priority will be given to requests from scientists at small and/or underserved institutions (SUIs). 
+In addition to the virtual seminars and the publicly available recordings, additional requests for custom hands-on activities 
+(virtual or in person) can be considered. 
+Due to the limited resources, priority will be given to requests from scientists at small and/or underserved institutions (SUIs). 
+Requests sent at least 6 weeks in advance are more likely to be accommodated. 
 
 **Example requests:** 
 
-* Group "onboarding" (account set ups, learning about Rubin in general, learning about specific resources) for students at PUIs.
-* Invitations to provide virtual or in person tutorials related to DP0 at a workshop.  
+* Group "onboarding" (account set ups, learning about Rubin in general, learning about specific resources) for, e.g., students at PUIs.
+* Invitations to provide virtual or in person tutorials related to DP0 at, e.g., a workshop.
 
-To broaden the participation of the Rubin community in the activity: 
+To broaden the participation of the Rubin community in the activity, one or both of the following should be adopted.
 
 * The request should have a specific plan to include scientists and/or students at SUIs. For example, the activity could take place at a SUI or include funding access to the activity for scientists from SUIs.
-* The main activity, not including q&a, should be recorded and made publicly available to be linked on this page. Alternatively, the recording can be shared to be posted by the Community Science Team.
-* Requests sent at least 6 weeks in advance are more likely to be accommodated. 
+* The main activity (not including Q&A), should be recorded and made publicly available to be linked on this page. Alternatively, the recording can be shared to be posted by the Community Science Team.
 
-Contact method: Contact Melissa Graham (mlg3k@uw.edu) or send a direct message to the Community Science Team via the Rubin Community Forum. 
+Contact method: Contact Melissa Graham (mlg3k@uw.edu) or send a direct message to the 
+`Community Science Team <https://community.lsst.org/g/CST>`_ via the Rubin Community Forum. 
 
 .. _Delegate-Homepage-Delegate-Activities:
 
