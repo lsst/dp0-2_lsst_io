@@ -20,13 +20,16 @@ Introduction to the RSP API Aspect
 
 .. This section should provide a brief, top-level description of the page.
 
-On the the main landing page at `data.lsst.cloud <https://data.lsst.cloud>`_ there is an "APIs" panel with more information about the API Aspect.
+On the the main landing page at `data.lsst.cloud <https://data.lsst.cloud>`_ there is an "APIs" panel with more informationon the API Aspect.
+
+An API is an `Application Programming Interface <https://medium.com/@data.science.enthusiast/what-exactly-is-an-api-explained-in-simple-terms-2a9015c1a1a1>`_. 
+It is a piece of code that permits two other programs to communicate with each other.  
+
 
 .. Important:
     The API Aspect has a lot of new features for DP0.2, which will eventually be added to this page.
     Check back soon for new information!
 
-**DEFINE WHAT API MEANS!**
 
 The API's services for DP0.2 include `TAP <https://www.ivoa.net/documents/TAP/20190927/index.html>`_, 
 `ObsTAP <https://www.ivoa.net/documents/ObsCore/>`_, `SODA <https://www.ivoa.net/documents/SODA/20170517/index.html>`_ 
