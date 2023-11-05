@@ -1,6 +1,6 @@
-###############################################
-Full Output of Custom Coaddition pipetask build
-###############################################
+#######################################################
+Full Output of Custom Coaddition pipetask build Command
+#######################################################
 
 .. code-block::
 
