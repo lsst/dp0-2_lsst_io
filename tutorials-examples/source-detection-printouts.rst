@@ -4,6 +4,16 @@ Full Output of Custom Coadd Source Detection pipetask run Command
 
 .. code-block::
 
+    $ pipetask --long-log --log-file $LOGFILE run \
+    > -b dp02 \
+    > -i u/$USER/custom_coadd_window1_cl00 \
+    > -o u/$USER/custom_coadd_window1_cl00_det \
+    > -c detection:detection.thresholdValue=10 \
+    > -c detection:detection.thresholdType="stdev" \
+    > -c deblend:multibandDeblend.maxIter=20 \
+    > -c measure:doPropagateFlags=False \
+    > -p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#detection,mergeDetections,deblend,measure \
+    > -d "tract = 4431 AND patch = 17 AND band = 'i' AND skymap = 'DC2'"
     INFO 2023-10-19T05:59:02.685+00:00 lsst.ctrl.mpexec.cmdLineFwk ()(cmdLineFwk.py:581) - QuantumGraph contains 4 quanta for 4 tasks, graph ID: '1697695142.6832964-3058'
     INFO 2023-10-19T05:59:28.636+00:00 lsst.detection.scaleVariance (detection:{band: 'i', skymap: 'DC2', tract: 4431, patch: 17})(scaleVariance.py:130) - Renormalizing variance by 1.004598
     INFO 2023-10-19T05:59:28.673+00:00 lsst.detection.detection (detection:{band: 'i', skymap: 'DC2', tract: 4431, patch: 17})(detection.py:925) - Applying temporary wide background subtraction
