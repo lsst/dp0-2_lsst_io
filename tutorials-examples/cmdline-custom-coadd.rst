@@ -15,7 +15,7 @@
 **Credit:** This command line tutorial is based on the `corresponding notebook tutorials <https://github.com/rubin-dp0/tutorial-notebooks>`_ by Melissa Graham. The command line approach is heavily influenced by Shenming Fu's recipe for reducing DECam data with the Gen3 LSST Science Pipelines, which is in turn based on `Lee Kelvin's Merian processing notes <https://hackmd.io/@lsk/merian>`_.
 
 **Introduction:** 
-This tutorial shows how to use command line ``pipetask`` invocations to produce custom coadds from simulated single-exposure Rubin/LSST images, then detect and measure sources in these custom coadd. It is meant to parallel the corresponding Jupyter Notebook tutorial entitled `Construct a Custom Coadded Image <https://github.com/rubin-dp0/tutorial-notebooks>`_, plus the initial portion of the Jupyter Notebook tutorial entitled `Detect and Measure Sources in a Custom Coadded Image <https://github.com/rubin-dp0/tutorial-notebooks>`_.
+This tutorial shows how to use command line ``pipetask`` invocations to produce custom coadds from simulated single-exposure Rubin/LSST images, then detect and measure sources in this custom coadd. It is meant to parallel the corresponding Jupyter Notebook tutorial entitled `Construct a Custom Coadded Image <https://github.com/rubin-dp0/tutorial-notebooks>`_, plus the initial portion of the Jupyter Notebook tutorial entitled `Detect and Measure Sources in a Custom Coadded Image <https://github.com/rubin-dp0/tutorial-notebooks>`_.
 
 The peak memory of this custom coadd processing is between 8 and 9 GB, hence a large container is appropriate.
 
