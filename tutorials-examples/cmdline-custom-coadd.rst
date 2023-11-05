@@ -81,7 +81,7 @@ As you saw in `DP0.2 tutorial notebook 9a <https://github.com/rubin-dp0/tutorial
 
 2.1. Choose an output collection name/location
 
-Some of the ``pipetask`` commands later in this tutorial require you to specify an output collection where your new coadds will eventually be written to. As described in the notebook version of `tutorial 9a <https://github.com/rubin-dp0/tutorial-notebooks>`_, you want to name your output collection as something like ``u/<Your User Name>/<Collection Identifier>``. As a concrete example, throughout the rest of this tutorial ``u/$USER/custom_coadd_window1_cl00`` is used as the collection name (``$USER`` is an environment variable that stores your RSP user name) for the custom coadd products.
+Some of the ``pipetask`` commands later in this tutorial require you to specify an output collection where your new coadds will eventually be persisted. As described in the notebook version of `tutorial 9a <https://github.com/rubin-dp0/tutorial-notebooks>`_, you want to name your output collection as something like ``u/<Your User Name>/<Collection Identifier>``. As a concrete example, throughout the rest of this tutorial ``u/$USER/custom_coadd_window1_cl00`` is used as the collection name (``$USER`` is an environment variable that stores your RSP user name) for the custom coadd products.
 
 2.2. Build the pipeline
 
