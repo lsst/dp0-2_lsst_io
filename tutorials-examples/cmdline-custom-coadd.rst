@@ -105,7 +105,7 @@ The ``-p`` parameter of ``pipetask`` is short for ``--pipeline`` and it is criti
 
 2.3. Customize and inspect the coaddition configurations
 
-As mentioned in `DP0.2 tutorial notebook 9a <https://github.com/rubin-dp0/tutorial-notebooks>`_, there are a couple of specific coaddition configuration parameters that need to be set in order to accomplish the desired custom coaddition. In detail, the ``makeWarp`` `Task` needs two of its configuration parameters modified: ``doApplyFinalizedPsf`` and ``connections.visitSummary``. First, let's try an experiment of simply finding out what the default value of ``doApplyFinalizedPsf`` is, so that you can appreciate the results of having modified this parameteter later on. To view the configuration parameters, you need to use a ``pipetask run`` command, not a ``pipetask build`` command. The command used is shown here, and will be explained below:
+As mentioned in `DP0.2 tutorial notebook 9a <https://github.com/rubin-dp0/tutorial-notebooks>`_, there are a couple of specific coaddition configuration parameters that need to be set in order to accomplish the desired custom coaddition. In detail, the ``makeWarp`` Task needs two of its configuration parameters modified: ``doApplyFinalizedPsf`` and ``connections.visitSummary``. First, let's try an experiment of simply finding out what the default value of ``doApplyFinalizedPsf`` is, so that you can appreciate the results of having modified this parameteter later on. To view the configuration parameters, you need to use a ``pipetask run`` command, not a ``pipetask build`` command. The command used is shown here, and will be explained below:
 
 .. code-block::
 
