@@ -158,7 +158,7 @@ The penultimate line (``-c makeWarp:doApplyFinalizedPsf=False \``) is newly adde
 
     No quantum graph generated or pipeline executed. The --show option was given and all options were processed.
     
-Notice that the printed configuration parameter value is indeed ``False`` i.e., not the default value...great! The second configuration parameter that you need to change can be passed to ``pipetask run`` in exactly the same way, by simply adding a second ``-c`` argument whose line in the full shell command looks like:
+Notice that the printed configuration parameter value is indeed ``False`` i.e., not the default value...great! The second configuration parameter that you need to change for custom coaddition can be passed to ``pipetask run`` in exactly the same way, by simply adding a second ``-c`` argument whose line in the full shell command looks like:
 
 .. code-block::
 
