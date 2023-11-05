@@ -261,10 +261,12 @@ For users familiar with using `shell scripts <https://en.wikipedia.org/wiki/Shel
 
 The last line (before the timestamp printout) says "Executed 7 quanta successfully, 0 failed and 0 remain out of total 7 quanta". So that means every subcomponent of this custom coadd processing was successful.
 
-Step 5. Run source detection, deblending, and measurement on your custom coadd
-==============================================================================
+Step 5. Source detection, deblending, and measurement on your custom coadd
+==========================================================================
 
 The following material corresponds to that contained in DP0.2 tutorial notebook 9b "Detect and Measure Sources in a Custom Coadded Image", rather than DP0.2 tutorial notebook 9a.
+
+5.1. The ``QuantumGraph`` for detection, deblending, and measurement
 
 As with building the custom coadd, start by visualizing the workflow that will be followed during source detection, deblending and measurement using its ``QuantumGraph``. The command to create the relevant ``QuantumGraph`` is:
 
@@ -280,6 +282,8 @@ This ``QuantumGraph`` visualization command is structurally the same as the comm
 .. figure:: /_static/detectionMergeDetectionsDeblendMeasure-DRP.png
   :width: 1500
   :alt: QuantumGraph diagram for custom coadd detection, deblending, and measurement
+
+5.2. Deploy detection, deblending, and measurement
 
 To perform source detection, deblending, and measurement on your custom i-band coadd rather than only visualizing the ``QuantumGraph``, execute the following:
 
