@@ -1,3 +1,7 @@
+#################################################################
+Full Output of Custom Coadd Source Detection pipetask run Command
+#################################################################
+
 .. code-block::
 
     INFO 2023-10-19T05:59:02.685+00:00 lsst.ctrl.mpexec.cmdLineFwk ()(cmdLineFwk.py:581) - QuantumGraph contains 4 quanta for 4 tasks, graph ID: '1697695142.6832964-3058'
