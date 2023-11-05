@@ -74,8 +74,8 @@ In this tutorial, the ``$`` sign is used to indicate a command issued at the RSP
      $ eups list lsst_distrib
      g0b29ad24fb+9b30730ed8       current w_2022_40 setup
 
-Step 2. Show your pipeline and its configurations
-=================================================
+Step 2. Show your custom coaddition pipeline and its configurations
+===================================================================
 
 As you saw in `DP0.2 tutorial notebook 9a <https://github.com/rubin-dp0/tutorial-notebooks>`_, you do not need to rerun the entire DP0.2 data processing in order to obtain custom coadds. You only need to run a subset of the tasks that make up ``step3`` of the DP0.2 processing, where ``step3`` refers to coadd-level processing. Specifically, you want to rerun only the ``makeWarp`` and ``assembleCoadd`` tasks.
 
@@ -164,8 +164,8 @@ Notice that the printed configuration parameter value is indeed ``False`` i.e., 
 
     -c makeWarp:connections.visitSummary="visitSummary" \
     
-Step 3. Explore and visualize the ``QuantumGraph``
-==================================================
+Step 3. Explore and visualize the custom coaddition ``QuantumGraph``
+====================================================================
 
 Before actually deploying the custom coaddition, let's take some time to understand the ``QuantumGraph`` of the processing to be run. The ``QuantumGraph`` is `a tool <https://pipelines.lsst.io/py-api/lsst.pipe.base.QuantumGraph.html#lsst.pipe.base.QuantumGraph>`_ used by the LSST Science Pipelines to break a large processing into relatively "bite-sized" quanta and arrange these quanta into a sequence such that all inputs needed by a given quantum are available for the execution of that quantum. In the present case, you will not be doing an especially large processing, but for production deployments it makes sense to inspect and validate the ``QuantumGraph`` before proceeding straight to full-scale processing launch.
 
@@ -231,8 +231,8 @@ This command executes very fast (roughly 5 seconds), again because it is not per
 
 Light gray rectangles with rounded corners represent data, whereas darker gray rectangles with sharp corners represent pipeline Tasks. The arrows connecting the data and Tasks illustrate the data processing flow. The data processing starts at the top, with the ``calexp`` calibrated single-exposure images (also known as Processed Visit Images; PVIs). The ``makeWarp`` Task is applied to generate reprojected "warp" images from the various input ``calexp`` images, and finally the ``assembleCoadd`` Task combines the warps into ``deepCoadd`` coadded products (light gray boxes along the bottom row). 
 
-Step 4. Deploy your custom coadd processing
-===========================================
+Step 4. Deploy your custom coaddition processing
+================================================
 
 As you might guess, the custom coadd processing is run via the ``pipetask run`` command. Because this processing takes longer than prior steps, it's worth adding a little bit of "infrastructure" around your ``pipetask run`` command to perform logging and timing. First, let's start by making a directory into which you'll send the log file of the coaddition processing:
 
