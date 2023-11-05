@@ -264,7 +264,7 @@ The last line (before the timestamp printout) says "Executed 7 quanta successful
 Step 5. Source detection, deblending, and measurement on your custom coadd
 ==========================================================================
 
-The following material corresponds to that contained in DP0.2 tutorial notebook 9b "Detect and Measure Sources in a Custom Coadded Image", rather than DP0.2 tutorial notebook 9a.
+The following material corresponds to (a subset of) that contained in DP0.2 tutorial notebook 9b "Detect and Measure Sources in a Custom Coadded Image", rather than DP0.2 tutorial notebook 9a.
 
 5.1. The ``QuantumGraph`` for detection, deblending, and measurement
 
