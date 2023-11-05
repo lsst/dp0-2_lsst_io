@@ -207,7 +207,7 @@ Note a few things about this command:
 
 * The query string has speen specified via the ``-d`` argument of ``pipetask``. Including this query constraint is **really important** -- without it, Butler and ``pipetask`` might try to figure out the (huge) list of quanta for custom coaddition of the entire DP0.2 data set.
 
-For brevity, the :doc:`full output </tutorials-examples/quantumgraph-printouts>` of running the above ``pipetask qgraph`` command is on a separate page.
+For brevity, the :doc:`full output </tutorials-examples/quantumgraph-printouts>` of running the above ``pipetask qgraph`` command is provided on a separate page.
 
 As expected, there are 7 quanta (lines starting with ``Quantum N``), where ``N`` runs from 0-5 (inclusive) for ``makeWarp`` and then there's another ``N`` = 0 quantum for ``assembleCoadd``. Note that the exact order in which the quanta get printed out is not always guaranteed to be the same.
 
