@@ -1,3 +1,7 @@
+########################################################
+Full Output of Custom Coaddition pipetask qgraph Command
+########################################################
+
 .. code-block::
 
     $ pipetask qgraph \
