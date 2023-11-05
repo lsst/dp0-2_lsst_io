@@ -35,7 +35,7 @@ If you are using ``w_2022_40``, you may proceed with executing this custom coadd
 If you are **not** using ``w_2022_40`` you **must** log out and start a new server:
  1. At top left in the menu bar choose File then Save All and Exit.
  2. Re-enter the Notebook Aspect.
- 3. At `the "Server Options" stage <https://dp0-2.lsst.io/data-access-analysis-tools/nb-intro.html#how-to-log-in-navigate-and-log-out-of-jupyterlab>`_, under "Select uncached image (slower start)" choose ``w_2022_40``.
+ 3. At `the "Server Options" stage <https://dp0-2.lsst.io/data-access-analysis-tools/nb-intro.html#how-to-log-in-navigate-and-log-out-of-jupyterlab>`_, under "Select uncached image (slower start)" choose ``Weekly 2022_40``.
  4. Note that it might take a few minutes to start your server with an old image.
 
 **Why do I need to use an old image for this tutorial?**
