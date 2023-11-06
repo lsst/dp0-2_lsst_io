@@ -35,6 +35,35 @@ Beginner-level TOPCAT users looking for a more general overview of TOPCAT should
 
 ** Stopped here (2023-10-16)**
 
+.. code-block:: SQL
+
+	SELECT TOP 10 
+		coord_ra, coord_dec, detect_isPrimary, 
+		r_calibFlux, r_cModelFlux, r_extendedness 
+	FROM dp02_dc2_catalogs.Object
+	WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), 
+			CIRCLE('ICRS', 62, -37, 0.1)) = 1
+
+.. code-block:: SQL
+
+	SELECT TOP 10000 
+		coord_ra, coord_dec, 
+		-2.5*log10(g_calibFlux) as g_calibMag, 
+		-2.5*log10(r_calibFlux) as r_calibMag, 
+		-2.5*log10(i_calibFlux) as i_calibMag, 
+		1.086*(g_calibFluxErr/g_calibFlux) as g_calibMagErr
+	FROM dp02_dc2_catalogs.Object 
+	WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), 
+			CIRCLE('ICRS', 62, -37, 1.0)) = 1 
+	AND detect_isPrimary = 1 
+	AND g_calibFlux > 360 
+	AND r_calibFlux > 360 
+	AND i_calibFlux > 360 
+	AND g_extendedness = 0 
+	AND r_extendedness = 0 
+	AND i_extendedness = 0 
+
+
 .. _DP0-2-Portal-Beginner-Step-1:
 
 Step 1. Set the query constraints
