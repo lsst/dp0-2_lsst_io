@@ -46,23 +46,30 @@ Beginner-level TOPCAT users looking for a more general overview of TOPCAT should
 
 .. code-block:: SQL
 
-	SELECT TOP 10000 
-		coord_ra, coord_dec, 
-		-2.5*log10(g_calibFlux) as g_calibMag, 
-		-2.5*log10(r_calibFlux) as r_calibMag, 
-		-2.5*log10(i_calibFlux) as i_calibMag, 
-		1.086*(g_calibFluxErr/g_calibFlux) as g_calibMagErr
-	FROM dp02_dc2_catalogs.Object 
-	WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), 
-			CIRCLE('ICRS', 62, -37, 1.0)) = 1 
-	AND detect_isPrimary = 1 
-	AND g_calibFlux > 360 
-	AND r_calibFlux > 360 
-	AND i_calibFlux > 360 
-	AND g_extendedness = 0 
-	AND r_extendedness = 0 
-	AND i_extendedness = 0 
-
+	SELECT TOP 10000
+        	coord_ra, coord_dec,
+        	u_calibFlux, u_calibFluxErr, 
+        	g_calibFlux, g_calibFluxErr, 
+        	r_calibFlux, r_calibFluxErr, 
+        	i_calibFlux, i_calibFluxErr, 
+        	z_calibFlux, z_calibFluxErr, 
+        	y_calibFlux, y_calibFluxErr
+	FROM dp02_dc2_catalogs.Object
+	WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
+        	        CIRCLE('ICRS', 62, -37, 1.0)) = 1
+		AND detect_isPrimary = 1
+		AND u_calibFlux > 360
+		AND g_calibFlux > 360
+		AND r_calibFlux > 360
+		AND i_calibFlux > 360
+		AND z_calibFlux > 360
+		AND y_calibFlux > 360
+		AND u_extendedness = 0
+		AND g_extendedness = 0
+		AND r_extendedness = 0
+		AND i_extendedness = 0
+		AND z_extendedness = 0
+		AND y_extendedness = 0
 
 .. _DP0-2-Portal-Beginner-Step-1:
 
