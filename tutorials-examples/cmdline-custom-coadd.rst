@@ -289,7 +289,7 @@ To perform source detection, deblending, and measurement on your custom i-band c
 
 .. code-block::
 
-    LOGFILE=logs/detectionMergeDetectionsDeblendMeasure.log
+    LOGFILE=$LOGDIR/detectionMergeDetectionsDeblendMeasure.log
     pipetask --long-log --log-file $LOGFILE run \
     -b dp02 \
     -i u/$USER/custom_coadd_window1_cl00 \
