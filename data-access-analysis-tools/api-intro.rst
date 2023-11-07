@@ -103,6 +103,8 @@ A TOPCAT-based Step-by-Step Guide
     :alt: TBD
 
 3.  Fill in `https://data.lsst.cloud/api/tap` in the “TAP URL” window and click the “Use Service” button.
+(If you wish to access DP0.3 -- which is a database of solar system objects that supplements the main DP0.2
+database -- rather than the main DP0.2 database, use `https://data.lsst.cloud/api/ssotap` instead.)
 
 .. figure:: /_static/API_TOPCAT_DLT_2.png
     :name: API_TOPCAT_DLT_2
@@ -175,13 +177,17 @@ displayed on a one's own browser.
 
 	import pyvo
 
-3. Define the data.lsst.cloud TAP server URL and read in your security token::
+3. Define the data.lsst.cloud TAP server URL and read in your security token.
+(be sure to change the value of `token_file` to point to your own token file)::
 
 	RSP_TAP_SERVICE = 'https://data.lsst.cloud/api/tap'
 	token_file = '/Users/<my_account>/.rsp-tap.token'
 	with open(token_file, 'r') as f:
     		token_str = f.readline()
 
+(If you wish to access DP0.3 -- which is a database of solar system objects that supplements the main DP0.2
+database -- rather than the main DP0.2 database itself, replace `https://data.lsst.cloud/api/tap` with 
+`https://data.lsst.cloud/api/ssotap` for the `RSP_TAP_SERVICE` URL in the above code snippet.)
 
 4. Set up appropriate authorization to access the RSP TAP server::
 
