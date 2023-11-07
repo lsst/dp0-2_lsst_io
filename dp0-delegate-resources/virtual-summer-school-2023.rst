@@ -102,6 +102,8 @@ Agenda
 
 Download the agenda as a pdf file: :download:`agenda </_static/DP0_Virtual_Summer_School_agenda.pdf>`.
 
+Download the agenda as a txt file: :download:`agenda </_static/vss_agenda.txt>`.
+
 Note that all times are given in the PDT (Pacific Daylight Time) time zone. For conversion to your local time, try `this time zone converter <https://www.timeanddate.com/worldclock/converter.html>`__ (use Los Angeles as the anchor for PDT).
 
 .. _DP0-Delegate-Resources-VSS2023-Videos:
