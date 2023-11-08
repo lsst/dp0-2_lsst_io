@@ -64,8 +64,6 @@ Choose "w_2022_40" from the drop-down list under image and a "Large" container.
 .. code-block::
 
     setup lsst_distrib
-    
-In this tutorial, the ``$`` sign is used to indicate a command issued at the RSP terminal -- do not include the ``$`` in the command you issue.
 
 1.4. Perform a command line verification that you are using the correct ``w_2022_40`` version of the LSST Science Pipelines.
 
