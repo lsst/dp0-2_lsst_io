@@ -1,3 +1,7 @@
+#####################################################
+Full Output of Custom Coaddition pipetask run Command
+#####################################################
+
 .. code-block::
 
     $ . dp02_custom_coadd_1patch.sh 
