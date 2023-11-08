@@ -167,22 +167,14 @@ The output should be:
 
     No quantum graph generated or pipeline executed. The --show option was given and all options were processed.
     
-Notice that the printed configuration parameter value is indeed ``False`` i.e., not the default value...great! The second configuration parameter that you need to change for custom coaddition can be passed to ``pipetask run`` in exactly the same way, by simply adding a second ``-c`` argument whose line in the full shell command looks like:
-
-.. code-block::
-
-    -c makeWarp:connections.visitSummary="visitSummary" \
+Notice that the printed configuration parameter value is indeed ``False`` i.e., not the default value...great! The second configuration parameter that you need to change for custom coaddition can be passed to ``pipetask run`` in exactly the same way, by simply adding a second ``-c`` argument whose line in the full shell command is ``-c makeWarp:connections.visitSummary="visitSummary" \``.
     
 Step 3. Explore and visualize the custom coaddition ``QuantumGraph``
 ====================================================================
 
 Before actually deploying the custom coaddition, let's take some time to understand the ``QuantumGraph`` of the processing to be run. The ``QuantumGraph`` is `a tool <https://pipelines.lsst.io/py-api/lsst.pipe.base.QuantumGraph.html#lsst.pipe.base.QuantumGraph>`_ used by the LSST Science Pipelines to break a large processing into relatively "bite-sized" quanta and arrange these quanta into a sequence such that all inputs needed by a given quantum are available for the execution of that quantum. In the present case, you will not be doing an especially large processing, but for production deployments it makes sense to inspect and validate the ``QuantumGraph`` before proceeding straight to full-scale processing launch.
 
-So far, you've seen ``pipetask build`` and ``pipetask run``. For the ``QuantumGraph``, you'll use another ``pipetask`` variant, ``pipetask qgraph``. ``pipetask qgraph`` determines the full list of quanta that your processing will entail, so at this stage it's important to bring in the query constraints that specify what subset of DP0.2 will be analyzed. This information is already available from `notebook tutorial 9a <https://github.com/rubin-dp0/tutorial-notebooks>`_. In detail, you want to make a coadd only for ``patch=4431``, ``tract=17`` of the ``DC2`` ``skyMap``, and only using a particular set of 6 input exposures drawn from a desired temporal interval (``visit`` = 919515, 924057, 924085, 924086, 929477, 930353). `DP0.2 tutorial notebook 9a <https://github.com/rubin-dp0/tutorial-notebooks>`_ also provides a translation of these constraints into `Butler query syntax <https://pipelines.lsst.io/modules/lsst.daf.butler/queries.html>`_ as:
-
-.. code-block::
-
-    tract = 4431 AND patch = 17 AND visit in (919515,924057,924085,924086,929477,930353) AND skymap = 'DC2'
+So far, you've seen ``pipetask build`` and ``pipetask run``. For the ``QuantumGraph``, you'll use another ``pipetask`` variant, ``pipetask qgraph``. ``pipetask qgraph`` determines the full list of quanta that your processing will entail, so at this stage it's important to bring in the query constraints that specify what subset of DP0.2 will be analyzed. This information is already available from `notebook tutorial 9a <https://github.com/rubin-dp0/tutorial-notebooks>`_. In detail, you want to make a coadd only for ``patch=4431``, ``tract=17`` of the ``DC2`` ``skyMap``, and only using a particular set of 6 input exposures drawn from a desired temporal interval (``visit`` = 919515, 924057, 924085, 924086, 929477, 930353). `DP0.2 tutorial notebook 9a <https://github.com/rubin-dp0/tutorial-notebooks>`_ also provides a translation of these constraints into `Butler query syntax <https://pipelines.lsst.io/modules/lsst.daf.butler/queries.html>`_, which you can see in the line starting with ``-d`` in the first ``pipetask qgraph`` command of section 3.1 below.
 
 3.1. What are the quanta?
 
