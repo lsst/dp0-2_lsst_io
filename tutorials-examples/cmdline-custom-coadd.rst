@@ -213,7 +213,15 @@ As expected, there are 7 quanta (lines starting with ``Quantum N``), where ``N``
 
 3.2. Visualizing the ``QuantumGraph``
 
-In addition to generating and printing out the ``QuantumGraph`` you can also visualize the ``QuantumGraph`` as a "flowchart" style diagram. Perhaps counterintuitively, visualization of the ``QuantumGraph`` is performed with ``pipetask build`` rather than ``pipetask qgraph``. This is because the ``QuantumGraph`` visualization depends only on the structure of the pipeline definition, and not on details of exactly which patches/tracts/exposures will be processed. For this same reason, you don't need to specify all of the command line parameters (like the Butler query string) when generating the ``QuantumGraph`` visualization. The ``pipetask build`` command to generate the ``QuantumGraph`` visualization of your custom coadd processing is:
+In addition to generating and printing out the ``QuantumGraph`` you can also visualize the ``QuantumGraph`` as a "flowchart" style diagram. Perhaps counterintuitively, visualization of the ``QuantumGraph`` is performed with ``pipetask build`` rather than ``pipetask qgraph``. This is because the ``QuantumGraph`` visualization depends only on the structure of the pipeline definition, and not on details of exactly which patches/tracts/exposures will be processed. For this same reason, one doesn't need to specify all of the command line parameters (like the Butler query string) when generating the ``QuantumGraph`` visualization. Here's what the ``QuantumGraph`` visualization looks like in the case of this custom coaddition processing:
+
+.. figure:: /_static/makeWarpAssembleCoadd.png
+  :width: 1500
+  :alt: QuantumGraph diagram for custom coaddition
+
+Light gray rectangles with rounded corners represent data, whereas darker gray rectangles with sharp corners represent pipeline Tasks. The arrows connecting the data and Tasks illustrate the data processing flow. The data processing starts at the top, with the ``calexp`` calibrated single-exposure images (also known as Processed Visit Images; PVIs). The ``makeWarp`` Task is applied to generate reprojected "warp" images from the various input ``calexp`` images, and finally the ``assembleCoadd`` Task combines the warps into ``deepCoadd`` coadded products (light gray boxes along the bottom row). 
+
+**Optional:** Try running the following ``pipetask build`` command to generate the ``QuantumGraph`` visualization of the custom coadd processing:
 
 
 .. code-block::
@@ -224,12 +232,6 @@ In addition to generating and printing out the ``QuantumGraph`` you can also vis
     dot pipeline.dot -Tpdf > makeWarpAssembleCoadd.pdf
     
 This command executes very fast (roughly 5 seconds), again because it is not performing any search through the DP0.2 data set for e.g., input exposures. The ``pipeline.dot`` output is essentially an intermediate temporary file which you may wish to delete. The PDF you make (shown below) can be opened by double clicking on its file name in the JupyterHub file browser.
-
-.. figure:: /_static/makeWarpAssembleCoadd.png
-  :width: 1500
-  :alt: QuantumGraph diagram for custom coaddition
-
-Light gray rectangles with rounded corners represent data, whereas darker gray rectangles with sharp corners represent pipeline Tasks. The arrows connecting the data and Tasks illustrate the data processing flow. The data processing starts at the top, with the ``calexp`` calibrated single-exposure images (also known as Processed Visit Images; PVIs). The ``makeWarp`` Task is applied to generate reprojected "warp" images from the various input ``calexp`` images, and finally the ``assembleCoadd`` Task combines the warps into ``deepCoadd`` coadded products (light gray boxes along the bottom row). 
 
 Step 4. Deploy your custom coaddition processing
 ================================================
