@@ -252,44 +252,62 @@ table in the "Table List" panel of the main TOPCAT window:
     :name: TOPCAT_CMD_tutorial_21.png
     :alt: TBD
 
-**2.20.**  ...:
+Step 3. Interact with Multiple Plots/Tables
+===========================================
+
+**3.1.**  ...:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_22.png
     :name: TOPCAT_CMD_tutorial_22.png
     :alt: TBD
 
-**2.21.**  ...:
+**3.2.**  ...:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_23.png
     :name: TOPCAT_CMD_tutorial_23.png
     :alt: TBD
 
-**2.22.**  ...:
+**3.3.**  ...:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_24.png
     :name: TOPCAT_CMD_tutorial_24.png
     :alt: TBD
 
-**2.23.**  ...:
+Step 4. Create Interactive 3D Plots
+===================================
+
+**4.1.**  ...:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_25.png
     :name: TOPCAT_CMD_tutorial_25.png
     :alt: TBD
 
-**2.24.**  ...:
+**4.2.**  ...:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_26.png
     :name: TOPCAT_CMD_tutorial_26.png
     :alt: TBD
 
-**2.25.**  ...:
+**4.3.**  ...:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_27.png
     :name: TOPCAT_CMD_tutorial_27.png
     :alt: TBD
 
-**2.26.**  ...:
+**4.4.**  ...:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_28.png
     :name: TOPCAT_CMD_tutorial_28.png
+    :alt: TBD
+
+**4.5.**  ...:
+
+.. figure:: /_static/TOPCAT_CMD_tutorial_29.png
+    :name: TOPCAT_CMD_tutorial_29.png
+    :alt: TBD
+
+**4.6.**  ...:
+
+.. figure:: /_static/TOPCAT_CMD_tutorial_30.png
+    :name: TOPCAT_CMD_tutorial_30.png
     :alt: TBD
