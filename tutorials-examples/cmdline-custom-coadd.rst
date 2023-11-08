@@ -63,7 +63,7 @@ Choose "w_2022_40" from the drop-down list under image and a "Large" container.
 
 .. code-block::
 
-    $ setup lsst_distrib
+    setup lsst_distrib
     
 In this tutorial, the ``$`` sign is used to indicate a command issued at the RSP terminal -- do not include the ``$`` in the command you issue.
 
@@ -71,8 +71,9 @@ In this tutorial, the ``$`` sign is used to indicate a command issued at the RSP
 
 .. code-block::
 
-     $ eups list lsst_distrib
-     g0b29ad24fb+9b30730ed8       current w_2022_40 setup
+     eups list lsst_distrib
+
+If indeed using ``w_2022_40``, you should see ``w_2022_40`` as part of the output from the above ``eups list`` command.
 
 Step 2. Show your custom coaddition pipeline and its configurations
 ===================================================================
@@ -89,7 +90,7 @@ Let's not jump straight into running the pipeline, but rather start by verifying
 
 .. code-block::
 
-    $ pipetask build \
+    pipetask build \
     -p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#makeWarp,assembleCoadd \
     --show pipeline
     
@@ -97,7 +98,7 @@ This is all one single terminal (shell) command, but spread out over three input
 
 .. code-block::
 
-    $ pipetask build -p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#makeWarp,assembleCoadd --show pipeline
+    pipetask build -p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#makeWarp,assembleCoadd --show pipeline
     
 The ``-p`` parameter of ``pipetask`` is short for ``--pipeline`` and it is critical that this parameter be specified as shown above. The :doc:`full output </tutorials-examples/pipetask-build-printouts>` is shown on a separate page for brevity.
 
@@ -109,7 +110,7 @@ As mentioned in `DP0.2 tutorial notebook 9a <https://github.com/rubin-dp0/tutori
 
 .. code-block::
 
-    $ pipetask run \
+    pipetask run \
     -b dp02 \
     -p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#makeWarp,assembleCoadd \
     --show config=makeWarp::doApplyFinalizedPsf
@@ -122,10 +123,15 @@ Now let's look at what happens when you run the above ``pipetask command``:
 
 .. code-block::
 
-    $ pipetask run \
-    > -b dp02 \
-    > -p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#makeWarp,assembleCoadd \
-    > --show config=makeWarp::doApplyFinalizedPsf
+    pipetask run \
+    -b dp02 \
+    -p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#makeWarp,assembleCoadd \
+    --show config=makeWarp::doApplyFinalizedPsf
+
+The output should be:
+
+.. code-block::
+
     Matching "doApplyFinalizedPsf" without regard to case (append :NOIGNORECASE to prevent this)
     ### Configuration for task `makeWarp'
     # Whether to apply finalized psf models and aperture correction map.
@@ -136,7 +142,7 @@ Ignore the lines about "No quantum graph" and "NOIGNORECASE" -- for the present 
 
 .. code-block::
 
-    $ pipetask run \
+    pipetask run \
     -b dp02 \
     -p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#makeWarp,assembleCoadd \
     -c makeWarp:doApplyFinalizedPsf=False \
@@ -146,11 +152,16 @@ The penultimate line (``-c makeWarp:doApplyFinalizedPsf=False \``) is newly adde
 
 .. code-block::
 
-    $ pipetask run \
-    > -b dp02 \
-    > -p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#makeWarp,assembleCoadd \
-    > -c makeWarp:doApplyFinalizedPsf=False \
-    > --show config=makeWarp::doApplyFinalizedPsf
+    pipetask run \
+    -b dp02 \
+    -p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#makeWarp,assembleCoadd \
+    -c makeWarp:doApplyFinalizedPsf=False \
+    --show config=makeWarp::doApplyFinalizedPsf
+
+The output should be:
+
+.. code-block::
+
     Matching "doApplyFinalizedPsf" without regard to case (append :NOIGNORECASE to prevent this)
     ### Configuration for task `makeWarp'
     # Whether to apply finalized psf models and aperture correction map.
@@ -183,7 +194,7 @@ You can find out full details about all quanta with a ``pipetask qgraph`` comman
 
 .. code-block::
 
-    $ pipetask qgraph \
+    pipetask qgraph \
     -b dp02 \
     -i 2.2i/runs/DP0.2 \
     -p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#makeWarp,assembleCoadd \
@@ -226,7 +237,7 @@ Light gray rectangles with rounded corners represent data, whereas darker gray r
 
 .. code-block::
 
-    $ pipetask build \
+    pipetask build \
     -p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#makeWarp,assembleCoadd \
     --pipeline-dot pipeline.dot; \
     dot pipeline.dot -Tpdf > makeWarpAssembleCoadd.pdf
@@ -240,8 +251,8 @@ As you might guess, the custom coadd processing is run via the ``pipetask run`` 
 
 .. code-block::
 
-    $ export LOGDIR=logs
-    $ mkdir $LOGDIR
+    export LOGDIR=logs
+    mkdir $LOGDIR
     
 Now you have a directory called ``logs`` into which you can save the pipeline outputs printed when creating your custom coadds. Also, print out the processing's start time at the very beginning and the time of completion at the very end, in both cases using the ``Linux`` ``date`` command. This will keep a record of how long your custom coadd processing took end-to-end.  Send the ``date`` printouts both to the terminal and to the log file using the Linux ``tee`` command. Putting this all together, the final commands to generate your custom coadds are:
 
