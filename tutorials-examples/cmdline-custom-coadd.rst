@@ -104,7 +104,11 @@ The ``-p`` parameter of ``pipetask`` is short for ``--pipeline`` and it is criti
 
 2.3. Customize and inspect the coaddition configurations
 
-As mentioned in `DP0.2 tutorial notebook 9a <https://github.com/rubin-dp0/tutorial-notebooks>`_, there are a couple of specific coaddition configuration parameters that need to be set in order to accomplish the desired custom coaddition. In detail, the ``makeWarp`` Task needs two of its configuration parameters modified: ``doApplyFinalizedPsf`` and ``connections.visitSummary``. First, let's try an experiment of simply finding out what the default value of ``doApplyFinalizedPsf`` is, so that you can appreciate the results of having modified this parameteter later on. To view the configuration parameters, you need to use a ``pipetask run`` command, not a ``pipetask build`` command. The command used is shown here, and will be explained below:
+As mentioned in `DP0.2 tutorial notebook 9a <https://github.com/rubin-dp0/tutorial-notebooks>`_, there are a couple of specific coaddition configuration parameters that need to be set in order to accomplish the desired custom coaddition. In detail, the ``makeWarp`` Task needs two of its configuration parameters modified: ``doApplyFinalizedPsf`` and ``connections.visitSummary``.
+
+2.3.1. Display the default configuration
+
+First, let's try an experiment of simply finding out what the default value of ``doApplyFinalizedPsf`` is, so that you can appreciate the results of having modified this parameteter later on. To view the configuration parameters, you need to use a ``pipetask run`` command, not a ``pipetask build`` command. The command used is shown here, and will be explained below:
 
 .. code-block::
 
@@ -117,16 +121,7 @@ Notice that the ``-p`` parameter passed to ``pipetask`` has remained the same. B
 
 The final line merits further explanation. ``--show config`` tells the LSST pipelines not to actually run the pipeline, but rather to only show the configuration parameters, so that you can understand all the detailed choices being made by your processing, if desired. The last line would be valid as simply ``--show config``. However, this would print out every single configuration parameter and its description. Appending ``=<Task>::<Parameter>`` to ``--show config`` specifies exactly which parameter you want to be shown. In this case, it's known from `DP0.2 tutorial notebook 9a <https://github.com/rubin-dp0/tutorial-notebooks>`_ that you want to adjust the ``doApplyFinalizedPsf`` parameter of the ``makeWarp`` Task, hence why ``makeWarp::doApplyFinalizedPsf`` is appended to ``--show config``.
 
-Now let's look at what happens when you run the above ``pipetask command``:
-
-.. code-block::
-
-    pipetask run \
-    -b dp02 \
-    -p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#makeWarp,assembleCoadd \
-    --show config=makeWarp::doApplyFinalizedPsf
-
-The output should be:
+When the above `pipetask run` command is executed, the output should be:
 
 .. code-block::
 
@@ -136,7 +131,11 @@ The output should be:
     config.doApplyFinalizedPsf=True
     No quantum graph generated or pipeline executed. The --show option was given and all options were processed.
     
-Ignore the lines about "No quantum graph" and "NOIGNORECASE" -- for the present purposes, these can be considered non-fatal warnings. The line that starts with ``###`` specificies that ``pipetask run`` is showing us a parameter of the ``makeWarp`` Task (as opposed to some other task, like ``assembleCoadd``). The line that starts with ``#`` provides the plain English description of the parameter that you requested to be shown. The line following the plain English description of ``doApplyFinalizedPsf`` shows this parameter's default value, which is a boolean equal to ``True``. From `DP0.2 tutorial notebook 9a <https://github.com/rubin-dp0/tutorial-notebooks>`_, you know that it's necessary to change ``doApplyFinalizedPsf`` to ``False`` i.e., the opposite of its default value. The following modified ``pipetask run`` command adds one extra ``-c`` input parameter for the custom ``doApplyFinalizedPsf`` setting:
+Ignore the lines about "No quantum graph" and "NOIGNORECASE" -- for the present purposes, these can be considered non-fatal warnings. The line that starts with ``###`` specificies that ``pipetask run`` is showing us a parameter of the ``makeWarp`` Task (as opposed to some other task, like ``assembleCoadd``). The line that starts with ``#`` provides the plain English description of the parameter that you requested to be shown. The line following the plain English description of ``doApplyFinalizedPsf`` shows this parameter's default value, which is a boolean equal to ``True``.
+
+2.3.2. Perform configuration override
+
+From `DP0.2 tutorial notebook 9a <https://github.com/rubin-dp0/tutorial-notebooks>`_, you know that it's necessary to change ``doApplyFinalizedPsf`` to ``False`` i.e., the opposite of its default value. The following modified ``pipetask run`` command adds one extra ``-c`` input parameter for the custom ``doApplyFinalizedPsf`` setting:
 
 .. code-block::
 
@@ -148,15 +147,7 @@ Ignore the lines about "No quantum graph" and "NOIGNORECASE" -- for the present 
     
 The penultimate line (``-c makeWarp:doApplyFinalizedPsf=False \``) is newly added. The ``-c`` parameter of ``pipetask run`` (note the lower case ``c``) can be used to specify a desired value of a given parameter, with argument syntax of ``<Task>:<Parameter>=<Value>``. In this case, the Task is ``makeWarp``, the parameter is ``doApplyFinalizedPsf``, and the desired value is ``False``. Now find out if you succeeded in changing the configuration, by looking at the printouts generated from running the above command:
 
-.. code-block::
-
-    pipetask run \
-    -b dp02 \
-    -p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#makeWarp,assembleCoadd \
-    -c makeWarp:doApplyFinalizedPsf=False \
-    --show config=makeWarp::doApplyFinalizedPsf
-
-The output should be:
+When the above `pipetask run` command is executed, the output should be:
 
 .. code-block::
 
@@ -237,14 +228,22 @@ This command executes very fast (roughly 5 seconds), again because it is not per
 Step 4. Deploy your custom coaddition processing
 ================================================
 
-As you might guess, the custom coadd processing is run via the ``pipetask run`` command. Because this processing takes longer than prior steps, it's worth adding a little bit of "infrastructure" around your ``pipetask run`` command to perform logging and timing. First, let's start by making a directory into which you'll send the log file of the coaddition processing:
+As you might guess, the custom coadd processing is run via the ``pipetask run`` command. Because this processing takes longer than prior steps, it's worth adding a little bit of "infrastructure" around your ``pipetask run`` command to perform logging and timing.
+
+4.1. Set up for logging
+
+First, let's start by making a directory into which you'll send the log file of the coaddition processing:
 
 .. code-block::
 
     export LOGDIR=logs
     mkdir $LOGDIR
-    
-Now you have a directory called ``logs`` into which you can save the pipeline outputs printed when creating your custom coadds. Also, print out the processing's start time at the very beginning and the time of completion at the very end, in both cases using the ``Linux`` ``date`` command. This will keep a record of how long your custom coadd processing took end-to-end.  Send the ``date`` printouts both to the terminal and to the log file using the Linux ``tee`` command. Putting this all together, the final commands to generate your custom coadds are:
+
+Now you have a directory called ``logs`` into which you can save the pipeline outputs printed when creating your custom coadds.
+
+4.2. The final custom coaddition commands
+
+Now the a directory for output logs is in place, let's also print out the processing's start time at the very beginning and the time of completion at the very end, in both cases using the ``Linux`` ``date`` command. This will keep a record of how long your custom coadd processing took end-to-end.  Send the ``date`` printouts both to the terminal and to the log file using the Linux ``tee`` command. Putting everything all together, the final commands to generate your custom coadds are:
 
 .. code-block::
 
@@ -260,7 +259,9 @@ Now you have a directory called ``logs`` into which you can save the pipeline ou
     -d "tract = 4431 AND patch = 17 AND visit in (919515,924057,924085,924086,929477,930353) AND skymap = 'DC2'"; \
     date | tee -a $LOGFILE
     
-For users familiar with using `shell scripts <https://en.wikipedia.org/wiki/Shell_script>`_, you can save the above commands to a shell script file and then launch that shell script. You could name the shell script file, for instance, ``dp02_custom_coadd_1patch.sh``. If you are not familiar with shell scripts, you can simply copy and paste the above commands into the terminal and hit the "return" key. The above commands take 30-35 minutes to run from start to finish. For brevity, the :doc:`full output </tutorials-examples/pipetask-run-printouts>` of running the above ``pipetask run`` script is provided on a separate page.
+**Optional:** For users familiar with using `shell scripts <https://en.wikipedia.org/wiki/Shell_script>`_, you can save the above commands to a shell script file and then launch that shell script. You could name the shell script file, for instance, ``dp02_custom_coadd_1patch.sh``.
+
+If you are not familiar with shell scripts, you can simply copy and paste the above commands into the terminal and hit the "return" key. The above commands take 30-35 minutes to run from start to finish. For brevity, the :doc:`full output </tutorials-examples/pipetask-run-printouts>` of executing the above ``pipetask run`` script is provided on a separate page.
 
 The last line (before the timestamp printout) says "Executed 7 quanta successfully, 0 failed and 0 remain out of total 7 quanta". So that means every subcomponent of this custom coadd processing was successful.
 
@@ -288,7 +289,19 @@ As with building the custom coadd, start by visualizing the workflow that will b
 
 As before, the ``pipeline.dot`` output is an intermediate temporary file which you may wish to delete.
 
-This ``QuantumGraph`` visualization command is structurally the same as the command shown previously (and optionally executed) in Section 3.2 of this command line tutorial. This ``QuantumGraph`` visualization command for source detection, deblending, and measurement uses the same pipeline definition YAML file as you have all throughout this command line tutorial. However, even though the URI passed to ``pipetask build`` here includes the same YAML file name, the pipeline steps enumerated after the ``#`` symbol are different. In this case, the specific list of Data Release Production (DRP) steps to be included is ``detection,mergeDetections,deblend,measure``. The step labeled ``detection`` runs the actual source detection. The step labeled ``mergeDetections`` is required in order for downstream steps to be able to use the results of the ``detection`` step. The step labeled ``deblend`` performs deblending using the (merged) results of the detection step and the i-band custom coadd itself. Lastly, the step labeled ``measure`` computes useful quantities, such as the photometric fluxes, given the deblended list of sources. The ``detectionMergeDetectionsDeblendMeasure-DRP.pdf`` visualization generated by the above ``pipetask build`` command looks as follows:
+This ``QuantumGraph`` visualization command is structurally the same as the command shown previously (and optionally executed) in Section 3.2 of this command line tutorial. A few notes on this command:
+
+* This ``QuantumGraph`` visualization command for source detection, deblending, and measurement uses the same pipeline definition YAML file as you have all throughout this command line tutorial. However, even though the URI passed to ``pipetask build`` here includes the same YAML file name, the pipeline steps enumerated after the ``#`` symbol are different. In this case, the specific list of Data Release Production (DRP) steps to be included is ``detection,mergeDetections,deblend,measure``.
+
+* The step labeled ``detection`` runs the actual source detection.
+
+* The step labeled ``mergeDetections`` is required in order for downstream steps to be able to use the results of the ``detection`` step.
+
+* The step labeled ``deblend`` performs deblending using the (merged) results of the detection step and the i-band custom coadd itself.
+
+* Lastly, the step labeled ``measure`` computes useful quantities, such as the photometric fluxes, given the deblended list of sources.
+
+The ``detectionMergeDetectionsDeblendMeasure-DRP.pdf`` visualization generated by the above ``pipetask build`` command looks as follows:
 
 5.2. Deploy detection, deblending, and measurement
 
