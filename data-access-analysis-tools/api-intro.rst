@@ -83,6 +83,7 @@ others, and -- outside the safety of the RSP environment -- the user should take
 steps to keep tokens secure.  This is a topic that is described further in the material 
 below.**
 
+.. _Data-Access-Analysis-Tools-TAP-TOPCAT-Step-by-Step:
 
 A TOPCAT-based Step-by-Step Guide
 ---------------------------------
@@ -135,7 +136,7 @@ various tutorials.
     :name: API_TOPCAT_DLT_5
     :alt: TBD
 
-.. _Data-Access-Analysis-Tools-TAP-NB-NOIRLAB:
+.. _Data-Access-Analysis-Tools-TAP-pyvo:
 
 Use of ``pyvo`` with the RSP TAP service
 ========================================
@@ -155,6 +156,8 @@ Here, as an example, we make use of the NOIRlab Astro Data Lab.
 
 ** See K.-T. Lim's reply and Michael Wood-Vasey's ``test_rsp_tap_service.py`` from 
 https://community.lsst.org/t/will-there-be-external-tap-access-to-rsp-dp0-2-tables/6660/7 **
+
+.. _Data-Access-Analysis-Tools-TAP-pyvo-Step-by-Step:
 
 A ``pyvo``-based Step-by-Step Guide
 -----------------------------------
