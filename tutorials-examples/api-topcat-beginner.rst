@@ -71,7 +71,43 @@ Beginner-level TOPCAT users looking for a more general overview of TOPCAT should
 		AND z_extendedness = 0
 		AND y_extendedness = 0
 
-.. _DP0-2-Portal-Beginner-Step-1:
+
+0. Create an RSP access token as described above.  (See the `Creating user tokens webpage 
+   <https://rsp.lsst.io/guides/auth/creating-user-tokens.html>`_ for a step-by-step guide 
+   for creating an RSP access token.  It is recommended that the token you create has the
+   following propoerties:  a name that includes "TOPCAT" as a substring, a scope of ``read:tap``, 
+   and no expiration date.)  *It is highly recommended to cut-and-paste the token somewhere
+   secure for future reference.*
+  
+1. Start up TOPCAT (see `TOPCAT homepage <http://www.star.bris.ac.uk/~mbt/topcat/>`_).
+
+2. Click on "Table Access Protocal (TAP) Query" under the “VO” menu.
+
+.. figure:: /_static/API_TOPCAT_DLT_1.png
+    :name: API_TOPCAT_DLT_1
+    :alt: TBD
+
+3.  Fill in `https://data.lsst.cloud/api/tap` in the “TAP URL” window and click the “Use Service” button.
+(If you wish to access DP0.3 -- which is a database of solar system objects that supplements the main DP0.2
+database -- rather than the main DP0.2 database, use `https://data.lsst.cloud/api/ssotap` instead.)
+
+.. figure:: /_static/API_TOPCAT_DLT_2.png
+    :name: API_TOPCAT_DLT_2
+    :alt: TBD
+
+4. In the Authentication window that pops up, fill in `x-oauth-basic` for the "User" and your security token forthe "Password".  Click "OK".
+
+.. figure:: /_static/API_TOPCAT_DLT_3.png
+    :name: API_TOPCAT_DLT_3
+    :alt: TBD
+
+5. Now you have access to the RSP TAP service from TOPCAT.
+
+.. figure:: /_static/API_TOPCAT_DLT_4.png
+    :name: API_TOPCAT_DLT_4
+    :alt: TBD
+
+.. _DP0-2-TOPCAT-Beginner-Step-1:
 
 Step 1. Set the query constraints
 =================================
