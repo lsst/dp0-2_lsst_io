@@ -14,15 +14,15 @@
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
 .. A warning will alert you of identical labels during the linkcheck process.
 
-################################################################
-01. API Bright Stars Color-Magnitude Diagram Tutorial (beginner)
-################################################################
+#######################################################################
+01. API TOPCAT Bright Stars Color-Magnitude Diagram Tutorial (beginner)
+#######################################################################
 
 .. This section should provide a brief, top-level description of the page.
 
 **Contact authors:** Douglas Tucker and Leanne Guy
 
-**Last verified to run:** 2023-10-17
+**Last verified to run:** 2023-11-07
 
 **Targeted learning level:** beginner
 
