@@ -198,9 +198,9 @@ No output might appear for most of that time, and it may seem as if nothing is h
 
 Note a few things about this command:
 
-* the command starts out with ``pipetask qgraph`` rather than ``pipetask run`` or ``pipetask build``.
+* The command starts out with ``pipetask qgraph`` rather than ``pipetask run`` or ``pipetask build``.
 
-* the input data set ``collection`` within DP0.2 is specified via the argument ``-i 2.2i/runs/DP0.2``. It's necessary to know about the input ``collection`` in order for ``pipetask`` and Butler to figure out how many (and which) quanta are expected.
+* The input data set ``collection`` within DP0.2 is specified via the argument ``-i 2.2i/runs/DP0.2``. It's necessary to know about the input ``collection`` in order for ``pipetask`` and Butler to figure out how many (and which) quanta are expected.
 
 * The same pipeline URI as always is specified, ``-p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#makeWarp,assembleCoadd \``.
 
@@ -308,7 +308,25 @@ To perform source detection, deblending, and measurement on your custom i-band c
     -p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#detection,mergeDetections,deblend,measure \
     -d "tract = 4431 AND patch = 17 AND band = 'i' AND skymap = 'DC2'"
 
-This command takes approximately 10-12 minutes to run. The URI specified here via the ``-p`` argument is the same as used when visualizing the corresponding ``QuantumGraph``. The same ``-b dp02`` Butler repository is specified as was used for custom coaddition. The ``-i`` input argument now points to what was previously the output ``-o`` argument for custom coaddition -- that is, the output of custom coaddition has now become the input for running source detection/measurement on the custom coadd. Note that the ``-o`` argument specifies a collection that's different from the input collection. This is a `recommended best practice <https://community.lsst.org/t/adding-new-data-to-a-butler-gen3-decam/7728/2>`_ for the sake of Butler's provenance tracking. Also, for the sake of provenance, make sure that the ``-o`` output collection is a new collection rather than an existing one. The first two ``-c`` configuration overrides are needed to parallel the configuration overrides used in notebook tutorial 9b, specifically setting the detection threshold to 10 sigma. The ``-c deblend:multibandDeblend.maxIter=20`` configuration override sets the maximum deblending iterations to a lower value than its default, which is a recommended mechanism for speeding up the processing. The ``-c measure:doPropagateFlags=False`` configuration override is set because this processing does not need to propagate flag information about which sources were used for PSF construction. The :doc:`full output </tutorials-examples/source-detection-printouts>` of this section's ``pipetask run`` command is shown on a separate page for brevity.
+This command takes approximately 10-12 minutes to run.
+
+Note a few things about this command:
+
+* The URI specified here via the ``-p`` argument is the same as used when visualizing the corresponding ``QuantumGraph``.
+
+* The same ``-b dp02`` Butler repository is specified as was used for custom coaddition. 
+
+* The ``-i`` input argument now points to what was previously the output ``-o`` argument for custom coaddition -- that is, the output of custom coaddition has now become the input for running source detection/measurement on the custom coadd. 
+
+* The ``-o`` argument specifies a collection that's different from the input collection. This is a `recommended best practice <https://community.lsst.org/t/adding-new-data-to-a-butler-gen3-decam/7728/2>`_ for the sake of Butler's provenance tracking. Also, for the sake of provenance, make sure that the ``-o`` output collection is a new collection rather than an existing one. 
+
+* The first two ``-c`` configuration overrides are needed to parallel the configuration overrides used in notebook tutorial 9b, specifically setting the detection threshold to 10 sigma. 
+
+* The ``-c deblend:multibandDeblend.maxIter=20`` configuration override sets the maximum deblending iterations to a lower value than its default, which is a recommended mechanism for speeding up the processing. 
+
+* The ``-c measure:doPropagateFlags=False`` configuration override is set because this processing does not need to propagate flag information about which sources were used for PSF construction.
+
+The :doc:`full output </tutorials-examples/source-detection-printouts>` of this section's ``pipetask run`` command is shown on a separate page for brevity.
 
 Optional exercises for the learner
 ==================================
