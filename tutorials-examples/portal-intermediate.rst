@@ -20,7 +20,7 @@
 
 .. This section should provide a brief, top-level description of the page.
 
-**RSP Portal Tutorial**
+**RSP Aspect:** Portal
 
 **Contact authors:** Melissa Graham and Greg Madejski
 
