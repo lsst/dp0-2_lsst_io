@@ -20,6 +20,8 @@
 
 .. This section should provide a brief, top-level description of the page.
 
+**RSP Aspect:** Notebook (terminal command-line)
+
 **Contact author:** Gloria Fonseca Alvarez
 
 **Last verified to run:** Sep 11 2023
