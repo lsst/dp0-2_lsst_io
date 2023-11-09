@@ -32,7 +32,7 @@ troubleshooting
 
 19:10 - 20:00
 Notebook 01: Introduction to DP0.2
-Notebook 06a: Interactive Image Visualizatio
+Notebook 06a: Interactive Image Visualization
 
 20:00 - 20:10	
 break
