@@ -4,7 +4,7 @@
 
 .. This section should provide a brief, top-level description of the page.
 
-**RSP Aspect:** Command-Line
+**RSP Aspect:** Notebook (terminal command-line)
 
 **Contact author:** Aaron Meisner
 
