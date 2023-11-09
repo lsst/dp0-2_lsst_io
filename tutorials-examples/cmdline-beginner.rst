@@ -20,7 +20,7 @@
 
 .. This section should provide a brief, top-level description of the page.
 
-**RSP Aspect:** Notebook (command-line)
+**RSP Aspect:** Notebook (terminal command-line)
 
 **Contact author:** Gloria Fonseca Alvarez
 
