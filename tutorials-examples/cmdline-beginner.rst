@@ -20,7 +20,7 @@
 
 .. This section should provide a brief, top-level description of the page.
 
-**RSP Command Line Tutorial**
+**RSP Aspect:** Command-Line
 
 **Contact author:** Gloria Fonseca Alvarez
 
