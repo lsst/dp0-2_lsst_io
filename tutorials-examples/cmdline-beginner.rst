@@ -20,6 +20,8 @@
 
 .. This section should provide a brief, top-level description of the page.
 
+**RSP Command Line Tutorial**
+
 **Contact author:** Gloria Fonseca Alvarez
 
 **Last verified to run:** Sep 11 2023
