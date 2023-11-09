@@ -1,24 +1,26 @@
+Agenda for Data Preview 0 Virtual Summer School 2023
 
-Mon, Jun 12, 2023
+Mon, Jun 12, 2023, Accessing Rubin Catalogs (TAP)
 
-Session A Catalogs (TAP)
+Session A
 08:00 - 08:10
 welcome	
 announcements
 troubleshooting
 
 08:10 - 09:00
-NB 01: Introduction to DP0.2
+Notebook 01: Introduction to DP0.2
 Portal 01: Bright Stars Color-Magnitude Diagram
 
 09:00 - 09:10
 break
 
 09:10 - 10:00	
-NB 02: Catalog Queries with TAP
+Notebook 02: Catalog Queries with TAP
 
 10:00 - 10:10
 break
+
 10:10 - 11:00
 collaborative session
 
@@ -29,23 +31,37 @@ announcements
 troubleshooting
 
 19:10 - 20:00
-NB 01: Introduction to DP0.2
-NB 06a: Interactive Image Visualizatio
+Notebook 01: Introduction to DP0.2
+Notebook 06a: Interactive Image Visualizatio
 
 20:00 - 20:10	
 break
+
 20:10 - 21:00	
 collaborative session
 
-"Tue, June 13"	Images
+Tue, June 13 -	Accessing Rubin Images
+
+Session A
+08:00 - 08:10
 welcome
 announcements
 troubleshooting
-NB 03a: Image Display and Manipulation
-NB 03b: Image Display with Firefly
+
+08:10 - 09:00
+Notebook  03a: Image Display and Manipulation
+Notebook  03b: Image Display with Firefly
+
+09:00 -09:10
 break
-NB 06b: Interactive Catalog Visualization
+
+9:10 - 10:00
+Notebook 06b: Interactive Catalog Visualization
+
+10:00 - 10:10
 break
+
+10:10 - 11:00
 collaborative session
 
 Session B 
@@ -53,24 +69,38 @@ Session B
 welcome
 announcements
 troubleshooting
+
 19:10 - 20:00
 Portal 02: Explore a SNIa Lightcurve
-NB 01: Introduction to DP0.2
 Portal 03: View a SNIa Host Galaxy
+
 20:00 - 20:10	
 break
+
 20:10 - 21:00	
 collaborative session
 
-"Wed, June 14"	Butler
+Wed, June 14 - Using the Butler
+Session A
+08:00 - 08:10
 welcome
 announcements
 troubleshooting
-NB 04a: Introduction to the Butler
-NB 04b: Intermediate Butler Queries
+
+08:10 - 09:00
+Notebook 04a: Introduction to the Butler
+Notebook 04b: Intermediate Butler Queries
+
+09:00 - 09:10
 break
-NB 05: Introduction to Source Detection	
+
+09:10 - 10:00
+Notebook 05: Introduction to Source Detection
+
+10:00 - 10:10
 break
+
+10:10 - 11:00
 collaborative session
 
 Session B 
@@ -78,23 +108,39 @@ Session B
 welcome
 announcements
 troubleshooting
+
 19:10 - 20:00
-NB 04a: Introduction to the Butler
-NB 04b: Intermediate Butler Queries
+Notebook 04a: Introduction to the Butler
+Notebook 04b: Intermediate Butler Queries
+
 20:00 - 20:10	
 break
+
 20:10 - 21:00	
 collaborative session
 
-"Thu, June 15"	Time-Domain
+Thu, June 15 - Explore Time-Domain with Rubin
+
+Session A
+08:00 -08:10
 welcome
 announcements
 troubleshooting
+
+08:10 - 09:00
 Portal 02: Explore a SNIa Lightcurve
 Portal 03: View a SNIa Host Galaxy
+
+09:00 - 09:10
 break
-NB 07a: DiaObject Samples
+
+09:10 - 10:00
+Notebook 07a: DiaObject Samples
+
+10:00 - 10:10
 break
+
+10:10 - 11:00
 collaborative session
 
 Session B 
@@ -102,30 +148,37 @@ Session B
 welcome
 announcements
 troubleshooting
-19:10 - 20:00
 
+19:10 - 20:00
+Notebook 07b: Variable Star Lightcurves
 
 20:00 - 20:10	
 break
+
 20:10 - 21:00	
 collaborative session
-Session B 
-19:00 - 19:10
-welcome
-announcements
-troubleshooting						
-19:10 - 20:00
-NB 07b: Variable Star Lightcurves
 
-"Fri, June 16"	Science Explorations
+Fri, June 16 - Science Explorations
+Session A
+08:00 - 08:10
 welcome
 announcements
 troubleshooting
-NB 07b: Variable Star Lightcurves
+
+08:10 - 09:00
+Notebook 07b: Variable Star Lightcurves
+
+09:00 - 09:10
 break	
-NB 08: Truth Tables
+
+09:10 - 10:00
+Notebook 08: Truth Tables
+
+10:00 - 10:10
 break
+
+10:10 - 11:00
 collaborative session	
 
-		
+There was no Session B on Friday.		
 	
