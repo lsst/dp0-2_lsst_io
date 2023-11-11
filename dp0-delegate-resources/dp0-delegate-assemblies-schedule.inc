@@ -55,7 +55,7 @@
      - `DP0.3 Notebook tutorial 04a/b: Introduction to phase curves and advanced phase curve modeling (Yumi Choi, Christina Williams) <https://community.lsst.org/t/summary-dp0-delegate-assembly-friday-oct-27-2023-two-notebook-tutorials-on-phase-curves-for-dp0-3-ssos/8033>`_
      - *general Q&A, breakouts*
    * - 2023-11-10
-     - Accessibility Hackathon for Notebooks (Jenn Kotler, Andrés A. Plazas Malagón)
+     - `Accessibility Hackathon for Notebooks <https://community.lsst.org/t/dp0-delegate-assembly-11-10-2023-notebook-accessibility-hackathon/8056>`_ (Jenn Kotler, Andrés A. Plazas Malagón)
      - *breakouts: bring your own notebook, add accessibility features!*
    * - 2023-12-08
      - *topic tbd*
