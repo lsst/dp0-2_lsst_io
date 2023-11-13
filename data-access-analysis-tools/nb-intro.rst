@@ -407,7 +407,7 @@ and to the terminal if the terminal theme is "inherit".
 Under "View", selecting "Presentation Mode" makes the fonts larger in a Jupyter Notebook open in the main work area; and
 selecting "Show Line Numbers" adds line numbers to the left side of every code cell or unexecuted markdown cell.
 Under "Settings - Theme", selecting "Theme Scrollbars" makes the right-hand notebook scrollbar permanent in Dark Mode.
-Under "Settings - Theme" it is possible to (for Jupyter Notebooks) increase and decrease code font size 
+Under "Settings - Theme" it is possible to increase and decrease code font size 
 (applies to code cells and unexecuted markdown cells) 
 and content font size (applies to executed markdown cells). 
 It is also possible to independently increase and decrease the user interface font size, 
@@ -433,9 +433,12 @@ options apply when using emacs in-terminal.
 At the bottom of the "Settings" drop-down menu is an advanced settings editor.
 Font families, cursor blink rates, and a wide variety of other customizable parameters
 are available.
+
+**Restore to Defaults:** 
+Changes to settings are saved between Notebook Aspect sessions.
 In the advanced settings editor, a list of the settings that have been modified floats to the top.
-Click on any modified setting and find, at right, the option to "Restore to Defaults" 
-for every change that has been made.
+Click on any modified setting and find, at right, the option to click "Restore to Defaults" 
+to undo every change that has been made.
 
 
 .. _NB-Intro-Use-A-NB-tips:
