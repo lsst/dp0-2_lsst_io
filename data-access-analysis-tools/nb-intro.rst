@@ -169,10 +169,20 @@ Notebooks can be edited and executed in this directory, but **changes cannot be 
 Users wishing to edit, execute, *and save* versions of these notebooks should copy them to a different path in their home directory.
 
 For example, to obtain a copy of the DP0.2 introductory notebook in the home directory which can be 
-opened, edited, and saved, execute the following commands in a terminal to copy the file and
+opened, edited, and saved, execute the commands below in a terminal to copy the file and
 change its permissions to allow user write access.
-The dollar signs indicate terminal command line executable statements.
-Lines without dollar signs indicate standard output.
+The dollar signs indicate terminal command line executable statements that should be copy-pasted into the 
+terminal (without the `$`).
+Lines without dollar signs indicate standard output to be compared with the results in the terminal.
+
+The following commands change directory (`cd`) into the home directory (`~`),
+copy the desired tutorial to the (`cp`) into the current directory (`.`),
+list (`ls`) the files starting with `DP02` that are in the current directory to confirm the copy worked,
+and list in long format all attributes in human-readable form (`-lah`) for the copied file.
+The standard output `-r--r--r--` indicates that the file is read-only (`r`) by the user, the group, and everyone
+with access to the file (the three `r`).
+Change the mode (`chmod`) of the file to add user write access (`u+w`), and repeate the
+list command (`ls -lah`) for the file to see that the user now has read and write access (`-rw-r--r--`).
 
 .. code-block:: bash
 
@@ -186,7 +196,7 @@ Lines without dollar signs indicate standard output.
       $ ls -lah DP02_01_Introduction_to_DP02.ipynb 
       -rw-r--r-- 1 melissagraham melissagraham 37K Nov 13 21:14 DP02_01_Introduction_to_DP02.ipynb
 
-Use the left menu bar to navigate to the home directory and open the newly altered
+After executing the above statements, use the left menu bar to navigate to the home directory and open the newly altered
 version of the introductory notebook, make a change, and notice that it can be saved.
 
 
