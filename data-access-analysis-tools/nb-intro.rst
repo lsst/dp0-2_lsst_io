@@ -168,21 +168,21 @@ The read-only "notebooks/tutorial-notebooks" directory will *always* contain the
 Notebooks can be edited and executed in this directory, but **changes cannot be saved to this directory**.
 Users wishing to edit, execute, *and save* versions of these notebooks should copy them to a different path in their home directory.
 
-For example, to obtain a copy of the DP0.2 introductory notebook in the home directory which can be 
-opened, edited, and saved, execute the commands below in a terminal to copy the file and
-change its permissions to allow user write access.
-The dollar signs indicate terminal command line executable statements that should be copy-pasted into the 
-terminal (without the `$`).
-Lines without dollar signs indicate standard output to be compared with the results in the terminal.
+**How to obtain an editable version of a tutorial notebook:**
+The commands below demonstrate how to create a copy of the DP0.2 introductory notebook in the home directory which can be 
+opened, edited, and saved.
+Step-by-step, the commands below change directory (``cd``) into the home directory (``~``),
+copy the desired tutorial to the (``cp``) into the current directory (``.``),
+list (``ls``) the files starting with "DP02" that are in the current directory to confirm the copy worked,
+and list in long format all attributes in human-readable form (``-lah``) for the copied file.
+The standard output ``-r--r--r--`` indicates that the file is read-only (``r``) by the user, the group, and everyone
+with access to the file (the three ``r``).
+Change the mode (``chmod``) of the file to add user write access (``u+w``), and repeate the
+list command (``ls -lah``) for the file to see that the user now has read and write access (``-rw-r--r--``).
 
-The following commands change directory (`cd`) into the home directory (`~`),
-copy the desired tutorial to the (`cp`) into the current directory (`.`),
-list (`ls`) the files starting with `DP02` that are in the current directory to confirm the copy worked,
-and list in long format all attributes in human-readable form (`-lah`) for the copied file.
-The standard output `-r--r--r--` indicates that the file is read-only (`r`) by the user, the group, and everyone
-with access to the file (the three `r`).
-Change the mode (`chmod`) of the file to add user write access (`u+w`), and repeate the
-list command (`ls -lah`) for the file to see that the user now has read and write access (`-rw-r--r--`).
+The dollar signs indicate terminal command line executable statements that should be copy-pasted into the 
+terminal (but do not copy-paste the ``$``).
+Lines without dollar signs indicate standard output to be compared with the results in the terminal.
 
 .. code-block:: bash
 
