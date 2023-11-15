@@ -22,7 +22,7 @@
 
 **Contact authors:** Douglas Tucker and Leanne Guy
 
-**Last verified to run:** 2023-11-07
+**Last verified to run:** 2023-11-13
 
 **Targeted learning level:** beginner
 
@@ -66,7 +66,7 @@ this window:
     :alt: TBD
 
 Note that this query grabs `coord_ra`, `coord_dec`, `detect_isPrimary`, 
-`r_calibFlux`, `r_cModelFlux`, and `r_extendedness` from the 
+`r_calibFlux`, `r_cModelFlux`, and `r_extendedness` columns from the 
 `dp02_dc2_catalogs.Object` table for the first 10 entries found
 by the query within a 0.1-degree radius circle centered at
 (RA,DEC)=(62,-37), which is near the center of the DP0.2 sky
@@ -97,7 +97,7 @@ Step 2. Run a More Detailed Query
 =================================
 
 **2.1.** Now let's run a more detailed query.  This query will grab the `coord_ra`, `coord_dec`, 
-and the `calibFlux` and `calibFluxErr` values for the top 10000 entried returned 
+and the `calibFlux` and `calibFluxErr` columns for the top 10000 entried returned 
 from the database for bright (>360 nJy), non-extended (star-like) primary objects
 within 1 degree of (RA,DEC)=(62,-37).  Fill the following query:
 
@@ -154,78 +154,131 @@ table in the "Table List" panel of the main TOPCAT window:
     :name: TOPCAT_CMD_tutorial_06.png
     :alt: TBD
 
-** Stopped with adding text here (2023-11-07).  Continue later.**
 
-**2.4.**  ...:
+**2.4.**  Like in Step 1.4 for the previous query above, 
+If you click on the “Display table cell data” icon – the 
+4th icon from the left in the row of icons at the top of 
+the main TOPCAT window (it looks like a table with the 
+first row and first column grayed out) – a TOPCAT Table 
+Browser window like this one will open up:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_07.png
     :name: TOPCAT_CMD_tutorial_07.png
     :alt: TBD
 
-**2.5.**  ...:
+**2.5.**  Next, click on the "Display column metadata" 
+icon -- the 6th icon from the left in the row of icons 
+at the top of the main TOPCAT window (it looks like a 
+table with the first row highlighted in blue).:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_08.png
     :name: TOPCAT_CMD_tutorial_08.png
     :alt: TBD
 
-**2.6.**  ...:
+Clicking on that icon will open up a Table Columns 
+window like this:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_09.png
     :name: TOPCAT_CMD_tutorial_09.png
     :alt: TBD
 
-**2.7.**  ...:
+Note that each column is listed, along with various
+information about that column -- e.g., its name, the   
+class and datatype of its contents, its units (if any), 
+and its description (if any).
+
+**2.6.**  Let's create some columns of our own.  
+Let's start by creating a column for the u-band
+AB magnitude of the objects in this table.  To 
+add a column, we click on the big green plus ("+")
+sign that is the left-most icon in the top row of
+the Table Columns window from the previous step.
+This will open a "Define Synthetic Column" window.
+
+We note that the fluxes returned by our ADQL query 
+are in nanojanskys; we can convert them to AB magnitudes 
+via the equation, "m(AB) = -2.5*log10(flux [nanojanskys]) + 31.4".
+Explicitly, for u-band, we can create a `u_calibMag`
+column by filling in the following in the "Define
+Synthetic Column" window like so:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_10.png
     :name: TOPCAT_CMD_tutorial_10.png
     :alt: TBD
 
-**2.8.**  ...:
+and clicking the "OK" button.
+
+(**Notice:** The `AB Magnitudes Wikipedia <https://en.wikipedia.org/wiki/AB_magnitude>`_ page 
+provides a concise resource for users who are unfamiliar with AB magnitudes and fluxes in 
+units of janskys.)
+
+**2.7.**  Let us also calculate the error in the u-band magnitude.
+Recall that magnitudes are are logarithmic quantities.  For relatively
+small errors (less than about 10%) one can perform the propagation-of-
+errors analysis to find sigma(mag) = (2.5/ln(10.)) * (sigma(flux)/flux), 
+or approximately igma(mag) = 1.086*(sigma(flux)/flux).  Let's use this
+equation to add a `u_calibMagErr` column by filling in the following
+in the "Define Synthetic Column" window like so:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_11.png
     :name: TOPCAT_CMD_tutorial_11.png
     :alt: TBD
 
-**2.9.**  ...:
+and clicking the "OK" button.
+
+**2.8.**  Repeat Steps 2.6 and 2.7 for the other filter bands 
+(g,r,i,z,y).  After doing so, you will see entries for all of these
+new columns in the Table Columns window, like this (where we have
+highlighted the new columns in blue):
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_12.png
     :name: TOPCAT_CMD_tutorial_12.png
     :alt: TBD
 
-**2.10.**  ...:
+**2.9.**  You will also see values for the new columns tabulated 
+within the Table Browser (click on the "Display table cell data" 
+icon in the main TOPCAT window as in Step 2.4 above):
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_13.png
     :name: TOPCAT_CMD_tutorial_13.png
     :alt: TBD
 
-**2.11.**  ...:
+** Stopped with adding text here (2023-11-14).  Continue later.**
+
+**2.10.**  ...:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_14.png
     :name: TOPCAT_CMD_tutorial_14.png
     :alt: TBD
 
-**2.12.**  ...:
+**2.11.**  ...:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_15.png
     :name: TOPCAT_CMD_tutorial_15.png
     :alt: TBD
 
-**2.13.**  ...:
+**2.12.**  ...:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_16.png
     :name: TOPCAT_CMD_tutorial_16.png
     :alt: TBD
 
-**2.14.**  ...:
+**2.13.**  ...:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_17.png
     :name: TOPCAT_CMD_tutorial_17.png
     :alt: TBD
 
-**2.15.**  ...:
+**2.14.**  ...:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_18.png
     :name: TOPCAT_CMD_tutorial_18.png
+    :alt: TBD
+
+**2.15.**  ...:
+
+.. figure:: /_static/TOPCAT_CMD_tutorial_19.png
+    :name: TOPCAT_CMD_tutorial_19.png
     :alt: TBD
 
 **2.16.**  ...:
@@ -236,21 +289,16 @@ table in the "Table List" panel of the main TOPCAT window:
 
 **2.17.**  ...:
 
-.. figure:: /_static/TOPCAT_CMD_tutorial_19.png
-    :name: TOPCAT_CMD_tutorial_19.png
-    :alt: TBD
-
-**2.18.**  ...:
-
 .. figure:: /_static/TOPCAT_CMD_tutorial_20.png
     :name: TOPCAT_CMD_tutorial_20.png
     :alt: TBD
 
-**2.19.**  ...:
+**2.18.**  ...:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_21.png
     :name: TOPCAT_CMD_tutorial_21.png
     :alt: TBD
+
 
 Step 3. Interact with Multiple Plots/Tables
 ===========================================
