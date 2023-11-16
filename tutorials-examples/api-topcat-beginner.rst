@@ -226,53 +226,63 @@ in the "Define Synthetic Column" window like so:
 
 and clicking the "OK" button.
 
-**2.8.**  Repeat Steps 2.6 and 2.7 for the other filter bands 
-(g,r,i,z,y).  After doing so, you will see entries for all of these
-new columns in the Table Columns window, like this (where we have
-highlighted the new columns in blue):
+Each time you add a column, the column will appear in the "Table Columns"
+window:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_12.png
     :name: TOPCAT_CMD_tutorial_12.png
     :alt: TBD
 
-**2.9.**  You will also see values for the new columns tabulated 
-within the Table Browser (click on the "Display table cell data" 
-icon in the main TOPCAT window as in Step 2.4 above):
+
+**2.8.**  Repeat Steps 2.6 and 2.7 for the other filter bands 
+(g,r,i,z,y).  After doing so, you will see entries for all of these
+new columns in the Table Columns window, like this (where we have
+highlighted the new columns in blue):
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_13.png
     :name: TOPCAT_CMD_tutorial_13.png
     :alt: TBD
 
-** Stopped with adding text here (2023-11-14).  Continue later.**
 
-**2.10.**  ...:
+**2.9.**  You will also see values for the new columns tabulated 
+within the Table Browser (click on the "Display table cell data" 
+icon in the main TOPCAT window as in Step 2.4 above):
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_14.png
     :name: TOPCAT_CMD_tutorial_14.png
     :alt: TBD
 
-**2.11.**  ...:
+
+** Stopped with adding text here (2023-11-14).  Continue later.**
+
+**2.10.**  ...:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_15.png
     :name: TOPCAT_CMD_tutorial_15.png
     :alt: TBD
 
-**2.12.**  ...:
+**2.11.**  ...:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_16.png
     :name: TOPCAT_CMD_tutorial_16.png
     :alt: TBD
 
-**2.13.**  ...:
+**2.12.**  ...:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_17.png
     :name: TOPCAT_CMD_tutorial_17.png
     :alt: TBD
 
-**2.14.**  ...:
+**2.13.**  ...:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_18.png
     :name: TOPCAT_CMD_tutorial_18.png
+    :alt: TBD
+
+**2.14.**  ...:
+
+.. figure:: /_static/TOPCAT_CMD_tutorial_19.png
+    :name: TOPCAT_CMD_tutorial_19.png
     :alt: TBD
 
 **2.15.**  ...:
@@ -283,17 +293,11 @@ icon in the main TOPCAT window as in Step 2.4 above):
 
 **2.16.**  ...:
 
-.. figure:: /_static/TOPCAT_CMD_tutorial_19.png
-    :name: TOPCAT_CMD_tutorial_19.png
-    :alt: TBD
-
-**2.17.**  ...:
-
 .. figure:: /_static/TOPCAT_CMD_tutorial_20.png
     :name: TOPCAT_CMD_tutorial_20.png
     :alt: TBD
 
-**2.18.**  ...:
+**2.17.**  ...:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_21.png
     :name: TOPCAT_CMD_tutorial_21.png
