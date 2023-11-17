@@ -178,7 +178,7 @@ A ``pyvo``-based Step-by-Step Guide
 -----------------------------------
 
 0. As with the TOPCAT example above, one needs an RSP access token.  
-Either generate one as described above in :ref:`Data-Access-Analysis-Tools-TAP-NB`, 
+Either generate one as described above in :ref:`Data-Access-Analysis-Tools-TAP-TOPCAT`, 
 or just use a previously generated (but unexpired) RSP access token.
 Ideally, copy the RSP access token in a file that is only read/write
 by the file owner and that is accessible to the python session that 
