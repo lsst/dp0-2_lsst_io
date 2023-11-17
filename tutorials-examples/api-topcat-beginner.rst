@@ -32,9 +32,9 @@ This is the same demonstration used to illustrate the Table Access Protocol (TAP
 illustrate the Portal service in the first of the :ref:`DP0-2-Tutorials-Portal`.
 Beginner-level TOPCAT users looking for a more general overview of TOPCAT should refer to the `TOPCAT homepage <https://www.star.bris.ac.uk/~mbt/topcat/>`_.
 
-.. _DP0-2-TOPCAT-Beginner-Step-1:
+.. _DP0-2-TOPCAT-Beginner-Example-1:
 
-Step 1. Run a Simple Query
+Example 1. Run a Simple Query
 ==========================
 
 **1.1.** Follow the steps in :ref:`Data-Access-Analysis-Tools-TAP-TOPCAT-Step-by-Step` for accessing DP0.2 from TOPCAT.
@@ -91,10 +91,10 @@ For this simple query, there are only 10 entries; so you can see the
 whole contents of this table.  For larger tables, vertical and horizontal 
 scrollbars appear for you to view other
 
-.. _DP0-2-TOPCAT-Beginner-Step-2:
+.. _DP0-2-TOPCAT-Beginner-Example-2:
 
-Step 2. Run a More Detailed Query
-=================================
+Example 2. Run a More Detailed Query
+====================================
 
 **2.1.** Now let's run a more detailed query.  This query will grab the `coord_ra`, `coord_dec`, 
 and the `calibFlux` and `calibFluxErr` columns for the top 10000 entries returned 
@@ -278,7 +278,7 @@ RA and the DEC, respectively:
 
 Note that TOPCAT automatically adjusts to an appropriate
 RA, DEC range, but you can zoom in and out interactively
-via your mouse or scrollbar.  Also note that TOPCAT plots
+via your mouse or scroll wheel.  Also note that TOPCAT plots
 the grid by default in sexagesimal units, but these (and
 other aspects of the plot) can be modified using the Axes
 button in the lower left panel of the Sky Plot window.
@@ -348,13 +348,13 @@ tutorial like this -- so we again recommend the interested
 user to consult the `TOPCAT documentation <http://www.star.bris.ac.uk/~mbt/topcat/>`_.
 
 
-Step 3. Interact with Multiple Plots/Tables
-===========================================
+Example 3. Interact with Multiple Plots/Tables
+==============================================
 
 Another strength of TOPCAT is that the data from a given 
 table are linked across the plots based on that table.
-As an example, let's look at plots from the table returned
-from our Step 2 ADQL query above.  We already have two 
+For instance, let's look at plots from the table returned
+from our Example 2 ADQL query above.  We already have two 
 plots from this table -- a Sky Plot showing the RA,DEC
 positions of the 10000 entries contained within that table, 
 and a Plane Plot showing the `g_calibMag` vs. 
@@ -401,44 +401,93 @@ subsets of points that one can define for the table via the
 TOPCAT interface.  The interested user is again directed to 
 the `TOPCAT documentation <http://www.star.bris.ac.uk/~mbt/topcat/>`_.
 
-**Stopped with adding text here (2023-11-16).  To be continued.**
 
+Example 4. Create Interactive 3D Plots
+======================================
 
-Step 4. Create Interactive 3D Plots
-===================================
+As our final example in this tutorial, let's look at the 
+TOPCAT's interactive 3D plot functionality.  For continuity,
+let us make use of the data set we've downloaded in Example 2
+and used in both Examples 2 and 3.
 
-**4.1.**  ...:
+**4.1.**  First, return to the main TOPCAT window and click 
+on the  "3D plotting window using Cartesian coordinates" icon --
+it is the 13th icon from the left in the top row of the 
+TOPCAT window, and it looks like a 2D rendering of a cube:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_25.png
     :name: TOPCAT_CMD_tutorial_25.png
     :alt: TBD
 
-**4.2.**  ...:
+Upon clicking that icon, TOPCAT will open a "Cube Plot" 
+windown, automatically using the first 3 numeric columns
+of the table -- in this case, `coord_ra`, `coord_dec`, and 
+`u_calibFlux` for the inputs to the `X`, 'Y`, and `Z` 
+coordinates, respectively:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_26.png
     :name: TOPCAT_CMD_tutorial_26.png
     :alt: TBD
 
-**4.3.**  ...:
+**4.2.**  Next, replace the contents of the `X`, 'Y', 
+and 'Z' windows in the lower-right panel of the "Cube
+Plot" window with `r_calibMag-i_calibMag`, 
+`g_calibMag-r_calibMag`, and `u_calibMag-g_calibMag`,
+respectively, as follows:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_27.png
     :name: TOPCAT_CMD_tutorial_27.png
     :alt: TBD
 
-**4.4.**  ...:
+Now you have a 3D color-color-color diagram for the
+10000 stars (and other point sources) that we 
+downloaded in Example 2.
+
+**4.3.**  We can add more information to this plot
+by color-coding the individual symbols.  To do this,
+click on the "Form" button in the lower-right panel
+of the "Cube Plot" window; then, in the "Shading" 
+subpanel that appears, choose "aux" in the "Mode"
+down-down menue and insert `i_calbMag` in the 
+"Aux" window, like so:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_28.png
     :name: TOPCAT_CMD_tutorial_28.png
     :alt: TBD
 
-**4.5.**  ...:
+As you see, the result is a 3D color-color-color
+plot with the value of `i_calibMag` encoded in 
+the color of each symbol.  A color bar also 
+appears; by default, it uses the "Inferno"
+color look-up table.
+
+**4.4.**  What if you wish to use a different
+color look-up table for your auxiliary axis?
+In that case, click on "Aux Axis" in the 
+left-lower panel of the Cube Plot window.  In 
+the new lower-right panel panel that appears, 
+choose a different color paletter from the
+"Aux Shader" drop-down menu.  In the following
+case, the "Rainbow" color palette was chosen:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_29.png
     :name: TOPCAT_CMD_tutorial_29.png
     :alt: TBD
 
-**4.6.**  ...:
+**4.5.**  Finally, TOPCAT *is* interactive.  If 
+you haven't done so already, use your mouse to 
+"click-and-drag" a point in the plot window to
+rotate the plot to a different configuration; e.g.:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_30.png
     :name: TOPCAT_CMD_tutorial_30.png
     :alt: TBD
+
+As with the 2D plots, you can also zoom in or
+out using the mouse or a scroll wheel.
+
+To conclude, TOPCAT is a very powerful interactive
+graphical tool with many useful features.  The 
+interested user is encouraged to explore more
+by consulting the 
+`TOPCAT documentation <http://www.star.bris.ac.uk/~mbt/topcat/>`_.
