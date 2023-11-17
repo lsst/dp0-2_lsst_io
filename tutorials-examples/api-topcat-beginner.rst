@@ -97,7 +97,7 @@ Step 2. Run a More Detailed Query
 =================================
 
 **2.1.** Now let's run a more detailed query.  This query will grab the `coord_ra`, `coord_dec`, 
-and the `calibFlux` and `calibFluxErr` columns for the top 10000 entried returned 
+and the `calibFlux` and `calibFluxErr` columns for the top 10000 entries returned 
 from the database for bright (>360 nJy), non-extended (star-like) primary objects
 within 1 degree of (RA,DEC)=(62,-37).  Fill the following query:
 
@@ -216,9 +216,9 @@ units of janskys.)
 Recall that magnitudes are are logarithmic quantities.  For relatively
 small errors (less than about 10%) one can perform the propagation-of-
 errors analysis to find sigma(mag) = (2.5/ln(10.)) * (sigma(flux)/flux), 
-or approximately igma(mag) = 1.086*(sigma(flux)/flux).  Let's use this
-equation to add a `u_calibMagErr` column by filling in the following
-in the "Define Synthetic Column" window like so:
+which can be approximated as sigma(mag) = 1.086*(sigma(flux)/flux).  
+Let's use this equation to add a `u_calibMagErr` column by filling in 
+the following in the "Define Synthetic Column" window like so:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_11.png
     :name: TOPCAT_CMD_tutorial_11.png
@@ -253,55 +253,99 @@ icon in the main TOPCAT window as in Step 2.4 above):
     :alt: TBD
 
 
-** Stopped with adding text here (2023-11-14).  Continue later.**
 
-**2.10.**  ...:
+**2.10.**  As a brief aside, let's create a skyplot of the 
+RA,DEC postions of the stars returned by the query.  To do
+so, go back to the main TOPCAT window and click on the "Sky
+plotting window" icon -- the 11th icon from the left in the
+row of icons at the top of the main TOPCAT window (it looks
+like a small, gridded Aitoff map projection): 
+:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_15.png
     :name: TOPCAT_CMD_tutorial_15.png
     :alt: TBD
 
-**2.11.**  ...:
+TOPCAT will return with a Sky Plot window.  TOPCAT is 
+generally pretty good at identifying which columns in 
+a table represent (RA, DEC) coordinates, and it succeeds
+in this case, plotting `coord_ra` and `coord_dec` as the 
+RA and the DEC, respectively:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_16.png
     :name: TOPCAT_CMD_tutorial_16.png
     :alt: TBD
 
-**2.12.**  ...:
+Note that TOPCAT automatically adjusts to an appropriate
+RA, DEC range, but you can zoom in and out interactively
+via your mouse or scrollbar.  Also note that TOPCAT plots
+the grid by default in sexagesimal units, but these (and
+other aspects of the plot) can be modified using the Axes
+button in the lower left panel of the Sky Plot window.
+For more information, please consult the 
+`TOPCAT documentation <http://www.star.bris.ac.uk/~mbt/topcat/>`_.
+
+**2.11.**  Now let us return to the main goal of this tutorial --
+creating a color-magnitude for the 10000 bright point sources
+(mostly stars) returned by our ADQL query.  To do
+so, go back to the main TOPCAT window and click on the "Plane 
+plotting window" icon -- the 19th icon from the left in the
+row of icons at the top of the main TOPCAT window (it looks
+like a blank X/Y plot, and it sits just leftward of the
+"Sky plotting window" icon):
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_17.png
     :name: TOPCAT_CMD_tutorial_17.png
     :alt: TBD
 
-**2.13.**  ...:
+TOPCAT will return with a Plane Plot window, initially
+plotting the first 2 numerical columns from the table.
+In this case, these two columns are `coord_ra` and `coord_dec`;
+so this plot looks very similar to the sky plot we just generated:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_18.png
     :name: TOPCAT_CMD_tutorial_18.png
     :alt: TBD
 
-**2.14.**  ...:
+**2.12.**  First, let's replace `coord_ra` and `coord_dec` 
+with `r_calibMag - i_calibMag` and `g_calibMag` in the 
+`X` and `Y` windows, respectively, as shown here:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_19.png
     :name: TOPCAT_CMD_tutorial_19.png
     :alt: TBD
 
-**2.15.**  ...:
+This is good!  We see the `g_calibMag` vs. 
+`r_calibMag - i_calibMag` color magnitude diagram
+for this set of stars (and star-like objects).  (The 
+"quantized" colors for objects with `r_calibMag - i_calibMag > 0.6`
+is an artifact of the simulation upon which DP0.2 is based.)
 
-.. figure:: /_static/TOPCAT_CMD_tutorial_19.png
-    :name: TOPCAT_CMD_tutorial_19.png
-    :alt: TBD
-
-**2.16.**  ...:
+**2.13.**  That said, astronomers usually prefer to plot
+their color-magnitude diagrams with brighter (lower magnitude) 
+objects at the top of the plot and fainter (higher magnitude) 
+objects at the bottom.  We can adjust our plot to follow 
+this convention by clicking on the `Axes` button in the lower-left
+panel of the "Plane Plot" window and flipping the `Y` axis as 
+follows:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_20.png
     :name: TOPCAT_CMD_tutorial_20.png
     :alt: TBD
 
-**2.17.**  ...:
+**2.14.**  Finally, to guide the eye, we might wish to add a 
+grid to the plot.  To do so, we click on the `Grid` button 
+at the top of the bottom-right panel of the "Plane Plot" 
+window and check the "Draw Grid" option like so:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_21.png
     :name: TOPCAT_CMD_tutorial_21.png
     :alt: TBD
+
+TOPCAT has many options for modifying your plots --
+substantially more than can be adequately described in a short
+tutorial like this -- so we again recommend the interested
+user to consult the `TOPCAT documentation <http://www.star.bris.ac.uk/~mbt/topcat/>`_.
 
 
 Step 3. Interact with Multiple Plots/Tables
@@ -324,6 +368,10 @@ Step 3. Interact with Multiple Plots/Tables
 .. figure:: /_static/TOPCAT_CMD_tutorial_24.png
     :name: TOPCAT_CMD_tutorial_24.png
     :alt: TBD
+
+
+** Stopped with adding text here (2023-11-14).  Continue later.**
+
 
 Step 4. Create Interactive 3D Plots
 ===================================
