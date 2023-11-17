@@ -128,7 +128,7 @@ The tutorials below are step-by-step demonstrations of how to use the API Aspect
     :titlesonly:
     :glob:
 
-    api-beginner
+    api-topcat-beginner
     
 
 
