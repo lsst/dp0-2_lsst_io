@@ -78,10 +78,12 @@ To access DP0.2 from a non-RSP TAP utility, one needs to generate an RSP access 
 How to generate and use an RSP access token is described by the 
 `Rubin Science Platform APIs <https://data.lsst.cloud/api-aspect>`_ webpage and
 by the `Science Platform Tokens <https://nb.lsst.io/environment/tokens.html>`_ webpage.
-**We note that tokens should be treated like passwords:  they should not be shared with 
-others, and -- outside the safety of the RSP environment -- the user should take special 
-steps to keep tokens secure.  This is a topic that is described further in the material 
-below.**
+
+.. Important::
+    **We note that tokens should be treated like passwords:  they should not be shared with 
+    others, and -- outside the safety of the RSP environment -- the user should take special 
+    steps to keep tokens secure.  This is a topic that is described further in the material 
+    below.**
 
 .. _Data-Access-Analysis-Tools-TAP-TOPCAT-Step-by-Step:
 
