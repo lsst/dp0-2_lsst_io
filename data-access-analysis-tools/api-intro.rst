@@ -139,8 +139,8 @@ database -- rather than the main DP0.2 database, use `https://data.lsst.cloud/ap
 6. Now you can explore the Rubin DP0.2 data set via TOPCAT.
 TOPCAT allows you to run ADQL queries, explore tables, and
 make a variety of 2D and 3D plots via an interactive graphical
-users interface (GUI).  For an example, see the the tutorial in the
-:doc:`/data-access-analysis-tools/api-intro`.
+users interface (GUI).  For an example, see the 
+:doc:`01. API TOPCAT Bright Stars Color-Magnitude Diagram Tutorial (beginner)`.
 For a broader view of TOPCAT capabilities, please see the 
 `TOPCAT webpage <http://www.star.bris.ac.uk/~mbt/topcat/>`_,
 which includes plentiful documentation, many examples, and
