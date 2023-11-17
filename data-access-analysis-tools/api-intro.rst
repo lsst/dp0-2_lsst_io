@@ -80,7 +80,7 @@ How to generate and use an RSP access token is described by the
 by the `Science Platform Tokens <https://nb.lsst.io/environment/tokens.html>`_ webpage.
 
 .. Important::
-    **We note that tokens should be treated like passwords:  they should not be shared with 
+    **Note that tokens should be treated like passwords:  they should not be shared with 
     others, and -- outside the safety of the RSP environment -- the user should take special 
     steps to keep tokens secure.  This is a topic that is described further in the material 
     below.**
@@ -99,11 +99,12 @@ A TOPCAT-based Step-by-Step Guide
   
 1. Start up TOPCAT (see `TOPCAT homepage <http://www.star.bris.ac.uk/~mbt/topcat/>`_).
 
-2. Click on "Table Access Protocal (TAP) Query" under the “VO” menu.
+2. Click on "Table Access Protocol (TAP) Query" under the “VO” menu.
 
 .. figure:: /_static/API_TOPCAT_DLT_1.png
     :name: API_TOPCAT_DLT_1
-    :alt: TBD
+    :alt: A screenshot of the main TOPCAT window with the Table Access Protocol item 
+	  highlighted by the cursor under the VO drop-down menu.
 
 3.  Fill in `https://data.lsst.cloud/api/tap` in the “TAP URL” window and click the “Use Service” button.
 (If you wish to access DP0.3 -- which is a database of solar system objects that supplements the main DP0.2
@@ -111,24 +112,35 @@ database -- rather than the main DP0.2 database, use `https://data.lsst.cloud/ap
 
 .. figure:: /_static/API_TOPCAT_DLT_2.png
     :name: API_TOPCAT_DLT_2
-    :alt: TBD
+    :alt: A screenshot of the the Table Access Protocol (TAP) Query window in front of the 
+	  the main TOPCAT window.  In the Table Access Protocol (TAP) Query window, the URL
+	  https://data.lsst.cloud/api/tap has been filled in for the TAP URL.
 
 4. In the Authentication window that pops up, fill in `x-oauth-basic` for the "User" and your security token forthe "Password".  Click "OK".
 
 .. figure:: /_static/API_TOPCAT_DLT_3.png
     :name: API_TOPCAT_DLT_3
-    :alt: TBD
+    :alt: A screenshot of the Authentication window in front of the Table Access Protocol (TAP) Query window,
+	  which itself is in front of the main TOPCAT window.  In the Authentication window, x-oauth-basic has
+	  been filled in for the User, and the password is shown (for security purposes) as a series of filled
+	  black circles.
 
 5. Now you have access to the RSP TAP service from TOPCAT.
 
 .. figure:: /_static/API_TOPCAT_DLT_4.png
     :name: API_TOPCAT_DLT_4
-    :alt: TBD
+    :alt: A screenshot of the Table Access Protocol (TAP) Query window in front of the main TOPCAT window.
+          The Table Access Protocol (TAP) Query window now shows three panels, stacked vertically.  The
+	  top panel is the Metadata panel, and it shows a list of DP0.1 and DP0.2 schemas and tables that
+	  are available to query.  The middle panel is the Service Capabilities panel, and it shows that
+	  the available Query Language is ADQL-2.0.  The bottom panel is the ADQL Text panel, and it 
+	  indicates the current Mode is Synchronous; the bottom panels text box is currently empty.
 
 6. Now you can explore the Rubin DP0.2 data set via TOPCAT.
 TOPCAT allows you to run ADQL queries, explore tables, and
 make a variety of 2D and 3D plots via an interactive graphical
-users interface (GUI).  For an example, see this tutorial **TBD**.
+users interface (GUI).  For an example, see the the tutorial in the
+:doc:`/data-access-analysis-tools/api-intro`.
 For a broader view of TOPCAT capabilities, please see the 
 `TOPCAT webpage <http://www.star.bris.ac.uk/~mbt/topcat/>`_,
 which includes plentiful documentation, many examples, and
@@ -136,7 +148,16 @@ various tutorials.
 
 .. figure:: /_static/API_TOPCAT_DLT_5.png
     :name: API_TOPCAT_DLT_5
-    :alt: TBD
+    :alt: A screenshot of the Table Access Protocol (TAP) Query window in front of the main TOPCAT window.
+          The Table Access Protocol (TAP) Query window shows three panels, stacked vertically.  The
+	  top panel is the Metadata panel, and it now shows the `dp02_dc2_catalogs.Object` table highlighted
+	  in blue within the list of DP0.1 and DP0.2 schemas and tables in the left sub-panel, and a list
+	  of names, types, units, index checkboxes, and descriptions for each column of the 
+	  `dp02_dc2_catalogs.Object` table in the right sub-panel.
+	  The middle panel is the Service Capabilities panel, and it shows that
+	  the available Query Language is ADQL-2.0.  The bottom panel is the ADQL Text panel, and it 
+	  indicates the current Mode is Synchronous; the bottom panels text box is currently empty.
+
 
 .. _Data-Access-Analysis-Tools-TAP-pyvo:
 
@@ -147,17 +168,9 @@ Another way to access the Rubin data from outside the RSP environment is via the
 `pyvo <https://pyvo.readthedocs.io/en/latest/>`_ python module, an affiliated
 package for `astropy <https://www.astropy.org/>`_.  By this method, if ``pyvo`` 
 is installed, one can access the RSP TAP service directly from one's own laptop.
-If not, one access the RSP TAP service from other freely accessible services 
+If not, one can access the RSP TAP service from other freely accessible services 
 that have ``pyvo`` pre-installed (like, e.g., NOIRLab's 
 `Astro Data Lab <https://datalab.noirlab.edu/>`_ Jupyter Notebook server).
-
-
-As with the TOPCAT example above, to do this one needs to generate an RSP access token.
-For simplicity, the token generated above for the TOPCAT example can be used here as well.
-Here, as an example, we make use of the NOIRlab Astro Data Lab.
-
-** See K.-T. Lim's reply and Michael Wood-Vasey's ``test_rsp_tap_service.py`` from 
-https://community.lsst.org/t/will-there-be-external-tap-access-to-rsp-dp0-2-tables/6660/7 **
 
 .. _Data-Access-Analysis-Tools-TAP-pyvo-Step-by-Step:
 
@@ -207,4 +220,3 @@ database -- rather than the main DP0.2 database itself, replace `https://data.ls
 	results = rsp_tap.run_sync(query)
 	results.to_table()
 
-**Add in summary or "where to go next"?.**
