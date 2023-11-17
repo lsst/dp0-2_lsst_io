@@ -289,7 +289,7 @@ For more information, please consult the
 creating a color-magnitude for the 10000 bright point sources
 (mostly stars) returned by our ADQL query.  To do
 so, go back to the main TOPCAT window and click on the "Plane 
-plotting window" icon -- the 19th icon from the left in the
+plotting window" icon -- the 11th icon from the left in the
 row of icons at the top of the main TOPCAT window (it looks
 like a blank X/Y plot, and it sits just leftward of the
 "Sky plotting window" icon):
@@ -351,26 +351,57 @@ user to consult the `TOPCAT documentation <http://www.star.bris.ac.uk/~mbt/topca
 Step 3. Interact with Multiple Plots/Tables
 ===========================================
 
-**3.1.**  ...:
+Another strength of TOPCAT is that the data from a given 
+table are linked across the plots based on that table.
+As an example, let's look at plots from the table returned
+from our Step 2 ADQL query above.  We already have two 
+plots from this table -- a Sky Plot showing the RA,DEC
+positions of the 10000 entries contained within that table, 
+and a Plane Plot showing the `g_calibMag` vs. 
+`r_calibMag - i_calibMag` color magnitude diagram for 
+these same 10000 entries.  Let's also add a third plot --
+a Plane Plot of `g_calibMagErr` vs `g_calibMag` for those
+10000 objects.   
+
+**3.1.**  As in Step 2.11 above, click on the "Plane 
+plotting window" icon in the main TOPCAT window.:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_22.png
     :name: TOPCAT_CMD_tutorial_22.png
     :alt: TBD
 
-**3.2.**  ...:
+Then replace the column names in the `X` and `Y` windows
+in the lower-right panel of the "Plane Plot" window with
+`g_calibMag` and `g_calibMagErr, respectively.  If you want,
+you can also also add a grid to the plot (as described in 
+Step 2.14 above):
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_23.png
     :name: TOPCAT_CMD_tutorial_23.png
     :alt: TBD
 
-**3.3.**  ...:
+**3.2.** Finally, let's look at all 3 plots together --
+the one "Sky Plot" and the 2 "Plane Plots" -- plus the "Table
+Browser" from Step 2.9.  Using the mouse, we can adjust the
+size of these windows so they all can be viewed simultaneously.
+Now either click on a symbol in one of the plots.  (In the following
+plot, we clicked on a point near `r_calibMag-i_calibMag=1.0`, `g_calibMag=24.2
+in the color-magnitude plot.)  A small black circle with cross-hairs will appear
+around that particular symbol in that particular plot.  **What's more, 
+a small black circle with cross-hairs will also appear around the symbol 
+for that particular object in the other plots.  Its row entry in the
+the "Table Browser" will also be highlighted.:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_24.png
     :name: TOPCAT_CMD_tutorial_24.png
     :alt: TBD
 
+This data linkage works not only for single objects but for
+subsets of points that one can define for the table via the
+TOPCAT interface.  The interested user is again directed to 
+the `TOPCAT documentation <http://www.star.bris.ac.uk/~mbt/topcat/>`_.
 
-** Stopped with adding text here (2023-11-14).  Continue later.**
+**Stopped with adding text here (2023-11-16).  To be continued.**
 
 
 Step 4. Create Interactive 3D Plots
