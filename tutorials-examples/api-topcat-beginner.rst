@@ -229,15 +229,15 @@ and its description (if any).
 **2.6.**  Let's create some columns of our own.  
 Let's start by creating a column for the u-band
 AB magnitude of the objects in this table.  To 
-add a column, we click on the big green plus ("+")
+add a column, click on the big green plus ("+")
 sign that is the left-most icon in the top row of
 the Table Columns window from the previous step.
 This will open a "Define Synthetic Column" window.
 
-We note that the fluxes returned by our ADQL query 
-are in nanojanskys; we can convert them to AB magnitudes 
+Note that the fluxes returned by our ADQL query 
+are in nanojanskys; they can be converted to AB magnitudes 
 via the equation, "m(AB) = -2.5*log10(flux [nanojanskys]) + 31.4".
-Explicitly, for u-band, we can create a `u_calibMag`
+Explicitly, for u-band, one can create a `u_calibMag`
 column by filling in the following in the "Define
 Synthetic Column" window like so:
 
@@ -292,8 +292,8 @@ window:
 
 **2.8.**  Repeat Steps 2.6 and 2.7 for the other filter bands 
 (g,r,i,z,y).  After doing so, you will see entries for all of these
-new columns in the Table Columns window, like this (where we have
-highlighted the new columns in blue):
+new columns in the Table Columns window, like this (where the new 
+columns have been highlighted in blue):
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_13.png
     :name: TOPCAT_CMD_tutorial_13.png
@@ -393,7 +393,7 @@ like a blank X/Y plot, and it sits just leftward of the
 TOPCAT will return with a Plane Plot window, initially
 plotting the first 2 numerical columns from the table.
 In this case, these two columns are `coord_ra` and `coord_dec`;
-so this plot looks very similar to the sky plot we just generated:
+so this plot looks very similar to the sky plot you just generated:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_18.png
     :name: TOPCAT_CMD_tutorial_18.png
@@ -424,7 +424,7 @@ with `r_calibMag - i_calibMag` and `g_calibMag` in the
 	  based on discrete red stellar models that were used as input into DP0.2. Real data are expected to instead show a smooth distribution of colors.
 
 
-This is good!  We see the `g_calibMag` vs. 
+This is good!  Plotted is the `g_calibMag` vs. 
 `r_calibMag - i_calibMag` color magnitude diagram
 for this set of stars (and star-like objects).  (The 
 "quantized" colors for objects with `r_calibMag - i_calibMag > 0.6`
@@ -433,7 +433,7 @@ is an artifact of the simulation upon which DP0.2 is based.)
 **2.13.**  That said, astronomers usually prefer to plot
 their color-magnitude diagrams with brighter (lower magnitude) 
 objects at the top of the plot and fainter (higher magnitude) 
-objects at the bottom.  We can adjust our plot to follow 
+objects at the bottom.  You can adjust your plot to follow 
 this convention by clicking on the `Axes` button in the lower-left
 panel of the "Plane Plot" window and flipping the `Y` axis as 
 follows:
@@ -449,8 +449,8 @@ follows:
 	  based on discrete red stellar models that were used as input into DP0.2. Real data are expected to instead show a smooth distribution of colors.
 
 
-**2.14.**  Finally, to guide the eye, we might wish to add a 
-grid to the plot.  To do so, we click on the `Grid` button 
+**2.14.**  Finally, to guide the eye, you might wish to add a 
+grid to the plot.  To do so, click on the `Grid` button 
 at the top of the bottom-right panel of the "Plane Plot" 
 window and check the "Draw Grid" option like so:
 
@@ -468,8 +468,8 @@ window and check the "Draw Grid" option like so:
 
 TOPCAT has many options for modifying your plots --
 substantially more than can be adequately described in a short
-tutorial like this -- so we again recommend the interested
-user to consult the `TOPCAT documentation <http://www.star.bris.ac.uk/~mbt/topcat/>`_.
+tutorial like this -- so it is again recommended that the interested
+user consult the `TOPCAT documentation <http://www.star.bris.ac.uk/~mbt/topcat/>`_.
 
 
 Example 3. Interact with Multiple Plots/Tables
@@ -478,7 +478,7 @@ Example 3. Interact with Multiple Plots/Tables
 Another strength of TOPCAT is that the data from a given 
 table are linked across the plots based on that table.
 For instance, let's look at plots from the table returned
-from our Example 2 ADQL query above.  We already have two 
+from the Example 2 ADQL query above.  You already have two 
 plots from this table -- a Sky Plot showing the RA,DEC
 positions of the 10000 entries contained within that table, 
 and a Plane Plot showing the `g_calibMag` vs. 
@@ -518,15 +518,15 @@ Step 2.14 above):
 
 **3.2.** Finally, let's look at all 3 plots together --
 the one "Sky Plot" and the 2 "Plane Plots" -- plus the "Table
-Browser" from Step 2.9.  Using the mouse, we can adjust the
+Browser" from Step 2.9.  Using the mouse, you can adjust the
 size of these windows so they all can be viewed simultaneously.
 Now either click on a symbol in one of the plots.  (In the following
-plot, we clicked on a point near `r_calibMag-i_calibMag=1.0`, `g_calibMag=24.2
+plot, a point near `r_calibMag-i_calibMag=1.0`, `g_calibMag=24.2` was clicked 
 in the color-magnitude plot.)  A small black circle with cross-hairs will appear
 around that particular symbol in that particular plot.  **What's more, 
 a small black circle with cross-hairs will also appear around the symbol 
 for that particular object in the other plots.  Its row entry in the
-the "Table Browser" will also be highlighted.:
+the "Table Browser" will also be highlighted.**:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_24.png
     :name: TOPCAT_CMD_tutorial_24.png
@@ -554,9 +554,9 @@ the `TOPCAT documentation <http://www.star.bris.ac.uk/~mbt/topcat/>`_.
 Example 4. Create Interactive 3D Plots
 ======================================
 
-As our final example in this tutorial, let's look at the 
+As the final example in this tutorial, let's look at the 
 TOPCAT's interactive 3D plot functionality.  For continuity,
-let us make use of the data set we've downloaded in Example 2
+let us make use of the data set already downloaded in Example 2
 and used in both Examples 2 and 3.
 
 **4.1.**  First, return to the main TOPCAT window and click 
@@ -604,10 +604,10 @@ respectively, as follows:
 	  for the red stars is also noticeable here.
 
 Now you have a 3D color-color-color diagram for the
-10000 stars (and other point sources) that we 
+10000 stars (and other point sources) 
 downloaded in Example 2.
 
-**4.3.**  We can add more information to this plot
+**4.3.**  You can add more information to this plot
 by color-coding the individual symbols.  To do this,
 click on the "Form" button in the lower-right panel
 of the "Cube Plot" window; then, in the "Shading" 
