@@ -226,7 +226,7 @@ then you can use ``WHERE objectId IN (1487, 1488, 1489)``, for example, to retur
 Below, a list of 12 ``objectId`` values is put in a string called ``my_list``. 
 This list could contain many more objects and be generated programmatically (e.g., from a different query, or by user analysis),
 and then be included in the ADQL query statement and the TAP service would treat it the same way.
-The number of results returned will equal the number of matched ``objectId``s. 
+The number of results returned will equal the number of matched ``objectIds``. 
 
 For this example, the 12 were selected to be bright stars with similar *g-r* and *i-z* colors,
 so the query retrieves the *g*, *r*, *i*, and *z* band fluxes, but users should modify this to their own needs.
