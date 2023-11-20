@@ -221,7 +221,7 @@ Individual objects
 
 In the above example, a single object was desired, and a statement like ``WHERE objectId=1486`` was used.
 However, if more than a few single objects are desired and their ``objectId`` are known, 
-then you can use ``WHERE objectId IN ()`` to return results for all objects in a single query.
+then you can use ``WHERE objectId IN (1487, 1488, 1489)``, for example, to return results for all of the objects in a single query.
 
 Below, a list of just 12 ``objectId`` is put in a string called ``my_list``, formatted as a python tuple (with round brackets). 
 This list could contain many more objects and be generated programmatically (e.g., from a different query, or by user analysis),
