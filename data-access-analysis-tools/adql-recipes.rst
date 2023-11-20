@@ -226,7 +226,7 @@ then you can use ``WHERE objectId IN ()`` to return results for all objects in a
 Below, a list of just 12 ``objectId`` is put in a string called ``my_list``, formatted as a python tuple (with round brackets). 
 This list could contain many more objects and be generated programmatically (e.g., from a different query, or by user analysis),
 and then be included in the ADQL query statement and the TAP service would treat it the same way.
-The number of results returned will equal the length of the list of ``objectId`` passed.
+The number of results returned will equal the number of matched ``objectId``s. 
 
 For this example, the 12 were selected to be bright stars with similar *g-r* and *i-z* colors,
 so the query retrieves the *g*, *r*, *i*, and *z* band fluxes, but users should modify this to their own needs.
