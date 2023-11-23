@@ -83,5 +83,57 @@ Beginner Task 2
 
 2.1 Click on the Active Chart settings icon (two gears, upper right) and click on “Trace Options”. Click on search next to color, and select purple.
 
+Intermediate Task 1
+===================
+
+1.1. Log into the Portal Aspect and check the “Use Image Search (ObsTAP)” box below “LSST DP0.2 DC2 Tables”.
+
+1.2. Under “Observation Type and Source”, choose “Calibration Level” 2
+
+1.3. Under “Location”, choose “Observation boundary contains point” from the drop-down menu and enter the coordinates “55.75, -32.27”.
+
+1.4. Under timing constraints, choose “Overlapping specified range” and use “MJD values”. Enter the end time “59840”
+
+1.5. Under spectral coverage choose “by filter bands” and select “i”. 
+
+1.6  Click on “Bi-view Tables” in the upper right corner to show just one image and the table side-by-side. To display the six filters’ deepCoadds, select “Data Product” tab.
+
+1.7. Above the image, click on the grid icon (hover-over text “Tile all images in the search result table”) to simultaneously view all 4 i band PVIs.
+
+1.8 Click on the first image and choose the “center” icon (hover-over text “Image center drop down”), and in the box next to “Center On” enter coordinates, “55.75, -32.27”, and then click “Go”.
+
+1.9 Click on the “align” icon above the image (hover-over text “Image alignment drop down…”) and under “Align and Lock Options” select “by WCS”.
+
+2.0 . Click the magnifying glass with the “+” 3 times.
+
+Intermediate Task 2
+===================
+
+1.1. On the upper right of the portal aspect, click on “Edit ADQL.”
+
+1.2. Enter the following ADQL code into the “ADQL Query” box:
+
+.. code-block:: SQL
+
+	SELECT diasrc.diaObjectId, diasrc.diaSourceId,
+	diasrc.filterName, diasrc.midPointTai, diasrc.psFlux, diasrc.psFluxErr
+	FROM dp02_dc2_catalogs.DiaSource AS diasrc
+	WHERE diasrc.diaObjectId = 1250953961339360185
+	AND diasrc.filterName = 'r'
+
+1.3 Click on the Active Chart settings icon and set “X” to be “midPointTai”, and “Y” to be “psFlux”. Under “Y”, select “Error” and enter “psFluxErr”. 
+
+1.4 Under “Trace style” select “Connected points” and under “Trace options” enter “red” for color. 
+
+1.5 Click on “Chart Options” and set “X Label” to “MJD of the Exposure Midpoint” and “Y Label” to “PSF Difference-Image Flux”. 
+
+1.6 To sort the results, click on the table column “midPointTai”.  
+
+
+Advanced Task 1
+===============
+
+Advanced Task 2
+===============
 
 
