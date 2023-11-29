@@ -25,12 +25,6 @@ On the the main landing page at `data.lsst.cloud <https://data.lsst.cloud>`_ the
 An API is an `Application Programming Interface <https://medium.com/@data.science.enthusiast/what-exactly-is-an-api-explained-in-simple-terms-2a9015c1a1a1>`_. 
 It is a piece of code that permits two other programs to communicate with each other.  
 
-
-.. Important::
-    The API Aspect has a lot of new features for DP0.2, which will eventually be added to this page.
-    Check back soon for new information!
-
-
 The API's services for DP0.2 include `TAP <https://www.ivoa.net/documents/TAP/20190927/index.html>`_, 
 `ObsTAP <https://www.ivoa.net/documents/ObsCore/>`_, `SODA <https://www.ivoa.net/documents/SODA/20170517/index.html>`_ 
 (image cutouts and mosaics), and `HiPS <https://aladin.u-strasbg.fr/hips/>`_.  
@@ -40,6 +34,10 @@ For the time being, this page will focus on the API's TAP services.
 Longer term, Rubin Observatory will support `SCS <https://www.ivoa.net/documents/latest/ConeSearch.html>`_ for simple catalog searches, 
 `SIAv2 <https://www.ivoa.net/documents/SIA/20150730/index.html>`_ for image searches, and `VOSpace <https://www.ivoa.net/documents/VOSpace/>`_ 
 (in addition to `WebDAV <https://en.wikipedia.org/wiki/WebDAV>`_) for access to user files.
+
+.. Important::
+    The API Aspect has a lot of new features for DP0.2, which will eventually be added to this page.
+    Check back soon for new information!
 
 
 .. _Data-Access-Analysis-Tools-TAP-NB:
