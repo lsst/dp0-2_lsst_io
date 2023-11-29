@@ -218,7 +218,7 @@ in a UNIX/MacOS/Linux environment, the following commands can be performed.
 
    chmod 600 .rsp-tap.token
 
-**2. Start up a python session.**  This could be a standalone python session running on (say) a laptop, or a Jupyter notebook running elsewhere but displayed on a one's own browser.
+**2. Start up a python session.**  This could be a standalone python session running on (say) a laptop, or a Jupyter notebook running elsewhere but displayed on one's own browser.
 
 **3. Import relevant python modules.**  At the minimum, import the ``pyvo`` and ``os`` python modules. 
 
