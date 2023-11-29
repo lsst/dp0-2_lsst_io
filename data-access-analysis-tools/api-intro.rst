@@ -237,7 +237,7 @@ in a UNIX/MacOS/Linux environment, the following commands can be performed.
    with open(token_file, 'r') as f:
        token_str = f.readline()
 
-**5. Set up appropriate authorization to access the RSP TAP server.** 
+**5. Set up appropriate authorization to access the RSP TAP server.** In the following code block, a `CredentialStore <https://pyvo.readthedocs.io/en/latest/api/pyvo.auth.CredentialStore.html>`_ is instantiated to take the user credentials and to use them to create an appropriate request session with the RSP TAP server.  The RSP TAP service follows the `interface requirements of the International Virtual Observatory (IVOA) for HTTP basic authentication <https://www.ivoa.net/documents/SSO/20170411/PR-SSOAuthMech-2.0-20170411.html#tth_sEc4>`_; hence the designation of the ``ivo://ivoa.net/sso#BasicAA`` security method in the third line in the code block below.  
 
 .. code-block:: python
 
