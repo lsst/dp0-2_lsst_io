@@ -86,7 +86,7 @@ How to generate and use an RSP access token is described by the
 `Rubin Science Platform APIs <https://data.lsst.cloud/api-aspect>`_ webpage and
 by the `Science Platform Tokens <https://nb.lsst.io/environment/tokens.html>`_ webpage.
 
-.. Important:
+.. Important::
     **Note that tokens should be treated like passwords:  they should not be shared with others.  
     Take precautions to keep tokens secure.  Never store tokens in git-tracked files.**
 
