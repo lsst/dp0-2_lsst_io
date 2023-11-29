@@ -26,7 +26,7 @@ An API is an `Application Programming Interface <https://medium.com/@data.scienc
 It is a piece of code that permits two other programs to communicate with each other.  
 
 
-.. Important:
+.. Important::
     The API Aspect has a lot of new features for DP0.2, which will eventually be added to this page.
     Check back soon for new information!
 
@@ -174,69 +174,84 @@ If not, one can access the RSP TAP service from other freely accessible services
 that have ``pyvo`` pre-installed (like, e.g., NOIRLab's 
 `Astro Data Lab <https://datalab.noirlab.edu/>`_ Jupyter Notebook server).
 
-.. _Data-Access-Analysis-Tools-TAP-pyvo-Step-by-Step:
 
-A ``pyvo``-based step-by-step guide
------------------------------------
+.. Important::
+    **Recall that tokens should be treated like passwords:  they should not be shared with others.  
+    Take precautions to keep tokens secure.  Never store tokens in git-tracked files.**
 
-1. As with the TOPCAT example above, one needs an RSP access token.  
+
+.. _Data-Access-Analysis-Tools-TAP-pyvo-step-by-step:
+
+A pyvo-based step-by-step guide
+-------------------------------
+
+This section provides a basic step-by-step guide to provide access to the DP0.2
+TAP service via python code on your own computer or on an online service like NOIRLab's 
+`Astro Data Lab <https://datalab.noirlab.edu/>`_ Jupyter Notebook server.  
+
+**1. Copy an RSP access token into a file in your home directory.**
+As with the TOPCAT example above, one needs an RSP access token.  
 Either generate one as described above in :ref:`Data-Access-Analysis-Tools-TAP-TOPCAT`, 
 or just use a previously generated (but unexpired) RSP access token.
 Ideally, copy the RSP access token into a file in your home directory
 that is only read/write by the file owner and that is accessible to 
-the python session that will be accessed in the Step 1 below.  
-**(Recall:  never store tokens in git-tracked files.)**
-Specifically, in a UNIX/MacOS/Linux environment, the following commands 
-can be performed. 
+the python session that will be accessed in the steps below.  Specifically, 
+in a UNIX/MacOS/Linux environment, the following commands can be performed. 
 
-	a. Open a terminal window (**not** a Jupyter notebook) on your computer or in your non-RSP user environoment.
+* Open a terminal window (**not** a Jupyter notebook) on your computer or in your non-RSP user environoment.
 
-	b. Change directory to the home directory. ::
+* Change directory to the home directory.
 
-		cd ~
+.. code-block:: python
 
-	c. Create a file in the home directory containing the RSP token.  One can do this via the ``echo`` command. (In the following, ``<token>`` is to be replaced by the the actual RSP token string).  Note that using a 'hidden' file -- one with a name that starts with a ``.`` -- aids security. ::
+   cd ~
 
-		echo '<token>' > .rsp-tap.token
+* Create a file in the home directory containing the RSP token.  One can do this via the ``echo`` command.  In the following, ``<token>`` is to be replaced by the the actual RSP token string).  Note that using a 'hidden' file -- one with a name that starts with a ``.`` -- aids security.
 
-	d. Use the ``chmod 600`` command to make the file containing the RSP token readable/writeable only by the file owner.  It removes group read/write access.  ::
+.. code-block:: python
 
-		chmod 600 .rsp-tap.token
+   echo '<token>' > .rsp-tap.token
 
-2. Start up a python session.  This could be a standalone python session
-running on (say) a laptop, or a Jupyter notebook running elsewhere but
-displayed on a one's own browser.
+* Change the permissions on the file containing the RSP token to remove world and group read/write access.  The ``chmod 600`` command will do this while maintaining read/write access for the file owner.
+
+.. code-block:: python
+
+   chmod 600 .rsp-tap.token
+
+**2. Start up a python session.**  This could be a standalone python session running on (say) a laptop, or a Jupyter notebook running elsewhere but displayed on a one's own browser.
+
+**3. Import relevant python modules.**  At the minimum, import the ``pyvo`` and ``os`` python modules. 
+
+.. code-block:: python
+
+   import pyvo
+   import os
+
+**4. Define the relevant TAP server URL and read in your security token.** For DP0.2, the proper TAP server URL is ``https://data.lsst.cloud/api/tap``, as is shown below.  (For DP0.3, use ``https://data.lsst.cloud/api/ssotap`` instead.)  The ``os.path.expanduser('~')`` command is a cross-platform method for identifying the home directory without hardwiring its path into the code.  (As a side benefit, it works in both the UNIX/MacOS/Linux and Windows environments.)
+
+.. code-block:: python
+
+   RSP_TAP_SERVICE = 'https://data.lsst.cloud/api/tap'
+   homedir = os.path.expanduser('~')
+   token_file = os.path.join(homedir,'.rsp-tap.token')
+   with open(token_file, 'r') as f:
+       token_str = f.readline()
+
+**5. Set up appropriate authorization to access the RSP TAP server.** 
+
+.. code-block:: python
+
+   cred = pyvo.auth.CredentialStore()
+   cred.set_password("x-oauth-basic", token_str)
+   credential = cred.get("ivo://ivoa.net/sso#BasicAA")
+   rsp_tap = pyvo.dal.TAPService(RSP_TAP_SERVICE, credential)
 
 
-3. At the minimum, import the ``pyvo`` and ``os`` python modules. ::
+**6. Run a query.**
 
-	import pyvo
-	import os
+.. code-block:: python
 
-4. Define the ``data.lsst.cloud`` TAP server URL and read in your security token.
-For DP0.2, the proper TAP server URL is ``https://data.lsst.cloud/api/tap``, as 
-is shown below.  (For DP0.3, use ``https://data.lsst.cloud/api/ssotap`` instead.)
-The ``os.path.expanduser(~)`` command is a cross-platform method for identifying 
-the home directory without hardwiring its path into the code.  It works in both
-UNIX/MacOS/Linux and Windows environments. ::
-
-	RSP_TAP_SERVICE = 'https://data.lsst.cloud/api/tap'
-	homedir = os.path.expanduser('~')
-	token_file = os.path.join(homedir,'.rsp-tap.token')
-	with open(token_file, 'r') as f:
-    	   token_str = f.readline()
-
-5. Set up appropriate authorization to access the RSP TAP server.  ::
-
-	cred = pyvo.auth.CredentialStore()
-	cred.set_password("x-oauth-basic", token_str)
-	credential = cred.get("ivo://ivoa.net/sso#BasicAA")
-	rsp_tap = pyvo.dal.TAPService(RSP_TAP_SERVICE, credential)
-
-
-6. Run a query.  ::
-
-	query = "SELECT * FROM tap_schema.schemas"
-	results = rsp_tap.run_sync(query)
-	results.to_table()
+   query = "SELECT * FROM tap_schema.schemas"
+   results = rsp_tap.run_sync(query)
+   results.to_table()
 
