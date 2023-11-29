@@ -95,17 +95,19 @@ by the `Science Platform Tokens <https://nb.lsst.io/environment/tokens.html>`_ w
 Get started with TOPCAT
 -----------------------
 
-0. Create an RSP access token as described above.  (See the `Creating user tokens webpage 
-   <https://rsp.lsst.io/guides/auth/creating-user-tokens.html>`_ for a step-by-step guide 
-   for creating an RSP access token.  It is recommended that the token you create has the
-   following propoerties:  a name that includes "TOPCAT" as a substring, a scope of ``read:tap``, 
-   and no expiration date.)  *It is highly recommended to cut-and-paste the token somewhere
-   secure for future reference.*
-  
-1. Start up TOPCAT on your own computer (see `TOPCAT homepage <http://www.star.bris.ac.uk/~mbt/topcat/>`_
-   for download and install instructions).
+This section provides a basic step-by-step guide to get TOPCAT set up to explore the DP0.2 tables.
 
-2. Click on "Table Access Protocol (TAP) Query" under the “VO” menu.
+**1. Create an RSP access token.**  
+See the `Creating user tokens webpage <https://rsp.lsst.io/guides/auth/creating-user-tokens.html>`_ 
+for a step-by-step guide for creating an RSP access token.  It is recommended that the token you create has the
+following propoerties:  a name that includes "TOPCAT" as a substring, a scope of ``read:tap``, 
+and no expiration date.)  *It is highly recommended to cut-and-paste the token somewhere
+secure for future reference.*
+  
+**2. Start up TOPCAT on your own computer.**
+See `TOPCAT homepage <http://www.star.bris.ac.uk/~mbt/topcat/>`_ for download and install instructions.
+
+**3. Click on "Table Access Protocol (TAP) Query" under the “VO” menu.**
 
 .. figure:: /_static/API_TOPCAT_DLT_1.png
     :name: API_TOPCAT_DLT_1
@@ -114,9 +116,10 @@ Get started with TOPCAT
 
     The main TOPCAT window.
 
-3.  Fill in ``https://data.lsst.cloud/api/tap`` in the “TAP URL” window and click the “Use Service” button.
-(If you wish to access DP0.3 -- which is a database of solar system objects that supplements the main DP0.2
-database -- rather than the main DP0.2 database, use ``https://data.lsst.cloud/api/ssotap`` instead.)
+**4. Fill in the relevant in the “TAP URL” window and click the “Use Service” button.**
+For DP0.2, use ``https://data.lsst.cloud/api/tap``.  If you wish to access DP0.3 -- which 
+is a database of solar system objects that supplements the main DP0.2 database -- use 
+``https://data.lsst.cloud/api/ssotap`` instead.
 
 .. figure:: /_static/API_TOPCAT_DLT_2.png
     :name: API_TOPCAT_DLT_2
@@ -126,7 +129,8 @@ database -- rather than the main DP0.2 database, use ``https://data.lsst.cloud/a
 
     The Table Access Protocol (TAP) Query window (with the main TOPCAT window in the background).
 
-4. In the Authentication window that pops up, fill in ``x-oauth-basic`` for the "User" and your security token forthe "Password".  Click "OK".
+**5. Populate the Authentication window that pops up.**  
+Fill in ``x-oauth-basic`` for the "User" and your security token forthe "Password" and click "OK".
 
 .. figure:: /_static/API_TOPCAT_DLT_3.png
     :name: API_TOPCAT_DLT_3
@@ -137,8 +141,8 @@ database -- rather than the main DP0.2 database, use ``https://data.lsst.cloud/a
 
     The Authentication window (with the TAP Query window and the main TOPCAT window in the background).
 
-5. Now the RSP TAP service is accessible from TOPCAT.  Note that a list of DP0.1 and DP0.2 tables 
-   available for query has appeared in the Metadata panel of the TAP Query window.
+**6. Note that the RSP TAP service is now accessible from your instance of TOPCAT.**  
+Note that a list of DP0.1 and DP0.2 tables available for query has appeared in the Metadata panel of the TAP Query window.
 
 .. figure:: /_static/API_TOPCAT_DLT_4.png
     :name: API_TOPCAT_DLT_4
@@ -152,8 +156,8 @@ database -- rather than the main DP0.2 database, use ``https://data.lsst.cloud/a
     The TAP Query window (with the main TOPCAT window in the background); a list of DP0.1 and DP0.2 tables 
     available for query can be be seen in the Metadata panel of the TAP Query window.
 
-6. At this stage, the Rubin DP0.2 data set can be explored via TOPCAT.
-For an example, see the 
+**7. Explore.**
+At this stage, the Rubin DP0.2 data set can be explored via TOPCAT.  For an example, see the 
 :doc:`01. API TOPCAT Bright Stars Color-Magnitude Diagram Tutorial (beginner)`.
 
 
