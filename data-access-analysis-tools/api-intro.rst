@@ -102,8 +102,8 @@ Get started with TOPCAT
    and no expiration date.)  *It is highly recommended to cut-and-paste the token somewhere
    secure for future reference.*
   
-1. Start up TOPCAT on your own computer (see `TOPCAT homepage <http://www.star.bris.ac.uk/~mbt/topcat/>`
-   for download and install instructions_).
+1. Start up TOPCAT on your own computer (see `TOPCAT homepage <http://www.star.bris.ac.uk/~mbt/topcat/>`_
+   for download and install instructions).
 
 2. Click on "Table Access Protocol (TAP) Query" under the “VO” menu.
 
