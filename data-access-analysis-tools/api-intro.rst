@@ -206,7 +206,7 @@ in a UNIX/MacOS/Linux environment, the following commands can be performed.
 
    cd ~
 
-* Create a file in the home directory containing the RSP token.  One can do this via the ``echo`` command.  In the following, ``<token>`` is to be replaced by the the actual RSP token string).  Note that using a 'hidden' file -- one with a name that starts with a ``.`` -- aids security.
+* Create a file in the home directory containing the RSP token.  One can do this via the ``echo`` command.  In the following, ``<token>`` is to be replaced by the the actual RSP token string.  Note that using a 'hidden' file -- one with a name that starts with a ``.`` -- aids security.
 
 .. code-block:: python
 
