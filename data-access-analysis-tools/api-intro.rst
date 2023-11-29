@@ -235,7 +235,7 @@ in a UNIX/MacOS/Linux environment, the following commands can be performed.
    with open(token_file, 'r') as f:
        token_str = f.readline()
 
-**5. Set up appropriate authorization to access the RSP TAP server.** In the following code block, a `CredentialStore <https://pyvo.readthedocs.io/en/latest/api/pyvo.auth.CredentialStore.html>`_ is instantiated to take the user credentials and to use them to create an appropriate request session with the RSP TAP server.  The RSP TAP service follows the `interface requirements of the International Virtual Observatory (IVOA) for HTTP basic authentication <https://www.ivoa.net/documents/SSO/20170411/PR-SSOAuthMech-2.0-20170411.html#tth_sEc4>`_; hence the designation of the ``ivo://ivoa.net/sso#BasicAA`` security method in the third line in the code block below.  
+**5. Set up appropriate authorization to access the RSP TAP server.** In line 1 of the following code block, a ``pyvo`` `CredentialStore <https://pyvo.readthedocs.io/en/latest/api/pyvo.auth.CredentialStore.html>`_ is instantiated.  In line 2, the TAP user (``"x-oauth-basic"``) and the RSP token (``token_str``) is passed to the ``CredentialStore``.  Line 3 establishes that the RSP TAP service conforms to the `interface requirements of the International Virtual Observatory (IVOA) for HTTP basic authentication <https://www.ivoa.net/documents/SSO/20170411/PR-SSOAuthMech-2.0-20170411.html#tth_sEc4>`_; hence the ``ivo://ivoa.net/sso#BasicAA`` security method is designated.  Finally, in line 4, a request session to the RSP TAP service is established. 
 
 .. code-block:: python
 
@@ -245,7 +245,7 @@ in a UNIX/MacOS/Linux environment, the following commands can be performed.
    rsp_tap = pyvo.dal.TAPService(RSP_TAP_SERVICE, credential)
 
 
-**6. Run a query.**
+**6. Run a query.**  For example, in the following case, the query requests a list of the catalogs that are available from the RSP TAP service.  More examples of useful DP0.2 queries can be found in the DP0.2 :ref:`DP0-2-Tutorials-Notebooks` and particularly in `DP0.2 Tutorial Notebook 2: Catalog Queries with TAP <https://github.com/rubin-dp0/tutorial-notebooks/blob/main/DP02_02_Catalog_Queries_with_TAP.ipynb>`_.
 
 .. code-block:: python
 
