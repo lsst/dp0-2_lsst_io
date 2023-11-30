@@ -112,7 +112,7 @@ See `TOPCAT homepage <http://www.star.bris.ac.uk/~mbt/topcat/>`_ for download an
     :alt: A screenshot of the main TOPCAT window with the Table Access Protocol item 
 	  highlighted by the cursor under the VO drop-down menu.
 
-    The main TOPCAT window.
+    The main TOPCAT window, with the "VO" menu pulled down and the "Table Access Protocol (TAP) Query" highlighted.
 
 **4. Fill in the relevant in the “TAP URL” window and click the “Use Service” button.**
 For DP0.2, use ``https://data.lsst.cloud/api/tap``.  If you wish to access DP0.3 -- which 
@@ -121,38 +121,37 @@ is a database of solar system objects that supplements the main DP0.2 database -
 
 .. figure:: /_static/API_TOPCAT_DLT_2.png
     :name: API_TOPCAT_DLT_2
-    :alt: A screenshot of the the Table Access Protocol (TAP) Query window in front of the 
-	  the main TOPCAT window.  In the Table Access Protocol (TAP) Query window, the URL
-	  https://data.lsst.cloud/api/tap has been filled in for the TAP URL.
+    :alt: A screenshot of the the Table Access Protocol (TAP) Query window in which the value
+          for the TAP URL has been filled in with the URL
+	  https://data.lsst.cloud/api/tap .  A blue oval indicates the location of the 
+          Selected TAP Service panel in the window.
 
-    The Table Access Protocol (TAP) Query window (with the main TOPCAT window in the background).
+    The Table Access Protocol (TAP) Query window with the location of the "Selected TAP Service" panel indicated by a blue oval.
 
 **5. Populate the Authentication window that pops up.**  
 Fill in ``x-oauth-basic`` for the "User" and your security token forthe "Password" and click "OK".
 
 .. figure:: /_static/API_TOPCAT_DLT_3.png
     :name: API_TOPCAT_DLT_3
-    :alt: A screenshot of the Authentication window in front of the Table Access Protocol (TAP) Query window,
-	  which itself is in front of the main TOPCAT window.  In the Authentication window, x-oauth-basic has
-	  been filled in for the User, and the password is shown (for security purposes) as a series of filled
-	  black circles.
+    :alt: A screenshot of the Authentication window. The user has been filled in with a value of x-oauth-basic, 
+	  and the password is shown (for security purposes) as a series of filled black circles.
 
-    The Authentication window (with the TAP Query window and the main TOPCAT window in the background).
+    The Authentication window with the values for the user and the password filled in.
 
 **6. Note that the RSP TAP service is now accessible from your instance of TOPCAT.**  
 Note that a list of DP0.1 and DP0.2 tables available for query has appeared in the Metadata panel of the TAP Query window.
 
 .. figure:: /_static/API_TOPCAT_DLT_4.png
     :name: API_TOPCAT_DLT_4
-    :alt: A screenshot of the Table Access Protocol (TAP) Query window in front of the main TOPCAT window.
+    :alt: A screenshot of the Table Access Protocol (TAP) Query window.
           The Table Access Protocol (TAP) Query window now shows three panels, stacked vertically.  The
 	  top panel is the Metadata panel, and it shows a list of DP0.1 and DP0.2 schemas and tables that
 	  are available to query.  The middle panel is the Service Capabilities panel, and it shows that
 	  the available Query Language is ADQL-2.0.  The bottom panel is the ADQL Text panel, and it 
 	  indicates the current Mode is Synchronous; the bottom panels text box is currently empty.
 
-    The TAP Query window (with the main TOPCAT window in the background); a list of DP0.1 and DP0.2 tables 
-    available for query can be be seen in the Metadata panel of the TAP Query window.
+    The Table Access Protocol (TAP) Query window; a list of DP0.1 and DP0.2 tables 
+    available for query can be be seen in the Metadata panel.
 
 **7. Explore.**
 At this stage, the Rubin DP0.2 data set can be explored via TOPCAT.  For an example, see the 
