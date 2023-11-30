@@ -166,8 +166,9 @@ Use of pyvo with the RSP TAP service
 
 Another way to access the Rubin data from outside the RSP environment is via the 
 `pyvo <https://pyvo.readthedocs.io/en/latest/>`_ python module, an affiliated
-package for `astropy <https://www.astropy.org/>`_.  By this method, if ``pyvo`` 
-is installed, one can access the RSP TAP service directly from one's own laptop.
+`astropy <https://www.astropy.org/>`_ package for `providing access to remote data
+and services of the Virtual Observatory using python <https://github.com/astropy/pyvo#pyvo>`_.    
+By this method, if ``pyvo`` is installed, one can access the RSP TAP service directly from one's own laptop.
 If not, one can access the RSP TAP service from other freely accessible services 
 that have ``pyvo`` pre-installed (like, e.g., NOIRLab's 
 `Astro Data Lab <https://datalab.noirlab.edu/>`_ Jupyter Notebook server).
