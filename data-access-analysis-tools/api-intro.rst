@@ -88,12 +88,12 @@ by the `Science Platform Tokens <https://nb.lsst.io/environment/tokens.html>`_ w
     **Note that tokens should be treated like passwords:  they should not be shared with others.  
     Take precautions to keep tokens secure.  Never store tokens in git-tracked files.**
 
-.. _Data-Access-Analysis-Tools-TAP-TOPCAT-Get-Started:
+.. _Data-Access-Analysis-Tools-TAP-TOPCAT-get-started:
 
 Get started with TOPCAT
 -----------------------
 
-This section provides a basic step-by-step guide to get TOPCAT set up to explore the DP0.2 tables.
+This section provides a basic guide to get TOPCAT set up to explore the DP0.2 tables.
 
 **1. Create an RSP access token.**  
 See the `Creating user tokens webpage <https://rsp.lsst.io/guides/auth/creating-user-tokens.html>`_ 
@@ -106,6 +106,7 @@ secure for future reference.*
 See `TOPCAT homepage <http://www.star.bris.ac.uk/~mbt/topcat/>`_ for download and install instructions.
 
 **3. Click on "Table Access Protocol (TAP) Query" under the “VO” menu.**
+This will open up a separate Table Access Protocol (TAP) Query window. 
 
 .. figure:: /_static/API_TOPCAT_DLT_1.png
     :name: API_TOPCAT_DLT_1
@@ -114,7 +115,7 @@ See `TOPCAT homepage <http://www.star.bris.ac.uk/~mbt/topcat/>`_ for download an
 
     The main TOPCAT window, with the "VO" menu pulled down and the "Table Access Protocol (TAP) Query" highlighted.
 
-**4. Fill in the relevant in the “TAP URL” window and click the “Use Service” button.**
+**4. Fill in the relevant in the “TAP URL” window and click the “Use Service” button in the Table Access Protocol (TAP) Query window.**
 For DP0.2, use ``https://data.lsst.cloud/api/tap``.  If you wish to access DP0.3 -- which 
 is a database of solar system objects that supplements the main DP0.2 database -- use 
 ``https://data.lsst.cloud/api/ssotap`` instead.
@@ -177,12 +178,12 @@ that have ``pyvo`` pre-installed (like, e.g., NOIRLab's
     Take precautions to keep tokens secure.  Never store tokens in git-tracked files.**
 
 
-.. _Data-Access-Analysis-Tools-TAP-pyvo-step-by-step:
+.. _Data-Access-Analysis-Tools-TAP-pyvo-get-started:
 
-A pyvo-based step-by-step guide
--------------------------------
+Get started with pyvo
+---------------------
 
-This section provides a basic step-by-step guide to provide access to the DP0.2
+This section provides a basic guide to provide access to the DP0.2
 TAP service via python code on your own computer or on an online service like NOIRLab's 
 `Astro Data Lab <https://datalab.noirlab.edu/>`_ Jupyter Notebook server.  
 
