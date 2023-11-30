@@ -8,7 +8,7 @@
 
 .. This is the label that can be used for cross referencing this file.
 .. Recommended title label format is "Directory Name"-"Title Name" -- Spaces should be replaced by hyphens.
-.. _Tutorials-Examples-DP0-2-Portal-Beginner:
+.. _Tutorials-Examples-DP0-2-TOPCAT-Beginner:
 .. Each section should include a label for cross referencing to a given area.
 .. Recommended format for all labels is "Title Name"-"Section Name" -- Spaces should be replaced by hyphens.
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
@@ -22,7 +22,7 @@
 
 **Contact authors:** Douglas Tucker and Leanne Guy
 
-**Last verified to run:** 2023-11-17
+**Last verified to run:** 2023-11-29
 
 **Targeted learning level:** beginner
 
