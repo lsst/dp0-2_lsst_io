@@ -225,7 +225,7 @@ in a UNIX/MacOS/Linux environment, the following commands can be performed.
    import pyvo
    import os
 
-**4. Define the relevant TAP server URL and read in your security token.** For DP0.2, the proper TAP server URL is ``https://data.lsst.cloud/api/tap``, as is shown below.  (For DP0.3, use ``https://data.lsst.cloud/api/ssotap`` instead.)  The ``os.path.expanduser('~')`` command is a cross-platform method for identifying the home directory without hardwiring its path into the code.  (As a side benefit, it works in both the UNIX/MacOS/Linux and Windows environments.)
+**4. Define the relevant TAP server URL and read in your security token.** For DP0.2, the proper TAP server URL is ``https://data.lsst.cloud/api/tap``, as is shown below.  (For DP0.3, use ``https://data.lsst.cloud/api/ssotap`` instead.)  The ``os.path.expanduser('~')`` command is a cross-platform method for identifying the home directory without hardwiring its path into the code.  (As a side benefit, it works in both the UNIX/MacOS/Linux and Windows environments.) 
 
 .. code-block:: python
 
