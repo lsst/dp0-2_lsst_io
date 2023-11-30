@@ -156,8 +156,7 @@ Note that a list of DP0.1 and DP0.2 tables available for query has appeared in t
 
 **7. Explore.**
 At this stage, the Rubin DP0.2 data set can be explored via TOPCAT.  For an example, see the 
-:doc:`01. API TOPCAT Bright Stars Color-Magnitude Diagram Tutorial (beginner)`.
-
+:ref:`Tutorials-Examples-DP0-2-TOPCAT-Beginner`.
 
 .. _Data-Access-Analysis-Tools-TAP-pyvo:
 
