@@ -48,7 +48,7 @@ Step 1. Query the DP0.2 Object catalog
 
 1.1. Next to “LSST DP0.2 DC2 Tables”, choose the Table Collection to be “dp02_dc2_catalogs” (left drop-down menu) and the Table to be “dp02_dc2_catalogs.Object” (right drop-down menu).
 
-1.2. Under “Enter Constraints”, select the box to the left of “Spatial”. Leave the “Shape Type” as the default “Cone”, and for “Coords or Obj Name” use the coordinates “62, -35”. Next to “Radius”, from the drop down menu choose “arcseconds” and then enter “120”.
+1.2. Under “Enter Constraints”, select the box to the left of “Spatial”. For “Coords or Obj Name”, use the coordinates “62, -35”. Next to “Radius”, from the drop down menu choose “arcseconds” and then enter “120”.
 
 1.3. In the table on the right, under “Output Column Selection and Constraints”, select “coord_ra”, “coord_dec”, “detect_isPrimary”, “g” “r” and “i_calibFlux”. Click on the filter icon to show only the selected columns. 
 
@@ -100,8 +100,8 @@ Step 2. Create a g psfFlux vs. g cmodelFlux diagram
 
 2.2. Click on “Chart Options” and set “X Label” to “g calibFlux” and “Y Label” to “g psfFlux”. 
 
-Step 3. Query the DP0.2 Object catalog 
-======================================
+Step 3. Plot only extended objects 
+==================================
 
 3.0. In the results table, under the column "g_extendedness", enter "= 1". 
 
@@ -115,31 +115,33 @@ Intermediate Task 1
 
 Retrieve the four DP0.2 processed visit images (PVI) images obtained with LSST band i, before the date of MJD 59840, whose boundaries contain the point with Right Ascension 55.75 degrees and Declination -32.27 degrees. In the results view, choose the option to display the six images in a grid. Use the "Image center drop down" tool to center the first displayed image on the search coordinates. Use the "Image alignment drop down" tool to align and lock all displayed images by the World Coordinate System (WCS) and zoom-in 3 times
 
-Step 1. 
-=======
+Step 1. Retrieve processed visit images
+=======================================
 
-1.1. Log into the Portal Aspect and check the “Use Image Search (ObsTAP)” box below “LSST DP0.2 DC2 Tables”.
+1.1. Check the “Use Image Search (ObsTAP)” box below “LSST DP0.2 DC2 Tables”.
 
-1.2. Under “Observation Type and Source”, choose “Calibration Level” 2
+1.2. Under “Observation Type and Source”, choose “Calibration Level” 2, for PVIs.
 
-1.3. Under “Location”, choose “Observation boundary contains point” from the drop-down menu and enter the coordinates “55.75, -32.27”.
+1.3. Under “Location”, from the drop-down menu next to "Query Type", choose “Observation boundary contains point”. For “Coords or Obj Name”, use the coordinates “55.75, -32.27”.
 
-1.4. Under timing constraints, choose “Overlapping specified range” and use “MJD values”. Enter the end time “59840”
+1.4. Under "Timing", from the drop-down menu next to "Time of Observation", choose “Overlapping specified range” and select “MJD values”. Enter “59840” for "End Time". 
 
-1.5. Under spectral coverage choose “by filter bands” and select “i”. 
+1.5. Under "Spectral Coverage", select “By Filter Bands” and select “i”. 
+
+1.6. Click “Search” at lower left.
 
 Step 2. 
 =======
 
-1.6  Click on “Bi-view Tables” in the upper right corner to show just one image and the table side-by-side. To display the six filters’ deepCoadds, select “Data Product” tab.
+2.1  Click on “Bi-view Tables” in the upper right corner to show just one image and the table side-by-side. To display the deepCoadds, select “Data Product” tab.
 
-1.7. Above the image, click on the grid icon (hover-over text “Tile all images in the search result table”) to simultaneously view all 4 i band PVIs.
+2.2. Above the image, click on the grid icon (hover-over text “Tile all images in the search result table”) to simultaneously view all 4 i band PVIs.
 
-1.8 Click on the first image and choose the “center” icon (hover-over text “Image center drop down”), and in the box next to “Center On” enter coordinates, “55.75, -32.27”, and then click “Go”.
+2.3 Click on the first image and choose the "center" icon (hover-over text “Image center drop down.”), and in the box next to “Center On” enter coordinates, “55.75, -32.27”, and then click “Go”.
 
-1.9 Click on the “align” icon above the image (hover-over text “Image alignment drop down…”) and under “Align and Lock Options” select “by WCS”.
+2.4. Click on the “align” icon above the image (hover-over text “Image alignment drop down.”) and under “Align and Lock Options” select “by WCS”.
 
-2.0 . Click the magnifying glass with the “+” 3 times.
+2.5. Click the Zoom icon and then Zoom-in (magnifying glass with a plus) 3 times.
 
 .. _DP0-2-Portal-UTAK-intermediate-task2:
 
