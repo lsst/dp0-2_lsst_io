@@ -35,30 +35,37 @@ the Google form linked above.
 The following is the answer key for the tasks in the test.
 
 
-.. _DP0-2-Portal-UTAK-task1:
+.. _DP0-2-Portal-UTAK-beginner-task1:
 
+===============
 Beginner Task 1
 ===============
 
-1.1. Log in to the Portal Aspect of the Rubin Science Platform.  
+Create a g-r color vs. i flux diagram using the calibFlux columns in the DP0.2 Object catalog, for all objects within 120 arcseconds of Right Ascension 60 degrees and Declination -35 degrees. Zoom in on the clump of points with color values approximately in the range of -200 < g-r < 1000 nJy. Save the plot as a PNG file to your local computer.
 
-1.2. Next to “LSST DP0.2 DC2 Tables”, choose the Table Collection to be “dp02_dc2_catalogs” (left drop-down menu) and the Table to be “dp02_dc2_catalogs.Object” (right drop-down menu).
+Step 1. Query the DP0.2 Object catalog 
+======================================
 
-1.3. Under “Enter Constraints”, select the box to the left of “Spatial”. Leave the “Shape Type” as the default “Cone”, and for “Coords or Obj Name” use the central coordinates of the DC2 simulation area “62, -35”. Next to “Radius”, from the drop down menu choose “arcseconds” and then enter “120”.
+1.1. Next to “LSST DP0.2 DC2 Tables”, choose the Table Collection to be “dp02_dc2_catalogs” (left drop-down menu) and the Table to be “dp02_dc2_catalogs.Object” (right drop-down menu).
 
-1.4. In the table at right, under “Output Column Selection and Constraints”, click the box in the left-most column to select “coord_ra”, “coord_dec”, “detect_isPrimary”, “g” “r” and “i_calibFlux”. 
+1.2. Under “Enter Constraints”, select the box to the left of “Spatial”. Leave the “Shape Type” as the default “Cone”, and for “Coords or Obj Name” use the central coordinates “62, -35”. Next to “Radius”, from the drop down menu choose “arcseconds” and then enter “120”.
 
-1.5. In the “constraints” column, enter “=1” for the “detect_isPrimary”.
+1.3. In the table on the right, under “Output Column Selection and Constraints”, select “coord_ra”, “coord_dec”, “detect_isPrimary”, “g” “r” and “i_calibFlux”. Click on the filter icon to show only the selected columns. 
 
-1.6. Set the “Row Limit” to 10000, to only retrieve 10000 objects for this demonstration.
+1.4. In the “constraints” column, enter “=1” for the “detect_isPrimary”.
 
-1.7. Click “Search” at lower left.
+1.5. Click “Search” at the lower left.
 
-1.8 Click on the Active Chart settings icon (two gears, upper right) in order to “modify trace”, which means to change the plot parameters. Set “X” to be “g_calibFlux - r_calibFlux”, and “Y” to be “i_calibFlux”. Click on “Chart Options” and set “X Label” to “calibFlux (g-r)” and “Y Label” to “calibFlux (i)”. 
+Step 2. Create and save g-r color vs i flux diagram 
+===================================================
 
-1.9 Set the “X Min/Max” values to “-200” and “20”, and the “Y Min/Max” values to “0” and “1000”.
+2.1. Click on the Active Chart settings icon (two gears) to change the plot parameters. Set “X” to be “i_calibFlux” and “Y” to be “g_calibFlux - r_calibFlux”. 
 
-2.0 Click on the “save” icon to download the chart as a png.
+2.2. Click on “Chart Options” and set “X Label” to “calibFlux i” and “Y Label” to “calibFlux g-r”.
+
+2.3. Click on the Zoom-in icon (magnifying glass with a plus) and click and drag over the clump on points. 
+
+2.4. Click on the save icon (next to the 1x magnifying glass) to download the chart as a PNG.
 
 Beginner Task 2
 ===============
@@ -151,6 +158,7 @@ Step 2. Highlight the cluster members
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 2.1. On the chart on the right, click and drag over the points roughly between 16 and 20 i magnitude. Click on the filter next to “Pin chart” to show only the selected points. 
+
 2.2. Click on the layers icon (hover-over text “manipulate overlay display”) and select “coverage”.
 
 
