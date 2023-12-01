@@ -22,7 +22,7 @@
 
 **Contact authors:** Douglas Tucker and Leanne Guy
 
-**Last verified to run:** 2023-11-29
+**Last verified to run:** 2023-11-30
 
 **Targeted learning level:** beginner
 
@@ -32,14 +32,18 @@ This is the same demonstration used to illustrate the Table Access Protocol (TAP
 illustrate the Portal service in the first of the :ref:`DP0-2-Tutorials-Portal`.
 Beginner-level TOPCAT users looking for a more general overview of TOPCAT should refer to the `TOPCAT homepage <https://www.star.bris.ac.uk/~mbt/topcat/>`_.
 
+It should be noted that all the functionality demonstrated in Examples 1, 2, and 3 below -- i.e., all but the interactive 3D plots of Example 4 -- is 
+possible via the RSP Portal Aspect (see :doc:`/data-access-analysis-tools/portal-intro`).
+
 .. _DP0-2-TOPCAT-Beginner-Example-1:
 
 Example 1. Run a Simple Query
-==========================
+=============================
 
-**1.1.** Follow the steps in :ref:`Data-Access-Analysis-Tools-TAP-TOPCAT-Step-by-Step` for accessing DP0.2 from TOPCAT.
-At the end of these steps, you should have 2 TOPCAT windows open -- the main TOCPAT window and a "Table Access Protocol
-(TAP) Query window -- like the following:
+**1.1.** Follow the steps in :ref:`Data-Access-Analysis-Tools-TAP-TOPCAT-get-started` for accessing DP0.2 from TOPCAT.
+At the end of these steps, there should be 2 TOPCAT windows open -- the main TOCPAT window and a "Table Access Protocol
+(TAP) Query window -- like in the following figure.  (Note that the TOPCAT windows or components within the windows
+can be resized by clicking and dragging window corners or component edges.)
 
 .. figure:: /_static/API_TOPCAT_DLT_5.png
     :name: API_TOPCAT_DLT_5
@@ -54,9 +58,8 @@ At the end of these steps, you should have 2 TOPCAT windows open -- the main TOC
 	  indicates the current Mode is Synchronous; the bottom panels text box is currently empty.
 
 
-Note that you can use your mouse to change the size of the TOPCAT windows as well as the size the panels within those windows.
 
-**1.2.** Insert the following query: 
+**1.2.** Insert the following query.
 
 .. code-block:: SQL
 
