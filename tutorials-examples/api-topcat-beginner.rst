@@ -37,7 +37,7 @@ possible via the RSP Portal Aspect (see :ref:`DP0-2-Tutorials-Portal`).
 
 .. _DP0-2-TOPCAT-Beginner-Example-1:
 
-Example 1. Run a Simple Query
+Example 1. Run a simple query
 =============================
 
 **1.1.** Follow the steps in :ref:`Data-Access-Analysis-Tools-TAP-TOPCAT-get-started` for accessing DP0.2 from TOPCAT.
@@ -59,7 +59,12 @@ can be resized by clicking and dragging window corners or component edges.)
 
 
 
-**1.2.** Insert the following query.
+**1.2.** Prepare a simple ADQL spatial query to return a small set of values from 
+``dp02_dc2_catalogs.Object`` table.  Specifically create an ADQL query that returns 
+``coord_ra``, ``coord_dec``, ``detect_isPrimary``, ``r_calibFlux``, ``r_cModelFlux``, 
+and ``r_extendedness`` for the first 10 ``dp02_dc2_catalogs.Object`` entries found 
+within a 0.1-degree radius circle centered at (RA,DEC)=(62,-37), which is near the 
+center of the DP0.2 sky projection.
 
 .. code-block:: SQL
 
@@ -70,8 +75,8 @@ can be resized by clicking and dragging window corners or component edges.)
 	WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), 
 			CIRCLE('ICRS', 62, -37, 0.1)) = 1
 
-into the "ADQL Text" panel of the "Table Access Protocol (TAP) Query" window, and click the "Run Query" button at the bottom of
-this window:
+**1.3.** Enter the above query into the "ADQL Text" panel of the "Table Access Protocol (TAP) Query" window, 
+and then click the "Run Query" button at the bottom of this window.
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_01.png
     :name: TOPCAT_CMD_tutorial_01.png
@@ -80,16 +85,9 @@ this window:
 	  A simple ADQL query is shown in the bottom, ADQL Text panel.
 	  
 
-Note that this query grabs `coord_ra`, `coord_dec`, `detect_isPrimary`, 
-`r_calibFlux`, `r_cModelFlux`, and `r_extendedness` columns from the 
-`dp02_dc2_catalogs.Object` table for the first 10 entries found
-by the query within a 0.1-degree radius circle centered at
-(RA,DEC)=(62,-37), which is near the center of the DP0.2 sky
-projection.
 
-**1.3.** TOPCAT will return a table of the results from this short, 
-simple query pretty rapidly.  You can find the table highlighted
-in the "Table List" panel of the main TOPCAT window:
+**1.4.** Find the table of results in the "Table List" panel of the main TOPCAT window. 
+Since this is short, simple query, TOPCAT will return the table of results pretty rapidly.  
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_02.png
     :name: TOPCAT_CMD_tutorial_02.png
@@ -100,27 +98,29 @@ in the "Table List" panel of the main TOPCAT window:
 	  4. A small SAMP panel just below the Current Table Properties panel.
 
 
-**1.4.** If you click on the "Display table cell data" icon -- the 4th icon from the left in the row of icons at the top of the main TOPCAT window 
-(it looks like a table with the first row and first column grayed out) -- a TOPCAT Table Browser window like this one will open up:
+**1.5.** Click on the "Display table cell data" icon.  It is the 4th icon from the left in 
+the row of icons at the top of the main TOPCAT window (it looks like a table with the first 
+row and first column grayed out).  A TOPCAT Table Browser window like the following will 
+open up.  For this simple query, there are only 10 entries; the whole content of this table
+is visible.  For larger tables, vertical and horizontal scrollbars appear that permit 
+viewing other parts of the table.
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_03.png
     :name: TOPCAT_CMD_tutorial_03.png
     :alt: A screenshot of a Table Browser window.  It shows the contents of Table 1, 
 	  called TAP_1_dp02_dc02_catalogs.Object.
 
-For this simple query, there are only 10 entries; so you can see the 
-whole contents of this table.  For larger tables, vertical and horizontal 
-scrollbars appear for you to view other
 
 .. _DP0-2-TOPCAT-Beginner-Example-2:
 
-Example 2. Run a More Detailed Query
+Example 2. Run a more detailed query
 ====================================
 
-**2.1.** Now let's run a more detailed query.  This query will grab the `coord_ra`, `coord_dec`, 
-and the `calibFlux` and `calibFluxErr` columns for the top 10000 entries returned 
-from the database for bright (>360 nJy), non-extended (star-like) primary objects
-within 1 degree of (RA,DEC)=(62,-37).  Fill the following query:
+**2.1.** Delete the ADQL in the "ADQL Text" panel from Example 1, replace it with the following 
+ADQL, and click the "Run Query" button.  This query will return the ``coord_ra``, ``coord_dec``, 
+and the ugrizy ``calibFlux`` and ``calibFluxErr`` columns for the top 10000 entries returned from 
+the ``dp02_dc2_catalogs.Object`` table for bright (>360 nJy), non-extended (star-like) primary 
+objects within 1 degree of (RA,DEC)=(62,-37).  
 
 .. code-block:: SQL
 
@@ -149,20 +149,9 @@ within 1 degree of (RA,DEC)=(62,-37).  Fill the following query:
 		AND z_extendedness = 0
 		AND y_extendedness = 0
 
-into the "ADQL Text" panel of TOPCAT's "Table Access Protocol (TAP) 
-query window like so:
-
-.. figure:: /_static/TOPCAT_CMD_tutorial_04.png
-    :name: TOPCAT_CMD_tutorial_04.png
-    :alt: A screenshot of the Table Access Protocol (TAP) Query window.
-	  A list of DP0.2 tables is shown in the top, Metadata panel.
-	  An ADQL query is shown in the bottom, ADQL Text panel.
-
-and click on the "Run Query" button at the bottom of the window.
-
 **2.2.** This is a longer query than the previous one.  While the
 query is running, this temporary TOPCAT "Load New Table" window 
-will pop up:
+will pop up.  (It will close once the query completes.)
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_05.png
     :name: TOPCAT_CMD_tutorial_05.png
@@ -171,10 +160,9 @@ will pop up:
 	  TAP_1_dp02_dc02_catalogs.Object, is being
 	  loaded into TOPCAT.
 
-It will close once the query completes.
 
 **2.3.**  Note that, once the query completes, there is a second
-table in the "Table List" panel of the main TOPCAT window:
+table in the "Table List" panel of the main TOPCAT window.
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_06.png
     :name: TOPCAT_CMD_tutorial_06.png
@@ -185,24 +173,21 @@ table in the "Table List" panel of the main TOPCAT window:
 	  3. A Current Table Properties panel on the right of the window.
 	  4. A small SAMP panel just below the Current Table Properties panel.
 
-**2.4.**  Like in Step 1.4 for the previous query above, 
-If you click on the “Display table cell data” icon – the 
-4th icon from the left in the row of icons at the top of 
-the main TOPCAT window (it looks like a table with the 
-first row and first column grayed out) – a TOPCAT Table 
-Browser window like this one will open up:
+**2.4.**  Like in Step 1.5 of Example 1, click on the “Display table cell data” icon.
+A TOPCAT Table Browser window like the following will open up.  This is a large table, 
+and there are both horizontal and vertical scrollbars to permit the user to scroll
+to other parts of the table.
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_07.png
     :name: TOPCAT_CMD_tutorial_07.png
     :alt: A screenshot of a Table Browser window.  It shows the contents of Table 2, 
 	  called TAP_2_dp02_dc02_catalogs.Object.  This is a large table, and there
-	  are both horizontal and vertical scrollbars to permit the use to scroll
+	  are both horizontal and vertical scrollbars to permit the user to scroll
 	  to other parts of the table.
 
-**2.5.**  Next, click on the "Display column metadata" 
-icon -- the 6th icon from the left in the row of icons 
-at the top of the main TOPCAT window (it looks like a 
-table with the first row highlighted in blue).:
+**2.5.** Click on the "Display column metadata" icon -- the 6th icon from the left in the row of icons 
+at the top of the main TOPCAT window (it looks like a table with the first row highlighted in blue).
+This will open up a "Table Columns" window.
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_08.png
     :name: TOPCAT_CMD_tutorial_08.png
@@ -214,8 +199,9 @@ table with the first row highlighted in blue).:
 	  4. A small SAMP panel just below the Current Table Properties panel.
 
 
-Clicking on that icon will open up a Table Columns 
-window like this:
+**2.6.** Note the content of the "Table Columns" window.  Each table column is listed, along with various
+information about that column -- e.g., its name, the class and datatype of its contents, its units (if any), 
+and its description (if any).
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_09.png
     :name: TOPCAT_CMD_tutorial_09.png
@@ -224,10 +210,7 @@ window like this:
 	  if available, the units and description 
 	  of each of the columns in the table.
 
-Note that each column is listed, along with various
-information about that column -- e.g., its name, the   
-class and datatype of its contents, its units (if any), 
-and its description (if any).
+
 
 **2.6.**  Let's create some columns of our own.  
 Let's start by creating a column for the u-band
@@ -475,8 +458,8 @@ tutorial like this -- so it is again recommended that the interested
 user consult the `TOPCAT documentation <http://www.star.bris.ac.uk/~mbt/topcat/>`_.
 
 
-Example 3. Interact with Multiple Plots/Tables
-==============================================
+Example 3. Interact with multiple plots from the same table
+===========================================================
 
 Another strength of TOPCAT is that the data from a given 
 table are linked across the plots based on that table.
@@ -554,7 +537,7 @@ TOPCAT interface.  The interested user is again directed to
 the `TOPCAT documentation <http://www.star.bris.ac.uk/~mbt/topcat/>`_.
 
 
-Example 4. Create Interactive 3D Plots
+Example 4. Create interactive 3D plots
 ======================================
 
 As the final example in this tutorial, let's look at the 
@@ -645,7 +628,7 @@ color look-up table.
 color look-up table for your auxiliary axis?
 In that case, click on "Aux Axis" in the 
 left-lower panel of the Cube Plot window.  In 
-the new lower-right panel panel that appears, 
+the new lower-right panel that appears, 
 choose a different color paletter from the
 "Aux Shader" drop-down menu.  In the following
 case, the "Rainbow" color palette was chosen:
