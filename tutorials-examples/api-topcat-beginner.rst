@@ -57,7 +57,7 @@ can be resized by clicking and dragging window corners or component edges.)
 	  the available Query Language is ADQL-2.0.  The bottom panel is the ADQL Text panel, and it 
 	  indicates the current Mode is Synchronous; the bottom panels text box is currently empty.
 
-
+    The Table Access Protocol (TAP) Query window with the main TOPCAT window in the background.
 
 **1.2.** Prepare a simple ADQL spatial query to return a small set of values from 
 ``dp02_dc2_catalogs.Object`` table.  Specifically create an ADQL query that returns 
@@ -84,7 +84,7 @@ and then click the "Run Query" button at the bottom of this window.
 	  A list of DP0.2 tables is shown in the top, Metadata panel.
 	  A simple ADQL query is shown in the bottom, ADQL Text panel.
 	  
-
+    The Table Access Protocol (TAP) Query window with the ADQL query from Step 1.2 entered into its ADQL Text panel.
 
 **1.4.** Find the table of results in the "Table List" panel of the main TOPCAT window. 
 Since this is short, simple query, TOPCAT will return the table of results pretty rapidly.  
@@ -97,6 +97,7 @@ Since this is short, simple query, TOPCAT will return the table of results prett
 	  and it is highlighted.  3. A Current Table Properties panel on the right of the window.
 	  4. A small SAMP panel just below the Current Table Properties panel.
 
+    The main TOPCAT window with the newly created table -- which is holding the results from the ADQL -- highlighted in blue in the Table List panel.
 
 **1.5.** Click on the "Display table cell data" icon.  It is the 4th icon from the left in 
 the row of icons at the top of the main TOPCAT window (it looks like a table with the first 
@@ -110,6 +111,7 @@ viewing other parts of the table.
     :alt: A screenshot of a Table Browser window.  It shows the contents of Table 1, 
 	  called TAP_1_dp02_dc02_catalogs.Object.
 
+    The Table Browser Window, showing the contents of the newly created table.
 
 .. _DP0-2-TOPCAT-Beginner-Example-2:
 
