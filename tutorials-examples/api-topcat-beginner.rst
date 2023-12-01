@@ -45,8 +45,8 @@ At the end of these steps, there should be 2 TOPCAT windows open -- the main TOC
 (TAP) Query window -- like in the following figure.  (Note that the TOPCAT windows or components within the windows
 can be resized by clicking and dragging window corners or component edges.)
 
-.. figure:: /_static/API_TOPCAT_DLT_5.png
-    :name: API_TOPCAT_DLT_5
+.. figure:: /_static/TOPCAT_CMD_tutorial_01.png
+    :name: TOPCAT_CMD_tutorial_01
     :alt: A screenshot of the Table Access Protocol (TAP) Query window in front of the main TOPCAT window.
           The Table Access Protocol (TAP) Query window shows three panels, stacked vertically.  The
 	  top panel is the Metadata panel, and it shows the `dp02_dc2_catalogs.Object` table highlighted
@@ -78,8 +78,8 @@ center of the DP0.2 sky projection.
 **1.3.** Enter the above query into the "ADQL Text" panel of the "Table Access Protocol (TAP) Query" window, 
 and then click the "Run Query" button at the bottom of this window.
 
-.. figure:: /_static/TOPCAT_CMD_tutorial_01.png
-    :name: TOPCAT_CMD_tutorial_01.png
+.. figure:: /_static/TOPCAT_CMD_tutorial_02.png
+    :name: TOPCAT_CMD_tutorial_02
     :alt: A screenshot of the Table Access Protocol (TAP) Query window.
 	  A list of DP0.2 tables is shown in the top, Metadata panel.
 	  A simple ADQL query is shown in the bottom, ADQL Text panel.
@@ -89,8 +89,8 @@ and then click the "Run Query" button at the bottom of this window.
 **1.4.** Find the table of results in the "Table List" panel of the main TOPCAT window. 
 Since this is short, simple query, TOPCAT will return the table of results pretty rapidly.  
 
-.. figure:: /_static/TOPCAT_CMD_tutorial_02.png
-    :name: TOPCAT_CMD_tutorial_02.png
+.. figure:: /_static/TOPCAT_CMD_tutorial_03.png
+    :name: TOPCAT_CMD_tutorial_03
     :alt: A screenshot of the main TOPCAT window.  It is composed of four main parts.
 	  1. A row of icons along the top of the window.  2. A Table List panel on the left
 	  of the window; this currently shows one table, called TAP_1_dp02_dc02_catalogs.Object,
@@ -106,8 +106,8 @@ open up.  For this simple query, there are only 10 entries; the whole content of
 is visible.  For larger tables, vertical and horizontal scrollbars appear that permit 
 viewing other parts of the table.
 
-.. figure:: /_static/TOPCAT_CMD_tutorial_03.png
-    :name: TOPCAT_CMD_tutorial_03.png
+.. figure:: /_static/TOPCAT_CMD_tutorial_04.png
+    :name: TOPCAT_CMD_tutorial_04
     :alt: A screenshot of a Table Browser window.  It shows the contents of Table 1, 
 	  called TAP_1_dp02_dc02_catalogs.Object.
 
@@ -156,7 +156,7 @@ query is running, this temporary TOPCAT "Load New Table" window
 will pop up.  (It will close once the query completes.)
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_05.png
-    :name: TOPCAT_CMD_tutorial_05.png
+    :name: TOPCAT_CMD_tutorial_05
     :alt: A screenshot of the Load New Table window.
 	  It indicates that a new table, called
 	  TAP_1_dp02_dc02_catalogs.Object, is being
@@ -168,7 +168,7 @@ will pop up.  (It will close once the query completes.)
 table in the "Table List" panel of the main TOPCAT window.
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_06.png
-    :name: TOPCAT_CMD_tutorial_06.png
+    :name: TOPCAT_CMD_tutorial_06
     :alt: A screenshot of the main TOPCAT window.  It is composed of four main parts.
 	  1. A row of icons along the top of the window.  2. A Table List panel on the left
 	  of the window; this currently shows two tables, called TAP_1_dp02_dc02_catalogs.Object
@@ -184,7 +184,7 @@ and there are both horizontal and vertical scrollbars to permit the user to scro
 to other parts of the table.
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_07.png
-    :name: TOPCAT_CMD_tutorial_07.png
+    :name: TOPCAT_CMD_tutorial_07
     :alt: A screenshot of a Table Browser window.  It shows the contents of Table 2, 
 	  called TAP_2_dp02_dc02_catalogs.Object.  This is a large table, and there
 	  are both horizontal and vertical scrollbars to permit the user to scroll
@@ -197,7 +197,7 @@ at the top of the main TOPCAT window (it looks like a table with the first row h
 This will open up a "Table Columns" window.
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_08.png
-    :name: TOPCAT_CMD_tutorial_08.png
+    :name: TOPCAT_CMD_tutorial_08
     :alt: A screenshot of the main TOPCAT window.  It is composed of four main parts.
 	  1. A row of icons along the top of the window.  2. A Table List panel on the left
 	  of the window; this currently shows two tables, called TAP_1_dp02_dc02_catalogs.Object
@@ -212,7 +212,7 @@ information about that column -- e.g., its name, the class and datatype of its c
 and its description (if any).
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_09.png
-    :name: TOPCAT_CMD_tutorial_09.png
+    :name: TOPCAT_CMD_tutorial_09
     :alt: A screenshot of the Table Columns window.
 	  It lists the name the class, the datatype, and, 
 	  if available, the units and description 
@@ -236,7 +236,7 @@ column by filling in the following in the "Define
 Synthetic Column" window like so:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_10.png
-    :name: TOPCAT_CMD_tutorial_10.png
+    :name: TOPCAT_CMD_tutorial_10
     :alt: A screenshot of the Define Synthetic Column window.
 	  Shown are the user-input values for the name and
 	  the expression for the column.  In this particular
@@ -259,7 +259,7 @@ Let's use this equation to add a `u_calibMagErr` column by filling in
 the following in the "Define Synthetic Column" window like so:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_11.png
-    :name: TOPCAT_CMD_tutorial_11.png
+    :name: TOPCAT_CMD_tutorial_11
     :alt: A screenshot of the Define Synthetic Column window.
 	  Shown are the user-input values for the name and
 	  the expression for the column.  In this particular
@@ -273,7 +273,7 @@ Each time you add a column, the column will appear in the "Table Columns"
 window:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_12.png
-    :name: TOPCAT_CMD_tutorial_12.png
+    :name: TOPCAT_CMD_tutorial_12
     :alt: A screenshot of the Table Columns window.
 	  It lists the name the class, the datatype, and, 
 	  if available, the units and description 
@@ -290,7 +290,7 @@ new columns in the Table Columns window, like this (where the new
 columns have been highlighted in blue):
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_13.png
-    :name: TOPCAT_CMD_tutorial_13.png
+    :name: TOPCAT_CMD_tutorial_13
     :alt:  A screenshot of the Table Columns window.
 	  It lists the name the class, the datatype, and, 
 	  if available, the units and description 
@@ -308,7 +308,7 @@ within the Table Browser (click on the "Display table cell data"
 icon in the main TOPCAT window as in Step 2.4 above):
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_14.png
-    :name: TOPCAT_CMD_tutorial_14.png
+    :name: TOPCAT_CMD_tutorial_14
     :alt: A screenshot of a Table Browser window.  It shows the contents of Table 2, 
 	  called TAP_2_dp02_dc02_catalogs.Object, including the quantities just derived.  
 	  This is a large table, and there are both horizontal and vertical scrollbars 
@@ -316,7 +316,7 @@ icon in the main TOPCAT window as in Step 2.4 above):
 
 
 **2.10.**  As a brief aside, let's create a skyplot of the 
-RA,DEC postions of the stars returned by the query.  To do
+RA,DEC positions of the stars returned by the query.  To do
 so, go back to the main TOPCAT window and click on the "Sky
 plotting window" icon -- the 11th icon from the left in the
 row of icons at the top of the main TOPCAT window (it looks
@@ -324,7 +324,7 @@ like a small, gridded Aitoff map projection):
 :
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_15.png
-    :name: TOPCAT_CMD_tutorial_15.png
+    :name: TOPCAT_CMD_tutorial_15
     :alt: A screenshot of the main TOPCAT window.  It is composed of four main parts.
 	  1. A row of icons along the top of the window.  2. A Table List panel on the left
 	  of the window; this currently shows two tables, called TAP_1_dp02_dc02_catalogs.Object
@@ -340,7 +340,7 @@ in this case, plotting `coord_ra` and `coord_dec` as the
 RA and the DEC, respectively:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_16.png
-    :name: TOPCAT_CMD_tutorial_16.png
+    :name: TOPCAT_CMD_tutorial_16
     :alt: A screenshot of the Sky Plot window.
 	  It shows the RA, DEC positions of the 10000
           objects from Table 2.  Due to the details of
@@ -375,7 +375,7 @@ like a blank X/Y plot, and it sits just leftward of the
 "Sky plotting window" icon):
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_17.png
-    :name: TOPCAT_CMD_tutorial_17.png
+    :name: TOPCAT_CMD_tutorial_17
     :alt: A screenshot of the main TOPCAT window.  It is composed of four main parts.
 	  1. A row of icons along the top of the window.  2. A Table List panel on the left
 	  of the window; this currently shows two tables, called TAP_1_dp02_dc02_catalogs.Object
@@ -390,7 +390,7 @@ In this case, these two columns are `coord_ra` and `coord_dec`;
 so this plot looks very similar to the sky plot you just generated:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_18.png
-    :name: TOPCAT_CMD_tutorial_18.png
+    :name: TOPCAT_CMD_tutorial_18
     :alt: A screenshot of the Plane Plot window.
 	  It shows the RA, DEC positions of the 10000
           objects from Table 2.  Due to the details of
@@ -410,7 +410,7 @@ with `r_calibMag - i_calibMag` and `g_calibMag` in the
 `X` and `Y` windows, respectively, as shown here:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_19.png
-    :name: TOPCAT_CMD_tutorial_19.png
+    :name: TOPCAT_CMD_tutorial_19
     :alt: A screenshot of the Plane Plot window. 
 	  The chart shows a color magnitude diagram, g-band AB magnitude vs r-band minus i-band color, for the objects in Table 2. 
 	  This example demonstrates how to quickly explore the data returned in the search query. 
@@ -433,7 +433,7 @@ panel of the "Plane Plot" window and flipping the `Y` axis as
 follows:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_20.png
-    :name: TOPCAT_CMD_tutorial_20.png
+    :name: TOPCAT_CMD_tutorial_20
     :alt: A screenshot of the Plane Plot window. 
 	  The chart shows a color magnitude diagram, g-band AB magnitude vs r-band minus i-band color, for the objects in Table 2. 
 	  In this rendition, the Y-axis has been flipped; so that bright stars (with small magnitudes) are near the top of the plot 
@@ -449,7 +449,7 @@ at the top of the bottom-right panel of the "Plane Plot"
 window and check the "Draw Grid" option like so:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_21.png
-    :name: TOPCAT_CMD_tutorial_21.png
+    :name: TOPCAT_CMD_tutorial_21
     :alt: A screenshot of the Plane Plot window. 
 	  The chart shows a color magnitude diagram, g-band AB magnitude vs r-band minus i-band color, for the objects in Table 2. 
 	  In this rendition, the Y-axis has been flipped; so that bright stars (with small magnitudes) are near the top of the plot 
@@ -485,7 +485,7 @@ a Plane Plot of `g_calibMagErr` vs `g_calibMag` for those
 plotting window" icon in the main TOPCAT window.:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_22.png
-    :name: TOPCAT_CMD_tutorial_22.png
+    :name: TOPCAT_CMD_tutorial_22
     :alt: A screenshot of the main TOPCAT window.  It is composed of four main parts.
 	  1. A row of icons along the top of the window.  2. A Table List panel on the left
 	  of the window; this currently shows two tables, called TAP_1_dp02_dc02_catalogs.Object
@@ -500,7 +500,7 @@ you can also also add a grid to the plot (as described in
 Step 2.14 above):
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_23.png
-    :name: TOPCAT_CMD_tutorial_23.png
+    :name: TOPCAT_CMD_tutorial_23
     :alt: A screenshot of the Plane Plot window. 
 	  Plotted are the g-band AB magnitude error
 	  versus the g-band AB magnitude.  The g-band
@@ -523,7 +523,7 @@ for that particular object in the other plots.  Its row entry in the
 the "Table Browser" will also be highlighted.**:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_24.png
-    :name: TOPCAT_CMD_tutorial_24.png
+    :name: TOPCAT_CMD_tutorial_24
     :alt: A screen shot showing a Sky Plot window and two 
 	  Plane Plot windows -- one of the color-magnitude
 	  diagram and another of the g-band magnitude error
@@ -559,7 +559,7 @@ it is the 13th icon from the left in the top row of the
 TOPCAT window, and it looks like a 2D rendering of a cube:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_25.png
-    :name: TOPCAT_CMD_tutorial_25.png
+    :name: TOPCAT_CMD_tutorial_25
     :alt: A screenshot of the main TOPCAT window.  It is composed of four main parts.
 	  1. A row of icons along the top of the window.  2. A Table List panel on the left
 	  of the window; this currently shows two tables, called TAP_1_dp02_dc02_catalogs.Object
@@ -574,7 +574,7 @@ of the table -- in this case, `coord_ra`, `coord_dec`, and
 coordinates, respectively:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_26.png
-    :name: TOPCAT_CMD_tutorial_26.png
+    :name: TOPCAT_CMD_tutorial_26
     :alt: A screen shot of a Cube Plot.  Shown is a 2D 
 	  rendering of a 3D cube.  Plotted are RA and DEC
 	  for the X and Y axes, respectively, and the 
@@ -587,7 +587,7 @@ Plot" window with `r_calibMag-i_calibMag`,
 respectively, as follows:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_27.png
-    :name: TOPCAT_CMD_tutorial_27.png
+    :name: TOPCAT_CMD_tutorial_27
     :alt: A screen shot of a Cube Plot.  Shown is a 2D 
 	  rendering of a 3D cube.  Plotted are the AB
 	  colors r-i, g-r, and u-g along the X, Y, and
@@ -610,7 +610,7 @@ down-down menue and insert `i_calbMag` in the
 "Aux" window, like so:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_28.png
-    :name: TOPCAT_CMD_tutorial_28.png
+    :name: TOPCAT_CMD_tutorial_28
     :alt: A screen shot of a Cube Plot.  Shown is a 2D 
 	  rendering of a 3D cube.  Plotted are the AB
 	  colors r-i, g-r, and u-g along the X, Y, and
@@ -642,7 +642,7 @@ choose a different color paletter from the
 case, the "Rainbow" color palette was chosen:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_29.png
-    :name: TOPCAT_CMD_tutorial_29.png
+    :name: TOPCAT_CMD_tutorial_29
     :alt: A screen shot of a Cube Plot.  Shown is a 2D 
 	  rendering of a 3D cube.  Plotted are the AB
 	  colors r-i, g-r, and u-g along the X, Y, and
@@ -661,7 +661,7 @@ you haven't done so already, use your mouse to
 rotate the plot to a different configuration; e.g.:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_30.png
-    :name: TOPCAT_CMD_tutorial_30.png
+    :name: TOPCAT_CMD_tutorial_30
     :alt: A screen shot of a Cube Plot.  Shown is a 2D 
 	  rendering of a 3D cube.  Plotted are the AB
 	  colors r-i, g-r, and u-g along the X, Y, and
