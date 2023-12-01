@@ -33,7 +33,7 @@ illustrate the Portal service in the first of the :ref:`DP0-2-Tutorials-Portal`.
 Beginner-level TOPCAT users looking for a more general overview of TOPCAT should refer to the `TOPCAT homepage <https://www.star.bris.ac.uk/~mbt/topcat/>`_.
 
 It should be noted that all the functionality demonstrated in Examples 1, 2, and 3 below -- i.e., all but the interactive 3D plots of Example 4 -- is 
-possible via the RSP Portal Aspect (see :doc:`/data-access-analysis-tools/portal-intro`).
+possible via the RSP Portal Aspect (see :ref:`DP0-2-Tutorials-Portal`).
 
 .. _DP0-2-TOPCAT-Beginner-Example-1:
 
