@@ -136,4 +136,21 @@ Advanced Task 1
 Advanced Task 2
 ===============
 
+Step 1. Visualize the region of the cluster and plot a color-magnitude diagram
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1.1. Enter the coordinates ”3h43m00.00s, -32d16m19.00s” next to “Coords or Obj Name” and next to “Radius”, enter “200”.
+
+1.2. Select the columns “g” “r” and “i_cmodelFlux”, “g", “r” and “i_extendedness” and “detect_isPrimary”. In the “constraints” column, enter “=1” for “g", “r” and “i_extendedness”and for the “detect_isPrimary”. Then click “search” on the lower left. 
+
+1.3. Click on the layers icon (hover-over text “manipulate overlay display”) and unselect “coverage”.
+
+1.4. Click on the Active Chart settings icon (two gears, upper right) and set “X” to be “to be “-2.5 * log10(i_cModelFlux) + 31.4”, and “Y” to be “(-2.5 * log10(r_cModelFlux)) - (-2.5 * log10(i_cModelFlux))” . Under Chart Options, set the “X Label” to “i” and “Y Label” to “r-i”. 
+
+Step 2. Highlight the cluster members
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+2.1. On the chart on the right, click and drag over the points roughly between 16 and 20 i magnitude. Click on the filter next to “Pin chart” to show only the selected points. 
+2.2. Click on the layers icon (hover-over text “manipulate overlay display”) and select “coverage”.
+
 
