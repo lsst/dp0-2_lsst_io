@@ -120,7 +120,7 @@ Example 2. Run a more detailed query
 
 **2.1.** Delete the ADQL in the "ADQL Text" panel from Example 1, replace it with the following 
 ADQL, and click the "Run Query" button.  This query will return the ``coord_ra``, ``coord_dec``, 
-and the ugrizy ``calibFlux`` and ``calibFluxErr`` columns for the top 10000 entries returned from 
+and the u,g,r,i,z,y ``calibFlux`` and ``calibFluxErr`` columns for the top 10000 entries returned from 
 the ``dp02_dc2_catalogs.Object`` table for bright (>360 nJy), non-extended (star-like) primary 
 objects within 1 degree of (RA,DEC)=(62,-37).  
 
@@ -162,6 +162,7 @@ will pop up.  (It will close once the query completes.)
 	  TAP_1_dp02_dc02_catalogs.Object, is being
 	  loaded into TOPCAT.
 
+    The "Load New Table" window.  It will open automatically while the query is running and close when the query finishes.
 
 **2.3.**  Note that, once the query completes, there is a second
 table in the "Table List" panel of the main TOPCAT window.
@@ -175,6 +176,8 @@ table in the "Table List" panel of the main TOPCAT window.
 	  3. A Current Table Properties panel on the right of the window.
 	  4. A small SAMP panel just below the Current Table Properties panel.
 
+    The main TOPCAT window with the newly created table highlighted in gray in the Table List panel.
+
 **2.4.**  Like in Step 1.5 of Example 1, click on the “Display table cell data” icon.
 A TOPCAT Table Browser window like the following will open up.  This is a large table, 
 and there are both horizontal and vertical scrollbars to permit the user to scroll
@@ -186,6 +189,8 @@ to other parts of the table.
 	  called TAP_2_dp02_dc02_catalogs.Object.  This is a large table, and there
 	  are both horizontal and vertical scrollbars to permit the user to scroll
 	  to other parts of the table.
+
+    The Table Browser Window, showing the contents of the newly created table.
 
 **2.5.** Click on the "Display column metadata" icon -- the 6th icon from the left in the row of icons 
 at the top of the main TOPCAT window (it looks like a table with the first row highlighted in blue).
@@ -200,6 +205,7 @@ This will open up a "Table Columns" window.
 	  3. A Current Table Properties panel on the right of the window.
 	  4. A small SAMP panel just below the Current Table Properties panel.
 
+    The main TOPCAT window with the  "Display column metadata" icon circled in blue.
 
 **2.6.** Note the content of the "Table Columns" window.  Each table column is listed, along with various
 information about that column -- e.g., its name, the class and datatype of its contents, its units (if any), 
