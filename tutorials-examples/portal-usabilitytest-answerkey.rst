@@ -130,8 +130,8 @@ Step 1. Retrieve processed visit images
 
 1.6. Click “Search” at lower left.
 
-Step 2. 
-=======
+Step 2. View and align the images
+=================================
 
 2.1  Click on “Bi-view Tables” in the upper right corner to show just one image and the table side-by-side. To display the deepCoadds, select “Data Product” tab.
 
@@ -152,10 +152,10 @@ Intermediate Task 2
 Use the ADQL interface to obtain, from the DP0.2 DiaSource table, an r-band light curve for the Type Ia supernova which has a diaObjectId of 1250953961339360185. Retrieve the r-band fluxes and their errors derived from a linear least-squares fit of a PSF model, and the effective mid-exposure time, for all diaSources associated with this diaObjectId. Plot the light curve as the flux as a function of time, with error bars associated to each flux point. Change the plot style to use connected points, the point style to be red circles, and then sort the results by midPointTai. Update the plot axes labels to be "PSF Difference-Image Flux" and "MJD of the Exposure Midpoint".
 Hint: In the ADQL query, the diaObjectId will need to be formatted as a string (e.g., 'r'). 
 
-Step 1. 
-=======
+Step 1. Query the DiaSource table with ADQL
+===========================================
 
-1.1. On the upper right of the portal aspect, click on “Edit ADQL.”
+1.1. On the upper right of the portal aspect, click on “Edit ADQL”.
 
 1.2. Enter the following ADQL code into the “ADQL Query” box:
 
@@ -167,16 +167,18 @@ Step 1.
 	WHERE diasrc.diaObjectId = 1250953961339360185
 	AND diasrc.filterName = 'r'
 
-Step 2. 
-=======
+1.3. Click “Search” at lower left.
+
+Step 2. Create a light curve plot
+=================================
 
 2.1. Click on the Active Chart settings icon and set “X” to be “midPointTai”, and “Y” to be “psFlux”. Under “Y”, select “Error” and enter “psFluxErr”. 
 
-2.2 Under “Trace style” select “Connected points” and under “Trace options” enter “red” for color. 
+2.2. From the drop-down menu next to "Trace Style", choose “Connected points” and under “Trace options” enter “red” for "Color". 
 
-2.3 Click on “Chart Options” and set “X Label” to “MJD of the Exposure Midpoint” and “Y Label” to “PSF Difference-Image Flux”. 
+2.3. Click on “Chart Options” and set “X Label” to “MJD of the Exposure Midpoint” and “Y Label” to “PSF Difference-Image Flux”. 
 
-2.4 To sort the results, click on the table column “midPointTai”.  
+2.4. Click on the table column “midPointTai” to sort the results.  
 
 .. _DP0-2-Portal-UTAK-experienced-task1:
 
