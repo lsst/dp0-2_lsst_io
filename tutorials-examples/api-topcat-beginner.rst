@@ -30,10 +30,13 @@
 This tutorial uses the TOPCAT Virtual Observatory interface to search for bright stars in a small region of sky and create a color-magnitude diagram.
 This is the same demonstration used to illustrate the Table Access Protocol (TAP) service in the first of the :ref:`DP0-2-Tutorials-Notebooks` and to 
 illustrate the Portal service in the first of the :ref:`DP0-2-Tutorials-Portal`.
-Beginner-level TOPCAT users looking for a more general overview of TOPCAT should refer to the `TOPCAT homepage <https://www.star.bris.ac.uk/~mbt/topcat/>`_.
+TOPCAT is a very powerful interactive graphical tool with many useful features -- too many to cover in any detail here -- and beginner-level TOPCAT 
+users looking for a more general overview of these features should refer to the `TOPCAT documentation <https://www.star.bris.ac.uk/~mbt/topcat/>`_.
 
 It should be noted that all the functionality demonstrated in Examples 1, 2, and 3 below -- i.e., all but the interactive 3D plots of Example 4 -- is 
 possible via the RSP Portal Aspect (see :ref:`DP0-2-Tutorials-Portal`).
+
+It should also be noted that the following examples build upon each other; so the user is encouraged to go through them in order.
 
 .. _DP0-2-TOPCAT-Beginner-Example-1:
 
@@ -83,11 +86,16 @@ and then click the "Run Query" button at the bottom of this window.
     :alt: A screenshot of the Table Access Protocol (TAP) Query window.
 	  A list of DP0.2 tables is shown in the top, Metadata panel.
 	  A simple ADQL query is shown in the bottom, ADQL Text panel.
+	  A blue rectangle highlights the ADQL Text panel.
+	  A blue oval highlights the Run Query button.
+          The ADQL Text panel and the "Run Query" button are highlighted with a blue rectangle and a blue oval, respectively.
 	  
-    The Table Access Protocol (TAP) Query window with the ADQL query from Step 1.2 entered into its ADQL Text panel.
+    The Table Access Protocol (TAP) Query window with the ADQL query from Step 1.1 entered into its ADQL Text panel. The ADQL Text panel and the "Run Query" button are highlighted with a blue rectangle and a blue oval, respectively.
 
-**1.4.** Find the table of results in the "Table List" panel of the main TOPCAT window. 
-Since this is short, simple query, TOPCAT will return the table of results pretty rapidly.  
+**1.4.** Find the table of results in the "Table List" panel of the main TOPCAT window, and 
+then click on the "Display table cell data" icon.  It is the 4th icon from the left in 
+the row of icons at the top of the main TOPCAT window (it looks like a table with the first 
+row and first column grayed out).  
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_03.png
     :name: TOPCAT_CMD_tutorial_03
@@ -96,13 +104,12 @@ Since this is short, simple query, TOPCAT will return the table of results prett
 	  of the window; this currently shows one table, called TAP_1_dp02_dc02_catalogs.Object,
 	  and it is highlighted.  3. A Current Table Properties panel on the right of the window.
 	  4. A small SAMP panel just below the Current Table Properties panel.
+          The "Display table cell data" icon is indicated by a blue circle.
 
-    The main TOPCAT window with the newly created table -- which is holding the results from the ADQL -- highlighted in blue in the Table List panel.
+    The main TOPCAT window with the newly created table -- which is holding the results from the ADQL -- highlighted in blue in the Table List panel.  The "Display table cell data" icon is indicated by a blue circle.
 
-**1.5.** Click on the "Display table cell data" icon.  It is the 4th icon from the left in 
-the row of icons at the top of the main TOPCAT window (it looks like a table with the first 
-row and first column grayed out).  A TOPCAT Table Browser window like the following will 
-open up.  For this simple query, there are only 10 entries; the whole content of this table
+**1.5.** View the contents of the TOPCAT Table Browser window that has opened.
+For this simple query, there are only 10 entries; the whole content of this table
 is visible.  For larger tables, vertical and horizontal scrollbars appear that permit 
 viewing other parts of the table.
 
@@ -120,7 +127,7 @@ Example 2. Run a more detailed query
 
 **2.1.** Delete the ADQL in the "ADQL Text" panel from Example 1, replace it with the following 
 ADQL, and click the "Run Query" button.  This query will return the ``coord_ra``, ``coord_dec``, 
-and the u,g,r,i,z,y ``calibFlux`` and ``calibFluxErr`` columns for the top 10000 entries returned from 
+and the (u,g,r,i,z,y) ``calibFlux`` and ``calibFluxErr`` columns for the top 10000 entries returned from 
 the ``dp02_dc2_catalogs.Object`` table for bright (>360 nJy), non-extended (star-like) primary 
 objects within 1 degree of (RA,DEC)=(62,-37).  
 
@@ -164,8 +171,8 @@ will pop up.  (It will close once the query completes.)
 
     The "Load New Table" window.  It will open automatically while the query is running and close when the query finishes.
 
-**2.3.**  Note that, once the query completes, there is a second
-table in the "Table List" panel of the main TOPCAT window.
+**2.3.**  Note that, once the query completes, there is a second table in the "Table List" panel of the main TOPCAT window.  
+Now, like in Step 1.4 of Example 1, click on the “Display table cell data” icon.
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_06.png
     :name: TOPCAT_CMD_tutorial_06
@@ -175,13 +182,13 @@ table in the "Table List" panel of the main TOPCAT window.
 	  and TAP_1_dp02_dc02_catalogs.Object; the second table is highlighted.
 	  3. A Current Table Properties panel on the right of the window.
 	  4. A small SAMP panel just below the Current Table Properties panel.
+          The "Display table cell data" icon is indicated by a blue circle.
 
-    The main TOPCAT window with the newly created table highlighted in gray in the Table List panel.
+    The main TOPCAT window with the newly created table highlighted in gray in the Table List panel.  The "Display table cell data" icon is indicated by a blue circle.
 
-**2.4.**  Like in Step 1.5 of Example 1, click on the “Display table cell data” icon.
-A TOPCAT Table Browser window like the following will open up.  This is a large table, 
-and there are both horizontal and vertical scrollbars to permit the user to scroll
-to other parts of the table.
+**2.4.**  View the contents of the TOPCAT Table Browser window that has opened.
+Unlike the table from Example 1, this is a large table, and there are both horizontal 
+and vertical scrollbars to permit the user to scroll to other parts of the table.
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_07.png
     :name: TOPCAT_CMD_tutorial_07
@@ -204,6 +211,7 @@ This will open up a "Table Columns" window.
 	  and TAP_1_dp02_dc02_catalogs.Object; the second table is highlighted.
 	  3. A Current Table Properties panel on the right of the window.
 	  4. A small SAMP panel just below the Current Table Properties panel.
+          The  "Display column metadata" icon circled in blue.
 
     The main TOPCAT window with the  "Display column metadata" icon circled in blue.
 
@@ -218,22 +226,25 @@ and its description (if any).
 	  if available, the units and description 
 	  of each of the columns in the table.
 
+    The "Table Columns" window.  The "Add column" icon -- which will be used in the next step -- is circled in blue.
 
+**2.6.** Create a new column for the u-band AB magnitude for the objects in this table.
 
-**2.6.**  Let's create some columns of our own.  
-Let's start by creating a column for the u-band
-AB magnitude of the objects in this table.  To 
-add a column, click on the big green plus ("+")
-sign that is the left-most icon in the top row of
-the Table Columns window from the previous step.
+* Click on the "Add column" icon -- the big green plus ("+") sign that is the left-most icon in the top row of the Table Columns window from the previous step. 
 This will open a "Define Synthetic Column" window.
 
-Note that the fluxes returned by our ADQL query 
-are in nanojanskys; they can be converted to AB magnitudes 
-via the equation, "m(AB) = -2.5*log10(flux [nanojanskys]) + 31.4".
-Explicitly, for u-band, one can create a `u_calibMag`
-column by filling in the following in the "Define
-Synthetic Column" window like so:
+* Insert `u_calibMag` for the "Name" in the "Define Synthetic Column" window.
+
+* Insert the following equation -- which converts fluxes in nanojanskys to AB magnitudes -- for the "Expression" in the "Define Synthetic Column" window.
+  (Note that the `AB Magnitudes Wikipedia <https://en.wikipedia.org/wiki/AB_magnitude>`_ page provides a concise resource for users who are unfamiliar with AB magnitudes and fluxes in units of janskys.)  
+
+.. code-block:: python
+
+   -2.5*log10(u_calibFlux + 31.4
+
+* Insert `mag` for the "Units" in the "Define Synthetic Column" window.
+
+* Click the "OK" button on the "Define Synthetic Column" window.
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_10.png
     :name: TOPCAT_CMD_tutorial_10
@@ -244,11 +255,7 @@ Synthetic Column" window like so:
 	  is the equation for converting flux in nano-janskys
           to AB magnitudes, where the flux is u_calibFlux.
 
-and clicking the "OK" button.
-
-(**Notice:** The `AB Magnitudes Wikipedia <https://en.wikipedia.org/wiki/AB_magnitude>`_ page 
-provides a concise resource for users who are unfamiliar with AB magnitudes and fluxes in 
-units of janskys.)
+   "Define Synthetic Column" window filled out for creating a u-band AB magnitude column. 
 
 **2.7.**  Let us also calculate the error in the u-band magnitude.
 Recall that magnitudes are are logarithmic quantities.  For relatively
