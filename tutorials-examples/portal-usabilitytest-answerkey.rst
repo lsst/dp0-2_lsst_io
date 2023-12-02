@@ -241,7 +241,7 @@ Step 2. Query for bright extended objects
        	scisql_nanojanskyToAbMag(r_cModelFlux) as rmag,
        	scisql_nanojanskyToAbMag(i_cModelFlux) as imag
 	FROM dp02_dc2_catalogs.Object 
-	WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),CIRCLE('ICRS', 56.5, -36.5, 1))=1 
+	WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),CIRCLE('ICRS', 56.65, -36.45, 1))=1 
         AND (detect_isPrimary =1 
        	AND scisql_nanojanskyToAbMag(g_cModelFlux) < 20 AND g_extendedness =1 
        	AND scisql_nanojanskyToAbMag(r_cModelFlux) < 20 AND r_extendedness =1 
@@ -261,6 +261,12 @@ Step 3. Narrow down the number of objects and visually inspect
 
 
 3.4. Scroll through and visually inspect the results until finding the galaxy (objectId = 1650235011896472264).
+
+.. figure:: /_static/portal_UTAK_intermediate_task1.png
+	:name: portal_UTAK_experienced_task1
+	:alt: A screenshot of the image display for the elongated galaxy and table results 
+
+	Image of the particularly bright elongated galaxy
 
 
 .. _DP0-2-Portal-UTAK-experienced-task2:
