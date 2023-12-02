@@ -212,14 +212,56 @@ The following figure, taken from the DP0.2 data products page, has three panels:
 Hint: Do an image search to find the coordinates of the object and then a catalog search.
 Hint: Query for bright extended objects near the tract center and then visually review the results until you find the target.   
 
-Step 1. 
-=======
+Step 1. Find the coordinates of the tract center
 
-Step 2. 
-=======
 
-Step 3. 
-=======
+1.1. Check the “Use Image Search (ObsTAP)” box below “LSST DP0.2 DC2 Tables”. Under “Enter Constraints”, unselect the box to the left of “Location”.
+
+
+1.2. In the table on the right, under “Output Column Selection and Constraints”, search for “lsst_tract” and enter “=3828” in the “constraints” column. 
+
+
+1.3. Click “Search” at lower left.
+
+
+Step 2. Query for bright extended objects
+
+
+2.1. On the upper right of the portal aspect, click on “Edit ADQL”.
+
+
+2.2. Query for extended objects brighter than 20th magnitude, near the center of the tract, including objectId. 
+
+.. code-block:: SQL
+
+	SELECT coord_dec, coord_ra, detect_isPrimary, objectId, 
+       	g_extendedness, r_extendedness, i_extendedness, 
+       	scisql_nanojanskyToAbMag(g_cModelFlux) as gmag, 
+       	scisql_nanojanskyToAbMag(r_cModelFlux) as rmag,
+       	scisql_nanojanskyToAbMag(i_cModelFlux) as imag
+	FROM dp02_dc2_catalogs.Object 
+	WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),CIRCLE('ICRS', 56.5, -36.5, 1))=1 
+        AND (detect_isPrimary =1 
+       	AND scisql_nanojanskyToAbMag(g_cModelFlux) < 20 AND g_extendedness =1 
+       	AND scisql_nanojanskyToAbMag(r_cModelFlux) < 20 AND r_extendedness =1 
+       	AND scisql_nanojanskyToAbMag(i_cModelFlux) < 20 AND i_extendedness =1)
+
+
+Step 3. Narrow down the number of objects and visually inspect
+
+
+3.1. Click on the Active Chart settings icon (two gears) and choose “Add New Chart”. Next to “Radius”, from the drop down menu, choose “Histogram”. Enter “gmag” for “Column or Expression”. Repeat for “rmag” and “imag” to see the distribution of magnitudes in the three bands. Particularly bright objects have magnitudes < 16. 
+
+
+3.2. In the results table, under the column “rmag” and “imag”, enter “< 16.5” to narrow down the results. 
+
+
+3.3. Select the “Coverage” tab and click on the first result from the table. Zoom-in to visually inspect the object. 
+
+
+3.4. Scroll through and visually inspect the results until finding the galaxy (objectId = 1650235011896472264).
+
+
 
 .. _DP0-2-Portal-UTAK-experienced-task2:
 
@@ -236,7 +278,7 @@ Step 1. Visualize the region of the cluster
 
 1.1. Under “Enter Constraints”, enter the coordinates “3h43m00.00s, -32d16m19.00s” for “Coords or Obj Name”. Next to “Radius”, from the drop down menu choose “arcseconds” and then enter “200”.
 
-1.2. Select the output columns “coord_ra”, “coord_dec”, “r” and “i_cModelFlux”, “r” and “i_extendedness” and “detect_isPrimary”. In the “constraints” column, enter “=1” for “g", “r” and “i_extendedness”and for the “detect_isPrimary”. In the “constraints” column, enter “=1” for the “detect_isPrimary”.
+1.2. Select the output columns “coord_ra”, “coord_dec”, “r” and “i_cModelFlux”, “r” and “i_extendedness” and “detect_isPrimary”. In the “constraints” column, enter “=1” for “g", “r” and “i_extendedness” and for “detect_isPrimary”.
 
 1.3. Click “Search” at lower left.
 
