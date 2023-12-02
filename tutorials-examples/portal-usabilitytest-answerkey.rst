@@ -262,7 +262,7 @@ Step 3. Narrow down the number of objects and visually inspect
 
 3.4. Scroll through and visually inspect the results until finding the galaxy (objectId = 1650235011896472264).
 
-.. figure:: /_static/portal_UTAK_intermediate_task1.png
+.. figure:: /_static/portal_UTAK_experienced_task1.png
 	:name: portal_UTAK_experienced_task1
 	:alt: A screenshot of the image display for the elongated galaxy and table results 
 
