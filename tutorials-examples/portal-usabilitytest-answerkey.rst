@@ -70,6 +70,12 @@ Step 3. Zoom-in and save the diagram
 
 3.2. Click on "Pin Chart" and then the save icon (next to the 1x magnifying glass) to download the chart as a PNG.
 
+.. figure:: /_static/portal_UTAK_beginner_task1.png
+	:name: portal_UTAK_beginner_task1
+	:alt: The chart shows a color flux diagram, g-band minus r-band flux vs i-band flux, for the objects returned by the search query.
+
+        The g-r color vs i flux diagram 
+
 .. _DP0-2-Portal-UTAK-beginner-task2:
 
 ===============
@@ -105,6 +111,12 @@ Step 3. Plot only extended objects
 
 2.1 Click on the Active Chart settings icon (two gears) and click on “Trace Options”. Next to “Symbol”, from the drop down menu choose “circle-open”. Next to "Color", enter "purple".
 
+.. figure:: /_static/portal_UTAK_beginner_task2.png
+	:name: portal_UTAK_beginner_task2
+	:alt: The chart shows the g-band psfFlux vs the g-band calibFlux, for the extended objects returned by the search query.
+
+        The g psfFlux vs g calibFlux diagram for extended objects 
+
 .. _DP0-2-Portal-UTAK-intermediate-task1:
 
 ===================
@@ -131,7 +143,7 @@ Step 1. Retrieve processed visit images
 Step 2. View and align the images
 =================================
 
-2.1  Click on “Bi-view Tables” in the upper right corner to show just one image and the table side-by-side. To display the deepCoadds, select “Data Product” tab.
+2.1  Click on “Bi-view Tables” in the upper right corner to show just one image and the table side-by-side. To display the PVIs, select “Data Product” tab.
 
 2.2. Above the image, click on the grid icon (hover-over text “Tile all images in the search result table”) to simultaneously view all 4 i band PVIs.
 
@@ -140,6 +152,12 @@ Step 2. View and align the images
 2.4. Click on the align icon above the image (hover-over text “Image alignment drop down.”) and under “Align and Lock Options” select “by WCS”.
 
 2.5. Click the Zoom icon and then Zoom-in (magnifying glass with a plus) 3 times.
+
+.. figure:: /_static/portal_UTAK_intermediate_task1.png
+	:name: portal_UTAK_intermediate_task1
+	:alt: A screenshot of the image display and table results 
+
+	A zoom-in of the aligned i-band PVIs
 
 .. _DP0-2-Portal-UTAK-intermediate-task2:
 
@@ -177,6 +195,12 @@ Step 2. Create a light curve plot
 2.3. Click on “Chart Options” and set “X Label” to “MJD of the Exposure Midpoint” and “Y Label” to “PSF Difference-Image Flux”. 
 
 2.4. Click on the table column “midPointTai” to sort the results.  
+
+.. figure:: /_static/portal_UTAK_intermediate_task2.png
+	:name: portal_UTAK_intermediate_task2
+	:alt: A screenshot of the image display and table results 
+
+	The light curve after sorting by the exposure midpoint
 
 .. _DP0-2-Portal-UTAK-experienced-task1:
 
