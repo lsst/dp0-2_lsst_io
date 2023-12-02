@@ -52,7 +52,7 @@ Step 1. Query the DP0.2 Object catalog
 
 1.3. In the table on the right, under “Output Column Selection and Constraints”, select “coord_ra”, “coord_dec”, “detect_isPrimary”, “g” “r” and “i_calibFlux”. Click on the filter icon to show only the selected columns. 
 
-1.4. In the “constraints” column, enter “=1” for the “detect_isPrimary”.
+1.4. In the “constraints” column, enter “=1” for “detect_isPrimary”.
 
 1.5. Click “Search” at the lower left.
 
@@ -68,7 +68,7 @@ Step 3. Zoom-in and save the diagram
 
 3.1. Click on the Zoom-in icon (magnifying glass with a plus) and click and drag over the clump on points. 
 
-3.2. Click on the save icon (next to the 1x magnifying glass) to download the chart as a PNG.
+3.2. Click on "Pin Chart" and then the save icon (next to the 1x magnifying glass) to download the chart as a PNG.
 
 .. _DP0-2-Portal-UTAK-beginner-task2:
 
@@ -87,7 +87,7 @@ Step 1. Query the DP0.2 Object catalog
 
 1.3. Select the output columns “coord_ra”, “coord_dec”, “g_psfFlux” “g_calibFlux” and “g_extendedness” and “detect_isPrimary”. Click on the filter icon to show only the selected columns. 
 
-1.4. In the “constraints” column, enter “=1” for the “detect_isPrimary”.
+1.4. In the “constraints” column, enter “=1” for “detect_isPrimary”.
 
 1.5. Set the “Row Limit” to 20000, to only retrieve 20000 objects.
 
@@ -97,8 +97,6 @@ Step 2. Create a g psfFlux vs. g cmodelFlux diagram
 ===================================================
 
 2.1. Click on the Active Chart settings icon (two gears) and set “X” to be “g_calibFlux”, and “Y” to be “g_psfFlux”. 
-
-2.2. Click on “Chart Options” and set “X Label” to “g calibFlux” and “Y Label” to “g psfFlux”. 
 
 Step 3. Plot only extended objects 
 ==================================
@@ -137,9 +135,9 @@ Step 2. View and align the images
 
 2.2. Above the image, click on the grid icon (hover-over text “Tile all images in the search result table”) to simultaneously view all 4 i band PVIs.
 
-2.3 Click on the first image and choose the "center" icon (hover-over text “Image center drop down.”), and in the box next to “Center On” enter coordinates, “55.75, -32.27”, and then click “Go”.
+2.3 Click on the first image and choose the "center" icon (hover-over text “Image center drop down.”), and in the box next to “Center On” enter coordinates, “55.75, -32.27”, and then click “Go and Mark”.
 
-2.4. Click on the “align” icon above the image (hover-over text “Image alignment drop down.”) and under “Align and Lock Options” select “by WCS”.
+2.4. Click on the align icon above the image (hover-over text “Image alignment drop down.”) and under “Align and Lock Options” select “by WCS”.
 
 2.5. Click the Zoom icon and then Zoom-in (magnifying glass with a plus) 3 times.
 
