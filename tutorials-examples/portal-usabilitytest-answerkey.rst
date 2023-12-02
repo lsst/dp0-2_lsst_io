@@ -209,27 +209,31 @@ Query the DP0.2 Object catalog for the galaxy cluster around Right Ascension 3h4
 
 Hint: use a search radius of 200 arcseconds.
 
-Step 1. Visualize the region of the cluster and plot a color-magnitude diagram
+Step 1. Visualize the region of the cluster
 ===========================================
 
-1.1. Enter the coordinates ”3h43m00.00s, -32d16m19.00s” next to “Coords or Obj Name” and next to “Radius”, enter “200”.
+1.1. Under “Enter Constraints”, enter the coordinates “3h43m00.00s, -32d16m19.00s” for “Coords or Obj Name”. Next to “Radius”, from the drop down menu choose “arcseconds” and then enter “200”.
 
-1.2. Select the columns “g” “r” and “i_cmodelFlux”, “g", “r” and “i_extendedness” and “detect_isPrimary”. In the “constraints” column, enter “=1” for “g", “r” and “i_extendedness”and for the “detect_isPrimary”. Then click “search” on the lower left. 
+1.2. Select the output columns “coord_ra”, “coord_dec”, “r” and “i_cModelFlux”, “r” and “i_extendedness” and “detect_isPrimary”. In the “constraints” column, enter “=1” for “g", “r” and “i_extendedness”and for the “detect_isPrimary”. In the “constraints” column, enter “=1” for the “detect_isPrimary”.
 
-1.3. Click on the layers icon (hover-over text “manipulate overlay display”) and unselect “coverage”.
+1.3. Click “Search” at lower left.
+
+1.4. Under the "Coverage" tab, click on the layers icon (hover-over text “manipulate overlay display”) and unselect “Coverage”.
 
 Step 2. Create a color-magnitude diagram
 ========================================
 
-2.1. Click on the Active Chart settings icon (two gears, upper right) and set “X” to be “to be “-2.5 * log10(i_cModelFlux) + 31.4”, and “Y” to be “(-2.5 * log10(r_cModelFlux)) - (-2.5 * log10(i_cModelFlux))” . 
+2.1. Click on the Active Chart settings icon (two gears) and set “X” to be “to be “-2.5 * log10(i_cModelFlux) + 31.4”, and “Y” to be “(-2.5 * log10(r_cModelFlux)) - (-2.5 * log10(i_cModelFlux))” . 
 
 2.2. Under Chart Options, set the “X Label” to “i” and “Y Label” to “r-i”. 
 
 Step 3. Highlight the cluster members
 =====================================
 
-3.1. On the chart on the right, click and drag over the points roughly between 16 and 20 i magnitude. Click on the filter next to “Pin chart” to show only the selected points. 
+3.1. On the chart on the right, click and drag over the points roughly with 16 < i < 20. 
 
-3.2. Click on the layers icon (hover-over text “manipulate overlay display”) and select “coverage”.
+3.2. Click on the filter icon (next to “Pin chart”) to show only the selected points. 
+
+3.3. Under the "Coverage" tab, click on the layers icon (hover-over text “manipulate overlay display”) and select “Coverage”.
 
 
