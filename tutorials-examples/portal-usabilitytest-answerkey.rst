@@ -213,19 +213,20 @@ Hint: Do an image search to find the coordinates of the object and then a catalo
 Hint: Query for bright extended objects near the tract center and then visually review the results until you find the target.   
 
 Step 1. Find the coordinates of the tract center
+================================================
 
-
-1.1. Check the “Use Image Search (ObsTAP)” box below “LSST DP0.2 DC2 Tables”. Under “Enter Constraints”, unselect the box to the left of “Location”.
-
+1.1. Check the “Use Image Search (ObsTAP)” box below “LSST DP0.2 DC2 Tables”. Under “Enter Constraints”, unselect the box to the left of "Observation Type and Source" and “Location”.
 
 1.2. In the table on the right, under “Output Column Selection and Constraints”, search for “lsst_tract” and enter “=3828” in the “constraints” column. 
 
 
 1.3. Click “Search” at lower left.
 
+1.4. Under the "Coverage" tab, find the center of the tract and note the coordinates, around "56.65, -36.45". Alternatively, visually inspect each patch and find the coordinates of the galaxy. The galaxy is in patch 38, with coordinates around "56.74,-36.08". 
+
 
 Step 2. Query for bright extended objects
-
+=========================================
 
 2.1. On the upper right of the portal aspect, click on “Edit ADQL”.
 
@@ -248,7 +249,7 @@ Step 2. Query for bright extended objects
 
 
 Step 3. Narrow down the number of objects and visually inspect
-
+==============================================================
 
 3.1. Click on the Active Chart settings icon (two gears) and choose “Add New Chart”. Next to “Radius”, from the drop down menu, choose “Histogram”. Enter “gmag” for “Column or Expression”. Repeat for “rmag” and “imag” to see the distribution of magnitudes in the three bands. Particularly bright objects have magnitudes < 16. 
 
@@ -260,7 +261,6 @@ Step 3. Narrow down the number of objects and visually inspect
 
 
 3.4. Scroll through and visually inspect the results until finding the galaxy (objectId = 1650235011896472264).
-
 
 
 .. _DP0-2-Portal-UTAK-experienced-task2:
