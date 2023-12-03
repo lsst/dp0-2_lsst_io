@@ -228,20 +228,21 @@ and its description (if any).
 
     The "Table Columns" window.  The "Add column" icon -- which will be used in the next step -- is circled in blue.
 
-**2.7.** Create a new column for the u-band AB magnitude.
+**2.7.** Create a new column for the u-band AB magnitude.  (Note that the `AB Magnitudes Wikipedia <https://en.wikipedia.org/wiki/AB_magnitude>`_ page provides a concise resource for users who are unfamiliar with the AB magnitude system.)
 
 * Click on the "Add column" icon -- the big green plus ("+") sign that is the left-most icon in the top row of the Table Columns window from the previous step. This will open a "Define Synthetic Column" window.
 
 * Insert ``u_calibMag`` for the "Name" in the "Define Synthetic Column" window.
 
-* Insert the following equation -- which converts fluxes in nanojanskys to AB magnitudes -- for the "Expression" in the "Define Synthetic Column" window.
-  (Note that the `AB Magnitudes Wikipedia <https://en.wikipedia.org/wiki/AB_magnitude>`_ page provides a concise resource for users who are unfamiliar with AB magnitudes and fluxes in units of janskys.)  
+* Insert the following equation -- which converts fluxes in nanojanskys to AB magnitudes -- for the "Expression" in the "Define Synthetic Column" window.  
 
 .. code-block:: python
 
    -2.5*log10(u_calibFlux) + 31.4
 
-* Insert ``mag`` for the "Units" in the "Define Synthetic Column" window.
+* `(Optional)` Insert ``mag`` for the "Units" in the "Define Synthetic Column" window.
+
+* `(Optional)` Insert ``Apparent magnitude within 12.0-pixel aperture.  Measured on u-band.`` for the "Description" in the "Define Synthetic Column" window.
 
 * Click the "OK" button on the "Define Synthetic Column" window.
 
@@ -260,8 +261,8 @@ and its description (if any).
 
 **2.7.**  Create a new column for the `error` in the u-band AB magnitude.
 Recall that magnitudes are are logarithmic quantities.  For relatively
-small errors (less than about 10%) one can perform the propagation-of-
-errors analysis to find sigma(mag) = (2.5/ln(10.)) * (sigma(flux)/flux), 
+small errors (less than about 10%) one can perform the propagation-of-errors 
+analysis to find sigma(mag) = (2.5/ln(10.)) * (sigma(flux)/flux), 
 which can be approximated as sigma(mag) = 1.086*(sigma(flux)/flux).  
 
 * Insert ``u_calibMagErr`` for the "Name" in the "Define Synthetic Column" window.
@@ -272,7 +273,9 @@ which can be approximated as sigma(mag) = 1.086*(sigma(flux)/flux).
 
    1.086*(u_calibFluxErr/u_calibFlux)
 
-* Insert ``mag`` for the "Units" in the "Define Synthetic Column" window.
+* `(Optional)` Insert ``mag`` for the "Units" in the "Define Synthetic Column" window.
+
+* `(Optional)` Insert ``Error in the apparent magnitude within 12.0-pixel aperture.  Measured on u-band.`` for the "Description" in the "Define Synthetic Column" window.
 
 * Click the "OK" button on the "Define Synthetic Column" window.
 
@@ -305,8 +308,27 @@ which can be approximated as sigma(mag) = 1.086*(sigma(flux)/flux).
 
 
 **2.8.**  Repeat Steps 2.6 and 2.7 for the other filter bands 
-(g,r,i,z,y).  After doing so, you will see entries for all of these
-new columns in the Table Columns window.
+(g,r,i,z,y).  After doing so, entries for all of these
+new columns will appear in the Table Columns window.  
+For convenience, here are copy-and-pasteable versions of 
+the equations for the AB magnitude and the AB magnitude 
+error for each of the filter bands.
+
+.. code-block:: python
+
+   -2.5*log10(g_calibFlux) + 31.4
+   -2.5*log10(r_calibFlux) + 31.4
+   -2.5*log10(i_calibFlux) + 31.4
+   -2.5*log10(z_calibFlux) + 31.4
+   -2.5*log10(y_calibFlux) + 31.4
+
+.. code-block:: python
+
+   1.086*(g_calibFluxErr/g_calibFlux)
+   1.086*(r_calibFluxErr/r_calibFlux)
+   1.086*(i_calibFluxErr/i_calibFlux)
+   1.086*(z_calibFluxErr/z_calibFlux)
+   1.086*(y_calibFluxErr/y_calibFlux)
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_13.png
     :name: TOPCAT_CMD_tutorial_13
