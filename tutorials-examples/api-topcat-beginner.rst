@@ -228,7 +228,7 @@ and its description (if any).
 
     The "Table Columns" window.  The "Add column" icon -- which will be used in the next step -- is circled in blue.
 
-**2.6.** Create a new column for the u-band AB magnitude for the objects in this table.
+**2.7.** Create a new column for the u-band AB magnitude.
 
 * Click on the "Add column" icon -- the big green plus ("+") sign that is the left-most icon in the top row of the Table Columns window from the previous step. This will open a "Define Synthetic Column" window.
 
@@ -255,15 +255,26 @@ and its description (if any).
 	  is the equation for converting flux in nano-janskys
           to AB magnitudes, where the flux is u_calibFlux.
 
-   "Define Synthetic Column" window filled out for creating a u-band AB magnitude column. 
+    The "Define Synthetic Column" window filled out for creating a u-band AB magnitude column. 
 
-**2.7.**  Let us also calculate the error in the u-band magnitude.
+
+**2.7.**  Create a new column for the `error` in the u-band AB magnitude.
 Recall that magnitudes are are logarithmic quantities.  For relatively
 small errors (less than about 10%) one can perform the propagation-of-
 errors analysis to find sigma(mag) = (2.5/ln(10.)) * (sigma(flux)/flux), 
 which can be approximated as sigma(mag) = 1.086*(sigma(flux)/flux).  
-Let's use this equation to add a `u_calibMagErr` column by filling in 
-the following in the "Define Synthetic Column" window like so:
+
+* Insert ``u_calibMagErr`` for the "Name" in the "Define Synthetic Column" window.
+
+* Insert the following equation -- which converts relative errors in flux to errors in magnitudes -- for the "Expression" in the "Define Synthetic Column" window.
+ 
+.. code-block:: python
+
+   1.086*(u_calibFluxErr/u_calibFlux)
+
+* Insert ``mag`` for the "Units" in the "Define Synthetic Column" window.
+
+* Click the "OK" button on the "Define Synthetic Column" window.
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_11.png
     :name: TOPCAT_CMD_tutorial_11
@@ -274,10 +285,10 @@ the following in the "Define Synthetic Column" window like so:
 	  is the equation for converting flux and error in the
 	  flux to error in magnitude.  
 
-and clicking the "OK" button.
+    The "Define Synthetic Column" window filled out for creating a u-band AB magnitude error column. 
 
-Each time you add a column, the column will appear in the "Table Columns"
-window:
+
+**2.7.**  Note that each time a column is added, column will appear in the "Table Columns" window.
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_12.png
     :name: TOPCAT_CMD_tutorial_12
@@ -290,11 +301,12 @@ window:
           u_calibMag and u_calibMagErr, and the expressions
 	  used to derive them.
 
+    The "Table Columns" window showing the new columns, ``u_calibMag`` and ``u_calibMagErr``, at the bottom of the table column list.
+
 
 **2.8.**  Repeat Steps 2.6 and 2.7 for the other filter bands 
 (g,r,i,z,y).  After doing so, you will see entries for all of these
-new columns in the Table Columns window, like this (where the new 
-columns have been highlighted in blue):
+new columns in the Table Columns window.
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_13.png
     :name: TOPCAT_CMD_tutorial_13
@@ -307,12 +319,13 @@ columns have been highlighted in blue):
           the calibrated magnitudes and magnitude errors
 	  for the 6 LSST filter passbands, as well as 
 	  the expressions used to derive these newly derived 
-	  quantities.
+	  quantities.  The new columns are highlighted in blue.
+
+    The "Table Columns" window showing all the new columns at the bottom of the table column list.  The new columns are highlighted in blue.
 
 
-**2.9.**  You will also see values for the new columns tabulated 
-within the Table Browser (click on the "Display table cell data" 
-icon in the main TOPCAT window as in Step 2.4 above):
+**2.9.**  Click on the "Display table cell data" icon in the main TOPCAT window (as in Step 2.3 above).
+The values for the new columns are now tabulated within the Table Browser along with the values from the original columns. 
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_14.png
     :name: TOPCAT_CMD_tutorial_14
@@ -321,6 +334,7 @@ icon in the main TOPCAT window as in Step 2.4 above):
 	  This is a large table, and there are both horizontal and vertical scrollbars 
 	  to permit the use to scroll to other parts of the table.
 
+    The Table Browser Window, showing the contents of Table 2, including for the columns just created.
 
 **2.10.**  As a brief aside, let's create a skyplot of the 
 RA,DEC positions of the stars returned by the query.  To do
