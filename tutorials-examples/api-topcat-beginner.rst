@@ -230,21 +230,21 @@ and its description (if any).
 
 **2.6.** Create a new column for the u-band AB magnitude for the objects in this table.
 
-* Click on the "Add column" icon -- the big green plus ("+") sign that is the left-most icon in the top row of the Table Columns window from the previous step. 
-This will open a "Define Synthetic Column" window.
+* Click on the "Add column" icon -- the big green plus ("+") sign that is the left-most icon in the top row of the Table Columns window from the previous step. This will open a "Define Synthetic Column" window.
 
-* Insert `u_calibMag` for the "Name" in the "Define Synthetic Column" window.
+* Insert ``u_calibMag`` for the "Name" in the "Define Synthetic Column" window.
 
 * Insert the following equation -- which converts fluxes in nanojanskys to AB magnitudes -- for the "Expression" in the "Define Synthetic Column" window.
   (Note that the `AB Magnitudes Wikipedia <https://en.wikipedia.org/wiki/AB_magnitude>`_ page provides a concise resource for users who are unfamiliar with AB magnitudes and fluxes in units of janskys.)  
 
 .. code-block:: python
 
-   -2.5*log10(u_calibFlux + 31.4
+   -2.5*log10(u_calibFlux) + 31.4
 
-* Insert `mag` for the "Units" in the "Define Synthetic Column" window.
+* Insert ``mag`` for the "Units" in the "Define Synthetic Column" window.
 
 * Click the "OK" button on the "Define Synthetic Column" window.
+
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_10.png
     :name: TOPCAT_CMD_tutorial_10
