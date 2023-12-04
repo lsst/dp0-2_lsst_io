@@ -270,8 +270,8 @@ and its description (if any).
 **2.8.**  Create a new column for the `error` in the u-band AB magnitude.
 Recall that magnitudes are are logarithmic quantities.  For relatively
 small errors (less than about 10%) one can perform the propagation-of-errors 
-analysis to find :math:`{\sigma}`(mag) = (2.5/ln(10.)) * (:math:`{\sigma}`(flux)/flux), 
-which can be approximated as :math:`{\sigma}`(mag) = 1.086*(:math:`{\sigma}`(flux)/flux).  
+analysis to find :math:`\sigma_\mathrm{mag} = (2.5/ln(10.)) \times ( \sigma_\mathrm{flux} / \mathrm{flux} )`, 
+which can be approximated as :math:`\sigma_\mathrm{mag} = 1.086 \times ( \sigma_\mathrm{flux} / \mathrm{flux} )`.  
 
 * Insert ``u_calibMagErr`` for the "Name" in the "Define Synthetic Column" window.
 
