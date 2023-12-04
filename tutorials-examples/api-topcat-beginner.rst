@@ -121,7 +121,7 @@ viewing other parts of the table.
     :alt: A screenshot of a Table Browser window.  It shows the contents of Table 1, 
 	  called TAP_1_dp02_dc02_catalogs.Object.
 
-    T**Figure 4:** he Table Browser Window, showing the contents of the newly created table.
+    **Figure 4:** he Table Browser Window, showing the contents of the newly created table.
 
 .. _DP0-2-TOPCAT-Beginner-Example-2:
 
@@ -264,7 +264,7 @@ and its description (if any).
 	  is the equation for converting flux in nano-janskys
           to AB magnitudes, where the flux is u_calibFlux.
 
-    **Figure 10:** The "Define Synthetic Column" window filled out for creating a u-band AB magnitude column. 
+    **Figure 9:** The "Define Synthetic Column" window filled out for creating a u-band AB magnitude column. 
 
 
 **2.7.**  Create a new column for the `error` in the u-band AB magnitude.
@@ -296,7 +296,7 @@ which can be approximated as sigma(mag) = 1.086*(sigma(flux)/flux).
 	  is the equation for converting flux and error in the
 	  flux to error in magnitude.  
 
-    **Figure 11:** The "Define Synthetic Column" window filled out for creating a u-band AB magnitude error column. 
+    **Figure 10:** The "Define Synthetic Column" window filled out for creating a u-band AB magnitude error column. 
 
 
 **2.7.**  Note that each time a column is added, column will appear in the "Table Columns" window.
@@ -312,7 +312,7 @@ which can be approximated as sigma(mag) = 1.086*(sigma(flux)/flux).
           u_calibMag and u_calibMagErr, and the expressions
 	  used to derive them.
 
-    **Figure 12:** The "Table Columns" window showing the new columns, ``u_calibMag`` and ``u_calibMagErr``, at the bottom of the table column list.
+    **Figure 11:** The "Table Columns" window showing the new columns, ``u_calibMag`` and ``u_calibMagErr``, at the bottom of the table column list.
 
 
 **2.8.**  Repeat Steps 2.6 and 2.7 for the other filter bands 
@@ -351,7 +351,7 @@ error for each of the filter bands.
 	  the expressions used to derive these newly derived 
 	  quantities.  The new columns are highlighted in blue.
 
-    **Figure 13:** The "Table Columns" window showing all the new columns at the bottom of the table column list.  The new columns are highlighted in blue.
+    **Figure 12:** The "Table Columns" window showing all the new columns at the bottom of the table column list.  The new columns are highlighted in blue.
 
 
 **2.9.**  Click on the "Display table cell data" icon in the main TOPCAT window (as in Step 2.3 above).
@@ -381,7 +381,7 @@ like a blank X/Y plot).
 	  4. A small SAMP panel just below the Current Table Properties panel.
           The Plane plotting window icon circled in blue.
 
-    **Figure 14:** The main TOPCAT window with the "Plane plotting window" icon circled in blue.
+    **Figure 13:** The main TOPCAT window with the "Plane plotting window" icon circled in blue.
 
 **2.10.** Note that TOPCAT has returned with a Plane Plot window, initially
 plotting the first 2 numerical columns from the table.  In this case, these 
@@ -404,7 +404,7 @@ sky plot.
 	  the table name and the columns to be used for 
 	  the X (RA) and Y (DEC) coordinates.
 
-    **Figure 15:** The Plane Plot window, plotting ``coord_dec`` vs. ``coord_ra`` for the 10000 
+    **Figure 14:** The Plane Plot window, plotting ``coord_dec`` vs. ``coord_ra`` for the 10000 
     star-like objects returned by the Example 2 ADQL query.
 
 **2.12.**  Replace ``coord_ra`` and ``coord_dec`` with ``r_calibMag - i_calibMag`` and ``g_calibMag`` 
@@ -429,7 +429,7 @@ produced for this set of stars (and star-like objects).
           because the simulated data are based on discrete red stellar models that were used as input 
           into DP0.2. Real data are expected to instead show a smooth distribution of colors.
 
-    **Figure 16:** The Plane Plot window, plotting ``g_calibMag`` vs. ``r_calibMag - i_calibMag`` for the 10000 
+    **Figure 15:** The Plane Plot window, plotting ``g_calibMag`` vs. ``r_calibMag - i_calibMag`` for the 10000 
     star-like objects returned by the Example 2 ADQL query.  (The "quantized" colors for objects 
     with ``r_calibMag - i_calibMag > 0.6`` are an artifact of the simulation upon which DP0.2 is based.)
 
@@ -449,7 +449,7 @@ this convention, click on the "Axes" button in the lower-left panel of the "Plan
           color because the simulated data are based on discrete red stellar models that were used as 
           input into DP0.2. Real data are expected to instead show a smooth distribution of colors.
 
-    **Figure 17:** Same as previous plot, but with the y-axis flipped.
+    **Figure 16:** Same as previous plot, but with the y-axis flipped.
 
 **2.15.**  Finally, to guide the eye, add a grid to the plot.  To do so, click on the "Grid" button 
 at the top of the bottom-right panel of the "Plane Plot" window and check the "Draw Grid" option.
@@ -467,7 +467,7 @@ at the top of the bottom-right panel of the "Plane Plot" window and check the "D
           color because the simulated data are based on discrete red stellar models that were used as 
           input into DP0.2. Real data are expected to instead show a smooth distribution of colors.
 
-    **Figure 18:** Same as previous plot, but with a grid added.
+    **Figure 17:** Same as previous plot, but with a grid added.
 
 
 Example 3. Interact with multiple plots from the same table
