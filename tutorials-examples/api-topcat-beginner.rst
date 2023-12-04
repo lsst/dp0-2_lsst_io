@@ -63,7 +63,7 @@ can be resized by clicking and dragging window corners or component edges.)
 	  the available Query Language is ADQL-2.0.  The bottom panel is the ADQL Text panel, and it 
 	  indicates the current Mode is Synchronous; the bottom panels text box is currently empty.
 
-    The Table Access Protocol (TAP) Query window with the main TOPCAT window in the background.
+    **Figure 1:** The Table Access Protocol (TAP) Query window with the main TOPCAT window in the background.
 
 **1.2.** Prepare a simple ADQL spatial query to return a small set of values from 
 ``dp02_dc2_catalogs.Object`` table.  Specifically create an ADQL query that returns 
@@ -93,7 +93,7 @@ and then click the "Run Query" button at the bottom of this window.
 	  A blue oval highlights the Run Query button.
           The ADQL Text panel and the "Run Query" button are highlighted with a blue rectangle and a blue oval, respectively.
 	  
-    The Table Access Protocol (TAP) Query window with the ADQL query from Step 1.1 entered into its ADQL Text panel. The ADQL Text panel and the "Run Query" button are highlighted with a blue rectangle and a blue oval, respectively.
+    **Figure 2:** The Table Access Protocol (TAP) Query window with the ADQL query from Step 1.1 entered into its ADQL Text panel. The ADQL Text panel and the "Run Query" button are highlighted with a blue rectangle and a blue oval, respectively.
 
 **1.4.** Find the table of results in the "Table List" panel of the main TOPCAT window, and 
 then click on the "Display table cell data" icon.  It is the 4th icon from the left in 
@@ -109,7 +109,7 @@ row and first column grayed out).
 	  4. A small SAMP panel just below the Current Table Properties panel.
           The "Display table cell data" icon is indicated by a blue circle.
 
-    The main TOPCAT window with the newly created table -- which is holding the results from the ADQL -- highlighted in blue in the Table List panel.  The "Display table cell data" icon is indicated by a blue circle.
+    **Figure 3:** The main TOPCAT window with the newly created table -- which is holding the results from the ADQL -- highlighted in blue in the Table List panel.  The "Display table cell data" icon is indicated by a blue circle.
 
 **1.5.** View the contents of the TOPCAT Table Browser window that has opened.
 For this simple query, there are only 10 entries; the whole content of this table
@@ -121,7 +121,7 @@ viewing other parts of the table.
     :alt: A screenshot of a Table Browser window.  It shows the contents of Table 1, 
 	  called TAP_1_dp02_dc02_catalogs.Object.
 
-    The Table Browser Window, showing the contents of the newly created table.
+    T**Figure 4:** he Table Browser Window, showing the contents of the newly created table.
 
 .. _DP0-2-TOPCAT-Beginner-Example-2:
 
@@ -177,7 +177,7 @@ will pop up.  (It will close once the query completes.)
 	  TAP_1_dp02_dc02_catalogs.Object, is being
 	  loaded into TOPCAT.
 
-    The "Load New Table" window.  It will open automatically while the query is running and close when the query finishes.
+    **Figure 5:** The "Load New Table" window.  It will open automatically while the query is running and close when the query finishes.
 
 **2.3.**  Note that, once the query completes, there is a second table in the "Table List" panel of the main TOPCAT window.  
 Now, like in Step 1.4 of Example 1, click on the “Display table cell data” icon.
@@ -192,7 +192,7 @@ Now, like in Step 1.4 of Example 1, click on the “Display table cell data” i
 	  4. A small SAMP panel just below the Current Table Properties panel.
           The "Display table cell data" icon is indicated by a blue circle.
 
-    The main TOPCAT window with the newly created table highlighted in gray in the Table List panel.  The "Display table cell data" icon is indicated by a blue circle.
+    **Figure 6:** The main TOPCAT window with the newly created table highlighted in gray in the Table List panel.  The "Display table cell data" icon is indicated by a blue circle.
 
 **2.4.**  View the contents of the TOPCAT Table Browser window that has opened.
 Unlike the table from Example 1, this is a large table, and there are both horizontal 
@@ -205,7 +205,7 @@ and vertical scrollbars to permit the user to scroll to other parts of the table
 	  are both horizontal and vertical scrollbars to permit the user to scroll
 	  to other parts of the table.
 
-    The Table Browser Window, showing the contents of the newly created table.
+    **Figure 7:** The Table Browser Window, showing the contents of the newly created table.
 
 **2.5.** Click on the "Display column metadata" icon -- the 6th icon from the left in the row of icons 
 at the top of the main TOPCAT window (it looks like a table with the first row highlighted in blue).
@@ -234,7 +234,7 @@ and its description (if any).
 	  if available, the units and description 
 	  of each of the columns in the table.
 
-    The "Table Columns" window.  The "Add column" icon -- which will be used in the next step -- is circled in blue.
+    **Figure 8:** The "Table Columns" window.  The "Add column" icon -- which will be used in the next step -- is circled in blue.
 
 **2.7.** Create a new column for the u-band AB magnitude.  (Note that the `AB Magnitudes Wikipedia <https://en.wikipedia.org/wiki/AB_magnitude>`_ page provides a concise resource for users who are unfamiliar with the AB magnitude system.)
 
@@ -264,7 +264,7 @@ and its description (if any).
 	  is the equation for converting flux in nano-janskys
           to AB magnitudes, where the flux is u_calibFlux.
 
-    The "Define Synthetic Column" window filled out for creating a u-band AB magnitude column. 
+    **Figure 10:** The "Define Synthetic Column" window filled out for creating a u-band AB magnitude column. 
 
 
 **2.7.**  Create a new column for the `error` in the u-band AB magnitude.
@@ -296,7 +296,7 @@ which can be approximated as sigma(mag) = 1.086*(sigma(flux)/flux).
 	  is the equation for converting flux and error in the
 	  flux to error in magnitude.  
 
-    The "Define Synthetic Column" window filled out for creating a u-band AB magnitude error column. 
+    **Figure 11:** The "Define Synthetic Column" window filled out for creating a u-band AB magnitude error column. 
 
 
 **2.7.**  Note that each time a column is added, column will appear in the "Table Columns" window.
@@ -312,7 +312,7 @@ which can be approximated as sigma(mag) = 1.086*(sigma(flux)/flux).
           u_calibMag and u_calibMagErr, and the expressions
 	  used to derive them.
 
-    The "Table Columns" window showing the new columns, ``u_calibMag`` and ``u_calibMagErr``, at the bottom of the table column list.
+    **Figure 12:** The "Table Columns" window showing the new columns, ``u_calibMag`` and ``u_calibMagErr``, at the bottom of the table column list.
 
 
 **2.8.**  Repeat Steps 2.6 and 2.7 for the other filter bands 
@@ -351,7 +351,7 @@ error for each of the filter bands.
 	  the expressions used to derive these newly derived 
 	  quantities.  The new columns are highlighted in blue.
 
-    The "Table Columns" window showing all the new columns at the bottom of the table column list.  The new columns are highlighted in blue.
+    **Figure 13:** The "Table Columns" window showing all the new columns at the bottom of the table column list.  The new columns are highlighted in blue.
 
 
 **2.9.**  Click on the "Display table cell data" icon in the main TOPCAT window (as in Step 2.3 above).
@@ -381,7 +381,7 @@ like a blank X/Y plot).
 	  4. A small SAMP panel just below the Current Table Properties panel.
           The Plane plotting window icon circled in blue.
 
-    The main TOPCAT window with the "Plane plotting window" icon circled in blue.
+    **Figure 14:** The main TOPCAT window with the "Plane plotting window" icon circled in blue.
 
 **2.10.** Note that TOPCAT has returned with a Plane Plot window, initially
 plotting the first 2 numerical columns from the table.  In this case, these 
@@ -404,7 +404,7 @@ sky plot.
 	  the table name and the columns to be used for 
 	  the X (RA) and Y (DEC) coordinates.
 
-    The Plane Plot window, plotting ``coord_dec`` vs. ``coord_ra`` for the 10000 
+    **Figure 15:** The Plane Plot window, plotting ``coord_dec`` vs. ``coord_ra`` for the 10000 
     star-like objects returned by the Example 2 ADQL query.
 
 **2.12.**  Replace ``coord_ra`` and ``coord_dec`` with ``r_calibMag - i_calibMag`` and ``g_calibMag`` 
@@ -429,7 +429,7 @@ produced for this set of stars (and star-like objects).
           because the simulated data are based on discrete red stellar models that were used as input 
           into DP0.2. Real data are expected to instead show a smooth distribution of colors.
 
-    The Plane Plot window, plotting ``g_calibMag`` vs. ``r_calibMag - i_calibMag`` for the 10000 
+    **Figure 16:** The Plane Plot window, plotting ``g_calibMag`` vs. ``r_calibMag - i_calibMag`` for the 10000 
     star-like objects returned by the Example 2 ADQL query.  (The "quantized" colors for objects 
     with ``r_calibMag - i_calibMag > 0.6`` are an artifact of the simulation upon which DP0.2 is based.)
 
@@ -449,7 +449,7 @@ this convention, click on the "Axes" button in the lower-left panel of the "Plan
           color because the simulated data are based on discrete red stellar models that were used as 
           input into DP0.2. Real data are expected to instead show a smooth distribution of colors.
 
-    Same as previous plot, but with the y-axis flipped.
+    **Figure 17:** Same as previous plot, but with the y-axis flipped.
 
 **2.15.**  Finally, to guide the eye, add a grid to the plot.  To do so, click on the "Grid" button 
 at the top of the bottom-right panel of the "Plane Plot" window and check the "Draw Grid" option.
@@ -467,7 +467,7 @@ at the top of the bottom-right panel of the "Plane Plot" window and check the "D
           color because the simulated data are based on discrete red stellar models that were used as 
           input into DP0.2. Real data are expected to instead show a smooth distribution of colors.
 
-    Same as previous plot, but with a grid added.
+    **Figure 18:** Same as previous plot, but with a grid added.
 
 
 Example 3. Interact with multiple plots from the same table
