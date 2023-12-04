@@ -318,7 +318,7 @@ which can be approximated as :math:`\sigma_\mathrm{mag} = 1.086 \times ( \sigma_
 **2.10.**  Repeat Steps 2.6 and 2.7 for the other filter bands 
 (g,r,i,z,y).  After doing so, entries for all of these
 new columns will appear in the Table Columns window.  
-For convenience, here are copy-and-pasteable versions of 
+For convenience, here are "copy-and-paste" versions of 
 the equations for the AB magnitude and the AB magnitude 
 error for each of the filter bands.
 
@@ -408,8 +408,8 @@ sky plot.
     star-like objects returned by the Example 2 ADQL query.
 
 **2.14.**  Replace ``coord_ra`` and ``coord_dec`` with ``r_calibMag - i_calibMag`` and ``g_calibMag`` 
-in the ``X`` and ``Y`` windows, respectively.  For convenience, here are copy-and-pasteable versions 
-of these two coordinate expressions:
+in the ``X`` and ``Y`` windows, respectively.  For convenience, here are "copy-and-paste" versions 
+of these two coordinate expressions.
 
 .. code-block:: python
 
@@ -473,52 +473,18 @@ at the top of the bottom-right panel of the "Plane Plot" window and check the "D
 Example 3. Interact with multiple plots from the same table
 ===========================================================
 
-Another strength of TOPCAT is that the data from a given 
-table are linked across the plots based on that table.
-For instance, let's look at plots from the table returned
-from the Example 2 ADQL query above.  You already have two 
-plots from this table -- a Sky Plot showing the RA,DEC
-positions of the 10000 entries contained within that table, 
-and a Plane Plot showing the `g_calibMag` vs. 
-`r_calibMag - i_calibMag` color magnitude diagram for 
-these same 10000 entries.  Let's also add a third plot --
-a Plane Plot of `g_calibMagErr` vs `g_calibMag` for those
-10000 objects.   
+A strength of TOPCAT is that the data from a given table are linked across the plots based on that table.
+This example example investigates this feature by looking at multiple plots for the table of results returned by the ADQL query from Example 2.
+One of these plots will be the color-magnitude diagram produced in Example 2.  Two other plots will also be generated from that same table.
 
-**3.1.**  As in Step 2.11 above, click on the "Plane 
-plotting window" icon in the main TOPCAT window.:
+**3.1.**  If not already done, run through Example 2.  Keep the Table Browser window (from Step 2.11) and the ``g_calibMag`` vs. 
+``r_calibMag - i_calibMag`` color magnitude diagram Sky Plot window (from Step 2.17) open.
 
-.. figure:: /_static/TOPCAT_CMD_tutorial_22.png
-    :name: TOPCAT_CMD_tutorial_22
-    :alt: A screenshot of the main TOPCAT window.  It is composed of four main parts.
-	  1. A row of icons along the top of the window.  2. A Table List panel on the left
-	  of the window; this currently shows two tables, called TAP_1_dp02_dc02_catalogs.Object
-	  and TAP_1_dp02_dc02_catalogs.Object; the second table is highlighted.
-	  3. A Current Table Properties panel on the right of the window.
-	  4. A small SAMP panel just below the Current Table Properties panel.
-
-Then replace the column names in the `X` and `Y` windows
-in the lower-right panel of the "Plane Plot" window with
-`g_calibMag` and `g_calibMagErr, respectively.  If you want,
-you can also also add a grid to the plot (as described in 
-Step 2.14 above):
-
-.. figure:: /_static/TOPCAT_CMD_tutorial_23.png
-    :name: TOPCAT_CMD_tutorial_23
-    :alt: A screenshot of the Plane Plot window. 
-	  Plotted are the g-band AB magnitude error
-	  versus the g-band AB magnitude.  The g-band
-	  AB magnitude ranges from about 16 to 25.
-          The g-band AB magnitude starts out near zero
-          but starts to increase exponentially around
-	  22th magnitude, reaching 0.10 around 25th 
-	  magnitude.
-
-
-**2.10.**  Create a skyplot of the RA,DEC positions of the stars returned by the query.  
-To do so, go back to the main TOPCAT window and click on the "Sky plotting window" icon -- 
+**3.2.** Create a skyplot of the RA,DEC positions of the stars returned by the query.  
+To do so, go to the main TOPCAT window, ensure that the table from the Example 2 query 
+is highlighted in the "Table List" panel, and click on the "Sky plotting window" icon -- 
 the 12th icon from the left in the row of icons at the top of the main TOPCAT window 
-(it looks like a small, gridded Aitoff map projection).
+(it looks like a small, gridded Aitoff map projection).  
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_15.png
     :name: TOPCAT_CMD_tutorial_15
@@ -530,9 +496,9 @@ the 12th icon from the left in the row of icons at the top of the main TOPCAT wi
 	  4. A small SAMP panel just below the Current Table Properties panel.
 	  The Sky plotting window icon is circled in blue.
 
-    The main TOPCAT window.  The "Sky plotting window" icon is circled in blue.
+    **Figure 18:** The main TOPCAT window.  The "Sky plotting window" icon is circled in blue.
 
-**2.10.**  Note the Sky Plot window that TOPCAT returns.
+**3.3.**  Note the Sky Plot window that TOPCAT returns.
 TOPCAT is generally pretty good at identifying which columns in 
 a table represent (RA, DEC) coordinates, and it succeeds
 in this case, plotting `coord_ra` and `coord_dec` as the 
@@ -542,8 +508,7 @@ zoomed in and out interactively via the mouse or scroll wheel.
 Also note that TOPCAT plots the grid by default in sexagesimal 
 units, but these (and other aspects of the plot) can be modified 
 using the Axes button in the lower left panel of the Sky Plot window.
-For more information, please consult the 
-`TOPCAT documentation <http://www.star.bris.ac.uk/~mbt/topcat/>`_.
+Keep this Sky Plot window open for later steps in this example.
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_16.png
     :name: TOPCAT_CMD_tutorial_16
@@ -562,21 +527,54 @@ For more information, please consult the
 	  columns to be used for the longitude (RA) and
 	  latitude (DEC).
 
-    The Skyplot window, showing the sky positions in (sexagesimal) equatorial coordindates for the entries returned by the Example 2 ADQL query.
+    **Figure 19:** The Skyplot window, showing the sky positions in (sexagesimal) equatorial coordindates for the entries returned by the Example 2 ADQL query.
 
 
+**3.4.**  Create a Plane Plot of the estimated error in the g-band AB magnitude (``g_calibMagErr``) vs. the g-band AB magnitude itself (``g_calibMag``) 
 
-**3.2.** Finally, let's look at all 3 plots together --
-the one "Sky Plot" and the 2 "Plane Plots" -- plus the "Table
-Browser" from Step 2.9.  Using the mouse, you can adjust the
-size of these windows so they all can be viewed simultaneously.
-Now either click on a symbol in one of the plots.  (In the following
-plot, a point near `r_calibMag-i_calibMag=1.0`, `g_calibMag=24.2` was clicked 
+* Click on the "Plane plotting window" icon in the main TOPCAT window.
+
+.. figure:: /_static/TOPCAT_CMD_tutorial_22.png
+    :name: TOPCAT_CMD_tutorial_22
+    :alt: A screenshot of the main TOPCAT window.  It is composed of four main parts.
+	  1. A row of icons along the top of the window.  2. A Table List panel on the left
+	  of the window; this currently shows two tables, called TAP_1_dp02_dc02_catalogs.Object
+	  and TAP_1_dp02_dc02_catalogs.Object; the second table is highlighted.
+	  3. A Current Table Properties panel on the right of the window.
+	  4. A small SAMP panel just below the Current Table Properties panel.
+	  The Plane plotting window icon is circled in blue.
+
+    **Figure 20:** The main TOPCAT window.  The "Plane plotting window" icon is circled in blue.
+
+* Replace the column names in the ``X`` and ``Y`` windows in the lower-right panel of the "Plane Plot" window with
+``g_calibMag`` and ``g_calibMagErr``, respectively.  If desired, add a grid to the plot (as described in Step 2.17).
+Keep this Plane Plot window open for the steps in this example.
+
+.. figure:: /_static/TOPCAT_CMD_tutorial_23.png
+    :name: TOPCAT_CMD_tutorial_23
+    :alt: A screenshot of the Plane Plot window. 
+	  Plotted are the g-band AB magnitude error
+	  versus the g-band AB magnitude.  The g-band
+	  AB magnitude ranges from about 16 to 25.
+          The g-band AB magnitude starts out near zero
+          but starts to increase exponentially around
+	  22th magnitude, reaching 0.10 around 25th 
+	  magnitude.
+
+    **Figure 21:** The "Plane Plot" window, showing ``g_calibMagErr`` plotted against ``g_calibMag``.
+
+**3.2.** Finally, look at all 3 plots together -- the one "Sky Plot" and the 2 "Plane Plots" -- plus the "Table Browser".  
+
+* Using the mouse to "click-and-drag" their corners, the
+size of these windows can be adjusted so they all can be viewed simultaneously.
+
+* Click on a symbol in one of the plots.  (In the following figure, 
+a point near `r_calibMag-i_calibMag=1.0`, `g_calibMag=24.2` was clicked 
 in the color-magnitude plot.)  A small black circle with cross-hairs will appear
-around that particular symbol in that particular plot.  **What's more, 
+around that particular symbol in that particular plot.  `What's more, 
 a small black circle with cross-hairs will also appear around the symbol 
 for that particular object in the other plots.  Its row entry in the
-the "Table Browser" will also be highlighted.**:
+the "Table Browser" will also be highlighted.`
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_24.png
     :name: TOPCAT_CMD_tutorial_24
@@ -593,9 +591,8 @@ the "Table Browser" will also be highlighted.**:
 	  there is a row highlighted in the Table Browser.
           This is the row for that same object marked by 
 	  the black circle with cross-hairs in the 3 plots.
-	  
 
-This data linkage works not only for single objects but for
+* Note that this data linkage works not only for single objects but for
 subsets of points that one can define for the table via the
 TOPCAT interface.  The interested user is again directed to 
 the `TOPCAT documentation <http://www.star.bris.ac.uk/~mbt/topcat/>`_.
