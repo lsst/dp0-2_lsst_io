@@ -546,7 +546,7 @@ Keep this Sky Plot window open for later steps in this example.
 
     **Figure 20:** The main TOPCAT window.  The "Plane plotting window" icon is circled in blue.
 
-* Replace the column names in the ``X`` and ``Y`` windows in the lower-right panel of the "Plane Plot" window with
+* Replace the column names in the "X"` and "Y" windows in the lower-right panel of the "Plane Plot" window with
 ``g_calibMag`` and ``g_calibMagErr``, respectively.  If desired, add a grid to the plot (as described in Step 2.17).
 Keep this Plane Plot window open for the steps in this example.
 
@@ -563,7 +563,7 @@ Keep this Plane Plot window open for the steps in this example.
 
     **Figure 21:** The "Plane Plot" window, showing ``g_calibMagErr`` plotted against ``g_calibMag``.
 
-**3.2.** Finally, look at all 3 plots together -- the one "Sky Plot" and the 2 "Plane Plots" -- plus the "Table Browser".  
+**3.5.** Look at all 3 plots together -- the one "Sky Plot" and the 2 "Plane Plots" -- plus the "Table Browser".  
 
 * Using the mouse to "click-and-drag" their corners, the
 size of these windows can be adjusted so they all can be viewed simultaneously.
@@ -592,7 +592,9 @@ the "Table Browser" will also be highlighted.`
           This is the row for that same object marked by 
 	  the black circle with cross-hairs in the 3 plots.
 
-* Note that this data linkage works not only for single objects but for
+    **Figure 22:** A Sky Plot window, two Plane Plot window, and a Table Browser window displaying data returned from the ADQL query from Example 2.  Note the black circle with cross-hairs in the three plot windows and the row highlighted in gray in the Table Browser window:  these all refer to the same data point.
+
+**3.6.** Note that this data linkage works not only for single objects but for
 subsets of points that one can define for the table via the
 TOPCAT interface.  The interested user is again directed to 
 the `TOPCAT documentation <http://www.star.bris.ac.uk/~mbt/topcat/>`_.
@@ -601,12 +603,14 @@ the `TOPCAT documentation <http://www.star.bris.ac.uk/~mbt/topcat/>`_.
 Example 4. Create interactive 3D plots
 ======================================
 
-As the final example in this tutorial, let's look at the 
-TOPCAT's interactive 3D plot functionality.  For continuity,
-let us make use of the data set already downloaded in Example 2
-and used in both Examples 2 and 3.
+The final example in this tutorial looks at TOPCAT's interactive 3D plot functionality.  
+As with Example 3, the data set returned from the ADQL query in Example 2 will be used.
 
-**4.1.**  First, return to the main TOPCAT window and click 
+**4.1.**  If not already done, run through Example 2, at least through Step 2.10, 
+where the columns for `calibMag`` and ``calibMagErr`` for all the filters are generated.
+
+**4.2.**  Go to the main TOPCAT window, ensure that that the table from the 
+Example 2 query is highlighted in the "Table List" panel, and click 
 on the  "3D plotting window using Cartesian coordinates" icon --
 it is the 13th icon from the left in the top row of the 
 TOPCAT window, and it looks like a 2D rendering of a cube:
@@ -620,11 +624,11 @@ TOPCAT window, and it looks like a 2D rendering of a cube:
 	  3. A Current Table Properties panel on the right of the window.
 	  4. A small SAMP panel just below the Current Table Properties panel.
 
-Upon clicking that icon, TOPCAT will open a "Cube Plot" 
-windown, automatically using the first 3 numeric columns
-of the table -- in this case, `coord_ra`, `coord_dec`, and 
-`u_calibFlux` for the inputs to the `X`, 'Y`, and `Z` 
-coordinates, respectively:
+   **Figure 23:** The main TOPCAT window.  The "3D plotting window using Cartesian coordinates" icon is circled in blue.
+
+**4.3.**  Note that TOPCAT has opened a "Cube Plot" window, automatically using the first 3 
+numeric columns of the table -- in this case, ``coord_ra``, ``coord_dec``, and 
+``u_calibFlux`` for the inputs to the "X", "Y", and "Z" coordinates, respectively:
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_26.png
     :name: TOPCAT_CMD_tutorial_26
@@ -633,11 +637,12 @@ coordinates, respectively:
 	  for the X and Y axes, respectively, and the 
 	  u-band flux for the Z axis.
 
-**4.2.**  Next, replace the contents of the `X`, 'Y', 
-and 'Z' windows in the lower-right panel of the "Cube
-Plot" window with `r_calibMag-i_calibMag`, 
-`g_calibMag-r_calibMag`, and `u_calibMag-g_calibMag`,
-respectively, as follows:
+   **Figure 24:** A "Cube Plot" window, plotting ``coord_ra``, ``coord_dec``, and ``u_calibFlux`` as the "X", "Y", and "Z" coordinates, respectively, for 10000 point sources from Example 2.
+
+**4.2.**  Replace the contents of the "X", "Y", and "Z" windows in the lower-right panel of the "Cube
+Plot" window with ``r_calibMag-i_calibMag``, ``g_calibMag-r_calibMag``, and ``u_calibMag-g_calibMag``,
+respectively.  This yields a 3D color-color-color diagram for the 10000 stars (and other point sources) 
+downloaded in Example 2.
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_27.png
     :name: TOPCAT_CMD_tutorial_27
@@ -650,17 +655,12 @@ respectively, as follows:
 	  corner of the cube.  The disceteness of the locus
 	  for the red stars is also noticeable here.
 
-Now you have a 3D color-color-color diagram for the
-10000 stars (and other point sources) 
-downloaded in Example 2.
+   **Figure 25:** A "Cube Plot" window, plotting the `(r-i)`, `(g-r)`, `(i-z)` color-color-color diagram for the 10000 point sources from Example 2.
 
-**4.3.**  You can add more information to this plot
-by color-coding the individual symbols.  To do this,
-click on the "Form" button in the lower-right panel
-of the "Cube Plot" window; then, in the "Shading" 
-subpanel that appears, choose "aux" in the "Mode"
-down-down menue and insert `i_calbMag` in the 
-"Aux" window, like so:
+**4.3.**  Add more information to this plot by color-coding the individual symbols.  
+To do so, click on the "Form" button in the lower-right panel of the "Cube Plot" window; then, in the "Shading" subpanel that appears, 
+choose "aux" in the "Mode" down-down menu and insert (for example) ``i_calbMag`` in the "Aux" window.  This results in a 3D color-color-color
+plot with the value of ``i_calibMag`` encoded in the color of each symbol.  A color bar also appears at the side of the plot.
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_28.png
     :name: TOPCAT_CMD_tutorial_28
@@ -679,20 +679,12 @@ down-down menue and insert `i_calbMag` in the
           to be relatively faint (i-band AB magnitude 
           fainter than about 22nd magnitude).
 
-As you see, the result is a 3D color-color-color
-plot with the value of `i_calibMag` encoded in 
-the color of each symbol.  A color bar also 
-appears; by default, it uses the "Inferno"
-color look-up table.
+   **Figure 26:** Same as Figure 25, but with the symbols color-coded by their value of ``i_calibMag``.  
 
-**4.4.**  What if you wish to use a different
-color look-up table for your auxiliary axis?
-In that case, click on "Aux Axis" in the 
-left-lower panel of the Cube Plot window.  In 
-the new lower-right panel that appears, 
-choose a different color paletter from the
-"Aux Shader" drop-down menu.  In the following
-case, the "Rainbow" color palette was chosen:
+**4.4.**  Change the color look-up table for the auxiliary axis (color bar).
+To so, click on "Aux Axis" in the left-lower panel of the Cube Plot window.  
+In the new lower-right panel that appears, choose a different color palette from the
+"Aux Shader" drop-down menu.  In the following case, the "Rainbow" color palette was chosen.
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_29.png
     :name: TOPCAT_CMD_tutorial_29
@@ -708,10 +700,12 @@ case, the "Rainbow" color palette was chosen:
           and the fainter object symbols appearing 
           blue, purple, or even black.  
 
-**4.5.**  Finally, TOPCAT *is* interactive.  If 
-you haven't done so already, use your mouse to 
-"click-and-drag" a point in the plot window to
-rotate the plot to a different configuration; e.g.:
+   **Figure 27:** Same as Figure 26, but using the "Rainbow" color palette for the auxiliary axis (color bar).
+
+**4.5.**  Test out the interactive functionality of the 3D cube plot.
+If not already done so, use the mouse to "click-and-drag" a point in the plot window to
+rotate the plot to a different configuration.  Note that, as with the 2D plots, the 3D 
+cube plot can be zoomed in or out using the mouse or a scroll wheel.
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_30.png
     :name: TOPCAT_CMD_tutorial_30
@@ -729,11 +723,4 @@ rotate the plot to a different configuration; e.g.:
           been rotated arbitrarily relative to the 
           rotation of the previous plot.
 
-As with the 2D plots, you can also zoom in or
-out using the mouse or a scroll wheel.
-
-To conclude, TOPCAT is a very powerful interactive
-graphical tool with many useful features.  The 
-interested user is encouraged to explore more
-by consulting the 
-`TOPCAT documentation <http://www.star.bris.ac.uk/~mbt/topcat/>`_.
+   **Figure 28:** Same as Figure 27, but the 3D plot has been rotated about its axes.
