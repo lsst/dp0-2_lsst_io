@@ -267,11 +267,11 @@ and its description (if any).
     **Figure 9:** The "Define Synthetic Column" window filled out for creating a u-band AB magnitude column. 
 
 
-**2.7.**  Create a new column for the `error` in the u-band AB magnitude.
+**2.8.**  Create a new column for the `error` in the u-band AB magnitude.
 Recall that magnitudes are are logarithmic quantities.  For relatively
 small errors (less than about 10%) one can perform the propagation-of-errors 
-analysis to find sigma(mag) = (2.5/ln(10.)) * (sigma(flux)/flux), 
-which can be approximated as sigma(mag) = 1.086*(sigma(flux)/flux).  
+analysis to find :math:`{\sigma}`(mag) = (2.5/ln(10.)) * (:math:`{\sigma}`(flux)/flux), 
+which can be approximated as :math:`{\sigma}`(mag) = 1.086*(:math:`{\sigma}`(flux)/flux).  
 
 * Insert ``u_calibMagErr`` for the "Name" in the "Define Synthetic Column" window.
 
@@ -299,7 +299,7 @@ which can be approximated as sigma(mag) = 1.086*(sigma(flux)/flux).
     **Figure 10:** The "Define Synthetic Column" window filled out for creating a u-band AB magnitude error column. 
 
 
-**2.7.**  Note that each time a column is added, column will appear in the "Table Columns" window.
+**2.9.**  Note that each time a column is added, column will appear in the "Table Columns" window.
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_12.png
     :name: TOPCAT_CMD_tutorial_12
@@ -315,7 +315,7 @@ which can be approximated as sigma(mag) = 1.086*(sigma(flux)/flux).
     **Figure 11:** The "Table Columns" window showing the new columns, ``u_calibMag`` and ``u_calibMagErr``, at the bottom of the table column list.
 
 
-**2.8.**  Repeat Steps 2.6 and 2.7 for the other filter bands 
+**2.10.**  Repeat Steps 2.6 and 2.7 for the other filter bands 
 (g,r,i,z,y).  After doing so, entries for all of these
 new columns will appear in the Table Columns window.  
 For convenience, here are copy-and-pasteable versions of 
@@ -354,7 +354,7 @@ error for each of the filter bands.
     **Figure 12:** The "Table Columns" window showing all the new columns at the bottom of the table column list.  The new columns are highlighted in blue.
 
 
-**2.9.**  Click on the "Display table cell data" icon in the main TOPCAT window (as in Step 2.3 above).
+**2.11.**  Click on the "Display table cell data" icon in the main TOPCAT window (as in Step 2.3 above).
 The values for the new columns are now tabulated within the Table Browser along with the values from the original columns. 
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_14.png
@@ -366,7 +366,7 @@ The values for the new columns are now tabulated within the Table Browser along 
 
     The Table Browser Window, showing the contents of Table 2, including for the columns just created.
 
-**2.10.**  Return to the main TOPCAT window, ensure the table returned by the Example 2 query 
+**2.12.**  Return to the main TOPCAT window, ensure the table returned by the Example 2 query 
 is highlighted in the "Table List" panel, and click on the "Plane plotting window" icon -- the 
 11th icon from the left in the row of icons at the top of the main TOPCAT window (it looks
 like a blank X/Y plot).
@@ -383,7 +383,7 @@ like a blank X/Y plot).
 
     **Figure 13:** The main TOPCAT window with the "Plane plotting window" icon circled in blue.
 
-**2.10.** Note that TOPCAT has returned with a Plane Plot window, initially
+**2.13.** Note that TOPCAT has returned with a Plane Plot window, initially
 plotting the first 2 numerical columns from the table.  In this case, these 
 two columns are ``coord_ra`` and ``coord_dec``; so the plot serves as a basic
 sky plot.
@@ -407,7 +407,7 @@ sky plot.
     **Figure 14:** The Plane Plot window, plotting ``coord_dec`` vs. ``coord_ra`` for the 10000 
     star-like objects returned by the Example 2 ADQL query.
 
-**2.12.**  Replace ``coord_ra`` and ``coord_dec`` with ``r_calibMag - i_calibMag`` and ``g_calibMag`` 
+**2.14.**  Replace ``coord_ra`` and ``coord_dec`` with ``r_calibMag - i_calibMag`` and ``g_calibMag`` 
 in the ``X`` and ``Y`` windows, respectively.  For convenience, here are copy-and-pasteable versions 
 of these two coordinate expressions:
 
@@ -416,7 +416,7 @@ of these two coordinate expressions:
    r_calibMag - i_calibMag
    g_calibMag
 
-**2.13.**  Examine the ``g_calibMag`` vs. ``r_calibMag - i_calibMag`` color magnitude diagram
+**2.15.**  Examine the ``g_calibMag`` vs. ``r_calibMag - i_calibMag`` color magnitude diagram
 produced for this set of stars (and star-like objects).  
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_19.png
@@ -433,7 +433,7 @@ produced for this set of stars (and star-like objects).
     star-like objects returned by the Example 2 ADQL query.  (The "quantized" colors for objects 
     with ``r_calibMag - i_calibMag > 0.6`` are an artifact of the simulation upon which DP0.2 is based.)
 
-**2.14.**  Astronomers usually prefer to plot their color-magnitude diagrams with brighter (lower magnitude) 
+**2.16.**  Astronomers usually prefer to plot their color-magnitude diagrams with brighter (lower magnitude) 
 objects at the top of the plot and fainter (higher magnitude) objects at the bottom.  To adjust the plot to follow 
 this convention, click on the "Axes" button in the lower-left panel of the "Plane Plot" window to flip the ``Y`` axis. 
 
@@ -451,7 +451,7 @@ this convention, click on the "Axes" button in the lower-left panel of the "Plan
 
     **Figure 16:** Same as previous plot, but with the y-axis flipped.
 
-**2.15.**  Finally, to guide the eye, add a grid to the plot.  To do so, click on the "Grid" button 
+**2.17.**  Finally, to guide the eye, add a grid to the plot.  To do so, click on the "Grid" button 
 at the top of the bottom-right panel of the "Plane Plot" window and check the "Draw Grid" option.
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_21.png
