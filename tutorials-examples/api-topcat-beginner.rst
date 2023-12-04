@@ -47,7 +47,7 @@ The main goal of this example is to run a simple and quick TAP server query of t
 table and examine the returned results.
 
 **1.1.** Follow the steps in :ref:`Data-Access-Analysis-Tools-TAP-TOPCAT-get-started` for accessing DP0.2 from TOPCAT.
-At the end of these steps, there should be 2 TOPCAT windows open -- the main TOCPAT window and a "Table Access Protocol
+At the end of these steps, there should be 2 TOPCAT windows open -- the main TOPCAT window and a "Table Access Protocol
 (TAP) Query window -- like in the following figure.  (Note that the TOPCAT windows or components within the windows
 can be resized by clicking and dragging window corners or component edges.)
 
@@ -613,7 +613,7 @@ where the columns for `calibMag`` and ``calibMagErr`` for all the filters are ge
 Example 2 query is highlighted in the "Table List" panel, and click 
 on the  "3D plotting window using Cartesian coordinates" icon --
 it is the 13th icon from the left in the top row of the 
-TOPCAT window, and it looks like a 2D rendering of a cube:
+TOPCAT window, and it looks like a 2D rendering of a cube.
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_25.png
     :name: TOPCAT_CMD_tutorial_25
@@ -624,7 +624,7 @@ TOPCAT window, and it looks like a 2D rendering of a cube:
 	  3. A Current Table Properties panel on the right of the window.
 	  4. A small SAMP panel just below the Current Table Properties panel.
 
-   **Figure 23:** The main TOPCAT window.  The "3D plotting window using Cartesian coordinates" icon is circled in blue.
+    **Figure 23:** The main TOPCAT window.  The "3D plotting window using Cartesian coordinates" icon is circled in blue.
 
 **4.3.**  Note that TOPCAT has opened a "Cube Plot" window, automatically using the first 3 
 numeric columns of the table -- in this case, ``coord_ra``, ``coord_dec``, and 
@@ -637,7 +637,7 @@ numeric columns of the table -- in this case, ``coord_ra``, ``coord_dec``, and
 	  for the X and Y axes, respectively, and the 
 	  u-band flux for the Z axis.
 
-   **Figure 24:** A "Cube Plot" window, plotting ``coord_ra``, ``coord_dec``, and ``u_calibFlux`` as the "X", "Y", and "Z" coordinates, respectively, for 10000 point sources from Example 2.
+    **Figure 24:** A "Cube Plot" window, plotting ``coord_ra``, ``coord_dec``, and ``u_calibFlux`` as the "X", "Y", and "Z" coordinates, respectively, for 10000 point sources from Example 2.
 
 **4.2.**  Replace the contents of the "X", "Y", and "Z" windows in the lower-right panel of the "Cube
 Plot" window with ``r_calibMag-i_calibMag``, ``g_calibMag-r_calibMag``, and ``u_calibMag-g_calibMag``,
@@ -655,7 +655,7 @@ downloaded in Example 2.
 	  corner of the cube.  The disceteness of the locus
 	  for the red stars is also noticeable here.
 
-   **Figure 25:** A "Cube Plot" window, plotting the `(r-i)`, `(g-r)`, `(i-z)` color-color-color diagram for the 10000 point sources from Example 2.
+    **Figure 25:** A "Cube Plot" window, plotting the `(r-i)`, `(g-r)`, `(i-z)` color-color-color diagram for the 10000 point sources from Example 2.
 
 **4.3.**  Add more information to this plot by color-coding the individual symbols.  
 To do so, click on the "Form" button in the lower-right panel of the "Cube Plot" window; then, in the "Shading" subpanel that appears, 
@@ -679,7 +679,7 @@ plot with the value of ``i_calibMag`` encoded in the color of each symbol.  A co
           to be relatively faint (i-band AB magnitude 
           fainter than about 22nd magnitude).
 
-   **Figure 26:** Same as Figure 25, but with the symbols color-coded by their value of ``i_calibMag``.  
+    **Figure 26:** Same as Figure 25, but with the symbols color-coded by their value of ``i_calibMag``.  
 
 **4.4.**  Change the color look-up table for the auxiliary axis (color bar).
 To so, click on "Aux Axis" in the left-lower panel of the Cube Plot window.  
@@ -700,7 +700,7 @@ In the new lower-right panel that appears, choose a different color palette from
           and the fainter object symbols appearing 
           blue, purple, or even black.  
 
-   **Figure 27:** Same as Figure 26, but using the "Rainbow" color palette for the auxiliary axis (color bar).
+    **Figure 27:** Same as Figure 26, but using the "Rainbow" color palette for the auxiliary axis (color bar).
 
 **4.5.**  Test out the interactive functionality of the 3D cube plot.
 If not already done so, use the mouse to "click-and-drag" a point in the plot window to
@@ -723,4 +723,4 @@ cube plot can be zoomed in or out using the mouse or a scroll wheel.
           been rotated arbitrarily relative to the 
           rotation of the previous plot.
 
-   **Figure 28:** Same as Figure 27, but the 3D plot has been rotated about its axes.
+    **Figure 28:** Same as Figure 27, but the 3D plot has been rotated about its axes.
