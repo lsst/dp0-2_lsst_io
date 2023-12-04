@@ -43,6 +43,9 @@ It should also be noted that the following examples build upon each other; so th
 Example 1. Run a simple query
 =============================
 
+The main goal of this example is to run a simple and quick TAP server query of the DP0.2 ``dp02_dc2_catalogs.Object`` 
+table and examine the returned results.
+
 **1.1.** Follow the steps in :ref:`Data-Access-Analysis-Tools-TAP-TOPCAT-get-started` for accessing DP0.2 from TOPCAT.
 At the end of these steps, there should be 2 TOPCAT windows open -- the main TOCPAT window and a "Table Access Protocol
 (TAP) Query window -- like in the following figure.  (Note that the TOPCAT windows or components within the windows
@@ -124,6 +127,11 @@ viewing other parts of the table.
 
 Example 2. Run a more detailed query
 ====================================
+
+The main goal of this example is to create a simple color-magnitude diagram for the 10000 bright point sources
+(mostly stars) returned from a TAP server query of the DP0.2 ``dp02_dc2_catalogs.Object`` table.  This will 
+involve creating new columns based on the columns returned by the query, as well as learning some basic TOPCAT
+plotting routines.
 
 **2.1.** Delete the ADQL in the "ADQL Text" panel from Example 1, replace it with the following 
 ADQL, and click the "Run Query" button.  This query will return the ``coord_ra``, ``coord_dec``, 
@@ -358,64 +366,10 @@ The values for the new columns are now tabulated within the Table Browser along 
 
     The Table Browser Window, showing the contents of Table 2, including for the columns just created.
 
-**2.10.**  As a brief aside, let's create a skyplot of the 
-RA,DEC positions of the stars returned by the query.  To do
-so, go back to the main TOPCAT window and click on the "Sky
-plotting window" icon -- the 11th icon from the left in the
-row of icons at the top of the main TOPCAT window (it looks
-like a small, gridded Aitoff map projection): 
-:
-
-.. figure:: /_static/TOPCAT_CMD_tutorial_15.png
-    :name: TOPCAT_CMD_tutorial_15
-    :alt: A screenshot of the main TOPCAT window.  It is composed of four main parts.
-	  1. A row of icons along the top of the window.  2. A Table List panel on the left
-	  of the window; this currently shows two tables, called TAP_1_dp02_dc02_catalogs.Object
-	  and TAP_1_dp02_dc02_catalogs.Object; the second table is highlighted.
-	  3. A Current Table Properties panel on the right of the window.
-	  4. A small SAMP panel just below the Current Table Properties panel.
-
-
-TOPCAT will return with a Sky Plot window.  TOPCAT is 
-generally pretty good at identifying which columns in 
-a table represent (RA, DEC) coordinates, and it succeeds
-in this case, plotting `coord_ra` and `coord_dec` as the 
-RA and the DEC, respectively:
-
-.. figure:: /_static/TOPCAT_CMD_tutorial_16.png
-    :name: TOPCAT_CMD_tutorial_16
-    :alt: A screenshot of the Sky Plot window.
-	  It shows the RA, DEC positions of the 10000
-          objects from Table 2.  Due to the details of
-	  the ADQL query used to generate Table 2, all
-	  the points lie within a circle of diameter 
-	  1 degree.  Aside from the main plot panel, 
-	  there are two other panels in the Sky Plot
-	  window.  1.  A small panel in the lower right
-	  with icons for Frame, Legend, Axes, STILTS, 
-	  plus the name of the table from which the 
-	  plotted data were taken.  2. A panel indicating
-	  the table name, the Data Sky System, and the 
-	  columns to be used for the longitude (RA) and
-	  latitude (DEC).
-
-Note that TOPCAT automatically adjusts to an appropriate
-RA, DEC range, but you can zoom in and out interactively
-via your mouse or scroll wheel.  Also note that TOPCAT plots
-the grid by default in sexagesimal units, but these (and
-other aspects of the plot) can be modified using the Axes
-button in the lower left panel of the Sky Plot window.
-For more information, please consult the 
-`TOPCAT documentation <http://www.star.bris.ac.uk/~mbt/topcat/>`_.
-
-**2.11.**  Now let us return to the main goal of this tutorial --
-creating a color-magnitude for the 10000 bright point sources
-(mostly stars) returned by our ADQL query.  To do
-so, go back to the main TOPCAT window and click on the "Plane 
-plotting window" icon -- the 11th icon from the left in the
-row of icons at the top of the main TOPCAT window (it looks
-like a blank X/Y plot, and it sits just leftward of the
-"Sky plotting window" icon):
+**2.10.**  Return to the main TOPCAT window, ensure the table returned by the Example 2 query 
+is highlighted in the "Table List" panel, and click on the "Plane plotting window" icon -- the 
+11th icon from the left in the row of icons at the top of the main TOPCAT window (it looks
+like a blank X/Y plot).
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_17.png
     :name: TOPCAT_CMD_tutorial_17
@@ -425,12 +379,14 @@ like a blank X/Y plot, and it sits just leftward of the
 	  and TAP_1_dp02_dc02_catalogs.Object; the second table is highlighted.
 	  3. A Current Table Properties panel on the right of the window.
 	  4. A small SAMP panel just below the Current Table Properties panel.
+          The Plane plotting window icon circled in blue.
 
+    The main TOPCAT window with the "Plane plotting window" icon circled in blue.
 
-TOPCAT will return with a Plane Plot window, initially
-plotting the first 2 numerical columns from the table.
-In this case, these two columns are `coord_ra` and `coord_dec`;
-so this plot looks very similar to the sky plot you just generated:
+**2.10.** Note that TOPCAT has returned with a Plane Plot window, initially
+plotting the first 2 numerical columns from the table.  In this case, these 
+two columns are ``coord_ra`` and ``coord_dec``; so the plot serves as a basic
+sky plot.
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_18.png
     :name: TOPCAT_CMD_tutorial_18
@@ -448,65 +404,70 @@ so this plot looks very similar to the sky plot you just generated:
 	  the table name and the columns to be used for 
 	  the X (RA) and Y (DEC) coordinates.
 
-**2.12.**  First, let's replace `coord_ra` and `coord_dec` 
-with `r_calibMag - i_calibMag` and `g_calibMag` in the 
-`X` and `Y` windows, respectively, as shown here:
+    The Plane Plot window, plotting ``coord_dec`` vs. ``coord_ra`` for the 10000 
+    star-like objects returned by the Example 2 ADQL query.
+
+**2.12.**  Replace ``coord_ra`` and ``coord_dec`` with ``r_calibMag - i_calibMag`` and ``g_calibMag`` 
+in the ``X`` and ``Y`` windows, respectively.  For convenience, here are copy-and-pasteable versions 
+of these two coordinate expressions:
+
+.. code-block:: python
+
+   r_calibMag - i_calibMag
+   g_calibMag
+
+**2.13.**  Examine the ``g_calibMag`` vs. ``r_calibMag - i_calibMag`` color magnitude diagram
+produced for this set of stars (and star-like objects).  
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_19.png
     :name: TOPCAT_CMD_tutorial_19
     :alt: A screenshot of the Plane Plot window. 
-	  The chart shows a color magnitude diagram, g-band AB magnitude vs r-band minus i-band color, for the objects in Table 2. 
+	  The chart shows a color magnitude diagram, g-band AB magnitude vs r-band minus i-band color, 
+          for the objects in Table 2. 
 	  This example demonstrates how to quickly explore the data returned in the search query. 
-	  The plot shows a large density of stars at low r-i color, and discrete bins at redder r-i color because the simulated data are  
-	  based on discrete red stellar models that were used as input into DP0.2. Real data are expected to instead show a smooth distribution of colors.
+	  The plot shows a large density of stars at low r-i color, and discrete bins at redder r-i color 
+          because the simulated data are based on discrete red stellar models that were used as input 
+          into DP0.2. Real data are expected to instead show a smooth distribution of colors.
 
+    The Plane Plot window, plotting ``g_calibMag`` vs. ``r_calibMag - i_calibMag`` for the 10000 
+    star-like objects returned by the Example 2 ADQL query.  (The "quantized" colors for objects 
+    with ``r_calibMag - i_calibMag > 0.6`` are an artifact of the simulation upon which DP0.2 is based.)
 
-This is good!  Plotted is the `g_calibMag` vs. 
-`r_calibMag - i_calibMag` color magnitude diagram
-for this set of stars (and star-like objects).  (The 
-"quantized" colors for objects with `r_calibMag - i_calibMag > 0.6`
-is an artifact of the simulation upon which DP0.2 is based.)
-
-**2.13.**  That said, astronomers usually prefer to plot
-their color-magnitude diagrams with brighter (lower magnitude) 
-objects at the top of the plot and fainter (higher magnitude) 
-objects at the bottom.  You can adjust your plot to follow 
-this convention by clicking on the `Axes` button in the lower-left
-panel of the "Plane Plot" window and flipping the `Y` axis as 
-follows:
+**2.14.**  Astronomers usually prefer to plot their color-magnitude diagrams with brighter (lower magnitude) 
+objects at the top of the plot and fainter (higher magnitude) objects at the bottom.  To adjust the plot to follow 
+this convention, click on the "Axes" button in the lower-left panel of the "Plane Plot" window to flip the ``Y`` axis. 
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_20.png
     :name: TOPCAT_CMD_tutorial_20
     :alt: A screenshot of the Plane Plot window. 
-	  The chart shows a color magnitude diagram, g-band AB magnitude vs r-band minus i-band color, for the objects in Table 2. 
-	  In this rendition, the Y-axis has been flipped; so that bright stars (with small magnitudes) are near the top of the plot 
-	  and faint stars (with large magnitudes) are near the bottom.
+	  The chart shows a color magnitude diagram, g-band AB magnitude vs r-band minus i-band color, 
+          for the objects in Table 2. 
+	  In this rendition, the Y-axis has been flipped; so that bright stars (with small magnitudes) 
+          are near the top of the plot and faint stars (with large magnitudes) are near the bottom.
 	  This example demonstrates how to quickly explore the data returned in the search query. 
-	  The plot shows a large density of stars at low r-i color, and discrete bins at redder r-i color because the simulated data are  
-	  based on discrete red stellar models that were used as input into DP0.2. Real data are expected to instead show a smooth distribution of colors.
+	  The plot shows a large density of stars at low r-i color, and discrete bins at redder r-i 
+          color because the simulated data are based on discrete red stellar models that were used as 
+          input into DP0.2. Real data are expected to instead show a smooth distribution of colors.
 
+    Same as previous plot, but with the y-axis flipped.
 
-**2.14.**  Finally, to guide the eye, you might wish to add a 
-grid to the plot.  To do so, click on the `Grid` button 
-at the top of the bottom-right panel of the "Plane Plot" 
-window and check the "Draw Grid" option like so:
+**2.15.**  Finally, to guide the eye, add a grid to the plot.  To do so, click on the "Grid" button 
+at the top of the bottom-right panel of the "Plane Plot" window and check the "Draw Grid" option.
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_21.png
     :name: TOPCAT_CMD_tutorial_21
     :alt: A screenshot of the Plane Plot window. 
-	  The chart shows a color magnitude diagram, g-band AB magnitude vs r-band minus i-band color, for the objects in Table 2. 
-	  In this rendition, the Y-axis has been flipped; so that bright stars (with small magnitudes) are near the top of the plot 
-	  and faint stars (with large magnitudes) are near the bottom.  In addition, a grid has been added to the plot.
+	  The chart shows a color magnitude diagram, g-band AB magnitude vs r-band minus i-band color, 
+          for the objects in Table 2. 
+	  In this rendition, the Y-axis has been flipped; so that bright stars (with small magnitudes) 
+          are near the top of the plot and faint stars (with large magnitudes) are near the bottom.  
+          In addition, a grid has been added to the plot.
 	  This example demonstrates how to quickly explore the data returned in the search query. 
-	  The plot shows a large density of stars at low r-i color, and discrete bins at redder r-i color because the simulated data are  
-	  based on discrete red stellar models that were used as input into DP0.2. Real data are expected to instead show a smooth distribution of colors.
+	  The plot shows a large density of stars at low r-i color, and discrete bins at redder r-i 
+          color because the simulated data are based on discrete red stellar models that were used as 
+          input into DP0.2. Real data are expected to instead show a smooth distribution of colors.
 
-
-
-TOPCAT has many options for modifying your plots --
-substantially more than can be adequately described in a short
-tutorial like this -- so it is again recommended that the interested
-user consult the `TOPCAT documentation <http://www.star.bris.ac.uk/~mbt/topcat/>`_.
+    Same as previous plot, but with a grid added.
 
 
 Example 3. Interact with multiple plots from the same table
@@ -552,6 +513,58 @@ Step 2.14 above):
           but starts to increase exponentially around
 	  22th magnitude, reaching 0.10 around 25th 
 	  magnitude.
+
+
+**2.10.**  Create a skyplot of the RA,DEC positions of the stars returned by the query.  
+To do so, go back to the main TOPCAT window and click on the "Sky plotting window" icon -- 
+the 12th icon from the left in the row of icons at the top of the main TOPCAT window 
+(it looks like a small, gridded Aitoff map projection).
+
+.. figure:: /_static/TOPCAT_CMD_tutorial_15.png
+    :name: TOPCAT_CMD_tutorial_15
+    :alt: A screenshot of the main TOPCAT window.  It is composed of four main parts.
+	  1. A row of icons along the top of the window.  2. A Table List panel on the left
+	  of the window; this currently shows two tables, called TAP_1_dp02_dc02_catalogs.Object
+	  and TAP_1_dp02_dc02_catalogs.Object; the second table is highlighted.
+	  3. A Current Table Properties panel on the right of the window.
+	  4. A small SAMP panel just below the Current Table Properties panel.
+	  The Sky plotting window icon is circled in blue.
+
+    The main TOPCAT window.  The "Sky plotting window" icon is circled in blue.
+
+**2.10.**  Note the Sky Plot window that TOPCAT returns.
+TOPCAT is generally pretty good at identifying which columns in 
+a table represent (RA, DEC) coordinates, and it succeeds
+in this case, plotting `coord_ra` and `coord_dec` as the 
+RA and the DEC, respectively.  Note that TOPCAT automatically 
+adjusts to an appropriate RA, DEC range, but the plot can be
+zoomed in and out interactively via the mouse or scroll wheel.  
+Also note that TOPCAT plots the grid by default in sexagesimal 
+units, but these (and other aspects of the plot) can be modified 
+using the Axes button in the lower left panel of the Sky Plot window.
+For more information, please consult the 
+`TOPCAT documentation <http://www.star.bris.ac.uk/~mbt/topcat/>`_.
+
+.. figure:: /_static/TOPCAT_CMD_tutorial_16.png
+    :name: TOPCAT_CMD_tutorial_16
+    :alt: A screenshot of the Sky Plot window.
+	  It shows the RA, DEC positions of the 10000
+          objects from Table 2.  Due to the details of
+	  the ADQL query used to generate Table 2, all
+	  the points lie within a circle of diameter 
+	  1 degree.  Aside from the main plot panel, 
+	  there are two other panels in the Sky Plot
+	  window.  1.  A small panel in the lower right
+	  with icons for Frame, Legend, Axes, STILTS, 
+	  plus the name of the table from which the 
+	  plotted data were taken.  2. A panel indicating
+	  the table name, the Data Sky System, and the 
+	  columns to be used for the longitude (RA) and
+	  latitude (DEC).
+
+    The Skyplot window, showing the sky positions in (sexagesimal) equatorial coordindates for the entries returned by the Example 2 ADQL query.
+
+
 
 **3.2.** Finally, let's look at all 3 plots together --
 the one "Sky Plot" and the 2 "Plane Plots" -- plus the "Table
