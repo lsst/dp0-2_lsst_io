@@ -221,7 +221,7 @@ This will open up a "Table Columns" window.
 	  4. A small SAMP panel just below the Current Table Properties panel.
           The  "Display column metadata" icon circled in blue.
 
-    The main TOPCAT window with the  "Display column metadata" icon circled in blue.
+    **Figure 8:** The main TOPCAT window with the  "Display column metadata" icon circled in blue.
 
 **2.6.** Note the content of the "Table Columns" window.  Each table column is listed, along with various
 information about that column -- e.g., its name, the class and datatype of its contents, its units (if any), 
@@ -234,7 +234,7 @@ and its description (if any).
 	  if available, the units and description 
 	  of each of the columns in the table.
 
-    **Figure 8:** The "Table Columns" window.  The "Add column" icon -- which will be used in the next step -- is circled in blue.
+    **Figure 9:** The "Table Columns" window.  The "Add column" icon -- which will be used in the next step -- is circled in blue.
 
 **2.7.** Create a new column for the u-band AB magnitude.  (Note that the `AB Magnitudes Wikipedia <https://en.wikipedia.org/wiki/AB_magnitude>`_ page provides a concise resource for users who are unfamiliar with the AB magnitude system.)
 
@@ -264,13 +264,13 @@ and its description (if any).
 	  is the equation for converting flux in nano-janskys
           to AB magnitudes, where the flux is u_calibFlux.
 
-    **Figure 9:** The "Define Synthetic Column" window filled out for creating a u-band AB magnitude column. 
+    **Figure 10:** The "Define Synthetic Column" window filled out for creating a u-band AB magnitude column. 
 
 
 **2.8.**  Create a new column for the `error` in the u-band AB magnitude.
 Recall that magnitudes are are logarithmic quantities.  For relatively
 small errors (less than about 10%) one can perform the propagation-of-errors 
-analysis to find :math:`\sigma_\mathrm{mag} = (2.5/ln(10.)) \times ( \sigma_\mathrm{flux} / \mathrm{flux} )`, 
+analysis to find :math:`\sigma_\mathrm{mag} = (2.5/\ln(10.)) \times ( \sigma_\mathrm{flux} / \mathrm{flux} )`, 
 which can be approximated as :math:`\sigma_\mathrm{mag} = 1.086 \times ( \sigma_\mathrm{flux} / \mathrm{flux} )`.  
 
 * Insert ``u_calibMagErr`` for the "Name" in the "Define Synthetic Column" window.
@@ -296,7 +296,7 @@ which can be approximated as :math:`\sigma_\mathrm{mag} = 1.086 \times ( \sigma_
 	  is the equation for converting flux and error in the
 	  flux to error in magnitude.  
 
-    **Figure 10:** The "Define Synthetic Column" window filled out for creating a u-band AB magnitude error column. 
+    **Figure 11:** The "Define Synthetic Column" window filled out for creating a u-band AB magnitude error column. 
 
 
 **2.9.**  Note that each time a column is added, column will appear in the "Table Columns" window.
@@ -312,7 +312,7 @@ which can be approximated as :math:`\sigma_\mathrm{mag} = 1.086 \times ( \sigma_
           u_calibMag and u_calibMagErr, and the expressions
 	  used to derive them.
 
-    **Figure 11:** The "Table Columns" window showing the new columns, ``u_calibMag`` and ``u_calibMagErr``, at the bottom of the table column list.
+    **Figure 12:** The "Table Columns" window showing the new columns, ``u_calibMag`` and ``u_calibMagErr``, at the bottom of the table column list.
 
 
 **2.10.**  Repeat Steps 2.6 and 2.7 for the other filter bands 
@@ -351,7 +351,7 @@ error for each of the filter bands.
 	  the expressions used to derive these newly derived 
 	  quantities.  The new columns are highlighted in blue.
 
-    **Figure 12:** The "Table Columns" window showing all the new columns at the bottom of the table column list.  The new columns are highlighted in blue.
+    **Figure 13:** The "Table Columns" window showing all the new columns at the bottom of the table column list.  The new columns are highlighted in blue.
 
 
 **2.11.**  Click on the "Display table cell data" icon in the main TOPCAT window (as in Step 2.3 above).
@@ -364,7 +364,7 @@ The values for the new columns are now tabulated within the Table Browser along 
 	  This is a large table, and there are both horizontal and vertical scrollbars 
 	  to permit the use to scroll to other parts of the table.
 
-    The Table Browser Window, showing the contents of Table 2, including for the columns just created.
+    **Figure 14:** The Table Browser Window, showing the contents of Table 2, including for the columns just created.
 
 **2.12.**  Return to the main TOPCAT window, ensure the table returned by the Example 2 query 
 is highlighted in the "Table List" panel, and click on the "Plane plotting window" icon -- the 
@@ -381,7 +381,7 @@ like a blank X/Y plot).
 	  4. A small SAMP panel just below the Current Table Properties panel.
           The Plane plotting window icon circled in blue.
 
-    **Figure 13:** The main TOPCAT window with the "Plane plotting window" icon circled in blue.
+    **Figure 15:** The main TOPCAT window with the "Plane plotting window" icon circled in blue.
 
 **2.13.** Note that TOPCAT has returned with a Plane Plot window, initially
 plotting the first 2 numerical columns from the table.  In this case, these 
@@ -404,11 +404,11 @@ sky plot.
 	  the table name and the columns to be used for 
 	  the X (RA) and Y (DEC) coordinates.
 
-    **Figure 14:** The Plane Plot window, plotting ``coord_dec`` vs. ``coord_ra`` for the 10000 
+    **Figure 16:** The Plane Plot window, plotting ``coord_dec`` vs. ``coord_ra`` for the 10000 
     star-like objects returned by the Example 2 ADQL query.
 
 **2.14.**  Replace ``coord_ra`` and ``coord_dec`` with ``r_calibMag - i_calibMag`` and ``g_calibMag`` 
-in the ``X`` and ``Y`` windows, respectively.  For convenience, here are "copy-and-paste" versions 
+in the "X" and "Y" windows, respectively.  For convenience, here are "copy-and-paste" versions 
 of these two coordinate expressions.
 
 .. code-block:: python
@@ -429,7 +429,7 @@ produced for this set of stars (and star-like objects).
           because the simulated data are based on discrete red stellar models that were used as input 
           into DP0.2. Real data are expected to instead show a smooth distribution of colors.
 
-    **Figure 15:** The Plane Plot window, plotting ``g_calibMag`` vs. ``r_calibMag - i_calibMag`` for the 10000 
+    **Figure 17:** The Plane Plot window, plotting ``g_calibMag`` vs. ``r_calibMag - i_calibMag`` for the 10000 
     star-like objects returned by the Example 2 ADQL query.  (The "quantized" colors for objects 
     with ``r_calibMag - i_calibMag > 0.6`` are an artifact of the simulation upon which DP0.2 is based.)
 
@@ -449,7 +449,7 @@ this convention, click on the "Axes" button in the lower-left panel of the "Plan
           color because the simulated data are based on discrete red stellar models that were used as 
           input into DP0.2. Real data are expected to instead show a smooth distribution of colors.
 
-    **Figure 16:** Same as previous plot, but with the y-axis flipped.
+    **Figure 18:** Same as previous plot, but with the y-axis flipped.
 
 **2.17.**  Finally, to guide the eye, add a grid to the plot.  To do so, click on the "Grid" button 
 at the top of the bottom-right panel of the "Plane Plot" window and check the "Draw Grid" option.
@@ -457,7 +457,7 @@ at the top of the bottom-right panel of the "Plane Plot" window and check the "D
 .. figure:: /_static/TOPCAT_CMD_tutorial_21.png
     :name: TOPCAT_CMD_tutorial_21
     :alt: A screenshot of the Plane Plot window. 
-	  The chart shows a color magnitude diagram, g-band AB magnitude vs r-band minus i-band color, 
+	  The chart shows a color magnitude diagram, g-band AB magnitude versus r-band minus i-band color, 
           for the objects in Table 2. 
 	  In this rendition, the Y-axis has been flipped; so that bright stars (with small magnitudes) 
           are near the top of the plot and faint stars (with large magnitudes) are near the bottom.  
@@ -467,7 +467,11 @@ at the top of the bottom-right panel of the "Plane Plot" window and check the "D
           color because the simulated data are based on discrete red stellar models that were used as 
           input into DP0.2. Real data are expected to instead show a smooth distribution of colors.
 
-    **Figure 17:** Same as previous plot, but with a grid added.
+    **Figure 19:** Same as previous plot, but with a grid added.
+
+**2.18.** `(Optional)`  Explore!  For example, try plotting the color-magnitude diagrams for other
+filter passbands.  How does the ``u_calibMag`` vs. ``r_calibMag - i_calibMag`` color magnitude diagram
+compare with the ``g_calibMag`` vs. ``r_calibMag - i_calibMag``?  How about the ``g_calibMag`` vs. ``z_calibMag - y_calibMag``?
 
 
 Example 3. Interact with multiple plots from the same table
@@ -496,7 +500,7 @@ the 12th icon from the left in the row of icons at the top of the main TOPCAT wi
 	  4. A small SAMP panel just below the Current Table Properties panel.
 	  The Sky plotting window icon is circled in blue.
 
-    **Figure 18:** The main TOPCAT window.  The "Sky plotting window" icon is circled in blue.
+    **Figure 20:** The main TOPCAT window.  The "Sky plotting window" icon is circled in blue.
 
 **3.3.**  Note the Sky Plot window that TOPCAT returns.
 TOPCAT is generally pretty good at identifying which columns in 
@@ -527,10 +531,10 @@ Keep this Sky Plot window open for later steps in this example.
 	  columns to be used for the longitude (RA) and
 	  latitude (DEC).
 
-    **Figure 19:** The Skyplot window, showing the sky positions in (sexagesimal) equatorial coordindates for the entries returned by the Example 2 ADQL query.
+    **Figure 21:** The Skyplot window, showing the sky positions in (sexagesimal) equatorial coordindates for the entries returned by the Example 2 ADQL query.
 
 
-**3.4.**  Create a Plane Plot of the estimated error in the g-band AB magnitude (``g_calibMagErr``) vs. the g-band AB magnitude itself (``g_calibMag``) 
+**3.4.**  Create a Plane Plot of the estimated error in the g-band AB magnitude (``g_calibMagErr``) vs. the g-band AB magnitude itself (``g_calibMag``). 
 
 * Click on the "Plane plotting window" icon in the main TOPCAT window.
 
@@ -544,11 +548,9 @@ Keep this Sky Plot window open for later steps in this example.
 	  4. A small SAMP panel just below the Current Table Properties panel.
 	  The Plane plotting window icon is circled in blue.
 
-    **Figure 20:** The main TOPCAT window.  The "Plane plotting window" icon is circled in blue.
+    **Figure 22:** The main TOPCAT window.  The "Plane plotting window" icon is circled in blue.
 
-* Replace the column names in the "X"` and "Y" windows in the lower-right panel of the "Plane Plot" window with
-``g_calibMag`` and ``g_calibMagErr``, respectively.  If desired, add a grid to the plot (as described in Step 2.17).
-Keep this Plane Plot window open for the steps in this example.
+* Replace the column names in the "X"` and "Y" windows in the lower-right panel of the "Plane Plot" window with ``g_calibMag`` and ``g_calibMagErr``, respectively, and add a grid to the plot (as described in Step 2.17).  Keep this Plane Plot window open for the steps in this example.
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_23.png
     :name: TOPCAT_CMD_tutorial_23
@@ -561,20 +563,13 @@ Keep this Plane Plot window open for the steps in this example.
 	  22th magnitude, reaching 0.10 around 25th 
 	  magnitude.
 
-    **Figure 21:** The "Plane Plot" window, showing ``g_calibMagErr`` plotted against ``g_calibMag``.
+    **Figure 23:** The "Plane Plot" window, showing ``g_calibMagErr`` plotted against ``g_calibMag``.
 
 **3.5.** Look at all 3 plots together -- the one "Sky Plot" and the 2 "Plane Plots" -- plus the "Table Browser".  
 
-* Using the mouse to "click-and-drag" their corners, the
-size of these windows can be adjusted so they all can be viewed simultaneously.
+* Using the mouse to "click-and-drag" their corners, the size of these windows can be adjusted so they all can be viewed simultaneously.
 
-* Click on a symbol in one of the plots.  (In the following figure, 
-a point near `r_calibMag-i_calibMag=1.0`, `g_calibMag=24.2` was clicked 
-in the color-magnitude plot.)  A small black circle with cross-hairs will appear
-around that particular symbol in that particular plot.  `What's more, 
-a small black circle with cross-hairs will also appear around the symbol 
-for that particular object in the other plots.  Its row entry in the
-the "Table Browser" will also be highlighted.`
+* Click on a symbol in one of the plots.  (In the following figure, a point near :math:`r_calibMag-i_calibMag = 1.0`, :math:`g_calibMag = 24.2` was clicked in the color-magnitude plot.)  A small black circle with cross-hairs will appear around that particular symbol in that particular plot.  `In particular, note that a small black circle with cross-hairs will also appear around the symbol for that particular object in the other plots.  Its row entry in the the "Table Browser" will also be highlighted.`
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_24.png
     :name: TOPCAT_CMD_tutorial_24
@@ -592,7 +587,7 @@ the "Table Browser" will also be highlighted.`
           This is the row for that same object marked by 
 	  the black circle with cross-hairs in the 3 plots.
 
-    **Figure 22:** A Sky Plot window, two Plane Plot window, and a Table Browser window displaying data returned from the ADQL query from Example 2.  Note the black circle with cross-hairs in the three plot windows and the row highlighted in gray in the Table Browser window:  these all refer to the same data point.
+    **Figure 24:** A Sky Plot window, two Plane Plot window, and a Table Browser window displaying data returned from the ADQL query from Example 2.  Note the black circle with cross-hairs in the three plot windows and the row highlighted in gray in the Table Browser window:  these all refer to the same data point.
 
 **3.6.** Note that this data linkage works not only for single objects but for
 subsets of points that one can define for the table via the
@@ -624,7 +619,7 @@ TOPCAT window, and it looks like a 2D rendering of a cube.
 	  3. A Current Table Properties panel on the right of the window.
 	  4. A small SAMP panel just below the Current Table Properties panel.
 
-    **Figure 23:** The main TOPCAT window.  The "3D plotting window using Cartesian coordinates" icon is circled in blue.
+    **Figure 25:** The main TOPCAT window.  The "3D plotting window using Cartesian coordinates" icon is circled in blue.
 
 **4.3.**  Note that TOPCAT has opened a "Cube Plot" window, automatically using the first 3 
 numeric columns of the table -- in this case, ``coord_ra``, ``coord_dec``, and 
@@ -637,7 +632,7 @@ numeric columns of the table -- in this case, ``coord_ra``, ``coord_dec``, and
 	  for the X and Y axes, respectively, and the 
 	  u-band flux for the Z axis.
 
-    **Figure 24:** A "Cube Plot" window, plotting ``coord_ra``, ``coord_dec``, and ``u_calibFlux`` as the "X", "Y", and "Z" coordinates, respectively, for 10000 point sources from Example 2.
+    **Figure 26:** A "Cube Plot" window, plotting ``coord_ra``, ``coord_dec``, and ``u_calibFlux`` as the "X", "Y", and "Z" coordinates, respectively, for 10000 point sources from Example 2.
 
 **4.2.**  Replace the contents of the "X", "Y", and "Z" windows in the lower-right panel of the "Cube
 Plot" window with ``r_calibMag-i_calibMag``, ``g_calibMag-r_calibMag``, and ``u_calibMag-g_calibMag``,
@@ -655,7 +650,7 @@ downloaded in Example 2.
 	  corner of the cube.  The disceteness of the locus
 	  for the red stars is also noticeable here.
 
-    **Figure 25:** A "Cube Plot" window, plotting the `(r-i)`, `(g-r)`, `(i-z)` color-color-color diagram for the 10000 point sources from Example 2.
+    **Figure 27:** A "Cube Plot" window, plotting the `(r-i)`, `(g-r)`, `(i-z)` color-color-color diagram for the 10000 point sources from Example 2.
 
 **4.3.**  Add more information to this plot by color-coding the individual symbols.  
 To do so, click on the "Form" button in the lower-right panel of the "Cube Plot" window; then, in the "Shading" subpanel that appears, 
@@ -679,7 +674,7 @@ plot with the value of ``i_calibMag`` encoded in the color of each symbol.  A co
           to be relatively faint (i-band AB magnitude 
           fainter than about 22nd magnitude).
 
-    **Figure 26:** Same as Figure 25, but with the symbols color-coded by their value of ``i_calibMag``.  
+    **Figure 28:** Same as previous plot, but with the symbols color-coded by their value of ``i_calibMag``.  
 
 **4.4.**  Change the color look-up table for the auxiliary axis (color bar).
 To so, click on "Aux Axis" in the left-lower panel of the Cube Plot window.  
@@ -700,7 +695,7 @@ In the new lower-right panel that appears, choose a different color palette from
           and the fainter object symbols appearing 
           blue, purple, or even black.  
 
-    **Figure 27:** Same as Figure 26, but using the "Rainbow" color palette for the auxiliary axis (color bar).
+    **Figure 29:** Same as previous plot, but using the "Rainbow" color palette for the auxiliary axis (color bar).
 
 **4.5.**  Test out the interactive functionality of the 3D cube plot.
 If not already done so, use the mouse to "click-and-drag" a point in the plot window to
@@ -723,4 +718,7 @@ cube plot can be zoomed in or out using the mouse or a scroll wheel.
           been rotated arbitrarily relative to the 
           rotation of the previous plot.
 
-    **Figure 28:** Same as Figure 27, but the 3D plot has been rotated about its axes.
+    **Figure 30:** Same as previous plot, but the 3D plot has been rotated about its axes.
+
+**4.6.** `(Optional)`  Explore!  For example, try plotting the equivalent of a color-color-color-color diagram, by using ``i_calibMag - z_calibMag`` or ``z_calibMag - y_calibMag`` for the auxiliary axis (color bar).
+
