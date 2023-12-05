@@ -48,7 +48,7 @@ table and examine the returned results.
 
 **1.1.** Follow the steps in :ref:`Data-Access-Analysis-Tools-TAP-TOPCAT-get-started` for accessing DP0.2 from TOPCAT.
 At the end of these steps, there should be 2 TOPCAT windows open -- the main TOPCAT window and a "Table Access Protocol
-(TAP) Query window -- like in the following figure.  (Note that the TOPCAT windows or components within the windows
+(TAP) Query" window -- like in the following figure.  (Note that the TOPCAT windows or components within the windows
 can be resized by clicking and dragging window corners or component edges.)
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_01.png
@@ -65,7 +65,7 @@ can be resized by clicking and dragging window corners or component edges.)
 
     **Figure 1:** The Table Access Protocol (TAP) Query window with the main TOPCAT window in the background.
 
-**1.2.** Prepare a simple ADQL spatial query to return a small set of values from 
+**1.2.** Prepare a simple ADQL spatial query to return a small set of values from the 
 ``dp02_dc2_catalogs.Object`` table.  Specifically create an ADQL query that returns 
 ``coord_ra``, ``coord_dec``, ``detect_isPrimary``, ``r_calibFlux``, ``r_cModelFlux``, 
 and ``r_extendedness`` for the first 10 ``dp02_dc2_catalogs.Object`` entries found 
@@ -93,7 +93,7 @@ and then click the "Run Query" button at the bottom of this window.
 	  A blue oval highlights the Run Query button.
           The ADQL Text panel and the "Run Query" button are highlighted with a blue rectangle and a blue oval, respectively.
 	  
-    **Figure 2:** The Table Access Protocol (TAP) Query window with the ADQL query from Step 1.1 entered into its ADQL Text panel. The ADQL Text panel and the "Run Query" button are highlighted with a blue rectangle and a blue oval, respectively.
+    **Figure 2:** The Table Access Protocol (TAP) Query window with the ADQL query from Step 1.2 entered into its ADQL Text panel. The ADQL Text panel and the "Run Query" button are highlighted with a blue rectangle and a blue oval, respectively.
 
 **1.4.** Find the table of results in the "Table List" panel of the main TOPCAT window, and 
 then click on the "Display table cell data" icon.  It is the 4th icon from the left in 
@@ -180,7 +180,7 @@ will pop up.  (It will close once the query completes.)
     **Figure 5:** The "Load New Table" window.  It will open automatically while the query is running and close when the query finishes.
 
 **2.3.**  Note that, once the query completes, there is a second table in the "Table List" panel of the main TOPCAT window.  
-Now, like in Step 1.4 of Example 1, click on the “Display table cell data” icon.
+Now, ensure that the new table is highlighted in the "Table List" panel, and, like in Step 1.4 of Example 1, click on the “Display table cell data” icon.
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_06.png
     :name: TOPCAT_CMD_tutorial_06
@@ -299,7 +299,7 @@ which can be approximated as :math:`\sigma_\mathrm{mag} = 1.086 \times ( \sigma_
     **Figure 11:** The "Define Synthetic Column" window filled out for creating a u-band AB magnitude error column. 
 
 
-**2.9.**  Note that each time a column is added, column will appear in the "Table Columns" window.
+**2.9.**  Note that each time a column is added, a column will appear in the "Table Columns" window.
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_12.png
     :name: TOPCAT_CMD_tutorial_12
@@ -364,7 +364,7 @@ The values for the new columns are now tabulated within the Table Browser along 
 	  This is a large table, and there are both horizontal and vertical scrollbars 
 	  to permit the use to scroll to other parts of the table.
 
-    **Figure 14:** The Table Browser Window, showing the contents of Table 2, including for the columns just created.
+    **Figure 14:** The Table Browser Window, showing the contents of the Example 2 table, including for the columns just created.
 
 **2.12.**  Return to the main TOPCAT window, ensure the table returned by the Example 2 query 
 is highlighted in the "Table List" panel, and click on the "Plane plotting window" icon -- the 
@@ -472,13 +472,14 @@ at the top of the bottom-right panel of the "Plane Plot" window and check the "D
 **2.18.** `(Optional)`  Explore!  For example, try plotting the color-magnitude diagrams for other
 filter passbands.  How does the ``u_calibMag`` vs. ``r_calibMag - i_calibMag`` color magnitude diagram
 compare with the ``g_calibMag`` vs. ``r_calibMag - i_calibMag``?  How about the ``g_calibMag`` vs. ``z_calibMag - y_calibMag``?
+color magnitude diagram?
 
 
 Example 3. Interact with multiple plots from the same table
 ===========================================================
 
 A strength of TOPCAT is that the data from a given table are linked across the plots based on that table.
-This example example investigates this feature by looking at multiple plots for the table of results returned by the ADQL query from Example 2.
+The current example example investigates this feature by looking at multiple plots for the table of results returned by the ADQL query from Example 2.
 One of these plots will be the color-magnitude diagram produced in Example 2.  Two other plots will also be generated from that same table.
 
 **3.1.**  If not already done, run through Example 2.  Keep the Table Browser window (from Step 2.11) and the ``g_calibMag`` vs. 
@@ -536,7 +537,7 @@ Keep this Sky Plot window open for later steps in this example.
 
 **3.4.**  Create a Plane Plot of the estimated error in the g-band AB magnitude (``g_calibMagErr``) vs. the g-band AB magnitude itself (``g_calibMag``). 
 
-* Click on the "Plane plotting window" icon in the main TOPCAT window.
+* Ensure the table returned by the Example 2 query is highlighted in the "Table List" panel of the main TOPCAT window, and click on the "Plane plotting window" icon.
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_22.png
     :name: TOPCAT_CMD_tutorial_22
@@ -550,7 +551,7 @@ Keep this Sky Plot window open for later steps in this example.
 
     **Figure 22:** The main TOPCAT window.  The "Plane plotting window" icon is circled in blue.
 
-* Replace the column names in the "X"` and "Y" windows in the lower-right panel of the "Plane Plot" window with ``g_calibMag`` and ``g_calibMagErr``, respectively, and add a grid to the plot (as described in Step 2.17).  Keep this Plane Plot window open for the steps in this example.
+* Replace the column names in the "X" and "Y" windows in the lower-right panel of the "Plane Plot" window with ``g_calibMag`` and ``g_calibMagErr``, respectively, and add a grid to the plot (as described in Step 2.17).  Keep this Plane Plot window open for the steps in this example.
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_23.png
     :name: TOPCAT_CMD_tutorial_23
@@ -567,9 +568,9 @@ Keep this Sky Plot window open for later steps in this example.
 
 **3.5.** Look at all 3 plots together -- the one "Sky Plot" and the 2 "Plane Plots" -- plus the "Table Browser".  
 
-* Using the mouse to "click-and-drag" their corners, the size of these windows can be adjusted so they all can be viewed simultaneously.
+* Using the mouse to "click-and-drag" their corners and edges, the sizes and positions of these windows can be adjusted so they all can be viewed simultaneously.
 
-* Click on a symbol in one of the plots.  (In the following figure, a point near :math:`r_calibMag-i_calibMag = 1.0`, :math:`g_calibMag = 24.2` was clicked in the color-magnitude plot.)  A small black circle with cross-hairs will appear around that particular symbol in that particular plot.  `In particular, note that a small black circle with cross-hairs will also appear around the symbol for that particular object in the other plots.  Its row entry in the the "Table Browser" will also be highlighted.`
+* Click on a symbol in one of the plots.  (In the following figure, a point near `r_calibMag`-`i_calibMag`=1.0, `g_calibMag`=24.2 was clicked in the color-magnitude plot.)  A small black circle with cross-hairs will appear around that particular symbol in that particular plot.  `In particular, note that a small black circle with cross-hairs will also appear around the symbol for that particular object in the other plots.  Its row entry in the the "Table Browser" will also be highlighted.`
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_24.png
     :name: TOPCAT_CMD_tutorial_24
@@ -599,10 +600,10 @@ Example 4. Create interactive 3D plots
 ======================================
 
 The final example in this tutorial looks at TOPCAT's interactive 3D plot functionality.  
-As with Example 3, the data set returned from the ADQL query in Example 2 will be used.
+As with Example 3, the table returned from the ADQL query in Example 2 will be used.
 
 **4.1.**  If not already done, run through Example 2, at least through Step 2.10, 
-where the columns for `calibMag`` and ``calibMagErr`` for all the filters are generated.
+where the columns for ``calibMag`` and ``calibMagErr`` for all the filters are generated.
 
 **4.2.**  Go to the main TOPCAT window, ensure that that the table from the 
 Example 2 query is highlighted in the "Table List" panel, and click 
@@ -650,11 +651,11 @@ downloaded in Example 2.
 	  corner of the cube.  The disceteness of the locus
 	  for the red stars is also noticeable here.
 
-    **Figure 27:** A "Cube Plot" window, plotting the `(r-i)`, `(g-r)`, `(i-z)` color-color-color diagram for the 10000 point sources from Example 2.
+    **Figure 27:** A "Cube Plot" window, plotting the `(r-i)`, `(g-r)`, `(u-g)` color-color-color diagram for the 10000 point sources from Example 2.
 
 **4.3.**  Add more information to this plot by color-coding the individual symbols.  
 To do so, click on the "Form" button in the lower-right panel of the "Cube Plot" window; then, in the "Shading" subpanel that appears, 
-choose "aux" in the "Mode" down-down menu and insert (for example) ``i_calbMag`` in the "Aux" window.  This results in a 3D color-color-color
+choose "aux" in the "Mode" pull-down menu and insert (for example) ``i_calibMag`` in the "Aux" window.  This results in a 3D color-color-color
 plot with the value of ``i_calibMag`` encoded in the color of each symbol.  A color bar also appears at the side of the plot.
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_28.png
