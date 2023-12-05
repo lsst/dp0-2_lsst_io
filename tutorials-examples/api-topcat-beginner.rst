@@ -591,8 +591,8 @@ Keep this Sky Plot window open for later steps in this example.
 
 **3.6.** Note that this data linkage works not only for single objects but for
 subsets of points that one can define for the table via the
-TOPCAT interface.  The interested user is again directed to 
-the `TOPCAT documentation <http://www.star.bris.ac.uk/~mbt/topcat/>`_.
+TOPCAT interface.  The interested user is directed to 
+the `TOPCAT documentation on defining subsets <https://www.star.bris.ac.uk/~mbt/topcat/sun253/sun253.html#subsetDef>`_.
 
 
 Example 4. Create interactive 3D plots
