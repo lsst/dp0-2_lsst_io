@@ -35,12 +35,12 @@ The full history for any given tutorial notebook can be accessed via GitHub by g
 (e.g., the `introduction to DP0.2 notebook <https://github.com/rubin-dp0/tutorial-notebooks>`_),
 and clicking on "history" (near upper-right).
 
-Portal and command line tutorials
----------------------------------
+Portal, command line, and API tutorials
+---------------------------------------
 
-All Portal and command line tutorials contain the date last verified to run near the top of their page.
+All Portal, command line, and API tutorials contain the date last verified to run near the top of their page.
 
-All tutorials for the Portal aspect, and for the command line (Notebook Aspect)
+All tutorials for the Portal aspect, for the command line (Notebook Aspect), and for the API aspect 
 are kept in the `dp0-2_lsst_io repository <https://github.com/lsst/dp0-2_lsst_io>`_.
 
 The full history for any given tutorial can be accessed via GitHub by going to the tutorial of interest
@@ -50,6 +50,11 @@ and clicking on "history" (near upper-right).
 
 Major Updates Log
 =================
+
+Dec 6 2023
+----------
+
+Released API TOPCAT tutorial notebook 01.
 
 Sep 21 2023
 -----------
