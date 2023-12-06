@@ -572,7 +572,7 @@ Keep this Sky Plot window open for later steps in this example.
 
 * Using the mouse to "click-and-drag" their corners and edges, the sizes and positions of these windows can be adjusted so they all can be viewed simultaneously.
 
-* Click on a symbol in one of the plots.  (In the following figure, a point near (`r_calibMag-i_calibMag=1.0`, `g_calibMag=24.2`) was clicked in the color-magnitude plot.)  A small black circle with cross-hairs will appear around that particular symbol in that particular plot.  **In particular, note that a small black circle with cross-hairs will also appear around the symbol for that particular object in the other plots.  Its row entry in the the "Table Browser" will also be highlighted.**
+* Click on a symbol in one of the plots.  (In the following figure, a point near (``r_calibMag-i_calibMag=1.0``, ``g_calibMag=24.2``) was clicked in the color-magnitude plot.)  A small black circle with cross-hairs will appear around that particular symbol in that particular plot.  **In particular, note that a small black circle with cross-hairs will also appear around the symbol for that particular object in the other plots.  Its row entry in the the "Table Browser" will also be highlighted.**
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_24.png
     :name: TOPCAT_CMD_tutorial_24
