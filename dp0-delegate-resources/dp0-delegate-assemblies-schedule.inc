@@ -49,14 +49,17 @@
      - `DP0.3 Notebook tutorial 03: Trans-Neptunian Objects <https://community.lsst.org/t/summary-dp0-delegate-assembly-friday-oct-13-2023-trans-neptunian-objects-in-dp0-3/7997>`_ (Andrés A. Plazas Malagón, Sarah Greenstreet)
      - *general Q&A, breakouts*
    * - **2023-10-20**
-     - **Special Assembly:** SSSC Mini-Sprint Preparation (Meg Schwamb)
+     - **Special Assembly:** `SSSC Mini-Sprint Preparation (Meg Schwamb) <https://community.lsst.org/t/dp0-delegate-assembly-fri-oct-20-sssc-mini-sprint-preparation-meg-schwamb/8005/2>`_
      - *general Q&A, breakouts*
    * - 2023-10-27
-     - DP0.3 Notebook tutorial 04a/b: Introduction to phase curves and advanced phase curve modeling (Yumi Choi, Christina Williams)
+     - `DP0.3 Notebook tutorial 04a/b: Introduction to phase curves and advanced phase curve modeling (Yumi Choi, Christina Williams) <https://community.lsst.org/t/summary-dp0-delegate-assembly-friday-oct-27-2023-two-notebook-tutorials-on-phase-curves-for-dp0-3-ssos/8033>`_
      - *general Q&A, breakouts*
    * - 2023-11-10
-     - Accessibility Hackathon for Notebooks (Jenn Kotler, Andrés A. Plazas Malagón)
+     - `Accessibility Hackathon for Notebooks <https://community.lsst.org/t/dp0-delegate-assembly-11-10-2023-notebook-accessibility-hackathon/8056>`_ (Jenn Kotler, Andrés A. Plazas Malagón)
      - *breakouts: bring your own notebook, add accessibility features!*
+   * - 2023-12-08
+     - Using TOPCAT with the DP0.2 TAP Service (Introduction to the RSP API Aspect and DP0.2 API TOPCAT tutorial 01)
+     - *general Q&A, breakouts*
 
 
 Additional delegate assemblies to be posted.

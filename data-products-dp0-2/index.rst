@@ -129,7 +129,7 @@ Coadd images are divided into **"tracts"** (a spherical convex polygon) and trac
 
 .. figure:: /_static/dpdd_dc2_zoom.png
     :name: dpdd_dc2_zoom
-    :alt: Three images demonstrating the DESCK DC2 sky survey.  The leftmost image is the sky region with approximately one hundred and fifty tracts.  The center image is a simulated color composite image. 
+    :alt: Three images demonstrating the DESC DC2 sky survey.  The leftmost image is the sky region with approximately one hundred and fifty tracts.  The center image is a simulated color composite image. 
     	The rightmost image is a zoomed in region from the center image that shows a galaxy cluster. 
     
     Figure 15 from `The LSST DESC DC2 Simulated Sky Survey <https://ui.adsabs.harvard.edu/abs/2021ApJS..253...31L/abstract>`_, showing the simulated WFD region divided into tracts.

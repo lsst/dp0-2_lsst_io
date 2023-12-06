@@ -53,7 +53,7 @@ and are typically faster (and can be *much* faster) than ADQL query statements w
 It is recommended to use either an ADQL :ref:`Adql-Recipes-Cone-Search` or a :ref:`Adql-Recipes-Polygon-Search`,
 and to not use a ``WHERE ... BETWEEN`` statement to set boundaries on RA and Dec.
 
-**Use** ``dectect_isPrimary``**= True.**
+**Use** ``dectect_isPrimary`` **= True.**
 It is recommended to include ``detect_isPrimary = True`` in queries for the ``Object``, ``Source``, and ``ForcedSource`` catalogs.
 This parameter is ``True`` if a source has no children, is in the inner region of a coadd patch, is in the inner region of a coadd tract, and is not detected in a pseudo-filter.
 Including this constraint will remove any duplicates:
@@ -219,18 +219,14 @@ if expressed in terms of the "ref match" table, would necessitate a full scan of
 Individual objects
 ==================
 
-**Searches for individual objects can take a surprisingly long time.**
-Recall that the TAP tables are sharded by RA,Dec, and when RA,Dec constraints are not provided (as in the example below),
-the entire table must be searched, and this can take a long time despite the small amount of data returned.
-
 In the above example, a single object was desired, and a statement like ``WHERE objectId=1486`` was used.
-However, if more than a few single objects are desired and their ``objectId`` are known, a query built up of, e.g.,
-``OR objectId=1487 OR objectId=1488 OR objectId=1489`` and so on would work, but there's a better way: ``WHERE objectId IN ()``.
+However, if more than a few single objects are desired and their ``objectId`` are known, 
+then you can use ``WHERE objectId IN (1487, 1488, 1489)``, for example, to return results for all of the objects in a single query.
 
-Below, a list of just 12 ``objectId`` is put in a string called ``my_list``, formatted as a python tuple (with round brackets). 
+Below, a list of 12 ``objectId`` values is put in a string called ``my_list``. 
 This list could contain many more objects and be generated programmatically (e.g., from a different query, or by user analysis),
 and then be included in the ADQL query statement and the TAP service would treat it the same way.
-The number of results returned will equal the length of the list of ``objectId`` passed.
+The number of results returned will equal the number of matched ``objectIds``. 
 
 For this example, the 12 were selected to be bright stars with similar *g-r* and *i-z* colors,
 so the query retrieves the *g*, *r*, *i*, and *z* band fluxes, but users should modify this to their own needs.

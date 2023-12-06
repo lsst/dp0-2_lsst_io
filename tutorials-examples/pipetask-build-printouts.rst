@@ -1,3 +1,7 @@
+#######################################################
+Full Output of Custom Coaddition pipetask build Command
+#######################################################
+
 .. code-block::
 
     $ pipetask build -p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#makeWarp,assembleCoadd --show pipeline

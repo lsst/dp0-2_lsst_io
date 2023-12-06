@@ -20,6 +20,8 @@
 
 .. This section should provide a brief, top-level description of the page.
 
+**RSP Aspect:** Portal
+
 **Contact authors:** Melissa Graham and Greg Madejski
 
 **Last verified to run:** 2023-04-07
@@ -86,6 +88,7 @@ objects at upper right, and a table of the search results along the bottom.
 
 .. figure:: /_static/portal_tut01_step02a.png
 	:name: portal_tut01_step02a
+	:alt: A screenshot of the previous query's results.  
 	
 	The default Results view with "Tri-view".
 
