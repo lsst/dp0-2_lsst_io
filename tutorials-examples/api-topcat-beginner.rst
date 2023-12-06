@@ -30,7 +30,7 @@
 This tutorial uses the TOPCAT Virtual Observatory interface to search for bright stars in a small region of sky and create a color-magnitude diagram.
 This is the same demonstration used to illustrate the Table Access Protocol (TAP) service in the Notebook tutorial, 
 `Introduction to Jupyter Notebooks for Data Preview 0.2 <https://github.com/rubin-dp0/tutorial-notebooks/blob/main/DP02_01_Introduction_to_DP02.ipynb>`_ 
-and in the Portal tutorial, :ref:`Tutorials-Examples-DP0-2-Portal-Beginner`_.
+and in the Portal tutorial, :ref:`Tutorials-Examples-DP0-2-Portal-Beginner`.
 TOPCAT is a very powerful interactive graphical tool with many useful features -- too many to cover in any detail here -- and beginner-level TOPCAT 
 users looking for a more general overview of these features should refer to the `TOPCAT documentation <https://www.star.bris.ac.uk/~mbt/topcat/>`_.
 
