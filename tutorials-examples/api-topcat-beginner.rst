@@ -28,8 +28,9 @@
 
 **Introduction:**
 This tutorial uses the TOPCAT Virtual Observatory interface to search for bright stars in a small region of sky and create a color-magnitude diagram.
-This is the same demonstration used to illustrate the Table Access Protocol (TAP) service in the first of the :ref:`DP0-2-Tutorials-Notebooks` and to 
-illustrate the Portal service in the first of the :ref:`DP0-2-Tutorials-Portal`.
+This is the same demonstration used to illustrate the Table Access Protocol (TAP) service in the Notebook tutorial, 
+`Introduction to Jupyter Notebooks for Data Preview 0.2 <https://github.com/rubin-dp0/tutorial-notebooks/blob/main/DP02_01_Introduction_to_DP02.ipynb>`
+and in the Portal tutorial, :ref:`Tutorials-Examples-DP0-2-Portal-Beginner`_.
 TOPCAT is a very powerful interactive graphical tool with many useful features -- too many to cover in any detail here -- and beginner-level TOPCAT 
 users looking for a more general overview of these features should refer to the `TOPCAT documentation <https://www.star.bris.ac.uk/~mbt/topcat/>`_.
 
@@ -66,7 +67,7 @@ can be resized by clicking and dragging window corners or component edges.)
     **Figure 1:** The Table Access Protocol (TAP) Query window with the main TOPCAT window in the background.
 
 **1.2.** Prepare a simple ADQL spatial query to return a small set of values from the 
-``dp02_dc2_catalogs.Object`` table.  Specifically create an ADQL query that returns 
+``dp02_dc2_catalogs.Object`` table.  Specifically, create an ADQL query that returns 
 ``coord_ra``, ``coord_dec``, ``detect_isPrimary``, ``r_calibFlux``, ``r_cModelFlux``, 
 and ``r_extendedness`` for the first 10 ``dp02_dc2_catalogs.Object`` entries found 
 within a 0.1-degree radius circle centered at (RA,DEC)=(62,-37), which is near the 
@@ -81,7 +82,7 @@ center of the DP0.2 sky projection.
 	WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), 
 			CIRCLE('ICRS', 62, -37, 0.1)) = 1
 
-**1.3.** Enter the above query into the "ADQL Text" panel of the "Table Access Protocol (TAP) Query" window, 
+**1.3.** Copy and paste the above query into the "ADQL Text" panel of the "Table Access Protocol (TAP) Query" window, 
 and then click the "Run Query" button at the bottom of this window.
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_02.png
@@ -469,7 +470,7 @@ at the top of the bottom-right panel of the "Plane Plot" window and check the "D
 
     **Figure 19:** Same as previous plot, but with a grid added.
 
-**2.18.** `(Optional)`  Explore!  For example, try plotting the color-magnitude diagrams for other
+**2.18.** `(Optional)`  Explore!  For example, try plotting the color magnitude diagrams for other
 filter passbands.  How does the ``u_calibMag`` vs. ``r_calibMag - i_calibMag`` color magnitude diagram
 compare with the ``g_calibMag`` vs. ``r_calibMag - i_calibMag``?  How about the ``g_calibMag`` vs. ``z_calibMag - y_calibMag``?
 color magnitude diagram?
@@ -570,7 +571,7 @@ Keep this Sky Plot window open for later steps in this example.
 
 * Using the mouse to "click-and-drag" their corners and edges, the sizes and positions of these windows can be adjusted so they all can be viewed simultaneously.
 
-* Click on a symbol in one of the plots.  (In the following figure, a point near `r_calibMag`-`i_calibMag`=1.0, `g_calibMag`=24.2 was clicked in the color-magnitude plot.)  A small black circle with cross-hairs will appear around that particular symbol in that particular plot.  `In particular, note that a small black circle with cross-hairs will also appear around the symbol for that particular object in the other plots.  Its row entry in the the "Table Browser" will also be highlighted.`
+* Click on a symbol in one of the plots.  (In the following figure, a point near (:math:`r_calibMag-i_calibMag=1.0`, :math:`g_calibMag=24.2`) was clicked in the color-magnitude plot.)  A small black circle with cross-hairs will appear around that particular symbol in that particular plot.  **In particular, note that a small black circle with cross-hairs will also appear around the symbol for that particular object in the other plots.  Its row entry in the the "Table Browser" will also be highlighted.**
 
 .. figure:: /_static/TOPCAT_CMD_tutorial_24.png
     :name: TOPCAT_CMD_tutorial_24
