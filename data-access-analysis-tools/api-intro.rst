@@ -20,7 +20,7 @@ Introduction to the RSP API Aspect
 
 .. This section should provide a brief, top-level description of the page.
 
-On the the main landing page at `data.lsst.cloud <https://data.lsst.cloud>`_ there is an "APIs" panel with more informationon the API Aspect.
+On the the main landing page at `data.lsst.cloud <https://data.lsst.cloud>`_ there is an "APIs" panel with more information on the API Aspect.
 
 An API is an `Application Programming Interface <https://medium.com/@data.science.enthusiast/what-exactly-is-an-api-explained-in-simple-terms-2a9015c1a1a1>`_. 
 It is a piece of code that permits two other programs to communicate with each other.  
@@ -28,7 +28,7 @@ It is a piece of code that permits two other programs to communicate with each o
 The API's services for DP0.2 include `TAP <https://www.ivoa.net/documents/TAP/20190927/index.html>`_, 
 `ObsTAP <https://www.ivoa.net/documents/ObsCore/>`_, `SODA <https://www.ivoa.net/documents/SODA/20170517/index.html>`_ 
 (image cutouts and mosaics), and `HiPS <https://aladin.u-strasbg.fr/hips/>`_.  
-Currently, CST support for the RSP API services beyond TAP is limited, but more support is becoming available soon.
+Currently, Rubin Community Science Team (CST) support for the RSP API services beyond TAP is limited, but more support will become available soon.
 For the time being, this page will focus on the API's TAP services.
 
 Longer term, Rubin Observatory will support `SCS <https://www.ivoa.net/documents/latest/ConeSearch.html>`_ for simple catalog searches, 
@@ -76,10 +76,9 @@ explore tables, and make a variety of 2D and 3D plots via an
 interactive graphical users interface (GUI).  (For a broader view 
 of TOPCAT capabilities, please see the 
 `TOPCAT webpage <http://www.star.bris.ac.uk/~mbt/topcat/>`_,
-which includes plentiful documentation, many examples, and
-various tutorials.)
+which includes documentation, examples, and tutorials.)
 
-To access DP0.2 from a non-RSP TAP utility like TOPCAT, one needs to generate an RSP access token.
+To access DP0.2 from a non-RSP TAP utility like TOPCAT, an RSP access token needs to be generated.
 How to generate and use an RSP access token is described by the 
 `Rubin Science Platform APIs <https://data.lsst.cloud/api-aspect>`_ webpage and
 by the `Science Platform Tokens <https://nb.lsst.io/environment/tokens.html>`_ webpage.
@@ -140,7 +139,7 @@ Fill in ``x-oauth-basic`` for the "User" and your security token forthe "Passwor
     The Authentication window with the values for the user and the password filled in.
 
 **6. Note that the RSP TAP service is now accessible from your instance of TOPCAT.**  
-Note that a list of DP0.1 and DP0.2 tables available for query has appeared in the Metadata panel of the TAP Query window.
+An indicator that the service is now accessible is that a list of DP0.1 and DP0.2 tables available has appeared in the Metadata panel of the TAP Query window.
 
 .. figure:: /_static/API_TOPCAT_DLT_4.png
     :name: API_TOPCAT_DLT_4
