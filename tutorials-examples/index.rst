@@ -109,7 +109,27 @@ Much of the contents of the tutorial notebooks (above) can also be executed via 
 API tutorials
 =============
 
-Coming soon!
+The API tutorials will be coming in many flavors, including tutorials using 
+`TAP <https://www.ivoa.net/documents/TAP/20190927/index.html>`_, 
+`ObsTAP <https://www.ivoa.net/documents/ObsCore/>`_, 
+`SODA <https://www.ivoa.net/documents/SODA/20170517/index.html>`_ 
+(image cutouts and mosaics), and `HiPS <https://aladin.u-strasbg.fr/hips/>`_, 
+and, eventually, `SCS <https://www.ivoa.net/documents/latest/ConeSearch.html>`_ for simple catalog searches, 
+`SIAv2 <https://www.ivoa.net/documents/SIA/20150730/index.html>`_ for image searches, and `VOSpace <https://www.ivoa.net/documents/VOSpace/>`_ 
+(in addition to `WebDAV <https://en.wikipedia.org/wiki/WebDAV>`_) for access to user files.
+
+As a first step, tutorials using the TAP service are provided.
+
+A beginner-level overview for the API Aspect is provided in this :doc:`/data-access-analysis-tools/api-intro`.
+
+The tutorials below are step-by-step demonstrations of how to use the API Aspect for science investigations with the DP0 data set.
+
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    api-topcat-beginner
+    
 
 
 .. _DP0-2-Tutorials-Contributed:
