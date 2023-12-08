@@ -316,8 +316,8 @@ new columns will appear in the Table Columns window.
 For convenience, here are "copy-and-paste" versions of 
 the equations for the AB magnitude and the AB magnitude 
 error for each of the filter bands.
-For future reference, scroll down to the bottom of the page, under 
-:ref:`DP0-2-TOPCAT-Beginner-Exercies-for-the-learner`, to see
+For a more advanced approach, scroll down to the bottom of the page to
+:ref:`DP0-2-TOPCAT-Beginner-Exercies-for-the-learner` and find
 an example of how to retrieve fluxes as magnitudes and avoid
 the need to add columns.
 
