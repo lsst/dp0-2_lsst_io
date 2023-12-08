@@ -241,6 +241,8 @@ and its description (if any).
 
    -2.5*log10(u_calibFlux) + 31.4
 
+* `(Optional)` Use the built-in function to convert: ``janskyToAb(r_calibFlux*1e-9)``. Note that the factor of ``1e-9`` is needed because the fluxes are in units of nJy but Jy are expected.
+
 * `(Optional)` Insert ``mag`` for the "Units" in the "Define Synthetic Column" window.
 
 * `(Optional)` Insert ``Apparent magnitude within 12.0-pixel aperture.  Measured on u-band.`` for the "Description" in the "Define Synthetic Column" window.
