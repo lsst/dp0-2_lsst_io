@@ -316,6 +316,10 @@ new columns will appear in the Table Columns window.
 For convenience, here are "copy-and-paste" versions of 
 the equations for the AB magnitude and the AB magnitude 
 error for each of the filter bands.
+For future reference, scroll down to the bottom of the page, under 
+:ref:`DP0-2-TOPCAT-Beginner-Exercies-for-the-learner`, to see
+an example of how to retrieve fluxes as magnitudes and avoid
+the need to add columns.
 
 .. code-block:: python
 
@@ -470,6 +474,8 @@ compare with the ``g_calibMag`` vs. ``r_calibMag - i_calibMag``?  How about the 
 color magnitude diagram?
 
 
+.. _DP0-2-TOPCAT-Beginner-Example-3:
+
 Example 3. Interact with multiple plots from the same table
 ===========================================================
 
@@ -590,6 +596,8 @@ subsets of points that one can define for the table via the
 TOPCAT interface.  The interested user is directed to 
 the `TOPCAT documentation on defining subsets <https://www.star.bris.ac.uk/~mbt/topcat/sun253/sun253.html#subsetDef>`_.
 
+
+.. _DP0-2-TOPCAT-Beginner-Example-4:
 
 Example 4. Create interactive 3D plots
 ======================================
@@ -718,3 +726,38 @@ cube plot can be zoomed in or out using the mouse or a scroll wheel.
 
 **4.6.** `(Optional)`  Explore!  For example, try plotting the equivalent of a color-color-color-color diagram, by using ``i_calibMag - z_calibMag`` or ``z_calibMag - y_calibMag`` for the auxiliary axis (color bar).
 
+
+.. _DP0-2-TOPCAT-Beginner-Exercies-for-the-learner:
+
+Exercises for the learner
+=========================
+
+1. Instead of creating the magnitude and magnitude error columns, use the
+following query with `scisql` functions to return fluxes as magnitudes.
+
+
+.. code-block:: SQL
+
+	SELECT coord_ra, coord_dec,
+        scisql_nanojanskyToAbMag(u_calibFlux) AS u_calibMag, 
+        scisql_nanojanskyToAbMagSigma(u_calibFlux, u_calibFluxErr) AS u_calibMagErr,
+        scisql_nanojanskyToAbMag(g_calibFlux) AS g_calibMag, 
+        scisql_nanojanskyToAbMagSigma(g_calibFlux, g_calibFluxErr) AS g_calibMagErr,
+        scisql_nanojanskyToAbMag(r_calibFlux) AS r_calibMag, 
+        scisql_nanojanskyToAbMagSigma(r_calibFlux, r_calibFluxErr) AS r_calibMagErr,
+        scisql_nanojanskyToAbMag(i_calibFlux) AS i_calibMag, 
+        scisql_nanojanskyToAbMagSigma(i_calibFlux, i_calibFluxErr) AS i_calibMagErr,
+        scisql_nanojanskyToAbMag(z_calibFlux) AS z_calibMag, 
+        scisql_nanojanskyToAbMagSigma(z_calibFlux, z_calibFluxErr) AS z_calibMagErr,
+        scisql_nanojanskyToAbMag(y_calibFlux) AS y_calibMag, 
+        scisql_nanojanskyToAbMagSigma(y_calibFlux, y_calibFluxErr) AS y_calibMagErr 
+        FROM dp02_dc2_catalogs.Object
+        WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
+                       CIRCLE('ICRS', 62, -37, 1.0)) = 1
+        AND detect_isPrimary = 1
+        AND u_calibFlux > 360 AND g_calibFlux > 360
+        AND r_calibFlux > 360 AND i_calibFlux > 360
+        AND z_calibFlux > 360 AND y_calibFlux > 360
+        AND u_extendedness = 0 AND g_extendedness = 0
+        AND r_extendedness = 0 AND i_extendedness = 0
+        AND z_extendedness = 0 AND y_extendedness = 0
