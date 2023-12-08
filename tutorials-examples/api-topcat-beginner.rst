@@ -144,30 +144,20 @@ non-extended (star-like) primary objects within 1 degree of (RA,DEC)=(62,-37).
 
 .. code-block:: SQL
 
-	SELECT TOP 10000
-        	coord_ra, coord_dec,
-        	u_calibFlux, u_calibFluxErr, 
-        	g_calibFlux, g_calibFluxErr, 
-        	r_calibFlux, r_calibFluxErr, 
-        	i_calibFlux, i_calibFluxErr, 
-        	z_calibFlux, z_calibFluxErr, 
-        	y_calibFlux, y_calibFluxErr
+	SELECT coord_ra, coord_dec,
+               u_calibFlux, u_calibFluxErr, g_calibFlux, g_calibFluxErr, 
+               r_calibFlux, r_calibFluxErr, i_calibFlux, i_calibFluxErr, 
+               z_calibFlux, z_calibFluxErr, y_calibFlux, y_calibFluxErr
 	FROM dp02_dc2_catalogs.Object
 	WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
         	        CIRCLE('ICRS', 62, -37, 1.0)) = 1
-		AND detect_isPrimary = 1
-		AND u_calibFlux > 360
-		AND g_calibFlux > 360
-		AND r_calibFlux > 360
-		AND i_calibFlux > 360
-		AND z_calibFlux > 360
-		AND y_calibFlux > 360
-		AND u_extendedness = 0
-		AND g_extendedness = 0
-		AND r_extendedness = 0
-		AND i_extendedness = 0
-		AND z_extendedness = 0
-		AND y_extendedness = 0
+              AND detect_isPrimary = 1
+              AND u_calibFlux > 360 AND g_calibFlux > 360
+              AND r_calibFlux > 360 AND i_calibFlux > 360
+              AND z_calibFlux > 360 AND y_calibFlux > 360
+              AND u_extendedness = 0 AND g_extendedness = 0
+              AND r_extendedness = 0 AND i_extendedness = 0
+              AND z_extendedness = 0 AND y_extendedness = 0
 
 **2.2.** This is a longer query than the previous one.  While the
 query is running, this temporary TOPCAT "Load New Table" window 
