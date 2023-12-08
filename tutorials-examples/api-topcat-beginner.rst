@@ -241,7 +241,7 @@ and its description (if any).
 
    -2.5*log10(u_calibFlux) + 31.4
 
-* `(Optional)` Use the built-in function to convert: ``janskyToAb(r_calibFlux*1e-9)``. Note that the factor of ``1e-9`` is needed because the fluxes are in units of nJy but Jy are expected.
+* `(Optional)` Use the built-in function to convert, e.g., ``janskyToAb(r_calibFlux*1e-9)``. Note that the factor of ``1e-9`` is needed because the fluxes are in units of nJy but Jy are expected by the function.
 
 * `(Optional)` Insert ``mag`` for the "Units" in the "Define Synthetic Column" window.
 
@@ -733,7 +733,7 @@ Exercises for the learner
 =========================
 
 1. Instead of creating the magnitude and magnitude error columns, use the
-following query with `scisql` functions to return fluxes as magnitudes.
+following query with ``scisql`` functions to return fluxes as magnitudes.
 
 
 .. code-block:: SQL
