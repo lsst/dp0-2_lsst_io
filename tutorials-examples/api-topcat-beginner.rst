@@ -27,7 +27,8 @@
 **Targeted learning level:** beginner
 
 **Introduction:**
-This tutorial uses the TOPCAT Virtual Observatory interface to search for bright stars in a small region of sky and create a color-magnitude diagram.
+This tutorial uses the TOPCAT Virtual Observatory interface to search for bright stars (<25th mag)
+in a small region of sky and create a color-magnitude diagram.
 This is the same demonstration used to illustrate the Table Access Protocol (TAP) service in the Notebook tutorial, 
 `Introduction to Jupyter Notebooks for Data Preview 0.2 <https://github.com/rubin-dp0/tutorial-notebooks/blob/main/DP02_01_Introduction_to_DP02.ipynb>`_ 
 and in the Portal tutorial, :doc:`portal-beginner`.
@@ -138,35 +139,25 @@ plotting routines.
 **2.1.** Delete the ADQL in the "ADQL Text" panel from Example 1, replace it with the following 
 ADQL, and click the "Run Query" button.  This query will return the ``coord_ra``, ``coord_dec``, 
 and the (u,g,r,i,z,y) ``calibFlux`` and ``calibFluxErr`` columns for the top 10000 entries returned from 
-the ``dp02_dc2_catalogs.Object`` table for bright (>360 nJy), non-extended (star-like) primary 
-objects within 1 degree of (RA,DEC)=(62,-37).  
+the ``dp02_dc2_catalogs.Object`` table for bright (>360 nJy; which corresponds to about 25 mag), 
+non-extended (star-like) primary objects within 1 degree of (RA,DEC)=(62,-37).  
 
 .. code-block:: SQL
 
-	SELECT TOP 10000
-        	coord_ra, coord_dec,
-        	u_calibFlux, u_calibFluxErr, 
-        	g_calibFlux, g_calibFluxErr, 
-        	r_calibFlux, r_calibFluxErr, 
-        	i_calibFlux, i_calibFluxErr, 
-        	z_calibFlux, z_calibFluxErr, 
-        	y_calibFlux, y_calibFluxErr
+	SELECT coord_ra, coord_dec,
+               u_calibFlux, u_calibFluxErr, g_calibFlux, g_calibFluxErr, 
+               r_calibFlux, r_calibFluxErr, i_calibFlux, i_calibFluxErr, 
+               z_calibFlux, z_calibFluxErr, y_calibFlux, y_calibFluxErr
 	FROM dp02_dc2_catalogs.Object
 	WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
         	        CIRCLE('ICRS', 62, -37, 1.0)) = 1
-		AND detect_isPrimary = 1
-		AND u_calibFlux > 360
-		AND g_calibFlux > 360
-		AND r_calibFlux > 360
-		AND i_calibFlux > 360
-		AND z_calibFlux > 360
-		AND y_calibFlux > 360
-		AND u_extendedness = 0
-		AND g_extendedness = 0
-		AND r_extendedness = 0
-		AND i_extendedness = 0
-		AND z_extendedness = 0
-		AND y_extendedness = 0
+              AND detect_isPrimary = 1
+              AND u_calibFlux > 360 AND g_calibFlux > 360
+              AND r_calibFlux > 360 AND i_calibFlux > 360
+              AND z_calibFlux > 360 AND y_calibFlux > 360
+              AND u_extendedness = 0 AND g_extendedness = 0
+              AND r_extendedness = 0 AND i_extendedness = 0
+              AND z_extendedness = 0 AND y_extendedness = 0
 
 **2.2.** This is a longer query than the previous one.  While the
 query is running, this temporary TOPCAT "Load New Table" window 
@@ -250,6 +241,8 @@ and its description (if any).
 
    -2.5*log10(u_calibFlux) + 31.4
 
+* `(Optional)` Use the built-in function to convert, e.g., ``janskyToAb(r_calibFlux*1e-9)``. Note that the factor of ``1e-9`` is needed because the fluxes are in units of nJy but Jy are expected by the function.
+
 * `(Optional)` Insert ``mag`` for the "Units" in the "Define Synthetic Column" window.
 
 * `(Optional)` Insert ``Apparent magnitude within 12.0-pixel aperture.  Measured on u-band.`` for the "Description" in the "Define Synthetic Column" window.
@@ -323,6 +316,10 @@ new columns will appear in the Table Columns window.
 For convenience, here are "copy-and-paste" versions of 
 the equations for the AB magnitude and the AB magnitude 
 error for each of the filter bands.
+For a more advanced approach, scroll down to the bottom of the page to
+:ref:`DP0-2-TOPCAT-Beginner-Exercies-for-the-learner` and find
+an example of how to retrieve fluxes as magnitudes and avoid
+the need to add columns.
 
 .. code-block:: python
 
@@ -477,6 +474,8 @@ compare with the ``g_calibMag`` vs. ``r_calibMag - i_calibMag``?  How about the 
 color magnitude diagram?
 
 
+.. _DP0-2-TOPCAT-Beginner-Example-3:
+
 Example 3. Interact with multiple plots from the same table
 ===========================================================
 
@@ -508,7 +507,7 @@ the 12th icon from the left in the row of icons at the top of the main TOPCAT wi
 **3.3.**  Note the Sky Plot window that TOPCAT returns.
 TOPCAT is generally pretty good at identifying which columns in 
 a table represent (RA, DEC) coordinates, and it succeeds
-in this case, plotting `coord_ra` and `coord_dec` as the 
+in this case, plotting ``coord_ra`` and ``coord_dec`` as the 
 RA and the DEC, respectively.  Note that TOPCAT automatically 
 adjusts to an appropriate RA, DEC range, but the plot can be
 zoomed in and out interactively via the mouse or scroll wheel.  
@@ -597,6 +596,8 @@ subsets of points that one can define for the table via the
 TOPCAT interface.  The interested user is directed to 
 the `TOPCAT documentation on defining subsets <https://www.star.bris.ac.uk/~mbt/topcat/sun253/sun253.html#subsetDef>`_.
 
+
+.. _DP0-2-TOPCAT-Beginner-Example-4:
 
 Example 4. Create interactive 3D plots
 ======================================
@@ -725,3 +726,38 @@ cube plot can be zoomed in or out using the mouse or a scroll wheel.
 
 **4.6.** `(Optional)`  Explore!  For example, try plotting the equivalent of a color-color-color-color diagram, by using ``i_calibMag - z_calibMag`` or ``z_calibMag - y_calibMag`` for the auxiliary axis (color bar).
 
+
+.. _DP0-2-TOPCAT-Beginner-Exercies-for-the-learner:
+
+Exercises for the learner
+=========================
+
+1. Instead of creating the magnitude and magnitude error columns, use the
+following query with ``scisql`` functions to return fluxes as magnitudes.
+
+
+.. code-block:: SQL
+
+	SELECT coord_ra, coord_dec,
+        scisql_nanojanskyToAbMag(u_calibFlux) AS u_calibMag, 
+        scisql_nanojanskyToAbMagSigma(u_calibFlux, u_calibFluxErr) AS u_calibMagErr,
+        scisql_nanojanskyToAbMag(g_calibFlux) AS g_calibMag, 
+        scisql_nanojanskyToAbMagSigma(g_calibFlux, g_calibFluxErr) AS g_calibMagErr,
+        scisql_nanojanskyToAbMag(r_calibFlux) AS r_calibMag, 
+        scisql_nanojanskyToAbMagSigma(r_calibFlux, r_calibFluxErr) AS r_calibMagErr,
+        scisql_nanojanskyToAbMag(i_calibFlux) AS i_calibMag, 
+        scisql_nanojanskyToAbMagSigma(i_calibFlux, i_calibFluxErr) AS i_calibMagErr,
+        scisql_nanojanskyToAbMag(z_calibFlux) AS z_calibMag, 
+        scisql_nanojanskyToAbMagSigma(z_calibFlux, z_calibFluxErr) AS z_calibMagErr,
+        scisql_nanojanskyToAbMag(y_calibFlux) AS y_calibMag, 
+        scisql_nanojanskyToAbMagSigma(y_calibFlux, y_calibFluxErr) AS y_calibMagErr 
+        FROM dp02_dc2_catalogs.Object
+        WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
+                       CIRCLE('ICRS', 62, -37, 1.0)) = 1
+        AND detect_isPrimary = 1
+        AND u_calibFlux > 360 AND g_calibFlux > 360
+        AND r_calibFlux > 360 AND i_calibFlux > 360
+        AND z_calibFlux > 360 AND y_calibFlux > 360
+        AND u_extendedness = 0 AND g_extendedness = 0
+        AND r_extendedness = 0 AND i_extendedness = 0
+        AND z_extendedness = 0 AND y_extendedness = 0

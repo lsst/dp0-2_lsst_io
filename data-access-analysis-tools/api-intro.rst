@@ -98,8 +98,9 @@ This section provides a basic guide to get TOPCAT set up to explore the DP0.2 ta
 See the `Creating user tokens webpage <https://rsp.lsst.io/guides/auth/creating-user-tokens.html>`_ 
 for a step-by-step guide for creating an RSP access token.  It is recommended that the token you create has the
 following propoerties:  a name that includes "TOPCAT" as a substring, a scope of ``read:tap``, 
-and no expiration date.)  *It is highly recommended to cut-and-paste the token somewhere
-secure for future reference.*
+and no expiration date.) The token will only be visible once.
+*You must cut-and-paste the token to a secure file for future use.*
+A new token is not needed for every TOPCAT session; the token can be reused, but it must be kept secure.
   
 **2. Start up TOPCAT on your own computer.**
 See `TOPCAT homepage <http://www.star.bris.ac.uk/~mbt/topcat/>`_ for download and install instructions.
