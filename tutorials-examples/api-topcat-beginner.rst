@@ -27,7 +27,8 @@
 **Targeted learning level:** beginner
 
 **Introduction:**
-This tutorial uses the TOPCAT Virtual Observatory interface to search for bright stars in a small region of sky and create a color-magnitude diagram.
+This tutorial uses the TOPCAT Virtual Observatory interface to search for bright stars (<25th mag)
+in a small region of sky and create a color-magnitude diagram.
 This is the same demonstration used to illustrate the Table Access Protocol (TAP) service in the Notebook tutorial, 
 `Introduction to Jupyter Notebooks for Data Preview 0.2 <https://github.com/rubin-dp0/tutorial-notebooks/blob/main/DP02_01_Introduction_to_DP02.ipynb>`_ 
 and in the Portal tutorial, :doc:`portal-beginner`.
@@ -138,8 +139,8 @@ plotting routines.
 **2.1.** Delete the ADQL in the "ADQL Text" panel from Example 1, replace it with the following 
 ADQL, and click the "Run Query" button.  This query will return the ``coord_ra``, ``coord_dec``, 
 and the (u,g,r,i,z,y) ``calibFlux`` and ``calibFluxErr`` columns for the top 10000 entries returned from 
-the ``dp02_dc2_catalogs.Object`` table for bright (>360 nJy), non-extended (star-like) primary 
-objects within 1 degree of (RA,DEC)=(62,-37).  
+the ``dp02_dc2_catalogs.Object`` table for bright (>360 nJy; which corresponds to about 25 mag), 
+non-extended (star-like) primary objects within 1 degree of (RA,DEC)=(62,-37).  
 
 .. code-block:: SQL
 
