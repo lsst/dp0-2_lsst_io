@@ -507,7 +507,7 @@ the 12th icon from the left in the row of icons at the top of the main TOPCAT wi
 **3.3.**  Note the Sky Plot window that TOPCAT returns.
 TOPCAT is generally pretty good at identifying which columns in 
 a table represent (RA, DEC) coordinates, and it succeeds
-in this case, plotting `coord_ra` and `coord_dec` as the 
+in this case, plotting ``coord_ra`` and ``coord_dec`` as the 
 RA and the DEC, respectively.  Note that TOPCAT automatically 
 adjusts to an appropriate RA, DEC range, but the plot can be
 zoomed in and out interactively via the mouse or scroll wheel.  
