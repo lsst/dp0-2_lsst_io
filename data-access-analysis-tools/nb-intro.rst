@@ -240,7 +240,7 @@ Web searches for "python *(thing you want to do)*" are usually pretty successful
 How do I install packages in my user environment?
 -------------------------------------------------
 
-Basic User Installs
+Basic user installs
 ~~~~~~~~~~~~~~~~~~~
 
 The Rubin Science Platform (RSP) comes with the ``rubin-env`` conda environment, including the LSST Science Pipelines, pre-installed and activated within the Notebook and Terminal.
@@ -261,14 +261,17 @@ When you're done using the environment and want to revert to the ``rubin-env`` o
 If you need to directly extend the ``rubin-env`` environment with other conda packages, the only way to do so at present is to clone the environment.
 This is a time- and space-consuming process, so we do not recommend it.
 
-More Complex User Installs
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+More complex user installs (including the notebook environment)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Suppose one wishes to install a user package on the RSP that has dependencies on non-python libraries.
 Typically, these non-python libraries must be installed and built separately, and the ``LD_LIBRARY_PATH`` must be updated.
-Leanne Guy created a simple and effective `tutorial notebook for working with user packages <https://github.com/rubin-dp0/tutorial-notebooks/>`_,  using the install of the ``bagpipes`` Bayesian Analysis of Galaxies package as an example.
+Leanne Guy created a simple and effective `tutorial notebook for working with user packages <https://github.com/rubin-dp0/tutorial-notebooks/>`_,  
+using the install of the ``bagpipes`` Bayesian Analysis of Galaxies package as an example.
 (The ``bagpipes`` package depends on ``PyMultiNest``, a python interface to the ``MultiNest`` package, which is written in C++.)
-The tutorial notebook runs through the steps to user install the ``bagpipes`` package and build its dependencies on the RSP so that it can be used both from the python command line shell and from inside a notebook.
+The tutorial notebook runs through the steps to user install the ``bagpipes`` package and build its dependencies on the RSP so that it can be used 
+both from the python command line shell and from inside a notebook (see step 5 below).
 
 The basic steps are:
 
