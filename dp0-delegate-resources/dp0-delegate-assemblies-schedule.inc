@@ -58,7 +58,7 @@
      - `Accessibility Hackathon for Notebooks <https://community.lsst.org/t/dp0-delegate-assembly-11-10-2023-notebook-accessibility-hackathon/8056>`_ (Jenn Kotler, Andrés A. Plazas Malagón)
      - *breakouts: bring your own notebook, add accessibility features!*
    * - 2023-12-08
-     - Using TOPCAT with the DP0.2 TAP Service (Introduction to the RSP API Aspect and DP0.2 API TOPCAT tutorial 01)
+     - `Using TOPCAT with the DP0.2 TAP Service (Introduction to the RSP API Aspect and DP0.2 API TOPCAT tutorial 01) <https://community.lsst.org/t/announcement-dp0-delegate-assembly-8-december-2023-using-topcat-with-the-dp0-2-tap-service/8140/6>`_ (Douglas Tucker)
      - *general Q&A, breakouts*
 
 
