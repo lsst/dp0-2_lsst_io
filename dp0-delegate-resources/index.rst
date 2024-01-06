@@ -201,7 +201,9 @@ DP0 Delegate Assemblies
 
 **Connection Info:** `ls.st/dp0-events <https://ls.st/dp0-events>`_
 
-**Time:** Biweekly on Fridays from 9am to 11am US Pacific (alternating with :ref:`DP0-Delegate-Programming-StackClub`).
+**Dates and times:** *TBD; Delegate Assemblies are on a temporary hiatus until Feb 2024.*
+(For exact dates, see table below. 
+Generally held biweekly on Fridays from 9am to 11am US Pacific, alternating with :ref:`DP0-Delegate-Programming-StackClub`.)
 
 The Delegate Assemblies are live, virtual seminars for DP0 delegates to learn more about DP0, the RSP, and the DC2 data set.
 Attendance is optional and all are welcome.
@@ -226,10 +228,8 @@ Stack Club
 
 **Connection Info:**  `ls.st/dp0-events <https://ls.st/dp0-events>`_
 
-**Time:** Biweekly on Fridays from 9am to 11am US Pacific time.
-
-**Dates:** Nov 3, 17, Dec 1, 15
-(i.e., generally alternating with :ref:`Delegate-Homepage-DP0-Delegate-Assemblies`).
+**Dates and times:** *TBD; Stack Club is on a temporary hiatus until Feb 2024.*
+(Generally alternates with :ref:`Delegate-Homepage-DP0-Delegate-Assemblies`.)
 
 `Stack Club <https://github.com/LSSTScienceCollaborations/StackClub>`_ is an open, drop-in session for working with the DP0 data sets and/or the 
 Rubin Observatory `LSST Science Pipelines <https://pipelines.lsst.io/>`_ (colloquially called "the Stack").
