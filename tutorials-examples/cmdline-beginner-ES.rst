@@ -8,15 +8,15 @@
 
 .. This is the label that can be used for cross referencing this file.
 .. Recommended title label format is "Directory Name"-"Title Name" -- Spaces should be replaced by hyphens.
-.. _Tutorials-Examples-DP0-2-Cmndline-Beginner:
+.. _Tutorials-Examples-DP0-2-Cmndline-Beginner-ES:
 .. Each section should include a label for cross referencing to a given area.
 .. Recommended format for all labels is "Title Name"-"Section Name" -- Spaces should be replaced by hyphens.
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
 .. A warning will alert you of identical labels during the linkcheck process.
 
-####################################
-01. Introduction to DP0.2 (beginner)
-####################################
+############################################
+01 (ES). Introducción a DP0.2 (principiante)
+############################################
 
 .. This section should provide a brief, top-level description of the page.
 
@@ -42,7 +42,7 @@ This data set uses a subset of the DESC's Data Challenge 2 (DC2) simulated image
 More information about the simulated data can be found in the DESC's `DC2 paper <https://ui.adsabs.harvard.edu/abs/2021ApJS..253...31L/abstract>`_ and in the `DP0.2 data release documentation <https://dp0-2.lsst.io>`_.
 
 
-.. _DP0-2-Cmndline-Beginner-Step-1:
+.. _DP0-2-Cmndline-Beginner-ES-Step-1:
 
 Step 1. Access the terminal and setup
 =====================================
@@ -68,7 +68,7 @@ Step 1. Access the terminal and setup
     python
 
 
-.. _DP0-2-Cmndline-Beginner-Step-2:
+.. _DP0-2-Cmndline-Beginner-ES-Step-2:
 
 Step 2. Import packages
 =======================
@@ -101,7 +101,7 @@ This tutorial makes use of several packages that will be commonly used when inte
 
 
 
-.. _DP0-2-Cmndline-Beginner-Step-3:
+.. _DP0-2-Cmndline-Beginner-ES-Step-3:
 
 Step 3. Retrieve data using TAP for 10 objects
 ==============================================
@@ -170,7 +170,7 @@ Display the results table including the magnitudes.
 
 
 
-.. _DP0-2-Cmndline-Beginner-Step-4:
+.. _DP0-2-Cmndline-Beginner-ES-Step-4:
 
 Step 4. Retrieve data using TAP for 10,000 objects
 ==================================================
@@ -211,7 +211,7 @@ In addition to a cone search, impose query restrictions that detect_isPrimary is
 
 
 
-.. _DP0-2-Cmndline-Beginner-Step-5:
+.. _DP0-2-Cmndline-Beginner-ES-Step-5:
 
 Step 5. Make a color-magnitude diagram
 ======================================
@@ -249,7 +249,7 @@ Double click on the filename to open and view the plot.
 		There are a number of vertical bands representing various color magnitudes ranging from 0.6 to 1.7.  This feature is unique to this simulated data set. 
 
 
-.. _DP0-2-Cmndline-Beginner-Step-6:
+.. _DP0-2-Cmndline-Beginner-ES-Step-6:
 
 Step 6. Retrieve image data using the butler
 ============================================
@@ -310,7 +310,7 @@ The butler (`butler documentation <https://pipelines.lsst.io/modules/lsst.daf.bu
     my_deepCoadd = butler.get('deepCoadd', dataId=dataId)
 
 
-.. _DP0-2-Cmndline-Beginner-Step-7:
+.. _DP0-2-Cmndline-Beginner-ES-Step-7:
 
 Step 7. Display the image
 =========================
