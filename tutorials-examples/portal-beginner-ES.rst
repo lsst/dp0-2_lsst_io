@@ -8,15 +8,15 @@
 
 .. This is the label that can be used for cross referencing this file.
 .. Recommended title label format is "Directory Name"-"Title Name" -- Spaces should be replaced by hyphens.
-.. _Tutorials-Examples-DP0-2-Portal-Beginner:
+.. _Tutorials-Examples-DP0-2-Portal-Beginner-ES:
 .. Each section should include a label for cross referencing to a given area.
 .. Recommended format for all labels is "Title Name"-"Section Name" -- Spaces should be replaced by hyphens.
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
 .. A warning will alert you of identical labels during the linkcheck process.
 
-###################################################
-01. Bright Stars Color-Magnitude Diagram (beginner)
-###################################################
+##########################################################################
+01 (ES). Diagrama de magnitud-color de estrellas brillantes (principiante)
+##########################################################################
 
 .. This section should provide a brief, top-level description of the page.
 
@@ -35,7 +35,7 @@ This is the same demonstration used to illustrate the Table Access Protocol (TAP
 Beginner-level users looking for a more general overview of the Portal Aspect should refer to this :doc:`/data-access-analysis-tools/portal-intro`.
 
 
-.. _DP0-2-Portal-Beginner-Step-1:
+.. _DP0-2-Portal-Beginner-ES-Step-1:
 
 Step 1. Set the query constraints
 =================================
@@ -78,7 +78,7 @@ it is not necessary for this tutorial to actually retrieve the data in those col
 1.8. Click "Search" at lower left.
 
 
-.. _DP0-2-Portal-Beginner-Step-2:
+.. _DP0-2-Portal-Beginner-ES-Step-2:
 
 Step 2. Create the color-magnitude diagram
 ==========================================
@@ -166,7 +166,7 @@ Hover over the data points with a mouse either on the Coverage map (see the coor
 Select a row in the table and it appears as a different color in the plot(s), and vice-versa: select a point in a plot and it is highlighted in the table below.
 
 
-.. _DP0-2-Portal-Beginner-Step-3:
+.. _DP0-2-Portal-Beginner-ES-Step-3:
 
 Step 3. Do the same query with ADQL
 ===================================
@@ -194,7 +194,7 @@ will return random subsets.
 
 
 
-.. _DP0-2-Portal-Beginner-Step-4:
+.. _DP0-2-Portal-Beginner-ES-Step-4:
 
 Step 4. Transfer ADQL queries or results from the Portal to the Notebook Aspect
 ===============================================================================
