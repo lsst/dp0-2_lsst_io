@@ -88,6 +88,7 @@ which appears in all users' home directories.
 **List of Notebook tutorials:**
 See the repository's `README file <https://github.com/rubin-dp0/tutorial-notebooks/blob/main/README.md>`_ for the most up-to-date
 list of available tutorials with descriptions.
+Spanish-language Jupyter Notebook tutorials have filenames ending in "ES.ipynb". 
 
 
 .. _DP0-2-Tutorials-CommandLine:
@@ -131,7 +132,25 @@ The tutorials below are step-by-step demonstrations of how to use the API Aspect
     :glob:
 
     api-topcat-beginner
-    
+
+
+
+.. _DP0-2-Tutorials-ES:
+
+Spanish-language tutorials
+==========================
+
+One of the DP0.2 :ref:`DP0-2-Tutorials-Notebooks` is available in Spanish (DP02_01_Introduction_to_DP02_ES.ipynb),
+along with one each of the :ref:`DP0-2-Tutorials-CommandLine` and :ref:`DP0-2-Tutorials-Portal`.
+
+
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    portal-beginner-ES
+    cmdline-beginner-ES
+
 
 
 .. _DP0-2-Tutorials-Contributed:
