@@ -64,6 +64,7 @@ The tutorials below are step-by-step demonstrations of how to use the Portal Asp
     :glob:
 
     portal-beginner
+    portal-beginner-ES
     portal-intermediate
     portal-images
     portal-4
@@ -101,6 +102,7 @@ Much of the contents of the tutorial notebooks (above) can also be executed via 
     :glob:
 
     cmdline-beginner
+    cmdline-beginner-ES
     cmdline-custom-coadd
 
 
