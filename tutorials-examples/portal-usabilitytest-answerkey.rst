@@ -70,7 +70,7 @@ Step 3. Plot only extended objects
 
 3.1 Click on the Active Chart settings icon (two gears) and click on “Trace Options”. Next to “Symbol”, from the drop down menu choose “circle-open”. Next to "Color", enter "purple". Click "Apply".
 
-.. figure:: /_static/portal_UTAK_beginner_task2.png
+.. figure:: /_static/portal_UTAK_beginner_task1.png
 	:name: portal_UTAK_beginner_task1
 	:alt: The chart shows the g-band psfFlux vs the g-band calibFlux, for the extended objects returned by the search query.
 
@@ -113,7 +113,7 @@ Step 3. Zoom-in and save the diagram
 
 3.2. Click on "Pin Chart" and then the save icon (next to the 1x magnifying glass) to download the chart as a PNG.
 
-.. figure:: /_static/portal_UTAK_beginner_task1.png
+.. figure:: /_static/portal_UTAK_beginner_task2.png
 	:name: portal_UTAK_beginner_task2
 	:alt: The chart shows a color magnitude diagram, g-band minus r-band  vs i-band magnitude, for the objects returned by the search query.
 
@@ -299,9 +299,13 @@ Step 1. Visualize the region of the cluster
 Step 2. Create a color-magnitude diagram
 ========================================
 
-2.1. Click on the Active Chart settings icon (two gears) and set “X” to be “to be “-2.5 * log10(i_cModelFlux) + 31.4”, and “Y” to be “(-2.5 * log10(r_cModelFlux)) - (-2.5 * log10(i_cModelFlux))” . 
+2.1. Click on the Active Chart settings icon (two gears) and set “X” to be “(-2.5 * log10(r_cModelFlux)) - (-2.5 * log10(i_cModelFlux))” and “Y” to be “to be “-2.5 * log10(i_cModelFlux) + 31.4”. 
 
-2.2. Under Chart Options, set the “X Label” to “i” and “Y Label” to “r-i”. 
+2.2. Under Chart Options, set the “X Label” to “color (r-i)”. Set “Y Label” to “magnitude (i)”, and underneath check the “Options” box for “reverse”. Click "Apply".
+
+.. figure:: /_static/portal_UTAK_experienced_task2a.png
+	:name: portal_UTAK_experienced_task2a
+	:alt: A screenshot of ...
 
 Step 3. Highlight the cluster members
 =====================================
@@ -311,5 +315,9 @@ Step 3. Highlight the cluster members
 3.2. Click on the filter icon (next to “Pin chart”) to show only the selected points. 
 
 3.3. Under the "Coverage" tab, click on the layers icon (hover-over text “manipulate overlay display”) and select “Coverage”.
+
+.. figure:: /_static/portal_UTAK_experienced_task2b.png
+	:name: portal_UTAK_experienced_task2b
+	:alt: A screenshot of ...
 
 
