@@ -26,7 +26,7 @@ Portal Usability Test Answer Key
 
 **Last verified to run:** 
 
-**Link to Portal usability test:** 
+**Link to Portal usability test:** https://forms.gle/EVqX29G3i2o7cvXE6
 
 **Introduction:**
 Anyone is welcome to do the Portal usability test and submit their responses via
@@ -61,7 +61,7 @@ Step 2. Create a g-r color vs i flux diagram
 
 2.1. Click on the Active Chart settings icon (two gears) to change the plot parameters. Set “X” to be “i_calibFlux” and “Y” to be “g_calibFlux - r_calibFlux”. 
 
-2.2. Click on “Chart Options” and set “X Label” to “i calibFlux i” and “Y Label” to “g-r calibFlux”.
+2.2. Click on “Chart Options” and set “X Label” to “i calibFlux” and “Y Label” to “g-r calibFlux”. Click "Apply".
 
 Step 3. Zoom-in and save the diagram 
 ====================================
@@ -102,14 +102,14 @@ Step 1. Query the DP0.2 Object catalog
 Step 2. Create a g psfFlux vs. g cmodelFlux diagram
 ===================================================
 
-2.1. Click on the Active Chart settings icon (two gears) and set “X” to be “g_calibFlux”, and “Y” to be “g_psfFlux”. 
+2.1. Click on the Active Chart settings icon (two gears) and set “X” to be “g_calibFlux”, and “Y” to be “g_psfFlux”. Click "Apply".
 
 Step 3. Plot only extended objects 
 ==================================
 
-3.0. In the results table, under the column "g_extendedness", enter "= 1". 
+3.0. In the results table, under the column "g_extendedness", enter "= 1". Click on the filter icon. 
 
-2.1 Click on the Active Chart settings icon (two gears) and click on “Trace Options”. Next to “Symbol”, from the drop down menu choose “circle-open”. Next to "Color", enter "purple".
+3.1 Click on the Active Chart settings icon (two gears) and click on “Trace Options”. Next to “Symbol”, from the drop down menu choose “circle-open”. Next to "Color", enter "purple".
 
 .. figure:: /_static/portal_UTAK_beginner_task2.png
 	:name: portal_UTAK_beginner_task2
@@ -143,7 +143,7 @@ Step 1. Retrieve processed visit images
 Step 2. View and align the images
 =================================
 
-2.1  Click on “Bi-view Tables” in the upper right corner to show just one image and the table side-by-side. To display the PVIs, select “Data Product” tab.
+2.1  Click on “Bi-view Tables” in the upper right corner to show just one image and the table side-by-side. To display the PVIs, select the “Data Product” tab.
 
 2.2. Above the image, click on the grid icon (hover-over text “Tile all images in the search result table”) to simultaneously view all 4 i band PVIs.
 
@@ -192,7 +192,7 @@ Step 2. Create a light curve plot
 
 2.2. From the drop-down menu next to "Trace Style", choose “Connected points” and under “Trace options” enter “red” for "Color". 
 
-2.3. Click on “Chart Options” and set “X Label” to “MJD of the Exposure Midpoint” and “Y Label” to “PSF Difference-Image Flux”. 
+2.3. Click on “Chart Options” and set “X Label” to “MJD of the Exposure Midpoint” and “Y Label” to “PSF Difference-Image Flux”. Click "Apply".
 
 2.4. Click on the table column “midPointTai” to sort the results.  
 
