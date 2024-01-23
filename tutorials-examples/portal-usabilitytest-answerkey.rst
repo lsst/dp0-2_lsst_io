@@ -82,8 +82,6 @@ Step 3. Plot only extended objects
 Beginner Task 2
 ===============
 
-[Create a g-r color vs. i flux diagram using the calibFlux columns in the DP0.2 Object catalog, for all objects within 120 arcseconds of Right Ascension 60 degrees and Declination -35 degrees. Zoom in on the clump of points with color values approximately in the range of -200 < g-r < 1000 nJy. Save the plot as a PNG file to your local computer.]
-
 Create a g-r color vs. i magnitude diagram using the calibFlux columns in the DP0.2 Object catalog, for all objects within 120 arcseconds of Right Ascension 60 degrees and Declination -35 degrees. Zoom in on the clump of points with color values approximately in the range of -4 < g-r < 4. Save the plot as a PNG file to your local computer.
 
 Hint: After retrieving the {band}_calibFlux columns, use the expression (-2.5*log10({band}_calibFlux) + 31.4) to convert the fluxes in nanoJankys to magnitudes in the AB system. 
@@ -104,9 +102,9 @@ Step 1. Query the DP0.2 Object catalog
 Step 2. Create a g-r color vs i magnitude diagram 
 =================================================
 
-2.1. Click on the Active Chart settings icon (two gears) to change the plot parameters. Set “X” to be “-2.5 * log10(i_calibFlux) + 31.4” and “Y” to be "(-2.5 * log10(g_calibFlux)) - (-2.5 * log10(r_calibFlux))".
+2.1. Click on the Active Chart settings icon (two gears) to change the plot parameters. Set “X” to be "(-2.5 * log10(g_calibFlux)) - (-2.5 * log10(r_calibFlux))" and “Y” to be “-2.5 * log10(i_calibFlux) + 31.4”.
 
-2.2. Click on “Chart Options” and set “X Label” to “magnitude (i)”, and underneath check the “Options” box for “reverse”. Set “Y Label” to “color (g-r)”. Click "Apply".
+2.2. Click on “Chart Options” and set "X Label” to “color (g-r)”. Set “Y Label” to “magnitude (i)”, and underneath check the “Options” box for “reverse”. Click "Apply".
 
 Step 3. Zoom-in and save the diagram 
 ====================================
