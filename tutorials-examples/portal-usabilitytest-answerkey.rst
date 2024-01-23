@@ -22,18 +22,17 @@ Portal Usability Test Answer Key
 
 .. This section should provide a brief, top-level description of the page.
 
-**Contact authors:** Andrés A. Plazas Malagón and Gloria Fonseca Alvarez 
+**Contact authors:** Gloria Fonseca Alvarez and Andrés A. Plazas Malagón
 
-**Last verified to run:** 
+**Last verified to run:** 2024-01-22
 
 **Link to Portal usability test:** https://forms.gle/EVqX29G3i2o7cvXE6
 
 **Introduction:**
+
+The following is the answer key for the tasks in the Portal usability test. The test was designed to understand how users interact with the Portal functionality.
 Anyone is welcome to do the Portal usability test and submit their responses via
 the Google form linked above.
-
-The following is the answer key for the tasks in the test.
-
 
 .. _DP0-2-Portal-UTAK-beginner-task1:
 
@@ -215,8 +214,8 @@ Hint: Do an image search to find the right ascension (RA) and declination (DEC) 
 
 Hint: Query for bright extended objects near the tract center and then visually review the results until you find the target.    
 
-Step 1. Find the coordinates of the tract center
-================================================
+Step 1. Find the coordinates of the object
+==========================================
 
 1.1. Check the “Use Image Search (ObsTAP)” box below “LSST DP0.2 DC2 Tables”. Under “Enter Constraints”, unselect the box to the left of "Observation Type and Source" and “Location”.
 
@@ -224,7 +223,7 @@ Step 1. Find the coordinates of the tract center
 
 1.3. Click “Search” at lower left.
 
-1.4. Under the "Coverage" tab, find the center of the tract and note the coordinates, around "56.65, -36.45". Alternatively, visually inspect each patch and find the coordinates of the galaxy. The galaxy is in patch 38, with coordinates around "56.74,-36.08". 
+1.4. Under the "Coverage" tab, visually inspect each patch and find the coordinates of the galaxy. The galaxy is in patch 38, with coordinates around "56.74,-36.08". 
 
 
 Step 2. Query for bright extended objects
@@ -233,7 +232,7 @@ Step 2. Query for bright extended objects
 2.1. On the upper right of the portal aspect, click on “Edit ADQL”.
 
 
-2.2. Query for extended objects brighter than 20th magnitude, near the center of the tract, including objectId. 
+2.2. Query for extended objects brighter than 20th magnitude, near the coordinates of the object, including objectId. 
 
 .. code-block:: SQL
 
@@ -243,7 +242,7 @@ Step 2. Query for bright extended objects
        	scisql_nanojanskyToAbMag(r_cModelFlux) as rmag,
        	scisql_nanojanskyToAbMag(i_cModelFlux) as imag
 	FROM dp02_dc2_catalogs.Object 
-	WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),CIRCLE('ICRS', 56.65, -36.45, 1))=1 
+	WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),CIRCLE('ICRS', 56.74, -36.08, 1))=1 
         AND (detect_isPrimary =1 
        	AND scisql_nanojanskyToAbMag(g_cModelFlux) < 20 AND g_extendedness =1 
        	AND scisql_nanojanskyToAbMag(r_cModelFlux) < 20 AND r_extendedness =1 
