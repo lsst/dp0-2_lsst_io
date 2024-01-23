@@ -41,48 +41,7 @@ The following is the answer key for the tasks in the test.
 Beginner Task 1
 ===============
 
-Create a g-r color vs. i flux diagram using the calibFlux columns in the DP0.2 Object catalog, for all objects within 120 arcseconds of Right Ascension 60 degrees and Declination -35 degrees. Zoom in on the clump of points with color values approximately in the range of -200 < g-r < 1000 nJy. Save the plot as a PNG file to your local computer.
-
-Step 1. Query the DP0.2 Object catalog 
-======================================
-
-1.1. Next to “LSST DP0.2 DC2 Tables”, choose the Table Collection to be “dp02_dc2_catalogs” (left drop-down menu) and the Table to be “dp02_dc2_catalogs.Object” (right drop-down menu).
-
-1.2. Under “Enter Constraints”, select the box to the left of “Spatial”. For “Coords or Obj Name”, use the coordinates “62, -35”. Next to “Radius”, from the drop down menu choose “arcseconds” and then enter “120”.
-
-1.3. In the table on the right, under “Output Column Selection and Constraints”, select “coord_ra”, “coord_dec”, “detect_isPrimary”, “g” “r” and “i_calibFlux”. Click on the filter icon to show only the selected columns. 
-
-1.4. In the “constraints” column, enter “=1” for “detect_isPrimary”.
-
-1.5. Click “Search” at the lower left.
-
-Step 2. Create a g-r color vs i flux diagram 
-============================================
-
-2.1. Click on the Active Chart settings icon (two gears) to change the plot parameters. Set “X” to be “i_calibFlux” and “Y” to be “g_calibFlux - r_calibFlux”. 
-
-2.2. Click on “Chart Options” and set “X Label” to “i calibFlux” and “Y Label” to “g-r calibFlux”. Click "Apply".
-
-Step 3. Zoom-in and save the diagram 
-====================================
-
-3.1. Click on the Zoom-in icon (magnifying glass with a plus) and click and drag over the clump on points. 
-
-3.2. Click on "Pin Chart" and then the save icon (next to the 1x magnifying glass) to download the chart as a PNG.
-
-.. figure:: /_static/portal_UTAK_beginner_task1.png
-	:name: portal_UTAK_beginner_task1
-	:alt: The chart shows a color flux diagram, g-band minus r-band flux vs i-band flux, for the objects returned by the search query.
-
-        The g-r color vs i flux diagram 
-
-.. _DP0-2-Portal-UTAK-beginner-task2:
-
-===============
-Beginner Task 2
-===============
-
-Retrieve the g_psfFlux, g_calibFlux, and the g_extendedness columns from the DP0.2 Object catalog for objects within 15 arcminutes of the galaxy cluster at Right Ascension 55.75 degrees and Declination -32.27 degrees. Plot the psfFlux vs. the cmodelFlux. In the results table, impose a constraint to only plot objects with extendedness equal to 1. Change the plot symbols to open purple circles. 
+Retrieve the g_psfFlux, g_calibFlux, and the g_extendedness columns from the DP0.2 Object catalog for objects within 15 arcminutes of the galaxy cluster at Right Ascension 55.75 degrees and Declination -32.27 degrees. Plot the psfFlux vs. the calibFlux. In the results table, impose a constraint to only plot objects with extendedness equal to 1. Change the plot symbols to open purple circles. 
 
 Step 1. Query the DP0.2 Object catalog 
 ======================================
@@ -109,13 +68,58 @@ Step 3. Plot only extended objects
 
 3.0. In the results table, under the column "g_extendedness", enter "= 1". Click on the filter icon. 
 
-3.1 Click on the Active Chart settings icon (two gears) and click on “Trace Options”. Next to “Symbol”, from the drop down menu choose “circle-open”. Next to "Color", enter "purple".
+3.1 Click on the Active Chart settings icon (two gears) and click on “Trace Options”. Next to “Symbol”, from the drop down menu choose “circle-open”. Next to "Color", enter "purple". Click "Apply".
 
 .. figure:: /_static/portal_UTAK_beginner_task2.png
-	:name: portal_UTAK_beginner_task2
+	:name: portal_UTAK_beginner_task1
 	:alt: The chart shows the g-band psfFlux vs the g-band calibFlux, for the extended objects returned by the search query.
 
         The g psfFlux vs g calibFlux diagram for extended objects 
+
+.. _DP0-2-Portal-UTAK-beginner-task2:
+
+===============
+Beginner Task 2
+===============
+
+[Create a g-r color vs. i flux diagram using the calibFlux columns in the DP0.2 Object catalog, for all objects within 120 arcseconds of Right Ascension 60 degrees and Declination -35 degrees. Zoom in on the clump of points with color values approximately in the range of -200 < g-r < 1000 nJy. Save the plot as a PNG file to your local computer.]
+
+Create a g-r color vs. i magnitude diagram using the calibFlux columns in the DP0.2 Object catalog, for all objects within 120 arcseconds of Right Ascension 60 degrees and Declination -35 degrees. Zoom in on the clump of points with color values approximately in the range of -4 < g-r < 4. Save the plot as a PNG file to your local computer.
+
+Hint: After retrieving the {band}_calibFlux columns, use the expression (-2.5*log10({band}_calibFlux) + 31.4) to convert the fluxes in nanoJankys to magnitudes in the AB system. 
+
+Step 1. Query the DP0.2 Object catalog 
+======================================
+
+1.1. Next to “LSST DP0.2 DC2 Tables”, choose the Table Collection to be “dp02_dc2_catalogs” (left drop-down menu) and the Table to be “dp02_dc2_catalogs.Object” (right drop-down menu).
+
+1.2. Under “Enter Constraints”, select the box to the left of “Spatial”. For “Coords or Obj Name”, use the coordinates “60, -35”. Next to “Radius”, from the drop down menu choose “arcseconds” and then enter “120”.
+
+1.3. In the table on the right, under “Output Column Selection and Constraints”, select “coord_ra”, “coord_dec”, “detect_isPrimary”, “g” “r” and “i_calibFlux”. Click on the filter icon to show only the selected columns. 
+
+1.4. In the “constraints” column, enter “=1” for “detect_isPrimary”.
+
+1.5. Click “Search” at the lower left.
+
+Step 2. Create a g-r color vs i magnitude diagram 
+=================================================
+
+2.1. Click on the Active Chart settings icon (two gears) to change the plot parameters. Set “X” to be “-2.5 * log10(i_calibFlux) + 31.4” and “Y” to be "(-2.5 * log10(g_calibFlux)) - (-2.5 * log10(r_calibFlux))".
+
+2.2. Click on “Chart Options” and set “X Label” to “magnitude (i)”, and underneath check the “Options” box for “reverse”. Set “Y Label” to “color (g-r)”. Click "Apply".
+
+Step 3. Zoom-in and save the diagram 
+====================================
+
+3.1. Click on the Zoom-in icon (magnifying glass with a plus) and click and drag over the clump on points. 
+
+3.2. Click on "Pin Chart" and then the save icon (next to the 1x magnifying glass) to download the chart as a PNG.
+
+.. figure:: /_static/portal_UTAK_beginner_task1.png
+	:name: portal_UTAK_beginner_task2
+	:alt: The chart shows a color magnitude diagram, g-band minus r-band  vs i-band magnitude, for the objects returned by the search query.
+
+        The g-r color vs i magnitude diagram 
 
 .. _DP0-2-Portal-UTAK-intermediate-task1:
 
