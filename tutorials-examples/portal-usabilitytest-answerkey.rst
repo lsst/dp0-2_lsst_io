@@ -170,7 +170,7 @@ Intermediate Task 2
 ===================
 
 Use the ADQL interface to obtain, from the DP0.2 DiaSource table, an r-band light curve for the Type Ia supernova which has a diaObjectId of 1250953961339360185. Retrieve the r-band fluxes and their errors derived from a linear least-squares fit of a PSF model, and the effective mid-exposure time, for all diaSources associated with this diaObjectId. Plot the light curve as the flux as a function of time, with error bars associated to each flux point. Change the plot style to use connected points, the point style to be red circles, and then sort the results by midPointTai. Update the plot axes labels to be "PSF Difference-Image Flux" and "MJD of the Exposure Midpoint".
-Hint: In the ADQL query, the diaObjectId will need to be formatted as a string (e.g., 'r'). 
+Hint: In the ADQL query, the filter name will need to be formatted as a string (e.g., 'r'). 
 
 Step 1. Query the DiaSource table with ADQL
 ===========================================
@@ -212,9 +212,10 @@ Step 2. Create a light curve plot
 Experienced Task 1
 ==================
 
-The following figure, taken from the DP0.2 data products page, has three panels: the grid of tracts, the image of tract 3828, and a zoom-in image approximately centered near a particularly bright elongated galaxy. Use the Portal Aspect to find the ObjectId of that galaxy in the DP0.2 Object catalog.
-Hint: Do an image search to find the coordinates of the object and then a catalog search.
-Hint: Query for bright extended objects near the tract center and then visually review the results until you find the target.   
+The following figure, taken from the DP0.2 data products page, has three panels: the grid of tracts in the DC2 simulation area, the image of tract 3828, and a zoom-in image approximately centered near a particularly bright elongated galaxy. Use the Portal Aspect to find the ObjectId of that galaxy in the DP0.2 Object catalog.
+Hint: Do an image search to find the right ascension (RA) and declination (DEC) coordinates of the object and then a catalog search.
+
+Hint: Query for bright extended objects near the tract center and then visually review the results until you find the target.    
 
 Step 1. Find the coordinates of the tract center
 ================================================
@@ -222,7 +223,6 @@ Step 1. Find the coordinates of the tract center
 1.1. Check the “Use Image Search (ObsTAP)” box below “LSST DP0.2 DC2 Tables”. Under “Enter Constraints”, unselect the box to the left of "Observation Type and Source" and “Location”.
 
 1.2. In the table on the right, under “Output Column Selection and Constraints”, search for “lsst_tract” and enter “=3828” in the “constraints” column. 
-
 
 1.3. Click “Search” at lower left.
 
@@ -279,9 +279,13 @@ Step 3. Narrow down the number of objects and visually inspect
 Experienced Task 2
 ==================
 
-Query the DP0.2 Object catalog for the galaxy cluster around Right Ascension 3h43m00.00s and Declination -32d16m19.00s to visualize the region where the cluster is and plot the red-sequence in a color-magnitude diagram, as illustrated in the first image below.  Then, select the points in the red sequence to highlight the cluster members in the image, as shown in the second image below. 
+Query the DP0.2 Object catalog for the galaxy cluster around Right Ascension 3h43m00.00s and Declination -32d16m19.00s to visualize the region where the cluster is and plot the red-sequence* in a color-magnitude diagram (for example, r-i vs i), as illustrated in the first image below.  Then, select the points in the red sequence to highlight the cluster members in the image, as shown in the second image below. 
 
 Hint: use a search radius of 200 arcseconds.
+
+Hint: you can use the scisql_nanojanskyToAbMag SQL function to convert fluxes to magnitudes.
+
+*Definition: The red sequence in galaxy clusters refers to a tight correlation observed in color-magnitude diagrams, where many of the galaxies in a cluster show a similar red color and brightness, indicating they are older, more evolved galaxies with less star formation.
 
 Step 1. Visualize the region of the cluster
 ===========================================
