@@ -157,7 +157,7 @@ Step 2. View and align the images
 
 .. figure:: /_static/portal_UTAK_intermediate_task1.png
 	:name: portal_UTAK_intermediate_task1
-	:alt: A screenshot of the image display and table results 
+	:alt: A screenshot of the image display and table results. 
 
 	A zoom-in of the aligned i-band PVIs
 
@@ -200,7 +200,7 @@ Step 2. Create a light curve plot
 
 .. figure:: /_static/portal_UTAK_intermediate_task2.png
 	:name: portal_UTAK_intermediate_task2
-	:alt: A screenshot of the image display and table results 
+	:alt: Light curve of a Type Ia supernova in the r-band. 
 
 	The light curve after sorting by the exposure midpoint
 
@@ -266,7 +266,7 @@ Step 3. Narrow down the number of objects and visually inspect
 
 .. figure:: /_static/portal_UTAK_experienced_task1.png
 	:name: portal_UTAK_experienced_task1
-	:alt: A screenshot of the image display for the elongated galaxy and table results 
+	:alt: A screenshot of the image display for the elongated galaxy and table results. 
 
 	Image of the particularly bright elongated galaxy
 
@@ -299,13 +299,15 @@ Step 1. Visualize the region of the cluster
 Step 2. Create a color-magnitude diagram
 ========================================
 
-2.1. Click on the Active Chart settings icon (two gears) and set “X” to be “(-2.5 * log10(r_cModelFlux)) - (-2.5 * log10(i_cModelFlux))” and “Y” to be “to be “-2.5 * log10(i_cModelFlux) + 31.4”. 
+2.1. Click on the Active Chart settings icon (two gears) and set “X” to be “to be “-2.5 * log10(i_cModelFlux) + 31.4” and “Y” to be “(-2.5 * log10(r_cModelFlux)) - (-2.5 * log10(i_cModelFlux))”. 
 
-2.2. Under Chart Options, set the “X Label” to “color (r-i)”. Set “Y Label” to “magnitude (i)”, and underneath check the “Options” box for “reverse”. Click "Apply".
+2.2. Under Chart Options, set "Chart title" to "Red Sequence". Set “X Label” to “i” and set “Y Label” to “r-i”. Click "Apply".
 
 .. figure:: /_static/portal_UTAK_experienced_task2a.png
 	:name: portal_UTAK_experienced_task2a
-	:alt: A screenshot of ...
+	:alt: A screenshot of the coverage and red sequence in a color-magnitude diagram.
+
+	Red sequence in a color-magnitude diagram
 
 Step 3. Highlight the cluster members
 =====================================
@@ -318,6 +320,7 @@ Step 3. Highlight the cluster members
 
 .. figure:: /_static/portal_UTAK_experienced_task2b.png
 	:name: portal_UTAK_experienced_task2b
-	:alt: A screenshot of ...
+	:alt: A screenshot of the coverage and red sequence in a color-magnitude diagram with cluster members highlighted.
 
+	Red sequence with cluster members highlighted
 
