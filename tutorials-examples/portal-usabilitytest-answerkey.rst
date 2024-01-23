@@ -166,6 +166,7 @@ Intermediate Task 2
 ===================
 
 Use the ADQL interface to obtain, from the DP0.2 DiaSource table, an r-band light curve for the Type Ia supernova which has a diaObjectId of 1250953961339360185. Retrieve the r-band fluxes and their errors derived from a linear least-squares fit of a PSF model, and the effective mid-exposure time, for all diaSources associated with this diaObjectId. Plot the light curve as the flux as a function of time, with error bars associated to each flux point. Change the plot style to use connected points, the point style to be red circles, and then sort the results by midPointTai. Update the plot axes labels to be "PSF Difference-Image Flux" and "MJD of the Exposure Midpoint".
+
 Hint: In the ADQL query, the filter name will need to be formatted as a string (e.g., 'r'). 
 
 Step 1. Query the DiaSource table with ADQL
@@ -209,11 +210,12 @@ Experienced Task 1
 ==================
 
 The following figure, taken from the DP0.2 data products page, has three panels: the grid of tracts in the DC2 simulation area, the image of tract 3828, and a zoom-in image approximately centered near a particularly bright elongated galaxy. Use the Portal Aspect to find the ObjectId of that galaxy in the DP0.2 Object catalog.
+
 Hint: Do an image search to find the right ascension (RA) and declination (DEC) coordinates of the object and then a catalog search.
 
 Hint: Query for bright extended objects near the tract center and then visually review the results until you find the target.    
 
-Step 1. Find the coordinates of the object
+Step 1. Find the coordinates of the galaxy
 ==========================================
 
 1.1. Check the “Use Image Search (ObsTAP)” box below “LSST DP0.2 DC2 Tables”. Under “Enter Constraints”, unselect the box to the left of "Observation Type and Source" and “Location”.
@@ -222,7 +224,7 @@ Step 1. Find the coordinates of the object
 
 1.3. Click “Search” at lower left.
 
-1.4. Under the "Coverage" tab, visually inspect each patch and find the coordinates of the galaxy. The galaxy is in patch 38, with coordinates around "56.74,-36.08". 
+1.4. Under the "Coverage" tab, visually inspect each patch and find the coordinates of the galaxy. The galaxy is in patch 38, with coordinates around "56.74, -36.08". 
 
 
 Step 2. Query for bright extended objects
@@ -231,7 +233,7 @@ Step 2. Query for bright extended objects
 2.1. On the upper right of the portal aspect, click on “Edit ADQL”.
 
 
-2.2. Query for extended objects brighter than 20th magnitude, near the coordinates of the object, including objectId. 
+2.2. Query for extended objects brighter than 20th magnitude, near the coordinates of the galaxy, including objectId. 
 
 .. code-block:: SQL
 
