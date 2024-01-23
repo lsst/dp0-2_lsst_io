@@ -22,14 +22,13 @@ Portal Usability Test Answer Key
 
 .. This section should provide a brief, top-level description of the page.
 
-**Contact authors:** Gloria Fonseca Alvarez and Andrés A. Plazas Malagón
+**Contact authors:** Andrés A. Plazas Malagón and Gloria Fonseca Alvarez
 
 **Last verified to run:** 2024-01-22
 
 **Link to Portal usability test:** https://forms.gle/EVqX29G3i2o7cvXE6
 
 **Introduction:**
-
 The following is the answer key for the tasks in the Portal usability test. The test was designed to understand how users interact with the Portal functionality.
 Anyone is welcome to do the Portal usability test and submit their responses via
 the Google form linked above.
