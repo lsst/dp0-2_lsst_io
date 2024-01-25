@@ -201,7 +201,7 @@ DP0 Delegate Assemblies
 
 **Connection Info:** `ls.st/dp0-events <https://ls.st/dp0-events>`_
 
-**Dates and times:** *TBD; Delegate Assemblies are on a temporary hiatus until Feb 2024.*
+**Dates and times:** *TBD; Delegate Assemblies are on a temporary hiatus through Feb 2024.*
 (For exact dates, see table below. 
 Generally held biweekly on Fridays from 9am to 11am US Pacific, alternating with :ref:`DP0-Delegate-Programming-StackClub`.)
 
@@ -228,7 +228,7 @@ Stack Club
 
 **Connection Info:**  `ls.st/dp0-events <https://ls.st/dp0-events>`_
 
-**Dates and times:** *TBD; Stack Club is on a temporary hiatus until Feb 2024.*
+**Dates and times:** *TBD; Stack Club is on a temporary hiatus through Feb 2024.*
 (Generally alternates with :ref:`Delegate-Homepage-DP0-Delegate-Assemblies`.)
 
 `Stack Club <https://github.com/LSSTScienceCollaborations/StackClub>`_ is an open, drop-in session for working with the DP0 data sets and/or the 
@@ -249,12 +249,11 @@ Stack Club is a great place to work on :ref:`DP0-2-Tutorials-Contributed`, eithe
 Third Thursday office hour
 --------------------------
 
-These sessions are postponed for the remainer of 2023. 
+**Dates and times:** *TBD; Third Thursdays are on a temporary hiatus through Feb 2024.*
+
 In the past, they were held on the third Thursday of every month at 04:00 and 14:00 UTC.
 These two time slots serve the Asia-Pacific (APAC) and Europe, the Middle East, and Africa (EMEA) time zones, respectively.
 Note that in the western Americas (AMER) time zone, the first slot at 04:00 UTC is actually on Wednesday evening.
-
-| **Dates:** *Additional dates TBD.*
 
 These office hour sessions are open, drop-in discussions designed to compensate for the fact that the time of the Delegate Assemblies was only convenient for DP0 delegates in North and South America, Europe, and Africa.
 Everyone is welcome to attend any of these sessions, instead of or in addition to the Delegate Assemblies and the Stack Club sessions.
@@ -264,6 +263,7 @@ For example, delegates could discuss their DP0-related analysis with Rubin Obser
 collaborate on DP0-related science, and get support from Rubin Observatory staff as needed.
 
 Please see `this Rubin Community Forum topic <https://community.lsst.org/t/invitation-to-join-third-thursday-dp0-office-hours-for-apac-and-emea-timezones/6418>`__ for more information about the Third Thursdays.
+
 
 .. _DP0-Delegate-Programming-CustomSeminars:
 
