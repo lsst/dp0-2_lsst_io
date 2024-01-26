@@ -223,7 +223,12 @@ PSF model fluxes are generally recommended, but there could be issues for object
 **For photometry of extended sources:**
 ``<band>_cModelFlux`` is a reasonable choice for galaxy *fluxes*, but the Gaussian aperture fluxes are generally preferred for galaxy *colors*.  Of the many Gaussian aperture fluxes, the ``<band>_gaap1p0Flux`` (the sigma=1.0-arcsec Gaussian aperture) seems to be a reasonable choice.  Currently, the Gaussian *optimal* aperture (``<band>_gaapOptimalFlux``) tends to fail often and is *not* generally recommended.  For further information on Gaussian aperture photometry, please consult `Kuijken (2008) <https://ui.adsabs.harvard.edu/abs/2008A%26A...482.1053K/abstract>`_, `Kuiken et al. (2015) <https://ui.adsabs.harvard.edu/abs/2015MNRAS.454.3500K/abstract>`_, and/or Konrad Kuijken's talk at the March 2020 Rubin Observatory Algorithms Workshop (`link <https://project.lsst.org/meetings/law/>`_).
 
-**Truth catalog data:** it is recommended to use the TAP service with table joins, as demonstrated in DP0.2 `tutorial notebook <https://github.com/rubin-dp0/tutorial-notebooks>`_ "DP02_08_Truth_Tables.ipynb", and not the Butler, for access to truth catalog data.
+**Truth catalog data:** 
+The `TruthSummary` and `MatchesTruth` tables are accessible via TAP (and not the Butler)
+as demonstrated in DP0.2 `tutorial notebook <https://github.com/rubin-dp0/tutorial-notebooks>`_ "DP02_08_Truth_Tables.ipynb".
+Additional truth data has been made available by DESC as parquet files in the shared disk space in the RSP
+at `data.lsst.cloud <https://data.lsst.cloud/>`_, with access demonstrated in this
+`DP0.2 contributed notebook <https://github.com/rubin-dp0/delegate-contributions-dp02/tree/main/desc_truth>`_.
 Find more information about the matching algorithm in :ref:`Data-Processing-Overview-Truth-Matching`.
 
 
