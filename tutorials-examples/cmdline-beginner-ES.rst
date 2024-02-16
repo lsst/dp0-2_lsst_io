@@ -21,7 +21,7 @@
 .. Esta sección debería ofrecer una descripción breve y de alto nivel de la página.
 .. This section should provide a brief, top-level description of the page.
 
-**Faceta del RSP:** Notebook (linea-de-comandos en la terminal)
+**Faceta del RSP:** Notebook (línea-de-comandos en la terminal)
 
 .. **RSP Aspect:** Notebook (terminal command-line)
 
@@ -44,8 +44,8 @@
 
 **Tamaño del contenedor (Container size):** medium
 
-**Introduction:** 
-Este tutorial es una introducción a las funcionalidades de la terminal y línea de comandos de la plataforma científica de Rubín (Rubin Science Plataform - RSP).
+**Introducción:**
+Este tutorial es una introducción a las funcionalidades de la terminal y línea de comandos de la plataforma científica de Rubin (Rubin Science Plataform - RSP).
 Es paralelo al tutorial de Jupyter Notebook "Introducción a DP02" y demuestra cómo utilizar el servicio TAP para consultar y recuperar datos del catálogo;
 usar matplotlib para graficar los datos de un catálogo; el paquete Butler de LSST para consultar y recuperar datos de imágenes.
 
@@ -125,7 +125,7 @@ Este tutorial hace uso de numerosos paquetes que serán utilizados con frecuenci
     import matplotlib
     import matplotlib.pyplot as plt
 
-2.2. Importar paquetes necesarior para acceder a los datos de los catálogos.
+2.2. Importar paquetes necesarios para acceder a los datos de los catálogos.
 
 .. 2.2. Import packages needed to access the catalog data.
 
@@ -155,9 +155,9 @@ Paso 3. Recuperar datos usando TAP para 10 objetos
 .. Step 3. Retrieve data using TAP for 10 objects
 .. ==============================================
 
-El protocolo de acceso a datos tabulados TAP (Table Access Protocol) provee acceso estandarizado a los datos de los catálogos para descubrimiento, búsqueda y recuperaración.
+El protocolo de acceso a datos tabulados TAP (Table Access Protocol) provee acceso estandarizado a los datos de los catálogos para descubrimiento, búsqueda y recuperación.
 `La documentación completa para TAP <https://www.ivoa.net/documents/TAP/20190927/index.html>`_ es provista por la Alianza Internacional del Observatorio Virtual (IVOA - International Virtual Observatory Alliance).
-El servicio TAP utiliza un lenguaje de consultas similar a SQL (Structured Query Langage, lenguaje de consulta estructurado) denominado ADQL (Astronomical Data Query Language, lenguaje de consulta de datos astronómicos).
+El servicio TAP utiliza un lenguaje de consultas similar a SQL (Structured Query Language, lenguaje de consulta estructurado) denominado ADQL (Astronomical Data Query Language, lenguaje de consulta de datos astronómicos).
 La `documentación para ADQL <https://www.ivoa.net/documents/latest/ADQL.html>`_ incluye más información sobre sintaxis y palabras clave.
 
 .. Table Access Procotol (TAP) provides standardized access to the catalog data for !!!discovery!!!, search, and retrieval.
@@ -182,7 +182,7 @@ Este ejemplo utiliza el Catálogo de Objetos DP0.2, que contiene fuentes detecta
 
     service = get_tap_service("tap")
     
-3.2. Definir las cordenadas para una búsqueda de cono centrada al rededor de la región cubierta por la simulación DC2 (RA,Dec = 62,-37).
+3.2. Definir las coordenadas para una búsqueda de cono centrada alrededor de la región cubierta por la simulación DC2 (RA,Dec = 62,-37).
 
 .. 3.2. Define the coordinates for a cone search centered around the region covered by the DC2 simulation (RA,Dec = 62,-37).
 
@@ -216,7 +216,7 @@ Este ejemplo utiliza el Catálogo de Objetos DP0.2, que contiene fuentes detecta
 
 .. 3.5. Convert fluxes !!!into!!!{"a" o "en"?} magnitudes.
 
-Los catalogos de objetos y fuentes almacenan solo flujos.
+Los catálogos de objetos y fuentes almacenan solo flujos.
 Hay cientos de columnas relacionadas a flujos, y almacenarlas también como magnitudes sería redundante, y un desperdicio de espacio.
 Todas las unidades de flujos son nanojanskys (nJy).
 Para convertir nJy a magnitudes AB usar: |mab| = -2.5log(|fnJy|) + 31.4. 
@@ -272,7 +272,7 @@ scisql_nanojanskyToAbMagSigma(g_calibFlux, g_calibFluxErr) as g_calibMagErr.
  
 .. 4.1. Retrieve g-, r- and i-band magnitudes for 10000 !!!point-like objects!!!.
 
-A la búsqueda de cono realizada en la consulta, agregarle como reestricciones que detect_isPrimary sea True (esto excluirá fuentes "hijas" producto de *deblending*), que el flujo calibrado sea mayor que 360 nJy (aproximadamente magnitud 25), y que los parámentros de extensión sean 0 (fuentes puntuales).
+A la búsqueda de cono realizada en la consulta, agregarle como restricciones que detect_isPrimary sea True (esto excluirá fuentes "hijas" producto de *deblending*), que el flujo calibrado sea mayor que 360 nJy (aproximadamente magnitud 25), y que los parámetros de extensión sean 0 (fuentes puntuales).
 
 .. In addition to a cone search, impose query restrictions that detect_isPrimary is True (this will not return !!!deblended "child" sources!!), that the !!!calibrated flux!!! is greater than 360 nJy (about 25th mag), and that the !!!extendedness parameters!!! are 0 (!!!point-like sources!!!).
 
@@ -366,9 +366,9 @@ Paso 6. Recuperar los datos de imágenes usando Butler
 .. Step 6. Retrieve image data using the butler
 .. ============================================
 
-Los dos tipos más comunes de imágenes con los que interactuarán los delegados de DP0 son calexps y deepCoadds.
+Los dos tipos de imágenes más comunes con los que van a interactuar los delegados de DP0 son calexps y deepCoadds.
 
-.. The two most common types of images that DP0 delegates will interact with are calexps and deepCoadds.
+.. !!!The two most common types of images!!! that DP0 delegates will interact with are !!!calexps!!!{sin traducción por ser nombre propio} and !!!deepCoadds!!!{sin traducción}.
 
 calexp: Una única imagen con un único filtro.
 
@@ -384,15 +384,15 @@ Las pipelines científicas LSST (Science Pipelines) procesan y almacenan imágen
 
 tramo: Una porción del cielo dentro de la teselación de todo el cielo de LSST (LSST all-sky tessellation) (mapa del cielo); dividido en parches.
 
-.. !!!tract!!!{pensar si conviene no traducir para que respte el codigo}: A portion of sky within the LSST !!!all-sky tessellation!!! (sky map); divided into patches.
+.. !!!tract!!!{pensar si conviene no traducir para que respete el código}: A portion of sky within the LSST !!!all-sky tessellation!!! (sky map); divided into patches.
 
 parche: Una subregión cuadrilátera de un tramo, de un tamaño que se ajusta fácilmente en la memoria de las computadoras de escritorio.
 
-.. !!!patch!!!{pensar si conviene no traducir para que respte el codigo}: A quadrilateral sub-region of a tract, of a size that fits easily into memory on desktop computers.
+.. !!!patch!!!{pensar si conviene no traducir para que respete el código}: A quadrilateral sub-region of a tract, of a size that fits easily into memory on desktop computers.
 
 Butler (`documentación de butler <https://pipelines.lsst.io/modules/lsst.daf.butler/index.html>`_) es un paquete de software de LSST Science Pipelines para obtener datos de LSST sin necesidad de conocer su ubicación o formato. El Butler también puede ser utilizado para explorar y descubrir qué datos existen. Otros tutoriales demuestran la funcionalidad completa de Butler.
 
-.. !!!The!!!{saco el articulo} butler (`butler documentation <https://pipelines.lsst.io/modules/lsst.daf.butler/index.html>`_) is an LSST Science Pipelines software package to fetch LSST data without having to know its location or format. The butler can also be used to explore and discover what data exists. Other tutorials demonstrate the full butler functionality.
+.. !!!The!!!{saco el artículo} butler (`butler documentation <https://pipelines.lsst.io/modules/lsst.daf.butler/index.html>`_) is an LSST Science Pipelines software package to fetch LSST data without having to know its location or format. The butler can also be used to explore and discover what data exists. Other tutorials demonstrate the full butler functionality.
 
 6.1. Definir una configuración y colección de Butler.
 
@@ -486,7 +486,7 @@ Hacer doble clic sobre el nombre de archivo para abrirlo y ver el gráfico.
 	:alt: Una captura de pantalla de cuatro mil por cuatro mil píxeles de una imagen astronómica que ha sido graficada en una notebook de Jupyter.
 		Una gran concentración de puntos alargados se encuentra en el cuadrante inferior izquierdo y sugiere un cúmulo de galaxias.
   
-.. :alt: A !!!four thousand by four thousand pixel screen capture!!!{en realidad no es la captura que tiene 4mil x 4mil sino la imagen astronomica cruda que de todas formas esta comprimida para entrar dentro del gárfico de la notebook} of an astronomical image that has been plotted in a Jupyter notebook.  
+.. :alt: A !!!four thousand by four thousand pixel screen capture!!!{en realidad no es la captura que tiene 4mil x 4mil sino la imagen astronómica cruda que de todas formas esta comprimida para entrar dentro del gráfico de la notebook} of an astronomical image that has been plotted in a Jupyter notebook.  
 ..  A large concentration of elongated points is concentrated at the lower-left quadrant and suggests a cluster of galaxies.  
     
 7.2. Visualizar la imagen usando Firefly (`documentación de Firefly <https://pipelines.lsst.io/modules/lsst.display.firefly/index.html>`_).
@@ -503,7 +503,7 @@ Opcional: Para una demostración de la interfaz interactiva de Firefly, revisa "
 
 .. Optional: For a demonstration of the Firefly interactive interface, work through !!!"03b Image Display with Firefly" of the :ref:`DP0-2-Tutorials-Notebooks`.!!!{referenciaremos a una futura versión traducida o al que ahora está en ingles?}
 
-7.3. Cuando estés listo, salir de python para regresar a la linea de comando normal.
+7.3. Cuando estés listo, salir de python para regresar a la línea de comando normal.
 
 .. 7.3. When you're done, exit python to return to the regular command line.
 
