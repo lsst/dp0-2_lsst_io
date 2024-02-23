@@ -25,24 +25,23 @@ simulated LSST-like data products containing extragalactic and galactic objects 
 
 For general information about the Data Preview 0 (DP0) program, see `dp0.lsst.io <https://dp0.lsst.io/index.html>`_.
 
-DP0.3, a unique and separate simulation of solar system objects, is also available.
-Learn more at `dp0-3.lsst.io <https://dp0-3.lsst.io/>`_.
+An LSST-like simulation of solar system objects is also available at `dp0-3.lsst.io <https://dp0-3.lsst.io/>`_.
+
+Term definitions are provided on the `Rubin Observatory Glossary & Acronyms webpage <https://www.lsst.org/scientists/glossary-acronyms>`__.
 
 .. Important::
     To access the DP0 data sets see the `getting started with DP0 checklist <https://dp0.lsst.io/delegate-resources/getting-started.html#new-delegate-checklist>`__.
 
 
-Term definitions are provided on the `Rubin Observatory Glossary & Acronyms webpage <https://www.lsst.org/scientists/glossary-acronyms>`__.
 
 .. _Rubin-Observatory-Documentation-DP0-2-Delegate-Resources:
 
 Resources for DP0 delegates
 ===========================
 
-The term "**delegate**" refers to the 900 data rights holders who have accounts in the Rubin Science Platform (RSP) and access to the DP0 data sets.
-
-**Want to become a delegate and access to the DP0 data sets?**
-See the `getting started with DP0 checklist <https://dp0.lsst.io/delegate-resources/getting-started.html#new-delegate-checklist>`__.
+The term delegate refers to the 900 data rights holders who have accounts in the Rubin Science Platform (RSP) and access to the DP0 data sets.
+Use the `getting started with DP0 checklist <https://dp0.lsst.io/delegate-resources/getting-started.html#new-delegate-checklist>`__
+to become a delegate and have access to the DP0 data sets.
     
 .. toctree::
     :maxdepth: 2
