@@ -20,15 +20,16 @@ Vera C. Rubin Observatory Documentation for Data Preview 0.2 (DP0.2)
 
 .. This section should provide a brief, top-level description of the page.
 
-This site provides information about the Rubin Observatory's Data Preview 0.2 (DP0.2).
+This site provides information about Rubin Observatory's Data Preview 0.2 (DP0.2),
+simulated LSST-like data products containing extragalactic and galactic objects .
 
-Data Preview 0 (DP0) is the first of three data previews during the period leading up to the start of Rubin Observatory Operations.
-The goals of DP0 are to serve as an early integration test of the Legacy Survey of Space and Time (LSST) Science Pipelines and the Rubin Science Platform (RSP), and to enable a limited number of astronomers and students to begin early preparations for science with the LSST.
+For general information about the Data Preview 0 (DP0) program, see `dp0.lsst.io <https://dp0.lsst.io/index.html>`_.
+
+DP0.3, a unique and separate simulation of solar system objects, is also available.
+Learn more at `dp0-3.lsst.io <https://dp0-3.lsst.io/>`_.
 
 .. Important::
-    To access the DP0 data sets see the :ref:`Delegate-Homepage-Getting-Started-Checklist`.
-
-    **DP0.3, a unique and separate Solar System data set, is now available!** Learn more at `dp0-3.lsst.io <https://dp0-3.lsst.io/>`_.
+    To access the DP0 data sets see the `getting started with DP0 checklist <https://dp0.lsst.io/delegate-resources/getting-started.html#new-delegate-checklist>`__.
 
 
 Term definitions are provided on the `Rubin Observatory Glossary & Acronyms webpage <https://www.lsst.org/scientists/glossary-acronyms>`__.
@@ -40,7 +41,8 @@ Resources for DP0 delegates
 
 The term "**delegate**" refers to the 900 data rights holders who have accounts in the Rubin Science Platform (RSP) and access to the DP0 data sets.
 
-**Want access to the DP0 data sets?** Space is available. See the :ref:`Delegate-Homepage-Getting-Started-Checklist`.
+**Want to become a delegate and access to the DP0 data sets?**
+See the `getting started with DP0 checklist <https://dp0.lsst.io/delegate-resources/getting-started.html#new-delegate-checklist>`__.
     
 .. toctree::
     :maxdepth: 2
