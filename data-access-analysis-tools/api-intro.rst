@@ -192,9 +192,11 @@ As with the TOPCAT example above, one needs an RSP access token.
 Either generate one as described above in :ref:`Data-Access-Analysis-Tools-TAP-TOPCAT`, 
 or just use a previously generated (but unexpired) RSP access token.
 Ideally, copy the RSP access token into a file in your home directory
-that is only read/write by the file owner and that is accessible to 
+that is only read/write accessible by the file owner and that is accessible to 
 the python session that will be accessed in the steps below.  Specifically, 
-in a UNIX/MacOS/Linux environment, the following commands can be performed. 
+in a UNIX/MacOS/Linux environment, the following commands can be performed
+in order to create this file in a secure manner that avoids exposing the
+RSP token to outside resources for even a short period of time.
 
 * Open a terminal window (**not** a Jupyter notebook) on your computer or in your non-RSP user environoment.
 
@@ -204,17 +206,29 @@ in a UNIX/MacOS/Linux environment, the following commands can be performed.
 
    cd ~
 
-* Create a file in the home directory containing the RSP token.  One can do this via the ``echo`` command.  In the following, ``<token>`` is to be replaced by the the actual RSP token string.  Note that using a 'hidden' file -- one with a name that starts with a ``.`` -- aids security.
+* In the home directory, create an empty file that will eventually contain the RSP token.  One can do this via the ``touch`` command.  Note that using a 'hidden' file -- one with a name that starts with a ``.`` -- improves security.
 
 .. code-block:: python
 
-   echo '<token>' > .rsp-tap.token
+   touch .rsp-tap.token
 
-* Change the permissions on the file containing the RSP token to remove world and group read/write access.  The ``chmod 600`` command will do this while maintaining read/write access for the file owner.
+* Change the permissions on this file to remove world and group read/write access.  The ``chmod 600`` command will do this while maintaining read/write access for the file owner.
 
 .. code-block:: python
 
    chmod 600 .rsp-tap.token
+
+* Insert the RSP token into this file securely.  The following command permits this by requesting the file owner to enter the RSP token at the first prompt.
+
+.. code-block:: python
+
+   cat <<EOF > .rsp-tap.token
+
+* Close this file by issuing an "end of file" command at the second prompt.  After entering this command, the file is ready for use for as long as the RSP token is unexpired.
+
+.. code-block:: python
+
+   EOF
 
 **2. Start up a python session.**  This could be a standalone python session running on (say) a laptop, or a Jupyter notebook running elsewhere but displayed on one's own browser.
 
