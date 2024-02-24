@@ -224,7 +224,7 @@ RSP token to outside resources for even a short period of time.
 
    cat <<EOF > .rsp-tap.token
 
-* Close this file by issuing an "end of file" command at the second prompt.  After entering this command, the file is ready for use for as long as the RSP token is unexpired.
+* Close this file by issuing an "end of file" command at the second prompt.  After entering this command, the file will be ready for use for as long as the RSP token is unexpired.
 
 .. code-block:: python
 
