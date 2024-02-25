@@ -35,7 +35,14 @@ Longer term, Rubin Observatory will support `SCS <https://www.ivoa.net/documents
 `SIAv2 <https://www.ivoa.net/documents/SIA/20150730/index.html>`_ for image searches, and `VOSpace <https://www.ivoa.net/documents/VOSpace/>`_ 
 (in addition to `WebDAV <https://en.wikipedia.org/wiki/WebDAV>`_) for access to user files.
 
-As described below, the API aspect permits Rubin data access both from inside the RSP environment (e.g., via the RSP notebook aspect) and from outside the RSP environment (e.g., via `TOPCAT <http://www.star.bris.ac.uk/~mbt/topcat/>`_ or from a ``pyvo``-enabled environment like NOIRLab's `Astro Data Lab <https://datalab.noirlab.edu/>`_).  Currently, there are no additional database constraints imposed on external environments:  as for the internal RSP enviroment, the database server will generally be unable to process queries that have an internal intermediate form that is larger than roughly 5GB, and the TAP service will have difficulties with final results that are over roughly 2GB in size.  That said, this is by no means the final word on what limits might be in operations.
+As described below, the API aspect permits Rubin data access both from inside the RSP environment (e.g., via the RSP notebook aspect) and 
+from outside the RSP environment (e.g., via `TOPCAT <http://www.star.bris.ac.uk/~mbt/topcat/>`_ or from a ``pyvo``-enabled environment like 
+NOIRLab's `Astro Data Lab <https://datalab.noirlab.edu/>`_).  
+
+Currently, there are no additional database constraints imposed on external environments.  
+As for the internal RSP enviroment, the database server will generally be unable to process queries that have an internal intermediate form 
+that is larger than roughly 5GB, and the TAP service will have difficulties with final results that are over roughly 2GB in size.  
+That said, this is by no means the final word on what limits might be in operations.
 
 
 .. Important::
