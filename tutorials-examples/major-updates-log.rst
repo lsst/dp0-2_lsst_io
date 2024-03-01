@@ -51,6 +51,11 @@ and clicking on "history" (near upper-right).
 Major Updates Log
 =================
 
+Feb 29 2024
+-----------
+
+Released tutorial notebook 14 on synthetic source injection.
+
 Feb 1 2024
 ----------
 
