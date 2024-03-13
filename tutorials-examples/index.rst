@@ -88,6 +88,10 @@ which appears in all users' home directories.
 See the repository's `README file <https://github.com/rubin-dp0/tutorial-notebooks/blob/main/README.md>`_ for the most up-to-date
 list of available tutorials with descriptions.
 
+Test:
+
+:doc:`/_static/nb_html/DP02_14_Injecting_Synthetic_Sources.html`
+
 
 .. _DP0-2-Tutorials-CommandLine:
 
