@@ -34,7 +34,7 @@
 .. **Last verified to run:** Sep 11 2023
 
 
-**Versión de las pipelines científicas de LSST::** Weekly 2023_35
+**Versión de las pipelines científicas de LSST:** Weekly 2023_35
 
 .. **!!!LSST Science Pipelines!!!{uso traducción del glosario} version:** !!!Weekly!!! 2023_35
 
