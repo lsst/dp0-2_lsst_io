@@ -23,7 +23,7 @@
 .. Esta sección debería ofrecer una descripción breve y de alto nivel de la página.
 .. This section should provide a brief, top-level description of the page.
 
-**Aspecto del RSP:** Portal
+**Faceta del RSP:** Portal
 
 .. **RSP Aspect:** Portal
 
@@ -42,15 +42,15 @@
 **Introducción:**
 Este tutorial utiliza la interfaz Single-Table Query (consulta de tabla única) para buscar estrellas brillantes en una región pequeña del cielo
 y luego utiliza la interfaz para resultados Results para crear un diagrama color-magnitud.
-Esta es el mismo ejemplo usado para ilustrar el servicio de Protocolo de Acceso de Tablas (Table Access Protocol - TAP) al principio de :ref:`DP0-2-Tutorials-Notebooks-ES`.
-Los usuarios principiantes que buscan una visión más general del *Portal Aspect* pueden consultar :doc:`/data-access-analysis-tools/portal-intro-ES`.
+Este es el mismo ejemplo usado para ilustrar el servicio de Protocolo de Acceso de Tablas (Table Access Protocol - TAP) al principio de :ref:`DP0-2-Tutorials-Notebooks-ES`.
+Principiantes que busquen una visión más general de la Faceta Portal pueden consultar :doc:`/data-access-analysis-tools/portal-intro`.
 
 .. **Introduction:**
 
 .. This tutorial uses the !!!Single-Table Query interface!!! to search for bright stars in a small region of sky,
    and then uses the !!!Results interface!!! to create a color-magnitude diagram.
    This is the same demonstration used to illustrate the Table Access Protocol (TAP) service in the first of the !!!:ref:`DP0-2-Tutorials-Notebooks`!!!{debería referenciar a versión español}
-   Beginner-level users looking for a more general overview of the Portal Aspect should refer to this !!!:doc:`/data-access-analysis-tools/portal-intro`!!!
+   Beginner-level !!!users!!!{suprimo por genero} looking for a more general overview of the Portal Aspect should refer to this !!!:doc:`/data-access-analysis-tools/portal-intro`!!!
  
 .. _DP0-2-Portal-Beginner-ES-Step-1:
 
@@ -61,10 +61,9 @@ Paso 1. Establecer las restricciones de la consulta
 .. =================================
 
 
-1.1. Iniciar sesión en *Portal Aspect*
+1.1. Iniciar sesión en la Faceta Portal.
 
-.. 1.1. Log in to the !!!Portal Aspect!!!.
-.. No sé bien cómo traducir "Portal Aspect"
+.. 1.1. Log in to the !!!Portal Aspect!!!{glosario}.
 
 1.2. Abajo de "TAP Searches" (búsquedas TAP), dejar la casilla "Use Image Search (ObsTAP)" sin marcar y dejar a "View" con su valor por defecto "UI assisted".
 
@@ -75,8 +74,8 @@ Paso 1. Establecer las restricciones de la consulta
 .. 1.3. Next to "LSST DP0.2 DC2 Tables", choose the !!!Table Collection!!! to be "dp02_dc2_catalogs" (left drop-down menu) and the Table to be "dp02_dc2_catalogs.Object" (right drop-down menu).
 .. Acá se usa "Table Colection" para identificar el menu desplegable pero también indicando que se está eligiendo dentro de la colección de tablas, por eso agrego "el conjunto de tablas" a la traducción
 
-1.4. En la sección para restricciones, abajo de "Enter Constraints", marcar para restricciones espaciales en la casilla de verificación a la izquierda de "Spatial".
-Dejar el tipo de forma en "Shape Type" con su valor por defecto "Cone" (cono), y para las coordenadas/nombre de objeto en "Coords or Obj Name" usar las coordenadas centrales del área de simulación de DC2 "62, -37".
+1.4. En la sección para restricciones, abajo de "Enter Constraints", marcar la casilla de verificación a la izquierda de "Spatial" para usar restricciones espaciales.
+Dejar "Shape Type" (el tipo de forma) con su valor por defecto "Cone" (cono), y para las coordenadas/nombre de objeto en "Coords or Obj Name" usar las coordenadas centrales del área de simulación de DC2 "62, -37".
 En el menú desplegable al lado de "Radius", elegir "degrees" *y luego* ingresar "1" en el cuadro de texto y presionar la tecla *enter* para establecer la búsqueda con radio de 1 grado.
 
 .. 1.4. Under "Enter Constraints", select the box to the left of "Spatial".
@@ -93,8 +92,8 @@ Hacer clic en el símbolo de embudo en la parte superior de la columna de casill
    After selecting the needed columns (e.g., "g" "r" and "i_calibFlux"), clear the box and hit the return key to continue selecting other columns.
    Click on the funnel symbol at the top of the checkbox column to filter the table view to show selected columns only.
 
-1.6. En la columna de reestricciones "constraints", ingresar "=1" para "detect_isPrimary", ">360" para los flujos ("g" "r" e "i_calibFlux"), y "=0" para los parámetros de extensión (extendedness)
-Esto va a limitar los objetos obtenidos a aquellos sin hijos (i.e. producto de descomposicion/separación [deblending]), que son más brillantes que aproximadamente 25 magnitudes
+1.6. En la columna de restricciones "constraints", ingresar "=1" para "detect_isPrimary", ">360" para los flujos ("g" "r" e "i_calibFlux"), y "=0" para los parámetros de extensión (extendedness)
+Esto va a limitar los objetos obtenidos a aquellos sin hijos (i.e. producto de separación [deblending]), que son más brillantes que aproximadamente 25 magnitudes
 en los filtros g, r e i, y que parecen ser puntuales (no extendidos, pero *no necesariamente estelares*) en esos tres filtros también.
 
 .. 1.6. In the "constraints" column, enter "=1" for the "detect_isPrimary", ">360" for the fluxes, and "=0" for the !!!extendedness!!! parameters.
@@ -121,7 +120,7 @@ no es necesario para este tutorial recopilar los datos de estas columnas, solo s
 
 .. figure:: /_static/portal_tut01_step01.png
 	:name: portal_tut01_step01
-	:alt: Una captura de pantalla que muestra cómo ingresar criterios de búsqueda en la sección Portal.
+	:alt: Una captura de pantalla que muestra cómo ingresar criterios de búsqueda en la Faceta Portal.
 		El portal es una forma conveniente de consultar la base de datos de Rubin a través de una interfaz gráfica de usuario sin necesidad de usar Python o *scripts* en la línea de comandos.
 		Cada fila representa una categoría separada que caracteriza los criterios de búsqueda de TAP a utilizar, incluyendo: el servicio TAP; el tipo de consulta;
 		la colección de tablas y la tabla específica a utilizar, así como las restricciones a emplear para la consulta. La búsqueda en el portal se puede realizar presionando el botón de búsqueda en la esquina inferior izquierda.
@@ -158,7 +157,7 @@ en la parte superior derecha y una tabla con los resultados de la búsqueda en l
 
 .. figure:: /_static/portal_tut01_step02a.png
 	:name: portal_tut01_step02a
-	:alt: Una captura de pantalla de los resultados de la consulta realizada anteriormente
+	:alt: Una captura de pantalla de los resultados de la consulta realizada anteriormente.
 	
 	La vista predeterminada de resultados con "Tri-view".
 
@@ -183,7 +182,7 @@ La consulta accedió a estos archivos hasta encontrar 10000 objetos (es decir, l
 
 .. figure:: /_static/portal_tut01_step02b.png
 	:name: portal_tut01_step02b
-	:alt: Esta captura de pantalla del portal se muestra después de ejecutar una búsqueda de consulta. La imagen superior muestra la densidad de las fuentes seleccionadas dentro del área de búsqueda.
+	:alt: Esta es una captura de pantalla del portal después de ejecutar una búsqueda de consulta. La imagen superior muestra la densidad de las fuentes seleccionadas dentro del área de búsqueda.
 		En este caso, un círculo de radio seleccionado por el usuario centrado en la ascensión recta y declinación elegidas por el usuario.
 		El panel inferior muestra los objetos devueltos por la consulta de búsqueda en forma de tabla.
 	
@@ -199,9 +198,9 @@ La consulta accedió a estos archivos hasta encontrar 10000 objetos (es decir, l
 .. No estoy seguro del significado de la oración
 
 
-**Aviso:** Para graficar el color (magnitud r-i) versus la magnitud (g), los flujos (que están en unidades de nanojansky) se están convirtiendo a magnitudes AB en el siguiente paso. La página `AB Magnitudes Wikipedia <https://en.wikipedia.org/wiki/AB_magnitude>`_ ofrece un recurso conciso para usuarios que no están familiarizados con las magnitudes AB y los flujos en unidades de jansky.
+**Aviso:** Para graficar el color (magnitud r-i) versus la magnitud (g), los flujos (que están en unidades de nanojansky) se están convirtiendo a magnitudes AB en el siguiente paso. La página `AB Magnitudes Wikipedia <https://en.wikipedia.org/wiki/AB_magnitude>`_ ofrece un recurso conciso para quienes no tengan familiaridad con las magnitudes AB y los flujos en unidades de jansky.
 
-.. **Notice:** In order to plot color (r-i magnitude) versus magnitude (g), the fluxes (which are in units of nanojansky) are being converted to AB magnitudes in the next step. The `AB Magnitudes Wikipedia <https://en.wikipedia.org/wiki/AB_magnitude>`_ page provides a concise resource for users who are unfamiliar with AB magnitudes and fluxes in units of janskys.
+.. **Notice:** In order to plot color (r-i magnitude) versus magnitude (g), the fluxes (which are in units of nanojansky) are being converted to AB magnitudes in the next step. The `AB Magnitudes Wikipedia <https://en.wikipedia.org/wiki/AB_magnitude>`_ page provides a concise resource for !!!users who are unfamiliar!!!{alternativa sin género} with AB magnitudes and fluxes in units of janskys.
 
 2.2. Hacer clic en el icono de configuración del gráfico activo (en "Active Chart" los dos engranajes, en la esquina superior derecha) para modificar la traza (opción "modify trace"), lo que significa cambiar los parámetros del gráfico.
 Establecer "X" como "(-2.5 * log10(r_calibFlux)) - (-2.5 * log10(i_calibFlux))" e "Y" como "-2.5 * log10(g_calibFlux) + 31.4".
@@ -218,16 +217,16 @@ Establecer los valores "X Min/Max" en "-0.5" y "2.0", y los valores "Y Min/Max" 
 
 .. figure:: /_static/portal_tut01_step02c.png
 	:name: portal_tut01_step02c
-	:alt: Una captura de pantalla del Portal Aspect que muestra la interfaz que permite al usuario crear gráficos a partir de los datos devueltos por la consulta.
+	:alt: Una captura de pantalla de la Faceta Portal que muestra la interfaz que permite al usuario crear gráficos a partir de los datos devueltos por la consulta.
 		Crear gráficos de esta manera es una forma fácil y funcional de explorar los datos.
-		La interfaz permite al usuario: ingresar funciones de los datos devueltos para graficar, elegir un esquema de color, editar la segmentación, crear etiquetas y editar la escala de los ejes.
+		La interfaz permite: ingresar funciones de los datos devueltos para graficar, elegir un esquema de color, editar la segmentación, crear etiquetas y editar la escala de los ejes.
         :width: 300
 	
 	Establecer los parámetros del gráfico
 
 .. alt: A screenshot of the portal aspect showing the interface that allows the user to create charts from the data returned by the query.
    		Creating plots from the data in this way is an easy and functional way to explore the data.
-      The interface allows the user to: input functions of the returned data to plot, choose a color scheme, edit the binning, create labels and edit the axis scaling.
+      The interface allows !!!the user to!!!{elimino genero}: input functions of the returned data to plot, choose a color scheme, edit the binning, create labels and edit the axis scaling.
 .. Set the plot parameters.
 
 2.3. Aplicar los parámetros haciendo clic en "Apply" y luego hacer clic en el botón "Close" para cerrar la ventana, mirar el gráfico color-magnitud.
@@ -236,7 +235,7 @@ Establecer los valores "X Min/Max" en "-0.5" y "2.0", y los valores "Y Min/Max" 
 
 .. figure:: /_static/portal_tut01_step02d.png
 	:name: portal_tut01_step02d
-	:alt: Una captura de pantalla del gráfico creado a partir de los datos devueltos por la consulta utilizando la interfaz xy del Portal Aspect.
+	:alt: Una captura de pantalla del gráfico creado a partir de los datos devueltos por la consulta utilizando la interfaz xy de la Faceta Portal.
 		El gráfico muestra un diagrama de color-magnitud, magnitud AB de la banda g vs. el color banda r menos la banda i, para los objetos devueltos por la consulta de búsqueda.
 		Este ejemplo demuestra cómo explorar rápidamente los datos devueltos en la consulta de búsqueda.
 		El gráfico muestra una gran densidad de estrellas en colores r-i bajos, y segmentos discretos en colores r-i más rojizos debido a que los datos simulados se
@@ -274,12 +273,12 @@ Utilizar las mismas opciones de gráfico en "Chart Options", pero elegir un nomb
 
 .. figure:: /_static/portal_tut01_step02e.png
 	:name: portal_tut01_step02e
-	:alt: Captura de pantalla de la ventana de diálogo donde el usuario puede establecer los nuevos parámetros del gráfico para el mapa de calor.
+	:alt: Captura de pantalla de la ventana de diálogo donde se puede establecer los nuevos parámetros del gráfico para el mapa de calor.
         :width: 300
 	
 	Arriba, establecimos los nuevos parámetros del gráfico mapa de calor.
 
-.. alt: Screenshot of dialog box where the user can set new chart parameters for the heat map.
+.. alt: Screenshot of dialog box where !!!the user!!!{omito por genero} can set new chart parameters for the heat map.
 ..
 .. Above, we set the new chart parameters for a heatmap plot.
 
@@ -349,8 +348,8 @@ devolverán subconjuntos aleatorios.
 
 .. _DP0-2-Portal-Beginner-ES-Step-4:
 
-Paso 4. Transferir consultas ADQL o resultados del Portal a Notebook Aspect
-===========================================================================
+Paso 4. Transferir consultas ADQL o resultados del Portal a la Faceta Notebook
+==============================================================================
 
 .. Step 4. Transfer ADQL queries or results from the Portal to the Notebook Aspect
 .. ===============================================================================
@@ -374,14 +373,14 @@ Para ejecutar la consulta en el Portal, hacer clic en el botón "Search".
 
 .. To execute the query in the Portal, click the "Search" button.
 
-Para ejecutar la consulta en el Notebook Aspect, copiar y pegar el código ADQL en la celda de código de cualquier notebook que
+Para ejecutar la consulta en la Faceta Notebook, copiar y pegar el código ADQL en la celda de código de cualquier notebook que
 utilice el servicio TAP, como se muestra en la Sección 2.3 de la primera notebook del tutorial, "01 Introducción a DP0.2".
 
 .. To execute the query in the Notebook Aspect, copy-paste the ADQL statement into the code cell of any notebook that
 .. which uses the TAP service, as demonstrated in Section 2.3 of the first tutorial notebook, !!!01 Introduction to DP0.2.!!! {revisar si esto se traduce en el proyecto actual: SI DP02_01_Introduccion_a_DP02_ES.ipynb}
 
 4.2. También es posible obtener una URL para acceder directamente a los resultados de la consulta.
-Esta URL puede ser utilizada desde el Notebook Aspect; esta es una característica especialmente útil para
+Esta URL puede ser utilizada desde la Faceta Notebook; esta es una característica especialmente útil para
 consultas que son grandes, complejas o que tardan mucho en ejecutarse (por ejemplo, uniones de múltiples tablas),
 o para compartir los resultados de la consulta con colegas.
 
@@ -427,7 +426,7 @@ la URL se puede pegar en una celda de código y los resultados de la consulta se
 	retrieved_job = retrieve_query('my_portal_url')
 	retrieved_results = retrieved_job.fetch_result().to_table().to_pandas()
 
-Esto resulta en tener en la notebook los mismos datos que obtuviste por primera vez a través del Portal Aspect.
+Esto resulta en tener en la notebook los mismos datos que obtuviste por primera vez a través de la Faceta Portal.
 
 .. This results in having the same data in your notebook which you first obtained via the Portal Aspect.
 
