@@ -25,3 +25,5 @@ How to do this?
  * :doc:`/_static/nb_html/DP02_14_Injecting_Synthetic_Sources.html`
  * `14. Injecting Synthetic Sources <https://dp0-2.lsst.io/v/PREOPS-4987/_static/nb_html/DP02_14_Injecting_Synthetic_Sources.html>`__
 
+.. raw:: html
+   :file: /_static/nb_html/DP02_14_Injecting_Synthetic_Sources.html
