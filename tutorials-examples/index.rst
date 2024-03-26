@@ -88,9 +88,7 @@ which appears in all users' home directories.
 See the repository's `README file <https://github.com/rubin-dp0/tutorial-notebooks/blob/main/README.md>`_ for the most up-to-date
 list of available tutorials with descriptions.
 
-:doc:`/tutorial-examples/rendered-tutorial-notebooks`
-
-`NB 14 HTML Rendered Notebook <https://dp0-2.lsst.io/_static/nb_html/DP02_14_Injecting_Synthetic_Sources.html>`_
+`Rendered Tutorial Notebooks <https://github.com/rubin-dp0/tutorial-examples/rendered-tutorial-notebooks>`_
 
 .. _DP0-2-Tutorials-CommandLine:
 
