@@ -90,6 +90,8 @@ list of available tutorials with descriptions.
 
 :doc:`/tutorial-examples/rendered-tutorial-notebooks`
 
+`Notebook 14, HTML rendered <https://github.com/rubin-dp0/_static/tutorial-examples/rendered-tutorial-notebooks.rst>`_
+
 
 .. _DP0-2-Tutorials-CommandLine:
 
