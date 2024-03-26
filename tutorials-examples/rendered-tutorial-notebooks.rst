@@ -20,10 +20,4 @@ Rendered tutorial notebooks
 
 Rendered tutorial notebooks for DP0.2, as html files.
 
-How to do this?
-
- * :doc:`/_static/nb_html/DP02_14_Injecting_Synthetic_Sources.html`
- * `14. Injecting Synthetic Sources <https://dp0-2.lsst.io/v/PREOPS-4987/_static/nb_html/DP02_14_Injecting_Synthetic_Sources.html>`__
-
-.. raw:: html
-   :file: /_static/nb_html/DP02_14_Injecting_Synthetic_Sources.html
+`NB 14 HTML Rendered Notebook <https://dp0-2.lsst.io/_static/nb_html/DP02_14_Injecting_Synthetic_Sources.html>`_
