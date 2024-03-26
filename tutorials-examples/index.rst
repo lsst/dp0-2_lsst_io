@@ -90,7 +90,7 @@ list of available tutorials with descriptions.
 
 :doc:`/tutorial-examples/rendered-tutorial-notebooks`
 
-`NB 14 HTML Rendered Notebook <https://dp0-2.lsst.io/tutorials-examples/index.html>`_
+`NB 14 HTML Rendered Notebook <https://dp0-2.lsst.io/_static/nb_html/DP02_14_Injecting_Synthetic_Sources.html>`_
 
 .. _DP0-2-Tutorials-CommandLine:
 
