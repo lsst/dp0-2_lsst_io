@@ -88,7 +88,7 @@ which appears in all users' home directories.
 See the repository's `README file <https://github.com/rubin-dp0/tutorial-notebooks/blob/main/README.md>`_ for the most up-to-date
 list of available tutorials with descriptions.
 
-`Rendered Tutorial Notebooks <https://github.com/rubin-dp0/tutorial-examples/rendered-tutorial-notebooks>`_
+`Rendered Tutorial Notebooks <https://github.com/rubin-dp0/tutorial-examples/rendered-tutorial-notebooks.rst>`_
 
 .. _DP0-2-Tutorials-CommandLine:
 
