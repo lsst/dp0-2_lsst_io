@@ -51,6 +51,11 @@ and clicking on "history" (near upper-right).
 Major Updates Log
 =================
 
+Mar 27 2024
+-----------
+
+Released tutorial notebook 13a on the image cutout tool.
+
 Feb 29 2024
 -----------
 
