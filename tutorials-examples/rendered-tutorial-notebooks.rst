@@ -20,6 +20,10 @@ Rendered tutorial notebooks
 
 Rendered tutorial notebooks for DP0.2, as html files.
 
+`NB 08 Truth Tables <https://dp0-2.lsst.io/_static/nb_html/DP02_08_Truth_Tables.html>`_
+
+`NB 10 Deblender Data Products <https://dp0-2.lsst.io/_static/nb_html/DP02_10_Deblender_Data_Products.html>`_
+
 `NB 12a PSF Data Products <https://dp0-2.lsst.io/_static/nb_html/DP02_12a_PSF_Data_Products.html>`_
 
 `NB 12b PSF Science Demo <https://dp0-2.lsst.io/_static/nb_html/DP02_12b_PSF_Science_Demo.html>`_
