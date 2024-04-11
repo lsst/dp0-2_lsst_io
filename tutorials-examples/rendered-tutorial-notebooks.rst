@@ -57,4 +57,4 @@ Rendered tutorial notebooks for DP0.2, as html files.
 `NB 14 Injecting Synthetic Sources <https://dp0-2.lsst.io/_static/nb_html/DP02_14_Injecting_Synthetic_Sources.html>`_
 
 
-More tutorials to come!
+More tutorials coming soon!
