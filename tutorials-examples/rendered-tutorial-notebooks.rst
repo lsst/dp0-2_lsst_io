@@ -20,6 +20,30 @@ Rendered tutorial notebooks
 
 Rendered tutorial notebooks for DP0.2, as html files.
 
+`NB 01 Introduction to DP02 <https://dp0-2.lsst.io/_static/nb_html/DP02_02_Introduction_to_DP02.html>`_
+
+`NB 02 Catalog Queries with TAP <https://dp0-2.lsst.io/_static/nb_html/DP02_02_Catalog_Queries_with_TAP.html>`_
+
+`NB 03a Image Display and Manipulation <https://dp0-2.lsst.io/_static/nb_html/DP02_03a_Image_Display_and_Manipulation.html>`_
+
+`NB 03b Image Display with Firefly <https://dp0-2.lsst.io/_static/nb_html/DP02_03b_Image_Display_with_Firefly.html>`_
+
+`NB 03c Survey Property Maps <https://dp0-2.lsst.io/_static/nb_html/DP02_03c_Survey_Property_Maps.html>`_
+
+`NB 04a Introduction to the Butler <https://dp0-2.lsst.io/_static/nb_html/DP02_04a_Introduction_to_the_Butler.html>`_
+
+`NB 04b Intermediate Butler Queries <https://dp0-2.lsst.io/_static/nb_html/DP02_04b_Intermediate_Butler_Queries.html>`_
+
+`NB 05 Introduction to Source Detection <https://dp0-2.lsst.io/_static/nb_html/DP02_05_Introduction_to_Source_Detection.html>`_
+
+`NB 06a Interactive Image Visualization <https://dp0-2.lsst.io/_static/nb_html/DP02_06a_Interactive_Image_Visualization.html>`_
+
+`NB 06b Interactive Catalog Visualization <https://dp0-2.lsst.io/_static/nb_html/DP02_06b_Interactive_Catalog_Visualization.html>`_
+
+`NB 07a DiaObject Samples <https://dp0-2.lsst.io/_static/nb_html/DP02_07a_DiaObject_Samples.html>`_
+
+`NB 07b Variable Star Lightcurves <https://dp0-2.lsst.io/_static/nb_html/DP02_07b_Variable_Star_Lightcurves.html>`_
+
 `NB 08 Truth Tables <https://dp0-2.lsst.io/_static/nb_html/DP02_08_Truth_Tables.html>`_
 
 `NB 10 Deblender Data Products <https://dp0-2.lsst.io/_static/nb_html/DP02_10_Deblender_Data_Products.html>`_
