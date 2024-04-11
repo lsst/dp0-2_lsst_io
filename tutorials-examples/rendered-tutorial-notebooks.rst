@@ -20,6 +20,8 @@ Rendered tutorial notebooks
 
 Rendered tutorial notebooks for DP0.2, as html files.
 
+`NB 12a PSF Data Products <https://dp0-2.lsst.io/_static/nb_html/DP02_12a_PSF_Data_Products.html>`_
+
 `NB 12b PSF Science Demo <https://dp0-2.lsst.io/_static/nb_html/DP02_12b_PSF_Science_Demo.html>`_
 
 `NB 13a Image Cutout SciDemo <https://dp0-2.lsst.io/_static/nb_html/DP02_13a_Image_Cutout_SciDemo.html>`_
