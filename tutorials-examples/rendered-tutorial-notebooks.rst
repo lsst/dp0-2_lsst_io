@@ -20,7 +20,7 @@ Rendered tutorial notebooks
 
 Rendered tutorial notebooks for DP0.2, as html files.
 
-`NB 01 Introduction to DP02 <https://dp0-2.lsst.io/_static/nb_html/DP02_02_Introduction_to_DP02.html>`_
+`NB 01 Introduction to DP02 <https://dp0-2.lsst.io/_static/nb_html/DP02_01_Introduction_to_DP02.html>`_
 
 `NB 02 Catalog Queries with TAP <https://dp0-2.lsst.io/_static/nb_html/DP02_02_Catalog_Queries_with_TAP.html>`_
 
