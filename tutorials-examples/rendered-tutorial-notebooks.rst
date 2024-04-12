@@ -22,7 +22,7 @@ Rendered tutorial notebooks
 +--------------------------------------------------------------------------------------------------------------------------------------+----------+
 | Title                                                                                                                                | Brief Description |
 +======================================================================================================================================+==========+
-| NB 01. `Introduction to DP02 <https://dp0-2.lsst.io/_static/nb_html/DP02_01_Introduction_to_DP02.html>`_                             | Use the Jupyter Notebooks and Rubin python packages to access LSST data products.  
+| NB 01. `Introduction to DP02 <https://dp0-2.lsst.io/_static/nb_html/DP02_01_Introduction_to_DP02.html>`_                             | Use the Jupyter Notebooks and Rubin python packages to access LSST data products. |
 +--------------------------------------------------------------------------------------------------------------------------------------+----------+
 | NB 02. `Catalog Queries with TAP <https://dp0-2.lsst.io/_static/nb_html/DP02_02_Catalog_Queries_with_TAP.html>`_                     | Explore the DP0.2 catalogs via TAP and execute complex queries to retrieve data.  |
 +--------------------------------------------------------------------------------------------------------------------------------------+----------+
