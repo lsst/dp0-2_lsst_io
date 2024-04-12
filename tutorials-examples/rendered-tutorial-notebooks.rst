@@ -18,6 +18,32 @@
 Rendered tutorial notebooks
 ###########################
 
+## DP0.2 Tutorials
+
+| Title  | Brief Description  |
+|---|---|
+| 01. Introduction to DP0.2 | Use the Jupyter Notebooks and Rubin python packages to access LSST data products. |
+| 02. Catalog Queries with TAP | Explore the DP0.2 catalogs via TAP and execute complex queries to retrieve data. |
+| 03a. Image Display and Manipulation | Learn how to display and manipulate images using the LSST Science Pipelines. |
+| 03b. Image Display with Firefly | Use the Firefly interactive interface for image data. |
+| 03c. Survey Property Maps | Use the tools to visualize full-area survey property maps. |
+| 04a. Introduction to the Butler | Use the Butler to query DP0 images and catalogs. |
+| 04b. Intermediate Butler Queries | Learn to discover data and apply query constraints with the Butler. |
+| 05. Introduction to Source Detection | Access, display, and manipulate images; detect, deblend, and measure sources; and extract, plot, and use object footprints. |
+| 06a. Interactive Image Visualization | Create interactive image visualizations with the HoloViews and Bokeh open-source python libraries. |
+| 06b. Interactive Catalog Visualization | Create interactive catalog visualizations for large datasets with HoloViews, Bokeh, and Datashader. |
+| 07a. DiaObject Samples | Use the DiaObject table parameters to identify a sample of time-variable objects of interest. |
+| 07b. Variable Star Lightcurves | Use the DP0.2 catalogs to identify variable stars and plot their lightcurves. |
+| 08. Truth Tables | Explore, retrieve, and compare data from the truth and measurement tables. |
+| 09a. Custom Coadd | Create a custom "deepCoadd" using only a subset of the input visits. |
+| 09b. Custom Coadd Sources | Detect and measure sources in a custom "deepCoadd" image. |
+| 10. Deblender Data Products | Use the outputs of the multiband deblender to explore the footprints of parent and child objects. |
+| 11. Working with User Packages | An example of how to install and set up user packages. |
+| 12a. Point Spread Function Data Products | A demonstration of how to access calexp and deepCoadd PSF properties. |
+| 12b. Point Spread Function Science Demo | Demonstration of the use of measured PSF properties in weak lensing analysis. |
+| 13a. Using The Image Cutout Tool With DP0.2 | Demonstration of the use of the image cutout tool with a few science applications. |
+| 14. Injecting Synthetic Sources Into Single-Visit Images | Inject artificial stars and galaxies into images. |
+
 | Title  | Brief Description  |
 |---|---|
 | 01. `Introduction to DP02 <https://dp0-2.lsst.io/_static/nb_html/DP02_01_Introduction_to_DP02.html>`_ 
