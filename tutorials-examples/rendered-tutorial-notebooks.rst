@@ -46,9 +46,9 @@ Rendered tutorial notebooks
  | Use the DP0.2 catalogs to identify variable stars and plot their lightcurves. |
 | 08. `Truth Tables <https://dp0-2.lsst.io/_static/nb_html/DP02_08_Truth_Tables.html>`_ 
  | Explore, retrieve, and compare data from the truth and measurement tables. |
-| 09a. `Custom Coadd <https://dp0-2.lsst.io/_static/nb_html/DP02_09a_Custom_Coadd.html>`_ 
+| 09a. Custom Coadd  
  | Create a custom "deepCoadd" using only a subset of the input visits. |
-| 09b. `Custom Coadd Sources <https://dp0-2.lsst.io/_static/nb_html/DP02_9b_Custom_Coadd_Sources.html>`_ 
+| 09b. Custom Coadd Sources 
  | Detect and measure sources in a custom "deepCoadd" image. |
 | 10. `Deblender Data Products <https://dp0-2.lsst.io/_static/nb_html/DP02_10_Deblender_Data_Products.html>`_
  | Use the outputs of the multiband deblender to explore the footprints of parent and child objects. |
