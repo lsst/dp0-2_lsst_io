@@ -18,10 +18,9 @@
 Rendered tutorial notebooks
 ###########################
 
-## DP0.2 Tutorials
 
 | Title  | Brief Description  |
-|---|---|
+| -----  | -----------------  |
 | 01. Introduction to DP0.2 | Use the Jupyter Notebooks and Rubin python packages to access LSST data products. |
 | 02. Catalog Queries with TAP | Explore the DP0.2 catalogs via TAP and execute complex queries to retrieve data. |
 | 03a. Image Display and Manipulation | Learn how to display and manipulate images using the LSST Science Pipelines. |
@@ -44,8 +43,10 @@ Rendered tutorial notebooks
 | 13a. Using The Image Cutout Tool With DP0.2 | Demonstration of the use of the image cutout tool with a few science applications. |
 | 14. Injecting Synthetic Sources Into Single-Visit Images | Inject artificial stars and galaxies into images. |
 
+
+
 | Title  | Brief Description  |
-|---|---|
+| --- | --- |
 | 01. `Introduction to DP02 <https://dp0-2.lsst.io/_static/nb_html/DP02_01_Introduction_to_DP02.html>`_ 
  | Use the Jupyter Notebooks and Rubin python packages to access LSST data products. |
 | 02. `Catalog Queries with TAP <https://dp0-2.lsst.io/_static/nb_html/DP02_02_Catalog_Queries_with_TAP.html>`_ 
@@ -72,10 +73,8 @@ Rendered tutorial notebooks
  | Use the DP0.2 catalogs to identify variable stars and plot their lightcurves. |
 | 08. `Truth Tables <https://dp0-2.lsst.io/_static/nb_html/DP02_08_Truth_Tables.html>`_ 
  | Explore, retrieve, and compare data from the truth and measurement tables. |
-| 09a. Custom Coadd  
- | Create a custom "deepCoadd" using only a subset of the input visits. |
-| 09b. Custom Coadd Sources 
- | Detect and measure sources in a custom "deepCoadd" image. |
+| 09a. Custom Coadd | Create a custom "deepCoadd" using only a subset of the input visits. |
+| 09b. Custom Coadd Sources | Detect and measure sources in a custom "deepCoadd" image. |
 | 10. `Deblender Data Products <https://dp0-2.lsst.io/_static/nb_html/DP02_10_Deblender_Data_Products.html>`_
  | Use the outputs of the multiband deblender to explore the footprints of parent and child objects. |
 | 11. Working with User Packages | An example of how to install and set up user packages. |
