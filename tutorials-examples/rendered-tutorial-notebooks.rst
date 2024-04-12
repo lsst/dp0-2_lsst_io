@@ -18,6 +18,7 @@
 Rendered tutorial notebooks
 ###########################
 
+top of the table
 
 +--------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
 | Title                                                                                                                                | Brief Description                                                                 |
@@ -36,13 +37,13 @@ Rendered tutorial notebooks
 +--------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
 | NB 04b. `Intermediate Butler Queries <https://dp0-2.lsst.io/_static/nb_html/DP02_04b_Intermediate_Butler_Queries.html>`_             | Learn to discover data and apply query constraints with the Butler.               |
 +--------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
-| NB 05. `Introduction to Source Detection <https://dp0-2.lsst.io/_static/nb_html/DP02_05_Introduction_to_Source_Detection.html>`_     | Access, display, and manipulate images; detect, deblend, and measure sources; and extract, plot, and use object footprints. |
+| NB 05. `Introduction to Source Detection <https://dp0-2.lsst.io/_static/nb_html/DP02_05_Introduction_to_Source_Detection.html>`_     | Manipulate images; measure sources; and extract, plot, and use object footprints. |
 +--------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
-| NB 06a. `Interactive Image Visualization <https://dp0-2.lsst.io/_static/nb_html/DP02_06a_Interactive_Image_Visualization.html>`_     | Create interactive image visualizations with the HoloViews and Bokeh open-source python libraries. |
+| NB 06a. `Interactive Image Visualization <https://dp0-2.lsst.io/_static/nb_html/DP02_06a_Interactive_Image_Visualization.html>`_     | Image visualizations with the HoloViews and Bokeh open-source python libraries.   |
 +--------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
-| NB 06b. `Interactive Catalog Visualization <https://dp0-2.lsst.io/_static/nb_html/DP02_06b_Interactive_Catalog_Visualization.html>`_ | Create interactive catalog visualizations for large datasets with HoloViews, Bokeh, and Datashader. |
+| NB 06b. `Interactive Catalog Visualization <https://dp0-2.lsst.io/_static/nb_html/DP02_06b_Interactive_Catalog_Visualization.html>`_ | Visualizations for large datasets with HoloViews, Bokeh, and Datashader.          |
 +--------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
-| NB 07a. `DiaObject Samples <https://dp0-2.lsst.io/_static/nb_html/DP02_07a_DiaObject_Samples.html>`_                                 | Use the DiaObject table parameters to identify a sample of time-variable objects of interest. |
+| NB 07a. `DiaObject Samples <https://dp0-2.lsst.io/_static/nb_html/DP02_07a_DiaObject_Samples.html>`_                                 | Identify a sample of time-variable objects of interest.                           |
 +--------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
 | NB 07b. `Variable Star Lightcurves <https://dp0-2.lsst.io/_static/nb_html/DP02_07b_Variable_Star_Lightcurves.html>`_                 | Use the DP0.2 catalogs to identify variable stars and plot their lightcurves.     |
 +--------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
@@ -52,7 +53,7 @@ Rendered tutorial notebooks
 +--------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
 | NB 09b. Custom Coadd Sources                                                                                                         | Detect and measure sources in a custom "deepCoadd" image.                         |
 +--------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
-| NB 10. `Deblender Data Products <https://dp0-2.lsst.io/_static/nb_html/DP02_10_Deblender_Data_Products.html>`_                       | Use the outputs of the multiband deblender to explore the footprints of parent and child objects. |
+| NB 10. `Deblender Data Products <https://dp0-2.lsst.io/_static/nb_html/DP02_10_Deblender_Data_Products.html>`_                       | Explore the footprints of parent and child objects.                               |
 +--------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
 | NB 11. Working with User Packages                                                                                                    | An example of how to install and set up user packages.                            |
 +--------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
@@ -65,4 +66,6 @@ Rendered tutorial notebooks
 | NB 14. `Injecting Synthetic Sources <https://dp0-2.lsst.io/_static/nb_html/DP02_14_Injecting_Synthetic_Sources.html>`_               | Inject artificial stars and galaxies into images.                                 |
 +--------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
 
+
+bottom of the table
 More tutorials coming soon!
