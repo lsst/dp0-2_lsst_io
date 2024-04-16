@@ -420,7 +420,7 @@ Butler - que en inglés significa mayordomo - (`documentación de butler <https:
     my_spherePoint = lsst.geom.SpherePoint(my_ra_deg*lsst.geom.degrees, my_dec_deg*lsst.geom.degrees)
     print(my_spherePoint)
 
-6.3. Recuperar el mapa del cielo de DC2 (skymap) (`documentación de skymap <https://pipelines.lsst.io/modules/lsst.skymap/index.html>`_) e identificar la región y parcela (tract y patch).
+6.4. Recuperar el mapa del cielo de DC2 (skymap) (`documentación de skymap <https://pipelines.lsst.io/modules/lsst.skymap/index.html>`_) e identificar la región y parcela (tract y patch).
 
 .. !!!6.3.!!!{SE REPITE EL 6.3} Retrieve the !!!DC2 skymap!!! (`skymap documentation <https://pipelines.lsst.io/modules/lsst.skymap/index.html>`_) and identify the !!!tract!!!{traduzco ya que se menciona anteriormente tambien como tract} and !!!patch!!!{misma situacion que con tract}.
 
@@ -436,7 +436,7 @@ Butler - que en inglés significa mayordomo - (`documentación de butler <https:
     print('my_tract: ', my_tract)
     print('my_patch: ', my_patch)
 
-6.4. Utilizar Butler para recuperar la imagen deepCoadd en la banda i.
+6.5. Utilizar Butler para recuperar la imagen deepCoadd en la banda i.
 
 .. 6.4. Retrieve the !!!deep i-band Coadd!!!{viendo el código de abajo, entiendo que se refiere a una deepCoadd la cual en el glosario se indca que se deja sin traducción, pero no me queda 100% claro}.
 
