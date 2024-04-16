@@ -45,16 +45,16 @@
 **Tamaño del contenedor (Container size):** medium
 
 **Introducción:**
-Este tutorial es una introducción a las funcionalidades de la terminal y línea de comandos de la plataforma científica de Rubin (Rubin Science Plataform - RSP).
+Este tutorial es una introducción a las funcionalidades de la terminal y línea de comandos de la Plataforma Científica de Rubin (Rubin Science Plataform - RSP).
 Es paralelo al tutorial de Jupyter Notebook "Introducción a DP02" y muestra cómo utilizar el servicio TAP para consultar y recuperar datos del catálogo;
-usar matplotlib para graficar los datos de un catálogo; el paquete Butler de LSST para consultar y recuperar datos de imágenes.
+usar matplotlib para graficar los datos de un catálogo; el paquete Butler de LSST para consultar y recuperar datos de imágenes; y el paquete de imágenes afwDisplay de LSST.
 
 .. This tutorial is an introduction to the terminal and command line functionality within the Rubin Science Platform.
 .. It is parallel to the Jupyter Notebook tutorial "Introduction to DP02" and demonstrates how to use the TAP service to query and retrieve catalog data;
 .. matplotlib to plot catalog data; the LSST Butler package to query and retrieve image data; and the LSST afwDisplay image package.
 
-Este tutorial usa el conjunto de datos Vista previa de datos 0.2 (DP0.2 - Data Preview 0.2).
-Este conjunto de datos utiliza un subconjunto de las imágenes simuladas del Desafío de datos 2 de DESC (DC2 - DESC's Data Challenge 2), las cuales han sido reprocesadas por el Observatorio de Rubin usando la versión 23 de las pipelines científicas del LSST (LSST Science Pipelines).
+Este tutorial usa el conjunto de datos Vista Previa de Datos 0.2 (DP0.2 - Data Preview 0.2).
+Este conjunto de datos utiliza un subconjunto de las imágenes simuladas del Desafío de Datos 2 de DESC (DC2 - DESC's Data Challenge 2), las cuales han sido reprocesadas por el Observatorio Rubin usando la versión 23 de las Pipelines Científicas del LSST (LSST Science Pipelines).
 Se puede encontrar más información sobre los datos simulados en el `artículo científico de DC2 <https://ui.adsabs.harvard.edu/abs/2021ApJS..253...31L/abstract>`_ de DESC y en la `documentación del lanzamiento de datos de DP0.2 <https://dp0-2.lsst.io>`_.
 
 .. This tutorial uses the Data Preview 0.2 (DP0.2) data set.
@@ -74,7 +74,7 @@ Paso 1. Acceso a la terminal y configuración
 
 .. 1.1. Log in to the Notebook Aspect. The terminal is a subcomponent of the Notebook Aspect.
 
-1.2. En la ventana de lanzadores abajo de "Other", seleccionar la "Terminal".
+1.2. En la ventana de lanzadores debajo de "Other", seleccionar la "Terminal".
 
 .. 1.2. In the launcher window under "Other", select the terminal.
 
@@ -86,7 +86,7 @@ Paso 1. Acceso a la terminal y configuración
 .. :alt: Options visible in the section of the launcher entitled other within the notebook aspect.  
 .. Selections from the left are: terminal launcher, text file, markdown file, python file, and a help button. 
 
-1.3. Configurar el entorno del Observatorio de Rubin.
+1.3. Configurar el entorno del Observatorio Rubin.
 
 .. 1.3. Set up the !!!Rubin Observatory!!!{no se si es un producto también} environment.
 
@@ -131,7 +131,7 @@ Este tutorial hace uso de numerosos paquetes que serán utilizados con frecuenci
 
 .. code-block::
 
-    import pandas 
+    import pandas
     pandas.set_option('display.max_rows', 1000)
     from lsst.rsp import get_tap_service, retrieve_query
 
@@ -155,8 +155,8 @@ Paso 3. Recuperar datos usando TAP para 10 objetos
 .. Step 3. Retrieve data using TAP for 10 objects
 .. ==============================================
 
-El protocolo de acceso a datos tabulados TAP (Table Access Protocol) provee acceso estandarizado a los datos de los catálogos para exploración, búsqueda y recuperación.
-`La documentación completa para TAP <https://www.ivoa.net/documents/TAP/20190927/index.html>`_ es provista por la Alianza Internacional del Observatorio Virtual (IVOA - International Virtual Observatory Alliance).
+El protocolo de Acceso a Datos Tabulados TAP (Table Access Protocol) provee acceso estandarizado a los datos de los catálogos para exploración, búsqueda y recuperación.
+La `documentación completa para TAP <https://www.ivoa.net/documents/TAP/20190927/index.html>`_ es provista por la Alianza Internacional del Observatorio Virtual (IVOA - International Virtual Observatory Alliance).
 El servicio TAP utiliza un lenguaje de consultas similar a SQL (Structured Query Language - lenguaje de consulta estructurado) denominado ADQL (Astronomical Data Query Language - lenguaje de consulta de datos astronómicos).
 La `documentación para ADQL <https://www.ivoa.net/documents/latest/ADQL.html>`_ incluye más información sobre sintaxis y palabras clave.
 
@@ -165,12 +165,12 @@ La `documentación para ADQL <https://www.ivoa.net/documents/latest/ADQL.html>`_
 .. The TAP service uses a query language similar to SQL (Structured Query Langage) called ADQL (Astronomical Data Query Language).
 .. The `documentation for ADQL <https://www.ivoa.net/documents/latest/ADQL.html>`_ includes more information about syntax and keywords.
 
-Aviso: No están soportadas por RSP todas las funcionalidades de ADQL para la vista previa de datos 0 (DP0).
+Aviso: No todas las funcionalidades de ADQL están soportadas por RSP para la Vista Previa de Datos 0 (DP0).
 
 .. Notice: Not all ADQL functionality is supported by the RSP for Data Preview 0.
 
 
-Este ejemplo utiliza el Catálogo de Objetos DP0.2, que contiene fuentes detectadas en las imágenes combinadas (también llamadas imágenes apiladas, combinadas o deepCoadd).
+Este ejemplo utiliza el Catálogo de Objetos DP0.2, que contiene fuentes detectadas en las imágenes coagregadas (también llamadas imágenes apiladas, combinadas o deepCoadd).
 
 .. This example uses the DP0.2 Object catalog, which contains sources detected in the !!!coadded images!!! (also called stacked, combined, or !!!deepCoadd!!!{se deja sin traducir} images).
 
@@ -181,8 +181,8 @@ Este ejemplo utiliza el Catálogo de Objetos DP0.2, que contiene fuentes detecta
 .. code-block::
 
     service = get_tap_service("tap")
-    
-3.2. Definir las coordenadas para una búsqueda de cono centrada alrededor de la región cubierta por la simulación DC2 (RA,Dec = 62,-37).
+
+3.2. Definir las coordenadas para una búsqueda en un cono centrado alrededor de la región cubierta por la simulación DC2 (RA,Dec = 62,-37).
 
 .. 3.2. Define the coordinates for a cone search centered around the region covered by the DC2 simulation (RA,Dec = 62,-37).
 
@@ -190,11 +190,11 @@ Este ejemplo utiliza el Catálogo de Objetos DP0.2, que contiene fuentes detecta
 
     use_center_coords = "62, -37"
 
-3.3. Crear una consulta llamada my_adql_query para obtener las coordenadas y las magnitudes g, r, i para objetos contenidos dentro de 0.5 grados de las coordenadas centrales.
+3.3. Crear una consulta llamada my_adql_query para obtener las coordenadas y las magnitudes g, r, i para objetos contenidos en un radio de 0.5 grados de las coordenadas centrales.
 
 .. 3.3. Create a query named my_adql_query to retrieve the coordinates and g, r, i magnitudes for objects !!!within!!!{revisar si "contenidos dentro" está bien} 0.5 degrees of the center coordinates.
 
-.. code-block:: 
+.. code-block::
 
    my_adql_query = "SELECT TOP 10 coord_ra, coord_dec, detect_isPrimary, " + \
                 "r_calibFlux, r_cModelFlux, r_extendedness " + \
@@ -210,7 +210,7 @@ Este ejemplo utiliza el Catálogo de Objetos DP0.2, que contiene fuentes detecta
 
     results = service.search(my_adql_query)
     results_table = results.to_table()
-    print(results_table)   
+    print(results_table)
 
 3.5. Convertir flujos en magnitudes.
 
@@ -219,10 +219,10 @@ Este ejemplo utiliza el Catálogo de Objetos DP0.2, que contiene fuentes detecta
 Los catálogos de objetos y fuentes almacenan sólo flujos.
 Hay cientos de columnas relacionadas a flujos, y almacenarlas también como magnitudes sería redundante, y un desperdicio de espacio.
 Todas las unidades de flujos son nanojanskys (nJy).
-Para convertir nJy a magnitudes AB usar: |mab| = -2.5log(|fnJy|) + 31.4. 
+Para convertir nJy a magnitudes AB usar: |mab| = -2.5log(|fnJy|) + 31.4.
 
-.. |mab| replace:: m\ :sub:`AB`\ 
-.. |fnJy| replace:: f\ :sub:`nJy`\
+.. |mab| replace:: m\ :sub:`AB`
+.. |fnJy| replace:: f\ :sub:`nJy`
 
 
 .. The object and source catalogs store only fluxes.
@@ -235,17 +235,17 @@ Agregar columnas de magnitudes después de recuperar columnas de flujo.
 .. Add columns of magnitudes after retrieving columns of flux.
 
 .. code-block::
-   
+
      results_table['r_calibMag'] = -2.50 * numpy.log10(results_table['r_calibFlux']) + 31.4
      results_table['r_cModelMag'] = -2.50 * numpy.log10(results_table['r_cModelFlux']) + 31.4
-     
+
 Visualizar la tabla de resultados incluyendo las magnitudes.
 
 .. Display the results table including the magnitudes.
 
 .. code-block::
 
-    print(results_table) 
+    print(results_table)
 
 
 
@@ -260,7 +260,7 @@ Paso 4. Recuperar datos usando TAP para 10,000 objetos
 
 Para obtener las columnas correspondiente a flujos como magnitudes con una consulta ADQL, se puede hacer lo siguiente:
 scisql_nanojanskyToAbMag(g_calibFlux) as g_calibMag,
-y las columnas de errores de magnitud se pueden obtener haciendo:
+y las columnas de errores de magnitudes se pueden obtener con:
 scisql_nanojanskyToAbMagSigma(g_calibFlux, g_calibFluxErr) as g_calibMagErr.
 
 .. To retrieve columns of fluxes as magnitudes in an ADQL query, !!!users!!!{omito usar la traducción usuario porque no encuentro una forma inclusiva no rebuscada de palabra equivalente} can do this:
@@ -269,10 +269,10 @@ scisql_nanojanskyToAbMagSigma(g_calibFlux, g_calibFluxErr) as g_calibMagErr.
 .. scisql_nanojanskyToAbMagSigma(g_calibFlux, g_calibFluxErr) as g_calibMagErr.
 
 4.1. Recuperar las magnitudes de las bandas g, r e i para 10000 objetos puntuales.
- 
+
 .. 4.1. Retrieve g-, r- and i-band magnitudes for 10000 !!!point-like objects!!!.
 
-A la búsqueda de cono realizada en la consulta, agregarle como restricciones que detect_isPrimary sea True (esto excluirá fuentes "hijas" producto de separación - *deblending*), que el flujo calibrado sea mayor que 360 nJy (aproximadamente magnitud 25), y que los parámetros de extensión sean 0 (fuentes puntuales).
+A la búsqueda en un cono realizada en la consulta, agregarle como restricciones que detect_isPrimary sea True (esto excluirá fuentes "hijas" producto de la separación - *deblending*), que el flujo calibrado sea mayor que 360 nJy (aproximadamente magnitud 25), y que los parámetros de extensión sean 0 (fuentes puntuales).
 
 .. In addition to a cone search, impose query restrictions that detect_isPrimary is True (this will not return !!!deblended "child" sources!!), that the !!!calibrated flux!!! is greater than 360 nJy (about 25th mag), and that the !!!extendedness parameters!!! are 0 (!!!point-like sources!!!).
 
@@ -299,7 +299,7 @@ A la búsqueda de cono realizada en la consulta, agregarle como restricciones qu
 .. 4.2. Store the data as a pandas !!!dataframe!!!{elijo aclarar que es un objeto}. 
 
 .. code-block::
-    
+
     results_table = results.to_table()
     data = results_table.to_pandas()
 
@@ -322,7 +322,7 @@ Paso 5. Hacer un diagrama color-magnitud
 
     plt.plot(data['r_calibMag'].values - data['i_calibMag'].values,
          data['g_calibMag'].values, 'o', ms=2, alpha=0.2)
-	 
+
 5.2. Definir las etiquetas de los ejes y los límites.
 
 .. 5.2. Define the axis labels and limits.
@@ -350,10 +350,10 @@ Hacer doble clic sobre el nombre de archivo para abrirlo y ver el gráfico.
 
 .. Use the file navigator on the left-hand side of the Notebook Aspect to navigate to the file "color-magnitude.pdf".
 .. Double click on the filename to open and view the plot.
-    
+
 .. figure:: /_static/cl_color-magnitude.jpg
 	:alt: Diagrama color-magnitud que grafica en el eje y la magnitud g y en el eje x el color magnitud r menos magnitud i
-		Hay una serie de bandas verticales que representan varios colores magnitud, que van desde 0.6 hasta 1.7. Esta característica es única de este conjunto de datos simulados.
+		Hay una serie de bandas verticales que representan varios colores en un amplio rango de magnitudes, que van desde 0.6 hasta 1.7. Esta característica es única de este conjunto de datos simulados.
 
 .. alt: Color-magnitude diagram plotting magnitude g on the y-axis and !!!magnitude r minus magnitude i color!!! on the x-axis.  
 .. There are a number of vertical bands representing various !!!color magnitudes!!! ranging from 0.6 to 1.7.  This feature is unique to this simulated data set. 
@@ -370,27 +370,27 @@ Los dos tipos de imágenes más comunes con los que van a interactuar los delega
 
 .. !!!The two most common types of images!!! that DP0 !!!delegates!!!{no encontre alternativa sin genero} will interact with are !!!calexps!!!{sin traducción por glosario} and !!!deepCoadds!!!{sin traducción por glosario}.
 
-calexp: Una única imagen con un único filtro.
+calexp: Una única imagen en un único filtro.
 
 .. calexp: A single image in a single filter.
 
-deepCoadd: Una combinación de imágenes individuales en pila profunda o coagregada.
+deepCoadd: Una combinación de imágenes individuales en un apilamiento profundo o coagregada.
 
 .. deepCoadd: A combination of single images into a deep stack or !!!Coadd!!!{no estoy seguro de usar la traducción del glosario pero así lo hice tambien en las notebooks}.
 
-Las pipelines científicas LSST (Science Pipelines) procesan y almacenan imágenes en regiones y parcelas. Para obtener y mostrar una imagen en una coordenada deseada, los usuarios deben especificar su tipo de imagen, región (tract) y parcela (patch).
+Las Pipelines Científicas LSST (Science Pipelines) procesan y almacenan imágenes en regiones y parcelas. Para obtener y mostrar una imagen en una coordenada deseada, se debe especificar el tipo de imagen, región (tract) y parcela (patch).
 
 .. The LSST Science Pipelines processes and stores images in !!!tracts!!!{traduzco} and !!!patches!!!{traduzco}. To retrieve and display an image at a desired coordinate, users have to specify their image type, !!!tract!!!{traduzco}, and !!!patch!!!{traduzco}.
 
-región: Una porción del cielo dentro de la teselación del cielo completo (mapa del cielo) de LSST (LSST all-sky tessellation) ; dividido en parcelas.
+región (tract): Una porción del cielo dentro de la teselación del cielo completo (mapa del cielo) de LSST (LSST all-sky tessellation); dividido en parcelas.
 
 .. !!!tract!!!{pensar si conviene no traducir para que respete el código}: A portion of sky within the !!!LSST all-sky tessellation (sky map)!!!{en glosario de tract aparece tal cual}; divided into patches.
 
-parcela: Una subregión cuadrilátera de una región, de un tamaño que se ajusta fácilmente en la memoria de las computadoras de escritorio.
+parcela (patch): Una subregión cuadrilátera de una región, de un tamaño que puede almacenarse fácilmente en la memoria de una computadora de escritorio.
 
 .. !!!patch!!!{pensar si conviene no traducir para que respete el código}: A quadrilateral sub-region of a tract, of a size that fits easily into memory on desktop computers.
 
-Butler - que en inglés significa mayordomo - (`documentación de butler <https://pipelines.lsst.io/modules/lsst.daf.butler/index.html>`_) es un paquete de software de las pipelines científicas de LSST para obtener datos de LSST sin necesidad de conocer su ubicación o formato. Además Butler también puede ser utilizado para explorar y descubrir qué datos existen. Otros tutoriales muestran la funcionalidad completa de Butler.
+Butler - que en inglés significa mayordomo - (`documentación de butler <https://pipelines.lsst.io/modules/lsst.daf.butler/index.html>`_) es un paquete de software de las Pipelines Científicas de LSST para obtener datos de LSST sin necesidad de conocer su ubicación o formato. Además Butler también puede ser utilizado para explorar y descubrir qué datos existen. Otros tutoriales muestran la funcionalidad completa de Butler.
 
 .. !!!The!!!{saco el artículo} butler (`butler documentation <https://pipelines.lsst.io/modules/lsst.daf.butler/index.html>`_) is an !!!LSST Science Pipelines!!!{glosario} software package to fetch LSST data without having to know its location or format. The butler can also be used to explore and discover what data exists. Other tutorials demonstrate the full butler functionality.
 
@@ -420,7 +420,7 @@ Butler - que en inglés significa mayordomo - (`documentación de butler <https:
     my_spherePoint = lsst.geom.SpherePoint(my_ra_deg*lsst.geom.degrees, my_dec_deg*lsst.geom.degrees)
     print(my_spherePoint)
 
-6.3. Recuperar el mapa de cielo (skymap) de DC2 (`documentación de skymap <https://pipelines.lsst.io/modules/lsst.skymap/index.html>`_) e identificar el región y parcela (tract y patch).
+6.3. Recuperar el mapa del cielo de DC2 (skymap) (`documentación de skymap <https://pipelines.lsst.io/modules/lsst.skymap/index.html>`_) e identificar la región y parcela (tract y patch).
 
 .. !!!6.3.!!!{SE REPITE EL 6.3} Retrieve the !!!DC2 skymap!!! (`skymap documentation <https://pipelines.lsst.io/modules/lsst.skymap/index.html>`_) and identify the !!!tract!!!{traduzco ya que se menciona anteriormente tambien como tract} and !!!patch!!!{misma situacion que con tract}.
 
@@ -436,7 +436,7 @@ Butler - que en inglés significa mayordomo - (`documentación de butler <https:
     print('my_tract: ', my_tract)
     print('my_patch: ', my_patch)
 
-6.4. Utiliza Butler para recuperar la deepCoadd en la banda i.
+6.4. Utilizar Butler para recuperar la imagen deepCoadd en la banda i.
 
 .. 6.4. Retrieve the !!!deep i-band Coadd!!!{viendo el código de abajo, entiendo que se refiere a una deepCoadd la cual en el glosario se indca que se deja sin traducción, pero no me queda 100% claro}.
 
@@ -467,7 +467,7 @@ Los datos de imágenes recuperados con Butler se pueden visualizar de muchas for
     afwDisplay.setDefaultBackend('matplotlib')
 
 .. code-block::
-    
+
     fig = plt.figure(figsize=(10, 8))
     afw_display = afwDisplay.Display(1)
     afw_display.scale('asinh', 'zscale')
@@ -478,17 +478,17 @@ Los datos de imágenes recuperados con Butler se pueden visualizar de muchas for
 Utilizar el navegador de archivos en el lado izquierdo de la Faceta Notebook para navegar hasta el archivo "my_deepCoadd.pdf"
 Hacer doble clic sobre el nombre de archivo para abrirlo y ver el gráfico.
 
-    
+
 .. Use the file navigator on the left-hand side of the Notebook Aspect to navigate to the file "my_deepCoadd.pdf".
 .. Double click on the filename to open and view the image.
-    
+
 .. figure:: /_static/cl_my-deep-Coadd.jpg
-	:alt: Una captura de pantalla de cuatro mil por cuatro mil píxeles de una imagen astronómica que ha sido graficada en una Jupyter notebook.
-		Una gran concentración de puntos alargados se encuentra en el cuadrante inferior izquierdo y sugiere un cúmulo de galaxias.
-  
+	:alt: Una captura de pantalla de una imagen astronómica de cuatro mil por cuatro mil píxeles que ha sido graficada en una Jupyter notebook.
+		Una gran concentración de puntos elongados se concentra en el cuadrante inferior izquierdo sugieriendo un cúmulo de galaxias.
+
 .. :alt: A !!!four thousand by four thousand pixel screen capture!!!{en realidad no es la captura que tiene 4mil x 4mil sino la imagen astronómica cruda que de todas formas esta comprimida para entrar dentro del gráfico de la notebook} of an astronomical image that has been plotted in a Jupyter notebook.  
 ..  A large concentration of elongated points is concentrated at the lower-left quadrant and suggests a cluster of galaxies.  
-    
+
 7.2. Visualizar la imagen usando Firefly (`documentación de Firefly <https://pipelines.lsst.io/modules/lsst.display.firefly/index.html>`_).
 
 .. 7.2. Display the image using Firefly (`Firefly documentation <https://pipelines.lsst.io/modules/lsst.display.firefly/index.html>`_).
@@ -498,12 +498,12 @@ Hacer doble clic sobre el nombre de archivo para abrirlo y ver el gráfico.
     afwDisplay.setDefaultBackend('firefly')
     afw_display = afwDisplay.Display(frame=1)
     afw_display.mtv(my_deepCoadd)
-   
-Opcional: Para una demostración de la interfaz interactiva de Firefly, revisa "03b Visualización de imágenes con Firefly" del :ref:`DP0-2-Tutorials-Notebooks`.
+
+Opcional: Para una demostración de la interfaz interactiva de Firefly, revisar "03b Visualización de imágenes con Firefly" del :ref:`DP0-2-Tutorials-Notebooks`.
 
 .. Optional: For a demonstration of the Firefly interactive interface, work through !!!"03b Image Display with Firefly" of the :ref:`DP0-2-Tutorials-Notebooks`.!!!{referenciaremos a una futura versión traducida o al que ahora está en ingles?}
 
-7.3. Cuando estés listo, salir de python para regresar a la línea de comando normal.
+7.3. Al terminar, salir de python para regresar a la línea de comando normal.
 
 .. 7.3. When you're done, exit python to return to the regular command line.
 
