@@ -14,9 +14,9 @@
 .. Para hacer referencia a una etiqueta que no está asociada con un objeto reST, como un título o una figura, se debe incluir el enlace y el título explícito utilizando la sintaxis :ref:`texto del enlace <nombre-de-la-etiqueta>`.
 .. Una advertencia alertará sobre etiquetas idénticas durante el proceso de verificación de enlaces.
 
-##########################################################################
-01 (ES). Diagrama de color-magnitud de estrellas brillantes (principiante)
-##########################################################################
+#######################################################################
+01 (ES). Diagrama color-magnitud de estrellas brillantes (principiante)
+#######################################################################
 
 .. 01. Bright Stars !!!Color-Magnitude!!!{Melissa tradujo magnitud-color y no color-magnitud} Diagram (beginner)
 
@@ -40,9 +40,9 @@
 .. **!!!Targeted!!! learning level:** beginner
 
 **Introducción:**
-Este tutorial utiliza la interfaz Single-Table Query (consulta de tabla única) para buscar estrellas brillantes en una región pequeña del cielo
-y luego utiliza la interfaz para resultados Results para crear un diagrama color-magnitud.
-Este es el mismo ejemplo usado para ilustrar el servicio de Protocolo de Acceso de Tablas (Table Access Protocol - TAP) al principio de :ref:`DP0-2-Tutorials-Notebooks-ES`.
+Este tutorial utiliza la interfaz Consulta de Tabla Única (Single-Table Query) para buscar estrellas brillantes en una región pequeña del cielo
+y luego utiliza la interfaz de Resultados (Results) para crear un diagrama color-magnitud.
+Este es el mismo ejemplo usado para ilustrar el servicio de Protocolo de Acceso de Tablas (Table Access Protocol - TAP) en el primer tutorial de :ref:`DP0-2-Tutorials-Notebooks-ES`.
 Principiantes que busquen una visión más general de la Faceta Portal pueden consultar :doc:`/data-access-analysis-tools/portal-intro`.
 
 .. **Introduction:**
@@ -65,16 +65,16 @@ Paso 1. Establecer las restricciones de la consulta
 
 .. 1.1. Log in to the !!!Portal Aspect!!!{glosario}.
 
-1.2. Abajo de "TAP Searches" (búsquedas TAP), dejar la casilla "Use Image Search (ObsTAP)" sin marcar y dejar a "View" con su valor por defecto "UI assisted".
+1.2. Debajo de "TAP Searches" (búsquedas TAP), dejar la casilla "Use Image Search (ObsTAP)" sin marcar y dejar la configuración de "View" con su valor por defecto "UI assisted".
 
 .. 1.2. Under "TAP Searches", leave the "Use Image Search (ObsTAP)" box unchecked, and leave "View" at its default "UI assisted".
 
-1.3. A la derecha de "LSST DP0.2 DC2 Tables", elegir en "Table Collection" el conjunto de tablas "dp02_dc2_catalogs" (el menú desplegable de la izquierda) y en "Table" la tabla "dp02_dc2_catalogs.Object" (el menú desplegable de la derecha).
+1.3. A la derecha de "LSST DP0.2 DC2 Tables", elegir en "Table Collection" el conjunto de tablas "dp02_dc2_catalogs" (menú desplegable de la izquierda) y en "Table" la tabla "dp02_dc2_catalogs.Object" (menú desplegable de la derecha).
 
 .. 1.3. Next to "LSST DP0.2 DC2 Tables", choose the !!!Table Collection!!! to be "dp02_dc2_catalogs" (left drop-down menu) and the Table to be "dp02_dc2_catalogs.Object" (right drop-down menu).
 .. Acá se usa "Table Colection" para identificar el menu desplegable pero también indicando que se está eligiendo dentro de la colección de tablas, por eso agrego "el conjunto de tablas" a la traducción
 
-1.4. En la sección para restricciones, abajo de "Enter Constraints", marcar la casilla de verificación a la izquierda de "Spatial" para usar restricciones espaciales.
+1.4. En la sección de restricciones, debajo de "Enter Constraints", marcar la casilla de verificación a la izquierda de "Spatial" para usar restricciones espaciales.
 Dejar "Shape Type" (el tipo de forma) con su valor por defecto "Cone" (cono), y para las coordenadas/nombre de objeto en "Coords or Obj Name" usar las coordenadas centrales del área de simulación de DC2 "62, -37".
 En el menú desplegable al lado de "Radius", elegir "degrees" *y luego* ingresar "1" en el cuadro de texto y presionar la tecla *enter* para establecer la búsqueda con radio de 1 grado.
 
@@ -82,8 +82,8 @@ En el menú desplegable al lado de "Radius", elegir "degrees" *y luego* ingresar
    Leave the "Shape Type" as the default "Cone", and for "Coords or Obj Name" use the central coordinates of the DC2 simulation area "62, -37".
    Next to "Radius", from the drop down menu choose "degrees" *and then* enter "1" in the box and press !!!enter!!!{quizás traducir como <tecla "entrar">?} to set the search radius to 1 degree.
 
-1.5. En la tabla de la derecha, abajo de "Output Column Selection and Constraints" (Selección de Columnas de Salida y Restricciones), hacer clic en las casillas de la columna más a la izquierda para seleccionar "coord_ra", "coord_dec", "detect_isPrimary", "g" "r" e "i_calibFlux", y "g" "r" e "i_extendedness". Se pueden buscar los nombres de columnas. Para evitar recorrer una larga lista de columnas,
-ingresar una palabra clave (e.g., "calibFlux") en el cuadro justo abajo de la columna "Name". Listará todos los nombres de columnas que contengan la palabra clave ingresada.
+1.5. En la tabla de la derecha, debajo de "Output Column Selection and Constraints" (Selección de Columnas de Salida y Restricciones), hacer clic en las casillas de la primera columna a la izquierda para seleccionar "coord_ra", "coord_dec", "detect_isPrimary", "g" "r" e "i_calibFlux", y "g" "r" e "i_extendedness". Se pueden buscar los nombres de columnas. Para evitar recorrer una larga lista de columnas,
+ingresar una palabra clave (e.g., "calibFlux") en el cuadro justo debajo de la columna "Name". Se listarán todos los nombres de columnas que contengan la palabra clave ingresada.
 Después de seleccionar las columnas que se necesiten (e.g., "g" "r" e "i_calibFlux"), borrar el cuadro de texto y presionar *enter* para continuar seleccionando otras columnas.
 Hacer clic en el símbolo de embudo en la parte superior de la columna de casillas de verificación para filtrar la vista de tabla y mostrar sólo las columnas seleccionadas.
 
@@ -93,7 +93,7 @@ Hacer clic en el símbolo de embudo en la parte superior de la columna de casill
    Click on the funnel symbol at the top of the checkbox column to filter the table view to show selected columns only.
 
 1.6. En la columna de restricciones "constraints", ingresar "=1" para "detect_isPrimary", ">360" para los flujos ("g" "r" e "i_calibFlux"), y "=0" para los parámetros de extensión (extendedness)
-Esto va a limitar los objetos obtenidos a aquellos sin hijos (i.e. producto de separación [deblending]), que son más brillantes que aproximadamente 25 magnitudes
+Esto va a limitar los objetos obtenidos a aquellos sin hijos (i.e. componentes resultantes de la separación [deblending]), que son más brillantes que aproximadamente 25 magnitudes
 en los filtros g, r e i, y que parecen ser puntuales (no extendidos, pero *no necesariamente estelares*) en esos tres filtros también.
 
 .. 1.6. In the "constraints" column, enter "=1" for the "detect_isPrimary", ">360" for the fluxes, and "=0" for the !!!extendedness!!! parameters.
@@ -105,7 +105,7 @@ en los filtros g, r e i, y que parecen ser puntuales (no extendidos, pero *no ne
 .. No estoy seguro de "point-like" lo traduzco como puntual
 
 En este punto las casillas que seleccionan los parámetros de "extendedness" y "detect_isPrimary" pueden ser desmarcadas ya que
-no es necesario para este tutorial recopilar los datos de estas columnas, solo se busca restringir la consulta basándose en sus valores.
+no es necesario para este tutorial recopilar los datos de estas columnas, sino que sólo se busca restringir la consulta basándose en sus valores.
 
 .. At this point the boxes selecting the "extendedness" and "detect_isPrimary" parameters can be unchecked, because
    it is not necessary for this tutorial to actually retrieve the data in those columns, only to constrain the query based on their values.
@@ -122,7 +122,7 @@ no es necesario para este tutorial recopilar los datos de estas columnas, solo s
 	:name: portal_tut01_step01
 	:alt: Una captura de pantalla que muestra cómo ingresar criterios de búsqueda en la Faceta Portal.
 		El portal es una forma conveniente de consultar la base de datos de Rubin a través de una interfaz gráfica de usuario sin necesidad de usar Python o *scripts* en la línea de comandos.
-		Cada fila representa una categoría separada que caracteriza los criterios de búsqueda de TAP a utilizar, incluyendo: el servicio TAP; el tipo de consulta;
+		Cada fila representa una categoría separada que caracteriza los criterios de búsqueda TAP a utilizar, incluyendo: el servicio TAP; el tipo de consulta;
 		la colección de tablas y la tabla específica a utilizar, así como las restricciones a emplear para la consulta. La búsqueda en el portal se puede realizar presionando el botón de búsqueda en la esquina inferior izquierda.
 	
 	La captura de pantalla anterior muestra las restricciones antes de hacer clic en "Search".
@@ -135,7 +135,7 @@ no es necesario para este tutorial recopilar los datos de estas columnas, solo s
 
    The above screenshot shows the constraints before clicking "Search".
 
-1.8. Hacer clic en "Search" en la parte más abajo a la izquierda para realizar la búsqueda
+1.8. Hacer clic en "Search" en la parte más abajo a la izquierda para realizar la búsqueda.
 
 .. 1.8. Clic "Search" at lower left.
 
@@ -143,12 +143,12 @@ no es necesario para este tutorial recopilar los datos de estas columnas, solo s
 .. _DP0-2-Portal-Beginner-ES-Step-2:
 
 Paso 2. Crear el diagrama color-magnitud
-==========================================
+========================================
 
 .. Step 2. Create the color-magnitude diagram
 .. ==========================================
 
-La disposición predeterminada "Tri-view" muestra un mapa de cobertura del cielo de la simulación DESC DC2 en la parte superior izquierda (debajo de "Coverage"), un gráfico activo (Active Chart) que muestra la distribución espacial de los objetos obtenidos
+La disposición predeterminada "Tri-view" muestra un mapa de cobertura del cielo de la simulación DESC DC2 en la parte superior izquierda (debajo de "Coverage"), un gráfico activo ("Active Chart") que muestra la distribución espacial de los objetos obtenidos
 en la parte superior derecha y una tabla con los resultados de la búsqueda en la parte inferior.
 
 .. The default "Tri-view" layout shows a sky !!!coverage map!!! from DESC DC2 simulation at upper left, an !!!active chart!!! showing the spatial distribution of returned
@@ -171,9 +171,9 @@ en la parte superior derecha y una tabla con los resultados de la búsqueda en l
 .. No estoy seguro cómo se traduce "sky coverage map"
 
 
-**Aviso:** Los objetos obtenidos no llenan el área de búsqueda (con radio de 1 grado) en el gráfico activo predeterminado de "coord_ra" versus "coord_dec".
-Esto se debe a que se aplicó un límite de filas de 10000 objetos, y los datos están divididos en archivos por coordenada celeste.
-La consulta accedió a estos archivos hasta encontrar 10000 objetos (es decir, la consulta no encuentra todos los objetos que cumplen con los parámetros de la consulta y luego elige 10000 objetos al azar para devolver).
+**Aviso:** Los objetos obtenidos *no* llenan el área de búsqueda (con radio de 1 grado) en el gráfico activo predeterminado de "coord_ra" versus "coord_dec".
+Esto se debe a que se aplicó un límite de filas de 10000 objetos, y los datos están divididos en archivos por coordenadas celestes.
+La consulta accedió a estos archivos hasta encontrar 10000 objetos (es decir, la consulta *no* encuentra *todos los objetos* que cumplen con los parámetros de la consulta y luego elige 10000 objetos al azar para devolver).
 
 .. **Notice:** The objects retrieved *do not* fill in the search area (a 1 degree radius) in the default !!!active chart!! of "coord_ra" versus "coord_dec".
     This is because a row limit of 10000 objects was applied, and the data is partitioned into files by !!!sky coordinate!!!.
@@ -186,7 +186,7 @@ La consulta accedió a estos archivos hasta encontrar 10000 objetos (es decir, l
 		En este caso, un círculo de radio seleccionado por el usuario centrado en la ascensión recta y declinación elegidas por el usuario.
 		El panel inferior muestra los objetos devueltos por la consulta de búsqueda en forma de tabla.
 	
-	La vista de resultados Results con "Bi-view Tables" seleccionado.
+	La vista de resultados (Results) con "Bi-view Tables" seleccionado.
 	
 
 .. alt: This screenshot of the portal after a search query is run.  The top image shows the density of selected sources within the search area.
@@ -198,14 +198,14 @@ La consulta accedió a estos archivos hasta encontrar 10000 objetos (es decir, l
 .. No estoy seguro del significado de la oración
 
 
-**Aviso:** Para graficar el color (magnitud r-i) versus la magnitud (g), los flujos (que están en unidades de nanojansky) se están convirtiendo a magnitudes AB en el siguiente paso. La página `AB Magnitudes Wikipedia <https://en.wikipedia.org/wiki/AB_magnitude>`_ ofrece un recurso conciso para quienes no tengan familiaridad con las magnitudes AB y los flujos en unidades de jansky.
+**Aviso:** Para graficar el color (magnitudes r-i) versus la magnitud (g), los flujos (que están en unidades de nanojansky) se convertirán a magnitudes AB en el siguiente paso. La página `Magnitud AB Wikipedia <https://es.wikipedia.org/wiki/Magnitud_AB>`_ ofrece un recurso conciso para quienes no estén familiarizados con las magnitudes AB y los flujos en unidades de jansky.
 
 .. **Notice:** In order to plot color (r-i magnitude) versus magnitude (g), the fluxes (which are in units of nanojansky) are being converted to AB magnitudes in the next step. The `AB Magnitudes Wikipedia <https://en.wikipedia.org/wiki/AB_magnitude>`_ page provides a concise resource for !!!users who are unfamiliar!!!{alternativa sin género} with AB magnitudes and fluxes in units of janskys.
 
-2.2. Hacer clic en el icono de configuración del gráfico activo (en "Active Chart" los dos engranajes, en la esquina superior derecha) para modificar la traza (opción "modify trace"), lo que significa cambiar los parámetros del gráfico.
+2.2. Hacer clic en el icono de configuración del gráfico activo (en "Active Chart", los dos engranajes en la esquina superior derecha) para modificar la traza (opción "modify trace"), lo que significa cambiar los parámetros del gráfico.
 Establecer "X" como "(-2.5 * log10(r_calibFlux)) - (-2.5 * log10(i_calibFlux))" e "Y" como "-2.5 * log10(g_calibFlux) + 31.4".
 Dejar las opciones en "Trace Options" como están y hacer clic en "Chart Options" para mostrar las opciones de gráfico.
-Para el título del gráfico, en "Chart title" ingresar "Color-Magnitude Diagram"; establecer "X Label" (la etiqueta del eje X) como "color (r-i)"; establecer "Y Label" (etiqueta del eje Y) como "magnitud (g)" y debajo en "Options" marcar la casilla correspondiente a "reverse".
+Para el título del gráfico, en "Chart title" ingresar "Color-Magnitude Diagram"; establecer "X Label" (la etiqueta del eje X) como "color (r-i)"; establecer "Y Label" (etiqueta del eje Y) como "magnitude (g)" y debajo en "Options" marcar la casilla correspondiente a "reverse".
 Establecer los valores "X Min/Max" en "-0.5" y "2.0", y los valores "Y Min/Max" en "16.5" y "25.5".
 
 .. 2.2. Click on the Active Chart settings icon (two gears, upper right) in order to "modify trace", which means to change the plot parameters.
@@ -217,9 +217,9 @@ Establecer los valores "X Min/Max" en "-0.5" y "2.0", y los valores "Y Min/Max" 
 
 .. figure:: /_static/portal_tut01_step02c.png
 	:name: portal_tut01_step02c
-	:alt: Una captura de pantalla de la Faceta Portal que muestra la interfaz que permite al usuario crear gráficos a partir de los datos devueltos por la consulta.
+	:alt: Una captura de pantalla de la Faceta Portal que muestra la interfaz que permite crear gráficos a partir de los datos devueltos por la consulta.
 		Crear gráficos de esta manera es una forma fácil y funcional de explorar los datos.
-		La interfaz permite: ingresar funciones de los datos devueltos para graficar, elegir un esquema de color, editar la segmentación, crear etiquetas y editar la escala de los ejes.
+		La interfaz permite: ingresar funciones de los datos devueltos para graficar, elegir un esquema de colores, editar la segmentación, crear etiquetas y editar la escala de los ejes.
         :width: 300
 	
 	Establecer los parámetros del gráfico
@@ -236,10 +236,10 @@ Establecer los valores "X Min/Max" en "-0.5" y "2.0", y los valores "Y Min/Max" 
 .. figure:: /_static/portal_tut01_step02d.png
 	:name: portal_tut01_step02d
 	:alt: Una captura de pantalla del gráfico creado a partir de los datos devueltos por la consulta utilizando la interfaz xy de la Faceta Portal.
-		El gráfico muestra un diagrama de color-magnitud, magnitud AB de la banda g vs. el color banda r menos la banda i, para los objetos devueltos por la consulta de búsqueda.
+		El gráfico muestra un diagrama color-magnitud de la magnitud AB en la banda g vs. el color de la banda r menos la banda i, para los objetos devueltos por la consulta.
 		Este ejemplo demuestra cómo explorar rápidamente los datos devueltos en la consulta de búsqueda.
 		El gráfico muestra una gran densidad de estrellas en colores r-i bajos, y segmentos discretos en colores r-i más rojizos debido a que los datos simulados se
-		basan en modelos estelares rojos discretos que se utilizaron como entrada en DP0.2. Se espera que los datos reales muestren en su lugar una distribución suave de colores.
+		basan en modelos estelares rojos discretos que se utilizaron como entrada en DP0.2. Se espera que los datos reales muestren, en cambio, una distribución suave de colores.
 	
 	El diagrama color-magnitud.
 
@@ -256,15 +256,16 @@ También es posible crear un histograma bidimensional, apropiado para conjuntos 
 .. **Notice:** The default plot style is a scatter plot, which is appropriate for our data set of a modest size (such as 10000 objects retrieved here).
    It is also possible to create a two-dimensional histogram, appropriate for large data sets (a "heat map") which we will make in Step 2.4.
 
-**Aviso:** Los datos simulados son visiblemente cuantizados en el gráfico anterior, y esto no ocurrirá con datos reales.
+**Aviso:** Los datos simulados son visiblemente irregulares en el gráfico anterior, y esto no ocurrirá con datos reales.
 Las secuencias discretas en colores rojos, (g-i) > 0.5, provienen del procedimiento discretizado utilizado para simular estrellas de baja masa en el conjunto de datos DP0.2.
 
 .. **Notice:** The simulated data is visibly quantized in the above plot, and this will not be the case with real data.
    The discrete sequences at red colors, (g-i) > 0.5, come from the discretized procedure used to simulate low-mass stars in the DP0.2 data set.
+.. Reemplacé "cuantizados" por "irregulares" porque la verdad es que no se me ocurre otra, y creo que el sentido de la oración va en ese tono. Sino, pondría "están discretizados" pero usamos la misma palabra dos veces en la siguiente línea.
 
-2.4. Hacer clic nuevamente en el icono de configuración del gráfico xy (los dos engranajes, en la esquina superior derecha), pero esta vez elegir "Add New Chart" para agregar un nuevo gráfico.
-Cambiar el tipo de gráfico en "Plot Type" a mapa de calor con la opción "Heatmap" y luego establecer "X" e "Y" en la misma ecuación que en el Paso 2.2.
-Utilizar las mismas opciones de gráfico en "Chart Options", pero elegir un nombre distinto para el título del gráfico en "Chart title", como "Heatmap Color-Magnitude Diagram".
+2.4. Hacer clic nuevamente en el icono de configuración del gráfico xy (los dos engranajes en la esquina superior derecha), pero esta vez elegir "Add New Chart" para agregar un nuevo gráfico.
+Cambiar el tipo de gráfico en "Plot Type" a mapa de calor con la opción "Heatmap" y luego establecer "X" e "Y" con las mismas ecuaciones que en el Paso 2.2.
+Utilizar las mismas opciones de gráfico en "Chart Options", pero elegir un nombre distinto para el título del gráfico en "Chart title", tal como "Heatmap Color-Magnitude Diagram".
 
 .. 2.4. Click on the !!!xy plot!!!{es la primera vez que llama así a este gráfico en el texto principal del tutorial, anteriormente era el Active Chart} settings icon (two gears, upper right) again, but this time choose "Add New Chart."
    Change the "Plot Type" to "Heatmap", and then set the "X" and "Y" to the same equation as in Step 2.2.
@@ -273,7 +274,7 @@ Utilizar las mismas opciones de gráfico en "Chart Options", pero elegir un nomb
 
 .. figure:: /_static/portal_tut01_step02e.png
 	:name: portal_tut01_step02e
-	:alt: Captura de pantalla de la ventana de diálogo donde se puede establecer los nuevos parámetros del gráfico para el mapa de calor.
+	:alt: Captura de pantalla de la ventana de diálogo donde se pueden establecer los nuevos parámetros del gráfico para el mapa de calor.
         :width: 300
 	
 	Arriba, establecimos los nuevos parámetros del gráfico mapa de calor.
@@ -288,17 +289,17 @@ Utilizar las mismas opciones de gráfico en "Chart Options", pero elegir un nomb
 
 .. figure:: /_static/portal_tut01_step02f.png
 	:name: portal_tut01_step02f
-	:alt: Diagramas de color-magnitud generados a partir del gráfico de dispersión y el mapa de calor creados anteriormente.
+	:alt: Diagramas color-magnitud generados a partir del gráfico de dispersión y el mapa de calor creados anteriormente.
 	
-	Los diagramas de color-magnitud, incluyendo el gráfico de dispersión previamente creado (izquierda) y el mapa de calor (derecha).
+	Los diagramas color-magnitud, incluyendo el gráfico de dispersión previamente creado (izquierda) y el mapa de calor (derecha).
 
-.. alt: Color magnitude diagrams generated from the previously mad scatter plot and heatmap.
+.. alt: Color magnitude diagrams generated from the previously made scatter plot and heatmap.
 ..
 .. The color-magnitude diagrams, including the previously made scatter plot (left) and the heatmap (right).
 
 2.6. Interactuar con el gráfico.
 Pasar el *mouse* sobre los puntos de datos en el mapa de cobertura en "Coverage Map" (se verá cómo cambian las coordenadas en la parte inferior del mapa) o en el gráfico activo "Active Chart" (se verá que los valores de x e y aparecen en una ventana emergente).
-Al seleccionar una fila en la tabla ésta aparecerá de un color diferente en el(los) gráfico(s), y viceversa: al seleccionar un punto en un gráfico, se resaltará en la tabla de abajo.
+Al seleccionar una fila en la tabla, ésta aparecerá de un color diferente en el(los) gráfico(s), y viceversa: al seleccionar un punto en un gráfico, se resaltará en la tabla de abajo.
 
 .. 2.6. Interact with the plot.
 .. Hover over the data points with a mouse either on the Coverage map (see the coordinates change in the bottom of the map{no veo que eso pase}) or the Active Chart (see the x and y values appear in a pop-up window).
@@ -335,7 +336,7 @@ El Portal cambiará a la vista de resultados (Results View) como en el Paso 2, a
    The Portal will transition to the !!!"Results View"!!! as in Step 2, above.
 
 **Aviso:** aunque se aplicó el mismo límite de 10000 filas tanto en el Paso 1.7 como en el Paso 3.2,
-las dos búsquedas no devolverán las mismas filas exactas.
+las dos búsquedas no devolverán las mismas filas exactamente.
 Las consultas que devuelven solo un subconjunto de todos los resultados posibles, en este caso, 10000 de todas las filas posibles,
 devolverán subconjuntos aleatorios.
 
@@ -426,7 +427,7 @@ la URL se puede pegar en una celda de código y los resultados de la consulta se
 	retrieved_job = retrieve_query('my_portal_url')
 	retrieved_results = retrieved_job.fetch_result().to_table().to_pandas()
 
-Esto resulta en tener en la notebook los mismos datos que obtuviste por primera vez a través de la Faceta Portal.
+De este modo, tendrá en la notebook los mismos datos que obtuvo por primera vez a través de la Faceta Portal.
 
 .. This results in having the same data in your notebook which you first obtained via the Portal Aspect.
 
