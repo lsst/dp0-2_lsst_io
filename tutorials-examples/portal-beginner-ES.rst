@@ -205,7 +205,7 @@ La consulta accedió a estos archivos hasta encontrar 10000 objetos (es decir, l
 2.2. Hacer clic en el icono de configuración del gráfico activo (en "Active Chart", los dos engranajes en la esquina superior derecha) para modificar la traza (opción "modify trace"), lo que significa cambiar los parámetros del gráfico.
 Establecer "X" como "(-2.5 * log10(r_calibFlux)) - (-2.5 * log10(i_calibFlux))" e "Y" como "-2.5 * log10(g_calibFlux) + 31.4".
 Dejar las opciones en "Trace Options" como están y hacer clic en "Chart Options" para mostrar las opciones de gráfico.
-Para el título del gráfico, en "Chart title" ingresar "Color-Magnitude Diagram"; establecer "X Label" (la etiqueta del eje X) como "color (r-i)"; establecer "Y Label" (etiqueta del eje Y) como "magnitude (g)" y debajo en "Options" marcar la casilla correspondiente a "reverse".
+Para el título del gráfico, en "Chart title" ingresar "Diagrama Color-Magnitud"; establecer "X Label" (la etiqueta del eje X) como "color (r-i)"; establecer "Y Label" (etiqueta del eje Y) como "magnitud (g)" y debajo en "Options" marcar la casilla correspondiente a "reverse".
 Establecer los valores "X Min/Max" en "-0.5" y "2.0", y los valores "Y Min/Max" en "16.5" y "25.5".
 
 .. 2.2. Click on the Active Chart settings icon (two gears, upper right) in order to "modify trace", which means to change the plot parameters.
@@ -265,7 +265,7 @@ Las secuencias discretas en colores rojos, (g-i) > 0.5, provienen del procedimie
 
 2.4. Hacer clic nuevamente en el icono de configuración del gráfico xy (los dos engranajes en la esquina superior derecha), pero esta vez elegir "Add New Chart" para agregar un nuevo gráfico.
 Cambiar el tipo de gráfico en "Plot Type" a mapa de calor con la opción "Heatmap" y luego establecer "X" e "Y" con las mismas ecuaciones que en el Paso 2.2.
-Utilizar las mismas opciones de gráfico en "Chart Options", pero elegir un nombre distinto para el título del gráfico en "Chart title", tal como "Heatmap Color-Magnitude Diagram".
+Utilizar las mismas opciones de gráfico en "Chart Options", pero elegir un nombre distinto para el título del gráfico en "Chart title", tal como "Diagrama Color-Magnitud - Mapa de Calor".
 
 .. 2.4. Click on the !!!xy plot!!!{es la primera vez que llama así a este gráfico en el texto principal del tutorial, anteriormente era el Active Chart} settings icon (two gears, upper right) again, but this time choose "Add New Chart."
    Change the "Plot Type" to "Heatmap", and then set the "X" and "Y" to the same equation as in Step 2.2.
@@ -283,7 +283,7 @@ Utilizar las mismas opciones de gráfico en "Chart Options", pero elegir un nomb
 ..
 .. Above, we set the new chart parameters for a heatmap plot.
 
-2.5. Hacer clic en "OK" y "Close", y observar el nuevo gráfico de color-magnitud. Para mayor exhaustividad, es posible que se prefiera actualizar el título del gráfico generado anteriormente a "Scatter Color-Magnitude Diagram" ya que aquel era un gráfico de dispersión.
+2.5. Hacer clic en "OK" y "Close", y observar el nuevo gráfico de color-magnitud. Para mayor exhaustividad, es posible que se prefiera actualizar el título del gráfico generado anteriormente a "Diagrama Color-Magnitud - Dispersión" ya que aquel era un gráfico de dispersión.
 
 .. 2.5. Click "OK" and !!!"Close"!!!{al clickear en OK ya se cierra}, and look at the new color-magnitude plot.  For completeness, you might wish to update the title of the plot you generated previously to "Scatter Color-Magnitude Diagram."
 
