@@ -256,12 +256,13 @@ También es posible crear un histograma bidimensional, apropiado para conjuntos 
 .. **Notice:** The default plot style is a scatter plot, which is appropriate for our data set of a modest size (such as 10000 objects retrieved here).
    It is also possible to create a two-dimensional histogram, appropriate for large data sets (a "heat map") which we will make in Step 2.4.
 
-**Aviso:** Los datos simulados son visiblemente irregulares en el gráfico anterior, y esto no ocurrirá con datos reales.
+**Aviso:** Los datos simulados están visiblemente estratificados en el gráfico anterior, y esto no ocurrirá con datos reales.
 Las secuencias discretas en colores rojos, (g-i) > 0.5, provienen del procedimiento discretizado utilizado para simular estrellas de baja masa en el conjunto de datos DP0.2.
 
 .. **Notice:** The simulated data is visibly quantized in the above plot, and this will not be the case with real data.
    The discrete sequences at red colors, (g-i) > 0.5, come from the discretized procedure used to simulate low-mass stars in the DP0.2 data set.
 .. Reemplacé "cuantizados" por "irregulares" porque la verdad es que no se me ocurre otra, y creo que el sentido de la oración va en ese tono. Sino, pondría "están discretizados" pero usamos la misma palabra dos veces en la siguiente línea.
+.. Probamos con la palabra "estratificados" para tratar de describir mejor lo que sucede con los valores que se agrupan fuertemente en valores puntuales sin que haya una transición entre ellos.
 
 2.4. Hacer clic nuevamente en el icono de configuración del gráfico xy (los dos engranajes en la esquina superior derecha), pero esta vez elegir "Add New Chart" para agregar un nuevo gráfico.
 Cambiar el tipo de gráfico en "Plot Type" a mapa de calor con la opción "Heatmap" y luego establecer "X" e "Y" con las mismas ecuaciones que en el Paso 2.2.
@@ -427,7 +428,7 @@ la URL se puede pegar en una celda de código y los resultados de la consulta se
 	retrieved_job = retrieve_query('my_portal_url')
 	retrieved_results = retrieved_job.fetch_result().to_table().to_pandas()
 
-De este modo, tendrá en la notebook los mismos datos que obtuvo por primera vez a través de la Faceta Portal.
+De este modo, se tendrá en la notebook los mismos datos que se obtuvieron por primera vez a través de la Faceta Portal.
 
 .. This results in having the same data in your notebook which you first obtained via the Portal Aspect.
 
