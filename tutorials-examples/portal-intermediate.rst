@@ -56,9 +56,16 @@ Note that this offset is not discoverable in the following tutorial.
 1. Determine the DiaObject Id
 =============================
 
-1.1. Log in to the Portal Aspect.
+1.1. Log in to the Rubin Science Platform, and click on Portal.  This will take you to the next screen, where you will have several options.  
+For the purpose of this exploration, you will be using DP0.2 Catalogs, so click on the "DP0.2 Catalogs" tab on top of the screen.  
 
-1.2. Under “TAP Searches”, leave the “Use Image Search (ObsTAP)” box unchecked, leave the Schema as its default, leave “View” at its default “UI assisted”, and select the `dp02_dc2_catalogs.DiaObject <https://dm.lsst.org/sdm_schemas/browser/dp02.html#DiaObject>`_ table.
+.. screenshot of the RSP Portal start page
+
+1.2. Click on the box on the screen top where you select the tables - this will show all the available tables.  Select dp02_dc2_catalogs.DiaObject table.   
+
+1.3. On the left-hand side of the screen, you will have three choices, "Spatial," "Temporal," and "Object ID Seaech."  Click on "spatial."  
+
+Under “TAP Searches”, leave the “Use Image Search (ObsTAP)” box unchecked, leave the Schema as its default, leave “View” at its default “UI assisted”, and select the `dp02_dc2_catalogs.DiaObject <https://dm.lsst.org/sdm_schemas/browser/dp02.html#DiaObject>`_ table.
 
 1.3. Under “Enter Constraints”, select the box to the left of “Spatial”. Leave the “Shape Type” as the default “Cone”, and for “Coords or Obj Name” enter the coordinates ``67.4579, -44.0802``. Set the "Radius" to 2 arcsec. 
 
