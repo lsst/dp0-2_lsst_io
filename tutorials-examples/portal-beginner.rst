@@ -40,31 +40,47 @@ Beginner-level users looking for a more general overview of the Portal Aspect sh
 Step 1. Set the query constraints
 =================================
 
-1.1. Log in to the Portal Aspect.
+1.1. Log in to the Rubin Science Platform and click on Portal Aspect. On this Results tab temporary title screen, 
+'Rubin Science Platform Portal', notice the tabs at the top of the screen, click on DP0.2 Catalogs to 
+search the portal catalogs.
 
-1.2. Under "TAP Searches", leave the "Use Image Search (ObsTAP)" box unchecked, and leave "View" at its default "UI assisted".
+1.2.  On the top left under the tab menu, ensure that "Use Image Search (ObsTAP)" toggle button is off 
+(white circle to the left and grey, not white circle to the right and blue) under 
+'LSST DP0.2 DC2 Tables', and on the right side of the screen, leave "View" at 
+its default "UI assisted".
 
-1.3. Next to "LSST DP0.2 DC2 Tables", choose the Table Collection to be "dp02_dc2_catalogs" (left drop-down menu) and the Table to be "dp02_dc2_catalogs.Object" (right drop-down menu).
+1.3. Next to "LSST DP0.2 DC2 Tables", ensure the Table Collection says "dp02_dc2_catalogs" (left drop-down menu) and the 
+Table is  "dp02_dc2_catalogs.Object" (right drop-down menu).
 
 1.4. Under "Enter Constraints", select the box to the left of "Spatial".
-Leave the "Shape Type" as the default "Cone", and for "Coords or Obj Name" use the central coordinates of the DC2 simulation area "62, -37".
-Next to "Radius", from the drop down menu choose "degrees" *and then* enter "1" in the box and press enter to set the search radius to 1 degree.
+Leave the "Shape Type" as the default "Cone", and for "Coordinates or Object Name" enter the central coordinates of the 
+DC2 simulation area "62, -37".
+Next to "Radius", from the drop down menu choose "degrees" *and then* enter "1" in the box and press enter to 
+set the search radius to 1 degree.
 
-1.5. In the table at right, under "Output Column Selection and Constraints", click the box in the left-most column to select "coord_ra", "coord_dec", "detect_isPrimary", "g" "r" and "i_calibFlux", and "g" "r" and "i_extendedness". Column names are searchable. To avoid scrolling a long column list, 
-enter a keyword (e.g., "calibFlux") in the box right below the "Name" column. It will list all the column names containing the given keyword. 
-After selecting the needed columns (e.g., "g" "r" and "i_calibFlux"), clear the box and hit the return key to continue selecting other columns. 
+1.5. In the table at right, under "Output Column Selection and Constraints", click the box in the left-most column to 
+select "coord_ra", "coord_dec", "detect_isPrimary", "g" "r" and "i_calibFlux", and "g" "r" and "i_extendedness". 
+Column names are searchable. To avoid scrolling a long column list, 
+enter a keyword (e.g., "calibFlux") in the box right below the "Name" column. 
+It will list all the column names containing the given keyword. 
+After selecting the needed columns (e.g., "g" "r" and "i_calibFlux"), 
+clear the box and hit the return key to continue selecting other columns. 
 Click on the funnel symbol at the top of the checkbox column to filter the table view to show selected columns only.
 
-1.6. In the "constraints" column, enter "=1" for the "detect_isPrimary", ">360" for the fluxes, and "=0" for the extendedness parameters.
-This will limit the objects returned to those with no children (i.e., the products of deblending), which are brighter than about 25th magnitude
-in the g, r, and i filters, and which appear to be point-like (not extended, but *not necessarily stellar*) in those three filters as well.
+1.6. In the "constraints" column, enter "=1" for the "detect_isPrimary", ">360" for the fluxes, and "=0" 
+for the extendedness parameters.
+This will limit the objects returned to those with no children (i.e., the products of deblending), which are 
+brighter than about 25th magnitude
+in the g, r, and i filters, and which appear to be point-like (not extended, but *not necessarily stellar*) 
+in those three filters as well.
 
 At this point the boxes selecting the "extendedness" and "detect_isPrimary" parameters can be unchecked, because
-it is not necessary for this tutorial to actually retrieve the data in those columns, only to constrain the query based on their values.
+it is not necessary for this tutorial to actually retrieve the data in those columns, 
+only to constrain the query based on their values.
 
 **Notice:** At this point, with the query all set up, clicking "Populate and Edit ADQL" will switch the Query Type to "Edit ADQL" and populate the ADQL query box, as shown in Step 3 below.
 
-1.7. Set the "Row Limit" to 10000, to only retrieve 10000 objects for this demonstration.
+1.7. Set the "Row Limit" to 10000, to only retrieve 10,000 objects for this demonstration.
 
 .. figure:: /_static/portal_tut01_step01.png
 	:name: portal_tut01_step01
@@ -83,7 +99,8 @@ it is not necessary for this tutorial to actually retrieve the data in those col
 Step 2. Create the color-magnitude diagram
 ==========================================
 
-The default "Tri-view" layout shows a sky coverage map from DESC DC2 simulation at upper left, an active chart showing the spatial distribution of returned 
+The default "Tri-view" layout shows a sky coverage map from DESC DC2 simulation at upper left, 
+an active chart showing the spatial distribution of returned 
 objects at upper right, and a table of the search results along the bottom.
 
 .. figure:: /_static/portal_tut01_step02a.png
@@ -92,11 +109,12 @@ objects at upper right, and a table of the search results along the bottom.
 	
 	The default Results view with "Tri-view".
 
-2.1. In the upper right corner, click "Bi-view Tables" to show only either the active chart or the sky coverage map (switching between the two by clicking the tap "Active Chart"/"Coverage") in the right along with the table in the left of the screen.
+2.1. To change the layout displayed on the screen, click the hamburger icon at the top left, scroll down to 'Results Layout', and click the double arrow to get a selection of layouts for the result.  
+For this step in this tutorial, select 'Tables/Coverage Charts" option. Toggle between "Active Chart" and "Coverage".
 
 **Notice:** The objects retrieved *do not* fill in the search area (a 1 degree radius) in the default active chart of "coord_ra" versus "coord_dec".
-This is because a row limit of 10000 objects was applied, and the data is partitioned into files by sky coordinate.
-The query accessed these files until 10000 objects were found (i.e., the query *does not* find *all objects* that satisfy the query parameters and then choose 10000 random objects to return).
+This is because a row limit of 10,000 objects was applied, and the data is partitioned into files by sky coordinate.
+The query accessed these files until 10,000 objects were found (i.e., the query *does not* find *all objects* that satisfy the query parameters and then choose 10,000 random objects to return).
 
 .. figure:: /_static/portal_tut01_step02b.png
 	:name: portal_tut01_step02b
@@ -107,13 +125,17 @@ The query accessed these files until 10000 objects were found (i.e., the query *
 	The Results view with "Bi-view Tables" selected.
 	
 
-**Notice:** In order to plot color (r-i magnitude) versus magnitude (g), the fluxes (which are in units of nanojansky) are being converted to AB magnitudes in the next step. The `AB Magnitudes Wikipedia <https://en.wikipedia.org/wiki/AB_magnitude>`_ page provides a concise resource for users who are unfamiliar with AB magnitudes and fluxes in units of janskys.
+**Notice:** In order to plot color (r-i magnitude) versus magnitude (g), the fluxes (which are in units of nanojansky) 
+are being converted to AB magnitudes in the next step. The `AB Magnitudes Wikipedia <https://en.wikipedia.org/wiki/AB_magnitude>`_ 
+page provides a concise resource for users who are unfamiliar with AB magnitudes and fluxes in units of janskys.
 
-2.2. Click on the Active Chart settings icon (two gears, upper right) in order to "modify trace", which means to change the plot parameters.
+2.2. Click on the Active Chart settings icon (one gears, upper right, of the right hand image) in order to "modify trace", 
+which means to change the plot parameters.
 Set "X" to be "(-2.5 * log10(r_calibFlux)) - (-2.5 * log10(i_calibFlux))", and "Y" to be "-2.5 * log10(g_calibFlux) + 31.4".
 Leave the options on "Trace Options" as they are, and click on "Chart Options" to show the options.
-For "Chart title" enter "Color-Magnitude Diagram"; set "X Label" to "color (r-i)"; set "Y Label" to "magnitude (g)", and underneath check the "Options" box for "reverse".
-Set the "X Min/Max" values to "-0.5" and "2.0", and the "Y Min/Max" values to "16.5" and "25.5".
+For "Chart title" enter "Color-Magnitude Diagram"; set "X Label" to "color (r-i)"; set "Y Label" to "magnitude (g)", 
+and underneath check the "Options" box for "reverse".
+Input the "X Min/Max" values "-0.5" and "2.0", and the "Y Min/Max" values to "16.5" and "25.5" in the respective boxes. 
 
 .. figure:: /_static/portal_tut01_step02c.png
 	:name: portal_tut01_step02c
@@ -124,7 +146,7 @@ Set the "X Min/Max" values to "-0.5" and "2.0", and the "Y Min/Max" values to "1
 	
 	Set the plot parameters.
 
-2.3. Click "Apply" and then "Close" the pop-up window, and look at the color-magnitude plot.
+2.3. Click "Apply" and look at the color-magnitude plot.
 
 .. figure:: /_static/portal_tut01_step02d.png
 	:name: portal_tut01_step02d
@@ -136,14 +158,14 @@ Set the "X Min/Max" values to "-0.5" and "2.0", and the "Y Min/Max" values to "1
 	
 	The color-magnitude diagram.
 
-**Notice:** The default plot style is a scatter plot, which is appropriate for our data set of a modest size (such as 10000 objects retrieved here).  
+**Notice:** The default plot style is a scatter plot, which is appropriate for our data set of a modest size (such as 10,000 objects retrieved here).  
 It is also possible to create a two-dimensional histogram, appropriate for large data sets (a "heat map") which we will make in Step 2.4.  
 
 **Notice:** The simulated data is visibly quantized in the above plot, and this will not be the case with real data.
 The discrete sequences at red colors, (g-i) > 0.5, come from the discretized procedure used to simulate low-mass stars in the DP0.2 data set.
 
-2.4. Click on the xy plot settings icon (two gears, upper right) again, but this time choose "Add New Chart."  
-Change the "Plot Type" to "Heatmap", and then set the "X" and "Y" to the same equation as in Step 2.2.
+2.4. Click on the plus symbol in the upper left corner of the Color-Magnitude Diagram to "Add New Chart."  
+Change the "Plot Type" from "Scatter" to "Heatmap", and then set the "X" and "Y" to the same equation as in Step 2.2.
 Use the same "Chart Options" except give it a different "Chart title", such as "Heatmap Color-Magnitude Diagram."  
 
 .. figure:: /_static/portal_tut01_step02e.png
@@ -153,7 +175,7 @@ Use the same "Chart Options" except give it a different "Chart title", such as "
 	
 	Above, we set the new chart parameters for a heatmap plot.
 
-2.5. Click "OK" and "Close", and look at the new color-magnitude plot.  For completeness, you might wish to update the title of the plot you generated previously to "Scatter Color-Magnitude Diagram."  
+2.5. Click "Apply" and look at the new color-magnitude plot. Resize the "Active Charts" area to expand the plots and minimize the "Coverage" window.  For completeness, you might wish to update the title of the plot you generated previously to "Scatter Color-Magnitude Diagram."  
 
 .. figure:: /_static/portal_tut01_step02f.png
 	:name: portal_tut01_step02f
@@ -163,7 +185,7 @@ Use the same "Chart Options" except give it a different "Chart title", such as "
 
 2.6. Interact with the plot.
 Hover over the data points with a mouse either on the Coverage map (see the coordinates change in the bottom of the map) or the Active Chart (see the x and y values appear in a pop-up window). 
-Select a row in the table and it appears as a different color in the plot(s), and vice-versa: select a point in a plot and it is highlighted in the table below.
+To select a row in the table, go back to the hamburger icon and select the Coverage/Charts/Table option from the Results Layout, from here click on a row and it appears as a different color in the plot(s), and vice-versa: select a point in a plot and it is highlighted in the table below.
 
 
 .. _DP0-2-Portal-Beginner-Step-3:
@@ -171,7 +193,7 @@ Select a row in the table and it appears as a different color in the plot(s), an
 Step 3. Do the same query with ADQL
 ===================================
 
-3.1. Clear the search results and return to the main Portal interface.
+3.1. Click on the DP0.2 Catalogs tab to return to the Portal screen.
 In the upper right, select "Edit ADQL" for "View", and enter the following in the box under "ADQL Query".
 
 .. code-block:: SQL
@@ -185,7 +207,7 @@ In the upper right, select "Edit ADQL" for "View", and enter the following in th
    AND r_calibFlux >360 AND r_extendedness =0
 
 3.2. At the bottom of that page, set the "Row Limit" to 10000 and then click "Search" at lower left.
-The Portal will transition to the "Results View" as in Step 2, above.
+The Portal will transition to the "Results Tab" as in Step 2, above.
 
 **Notice:** although the same "Row Limit" of 10000 was applied both in Step 1.7 and Step 3.2,
 the two searches will not return the exact same rows.
