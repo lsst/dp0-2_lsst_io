@@ -65,11 +65,11 @@ screenshot of the RSP Portal start page (portal_tut02_step01a.png)
 
 1.3. On the left-hand side of the screen, under "Enter Constraints" you will have three choices, "Spatial," "Temporal," and "Object ID Seaech."  Click on "spatial."  
 
-1.3. Under “Enter Constraints”, select the box to the left of “Spatial”. Leave the “Shape Type” as the default “Cone shape”, and for “Coordinates or Object Name” enter the coordinates ``67.4579, -44.0802``. Set the "Radius" to 2 arcsec. 
+1.4. Under “Enter Constraints”, select the box to the left of “Spatial”. Leave the “Shape Type” as the default “Cone shape”, and for “Coordinates or Object Name” enter the coordinates ``67.4579, -44.0802``. Set the "Radius" to 2 arcsec. 
 
-1.4. In the table at right, select columns ra, decl, and diaObjectId to be returned.
+1.5. In the table at right, select columns ra, decl, and diaObjectId to be returned.
 
-creenshot of the RSP Portal start page (portal_tut02_step01b.png)
+screenshot of the RSP Portal start page (portal_tut02_step01b.png)
 .. figure:: /_static/portal_tut02_step01.png
 ..  :name: portal_tut02_step01
 ..  :alt: Screenshot of RSP portal interface DC2 difference image analysis object catalog query. 
@@ -77,7 +77,7 @@ creenshot of the RSP Portal start page (portal_tut02_step01b.png)
 
     Initial query to obtain the DiaObjectId.
 
-1.5. Click "Search" and view the results: there is only one DiaObject within 2 arcsec, with coordinates ``67.4579634, -44.080243`` and DiaObjectId "1252220598734556212".
+1.6. Click "Search" and view the results at a table on the bottom of the screen: there is only one DiaObject within 2 arcsec, with coordinates ``67.4579634, -44.080243`` and DiaObjectId "1252220598734556212".
 This is definitely the SNIa of interest to the user.
 
 
@@ -86,7 +86,7 @@ This is definitely the SNIa of interest to the user.
 2. Query the DiaSource table
 ============================
 
-2.1. Clear the previous search and return to the main Portal interface (use the "RSP TAP Search" button at upper left).
+2.1. Clear the previous search and return to the main Portal interface (use the "DP0.2 Catalogs" tab on top of your screen).
 
 2.2. Select "View" as "Edit ADQL", enter the following ADQL query.
 This query will retrieve all of the DiaSource table entries (i.e., all of the individual measurements on the difference images) for this DiaObject.
@@ -113,8 +113,11 @@ This query also uses the ccdVisitId to join to the CcdVisit table and obtain the
 3. Make the three plots
 =======================
 
-3.1. If the Results view is showing three panels including a sky image at upper left, switch to the "Bi-view Tables" view using the buttons at upper right.
-Use the settings icon (two gears at upper right) to open the plot parameters pop-up window, match those shown below, then click "Apply" and "Close".
+3.1. The Results view will show three panels including a sky image at upper left, a scatter plot of decl vs. ra on the right, and the table listing the pointings on the bottom.  
+..Switch to the "Bi-view Tables" view using the buttons at upper right.
+Use the settings icon (two gears at upper right) to open the plot parameters pop-up window, match those shown below, then click "Apply" and "Close".  
+
+screenshot of the first plot parameters popup (portal_tut02_step03a.png)
 
 .. figure:: /_static/portal_tut02_step03a.png
     :width: 300
@@ -125,9 +128,11 @@ Use the settings icon (two gears at upper right) to open the plot parameters pop
 
 3.2. View the i-band lightcurve for this SNIa.
 
+screenshot of the first plot parameters popup (portal_tut02_step03b.png)
+
 .. figure:: /_static/portal_tut02_step03b.png
-    :name: portal_tut02_step03b
-    :alt: Image of the i-band lightcurve for the supernova being investigated.
+..    :name: portal_tut02_step03b
+..    :alt: Image of the i-band lightcurve for the supernova being investigated.
 
     The i-band lightcurve for the SNIa of interest.
 
