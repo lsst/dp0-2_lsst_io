@@ -136,7 +136,7 @@ screenshot of the first plot parameters popup (portal_tut02_step03b.png)
 
     The i-band lightcurve for the SNIa of interest.
 
-3.3. To add a plot of seeing versus time: use the settings icon, choose "Add New Chart" and match the parameters shown below, then click "OK".
+3.3. To add a plot of seeing versus time: click on the "+" sign,  and match the parameters shown below, then click "OK".
 
 .. figure:: /_static/portal_tut02_step03c.png
     :width: 300
