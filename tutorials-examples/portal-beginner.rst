@@ -40,25 +40,27 @@ Beginner-level users looking for a more general overview of the Portal Aspect sh
 Step 1. Set the query constraints
 =================================
 
-1.1. Log in to the Rubin Science Platform and click on Portal Aspect. On this Results tab temporary title screen, 
+1.1. Log in to the Rubin Science Platform and click on Portal Aspect. 
+
+1.2 On this Results tab temporary title screen, 
 'Rubin Science Platform Portal', notice the tabs at the top of the screen, click on DP0.2 Catalogs to 
 search the portal catalogs.
 
-1.2.  On the top left under the tab menu, ensure that "Use Image Search (ObsTAP)" toggle button is off 
+1.3.  On the top left under the tab menu, ensure that "Use Image Search (ObsTAP)" toggle button is off 
 (white circle to the left and grey, not white circle to the right and blue) under 
 'LSST DP0.2 DC2 Tables', and on the right side of the screen, leave "View" at 
 its default "UI assisted".
 
-1.3. Next to "LSST DP0.2 DC2 Tables", ensure the Table Collection says "dp02_dc2_catalogs" (left drop-down menu) and the 
+1.4. Next to "LSST DP0.2 DC2 Tables", ensure the Table Collection says "dp02_dc2_catalogs" (left drop-down menu) and the 
 Table is  "dp02_dc2_catalogs.Object" (right drop-down menu).
 
-1.4. Under "Enter Constraints", select the box to the left of "Spatial".
+1.5. Under "Enter Constraints", select the box to the left of "Spatial".
 Leave the "Shape Type" as the default "Cone", and for "Coordinates or Object Name" enter the central coordinates of the 
 DC2 simulation area "62, -37".
 Next to "Radius", from the drop down menu choose "degrees" *and then* enter "1" in the box and press enter to 
 set the search radius to 1 degree.
 
-1.5. In the table at right, under "Output Column Selection and Constraints", click the box in the left-most column to 
+1.6. In the table at right, under "Output Column Selection and Constraints", click the box in the left-most column to 
 select "coord_ra", "coord_dec", "detect_isPrimary", "g" "r" and "i_calibFlux", and "g" "r" and "i_extendedness". 
 Column names are searchable. To avoid scrolling a long column list, 
 enter a keyword (e.g., "calibFlux") in the box right below the "Name" column. 
@@ -67,7 +69,7 @@ After selecting the needed columns (e.g., "g" "r" and "i_calibFlux"),
 clear the box and hit the return key to continue selecting other columns. 
 Click on the funnel symbol at the top of the checkbox column to filter the table view to show selected columns only.
 
-1.6. In the "constraints" column, enter "=1" for the "detect_isPrimary", ">360" for the fluxes, and "=0" 
+1.7. In the "constraints" column, enter "=1" for the "detect_isPrimary", ">360" for the fluxes, and "=0" 
 for the extendedness parameters.
 This will limit the objects returned to those with no children (i.e., the products of deblending), which are 
 brighter than about 25th magnitude
@@ -80,7 +82,7 @@ only to constrain the query based on their values.
 
 **Notice:** At this point, with the query all set up, clicking "Populate and Edit ADQL" will switch the Query Type to "Edit ADQL" and populate the ADQL query box, as shown in Step 3 below.
 
-1.7. Set the "Row Limit" to 10000, to only retrieve 10,000 objects for this demonstration.
+1.8. Set the "Row Limit" to 10000, to only retrieve 10,000 objects for this demonstration.
 
 .. figure:: /_static/portal_tut01_step01.png
 	:name: portal_tut01_step01
@@ -91,7 +93,7 @@ only to constrain the query based on their values.
 	
 	The above screenshot shows the constraints before clicking "Search".
 	
-1.8. Click "Search" at lower left.
+1.9. Click "Search" at lower left.
 
 
 .. _DP0-2-Portal-Beginner-Step-2:
