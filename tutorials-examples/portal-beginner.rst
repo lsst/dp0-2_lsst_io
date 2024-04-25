@@ -63,11 +63,11 @@ search DP02 catalogs using the Portal Aspect.
 (white circle to the left and grey, not white circle to the right and blue), and on the right side of the screen, leave "View" at 
 its default "UI assisted".
 
-.. figure:: /_static/portal_tut01_step01_02.png
-	:name: portal_tut01_step01_02
-	:alt: Click on the DP0.2 Catalog tab to take you to a portal catalog search. 
+.. figure:: /_static/portal_tut01_step01_03.png
+	:name: portal_tut01_step01_03
+	:alt: Check settings before setting up query. 
 	
-	Location of tab for catalog search.
+	Check settings.
 
 1.4. Next to "LSST DP0.2 DC2 Tables", ensure the Table Collection says "dp02_dc2_catalogs" (left drop-down menu) and the 
 Table is  "dp02_dc2_catalogs.Object" (right drop-down menu).
