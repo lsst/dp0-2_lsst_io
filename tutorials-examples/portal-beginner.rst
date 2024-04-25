@@ -108,8 +108,8 @@ only to constrain the query based on their values.
 
 1.8. Set the "Row Limit" to 10000, to only retrieve 10,000 objects for this demonstration.
 
-.. figure:: /_static/portal_tut01_step01_08.png
-	:name: portal_tut01_step01_08
+.. figure:: /_static/portal_tut01_step01_07.png
+	:name: portal_tut01_step01_07
 	:alt: A screenshot of how to input search criteria in the portal aspect.  
 		The portal is a convenient way to query the Rubin database through a graphical user interface without any python or command line scripting. 
 		Each row is a separate category characterizing the tap search criteria to be used, including: the tap service; the query type; 
