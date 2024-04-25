@@ -29,10 +29,10 @@
 **Nivel de aprendizaje:** principiante
 
 **Introducción:**
-Este tutorial utiliza la interfaz Consulta de Tabla Única (Single-Table Query) para buscar estrellas brillantes en una región pequeña del cielo
+este tutorial utiliza la interfaz Consulta de Tabla Única (Single-Table Query) para buscar estrellas brillantes en una región pequeña del cielo
 y luego utiliza la interfaz de Resultados (Results) para crear un diagrama color-magnitud.
 Este es el mismo ejemplo usado para ilustrar el servicio de Protocolo de Acceso de Tablas (Table Access Protocol - TAP) en el primer tutorial de :ref:`DP0-2-Tutorials-Notebooks-ES`.
-Principiantes que busquen una visión más general de la Faceta Portal pueden consultar :doc:`/data-access-analysis-tools/portal-intro`.
+Quienes busquen una visión más general de la Faceta Portal pueden consultar :doc:`/data-access-analysis-tools/portal-intro`.
 
 
 .. _DP0-2-Portal-Beginner-ES-Step-1:
@@ -55,7 +55,7 @@ ingresar una palabra clave (e.g., "calibFlux") en el cuadro justo debajo de la c
 Después de seleccionar las columnas que se necesiten (e.g., "g" "r" e "i_calibFlux"), borrar el cuadro de texto y presionar *enter* para continuar seleccionando otras columnas.
 Hacer clic en el símbolo de embudo en la parte superior de la columna de casillas de verificación para filtrar la vista de tabla y mostrar sólo las columnas seleccionadas.
 
-1.6. En la columna de restricciones "constraints", ingresar "=1" para "detect_isPrimary", ">360" para los flujos ("g" "r" e "i_calibFlux"), y "=0" para los parámetros de extensión ("extendedness")
+1.6. En la columna de restricciones "constraints", ingresar "=1" para "detect_isPrimary", ">360" para los flujos ("g" "r" e "i_calibFlux"), y "=0" para los parámetros de extensión ("extendedness").
 Esto va a limitar los objetos obtenidos a aquellos sin hijos (i.e. componentes resultantes de la separación [deblending]), que son más brillantes que aproximadamente 25 magnitudes
 en los filtros g, r e i, y que parecen ser puntuales (no extendidos, pero *no necesariamente estelares*) en esos tres filtros también.
 
@@ -64,7 +64,7 @@ no es necesario para este tutorial recopilar los datos de estas columnas, sino q
 
 **Aviso:** En este punto, con la consulta configurada en su totalidad, haciendo clic en "Populate and Edit ADQL" (rellenar y editar ADQL) se cambiará el Tipo de Consulta a "Edit ADQL" y se llenará el cuadro "ADQL Query" con la consulta, como se muestra en el Paso 3 más abajo.
 
-1.7. Establecer el límite de filas en "Row Limit" a 10000, para solo obtener 10000 objetos para esta demostración.
+1.7. Establecer el límite de filas en "Row Limit" a 10000, de manera tal de sólo obtener 10000 objetos para esta demostración.
 
 .. figure:: /_static/portal_tut01_step01.png
 	:name: portal_tut01_step01
@@ -92,10 +92,10 @@ en la parte superior derecha y una tabla con los resultados de la búsqueda en l
 	
 	La vista predeterminada de resultados con "Tri-view".
 
-2.1. En la esquina superior derecha, hacer clic en "Bi-view Tables"  para mostrar solo el gráfico interactivo o solo el mapa de cobertura del cielo (alternando entre los dos haciendo clic en la pestaña "Active Chart"/"Coverage") en la parte derecha junto con la tabla en la parte izquierda de la pantalla.
+2.1. En la esquina superior derecha, hacer clic en "Bi-view Tables"  para mostrar sólo el gráfico interactivo o sólo el mapa de cobertura del cielo (alternando entre los dos haciendo clic en la pestaña "Active Chart"/"Coverage") en la parte derecha junto con la tabla en la parte izquierda de la pantalla.
 
 **Aviso:** Los objetos obtenidos *no* llenan el área de búsqueda (con radio de 1 grado) en el gráfico interactivo predeterminado de "coord_ra" versus "coord_dec".
-Esto se debe a que se aplicó un límite de filas de 10000 objetos, y los datos están divididos en archivos por coordenadas celestes.
+Esto se debe a que se aplicó un límite de filas de 10000 objetos y los datos están divididos en archivos por coordenadas celestes.
 La consulta accedió a estos archivos hasta encontrar 10000 objetos (es decir, la consulta *no* encuentra *todos los objetos* que cumplen con los parámetros de la consulta y luego elige 10000 objetos al azar para devolver).
 
 .. figure:: /_static/portal_tut01_step02b.png
@@ -108,7 +108,7 @@ La consulta accedió a estos archivos hasta encontrar 10000 objetos (es decir, l
 
 **Aviso:** Para graficar el color (magnitudes r-i) versus la magnitud (g), los flujos (que están en unidades de nanojansky) se convertirán a magnitudes AB en el siguiente paso. La página `Magnitud AB Wikipedia <https://es.wikipedia.org/wiki/Magnitud_AB>`_ ofrece un recurso conciso para quienes no estén familiarizados con las magnitudes AB y los flujos en unidades de jansky.
 
-2.2. Hacer clic en el icono de configuración del gráfico interactivo (en "Active Chart", los dos engranajes en la esquina superior derecha) para modificar la traza (opción "modify trace"), lo que significa cambiar los parámetros del gráfico.
+2.2. Hacer clic en el ícono de configuración del gráfico interactivo (en "Active Chart", los dos engranajes en la esquina superior derecha) para modificar la traza (opción "modify trace"), lo que significa cambiar los parámetros del gráfico.
 Establecer "X" como "(-2.5 * log10(r_calibFlux)) - (-2.5 * log10(i_calibFlux))" e "Y" como "-2.5 * log10(g_calibFlux) + 31.4".
 Dejar las opciones en "Trace Options" como están y hacer clic en "Chart Options" para mostrar las opciones de gráfico.
 Para el título del gráfico, en "Chart title" ingresar "Diagrama Color-Magnitud"; establecer "X Label" (la etiqueta del eje X) como "color (r-i)"; establecer "Y Label" (etiqueta del eje Y) como "magnitud (g)" y debajo en "Options" marcar la casilla correspondiente a "reverse".
@@ -141,7 +141,7 @@ También es posible crear un histograma bidimensional, apropiado para conjuntos 
 **Aviso:** Los datos simulados están visiblemente estratificados en el gráfico anterior, y esto no ocurrirá con datos reales.
 Las secuencias discretas en colores rojos, (g-i) > 0.5, provienen del procedimiento discretizado utilizado para simular estrellas de baja masa en el conjunto de datos DP0.2.
 
-2.4. Hacer clic nuevamente en el icono de configuración del gráfico xy (los dos engranajes en la esquina superior derecha), pero esta vez elegir "Add New Chart" para agregar un nuevo gráfico.
+2.4. Hacer clic nuevamente en el ícono de configuración del gráfico xy (los dos engranajes en la esquina superior derecha), pero esta vez elegir "Add New Chart" para agregar un nuevo gráfico.
 Cambiar el tipo de gráfico en "Plot Type" a mapa de calor con la opción "Heatmap" y luego establecer "X" e "Y" con las mismas ecuaciones que en el Paso 2.2.
 Utilizar las mismas opciones de gráfico en "Chart Options", pero elegir un nombre distinto para el título del gráfico en "Chart title", tal como "Diagrama Color-Magnitud - Mapa de Calor".
 
@@ -215,7 +215,7 @@ Esta URL puede ser utilizada desde la Faceta Notebook; esta es una característi
 consultas que son grandes, complejas o que tardan mucho en ejecutarse (por ejemplo, uniones de múltiples tablas),
 o para compartir los resultados de la consulta con colegas.
 
-Como ejemplo, la imagen a continuación muestra la vista de resultados (Results View) para una pequeña consulta utilizando solo un radio de 0.05 grados.
+Como ejemplo, la imagen a continuación muestra la vista de resultados (Results View) para una pequeña consulta utilizando sólo un radio de 0.05 grados.
 
 .. figure:: /_static/portal_tut01_step04b.png
 	:name: portal_tut01_step04b
@@ -228,7 +228,7 @@ Hacer clic en el botón "info" (letra "i" en un círculo) y aparecerá una venta
 	:alt: Ventana emergente cuando se hace clic en el botón de información.
 
 Al lado de "UWS JOB URL" en la ventana emergente se encuentra la URL de los resultados de la consulta.
-Hacer clic en el icono de portapapeles para copiar la URL en tu portapapeles.
+Hacer clic en el ícono de portapapeles para copiar la URL en tu portapapeles.
 
 Como se mostró en la Sección 5.4 del segundo tutorial de la Faceta Notebook, "02 Consultas de catálogo con TAP",
 la URL se puede pegar en una celda de código y los resultados de la consulta se pueden obtener utilizando los siguientes comandos:
@@ -240,5 +240,5 @@ la URL se puede pegar en una celda de código y los resultados de la consulta se
 
 De este modo, se tendrá en el notebook los mismos datos que se obtuvieron por primera vez a través de la Faceta Portal.
 
-Se aclara que las URL no serán accesibles indefinidamente, sino que están pensadas para acceso y análisis inmediato.
+Se aclara que las URLs no serán accesibles indefinidamente, sino que están pensadas para acceso y análisis inmediato.
 Para preservar y recrear consultas en una fecha posterior, se recomienda guardar la consulta en formato ADQL, como se describe en el paso 1.6.
