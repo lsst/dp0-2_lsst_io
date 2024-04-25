@@ -34,8 +34,8 @@
 
 **Introducción:**
 Este tutorial es una introducción a las funcionalidades de la terminal y línea de comandos de la Plataforma Científica de Rubin (Rubin Science Plataform - RSP).
-Es paralelo al tutorial de Jupyter Notebook "Introducción a DP02" y muestra cómo utilizar el servicio TAP para consultar y recuperar datos del catálogo;
-usar matplotlib para graficar los datos de un catálogo; el paquete Butler de LSST para consultar y recuperar datos de imágenes; y el paquete de imágenes afwDisplay de LSST.
+Es paralelo al tutorial de Jupyter Notebook "Introducción a DP02" y muestra cómo utilizar el servicio TAP para consultar y obtener datos del catálogo;
+usar matplotlib para graficar los datos de un catálogo; el paquete Butler de LSST para consultar y obtener datos de imágenes; y el paquete de imágenes afwDisplay de LSST.
 
 Este tutorial usa el conjunto de datos Vista Previa de Datos 0.2 (DP0.2 - Data Preview 0.2).
 Este conjunto de datos utiliza un subconjunto de las imágenes simuladas del Desafío de Datos 2 de DESC (DC2 - DESC's Data Challenge 2), las cuales han sido reprocesadas por el Observatorio Rubin usando la versión 23 de las Pipelines Científicas del LSST (LSST Science Pipelines).
@@ -103,8 +103,8 @@ Este tutorial hace uso de numerosos paquetes que serán utilizados con frecuenci
 
 .. _DP0-2-Cmndline-Beginner-ES-Step-3:
 
-Paso 3. Recuperar datos usando TAP para 10 objetos
-==================================================
+Paso 3. Obtener datos usando TAP para 10 objetos
+================================================
 
 El protocolo de Acceso a Datos Tabulados TAP (Table Access Protocol) provee acceso estandarizado a los datos de los catálogos para exploración, búsqueda y recuperación.
 La `documentación completa para TAP <https://www.ivoa.net/documents/TAP/20190927/index.html>`_ es provista por la Alianza Internacional del Observatorio Virtual (IVOA - International Virtual Observatory Alliance).
@@ -137,7 +137,7 @@ Este ejemplo utiliza el Catálogo de Objetos DP0.2, que contiene fuentes detecta
                 "WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), " + \
                 "CIRCLE('ICRS', " + use_center_coords + ", 0.5)) = 1 "
 
-3.4. Recuperar y visualizar los resultados de la consulta para 10 objetos.
+3.4. Obtener y visualizar los resultados de la consulta para 10 objetos.
 
 .. code-block::
 
@@ -155,7 +155,7 @@ Para convertir nJy a magnitudes AB usar: |mab| = -2.5log(|fnJy|) + 31.4.
 .. |mab| replace:: m\ :sub:`AB`
 .. |fnJy| replace:: f\ :sub:`nJy`
 
-Agregar columnas de magnitudes después de recuperar columnas de flujo.
+Agregar columnas de magnitudes después de obtener columnas de flujo.
 
 .. code-block::
 
@@ -171,15 +171,15 @@ Visualizar la tabla de resultados incluyendo las magnitudes.
 
 .. _DP0-2-Cmndline-Beginner-ES-Step-4:
 
-Paso 4. Recuperar datos usando TAP para 10,000 objetos
-======================================================
+Paso 4. Obtener datos usando TAP para 10,000 objetos
+====================================================
 
 Para obtener las columnas correspondiente a flujos como magnitudes con una consulta ADQL, se puede hacer lo siguiente:
 scisql_nanojanskyToAbMag(g_calibFlux) as g_calibMag,
 y las columnas de errores de magnitudes se pueden obtener con:
 scisql_nanojanskyToAbMagSigma(g_calibFlux, g_calibFluxErr) as g_calibMagErr.
 
-4.1. Recuperar las magnitudes de las bandas g, r e i para 10000 objetos puntuales.
+4.1. Obtener las magnitudes de las bandas g, r e i para 10000 objetos puntuales.
 
 A la búsqueda en un cono realizada en la consulta, agregarle como restricciones que detect_isPrimary sea True (esto excluirá fuentes "hijas" producto de la separación - *deblending*), que el flujo calibrado sea mayor que 360 nJy (aproximadamente magnitud 25), y que los parámetros de extensión sean 0 (fuentes puntuales).
 
@@ -249,8 +249,8 @@ Hacer doble clic sobre el nombre de archivo para abrirlo y ver el gráfico.
 
 .. _DP0-2-Cmndline-Beginner-ES-Step-6:
 
-Paso 6. Recuperar los datos de imágenes usando Butler
-=====================================================
+Paso 6. Obtener los datos de imágenes usando Butler
+===================================================
 
 Los dos tipos de imágenes más comunes con los que van a interactuar quienes tengan acceso a DP0 son calexps y deepCoadds.
 
@@ -286,7 +286,7 @@ Butler - que en inglés significa mayordomo - (`documentación de butler <https:
     my_spherePoint = lsst.geom.SpherePoint(my_ra_deg*lsst.geom.degrees, my_dec_deg*lsst.geom.degrees)
     print(my_spherePoint)
 
-6.4. Recuperar el mapa del cielo de DC2 (skymap) (`documentación de skymap <https://pipelines.lsst.io/modules/lsst.skymap/index.html>`_) e identificar la región y parcela (tract y patch).
+6.4. Obtener el mapa del cielo de DC2 (skymap) (`documentación de skymap <https://pipelines.lsst.io/modules/lsst.skymap/index.html>`_) e identificar la región y parcela (tract y patch).
 
 .. code-block::
 
@@ -300,7 +300,7 @@ Butler - que en inglés significa mayordomo - (`documentación de butler <https:
     print('my_tract: ', my_tract)
     print('my_patch: ', my_patch)
 
-6.5. Utilizar Butler para recuperar la imagen deepCoadd en la banda i.
+6.5. Utilizar Butler para obtener la imagen deepCoadd en la banda i.
 
 .. code-block::
 
@@ -335,7 +335,7 @@ Hacer doble clic sobre el nombre de archivo para abrirlo y ver el gráfico.
 
 
 .. figure:: /_static/cl_my-deep-Coadd.jpg
-	:alt: Una captura de pantalla de una imagen astronómica de cuatro mil por cuatro mil píxeles que ha sido graficada en una Jupyter notebook.
+	:alt: Una captura de pantalla de una imagen astronómica de cuatro mil por cuatro mil píxeles que ha sido graficada en un Jupyter notebook.
 		Una gran concentración de puntos elongados se concentra en el cuadrante inferior izquierdo sugieriendo un cúmulo de galaxias.
 
 7.2. Visualizar la imagen usando Firefly (`documentación de Firefly <https://pipelines.lsst.io/modules/lsst.display.firefly/index.html>`_).

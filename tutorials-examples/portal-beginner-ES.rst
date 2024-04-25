@@ -208,7 +208,7 @@ A continuación se muestra la misma consulta que en el Paso 3.1 anterior:
 Para ejecutar la consulta en el Portal, hacer clic en el botón "Search".
 
 Para ejecutar la consulta en la Faceta Notebook, copiar y pegar el código ADQL en la celda de código de cualquier notebook que
-utilice el servicio TAP, como se muestra en la Sección 2.3 de la primera notebook del tutorial, "01 Introducción a DP0.2".
+utilice el servicio TAP, como se muestra en la Sección 2.3 del primer tutorial de la Faceta Notebook, "01 Introducción a DP0.2".
 
 4.2. También es posible obtener una URL para acceder directamente a los resultados de la consulta.
 Esta URL puede ser utilizada desde la Faceta Notebook; esta es una característica especialmente útil para
@@ -230,15 +230,15 @@ Hacer clic en el botón "info" (letra "i" en un círculo) y aparecerá una venta
 Al lado de "UWS JOB URL" en la ventana emergente se encuentra la URL de los resultados de la consulta.
 Hacer clic en el icono de portapapeles para copiar la URL en tu portapapeles.
 
-Como se mostró en la Sección 5.4 de la segunda notebook del tutorial, "02 Consultas de catálogo con TAP",
-la URL se puede pegar en una celda de código y los resultados de la consulta se pueden recuperar utilizando los siguientes comandos:
+Como se mostró en la Sección 5.4 del segundo tutorial de la Faceta Notebook, "02 Consultas de catálogo con TAP",
+la URL se puede pegar en una celda de código y los resultados de la consulta se pueden obtener utilizando los siguientes comandos:
 
 .. code-block:: SQL
 
 	retrieved_job = retrieve_query('my_portal_url')
 	retrieved_results = retrieved_job.fetch_result().to_table().to_pandas()
 
-De este modo, se tendrá en la notebook los mismos datos que se obtuvieron por primera vez a través de la Faceta Portal.
+De este modo, se tendrá en el notebook los mismos datos que se obtuvieron por primera vez a través de la Faceta Portal.
 
 Se aclara que las URL no serán accesibles indefinidamente, sino que están pensadas para acceso y análisis inmediato.
 Para preservar y recrear consultas en una fecha posterior, se recomienda guardar la consulta en formato ADQL, como se describe en el paso 1.6.
