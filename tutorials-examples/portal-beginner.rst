@@ -48,7 +48,7 @@ Step 1. Log in and set the query constraints
 	
 	Aspect choices for the Rubin Science Platform.
 
-1.2 On this Results tab, a temporary 'Rubin Science Platform Portal' graphic is show which will later be replaced with query results, 
+1.2 On this Results tab, a temporary 'Rubin Science Platform Portal' graphic is shown which will later be replaced with query results, 
 notice the tabs at the top of the screen, click on DP0.2 Catalogs to 
 search DP02 catalogs using the Portal Aspect.
 
@@ -71,6 +71,12 @@ its default "UI assisted".
 
 1.4. Next to "LSST DP0.2 DC2 Tables", ensure the Table Collection says "dp02_dc2_catalogs" (left drop-down menu) and the 
 Table is  "dp02_dc2_catalogs.Object" (right drop-down menu).
+
+.. figure:: /_static/portal_tut01_step01_03.png
+	:name: portal_tut01_step01_03
+	:alt: Check settings before setting up query. 
+	
+	Check settings.
 
 1.5. Under "Enter Constraints", select the box to the left of "Spatial".
 Leave the "Shape Type" as the default "Cone", and for "Coordinates or Object Name" enter the central coordinates of the 
