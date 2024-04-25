@@ -76,7 +76,7 @@ Table is  "dp02_dc2_catalogs.Object" (right drop-down menu).
 	:name: portal_tut01_step01_04
 	:alt: Check settings before setting up query. 
 	
-	Check colletion and table.
+	Check collection and table.
 
 1.5. Under "Enter Constraints", select the box to the left of "Spatial".
 Leave the "Shape Type" as the default "Cone", and for "Coordinates or Object Name" enter the central coordinates of the 
@@ -92,6 +92,12 @@ It will list all the column names containing the given keyword.
 After selecting the needed columns (e.g., "g" "r" and "i_calibFlux"), 
 clear the box and hit the return key to continue selecting other columns. 
 Click on the funnel symbol at the top of the checkbox column to filter the table view to show selected columns only.
+
+.. figure:: /_static/portal_tut01_step01_04.png
+	:name: portal_tut01_step01_04
+	:alt: Check settings before setting up query. 
+	
+	Check collection and table.
 
 1.7. In the "constraints" column, enter "=1" for the "detect_isPrimary", ">360" for the fluxes, and "=0" 
 for the extendedness parameters.
