@@ -42,9 +42,21 @@ Step 1. Set the query constraints
 
 1.1. Log in to the Rubin Science Platform and click on Portal Aspect. 
 
+.. figure:: /_static/portal_tut01_step01_01.png
+	:name: portal_tut01_step01_01
+	:alt: A screenshot of the Rubin Science Platform. 
+	
+	Aspect choices for the Rubin Science Platform.
+
 1.2 On this Results tab temporary title screen, 
 'Rubin Science Platform Portal', notice the tabs at the top of the screen, click on DP0.2 Catalogs to 
 search the portal catalogs.
+
+.. figure:: /_static/portal_tut01_step01_02.png
+	:name: portal_tut01_step01_02
+	:alt: Click on the DP0.2 Catalog tab to take you to a portal catalog search. 
+	
+	Location of tab for catalog search.
 
 1.3.  On the top left under the tab menu, ensure that "Use Image Search (ObsTAP)" toggle button is off 
 (white circle to the left and grey, not white circle to the right and blue) under 
