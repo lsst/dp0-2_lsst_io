@@ -28,12 +28,12 @@
 
 **Versión de las pipelines científicas de LSST:** Weekly 2023_35
 
-**Nivel de aprendizaje:** Principiante
+**Nivel de aprendizaje:** principiante
 
 **Tamaño del contenedor (Container size):** medium
 
 **Introducción:**
-Este tutorial es una introducción a las funcionalidades de la terminal y línea de comandos de la Plataforma Científica de Rubin (Rubin Science Plataform - RSP).
+este tutorial es una introducción a las funcionalidades de la terminal y línea de comandos de la Plataforma Científica de Rubin (Rubin Science Plataform - RSP).
 Es paralelo al tutorial de Jupyter Notebook "Introducción a DP02" y muestra cómo utilizar el servicio TAP para consultar y obtener datos del catálogo;
 usar matplotlib para graficar los datos de un catálogo; el paquete Butler de LSST para consultar y obtener datos de imágenes; y el paquete de imágenes afwDisplay de LSST.
 
@@ -106,12 +106,12 @@ Este tutorial hace uso de numerosos paquetes que serán utilizados con frecuenci
 Paso 3. Obtener datos usando TAP para 10 objetos
 ================================================
 
-El protocolo de Acceso a Datos Tabulados TAP (Table Access Protocol) provee acceso estandarizado a los datos de los catálogos para exploración, búsqueda y recuperación.
-La `documentación completa para TAP <https://www.ivoa.net/documents/TAP/20190927/index.html>`_ es provista por la Alianza Internacional del Observatorio Virtual (IVOA - International Virtual Observatory Alliance).
+El protocolo de Acceso a Datos Tabulados TAP (Table Access Protocol) provee acceso estandarizado a los datos de los catálogos para exploración, búsqueda y acceso.
+La `documentación completa de TAP <https://www.ivoa.net/documents/TAP/20190927/index.html>`_ es provista por la Alianza Internacional del Observatorio Virtual (IVOA - International Virtual Observatory Alliance).
 El servicio TAP utiliza un lenguaje de consultas similar a SQL (Structured Query Language - lenguaje de consulta estructurado) denominado ADQL (Astronomical Data Query Language - lenguaje de consulta de datos astronómicos).
-La `documentación para ADQL <https://www.ivoa.net/documents/latest/ADQL.html>`_ incluye más información sobre sintaxis y palabras clave.
+La `documentación de ADQL <https://www.ivoa.net/documents/latest/ADQL.html>`_ incluye más información sobre sintaxis y palabras clave.
 
-Aviso: No todas las funcionalidades de ADQL están soportadas por RSP para la Vista Previa de Datos 0 (DP0).
+Aviso: no todas las funcionalidades de ADQL están soportadas por RSP para la Vista Previa de Datos 0 (DP0).
 
 Este ejemplo utiliza el Catálogo de Objetos DP0.2, que contiene fuentes detectadas en las imágenes coagregadas (también llamadas imágenes apiladas, combinadas o deepCoadd).
 
@@ -174,14 +174,14 @@ Visualizar la tabla de resultados incluyendo las magnitudes.
 Paso 4. Obtener datos usando TAP para 10,000 objetos
 ====================================================
 
-Para obtener las columnas correspondiente a flujos como magnitudes con una consulta ADQL, se puede hacer lo siguiente:
+Para obtener las columnas correspondientes a flujos como magnitudes con una consulta ADQL, se puede hacer lo siguiente:
 scisql_nanojanskyToAbMag(g_calibFlux) as g_calibMag,
 y las columnas de errores de magnitudes se pueden obtener con:
 scisql_nanojanskyToAbMagSigma(g_calibFlux, g_calibFluxErr) as g_calibMagErr.
 
 4.1. Obtener las magnitudes de las bandas g, r e i para 10000 objetos puntuales.
 
-A la búsqueda en un cono realizada en la consulta, agregarle como restricciones que detect_isPrimary sea True (esto excluirá fuentes "hijas" producto de la separación - *deblending*), que el flujo calibrado sea mayor que 360 nJy (aproximadamente magnitud 25), y que los parámetros de extensión sean 0 (fuentes puntuales).
+A la búsqueda en un cono realizada en la consulta previa, agregarle como restricciones que detect_isPrimary sea True (esto excluirá fuentes "hijas" producto de la separación - *deblending*), que el flujo calibrado sea mayor que 360 nJy (aproximadamente magnitud 25), y que los parámetros de extensión sean 0 (fuentes puntuales).
 
 .. code-block::
 
@@ -221,7 +221,7 @@ Paso 5. Hacer un diagrama color-magnitud
     plt.plot(data['r_calibMag'].values - data['i_calibMag'].values,
          data['g_calibMag'].values, 'o', ms=2, alpha=0.2)
 
-5.2. Definir las etiquetas de los ejes y los límites.
+5.2. Definir las etiquetas y los límites de los ejes.
 
 .. code-block::
 
@@ -239,7 +239,7 @@ Paso 5. Hacer un diagrama color-magnitud
 
     plt.savefig('color-magnitude.pdf')
 
-Utilizar el navegador de archivos en el lado izquierdo de la Faceta Notebook para navegar hasta el archivo "color-magnitude.pdf"
+Utilizar el navegador de archivos en el lado izquierdo de la Faceta Notebook para navegar hasta el archivo "color-magnitude.pdf".
 Hacer doble clic sobre el nombre de archivo para abrirlo y ver el gráfico.
 
 .. figure:: /_static/cl_color-magnitude.jpg
@@ -254,17 +254,17 @@ Paso 6. Obtener los datos de imágenes usando Butler
 
 Los dos tipos de imágenes más comunes con los que van a interactuar quienes tengan acceso a DP0 son calexps y deepCoadds.
 
-calexp: Una única imagen en un único filtro.
+calexp: una única imagen en un único filtro.
 
-deepCoadd: Una combinación de imágenes individuales apiladas en profundidad o coagregadas.
+deepCoadd: una combinación de imágenes individuales apiladas en profundidad o coagregadas.
 
 Las Pipelines Científicas LSST (Science Pipelines) procesan y almacenan imágenes en regiones y parcelas. Para obtener y mostrar una imagen en una coordenada deseada, se debe especificar el tipo de imagen, región (tract) y parcela (patch).
 
-región (tract): Una porción del cielo dentro de la teselación del cielo completo (mapa del cielo) de LSST (LSST all-sky tessellation); dividido en parcelas.
+región (tract): una porción del cielo dentro de la teselación del cielo completo (mapa del cielo) de LSST (LSST all-sky tessellation); dividido en parcelas.
 
-parcela (patch): Una subregión cuadrilátera de una región, de un tamaño que puede almacenarse fácilmente en la memoria de una computadora de escritorio.
+parcela (patch): una subregión cuadrilátera de una región, de un tamaño que puede almacenarse fácilmente en la memoria de una computadora de escritorio.
 
-Butler - que en inglés significa mayordomo - (`documentación de butler <https://pipelines.lsst.io/modules/lsst.daf.butler/index.html>`_) es un paquete de software de las Pipelines Científicas de LSST para obtener datos de LSST sin necesidad de conocer su ubicación o formato. Además Butler también puede ser utilizado para explorar y descubrir qué datos existen. Otros tutoriales muestran la funcionalidad completa de Butler.
+Butler - que en inglés significa mayordomo - (`documentación de butler <https://pipelines.lsst.io/modules/lsst.daf.butler/index.html>`_) es un paquete de software de las Pipelines Científicas de LSST para obtener datos de LSST sin necesidad de conocer su ubicación o formato. Además, Butler también puede ser utilizado para explorar y descubrir qué datos existen. Otros tutoriales muestran la funcionalidad completa de Butler.
 
 6.1. Definir una configuración y colección de Butler.
 
@@ -279,7 +279,7 @@ Butler - que en inglés significa mayordomo - (`documentación de butler <https:
     my_ra_deg = 55.745834
     my_dec_deg = -32.269167
 
-6.3. Usar lsst.geom para definir un SpherePoint (punto de esfera) para las coordenadas del cúmulo (`documentación de lsst.geom <https://pipelines.lsst.io/modules/lsst.geom/index.html>`_).
+6.3. Usar lsst.geom para definir un SpherePoint (punto en la esfera) para las coordenadas del cúmulo (`documentación de lsst.geom <https://pipelines.lsst.io/modules/lsst.geom/index.html>`_).
 
 .. code-block::
 
@@ -346,7 +346,7 @@ Hacer doble clic sobre el nombre de archivo para abrirlo y ver el gráfico.
     afw_display = afwDisplay.Display(frame=1)
     afw_display.mtv(my_deepCoadd)
 
-Opcional: Para una demostración de la interfaz interactiva de Firefly, revisar "03b Visualización de imágenes con Firefly" del :ref:`DP0-2-Tutorials-Notebooks`.
+Opcional: para una demostración de la interfaz interactiva de Firefly, revisar "03b Visualización de imágenes con Firefly" del :ref:`DP0-2-Tutorials-Notebooks`.
 
 7.3. Al terminar, salir de python para regresar a la línea de comando normal.
 
