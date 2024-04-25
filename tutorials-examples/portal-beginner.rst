@@ -72,11 +72,11 @@ its default "UI assisted".
 1.4. Next to "LSST DP0.2 DC2 Tables", ensure the Table Collection says "dp02_dc2_catalogs" (left drop-down menu) and the 
 Table is  "dp02_dc2_catalogs.Object" (right drop-down menu).
 
-.. figure:: /_static/portal_tut01_step01_03.png
-	:name: portal_tut01_step01_03
+.. figure:: /_static/portal_tut01_step01_04.png
+	:name: portal_tut01_step01_04
 	:alt: Check settings before setting up query. 
 	
-	Check settings.
+	Check colletion and table.
 
 1.5. Under "Enter Constraints", select the box to the left of "Spatial".
 Leave the "Shape Type" as the default "Cone", and for "Coordinates or Object Name" enter the central coordinates of the 
