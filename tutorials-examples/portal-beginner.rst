@@ -93,12 +93,6 @@ After selecting the needed columns (e.g., "g" "r" and "i_calibFlux"),
 clear the box and hit the return key to continue selecting other columns. 
 Click on the funnel symbol at the top of the checkbox column to filter the table view to show selected columns only.
 
-.. figure:: /_static/portal_tut01_step01_04.png
-	:name: portal_tut01_step01_04
-	:alt: Check settings before setting up query. 
-	
-	Check collection and table.
-
 1.7. In the "constraints" column, enter "=1" for the "detect_isPrimary", ">360" for the fluxes, and "=0" 
 for the extendedness parameters.
 This will limit the objects returned to those with no children (i.e., the products of deblending), which are 
@@ -114,8 +108,8 @@ only to constrain the query based on their values.
 
 1.8. Set the "Row Limit" to 10000, to only retrieve 10,000 objects for this demonstration.
 
-.. figure:: /_static/portal_tut01_step01.png
-	:name: portal_tut01_step01
+.. figure:: /_static/portal_tut01_step01_08.png
+	:name: portal_tut01_step01_08
 	:alt: A screenshot of how to input search criteria in the portal aspect.  
 		The portal is a convenient way to query the Rubin database through a graphical user interface without any python or command line scripting. 
 		Each row is a separate category characterizing the tap search criteria to be used, including: the tap service; the query type; 
