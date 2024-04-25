@@ -78,6 +78,7 @@ Table is  "dp02_dc2_catalogs.Object" (right drop-down menu).
 	
 	Check collection and table.
 
+
 1.5. Under "Enter Constraints", select the box to the left of "Spatial".
 Leave the "Shape Type" as the default "Cone", and for "Coordinates or Object Name" enter the central coordinates of the 
 DC2 simulation area "62, -37".
@@ -110,10 +111,7 @@ only to constrain the query based on their values.
 
 .. figure:: /_static/portal_tut01_step01_07.png
 	:name: portal_tut01_step01_07
-	:alt: A screenshot of how to input search criteria in the portal aspect.  
-		The portal is a convenient way to query the Rubin database through a graphical user interface without any python or command line scripting. 
-		Each row is a separate category characterizing the tap search criteria to be used, including: the tap service; the query type; 
-		the table collection and specific table to be used and the constraints to be used for the query. The portal search can be performed by hitting the search button on the bottom left. 
+	:alt: A screenshot of the query configuration.  
 	
 	The above screenshot shows the constraints before clicking "Search".
 	
