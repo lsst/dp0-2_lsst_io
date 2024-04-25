@@ -37,8 +37,8 @@ Beginner-level users looking for a more general overview of the Portal Aspect sh
 
 .. _DP0-2-Portal-Beginner-Step-1:
 
-Step 1. Set the query constraints
-=================================
+Step 1. Log in and set the query constraints
+============================================
 
 1.1. Log in to the Rubin Science Platform and click on Portal Aspect. 
 
@@ -48,9 +48,9 @@ Step 1. Set the query constraints
 	
 	Aspect choices for the Rubin Science Platform.
 
-1.2 On this Results tab temporary title screen, 
-'Rubin Science Platform Portal', notice the tabs at the top of the screen, click on DP0.2 Catalogs to 
-search the portal catalogs.
+1.2 On this Results tab, a temporary 'Rubin Science Platform Portal' graphic is show which will later be replaced with query results, 
+notice the tabs at the top of the screen, click on DP0.2 Catalogs to 
+search DP02 catalogs using the Portal Aspect.
 
 .. figure:: /_static/portal_tut01_step01_02.png
 	:name: portal_tut01_step01_02
@@ -58,10 +58,16 @@ search the portal catalogs.
 	
 	Location of tab for catalog search.
 
-1.3.  On the top left under the tab menu, ensure that "Use Image Search (ObsTAP)" toggle button is off 
-(white circle to the left and grey, not white circle to the right and blue) under 
-'LSST DP0.2 DC2 Tables', and on the right side of the screen, leave "View" at 
+1.3.  On the top left under the tab menu, under 
+'LSST DP0.2 DC2 Tables', ensure that "Use Image Search (ObsTAP)" toggle button is off 
+(white circle to the left and grey, not white circle to the right and blue), and on the right side of the screen, leave "View" at 
 its default "UI assisted".
+
+.. figure:: /_static/portal_tut01_step01_02.png
+	:name: portal_tut01_step01_02
+	:alt: Click on the DP0.2 Catalog tab to take you to a portal catalog search. 
+	
+	Location of tab for catalog search.
 
 1.4. Next to "LSST DP0.2 DC2 Tables", ensure the Table Collection says "dp02_dc2_catalogs" (left drop-down menu) and the 
 Table is  "dp02_dc2_catalogs.Object" (right drop-down menu).
