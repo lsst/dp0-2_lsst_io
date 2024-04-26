@@ -72,9 +72,6 @@ For the purpose of this exploration, you will be using DP0.2 Catalogs, so click 
 
 1.5. In the table at right, select columns ra, decl, and diaObjectId to be returned.  If you wish to see only the rows selected by you - click on the little funnel.  
 
-
-screenshot of the Portal parameter selection page (portal_tut02_step01b.png)
-
 .. figure:: /_static/portal_tut02_step01b.png
 ..  :name: portal_tut02_step01b
 ..  :alt: Screenshot of RSP portal interface DC2 difference image analysis object catalog query. 
