@@ -101,6 +101,13 @@ After selecting the needed columns (e.g., "g" "r" and "i_calibFlux"),
 clear the box and hit the return key to continue selecting other columns. 
 Click on the funnel symbol at the top of the checkbox column to filter the table view to show selected columns only.
 
+.. figure:: /_static/portal_tut01_step01_06.png
+	:name: portal_tut01_step01_06
+	:alt: Select constraints by clicking on the box next to data to retrieve, then click on the filter icon to display the items selected. 
+	
+	Select data to retrieve and click the filter icon.
+
+
 1.7. In the "constraints" column, enter "=1" for the "detect_isPrimary", ">360" for the fluxes, and "=0" 
 for the extendedness parameters.
 This will limit the objects returned to those with no children (i.e., the products of deblending), which are 
