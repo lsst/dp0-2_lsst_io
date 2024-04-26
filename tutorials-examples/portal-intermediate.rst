@@ -61,19 +61,17 @@ For the purpose of this exploration, you will be using DP0.2 Catalogs, so click 
 
 1.2. Click on the box on the screen top where you select the tables - this will show all the available tables.  Select dp02_dc2_catalogs.DiaObject table.   
 
-.. arrow 1
-
-screenshot of the RSP Portal start page (portal_tut02_step01a.png)
+.. figure:: /_static/portal_tut02_step01a.png
+..  :name: portal_tut02_step01a
+..  :alt: Screenshot of RSP portal start page where the user can select table and constraints
 
 1.3. On the left-hand side of the screen, under "Enter Constraints" you will have three choices, "Spatial," "Temporal," and "Object ID Search."  Select only "Spatial."  
 
-.. arrow 2
 
 1.4. Under “Enter Constraints”, select the box to the left of “Spatial”. Leave the “Shape Type” as the default “Cone shape”, and for “Coordinates or Object Name” enter the coordinates ``67.4579, -44.0802``. Set the "Radius" to 2 arcsec. 
 
 1.5. In the table at right, select columns ra, decl, and diaObjectId to be returned.  If you wish to see only the rows selected by you - click on the little funnel.  
 
-.. arrow 3
 
 screenshot of the Portal parameter selection page (portal_tut02_step01b.png)
 
