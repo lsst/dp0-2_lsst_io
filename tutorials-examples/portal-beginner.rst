@@ -48,6 +48,7 @@ Step 1. Log in and set the query constraints
 	
 	Aspect choices for the Rubin Science Platform.
 
+
 1.2 On this Results tab, a temporary 'Rubin Science Platform Portal' graphic is shown which will later be replaced with query results, 
 notice the tabs at the top of the screen, click on DP0.2 Catalogs to 
 search DP02 catalogs using the Portal Aspect.
@@ -57,6 +58,7 @@ search DP02 catalogs using the Portal Aspect.
 	:alt: Click on the DP0.2 Catalog tab to take you to a portal catalog search. 
 	
 	Location of tab for catalog search.
+
 
 1.3.  On the top left under the tab menu, under 
 'LSST DP0.2 DC2 Tables', ensure that "Use Image Search (ObsTAP)" toggle button is off 
@@ -68,6 +70,7 @@ its default "UI assisted".
 	:alt: Check settings before setting up query. 
 	
 	Check settings.
+
 
 1.4. Next to "LSST DP0.2 DC2 Tables", ensure the Table Collection says "dp02_dc2_catalogs" (left drop-down menu) and the 
 Table is  "dp02_dc2_catalogs.Object" (right drop-down menu).
@@ -109,7 +112,7 @@ Click on the funnel symbol at the top of the checkbox column to filter the table
 
 
 1.7. In the "constraints" column, enter "=1" for the "detect_isPrimary", ">360" for the fluxes, and "=0" 
-for the extendedness parameters.
+for the extendedness parameters. (See image in step 1.8).
 This will limit the objects returned to those with no children (i.e., the products of deblending), which are 
 brighter than about 25th magnitude
 in the g, r, and i filters, and which appear to be point-like (not extended, but *not necessarily stellar*) 
@@ -128,6 +131,8 @@ only to constrain the query based on their values.
 	:alt: A screenshot of the query configuration.  
 	
 	The above screenshot shows the constraints before clicking "Search".
+
+
 	
 1.9. Click "Search" at lower left.
 
@@ -137,7 +142,7 @@ only to constrain the query based on their values.
 Step 2. Create the color-magnitude diagram
 ==========================================
 
-The default "Tri-view" layout shows a sky coverage map from DESC DC2 simulation at upper left, 
+The default layout shows a sky coverage map from DESC DC2 simulation at upper left, 
 an active chart showing the spatial distribution of returned 
 objects at upper right, and a table of the search results along the bottom.
 
@@ -145,7 +150,7 @@ objects at upper right, and a table of the search results along the bottom.
 	:name: portal_tut01_step02a
 	:alt: A screenshot of the previous query's results.  
 	
-	The default Results view with "Tri-view".
+	The default Results view with initial view.
 
 2.1. To change the layout displayed on the screen, click the hamburger icon at the top left, scroll down to 'Results Layout', and click the double arrow to get a selection of layouts for the result.  
 For this step in this tutorial, select 'Tables/Coverage Charts" option. Toggle between "Active Chart" and "Coverage".
