@@ -177,13 +177,13 @@ For this step in this tutorial, select 'Tables/Coverage Charts" option. Toggle b
 This is because a row limit of 10,000 objects was applied, and the data is partitioned into files by sky coordinate.
 The query accessed these files until 10,000 objects were found (i.e., the query *does not* find *all objects* that satisfy the query parameters and then choose 10,000 random objects to return).
 
-.. figure:: /_static/portal_tut01_step02b.png
-	:name: portal_tut01_step02b
+.. figure:: /_static/portal_tut01_step02_01c.png
+	:name: portal_tut01_step02_01c
 	:alt: This screenshot of the portal after a search query is run.  The top image shows the density of selected sources within the search area. 
 		In this case, a circle of radius that is selected by the user centered at the right ascension and declination location selected by the user. 
 		The bottom panel displays the returned objects from the search query as a table. 
 	
-	The Results view with "Bi-view Tables" selected.
+**The Results view with table and coverage charts selected.**
 	
 
 **Notice:** In order to plot color (r-i magnitude) versus magnitude (g), the fluxes (which are in units of nanojansky) 
