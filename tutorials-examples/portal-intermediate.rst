@@ -68,7 +68,7 @@ For the purpose of this exploration, you will be using DP0.2 Catalogs, so click 
 1.3. On the left-hand side of the screen, under "Enter Constraints" you will have three choices, "Spatial," "Temporal," and "Object ID Search."  Select only "Spatial."  
 
 
-1.4. Under “Enter Constraints”, select the box to the left of “Spatial”. Leave the “Shape Type” as the default “Cone shape”, and for “Coordinates or Object Name” enter the coordinates ``67.4579, -44.0802``. Set the "Radius" to 2 arcsec. 
+1.4. In the “Spatial” entry, leave the “Shape Type” as the default “Cone shape”, and for “Coordinates or Object Name” enter the coordinates ``67.4579, -44.0802``. Set the "Radius" to 2 arcsec. 
 
 1.5. In the table at right, select columns ra, decl, and diaObjectId to be returned.  If you wish to see only the rows selected by you - click on the little funnel.  
 
