@@ -139,7 +139,7 @@ screenshot of the first plot parameters popup (portal_tut02_step03b.png)
 
     The i-band lightcurve for the SNIa of interest.
 
-3.3. To add a plot of seeing versus time: click on the "+" sign on the upper-left corner of the active chart,  and match the parameters shown below, then click "OK".
+3.3. To add a plot of seeing versus time: click on the "+" sign on the upper-left corner of the active chart, and match the parameters shown below, then click "OK".
 
 .. figure:: /_static/portal_tut02_step03c.png
     :width: 300
@@ -148,7 +148,7 @@ screenshot of the first plot parameters popup (portal_tut02_step03b.png)
 
     Plot parameters for the seeing versus time plot.
 
-3.4. To add a plot to visualize the astrometric scatter: use the settings icon, choose "Add New Chart" and match the parameters shown below, then click "OK".
+3.4. To add a plot to visualize the astrometric scatter: use the settings icon, click on the "+" sign on the upper-left corner of the active chart, and match the parameters shown below, then click "OK".
 Note that in both the X and Y parameters, the difference between the DiaSource coordinate and the DiaObject coordinate are multiplied by 3600, so that the plot axes are in arcseconds: ``((ra-67.4579634)*cos(decl*(pi()/180)))*3600`` and ``(decl+44.080243)*3600``.
 
 .. figure:: /_static/portal_tut02_step03d.png
