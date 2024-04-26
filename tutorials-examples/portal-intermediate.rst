@@ -71,11 +71,9 @@ screenshot of the RSP Portal start page (portal_tut02_step01a.png)
 
 1.4. Under “Enter Constraints”, select the box to the left of “Spatial”. Leave the “Shape Type” as the default “Cone shape”, and for “Coordinates or Object Name” enter the coordinates ``67.4579, -44.0802``. Set the "Radius" to 2 arcsec. 
 
-.. arrow 3
-
 1.5. In the table at right, select columns ra, decl, and diaObjectId to be returned.  If you wish to see only the rows selected by you - click on the little funnel.  
 
-.. arrow 4
+.. arrow 3
 
 screenshot of the Portal parameter selection page (portal_tut02_step01b.png)
 
