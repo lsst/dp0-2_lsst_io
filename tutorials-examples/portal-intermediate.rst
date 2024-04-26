@@ -116,9 +116,8 @@ This query also uses the ccdVisitId to join to the CcdVisit table and obtain the
 =======================
 
 3.1. The Results view will show three panels including a sky image at upper left, a scatter plot of decl vs. ra on the right, and the table listing the pointings on the bottom.  
-.. Switch to the "Bi-view Tables" view using the buttons at upper right.
+You will be displaying three scatter plots on the screen, so to make space for those plots, slide the vertical line dividing the sky image from the scatter plot to the left.  
 Use the settings icon (two gears at upper right) to open the plot parameters pop-up window, match those shown below, then click "Apply" and "Close".  
-
 screenshot of the first plot parameters popup (portal_tut02_step03a.png)
 
 .. figure:: /_static/portal_tut02_step03a.png
