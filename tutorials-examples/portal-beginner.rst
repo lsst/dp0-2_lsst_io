@@ -45,8 +45,8 @@ Step 1. Log in and set the query constraints
 .. figure:: /_static/portal_tut01_step01_01.png
 	:name: portal_tut01_step01_01
 	:alt: A screenshot of the Rubin Science Platform. 
-	
-	Aspect choices for the Rubin Science Platform.
+
+**Aspect choices for the Rubin Science Platform.**
 
 
 1.2 On this Results tab, a temporary 'Rubin Science Platform Portal' graphic is shown which will later be replaced with query results, 
@@ -57,8 +57,8 @@ search DP02 catalogs using the Portal Aspect.
 	:name: portal_tut01_step01_02
 	:alt: Click on the DP0.2 Catalog tab to take you to a portal catalog search. 
 	
-	Location of tab for catalog search.
-
+**Location of tab for catalog search.**
+ 
 
 1.3.  On the top left under the tab menu, under 
 'LSST DP0.2 DC2 Tables', ensure that "Use Image Search (ObsTAP)" toggle button is off 
@@ -69,8 +69,8 @@ its default "UI assisted".
 	:name: portal_tut01_step01_03
 	:alt: Check settings before setting up query. 
 	
-	Check settings.
-
+**Check settings.**
+ 
 
 1.4. Next to "LSST DP0.2 DC2 Tables", ensure the Table Collection says "dp02_dc2_catalogs" (left drop-down menu) and the 
 Table is  "dp02_dc2_catalogs.Object" (right drop-down menu).
@@ -79,8 +79,8 @@ Table is  "dp02_dc2_catalogs.Object" (right drop-down menu).
 	:name: portal_tut01_step01_04
 	:alt: Check settings before setting up query. 
 	
-	Check collection and table.
-
+**Check collection and table.**
+ 
 
 1.5. Under "Enter Constraints", select the box to the left of "Spatial".
 Leave the "Shape Type" as the default "Cone", and for "Coordinates or Object Name" enter the central coordinates of the 
@@ -92,8 +92,8 @@ set the search radius to 1 degree.
 	:name: portal_tut01_step01_05
 	:alt: Add spatial coordinates and change the search radius. 
 	
-	Add spatial coordinates and change the search radius.
-
+**Add spatial coordinates and change the search radius.**
+ 
 
 1.6. In the table at right, under "Output Column Selection and Constraints", click the box in the left-most column to 
 select "coord_ra", "coord_dec", "detect_isPrimary", "g" "r" and "i_calibFlux", and "g" "r" and "i_extendedness". 
@@ -108,8 +108,8 @@ Click on the funnel symbol at the top of the checkbox column to filter the table
 	:name: portal_tut01_step01_06
 	:alt: Select constraints by clicking on the box next to data to retrieve, then click on the filter icon to display the items selected. 
 	
-	Select data to retrieve and click the filter icon.
-
+**Select data to retrieve and click the filter icon.**
+ 
 
 1.7. In the "constraints" column, enter "=1" for the "detect_isPrimary", ">360" for the fluxes, and "=0" 
 for the extendedness parameters. (See image in step 1.8).
@@ -130,7 +130,7 @@ only to constrain the query based on their values.
 	:name: portal_tut01_step01_07
 	:alt: A screenshot of the query configuration.  
 	
-	The above screenshot shows the constraints before clicking "Search".
+**The above screenshot shows the constraints before clicking "Search".**
 
 
 	
@@ -144,16 +144,19 @@ Step 2. Create the color-magnitude diagram
 
 The default layout shows a sky coverage map from DESC DC2 simulation at upper left, 
 an active chart showing the spatial distribution of returned 
-objects at upper right, and a table of the search results along the bottom.
+objects at upper right, and a table of the search results along the bottom. 
+To change the layout displayed on the screen, click the hamburger icon at the top left.
 
-.. figure:: /_static/portal_tut01_step02a.png
-	:name: portal_tut01_step02a
+.. figure:: /_static/portal_tut01_step02_01.png
+	:name: portal_tut01_step02_01
 	:alt: A screenshot of the previous query's results.  
 	
-	The default Results view with initial view.
+**The default Results view with initial view.** 
 
-2.1. To change the layout displayed on the screen, click the hamburger icon at the top left, scroll down to 'Results Layout', and click the double arrow to get a selection of layouts for the result.  
-For this step in this tutorial, select 'Tables/Coverage Charts" option. Toggle between "Active Chart" and "Coverage".
+
+
+2.1. Scroll down to 'Results Layout', and click the double arrow to get a selection of layouts for the result.  
+For this step in this tutorial, select 'Tables/Coverage Charts" option. Toggle between "Active Chart" and "Coverage" on the tab in the right side image box.
 
 **Notice:** The objects retrieved *do not* fill in the search area (a 1 degree radius) in the default active chart of "coord_ra" versus "coord_dec".
 This is because a row limit of 10,000 objects was applied, and the data is partitioned into files by sky coordinate.
