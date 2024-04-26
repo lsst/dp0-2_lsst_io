@@ -219,7 +219,7 @@ Input the "X Min/Max" values "-0.5" and "2.0", and the "Y Min/Max" values to "16
 		The plot shows a large density of stars at low r-i color, and discrete bins at redder r-i color because the simulated data is 
 		based on discrete red stellar models that were used as input into DP0.2. Real data is expected to instead show a smooth distribution of colors.
 	
-	The color-magnitude diagram.
+**The color-magnitude diagram.**
 
 **Notice:** The default plot style is a scatter plot, which is appropriate for our data set of a modest size (such as 10,000 objects retrieved here).  
 It is also possible to create a two-dimensional histogram, appropriate for large data sets (a "heat map") which we will make in Step 2.4.  
@@ -250,8 +250,10 @@ Use the same "Chart Options" except give it a different "Chart title", such as "
 **The color-magnitude diagrams, including the previously made scatter plot (left) and the heatmap (right).**
 
 2.6. Interact with the plot.
-Hover over the data points with a mouse either on the Coverage map (see the coordinates change in the bottom of the map) or the Active Chart (see the x and y values appear in a pop-up window). 
-To select a row in the table, go back to the hamburger icon and select the Coverage/Charts/Table option from the Results Layout, from here click on a row and it appears as a different color in the plot(s), and vice-versa: select a point in a plot and it is highlighted in the table below.
+Hover over the data points with a mouse either on the Coverage map (see the coordinates change in the bottom of the map) 
+or the Active Chart (see the x and y values appear in a pop-up window). 
+Select a row in the table and it appears as a different color in the plot(s), and vice-versa: select a point in a plot and it is 
+highlighted in the table below.
 
 
 .. _DP0-2-Portal-Beginner-Step-3:
