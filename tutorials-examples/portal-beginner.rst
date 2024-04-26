@@ -231,20 +231,23 @@ The discrete sequences at red colors, (g-i) > 0.5, come from the discretized pro
 Change the "Plot Type" from "Scatter" to "Heatmap", and then set the "X" and "Y" to the same equation as in Step 2.2.
 Use the same "Chart Options" except give it a different "Chart title", such as "Heatmap Color-Magnitude Diagram."  
 
-.. figure:: /_static/portal_tut01_step02e.png
-	:name: portal_tut01_step02e
+.. figure:: /_static/portal_tut01_step02_04.png
+	:name: portal_tut01_step02_04
 	:alt: Screenshot of dialog box where the user can set new chart parameters for the heat map.
         :width: 300
 	
-	Above, we set the new chart parameters for a heatmap plot.
+	
+**Above, we set the new chart parameters for a heatmap plot.**
+
 
 2.5. Click "Apply" and look at the new color-magnitude plot. Resize the "Active Charts" area to expand the plots and minimize the "Coverage" window.  For completeness, you might wish to update the title of the plot you generated previously to "Scatter Color-Magnitude Diagram."  
 
-.. figure:: /_static/portal_tut01_step02f.png
-	:name: portal_tut01_step02f
+.. figure:: /_static/portal_tut01_step02_05.png
+	:name: portal_tut01_step02_05
 	:alt: Color magnitude diagrams generated from the previously mad scatter plot and heatmap.
 	
-	The color-magnitude diagrams, including the previously made scatter plot (left) and the heatmap (right).
+	
+**The color-magnitude diagrams, including the previously made scatter plot (left) and the heatmap (right).**
 
 2.6. Interact with the plot.
 Hover over the data points with a mouse either on the Coverage map (see the coordinates change in the bottom of the map) or the Active Chart (see the x and y values appear in a pop-up window). 
