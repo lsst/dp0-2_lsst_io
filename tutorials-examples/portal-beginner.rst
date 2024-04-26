@@ -293,11 +293,11 @@ Step 4. Transfer ADQL queries or results from the Portal to the Notebook Aspect
 click "Populate and Edit ADQL" to switch the Query Type to "Edit ADQL" and populate the ADQL query box.
 Shown below is the same query as in Step 3.1 above:  
 
-.. figure:: /_static/portal_tut01_step04a.png  
-	:name: portal_tut01_step04a
+.. figure:: /_static/portal_tut01_step04_01.png  
+	:name: portal_tut01_step04_01
 	:alt: Screenshot of the RSP portal query where the user will click the search button.
 	
-To execute the query in the Portal, click the "Search" button.
+**To execute the query in the Portal, click the "Search" button.**
 
 To execute the query in the Notebook Aspect, copy-paste the ADQL statement into the code cell of any notebook that
 which uses the TAP service, as demonstrated in Section 2.3 of the first tutorial notebook, 01 Introduction to DP0.2.
