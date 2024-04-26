@@ -198,14 +198,16 @@ For "Chart title" enter "Color-Magnitude Diagram"; set "X Label" to "color (r-i)
 and underneath check the "Options" box for "reverse".
 Input the "X Min/Max" values "-0.5" and "2.0", and the "Y Min/Max" values to "16.5" and "25.5" in the respective boxes. 
 
-.. figure:: /_static/portal_tut01_step02c.png
-	:name: portal_tut01_step02c
+.. figure:: /_static/portal_tut01_step02_02.png
+	:name: portal_tut01_step02_02
 	:alt: A screenshot of the portal aspect showing the interface that allows the user to create charts from the data returned by the query. 
 		Creating plots from the data in this way is an easy and functional way to explore the data. 
-		The interface allows the user to: input functions of the returned data to plot, choose a color scheme, edit the binning, create labels and edit the axis scaling. 
+		The interface allows the user to: input functions of the returned data to plot, choose a color scheme, 
+		edit the binning, create labels and edit the axis scaling. 
         :width: 300
 	
-	Set the plot parameters.
+
+**Set the plot parameters.**
 
 2.3. Click "Apply" and look at the color-magnitude plot.
 
