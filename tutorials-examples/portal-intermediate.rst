@@ -77,7 +77,7 @@ For the purpose of this exploration, you will be using DP0.2 Catalogs, so click 
 ..  :alt: Screenshot of RSP portal interface DC2 difference image analysis object catalog query. 
 ..    	Within this dialog box, the user can select the type of search, the image table collections, and various parameters to select information under investigation. (?)
 
-    Initial query to obtain the DiaObjectId.
+**Initial query to obtain the DiaObjectId**
 
 1.6. Click "Search" and view the results at a table on the bottom of the screen: there is only one DiaObject within 2 arcsec, with coordinates ``67.4579634, -44.080243`` and DiaObjectId "1252220598734556212".
 This is definitely the SNIa of interest to the user.
@@ -127,7 +127,7 @@ screenshot of the first plot parameters popup (portal_tut02_step03a.png)
     :name: portal_tut02_step03a
     :alt: Plot parameters pop-up window, user can select various parameters then click apply and close to generate a light curve.
 
-** Plot parameters for the lightcurve **
+**Plot parameters for the lightcurve**
 
 3.2. View the i-band lightcurve for this SNIa.
 
@@ -146,7 +146,7 @@ screenshot of the first plot parameters popup (portal_tut02_step03b.png)
     :name: portal_tut02_step03c
     :alt: Screenshot for dialog box to add a new chart, user can select parameters and click okay to generate a new plot.
 
-** Plot parameters for the seeing versus time plot **
+**Plot parameters for the seeing versus time plot**
 
 3.4. To add a plot to visualize the astrometric scatter:  again, click on the "+" sign on the upper-left corner of the active chart, and match the parameters shown below, then click "OK".
 Note that in both the X and Y parameters, the difference between the DiaSource coordinate and the DiaObject coordinate are multiplied by 3600, so that the plot axes are in arcseconds: ``((ra-67.4579634)*cos(decl*(pi()/180)))*3600`` and ``(decl+44.080243)*3600``.
@@ -156,7 +156,7 @@ Note that in both the X and Y parameters, the difference between the DiaSource c
     :name: portal_tut02_step03d
     :alt: Dialog box to add plot parameters for an astrometric scatter plot.
 
-** Plot parameters for the astrometric scatter plot **
+**Plot parameters for the astrometric scatter plot**
 
 3.5. View all three plots together.
 Plots might appear in a different order than as shown in the figure below.
@@ -177,7 +177,7 @@ The point of this plot is more that the overall scatter is less than 0.3 arcsec,
     :name: portal_tut02_step03e
     :alt: Image demonstrating how selecting a row can provide information for making decisions.
 
-** Identifying the best epoch for this scientific use-case **
+**Identifying the best epoch for this scientific use-case**
 
 
 .. _DP0-2-Portal-Intermediate_Step-4:
