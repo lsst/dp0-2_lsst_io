@@ -77,8 +77,8 @@ screenshot of the RSP Portal start page (portal_tut02_step01a.png)
 
 screenshot of the Portal parameter selection page (portal_tut02_step01b.png)
 
-.. figure:: /_static/portal_tut02_step01.png
-..  :name: portal_tut02_step01
+.. figure:: /_static/portal_tut02_step01b.png
+..  :name: portal_tut02_step01b
 ..  :alt: Screenshot of RSP portal interface DC2 difference image analysis object catalog query. 
 ..    	Within this dialog box, the user can select the type of search, the image table collections, and various parameters to select information under investigation. (?)
 
