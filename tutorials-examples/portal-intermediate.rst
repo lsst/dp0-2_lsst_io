@@ -24,7 +24,7 @@
 
 **Contact authors:** Melissa Graham and Greg Madejski
 
-**Last verified to run:** 2022-06-26
+**Last verified to run:** 2022-06-26;  started updates on 4/24/2024
 
 **Targeted learning level:** intermediate
 
@@ -59,17 +59,26 @@ Note that this offset is not discoverable in the following tutorial.
 1.1. Log in to the Rubin Science Platform, and click on Portal.  This will take you to the next screen, where you will have several options.  
 For the purpose of this exploration, you will be using DP0.2 Catalogs, so click on the "DP0.2 Catalogs" tab on top of the screen.  
 
-screenshot of the RSP Portal start page (portal_tut02_step01a.png)
-
 1.2. Click on the box on the screen top where you select the tables - this will show all the available tables.  Select dp02_dc2_catalogs.DiaObject table.   
 
-1.3. On the left-hand side of the screen, under "Enter Constraints" you will have three choices, "Spatial," "Temporal," and "Object ID Seaech."  Click on "spatial."  
+.. arrow 1
+
+screenshot of the RSP Portal start page (portal_tut02_step01a.png)
+
+1.3. On the left-hand side of the screen, under "Enter Constraints" you will have three choices, "Spatial," "Temporal," and "Object ID Search."  Select only "Spatial."  
+
+.. arrow 2
 
 1.4. Under “Enter Constraints”, select the box to the left of “Spatial”. Leave the “Shape Type” as the default “Cone shape”, and for “Coordinates or Object Name” enter the coordinates ``67.4579, -44.0802``. Set the "Radius" to 2 arcsec. 
 
-1.5. In the table at right, select columns ra, decl, and diaObjectId to be returned.
+.. arrow 3
 
-screenshot of the RSP Portal start page (portal_tut02_step01b.png)
+1.5. In the table at right, select columns ra, decl, and diaObjectId to be returned.  If you wish to see only the rows selected by you - click on the little funnel.  
+
+.. arrow 4
+
+screenshot of the Portal parameter selection page (portal_tut02_step01b.png)
+
 .. figure:: /_static/portal_tut02_step01.png
 ..  :name: portal_tut02_step01
 ..  :alt: Screenshot of RSP portal interface DC2 difference image analysis object catalog query. 
@@ -114,7 +123,7 @@ This query also uses the ccdVisitId to join to the CcdVisit table and obtain the
 =======================
 
 3.1. The Results view will show three panels including a sky image at upper left, a scatter plot of decl vs. ra on the right, and the table listing the pointings on the bottom.  
-..Switch to the "Bi-view Tables" view using the buttons at upper right.
+.. Switch to the "Bi-view Tables" view using the buttons at upper right.
 Use the settings icon (two gears at upper right) to open the plot parameters pop-up window, match those shown below, then click "Apply" and "Close".  
 
 screenshot of the first plot parameters popup (portal_tut02_step03a.png)
