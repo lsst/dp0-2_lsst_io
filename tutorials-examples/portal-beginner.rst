@@ -190,7 +190,7 @@ The query accessed these files until 10,000 objects were found (i.e., the query 
 are being converted to AB magnitudes in the next step. The `AB Magnitudes Wikipedia <https://en.wikipedia.org/wiki/AB_magnitude>`_ 
 page provides a concise resource for users who are unfamiliar with AB magnitudes and fluxes in units of janskys.
 
-2.2. Click on the Active Chart settings icon (one gears, upper right, of the right hand image) in order to "modify trace", 
+2.2. Click on the Active Chart settings icon (one gear, upper right corner of the right hand image) in order to "modify trace", 
 which means to change the plot parameters.
 Set "X" to be "(-2.5 * log10(r_calibFlux)) - (-2.5 * log10(i_calibFlux))", and "Y" to be "-2.5 * log10(g_calibFlux) + 31.4".
 Leave the options on "Trace Options" as they are, and click on "Chart Options" to show the options.
