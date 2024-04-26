@@ -117,7 +117,7 @@ This query also uses the ccdVisitId to join to the CcdVisit table and obtain the
 
 3.1. The default Results view will show three panels including a sky image at upper left, a scatter plot of decl vs. ra on the right, and the table listing the pointings on the bottom.  To change the layout displayed on the screen, click the "hamburger" (three short lines) icon at the top left.
 
-Scroll down to 'Results Layout', and click the double arrow to get a selection of layouts for the result.  For this step in this tutorial, select 'Tables/Coverage Charts" option. Toggle between "Active Chart" and "Coverage" on the tab in the right side image box.
+3.2. Scroll down to 'Results Layout', and click the double arrow to get a selection of layouts for the result.  For this step in this tutorial, select 'Tables/Coverage Charts" option. Toggle into "Active Chart" from "Coverage" on the tab in the right side image box.  The table on the right-hand side is likely to crowd your plotting area, especially when you are displaying multiple plots.  You can expand the plotting area by clicking on the dividing line between the two windows and moving it to the left.  
 
 Use the settings icon (two gears at upper right) to open the plot parameters pop-up window, match those shown below, then click "Apply" and "Close".  
 screenshot of the first plot parameters popup (portal_tut02_step03a.png)
