@@ -305,7 +305,7 @@ which uses the TAP service, as demonstrated in Section 2.3 of the first tutorial
 4.2. It is also possible to obtain a URL for direct access to the query results.
 This URL can be used from the Notebook Aspect; this is an especially useful feature for 
 queries that are large, complex, or time-consuming to execute (for instance, multiple table joins),
-or for sharing query results with colleagues. 
+or for sharing query results with colleagues. (Note - the screenshot is an older version of the RSP, but the functionality remains the same.)
 
 As an example, the image below displays the Results View for a small query using just a 0.05 degree radius.
 
