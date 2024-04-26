@@ -85,6 +85,13 @@ DC2 simulation area "62, -37".
 Next to "Radius", from the drop down menu choose "degrees" *and then* enter "1" in the box and press enter to 
 set the search radius to 1 degree.
 
+.. figure:: /_static/portal_tut01_step01_05.png
+	:name: portal_tut01_step01_05
+	:alt: Add spatial coordinates and change the search radius. 
+	
+	Add spatial coordinates and change the search radius.
+
+
 1.6. In the table at right, under "Output Column Selection and Constraints", click the box in the left-most column to 
 select "coord_ra", "coord_dec", "detect_isPrimary", "g" "r" and "i_calibFlux", and "g" "r" and "i_extendedness". 
 Column names are searchable. To avoid scrolling a long column list, 
