@@ -117,9 +117,9 @@ This query also uses the ccdVisitId to join to the CcdVisit table and obtain the
 
 3.1. The default Results view will show three panels including a sky image at upper left, a scatter plot of decl vs. ra on the right, and the table listing the pointings on the bottom.  To change the layout displayed on the screen, click the "hamburger" (three short lines) icon at the top left.
 
-3.2. Scroll down to 'Results Layout', and click the double arrow to get a selection of layouts for the result.  For this step in this tutorial, select 'Tables/Coverage Charts" option. Toggle into "Active Chart" from "Coverage" on the tab in the right side image box.  The table on the right-hand side is likely to crowd your plotting area, especially when you are displaying multiple plots.  You can expand the plotting area by clicking on the dividing line between the two windows and moving it to the left.  
+3.2. Scroll down to 'Results Layout', and click the double arrow to get a selection of layouts for the result.  For this step in this tutorial, select "Tables/Coverage Charts" option. Toggle into "Active Chart" from "Coverage" on the tab in the right side image box.  The table on the right-hand side is likely to crowd your plotting area, especially when you are displaying multiple plots.  Expand the plotting area by clicking on the dividing line between the two windows and moving it to the left.  
 
-Use the settings icon (two gears at upper right) to open the plot parameters pop-up window, match those shown below, then click "Apply" and "Close".  
+Use the settings icon (a gear at upper right) to open the plot parameters pop-up window, match those shown below, then click "Apply" and "Close".  
 screenshot of the first plot parameters popup (portal_tut02_step03a.png)
 
 .. figure:: /_static/portal_tut02_step03a.png
@@ -148,7 +148,7 @@ screenshot of the first plot parameters popup (portal_tut02_step03b.png)
 
     Plot parameters for the seeing versus time plot.
 
-3.4. To add a plot to visualize the astrometric scatter: use the settings icon, click on the "+" sign on the upper-left corner of the active chart, and match the parameters shown below, then click "OK".
+3.4. To add a plot to visualize the astrometric scatter:  again, click on the "+" sign on the upper-left corner of the active chart, and match the parameters shown below, then click "OK".
 Note that in both the X and Y parameters, the difference between the DiaSource coordinate and the DiaObject coordinate are multiplied by 3600, so that the plot axes are in arcseconds: ``((ra-67.4579634)*cos(decl*(pi()/180)))*3600`` and ``(decl+44.080243)*3600``.
 
 .. figure:: /_static/portal_tut02_step03d.png
