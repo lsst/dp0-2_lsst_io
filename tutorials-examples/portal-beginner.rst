@@ -49,6 +49,7 @@ Step 1. Log in and set the query constraints
 **Aspect choices for the Rubin Science Platform.**
 
 
+
 1.2 On this Results tab, a temporary 'Rubin Science Platform Portal' graphic is shown which will later be replaced with query results, 
 notice the tabs at the top of the screen, click on DP0.2 Catalogs to 
 search DP02 catalogs using the Portal Aspect.
@@ -157,6 +158,20 @@ To change the layout displayed on the screen, click the hamburger icon at the to
 
 2.1. Scroll down to 'Results Layout', and click the double arrow to get a selection of layouts for the result.  
 For this step in this tutorial, select 'Tables/Coverage Charts" option. Toggle between "Active Chart" and "Coverage" on the tab in the right side image box.
+
+.. figure:: /_static/portal_tut01_step02_01a.png
+	:name: portal_tut01_step02_01
+	:alt: Change the information display on the screen.  
+	
+**Change the layout of the query results.** 
+
+
+.. figure:: /_static/portal_tut01_step02_01b.png
+	:name: portal_tut01_step02_01
+	:alt: Switch between coverage and active chart.  
+	
+**Switch between coverage and active chart.** 
+
 
 **Notice:** The objects retrieved *do not* fill in the search area (a 1 degree radius) in the default active chart of "coord_ra" versus "coord_dec".
 This is because a row limit of 10,000 objects was applied, and the data is partitioned into files by sky coordinate.
