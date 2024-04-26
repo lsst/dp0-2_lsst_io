@@ -77,7 +77,9 @@ For the purpose of this exploration, you will be using DP0.2 Catalogs, so click 
 ..  :alt: Screenshot of RSP portal interface DC2 difference image analysis object catalog query. 
 ..    	Within this dialog box, the user can select the type of search, the image table collections, and various parameters to select information under investigation. (?)
 
-**Initial query to obtain the DiaObjectId**
+
+    Initial query to obtain the DiaObjectId
+
 
 1.6. Click "Search" and view the results at a table on the bottom of the screen: there is only one DiaObject within 2 arcsec, with coordinates ``67.4579634, -44.080243`` and DiaObjectId "1252220598734556212".
 This is definitely the SNIa of interest to the user.
