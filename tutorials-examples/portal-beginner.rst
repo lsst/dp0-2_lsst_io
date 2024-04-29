@@ -277,9 +277,9 @@ In the upper right, select "Edit ADQL" for "View", and enter the following in th
 3.2. At the bottom of that page, set the "Row Limit" to 10000 and then click "Search" at lower left.
 The Portal will transition to the "Results Tab" as in Step 2, above.
 
-**Notice:** although the same "Row Limit" of 10000 was applied both in Step 1.7 and Step 3.2,
+**Notice:** Although the same "Row Limit" of 10,000 was applied both in Step 1.7 and Step 3.2,
 the two searches will not return the exact same rows.
-Queries which return only a subset of all possible results, in this case 10000 out of all possible rows,
+Queries which return only a subset of all possible results, in this case 10,000 out of all possible rows,
 will return random subsets.
 
 
