@@ -309,14 +309,14 @@ or for sharing query results with colleagues. (Note - the screenshot is an older
 
 As an example, the image below displays the Results View for a small query using just a 0.05 degree radius.
 
-.. figure:: /_static/portal_tut01_step04b.png  
-	:name: portal_tut01_step04b
+.. figure:: /_static/portal_tut01_step04_02a.png  
+	:name: portal_tut01_step04_02a
 	:alt: Screenshot of the results view from the above query.  
 
 Click on the "info" button (letter "i" in a circle), and a pop-up window will appear:
 
-.. figure:: /_static/portal_tut01_step04c.png  
-	:name: portal_tut01_step04c
+.. figure:: /_static/portal_tut01_step04_02b.png  
+	:name: portal_tut01_step04_02b
 	:alt: Pop-up window when the info button is clicked.
 
 The "UWS JOB URL" in the pop-up is the URL to the query results.
