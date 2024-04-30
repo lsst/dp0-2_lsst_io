@@ -140,15 +140,28 @@ The tutorials below are step-by-step demonstrations of how to use the API Aspect
 Spanish-language tutorials
 ==========================
 
-One of the DP0.2 :ref:`DP0-2-Tutorials-Notebooks` is available in Spanish (DP02_01_Introduction_to_DP02_ES.ipynb),
-along with one each of the :ref:`DP0-2-Tutorials-CommandLine` and :ref:`DP0-2-Tutorials-Portal`.
+**Credit:** The Argentinian International In-Kind Program team, in particular Dante Paz, Carolina Villalón, and Marco Augusto Rocchietti,
+have translated several DP0.2 tutorials into Spanish.
 
+**Notebook:** The introductory DP0.2 Notebook tutorial (DP02_01_Introduccion_a_DP02_ES.ipynb) is available in the
+`tutorial-notebooks repository <https://github.com/rubin-dp0/tutorial-notebooks>`_ repository.
+
+*Link to go here.*
+
+**Portal:** The introductory DP0.2 Portal tutorial.
 
 .. toctree::
     :titlesonly:
     :glob:
 
     portal-beginner-ES
+
+**Command-line:** The introductory DP0.2 command-line tutorial.
+
+.. toctree::
+    :titlesonly:
+    :glob:
+
     cmdline-beginner-ES
 
 
