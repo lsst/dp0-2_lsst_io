@@ -51,11 +51,6 @@ and clicking on "history" (near upper-right).
 Major Updates Log
 =================
 
-Apr 30 2024
------------
-
-Released three introductory-level :ref:`DP0-2-Tutorials-ES`. 
-
 Mar 27 2024
 -----------
 
@@ -74,7 +69,7 @@ The recommended image of the RSP at data.lsst.cloud was bumped to Weekly 2024_04
 Dec 6 2023
 ----------
 
-Released API TOPCAT tutorial notebook 01.
+Released new API tutorial 01 (TOPCAT).
 
 Nov 30 2023
 -----------
