@@ -90,11 +90,6 @@ See the repository's `README file <https://github.com/rubin-dp0/tutorial-noteboo
 list of available tutorials with descriptions.
 Spanish-language Jupyter Notebook tutorials have filenames ending in "ES.ipynb". 
 
-.. toctree::
-    :titlesonly:
-    :glob:
-
-    rendered-tutorial-notebooks
 
 .. _DP0-2-Tutorials-CommandLine:
 
@@ -210,13 +205,3 @@ Here is a short list of potential science topics that DP0.2 could be useful for.
  - astrometry-based analyses
 
 
-Portal usability test answer keys
-=================================
-
-Answer keys for Portal usability tests can also be used as step-by-step tutorials.
-
-.. toctree::
-    :titlesonly:
-    :glob:
-
-    portal-usabilitytest-answerkey
