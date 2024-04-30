@@ -74,7 +74,7 @@ The recommended image of the RSP at data.lsst.cloud was bumped to Weekly 2024_04
 Dec 6 2023
 ----------
 
-Released API TOPCAT tutorial notebook 01.
+Released new API tutorial 01 (TOPCAT).
 
 Nov 30 2023
 -----------
