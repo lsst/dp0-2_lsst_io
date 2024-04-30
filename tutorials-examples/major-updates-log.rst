@@ -56,6 +56,21 @@ Apr 30 2024
 
 Released three introductory-level :ref:`DP0-2-Tutorials-ES`. 
 
+Mar 27 2024
+-----------
+
+Released tutorial notebook 13a on the image cutout tool.
+
+Feb 29 2024
+-----------
+
+Released tutorial notebook 14 on synthetic source injection.
+
+Feb 1 2024
+----------
+
+The recommended image of the RSP at data.lsst.cloud was bumped to Weekly 2024_04.
+
 Dec 6 2023
 ----------
 
