@@ -146,7 +146,8 @@ have translated several DP0.2 tutorials into Spanish.
 **Notebook:** The introductory DP0.2 Notebook tutorial (DP02_01_Introduccion_a_DP02_ES.ipynb) is available in the
 `tutorial-notebooks repository <https://github.com/rubin-dp0/tutorial-notebooks>`_ repository.
 
-*Link to go here.*
+ * `Introduccion a DP0.2 <https://dp0-2.lsst.io/_static/nb_html/DP02_01_Introduccion_a_DP02_ES.html>`_ 
+
 
 **Portal:** The introductory DP0.2 Portal tutorial.
 
