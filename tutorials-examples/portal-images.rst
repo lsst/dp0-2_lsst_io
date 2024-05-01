@@ -24,7 +24,7 @@
 
 **Contact authors:** Melissa Graham
 
-**Last verified to run:** 2022-06-26
+**Last verified to run:** 2024-05-01
 
 **Targeted learning level:** intermediate
 
@@ -41,9 +41,10 @@ For more information about the DP0.2 catalogs and images, visit the :ref:`DP0-2-
 1. Query for Images
 ===================
 
-1.1. Log into the Portal Aspect and check the “Use Image Search (ObsTAP)” box below “LSST DP0.2 DC2 Tables”.
+1.1. Log into the Portal Aspect, click on "DP02 Images" tab at the top.
 
-1.2. Under "Observation Type and Source", choose "Calibration Level" 3, which is for derived images such as deepCoadds and difference images. Leave the other options to their default settings except for the "Data Product Subtype" enter "lsst.deepCoadd_calexp".
+1.2. Under "Observation Type and Source", choose "Calibration Level" 3, which is for derived images such as deepCoadds and 
+difference images. Leave the other options to their default settings except for the "Data Product Subtype" enter "lsst.deepCoadd_calexp".
 
 1.3. Under "Location", choose "Observation boundary contains point" from the drop-down menu and enter the coordinates "67.4579, -44.0802" - the known location of the SNIa from Portal tutorial 02.
 
@@ -54,7 +55,7 @@ For more information about the DP0.2 catalogs and images, visit the :ref:`DP0-2-
     :alt: The default view of the RSP Portal’s user interface is shown in this image.  
     	From this window a user can select information to customize their search parameters for type of service, type of tables, search constraints, and select the number of rows to return.
 
-    Query for the deepCoadds that cover the SNIa location.
+    **Query for the deepCoadds that cover the SNIa location.**
 
 1.5. Click "Search".
 
