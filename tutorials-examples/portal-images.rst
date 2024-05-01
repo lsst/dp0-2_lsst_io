@@ -50,12 +50,12 @@ difference images. Leave the other options to their default settings except for 
 
 1.4. Do not set any timing or spectral coverage constraints, and do not change the default table column selections.
 
-.. figure:: /_static/portal_tut03_step01.png
-    :name: portal_tut03_step01
+.. figure:: /_static/portal_tut03_step01_04.png
+    :name: portal_tut03_step01_04
     :alt: The default view of the RSP Portal’s user interface is shown in this image.  
     	From this window a user can select information to customize their search parameters for type of service, type of tables, search constraints, and select the number of rows to return.
 
-    **Query for the deepCoadds that cover the SNIa location.**
+**Query for the deepCoadds that cover the SNIa location.**
 
 1.5. Click "Search".
 
