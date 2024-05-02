@@ -97,8 +97,7 @@ If you happen to pan away from the SNIa, recenter using the "center" icon and fi
 .. figure:: /_static/portal_tut03_step02_04.png
     :name: portal_tut03_step02_04
     :alt: This image is a pop up selection box and pan by table row is selected.  The center of the selection box allows the user to enter the coordinates on which to center the image.  
-    	In this case, the quote Center on unquote coordinates are for the known position of a supernova.  
-	To the right of the input area are buttons for go and go and mark, which will mark the coordinate position on the resulting image
+    	In this case, the quote Center on unquote coordinates are for the known position of a supernova.  To the right of the input area are buttons for go and go and mark, which will mark the coordinate position on the resulting image
 
 **Center on and mark the coordinates of the SNIa.**
 
@@ -115,16 +114,12 @@ In the table, notice that the filter order is y, z, i, u, g, r.
 To sort the table so that the filter order is u, g, r, i, z, y, click on the column heading for the "em_min" column.
 
 2.5. Rescale the flux to explore the underlying distribution of host galaxy light.
-Use the "scale" icon (hover-over text "Stretch drop down") to change the greyscale stretch and/or boundaries for the images.
-From the drop-down window, select one of the supplied image stretch options or select "Color stretch" to get a pop-up window.
-
-Set the Stretch Type to "Log" and the upper range to 99.5%, and unselect the checkbox next to "Use Zscale for bounds", then click "Refresh".
+Use the "scale" icon (panel icon with a histogram, third from left, hover-over text "Stretch drop down: change the background image stretch") to set the Stretch Type to "Log: Stretch to 99%".
 Notice that there appears to be a faint - but spatially distinct - extended object at the location of the SNIa, especially in the g-band image (bottom center), which at first was not obvious due to the wings of the brighter galaxy.
 
 .. figure:: /_static/portal_tut03_step02e.png
     :name: portal_tut03_step02e
-    :alt: Six panel displays each of which shows a close up zoom of the supernova and possible host galaxy.  
-    	To the right of the display is a pop-up window to modify the settings for the images.  The settings allows the user to select type type of stretch and the range used for the stretch.
+    :alt: Six panel displays each of which shows a close up zoom of the supernova and possible host galaxy. To the right of the display is a pop-up window to modify the settings for the images.  The settings allows the user to select type type of stretch and the range used for the stretch.
 
     Well the host association looks a little complicated!
 
