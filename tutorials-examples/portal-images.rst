@@ -65,10 +65,12 @@ difference images. Leave the other options to their default settings except for 
 2. Interact with the deepCoadds
 ===============================
 
-2.1. Above the image, click on the grid icon (hover-over text "Tile all images in the search result table") to simultaneously view all six filters' deepCoadds. The default view is to center all deepCoadds on the center of the patch.
-In this example the compass has been enabled using the "Tools" icon (wrench and ruler, hover-over text "Tools drop down").
+2.1. Above the image, click on the grid icon (hover-over text "Tile all images in the search result table") to simultaneously view all six filters' deepCoadds. 
+The default view is to center all deepCoadds on the center of the patch.
+In this example the compass (Under Rotate/Flip: middle icon, circle with an arrow and an N) has been enabled using the "Tools" icon (wrench and ruler, 
+hover-over text "Tools drop down: save, rotate, extract and more").
 
-2.2. And then click on "Bi-view Tables" in the upper right corner to show just one image and the table side-by-side. To display the six filters' deepCoadds, select "Data Product" tab. 
+2.2. Click on the hamburger icon at the upper left near the Rubin logo to select "Tables, Coverage Images Charts" in the Results Layout section to show just one image and the table side-by-side. To display the six filters' deepCoadds, select "Data Product: ivoa.ObsCore..." tab on the right side panel. 
 
 .. figure:: /_static/portal_tut03_step02a.png
     :name: portal_tut03_step02a
