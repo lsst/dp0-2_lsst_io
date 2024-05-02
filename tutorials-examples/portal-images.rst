@@ -72,8 +72,8 @@ hover-over text "Tools drop down: save, rotate, extract and more").
 
 2.2. Click on the hamburger icon at the upper left near the Rubin logo to select "Tables, Coverage Images Charts" in the Results Layout section to show just one image and the table side-by-side. To display the six filters' deepCoadds, select "Data Product: ivoa.ObsCore..." tab on the right side panel. 
 
-.. figure:: /_static/portal_tut03_step02a.png
-    :name: portal_tut03_step02a
+.. figure:: /_static/portal_tut03_step02_02.png
+    :name: portal_tut03_step02_02
     :alt: A screenshot of the default view for image display of six separate co-add images. 
     	The side panel on the right has a list of each of the coadd images and some of the descriptive information for the images. 
 
