@@ -83,11 +83,11 @@ hover-over text "Tools drop down: save, rotate, extract and more").
 Click on the down arrow on the "align" icon (chain with a slash) above the six images on the right panel, (hover-over text "Image alignment drop down...") and under "Align and Lock Options" select "by WCS".
 Notice now that zooming and panning in one image does the same in all six images.
 
-.. figure:: /_static/portal_tut03_step02b.png
-    :name: portal_tut03_step02b
+.. figure:: /_static/portal_tut03_step02_03.png
+    :name: portal_tut03_step02_03
     :alt: Image alignment dropdown is clicked which is the icon second from the right. A menu appears with nine alignment and locking options. Align and lock options by WCS is selected.
 
-    Choose to align and lock on WCS.
+**Choose to align and lock on WCS.**
 
 2.4. Mark and center the SNIa.
 Choose the "center" icon (hover-over text "Image center drop down"), and in the box next to "Center On" enter the SNIa's coordinates, "67.4579, -44.0802", and then click "Go & Mark".
