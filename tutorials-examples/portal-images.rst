@@ -117,8 +117,8 @@ To sort the table so that the filter order is u, g, r, i, z, y, click on the col
 Use the "scale" icon (panel icon with a histogram, third from left, hover-over text "Stretch drop down: change the background image stretch") to set the Stretch Type to "Log: Stretch to 99%".
 Notice that there appears to be a faint - but spatially distinct - extended object at the location of the SNIa, especially in the g-band image (bottom center), which at first was not obvious due to the wings of the brighter galaxy.
 
-.. figure:: /_static/portal_tut03_step02e.png
-    :name: portal_tut03_step02e
+.. figure:: /_static/portal_tut03_step02_05.png
+    :name: portal_tut03_step02_05
     :alt: Six panel displays each of which shows a close up zoom of the supernova and possible host galaxy. To the right of the display is a pop-up window to modify the settings for the images.  The settings allows the user to select type type of stretch and the range used for the stretch.
 
     Well the host association looks a little complicated!
