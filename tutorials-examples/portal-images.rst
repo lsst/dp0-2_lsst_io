@@ -67,7 +67,7 @@ difference images. Leave the other options to their default settings except for 
 
 2.1. Above the image, click on the grid icon (hover-over text "Tile all images in the search result table") to simultaneously view all six filters' deepCoadds. 
 The default view is to center all deepCoadds on the center of the patch.
-In this example the compass (Under Layers, click "Show the directions of Equatorial J2000 North and East) has been enabled using the "Tools" icon (wrench and ruler, 
+In this example the compass (Under Layers, click "Show the directions of Equatorial J2000 North and East) has been enabled using the "Tools" icon (wrench and hammer, 
 hover-over text "Tools drop down: save, rotate, extract and more").
 
 2.2. Click on the hamburger icon at the upper left near the Rubin logo to select "Tables, Coverage Images Charts" in the Results Layout section to show just one image and the table side-by-side. To display the six filters' deepCoadds, select "Data Product: ivoa.ObsCore..." tab on the right side panel. 
