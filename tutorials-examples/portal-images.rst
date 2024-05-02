@@ -94,20 +94,20 @@ Choose the "center" icon (hover-over text "Image center drop down"), and in the 
 Click the magnifying glass with the "+" symbol to zoom-in on the centered location, and grab and drag to pan around the image.
 If you happen to pan away from the SNIa, recenter using the "center" icon and finding the SNIa coordinates under "Recent Positions".
 
-.. figure:: /_static/portal_tut03_step02c.png
-    :name: portal_tut03_step02c
+.. figure:: /_static/portal_tut03_step02_04.png
+    :name: portal_tut03_step02_04
     :alt: This image is a pop up selection box and pan by table row is selected.  The center of the selection box allows the user to enter the coordinates on which to center the image.  
     	In this case, the quote Center on unquote coordinates are for the known position of a supernova.  
 	To the right of the input area are buttons for go and go and mark, which will mark the coordinate position on the resulting image
 
-    Center on and mark the coordinates of the SNIa.
+**Center on and mark the coordinates of the SNIa.**
 
-.. figure:: /_static/portal_tut03_step02d.png
-    :name: portal_tut03_step02d
+.. figure:: /_static/portal_tut03_step02_04a.png
+    :name: portal_tut03_step02_04a
     :alt: Six image panels showing each of the filter bands for y, z, i, u, g, and r bands. 
     	A large blob and smaller blob vary in size between each of the filters.  The images show that there is more intensity in the i and r bands than there is in the u band.  
 
-    A zoom-in on the SNIa and its host, with linear zscaling.
+**A zoom-in on the SNIa and its host, with linear zscaling.**
 
 **Notice:** In the figure above, the images in the grid are displayed in the order they appear in the table: top row (left to right)
 then bottom row (left to right).
