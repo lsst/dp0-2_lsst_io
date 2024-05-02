@@ -77,10 +77,10 @@ hover-over text "Tools drop down: save, rotate, extract and more").
     :alt: A screenshot of the default view for image display of six separate co-add images. 
     	The side panel on the right has a list of each of the coadd images and some of the descriptive information for the images. 
 
-    The default view centers the image display on the patch center.
+**The default view centers the image display on the patch center.**
 
 2.3. Align and lock by WCS.
-Click on the "align" icon above the image (hover-over text "Image alignment drop down...") and under "Align and Lock Options" select "by WCS".
+Click on the down arrow on the "align" icon (chain with a slash) above the six images on the right panel, (hover-over text "Image alignment drop down...") and under "Align and Lock Options" select "by WCS".
 Notice now that zooming and panning in one image does the same in all six images.
 
 .. figure:: /_static/portal_tut03_step02b.png
