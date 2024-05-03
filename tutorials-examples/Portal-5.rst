@@ -170,8 +170,8 @@ so that data for all bands will be returned.
 The plot will appear as in the right hand side of the figure below. 
 Note that there are many more points on the new plot, because all bands are included instead of just i-band.
 
-2.3. The work-around to convert the band (u, g, r, i, z, or y) into an ASCII value (e.g., 121, 114, 105) starts with
-adding a column, and setting it to be the ASCII value of the ``band`` column.
+2.3. The work-around to plot the measurements in various bands in different colors is to convert the band (u, g, r, i, z, or y) into an ASCII value (e.g., 121, 114, 105).  
+This starts with adding a column, and setting it to be the ASCII value of the ``band`` column.
 To add a new column, click the 5th icon in the results table (the vertical rectangle with a + sign), as shown in the figure below.  
 
 .. figure:: /_static/portal_tut05_step02a.png
