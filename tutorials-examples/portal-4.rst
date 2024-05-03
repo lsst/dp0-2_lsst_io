@@ -98,8 +98,8 @@ Notice how not all galaxies appear to be marked with a square as a returned obje
 This seems to suggest that objects are missing from the results table.
 However, not all returned objects are shown with markers in the sky image.
 
-.. figure:: /_static/portal_tut04_step02a.png
-	:name: portal_tut04_step02a
+.. figure:: /_static/portal_tut04_step02_02.png
+	:name: portal_tut04_step02_02
 	:alt: Screenshot of the default results view that appears after clicking the search button.
 
 2.3. In the table view, add a constraint of "radial_offset < 0.03" as shown below, and see how the sky image plot updates 
