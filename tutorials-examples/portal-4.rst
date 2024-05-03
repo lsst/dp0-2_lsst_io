@@ -221,12 +221,12 @@ option to log the y-axis has been selected), and click “OK”.
 
 4.5. Update the trace names and colors. 
 The default colors used for g-band and r-band are inappropriate, and the g-band trace is still named “trace 0”. 
-Click on the double-gears icon and use the "Plot Parameters" pop-up window to edit trace name and color. 
+Click on the single gear icon and use the "Plot Parameters" pop-up window to edit trace name and color. 
 Click on the magnifying glass to the right of “Color” under “Trace Options” to get the “Color Picker” pop-up window. 
 Choose green for g-band and orange for r-band.
 
-.. figure:: /_static/portal_tut04_step04d.png
-	:name: portal_tut04_step04d
+.. figure:: /_static/portal_tut04_step04_05.png
+	:name: portal_tut04_step04_05
 	:alt: A screenshot of the plot parameters and color picker pop-up windows showing how to adjust the visual aspects of the histograms.
 
 4.6. Review the final plot. 
