@@ -94,7 +94,7 @@ It is only ever fully safe to use this function when using ``SNR > 5`` *detectio
 
 1.4. Click "Search".  
 
-1.5. Set the view of the "Results" panel by clicking on the "hamburger" icon "three horizontal lines on the top left).  
+1.5. Set the view of the "Results" panel by clicking on the "hamburger" icon (three horizontal lines on the top left).  
 Click on the double-arrow in the "Results Layout" box, and click on the "Coverage Charts Tables" box.  
 In the results view, see that the query has returned forced flux measurements in the table (right hand side of the figure below), and the "coverage" panel on the left-hand side.  
 
