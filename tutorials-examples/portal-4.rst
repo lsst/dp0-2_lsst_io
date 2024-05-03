@@ -205,8 +205,8 @@ However, users do have the option to instead choose the number of bins, and allo
 Since the ADQL query only retrieved extended objects brighter than 25th magnitude, and the coadded images of DP0.2 (and thus the 
 Object table) goes deeper than 25th mag, no turn-over due to detection incompleteness is seen in the apparent magnitude distribution. 
 
-.. figure:: /_static/portal_tut04_step04b.png
-	:name: portal_tut04_step04b
+.. figure:: /_static/portal_tut04_step04_03.png
+	:name: portal_tut04_step04_03
 	:alt: A screenshot of the portal's results view showing both the color-magnitude heatmap and the magnitude histogram.
 
 4.4. Add the r-band apparent magnitude distribution to the new plot. 
