@@ -219,7 +219,7 @@ Do it again for ``g``, and notice that additional points appear, in different co
 You can check or uncheck as many filters as you wish.  
 
 2.9. Restrict the multi-band lightcurve to two filters by entering ``= 'r' or 'i'``. 
-See how the point colors are orange and mauve (as in the figure below). 
+See how the point colors are in two colors (as in the figure below). 
 
 .. figure:: /_static/portal_tut05_step02f.png
     :name: portal_tut05_step02f
