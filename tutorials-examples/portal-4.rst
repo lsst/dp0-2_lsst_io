@@ -233,9 +233,9 @@ Choose green for g-band and orange for r-band.
 Notice that it is possible to change which trace is “in front” using the drop-down menu to the left of the magnifying glass icon. 
 Bring the g-band trace to the front.
 
-.. figure:: /_static/portal_tut04_step04e.png
-        :width: 300
-	:name: portal_tut04_step04e
+.. figure:: /_static/portal_tut04_step04_06.png
+	:width: 300
+	:name: portal_tut04_step04_06
 	:alt: A screenshot of the final histogram, showing both r-band and g-band magnitude distributions.
 
 Step 5.  Restrict all plots to objects near the rich cluster
