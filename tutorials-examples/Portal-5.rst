@@ -47,7 +47,7 @@ Step 1. Plot a single-band lightcurve
 
 This first step is a repeat of Portal Tutorial 02, and can be skipped.
 
-1.1. Log in to the Portal Aspect of the Rubin Science Platform.  
+1.1. Log in to the Portal Aspect of the Rubin Science Platform, and select "DP0.2 Catalogs" tab.  
 
 1.2. At upper right on the main Portal user interface, click "Edit ADQL" to switch to the ADQL query view.
 (In the figure below, see the red arrow labeled number one).
@@ -92,31 +92,36 @@ forced photometry is negative
 (e.g., rare cases where the source is faint or gone *and* in a region of slightly oversubtracted sky background).
 It is only ever fully safe to use this function when using ``SNR > 5`` *detections* in PVIs.
 
-1.4. Click "Search". (In the figure above, see the red arrow labeled number two).  
+1.4. Click "Search".  
 
-1.5. In the results view, see that the query has returned forced flux measurements in the table (bottom of the figure below).
-To plot the lightcurve instead of the default xy plot of RA vs. Dec, open the plot parameters pop-up window by clicking on 
-the settings icon (double gears, as the red arrow points in the figure below).  
+1.5. In the results view, see that the query has returned forced flux measurements in the table (right hand side of the figure below), and the "coverage" panel on the left-hand side.  
+To plot the lightcurve instead of the "coverage" image, click on the "Active Chart" tab.  
+
+1.6.  The defalt plot will be the dec vs. RA (the plotting defaults to plot the data in the two leftmost columns of the table).  
+To change the plot, open the plot parameters pop-up window by clicking on 
+the settings icon (a single gear above the plot window).  
 
 .. figure:: /_static/portal_tut05_step01b.png
     :name: portal_tut05_step01b
     :alt: A screenshot of the default results view that is returned for the query.
 
-1.6. Update the plot parameters as shown in the figure below.
+1.7. Update the plot parameters as shown in the figure below.
 Note that the grid line in the y-axis is selected.
-Click "Apply".
+Click "Apply".  
+Note how the grid lines in the y-axis illustrate that "off-peak" (non-detection) forced fluxes can be negative.  
 
 .. figure:: /_static/portal_tut05_step01c.png
     :width: 300
     :name: portal_tut05_step01c
     :alt: A screenshot of the plot parameters pop-up window, with the parameters set to display the i-band lightcurve.
-    
-1.7. Remove the sky image panel of the results view by clicking on the "Bi-view Tables" button at upper right in the figure below.
-Note how the grid lines in the y-axis illustrate that "off-peak" (non-detection) forced fluxes can be negative.  
+
+**Plot parameters selection in the pop-up window, set to display the i-band lightcurve**
 
 .. figure:: /_static/portal_tut05_step01d.png
     :name: portal_tut05_step01d
-    :alt: A screenshot of the results view showing only the table and the i-band lightcurve.
+    :alt: A screenshot of the results view showing the table and the i-band lightcurve.
+
+**Results view showing the table and the i-band light curve**
     
 1.8.  Restrict the x-axis (MJD range) to only show the lightcurve around the dates of peak brightness:
 reopen the plot parameters pop-up window, and under Chart Options set the ``X Min`` to be 930 and ``X Max`` to be 1010.
@@ -124,7 +129,9 @@ The result can be directly compared to the lightcurve in Portal Tutorial 2.
 
 .. figure:: /_static/portal_tut05_step01e.png
     :name: portal_tut05_step01e
-    :alt: A screenshot of the results view in which the lightcurve date range has been limited.
+    :alt: A screenshot of the results view in which the lightcurve date range has been limited
+
+**Light curve of the supernova over the limited date range, around the time of the presumed explosion**
     
 **Note:** A statistical analysis of the lightcurve (e.g., goodness-of-fit to a template; timeseries features) is currently not possible
 in the Portal, and should be done in the Notebook Aspect.
