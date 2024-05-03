@@ -191,9 +191,9 @@ completeness of a population of galaxies.
 4.1. Add a new plot. At upper right, click on the double-gears icon and select “Add New Chart” in the "Plot Parameters" pop-up window. 
 Select a Plot Type of "Histogram" from the drop-down menu, and set the other boxes to match the screenshot below. 
 
-.. figure:: /_static/portal_tut04_step04a.png
-        :width: 300
-	:name: portal_tut04_step04a
+.. figure:: /_static/portal_tut04_step04_01.png
+	:width: 300
+	:name: portal_tut04_step04_01
 	:alt: A screenshot of the plot parameters pop-up window showing how the parameters should be set to create the histogram.
 
 4.2. Notice the histogram options available. 
