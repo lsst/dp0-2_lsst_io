@@ -50,7 +50,7 @@ This first step is a repeat of Portal Tutorial 02, and can be skipped.
 1.1. Log in to the Portal Aspect of the Rubin Science Platform, and select "DP0.2 Catalogs" tab.  
 
 1.2. At upper right on the main Portal user interface, click "Edit ADQL" to switch to the ADQL query view.
-(In the figure below, see the red arrow labeled number one).
+(In the figure below, see the red arrow).
 Clear the content of the ADQL query box, if it is not empty.  
 
 .. figure:: /_static/portal_tut05_step01a.png
@@ -94,16 +94,20 @@ It is only ever fully safe to use this function when using ``SNR > 5`` *detectio
 
 1.4. Click "Search".  
 
-1.5. In the results view, see that the query has returned forced flux measurements in the table (right hand side of the figure below), and the "coverage" panel on the left-hand side.  
-To plot the lightcurve instead of the "coverage" image, click on the "Active Chart" tab.  
-
-1.6.  The defalt plot will be the dec vs. RA (the plotting defaults to plot the data in the two leftmost columns of the table).  
-To change the plot, open the plot parameters pop-up window by clicking on 
-the settings icon (a single gear above the plot window).  
+1.5. Set the view of the "Results" panel by clicking on the "hamburger" icon "three horizontal lines on the top left).  
+Click on the double-arrow in the "Results Layout" box, and click on the "Coverage Charts Tables" box.  
+In the results view, see that the query has returned forced flux measurements in the table (right hand side of the figure below), and the "coverage" panel on the left-hand side.  
 
 .. figure:: /_static/portal_tut05_step01b.png
     :name: portal_tut05_step01b
     :alt: A screenshot of the default results view that is returned for the query.
+
+
+1.6.  To plot the lightcurve instead of the "coverage" image (default), click on the "Active Chart" tab.  
+The defalt plot will be the dec vs. RA (the plotting chart defaults to plot the data in the two leftmost columns of the table).  
+To change the plot, open the plot parameters pop-up window by clicking on 
+the settings icon (a single gear above the plot window).  
+
 
 1.7. Update the plot parameters as shown in the figure below.
 Note that the grid line in the y-axis is selected.
