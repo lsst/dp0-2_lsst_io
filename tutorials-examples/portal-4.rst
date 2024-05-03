@@ -108,8 +108,8 @@ So the fact that above, not all are marked with icons, is not an issue for conce
 (To view the results as shown on the screenshot below, you need to select "Bi-view Tables" on the upper right, 
 and click on the "Coverage" tab to bring it into view.)  
 
-.. figure:: /_static/portal_tut04_step02b.png
-	:name: portal_tut04_step02b
+.. figure:: /_static/portal_tut04_step02_03.png
+	:name: portal_tut04_step02_03
 	:alt: The sky image view of the galaxy cluster, with purple squares marking all objects within 0.03 degrees of the center.
 
 2.4. Delete the “< 0.03” constraint on the ``radial_offset`` column and press enter to reset the results view.
@@ -125,38 +125,45 @@ This type of plot is created below.
 
 3.1. On the right-hand part of your current display, click on the "Active Chart" tab.  
 Change the settings of the default xy plot of RA and Dec. 
-At upper right, click the double-gears (settings) icon to open the "Plot Parameters" pop-up window. 
+At upper right, click the single gear (settings) icon to open the "Plot Parameters" pop-up window. 
 Select “Overplot New Trace”, and fill in the boxes as shown below.
 
-.. figure:: /_static/portal_tut04_step03a.png
+.. figure:: /_static/portal_tut04_step03_01a.png
 	:width: 300
-	:name: portal_tut04_step03a
+	:name: portal_tut04_step03_01a
 	:alt: A screenshot of the plot parameters pop-up window showing how the parameters should be set to create the heatmap.
+
+.. figure:: /_static/portal_tut04_step03_01b.png
+	:width: 300
+	:name: portal_tut04_step03_01b
+	:alt: A screenshot of the initial plot with two heatmaps, the original coordinates heatmap and the color-magnitude heatmap.
 
 3.2. See that now the plot has both the color-magnitude diagram and the RA vs. Dec. 
 This is not very useful!  
 But, the purpose of showing this is to demonstrate the flexibility of the Portal’s plotting capabilities.
 
-.. figure:: /_static/portal_tut04_step03b.png
-	:name: portal_tut04_step03b
+.. figure:: /_static/portal_tut04_step03_02.png
+	:name: portal_tut04_step03_02
 	:alt: A screenshot of the initial plot with two heatmaps, the original coordinates heatmap and the color-magnitude heatmap.
 	
 3.3. Remove the default “trace 0” (RA vs. Dec) from the plot. 
-Click on the double-gears icon again.  In the pop-up window, with "Modify Trace" selected, from the "Choose Trace" drop-down menu 
-select "trace 0", and then from the top row choose "Remove Active Trace", and then click "Apply". 
+Click on the single gear icon and select "Remove Active Trace" in the drop-down menu, select "trace 0", then click "OK".
+
+.. figure:: /_static/portal_tut04_step03_03a.png
+	:name: portal_tut04_step03_03b
+	:alt: A screenshot of the color-magnitude heatmap in grayscale.
+
+
 Now, the “CMD” trace created in step 3.1 is the only one.
 
-.. figure:: /_static/portal_tut04_step03c.png
-	:name: portal_tut04_step03c
+.. figure:: /_static/portal_tut04_step03_03b.png
+	:name: portal_tut04_step03_03b
 	:alt: A screenshot of the color-magnitude heatmap in grayscale.
 	
-3.4. Change the grey-scale color palette to something more exciting. 
-Click on the double-gears icon again and in the drop-down menu next to “Color Scale” choose “YlOrRd”. 
+3.4. Change the color palette by  
+Clicking on the single gears icon again and in the drop-down menu next to “Color Scale” choose from a number of color options. 
 Notice that the color bar at right has the name of the trace, “CMD”, and represents the number of objects per 2-dimensional bin.
 
-.. figure:: /_static/portal_tut04_step03d.png
-	:name: portal_tut04_step03d
-	:alt: A screenshot of the color-magnitude heatmap in yellow-orange-red color scale.
 
 3.5. Interact with the plot. 
 At upper right, select the magnifying glass with the + sign icon and click-and-drag over the data to zoom in on a small area. 
