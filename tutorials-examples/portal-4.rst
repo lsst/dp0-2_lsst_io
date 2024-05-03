@@ -79,8 +79,8 @@ These conditions will return only bright, deblended, extended objects (i.e., ind
 
 1.6. Set the “Row Limit” at the bottom of the page to 300,000, and click “Search” in the lower left corner.  
 
-.. figure:: /_static/portal_tut04_step01_06.png
-	:name: portal_tut04_step01_06
+.. figure:: /_static/portal_tut_04_step01_06.png
+	:name: portal_tut_04_step01_06
 	:alt: Screenshot of the Portal Aspect's ADQL query entry page, showing the query given above pasted into the query box and the Search button at lower left.
 
 
