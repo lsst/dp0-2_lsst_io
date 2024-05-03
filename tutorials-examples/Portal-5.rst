@@ -50,7 +50,7 @@ This first step is a repeat of Portal Tutorial 02, and can be skipped.
 1.1. Log in to the Portal Aspect of the Rubin Science Platform, and select "DP0.2 Catalogs" tab.  
 
 1.2. At upper right on the main Portal user interface, click "Edit ADQL" to switch to the ADQL query view.
-(In the figure below, see the red arrow).
+(In the figure below, see the red arrow.)  
 Clear the content of the ADQL query box, if it is not empty.  
 
 .. figure:: /_static/portal_tut05_step01a.png
