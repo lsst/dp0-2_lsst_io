@@ -215,8 +215,8 @@ at upper right.
 In the "Plot Parameters" pop-up window, select “Overplot New Trace”, fill out the remaining boxes as shown below (notice that the 
 option to log the y-axis has been selected), and click “OK”.
 
-.. figure:: /_static/portal_tut04_step04c.png
-	:name: portal_tut04_step04c
+.. figure:: /_static/portal_tut04_step04_04.png
+	:name: portal_tut04_step04_04
 	:alt: A screenshot of the plot parameters pop-up window showing how to overplot a new trace and add the r-band histogram.
 
 4.5. Update the trace names and colors. 
