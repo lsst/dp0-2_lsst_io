@@ -214,10 +214,9 @@ data included in the plot: x-axis value, y-axis value, and the ``bands_ascii`` v
     :alt: A screenshot of the results table and the multi-band lightcurve with points colored by band.
     
 2.8. Restrict the multi-band lightcurve back down to a single filter without redoing the ADQL query.
-Apply a filter to the ``band`` column of the table by entering ``= 'r'`` into the box below the header row (top of the column), 
-and press enter (or return) on the keyboard (see the table view figure below).
-Do it again for ``= 'g'``, and notice that the points are different, but are green both times.
-The point colors are not assigned in an absolute sense, but rather the color scaling is reapplied every time the plot changes.
+Apply a single ``r`` filter by clicking on the drop-down arrow in the ``band`` column header, adding a check-mark by the ``r`` entry, and clicking on "Apply."  
+Do it again for ``g``, and notice that additional points appear, in different colors.  
+You can check or uncheck as many filters as you wish.  
 
 2.9. Restrict the multi-band lightcurve to two filters by entering ``= 'r' or 'i'``. 
 See how the point colors are orange and mauve (as in the figure below). 
