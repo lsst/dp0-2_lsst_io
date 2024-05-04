@@ -192,7 +192,7 @@ Set the "Data Type" to long, then click on "Add column", as shown in the figure 
 **Parameters for the new column, needed to plot different filter bands in different colors**
 
 2.5. In the results view, see the new column in a numeric format: the corresponding ASCII value of the character in the ``band`` column.
-In the figure below, the new column named ``bands_ascii`` is marked with a red arrow
+In the figure below, the new column named ``bands_ascii`` is marked with a red arrow.  
 
 .. figure:: /_static/portal_tut05_step02c.png
     :name: portal_tut05_step02c
