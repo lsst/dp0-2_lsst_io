@@ -145,7 +145,7 @@ in the Portal, and should be done in the Notebook Aspect.
 Step 2.  Plot a multi-band lightcurve
 =====================================
 
-**WARNING:** The Portal does not yet have the built-in functionality to plot a multi-band lightcurve (i.e., to color lightcurve points
+**NOTE:** The Portal does not yet have the built-in functionality to plot a multi-band lightcurve (i.e., to color lightcurve points
 by their bandpass and add a legend).
 What follows is a demonstration of a temporary work-around for Portal users: convert the band (u, g, r, i, z, or y) into an
 ASCII value (e.g., 121, 114, 105) and then set a colorbar for the points based on these values.
