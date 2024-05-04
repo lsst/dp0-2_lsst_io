@@ -167,7 +167,7 @@ so that data for all bands will be returned.
    WHERE fsodo.diaObjectId = 1252220598734556212 
 
 2.2. Follow steps 1.4, 1.5, and 1.6 to plot the multi-band lightcurve with identical color markers for all bands. 
-The plot will appear as in the right hand side of the figure below. 
+The plot will appear as in the left hand side of the figure below. 
 Note that there are many more points on the new plot, because all bands are included instead of just i-band.
 
 2.3. The work-around to plot the measurements in various bands in different colors is to convert the band (u, g, r, i, z, or y) into an ASCII value (e.g., 121, 114, 105).  
@@ -178,6 +178,8 @@ To add a new column, click the 5th icon in the results table (the vertical recta
     :name: portal_tut05_step02a
     :alt: The results view table, with a red arrow pointing to the icon to add a column.
 
+**Multi-band light curve of a supernova with symbols for all bands plotted in the same color**
+
 2.4. In the "Add a column" pop-up window, enter a name for the new column (``bands_ascii``) and the expression to convert
 the character in column ``band`` into its ASCII value: ``ascii("band")``. 
 Set the "Data Type" to long, then click on "Add column", as shown in the figure below.  
@@ -187,23 +189,28 @@ Set the "Data Type" to long, then click on "Add column", as shown in the figure 
     :name: portal_tut05_step02b
     :alt: A screenshot of the pop-up window for adding a new column that is the ascii for the band.
 
+**Parameters for the new column, needed to plot different filter bands in different colors**
+
 2.5. In the results view, see the new column in a numeric format: the corresponding ASCII value of the character in the ``band`` column.
-In the figure below, the new column named ``bands_ascii`` is marked with a red arrow labeled with the number one.
+In the figure below, the new column named ``bands_ascii`` is marked with a red arrow
 
 .. figure:: /_static/portal_tut05_step02c.png
     :name: portal_tut05_step02c
     :alt: A screenshot of the results view page showing a new column named bands_ascii.
 
+**New column in the table, resulting from the step above**
+
 2.6. Set the colorbar for the points based on the values in the new column ``bands_ascii``. 
-Open the "Plot Parameters" pop-up window by clicking on the settings icon 
-(marked with a red arrow labeled with the number two in the figure above).
-Under "Trace Options" "bands_ascii" for the "Color Map" and "Rainbow" for the "Color Scale", as shown in the figure below.
+Open the "Plot Parameters" pop-up window by clicking on the settings icon (single gear in the plot panel).
+Under "Trace Options" enter "bands_ascii" for the "Color Map" and "Rainbow" for the "Color Scale", as shown in the figure below.
 Click "Apply".
 
 .. figure:: /_static/portal_tut05_step02d.png
     :width: 300
     :name: portal_tut05_step02d
     :alt: A screenshot of the plot parameters pop-up window that shows the trace options set for a rainbow colorscale based on the new column of ascii values.
+
+**Plot parameters to enable the view multi-band supernova light curve in distinct colors**
 
 2.7. View the new version of the lightcurve with the points colored by band, as in the figure below.
 Use the mouse to hover-over points in the plot, and notice that the pop-up info box for a given point includes only the
@@ -212,18 +219,20 @@ data included in the plot: x-axis value, y-axis value, and the ``bands_ascii`` v
 .. figure:: /_static/portal_tut05_step02e.png
     :name: portal_tut05_step02e
     :alt: A screenshot of the results table and the multi-band lightcurve with points colored by band.
+
+**Multi-band lightcurve of the supernova with points colored by band**
     
 2.8. Restrict the multi-band lightcurve back down to a single filter without redoing the ADQL query.
 Apply a single ``r`` filter by clicking on the drop-down arrow in the ``band`` column header, adding a check-mark by the ``r`` entry, and clicking on "Apply."  
 Do it again for ``g``, and notice that additional points appear, in different colors.  
 You can check or uncheck as many filters as you wish.  
 
-2.9. Restrict the multi-band lightcurve to two filters by entering ``= 'r' or 'i'``. 
-See how the point colors are in two colors (as in the figure below). 
 
 .. figure:: /_static/portal_tut05_step02f.png
     :name: portal_tut05_step02f
     :alt: A screenshot of the results table and a two-band lightcurve.
+
+**Supernova light curve in two filters, as selected in the drop-down menu**
 
 **Note:** While not being able to choose your own symbols or colors for data points on the plot is a temporary drawback
 of the Portal, the future releases will bring improved functionality.
