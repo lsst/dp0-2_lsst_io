@@ -243,8 +243,8 @@ Step 5.  Restrict all plots to objects near the rich cluster
 
 5.1. View the sky image, the color-magnitude diagram, and the apparent magnitude histograms for the full set of returned objects.
 
-.. figure:: /_static/portal_tut04_step05a.png
-	:name: portal_tut04_step05a
+.. figure:: /_static/portal_tut04_step05_01.png
+	:name: portal_tut04_step05_01
 	:alt: A screenshot of the portal's results view showing both the color-magnitude heatmap and the magnitude histograms for all galaxies returned by the original search.
 
 5.2. Restrict the results to only those objects within < 0.05 degrees of the cluster center by entering “< 0.05” into the constraints 
@@ -254,8 +254,8 @@ The CMD (center) shows the red sequence of cluster galaxies, and the histogram (
 in the cluster. 
 Cool!
 
-.. figure:: /_static/portal_tut04_step05b.png
-	:name: portal_tut04_step05b
+.. figure:: /_static/portal_tut04_step05_02.png
+	:name: portal_tut04_step05_02
 	:alt: A screenshot of the portal's results view showing both the color-magnitude heatmap and the magnitude histograms for all galaxies within 0.03 degrees of the original search coordinates.
 
 Step 6.  Exercises for the learner
