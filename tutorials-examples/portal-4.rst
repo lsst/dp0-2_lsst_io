@@ -161,7 +161,7 @@ Now, the “CMD” trace created in step 3.1 is the only one.
 	:alt: A screenshot of the color-magnitude heatmap in grayscale.
 	
 3.4. Change the color palette by  
-Clicking on the single gears icon again and in the drop-down menu next to “Color Scale” choose from a number of color options. 
+clicking on the single gears icon again and in the drop-down menu next to “Color Scale” choose from a number of color options. 
 Notice that the color bar at right has the name of the trace, “CMD”, and represents the number of objects per 2-dimensional bin.
 
 
