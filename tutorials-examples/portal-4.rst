@@ -89,7 +89,7 @@ These conditions will return only bright, deblended, extended objects (i.e., ind
 Step 2.  Explore the default results view
 ==========================================
 
-2.1. The above query should have returned 229,570 objects and the default results “tri-view” interface should look approximately like 
+2.1. The above query should have returned 229,570 objects and the default results interface should look approximately like 
 the figure below, with the sky image at left, a default xy plot of Dec vs. RA at right, and the tabular results along the bottom.
 
 2.2. In the sky image at upper left, click on the magnifying glass icon with the + sign a couple of times.
@@ -116,8 +116,8 @@ and click on the "Coverage" tab to bring it into view.)
 
 .. _DP0-2-Portal-Histogram-Step-3:
 
-Step 3.  Change the heatmap to a color-magnitude diagram
-========================================================
+Step 3.  Change a heatmap illustrating a color-magnitude diagram
+================================================================
 
 Galaxy color-magnitude diagrams (CMDs) are a standard and widely-used diagnostic plot type, and use of the g-r color 
 vs. g-band magnitude are standard choices for axes. 
