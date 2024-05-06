@@ -188,7 +188,7 @@ Step 4.  Add a plot showing histograms of apparent magnitude
 Distributions of apparent magnitude are another standard type of plot that gives an at-a-glance impression of the brightness and 
 completeness of a population of galaxies.
 
-4.1. Add a new plot. At upper right, click on the double-gears icon and select “Add New Chart” in the "Plot Parameters" pop-up window. 
+4.1. Add a new plot. At upper right of the right hand panel, click on the plus sign in a circle to add a new chart.
 Select a Plot Type of "Histogram" from the drop-down menu, and set the other boxes to match the screenshot below. 
 
 .. figure:: /_static/portal_tut04_step04_01.png
