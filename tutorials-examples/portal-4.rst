@@ -128,15 +128,12 @@ Change the settings of the default xy plot of RA and Dec.
 At upper right, click the single gear (settings) icon to open the "Plot Parameters" pop-up window. 
 Select “Overplot New Trace”, and fill in the boxes as shown below.
 
-.. figure:: /_static/portal_tut04_step03_01a.png
+.. figure:: /_static/portal_tut04_step03_01.png
 	:width: 300
-	:name: portal_tut04_step03_01a
+	:name: portal_tut04_step03_01
 	:alt: A screenshot of the plot parameters pop-up window showing how the parameters should be set to create the heatmap.
 
-.. figure:: /_static/portal_tut04_step03_01b.png
-	:width: 300
-	:name: portal_tut04_step03_01b
-	:alt: A screenshot of the initial plot with two heatmaps, the original coordinates heatmap and the color-magnitude heatmap.
+
 
 3.2. See that now the plot has both the color-magnitude diagram and the RA vs. Dec. 
 This is not very useful!  
