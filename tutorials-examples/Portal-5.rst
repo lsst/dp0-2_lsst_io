@@ -57,6 +57,8 @@ Clear the content of the ADQL query box, if it is not empty.
     :name: portal_tut05_step01a
     :alt: A screenshot of the ADQL Query view of the Portal user interface.
 
+**RSP Portal aspect with "DP0.2 catalogs" selected.**
+
 **1.3.** In the ADQL Query box, enter the query as below.
 This query will retrieve the coordinates, DIA object identifier, CCD visit identifier, band, and forced difference-image flux 
 and its error for all rows of the ``ForcedSourceOnDiaObjects`` table which are associated with the ``diaObject`` of interest,
@@ -101,6 +103,8 @@ In the results view, see that the query has returned forced flux measurements in
 .. figure:: /_static/portal_tut05_step01b.png
     :name: portal_tut05_step01b
     :alt: A screenshot of the default results view that is returned for the query.
+
+**Screenshot illustrating the results of the query, with the selection of "coverage" on the left, and "table" on the right.**
 
 
 **1.6.**  To plot the lightcurve instead of the "coverage" image (default), click on the "Active Chart" tab.  
