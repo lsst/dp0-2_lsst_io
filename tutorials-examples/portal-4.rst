@@ -42,9 +42,9 @@ For more information about the DP0.2 catalogs, tables, and columns, visit the DP
 Step 1.  Execute the ADQL query
 ===============================
 
-1.1.  Log into the Portal Aspect.  
+1.1.  Log into the Portal Aspect then click on the "DP0.2 Catalogs" Tab in the top menu.
 
-1.2. By default, you will see the "UI assisted" view.  On the upper right, click on "Edit ADQL."  
+1.2. By default, you will see the "UI assisted" view on the upper right, click on "Edit ADQL."  
 
 1.3. Enter the following ADQL code into the “ADQL Query” box:  
 
