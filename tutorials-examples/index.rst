@@ -64,6 +64,7 @@ The tutorials below are step-by-step demonstrations of how to use the Portal Asp
     :glob:
 
     portal-beginner
+    portal-beginner-ES
     portal-intermediate
     portal-images
     portal-4
@@ -87,6 +88,7 @@ which appears in all users' home directories.
 **List of Notebook tutorials:**
 See the repository's `README file <https://github.com/rubin-dp0/tutorial-notebooks/blob/main/README.md>`_ for the most up-to-date
 list of available tutorials with descriptions.
+Spanish-language Jupyter Notebook tutorials have filenames ending in "ES.ipynb". 
 
 .. toctree::
     :titlesonly:
@@ -106,6 +108,7 @@ Much of the contents of the tutorial notebooks (above) can also be executed via 
     :glob:
 
     cmdline-beginner
+    cmdline-beginner-ES
     cmdline-custom-coadd
 
 
@@ -134,7 +137,42 @@ The tutorials below are step-by-step demonstrations of how to use the API Aspect
     :glob:
 
     api-topcat-beginner
-    
+
+
+
+.. _DP0-2-Tutorials-ES:
+
+Spanish-language tutorials
+==========================
+
+**Credit:** The Argentinian International In-Kind Program team, in particular Dante Paz, Carolina Villalón, and Marco Augusto Rocchietti,
+have translated several DP0.2 tutorials into Spanish.
+
+**Portal tutorials**
+
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    portal-beginner-ES
+
+
+**Notebook tutorials**
+
+The introductory DP0.2 Notebook tutorial (DP02_01_Introduccion_a_DP02_ES.ipynb) is available in the
+`tutorial-notebooks repository <https://github.com/rubin-dp0/tutorial-notebooks>`_ repository.
+
+`Introduccion a DP0.2 <https://dp0-2.lsst.io/_static/nb_html/DP02_01_Introduccion_a_DP02_ES.html>`_ 
+
+
+**Command-line tutorials**
+
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    cmdline-beginner-ES
+
 
 
 .. _DP0-2-Tutorials-Contributed:
