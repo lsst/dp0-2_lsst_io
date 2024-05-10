@@ -84,6 +84,8 @@ These conditions will return only bright, deblended, extended objects (i.e., ind
 	:alt: Screenshot of the Portal Aspect's ADQL query entry page, showing the query given above pasted into the query box and the Search button at lower left.
 
 
+**Portal ADQL query entry page**
+
 .. _DP0-2-Portal-Histogram-Step-2:
 
 Step 2.  Explore the default results view
@@ -102,6 +104,8 @@ However, not all returned objects are shown with markers in the sky image.
 	:name: portal_tut04_step02_02
 	:alt: Screenshot of the default results view that appears after clicking the search button.
 
+**Screenshot of default results view**
+
 2.3. In the table view, add a constraint of "radial_offset < 0.03" as shown below and hit return, and see how the sky image plot updates 
 to show that all extended members of the rich galaxy cluster were returned by the query (below).  
 So the fact that above, not all are marked with icons, is not an issue for concern.  
@@ -109,6 +113,8 @@ So the fact that above, not all are marked with icons, is not an issue for conce
 .. figure:: /_static/portal_tut04_step02_03.png
 	:name: portal_tut04_step02_03
 	:alt: The sky image view of the galaxy cluster, with purple squares marking all objects within 0.03 degrees of the center.
+
+**Sky image view of the galaxy cluster**
 
 2.4. Delete the “< 0.03” constraint on the ``radial_offset`` column and press enter to reset the results view.
 
@@ -131,7 +137,7 @@ Select “Overplot New Trace”, and fill in the boxes as shown below.
 	:name: portal_tut04_step03_01
 	:alt: A screenshot of the plot parameters pop-up window showing how the parameters should be set to create the heatmap.
 
-
+**Plot parameters pop-up window**
 
 3.2. See that now the plot has both the color-magnitude diagram and the RA vs. Dec. 
 This is not very useful!  
@@ -140,20 +146,26 @@ But, the purpose of showing this is to demonstrate the flexibility of the Portal
 .. figure:: /_static/portal_tut04_step03_02.png
 	:name: portal_tut04_step03_02
 	:alt: A screenshot of the initial plot with two heatmaps, the original coordinates heatmap and the color-magnitude heatmap.
+
+**Intial plot with two heatmaps**
 	
 3.3. Remove the default “trace 0” (RA vs. Dec) from the plot. 
 Click on the single gear icon and select "Remove Active Trace" in the drop-down menu, select "trace 0", then click "OK".
 
 .. figure:: /_static/portal_tut04_step03_03a.png
 	:name: portal_tut04_step03_03b
-	:alt: A screenshot of the color-magnitude heatmap in grayscale.
+	:alt: A screenshot of how to remove a trace.
+
+**Screenshot to remove a trace**
 
 
 Now, the “CMD” trace created in step 3.1 is the only one.
 
 .. figure:: /_static/portal_tut04_step03_03b.png
 	:name: portal_tut04_step03_03b
-	:alt: A screenshot of the color-magnitude heatmap in grayscale.
+	:alt: A screenshot of the color-magnitude heatmap in default.
+
+**Default color scheme of CMD trace**
 	
 3.4. Change the color palette by  
 clicking on the single gears icon again and in the drop-down menu next to “Color Scale” choose from a number of color options. 
@@ -191,6 +203,8 @@ Select a Plot Type of "Histogram" from the drop-down menu, and set the other box
 	:name: portal_tut04_step04_01
 	:alt: A screenshot of the plot parameters pop-up window showing how the parameters should be set to create the histogram.
 
+**Plot parameters pop-up window for creating a histogram**
+
 4.2. Notice the histogram options available. 
 In this demo, as shown above, a “Uniform binning” is used instead of “Bayesian blocks” (quantiles defined by the data itself); 
 a set bin width of 0.2 mag is selected; and the minimum and maximum values are defined. 
@@ -204,6 +218,8 @@ Object table) goes deeper than 25th mag, no turn-over due to detection incomplet
 	:name: portal_tut04_step04_03
 	:alt: A screenshot of the portal's results view showing both the color-magnitude heatmap and the magnitude histogram.
 
+**Color-magnitude heatmap and magnitude historgram**
+
 4.4. Add the r-band apparent magnitude distribution to the new plot. 
 With the right-most plot selected (click on plot to select plot; selected plot has an orange outline), click on the single gear icon 
 at upper right. 
@@ -213,6 +229,8 @@ option to log the y-axis has been selected), and click “OK”.
 .. figure:: /_static/portal_tut04_step04_04.png
 	:name: portal_tut04_step04_04
 	:alt: A screenshot of the plot parameters pop-up window showing how to overplot a new trace and add the r-band histogram.
+
+**Over plot trace and add r-band histogram**
 
 4.5. Update the trace names and colors. 
 The default colors used for g-band and r-band are inappropriate, and the g-band trace is still named “trace 0”. 
@@ -224,14 +242,20 @@ Choose green for g-band and orange for r-band.
 	:name: portal_tut04_step04_05
 	:alt: A screenshot of the plot parameters and color picker pop-up windows showing how to adjust the visual aspects of the histograms.
 
+**Color picker pop-up window**
+
 4.6. Review the final plot. 
 Notice that it is possible to change which trace is “in front” using the drop-down menu to the left of the magnifying glass icon. 
+
+
 Bring the g-band trace to the front.
 
 .. figure:: /_static/portal_tut04_step04_06.png
 	:width: 300
 	:name: portal_tut04_step04_06
 	:alt: A screenshot of the final histogram, showing both r-band and g-band magnitude distributions.
+
+**Final histogram**
 
 Step 5.  Restrict all plots to objects near the rich cluster
 ============================================================
@@ -241,6 +265,8 @@ Step 5.  Restrict all plots to objects near the rich cluster
 .. figure:: /_static/portal_tut04_step05_01.png
 	:name: portal_tut04_step05_01
 	:alt: A screenshot of the portal's results view showing both the color-magnitude heatmap and the magnitude histograms for all galaxies returned by the original search.
+
+**Screenshot of results view**
 
 5.2. Restrict the results to only those objects within < 0.05 degrees of the cluster center by entering “< 0.05” into the constraints 
 box for the ``radial_offset`` column and clicking enter. 
@@ -252,6 +278,8 @@ Cool!
 .. figure:: /_static/portal_tut04_step05_02.png
 	:name: portal_tut04_step05_02
 	:alt: A screenshot of the portal's results view showing both the color-magnitude heatmap and the magnitude histograms for all galaxies within 0.03 degrees of the original search coordinates.
+
+**Results within 0.03 degrees of the original search coordinates**
 
 Step 6.  Exercises for the learner
 ==================================
