@@ -102,11 +102,9 @@ However, not all returned objects are shown with markers in the sky image.
 	:name: portal_tut04_step02_02
 	:alt: Screenshot of the default results view that appears after clicking the search button.
 
-2.3. In the table view, add a constraint of "radial_offset < 0.03" as shown below, and see how the sky image plot updates 
+2.3. In the table view, add a constraint of "radial_offset < 0.03" as shown below and hit return, and see how the sky image plot updates 
 to show that all extended members of the rich galaxy cluster were returned by the query (below).  
 So the fact that above, not all are marked with icons, is not an issue for concern.  
-(To view the results as shown on the screenshot below, you need to select "Bi-view Tables" on the upper right, 
-and click on the "Coverage" tab to bring it into view.)  
 
 .. figure:: /_static/portal_tut04_step02_03.png
 	:name: portal_tut04_step02_03
@@ -185,7 +183,7 @@ Step 4.  Add a plot showing histograms of apparent magnitude
 Distributions of apparent magnitude are another standard type of plot that gives an at-a-glance impression of the brightness and 
 completeness of a population of galaxies.
 
-4.1. Add a new plot. At upper right of the right hand panel, click on the plus sign in a circle to add a new chart.
+4.1. Add a new plot. At upper left of the right hand panel, click on the plus sign in a circle to add a new chart.
 Select a Plot Type of "Histogram" from the drop-down menu, and set the other boxes to match the screenshot below. 
 
 .. figure:: /_static/portal_tut04_step04_01.png
@@ -198,7 +196,7 @@ In this demo, as shown above, a “Uniform binning” is used instead of “Baye
 a set bin width of 0.2 mag is selected; and the minimum and maximum values are defined. 
 However, users do have the option to instead choose the number of bins, and allow the bin size and the min/max values will be set automatically.
 
-4.3. Review the g-band apparent magnitude distribution. 
+4.3. Review the g-band magnitude. 
 Since the ADQL query only retrieved extended objects brighter than 25th magnitude, and the coadded images of DP0.2 (and thus the 
 Object table) goes deeper than 25th mag, no turn-over due to detection incompleteness is seen in the apparent magnitude distribution. 
 
@@ -207,7 +205,7 @@ Object table) goes deeper than 25th mag, no turn-over due to detection incomplet
 	:alt: A screenshot of the portal's results view showing both the color-magnitude heatmap and the magnitude histogram.
 
 4.4. Add the r-band apparent magnitude distribution to the new plot. 
-With the right-most plot selected (click on plot to select plot; selected plot has an orange outline), click on the double-gears icon 
+With the right-most plot selected (click on plot to select plot; selected plot has an orange outline), click on the single gear icon 
 at upper right. 
 In the "Plot Parameters" pop-up window, select “Overplot New Trace”, fill out the remaining boxes as shown below (notice that the 
 option to log the y-axis has been selected), and click “OK”.
