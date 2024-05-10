@@ -29,8 +29,14 @@ Log in to the Portal Aspect by clicking on the "Portal" panel of the main landin
 The Portal's user interface
 ===========================
 
+The Rubin Science Platform Portal Aspect has a variety of search functions that can access DP0.2 Images, DP0.2 Catalogs, and DP0.3 (Solar System only) Catalogs.  Within each of these is the ability to 
+use "UI assisted" searching or ADQL queries. 
+
+There are three types of queries that can be performed in the Rubin Science Platform Portal Aspect: :ref:`Portal-Intro-Image-Queries` from the "DP0.2 Images" tab, :ref:`Portal-Intro-Single-Table-Queries` 
+and :ref:`Portal-Intro-ADQL-Queries`, from the DP0.2 Catalogs tab. Each of these options has a different user interface, covered in the sections below.  
+
 **Try it:** Mouse-over text to view pop-up boxes with more detailed descriptions throughout the Portal interface.
-Click on any "settings" icons you see (double gears) to explore options.
+Click on any "settings" icons you see (single gear) to explore options.
 The Portal is a very powerful user interface with far more options than are covered in the introduction below.
 
 **Select TAP Service:**
