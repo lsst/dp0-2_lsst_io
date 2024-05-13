@@ -242,7 +242,7 @@ They take the form of sparse HEALPix maps, where the survey property at each spa
 Each map represents a `healsparse <https://healsparse.readthedocs.io/en/latest/>`_ map containing the value of an individual survey property, for a given band.
 Note that the DCR maps are proportionality maps; that is, the expected effect will be proportional to the value in the map with an arbitrary/empirically derived constant of proportionality.
 All survey property maps are available via the Butler.
-Find a demonstration of how to retrieve, display, and analyze survey property maps in `tutorial notebook <https://github.com/rubin-dp0/tutorial-notebooks>`_ "DP02_03c_Survey_Property_Maps.ipynb".
+Find a demonstration of how to retrieve, display, and analyze survey property maps in `tutorial notebook <https://github.com/rubin-dp0/tutorial-notebooks>`_.
 
 .. list-table:: Survey property maps available for DP0.2.
    :widths: 150 400
