@@ -70,7 +70,7 @@ its default "UI assisted".
 	:name: portal_tut01_step01_03
 	:alt: Check settings before setting up query. 
 	
-**Check settings.**
+**Check settings for this tutorial.**
  
 
 1.4. Next to "LSST DP0.2 DC2 Tables", ensure the Table Collection says "dp02_dc2_catalogs" (left drop-down menu) and the 
