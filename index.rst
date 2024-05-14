@@ -21,7 +21,7 @@ Vera C. Rubin Observatory Documentation for Data Preview 0.2 (DP0.2)
 .. This section should provide a brief, top-level description of the page.
 
 This site provides information about Rubin Observatory's Data Preview 0.2 (DP0.2),
-simulated LSST-like data products containing extragalactic and galactic objects .
+simulated LSST-like data products containing extragalactic and galactic objects.
 
 For general information about the Data Preview 0 (DP0) program, see `dp0.lsst.io <https://dp0.lsst.io/index.html>`_.
 
