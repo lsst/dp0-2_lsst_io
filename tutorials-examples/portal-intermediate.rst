@@ -123,7 +123,6 @@ This query also uses the ccdVisitId to join to the CcdVisit table and obtain the
 **3.2.** Scroll down to 'Results Layout', and click the double arrow to get a selection of layouts for the result.  For this step in this tutorial, select "Tables/Coverage Charts" option. Toggle into "Active Chart" from "Coverage" on the tab in the right side image box.  The table on the right-hand side is likely to crowd your plotting area, especially when you are displaying multiple plots.  Expand the plotting area by clicking on the dividing line between the two windows and moving it to the left.  
 
 Use the settings icon (a gear at upper right) to open the plot parameters pop-up window, match those shown below, then click "Apply" and "Close".  
-screenshot of the first plot parameters popup (portal_tut02_step03a.png)
 
 .. figure:: /_static/portal_tut02_step03a.png
     :width: 300
@@ -137,8 +136,8 @@ screenshot of the first plot parameters popup (portal_tut02_step03a.png)
 **3.3.** View the i-band lightcurve for this SNIa.
 
 .. figure:: /_static/portal_tut02_step03b.png
-..    :name: portal_tut02_step03b
-..    :alt: Image of the i-band lightcurve for the supernova being investigated.
+    :name: portal_tut02_step03b
+    :alt: Image of the i-band lightcurve for the supernova being investigated.
 
 
 **The i-band lightcurve for the SNIa of interest.**
