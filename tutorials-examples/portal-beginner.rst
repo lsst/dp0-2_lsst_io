@@ -240,7 +240,7 @@ Use the same "Chart Options" except give it a different "Chart title", such as "
 **Above, we set the new chart parameters for a heatmap plot.**
 
 
-2.5. Click "Apply" and look at the new color-magnitude plot. Resize the "Active Charts" area to expand the plots and minimize the "Coverage" window.  For completeness, you might wish to update the title of the plot you generated previously to "Scatter Color-Magnitude Diagram."  
+2.5. Click "Okay" and look at the new color-magnitude plot. Resize the "Active Charts" area to expand the plots and minimize the "Coverage" window.  For completeness, you might wish to update the title of the plot you generated previously to "Scatter Color-Magnitude Diagram."  
 
 .. figure:: /_static/portal_tut01_step02_05.png
 	:name: portal_tut01_step02_05
