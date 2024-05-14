@@ -56,7 +56,7 @@ search DP02 catalogs using the Portal Aspect.
 
 .. figure:: /_static/portal_tut01_step01_02.png
 	:name: portal_tut01_step01_02
-	:alt: Click on the DP0.2 Catalog tab to take you to a portal catalog search. 
+	:alt: Click on the DP0.2 Catalog tab to take you to a portal catalog search by selecting the portal icon. 
 	
 **Location of tab for catalog search.**
  
