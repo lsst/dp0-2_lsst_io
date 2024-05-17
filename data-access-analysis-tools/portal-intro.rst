@@ -24,6 +24,8 @@ Log in to the Portal Aspect by clicking on the "Portal" panel of the main landin
 
 **New for DP0.2!** :ref:`Portal-Intro-Image-Queries`
 
+**Last verified to run:  
+
 .. _Portal-Intro-User-Interface:
 
 The Portal's user interface
