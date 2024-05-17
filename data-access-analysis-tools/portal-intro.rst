@@ -37,7 +37,14 @@ Clicking on the respective tab will allow you to work with any of those image / 
 Within each tab, there are multiple types of queries that can be performed.  
 Within those three choices above, there is the ability to use "UI assisted" searching or ADQL queries. 
 Each of these options has a different user interface, covered in the sections below.  
+The fourth tab allows you to upload your own images or tables, but its use is more advanced and will not be covered here.  
 
+.. figure:: /_static/portal_intro_DP02a.png
+    :name: portal_default_view_DP02
+    :alt: Screenshot of the default view of the rubin science platform portal interface for single table queries. From this window the user can select the type of search, tables to search, 
+    	select various constraints, and can select the number of rows to return.  
+
+    The default view of the Portal's user interface for UI assisted queries.
 
 .. :ref:`Portal-Intro-Image-Queries` from the "DP0.2 Images" tab, :ref:`Portal-Intro-Single-Table-Queries` and :ref:`Portal-Intro-ADQL-Queries`, from the DP0.2 Catalogs tab. 
 
@@ -60,12 +67,7 @@ UI assisted (Single Table)
 
 The default query type, and default user interface, is for "UI assisted" queries.
 
-.. figure:: /_static/portal_intro_DP02a.png
-    :name: portal_default_view_DP02
-    :alt: Screenshot of the default view of the rubin science platform portal interface for single table queries. From this window the user can select the type of search, tables to search, 
-    	select various constraints, and can select the number of rows to return.  
 
-    The default view of the Portal's user interface for UI assisted queries.
     
 **Select Table**: Drop down menus of available tables.
 For DP0.2 data, choose the "Table Collection (Schema): dp02_dc2_catalogs" in the left drop-down menu.
