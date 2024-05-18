@@ -38,6 +38,8 @@ Within each tab, there are multiple types of queries that can be performed.
 Within those three choices above, there is the ability to use "UI assisted" searching or ADQL queries. 
 Each of these options has a different user interface, covered in the sections below.  
 The fourth tab allows you to upload your own images or tables, but its use is more advanced and will not be covered here.  
+The leftmost tab marked as "Results" will contain the result of your query.  
+If you execute several queries, the results of those queries will appeas as separate sub-tabs in the "Results" tab.  
 
 .. figure:: /_static/portal_intro_DP02a.png
     :name: portal_default_view_DP02
@@ -52,12 +54,18 @@ The fourth tab allows you to upload your own images or tables, but its use is mo
 Click on any "settings" icons you see (single gear) to explore options.
 The Portal is a very powerful user interface with far more options than are covered in the introduction below.
 
-**Select TAP Service:**
-Leave the default (https://data.lsst.cloud/api/tap) to access DP0.2 data.
+.. **Select TAP Service:**
+.. Leave the default (https://data.lsst.cloud/api/tap) to access DP0.2 data.
+
+Sample query of one of the the DP0.2 catalogs
+=============================================
 
 **Select Query Type**
-There are three types of queries: :ref:`Portal-Intro-Single-Table-Queries` and :ref:`Portal-Intro-ADQL-Queries` in "View", and :ref:`Portal-Intro-Image-Queries` under "LSST DP0.2 DC2 Tables".
+Within each of the three main choices on the landing page of the Portal, you have two types of queries: "UI Assisted" (amounting to single-table queries), or "ADQL Queries".  
+Once you selected the choice of data repository, you can select either to conduct your query.  
 Each of these options has a different user interface, covered in the sections below.
+
+.. :ref:`Portal-Intro-Single-Table-Queries` and :ref:`Portal-Intro-ADQL-Queries` in "View", and :ref:`Portal-Intro-Image-Queries` under "LSST DP0.2 DC2 Tables".
 
 
 .. _Portal-Intro-Single-Table-Queries:
