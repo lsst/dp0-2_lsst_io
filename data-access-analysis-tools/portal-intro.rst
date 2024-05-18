@@ -61,8 +61,9 @@ Sample query of one of the the DP0.2 catalogs
 =============================================
 
 **Select Query Type**
-The default landing page will be "DP0.2 Catalogs."  
-There, you have two types of queries: "UI Assisted" (amounting to single-table queries), or "ADQL Queries".  
+The default landing page will be the one for "DP0.2 Catalogs."  
+There, you have two types of queries: "UI Assisted" (amounting to single-table queries - default), or "ADQL Queries".  
+
 Once you selected the choice of data repository, you can select either to conduct your query.  
 Each of these options has a different user interface, covered in the sections below.
 
