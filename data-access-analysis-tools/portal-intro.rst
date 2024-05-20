@@ -145,9 +145,9 @@ The search might take a few moments.
 **Cancel**: It is possible to cancel a query while it is executing by clicking the "Cancel" button.
 
 **Results view**: The search results will populate the results view, as shown in the figure below.
-There are three icons that control the display layout at upper right: "Tri-view", "Bi-view Images", 
-and "Bi-view Tables".
-The default is "Tri-view", which is shown below, with a sky image at upper left.
+The display layout is controlled by the "hamburger" button (three horizontal lines) at upper left.  
+You can change the layout by clicking on this icon and then on tne "Results Layout" tab.  
+The screenshot below uses the "Coverage Charts Tables" choice with a sky image at upper left.
 The color-composite image shows the relevant DC2 simulated sky region.
 A default "active chart" of the sky coordinates appears at upper right, and the table of results along 
 the bottom.
