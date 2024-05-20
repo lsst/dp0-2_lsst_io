@@ -108,7 +108,7 @@ Remove filters and reset the table view at any time using the "Reset Column Sele
 **ADQL conversions**:
 If desired, convert UI assisted table view queries to "ADQL Queries" using the "Populate and edit ADQL" button at the bottom of the page.
 This can enable entering more complex constraints that cannot be expressed against individual columns.
-This will switch the user interface to the "Edit ADQL" view.  The searched using ADQL are described in more detail in the section Edit ADQL (advanced) below.  
+This will switch the user interface to the "Edit ADQL" view.  The searched using ADQL are described in more detail in the section "Edit ADQL (advanced)" below.  
 
 **Row limit**:
 The "Row Limit" in the bottom of the page can be changed to apply an upper bound to the number of rows returned.
