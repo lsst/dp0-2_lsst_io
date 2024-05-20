@@ -61,7 +61,7 @@ Sample query of one of the the DP0.2 catalogs
 =============================================
 
 **Select Query Type**
-The default landing page will be the one for "DP0.2 Catalogs."  
+The default landing page will be the one for "DP0.2 Catalogs" and we will begin with DP0.2 to get you started.  
 There, you have two types of queries: "UI Assisted" (amounting to single-table queries - default), or "ADQL Queries".  
 
 Once you selected the choice of data repository, you can select either to conduct your query.  
@@ -77,13 +77,10 @@ UI assisted (Single Table)
 
 The default query type, and default user interface, is for "UI assisted" queries.
 
-
-    
-**Select Table**: Drop down menus of available tables.
-For DP0.2 data, choose the "Table Collection (Schema): dp02_dc2_catalogs" in the left drop-down menu.
-The default table in the right drop-down menu is the Object table.
+**Select Table**: Once you click on the "DP0.2 Catalogs" tab, you can choose the table to work with by clicking the "up-down" arrow to show the available tables.
+The default table in the right drop-down menu is the Object table, and we will use this table for this introduction.  
 See the :ref:`DP0-2-Data-Products-DPDD` for table descriptions and schema.
-Notice how the table view at lower-right will automatically update to match the selected table.
+Notice how the table view at lower-right will automatically update to match the table selected by you (via clicking the "up-down" arrow).  
 
 **Enter Constraints**: For "Spatial" constraints, choose the desired shape type for a spatial search 
 ("Cone" or "Polygon"), and the appropriate instructions for the search terms will appear. For example, 
