@@ -164,9 +164,8 @@ There, you can execute another query by entering constraints and clicking "Searc
 without executing a new query).
 
 The new query's results will appear as a new tab in the table of the results view page.
-In the image above, you can see that this has been done, because the results view table has two tabs, and the 
-sky images show symbols with two different colors. Switching between table tabs will also cause the sky image and 
-active chart to switch to show the selected query results.
+In the image above, you can see that this has been done, because the results view table has three tabs. 
+Switching between table tabs will also cause the sky image and active chart to switch to show the selected query results.
 Delete the results for a given query by clicking on the x in the table tab.
 
 **Manipulating the plotted data and converting fluxes to magnitudes**:
