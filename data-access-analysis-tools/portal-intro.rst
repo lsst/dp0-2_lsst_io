@@ -169,7 +169,7 @@ Switching between table tabs will also cause the sky image and active chart to s
 Delete the results for a given query by clicking on the x in the table tab.
 
 **Manipulating the plotted data and converting fluxes to magnitudes**:
-To manipulate the plotted data, select the double gear "settings" icon above the active chart and a pop-up window 
+To manipulate the plotted data, select the single gear "settings" icon above the active chart and a pop-up window 
 will open (see the next figure). To create a color-magnitude diagram from the fluxes, for DP0.2 it is necessary 
 to apply the `standard conversion from nanojansky to AB magnitude <https://en.wikipedia.org/wiki/AB_magnitude>`_ 
 in the X and Y boxes as, e.g., "-2.5 * log10(g_calibFlux) + 31.4".
@@ -186,9 +186,10 @@ Add a chart title and label the axes, choose a point color, and click "Apply" an
     The plot settings pop-up window.
 
 At this point, additional cuts can be applied to the table data being plotted.
-In the figure below, the g-band flux is limited to >100, and this imposes a sharp cutoff in the y-axis values at 
-26.4 mag. Select "Bi-view Tables" to view only the plot and the table data.
-Notice how the corresponding plot point for the selected row in the table is differently colored, and that 
+In the figure below, the g-band flux is limited to >100 (via the constraint entered in the header of the column "g_calibFlux"), and this imposes a sharp cutoff in the y-axis values at 
+26.4 mag. 
+Convert the plot to "Tables Coverage Charts" using the "hamburger" menu at upper left and select only the "Active Chart" tab.  
+Click on any row in the table on the left, and notice how the corresponding plot point for the selected row in the table is differently colored, and that 
 hovering the mouse over the plotted data will show the x- and y-values in a pop-up window.
 
 .. figure:: /_static/portal_intro_DP02f.png
