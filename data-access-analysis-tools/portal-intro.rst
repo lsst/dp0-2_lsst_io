@@ -150,7 +150,7 @@ You can change the layout by clicking on this icon and then on tne "Results Layo
 The screenshot below uses the "Coverage Charts Tables" choice with a sky image at upper left.
 The color-composite image shows the relevant DC2 simulated sky region.
 A default "active chart" of the sky coordinates appears at upper right, and the table of results along 
-the bottom.
+the bottom.  Note that by default, the "active chart" displays the two leftmost columns in the table against each other.  
 
 .. figure:: /_static/portal_intro_DP02d.png
     :name: portal_search_results_DP02
@@ -159,9 +159,8 @@ the bottom.
 
     The default view of the search results.
 
-**Multiple queries and results**: From the results view page (see figure above), if you click on the "RSP 
-TAP Search" button at upper left you can go back to the query page and execute another query by entering 
-constraints and clicking "Search". (Click "Cancel" on the TAP search page to return to the results view 
+**Multiple queries and results**: From the results view page (see figure above), if you click on the "DP0.2 Catalogs" tab on top, you can go back to the query page.  
+There, you can execute another query by entering constraints and clicking "Search". (Click "Cancel" on the TAP search page to return to the results view 
 without executing a new query).
 
 The new query's results will appear as a new tab in the table of the results view page.
