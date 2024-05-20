@@ -82,23 +82,22 @@ The default table in the right drop-down menu is the Object table, and we will u
 See the :ref:`DP0-2-Data-Products-DPDD` for table descriptions and schema.
 Notice how the table view at lower-right will automatically update to match the table selected by you (via clicking the "up-down" arrow).  
 
-**Enter Constraints**: For "Spatial" constraints, choose the desired shape type for a spatial search 
+**Enter Constraints**: Check the box by "Spatial."  For "Spatial" constraints, choose the desired shape type for a spatial search 
 ("Cone" or "Polygon"), and the appropriate instructions for the search terms will appear. For example, 
-for cone search, "Coords or Obj Name" and "Radius" of search need to be entered. 
+for cone search, "Coordinates or Object Name" and "Radius" of search need to be entered. 
 
 Keeping the search area small will keep query times short and return manageable subsets of objects as you learn.
 It is recommended to start with 3 arcminutes.
 Note that the central (RA, Dec) coordinates for DC2, in decimal degrees, are: ``61.863 -35.790``.
 
-The longitude and latitude columns in "Position Columns" do automatically update to be the correct 
-column names for right ascension and declination for the selected table. If a non-existent column name
-is entered, the box will highlight red in indication of the error.
+The longitude and latitude columns in "Position Columns" do automatically update to be the correct column names for right ascension and declination for the selected table.  
+If a non-existent column name is entered, the box will highlight red in indication of the error.
 
 **The table view**:
-The table to the right of "Enter Constraints" enables users to apply additional search constraints on the columns in the selected catalog table.
-Some tables have a lot of data columns.
-Search for desired data columns by entering terms (e.g., ra, Flux, or flag) in the boxes underneath "Name" 
-and pressing "enter" in order to view data columns of interest to you.
+The table to the right of "Enter Constraints" enables users to apply additional search constraints on the columns in the selected catalog table.  
+Some tables have a lot of data columns.  
+Search for desired data columns by entering terms (e.g., ra, Flux, or flag) in the boxes underneath "Name" and pressing "enter" in order to view data columns of interest to you.  
+Entering, e.g. "ra" will return all rows containing "ra" in the name.  
 
 Use the checkboxes in the left-most column to select the data column names to be returned by the query.
 Use the funnel icon to filter the columns, and only view selected data column names.
@@ -109,7 +108,7 @@ Remove filters and reset the table view at any time using the "Reset Column Sele
 **ADQL conversions**:
 If desired, convert UI assisted table view queries to "ADQL Queries" using the "Populate and edit ADQL" button at the bottom of the page.
 This can enable entering more complex constraints that cannot be expressed against individual columns.
-This will switch the user interface to the "Edit ADQL" view.
+This will switch the user interface to the "Edit ADQL" view.  The searched using ADQL are described in more detail in the section Edit ADQL (advanced) below.  
 
 **Row limit**:
 The "Row Limit" in the bottom of the page can be changed to apply an upper bound to the number of rows returned.
