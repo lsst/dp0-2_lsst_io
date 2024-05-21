@@ -24,7 +24,7 @@ Log in to the Portal Aspect by clicking on the "Portal" panel of the main landin
 
 **New for DP0.2!** :ref:`Portal-Intro-Image-Queries`
 
-**Last verified to run:** in the original version November 2023;  updates to reflect the new UI May 16 2024
+**Last verified to run:** in the original version November 2023;  updates to reflect the new UI starting May 16 2024
 
 .. _Portal-Intro-User-Interface:
 
