@@ -380,11 +380,10 @@ new tab next to Active Chart plot (the tab is marked as "Pinned Charts"). To mak
 
 **Image grid display**:
 Close all pop-up windows.  Above the image use the grid icon (hover-over text "Tile all images in the search result table") to show up to eight of the images side-by-side.
-Notice that it is possible to pan and zoom in each of these grid windows. This functionality is only available with the "Tri-view" layout. 
-The default view is "Show single image at full size".
+Notice that it is possible to pan and zoom in each of these grid windows. 
 
 **Coverage window**:
-Above the image, notice that the default tab view is "Data Product", and instead click on "Coverage".
+Above the image, notice that the default tab view is "Data Product: ivoa.obs.core", and instead click on "Coverage".
 The bounding boxes of all images listed in the table are shown, with the image in the selected row highlighted.
 The color-composite background shows the relevant DC2 simulated sky region.
 
