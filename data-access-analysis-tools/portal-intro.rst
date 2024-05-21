@@ -342,8 +342,7 @@ You can restrict the retrieved images to be only those in the 'r' filter by clic
     
 .. figure:: /_static/portal_intro_DP02h.png
     :name: portal_ImageQueryResultsDP02
-    :alt: A screenshot of the results view from submitting the query described above.  The upper left image is an image of the sky.  The upper right image shows the cartesian
-    	scatter plot resulting from the query.  The bottom section is the data table resulting from the query.
+    :alt: A screenshot of the results view from submitting the query described above.  The upper left image is an image of the sky.  The upper right image shows the cartesian scatter plot resulting from the query.  The bottom section is the data table resulting from the query.
 
     Results for the example search parameters.  
 
