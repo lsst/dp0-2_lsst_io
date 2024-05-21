@@ -292,11 +292,9 @@ See also :ref:`DP0-2-Tutorials-Portal` for additional demonstrations of how to u
 Image Search (ObsTAP)
 =====================
 
-The "Image Search (ObsTAP)" functionality has many new features -- not just new for DP0.2, but new to the Firefly interface, 
-and DP0 Delegates are among the first to use them.
-
-Checking the "Use Image Search (ObsTAP)" box below "LSST DP0.2 DC2 Tables" will change the user interface to display query 
-constraint options that are specific to the image data, as described below.
+You can perform image searches by clicking in the "DP0.2 Image Search via ObsTAP" tab on top of the screen.  
+This functionality has many new features -- not just new for DP0.2, but new to the Firefly interface, and DP0 Delegates are among the first to use them.
+Clickin on that tab will change the user interface to display query constraint options that are specific to the image data, as described below.
 
 For more information about the image types available in the DP0.2 data set, see the :ref:`DP0-2-Data-Products-DPDD`.
 
@@ -320,13 +318,12 @@ Under "Spectral Coverage", users can provide a wavelength in, e.g., nanometers a
 
 The default is for all columns to be selected (i.e., have blue checks in the leftmost column).
 It is recommended to always return all metadata because the Portal requires some columns in order for the some of the 
-Results view functionality to work.
+Results view functionality to work.  
 
 **Example (PVIs/calexps)**
 
-The image below shows an example query for all r-band PVIs (calexps) that overlap the central coordinates of DC2, 
+The image below shows an example query for all PVIs (calexps) that overlap the central coordinates of DC2, 
 which were obtained with a modified Julian date between 60000 and 60500.
-Note that the "r" filter constraint is applied in the table at right.
 
 .. figure:: /_static/portal_intro_DP02g.png
     :name: portal_ImageQueryDP02
@@ -334,13 +331,14 @@ Note that the "r" filter constraint is applied in the table at right.
 
     The default interface for the "Image Search (ObsTAP)" queries, with example search parameters.
     
-Click on the "Search" button.
+Click on the "Search" button.  Note that this search retrieves observations in all filters.  
 
 **Results View**
 
 The default results appear in the tri-view format, with the image at upper left, an Active Chart plot at upper right, and the table of metadata below.
 The first row of the table is highlighted by default, with that image showing at upper left.
-The Active Chart plot default is RA versus Declination, with the location of the highlighted table row shown in orange and the rest in blue.
+The Active Chart plot default is RA versus Declination, with the location of the highlighted table row shown in orange and the rest in blue.  
+You can restrict the retrieved images to be only those in the 'r' filter by clicking the down-arrow below the table column heading "lsst_band" and selecting "r" from the drop-down menu.  
     
 .. figure:: /_static/portal_intro_DP02h.png
     :name: portal_ImageQueryResultsDP02
