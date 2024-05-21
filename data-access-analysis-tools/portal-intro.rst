@@ -370,8 +370,7 @@ new tab next to Active Chart plot (the tab is marked as "Pinned Charts"). To mak
 .. figure:: /_static/portal_intro_DP02j.png
     :name: portal_ImageQuery_tools_DP02
     :alt: A screenshot of the image display used to extract a line cut in the portal. On the left, is an image of the sky with an inverted color lookup table.
-    	There is one large star in the image.  A horizontal arrow has been manually drawn over it by the user.  A data table is to the right.  
-	Sitting over the data table is a graph, constructed from the red arrow, showing data numbers versus offset in arcseconds.  
+    	There is one large star in the image.  A horizontal arrow has been manually drawn over it by the user.  A data table is to the right.  Sitting over the data table is a graph, constructed from the red arrow, showing data numbers versus offset in arcseconds.  
 	The use the image display tool to extract a line cut.
 
 **Image grid display**:
