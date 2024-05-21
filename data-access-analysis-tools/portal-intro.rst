@@ -41,7 +41,7 @@ The fourth tab allows you to upload your own images or tables, but its use is mo
 The leftmost tab marked as "Results" will contain the result of your query.  
 If you execute several queries, the results of those queries will appeas as separate sub-tabs in the "Results" tab.  
 
-.. figure:: /_static/portal_intro_DP02a.png
+.. figure:: /_static/portal_intro_DP02q.png
     :name: portal_default_view_DP02
     :alt: Screenshot of the default view of the rubin science platform portal interface for single table queries. From this window the user can select the type of search, tables to search, 
     	select various constraints, and can select the number of rows to return.  
