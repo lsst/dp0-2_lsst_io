@@ -332,7 +332,7 @@ Click on the "Search" button.  Note that this search retrieves observations in a
 **Results View**
 
 The default results appear in the tri-view format, with the image at upper left, an Active Chart plot at upper right, and the table of metadata below.
-The first row of the table is highlighted by default, with that image showing at upper left.
+The first row of the table is highlighted by default, with the corresponding image showing at upper left.
 The Active Chart plot default is RA versus Declination, with the location of the highlighted table row shown in orange and the rest in blue.  
 You can restrict the retrieved images to be only those in the 'r' filter by clicking the down-arrow below the table column heading "lsst_band" and selecting "r" from the drop-down menu.  
     
