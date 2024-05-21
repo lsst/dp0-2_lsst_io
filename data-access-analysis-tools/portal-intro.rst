@@ -41,6 +41,9 @@ The fourth tab allows you to upload your own images or tables, but its use is mo
 The leftmost tab marked as "Results" will contain the result of your query.  
 If you execute several queries, the results of those queries will appeas as separate sub-tabs in the "Results" tab.  
 
+In this Introduction, we will focus on the DP0.2 catalogs and images, but we note that the functionality described here also applies to the DP0.3 catalogs.  
+Note that DP0.3 simulations contain only catalogs (no images).  
+
 .. figure:: /_static/portal_intro_DP02a.png
     :name: portal_default_view_DP02
     :alt: Screenshot of the default view of the rubin science platform portal interface for single table queries. From this window the user can select the type of search, tables to search, 
@@ -355,7 +358,7 @@ On the right-hand side, select "Data Product: ivoa.ObsCore" tab.  This will resu
 .. figure:: /_static/portal_intro_DP02i.png
     :name: portal_ImageQuery_sidebyside_DP02
     :alt: Screenshot of a portal query.  The left image shows and image of the sky.  The right image shows the data table with one row selected, that row selects the image on the left.  
-	Display the image in row two of the table (with the view format set to "Tables / Coverage Images Charts").
+	Display of the image in row two of the table (with the view format set to "Tables / Coverage Images Charts").
 
 **Image tools**:
 There are many tools available for users, the following demonstrates use of just one.
