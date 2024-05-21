@@ -138,9 +138,8 @@ The search might take a few moments.
 .. figure:: /_static/portal_intro_DP02c.png
     :name: portal_search_working
     :alt: A screenshot alerting the user that the query is being executed.  The user can select to send the query to background or cancel the query.
-    :width: 200
-
-    This will show while the search is executing.
+    :width: 200  
+	This will show while the search is executing.
 
 **Cancel**: It is possible to cancel a query while it is executing by clicking the "Cancel" button.
 
@@ -182,7 +181,6 @@ Add a chart title and label the axes, choose a point color, and click "Apply" an
     :alt: Screenshot of the plot settings pop up window where the user can select various values and plot types to display the data from a query.  
     	From here, the user can select parameters, lable the x and y axes, and add a new plot, overplot, or modify a previous plot
     :width: 200
-
     The plot settings pop-up window.
 
 At this point, additional cuts can be applied to the table data being plotted.
@@ -326,8 +324,7 @@ which were obtained with a modified Julian date between 60000 and 60500.
 
 .. figure:: /_static/portal_intro_DP02g.png
     :name: portal_ImageQueryDP02
-    :alt: Screenshot of the user interface query for the portal aspect.  The user can select the type of service to use for the query and enter constraints to access the data they need.
-
+    :alt: Screenshot of the user interface query for the portal aspect.  The user can select the type of service to use for the query and enter constraints to access the data they need.  
 	The default interface for the "Image Search (ObsTAP)" queries, with example search parameters.
     
 Click on the "Search" button.  Note that this search retrieves observations in all filters.  
@@ -341,8 +338,7 @@ You can restrict the retrieved images to be only those in the 'r' filter by clic
     
 .. figure:: /_static/portal_intro_DP02h.png
     :name: portal_ImageQueryResultsDP02
-    :alt: A screenshot of the results view from submitting the query described above.  The upper left image is an image of the sky.  The upper right image shows the cartesian scatter plot resulting from the query.  The bottom section is the data table resulting from the query.
-
+    :alt: A screenshot of the results view from submitting the query described above.  The upper left image is an image of the sky.  The upper right image shows the cartesian scatter plot resulting from the query.  The bottom section is the data table resulting from the query.  
 	Results for the example search parameters.  
 
 **Manipulating the Active Chart plot** is the same process as shown for the :ref:`Portal-Intro-Single-Table-Queries` results: 
@@ -358,9 +354,8 @@ On the right-hand side, select "Data Product: ivoa.ObsCore" tab.  This will resu
 
 .. figure:: /_static/portal_intro_DP02i.png
     :name: portal_ImageQuery_sidebyside_DP02
-    :alt: Screenshot of a portal query.  The left image shows and image of the sky.  The right image shows the data table with one row selected, that row selects the image on the left.
-
-	Display the image in row two of the table (with the view format set to "Bi-view Tables").
+    :alt: Screenshot of a portal query.  The left image shows and image of the sky.  The right image shows the data table with one row selected, that row selects the image on the left.  
+	Display the image in row two of the table (with the view format set to "Tables / Coverage Images Charts").
 
 **Image tools**:
 There are many tools available for users, the following demonstrates use of just one.
@@ -394,9 +389,8 @@ The color-composite background shows the relevant DC2 simulated sky region.
     :name: portal_ImageQueryCoverageDP02
     :alt: This image is a screenshot of a results interface display in the Portal aspect. At left the bounding boxes for images returned by the query are drawn onto
     	an image of the night sky. At right there is a table which lists metadata such as visit identifier and units for the images returned by the query.
-	The image demonstrates how users can click on a row in the table at right and the corresponding bounding box will be highlighted at left. 
-
-    The Portal results interface shows the bounding boxes of the retrieved DP0.2 image overplotted on a 2MASS image (in the future, the underlay will be LSST data) at left, and the table
+	The image demonstrates how users can click on a row in the table at right and the corresponding bounding box will be highlighted at left.   
+	The Portal results interface shows the bounding boxes of the retrieved DP0.2 image overplotted on a 2MASS image (in the future, the underlay will be LSST data) at left, and the table
     table of retrieved DP0.2 image metadata at right.  The orange box at left corresponds to the yellow row at right.
 
 **Learn More.**
