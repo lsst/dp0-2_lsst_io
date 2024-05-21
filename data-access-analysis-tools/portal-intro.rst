@@ -387,8 +387,8 @@ The color-composite background shows the relevant DC2 simulated sky region.
 
 .. figure:: /_static/portal_intro_DP02k.png
     :name: portal_ImageQueryCoverageDP02
-    :alt: This image is a screenshot of a results interface display in the Portal aspect. At left the bounding boxes for images returned by the query are drawn onto
-    	an image of the night sky. At right there is a table which lists metadata such as visit identifier and units for the images returned by the query.
+    :alt: This image is a screenshot of a results interface display in the Portal aspect. At right the bounding boxes for images returned by the query are drawn onto
+    	an image of the night sky. At left there is a table which lists metadata such as visit identifier and units for the images returned by the query.
 	The image demonstrates how users can click on a row in the table at right and the corresponding bounding box will be highlighted at left.   
 	The Portal results interface shows the bounding boxes of the retrieved DP0.2 image overplotted on a 2MASS image (in the future, the underlay will be LSST data) at left, and the table
     table of retrieved DP0.2 image metadata at right.  The orange box at left corresponds to the yellow row at right.
