@@ -111,7 +111,7 @@ Remove filters and reset the table view at any time using the "Reset Column Sele
 **ADQL conversions**:
 If desired, convert UI assisted table view queries to "ADQL Queries" using the "Populate and edit ADQL" button at the bottom of the page.
 This can enable entering more complex constraints that cannot be expressed against individual columns.
-This will switch the user interface to the "Edit ADQL" view.  The searched using ADQL are described in more detail in the section "Edit ADQL (advanced)" below.  
+This will switch the user interface to the "Edit ADQL" view.  The searches using ADQL are described in more detail in the section "Edit ADQL (advanced)" below.  
 
 **Row limit**:
 The "Row Limit" in the bottom of the page can be changed to apply an upper bound to the number of rows returned.
@@ -146,9 +146,9 @@ The search might take a few moments.
 
 **Cancel**: It is possible to cancel a query while it is executing by clicking the "Cancel" button.
 
-**Results view**: The search results will populate the results view, as shown in the figure below.
+**Results view**: The search results will populate the "Results" view, as shown in the figure below.
 The display layout is controlled by the "hamburger" button (three horizontal lines) at upper left.  
-You can change the layout by clicking on this icon and then on tne "Results Layout" tab.  
+You can change the layout by clicking on this icon and then on the "Results Layout" tab.  
 The screenshot below uses the "Coverage Charts Tables" choice with a sky image at upper left.
 The color-composite image shows the relevant DC2 simulated sky region.
 A default "active chart" of the sky coordinates appears at upper right, and the table of results along 
@@ -322,7 +322,7 @@ It is recommended to always return all metadata because the Portal requires some
 
 **Example (PVIs/calexps)**
 
-The image below shows an example query for all PVIs (calexps) that overlap the central coordinates of DC2, 
+The screenshot below shows an example query for all PVIs (calexps) that overlap the central coordinates of DC2, 
 which were obtained with a modified Julian date between 60000 and 60500.
 
 .. figure:: /_static/portal_intro_DP02g.png
@@ -348,12 +348,14 @@ You can restrict the retrieved images to be only those in the 'r' filter by clic
 click on the "settings" icon (single gear) in the upper right corner to change the column data being plotted, alter the plot style, add axes labels, etc.
 
 **Interacting with the images** begins with just hovering the mouse over the sky image and noting the RA, Dec, and pixel value appear at the bottom.
-Use the magnifying glass icons in the upper left corner to zoom in and out. You may need to hover over the image for these upper left magnifying 
-glasses to appear. Click and drag the image to pan.
+Use the magnifying glass icons in the upper left corner to zoom in and out. 
+You might need to hover over the image for these magnifying glasses to appear on the upper left.  
+Click and drag the image to pan.
 Above the magnifying glass icons, use the back and forth arrows to navigate between HDU (header data units) 1, 2, and 3: the image, mask, and variance data.
 Click on another row in the table, to display an image of a different part of the sky.
 At upper left, click on the "hamburger" menu, and in the "Results Layout" tab, select "Tables / Coverage Images Charts" option.  
-On the right-hand side, select "Data Product: ivoa.ObsCore" tab.  This will result in the table and the sky image side-by-side.
+On the right-hand side, select "Data Product: ivoa.ObsCore" tab.  
+This will result in the table and the sky image side-by-side.
 
 .. figure:: /_static/portal_intro_DP02i.png
     :name: portal_ImageQuery_sidebyside_DP02
