@@ -292,9 +292,9 @@ See also :ref:`DP0-2-Tutorials-Portal` for additional demonstrations of how to u
 Image Search (ObsTAP)
 =====================
 
-You can perform image searches by clicking in the "DP0.2 Image Search via ObsTAP" tab on top of the screen.  
+You can perform image searches by clicking in the "DP0.2 Images" tab on top of the screen.  
 This functionality has many new features -- not just new for DP0.2, but new to the Firefly interface, and DP0 Delegates are among the first to use them.
-Clickin on that tab will change the user interface to display query constraint options that are specific to the image data, as described below.
+Clicking on that tab will change the user interface to display query constraint options that are specific to the image data, as described below.
 
 For more information about the image types available in the DP0.2 data set, see the :ref:`DP0-2-Data-Products-DPDD`.
 
@@ -318,7 +318,7 @@ Under "Spectral Coverage", users can provide a wavelength in, e.g., nanometers a
 
 The default is for all columns to be selected (i.e., have blue checks in the leftmost column).
 It is recommended to always return all metadata because the Portal requires some columns in order for the some of the 
-Results view functionality to work.  
+"Results" view functionality to work.  
 
 **Example (PVIs/calexps)**
 
@@ -345,17 +345,18 @@ You can restrict the retrieved images to be only those in the 'r' filter by clic
     :alt: A screenshot of the results view from submitting the query described above.  The upper left image is an image of the sky.  The upper right image shows the cartesian
     	scatter plot resulting from the query.  The bottom section is the data table resulting from the query.
 
-    Results for the example search parameters.
+    Results for the example search parameters.  
 
 **Manipulating the Active Chart plot** is the same process as shown for the :ref:`Portal-Intro-Single-Table-Queries` results: 
-click on the "settings" icon (double gears) in the upper right corner to change the column data being plotted, alter the plot style, add axes labels, etc.
+click on the "settings" icon (single gear) in the upper right corner to change the column data being plotted, alter the plot style, add axes labels, etc.
 
 **Interacting with the images** begins with just hovering the mouse over the sky image and noting the RA, Dec, and pixel value appear at the bottom.
 Use the magnifying glass icons in the upper left corner to zoom in and out. You may need to hover over the image for these upper left magnifying 
 glasses to appear. Click and drag the image to pan.
 Above the magnifying glass icons, use the back and forth arrows to navigate between HDU (header data units) 1, 2, and 3: the image, mask, and variance data.
 Click on another row in the table, to display an image of a different part of the sky.
-At upper right, click on "Bi-view Tables" to show a choice of the Active Chart plot, sky coverage, or the image and the table side-by-side.
+At upper left, click on the "hamburger" menu, and in the "Results Layout" tab, select "Tables / Coverage Images Charts" option.  
+On the right-hand side, select "Data Product: ivoa.ObsCore" tab.  This will result in the table and the sky image side-by-side.
 
 .. figure:: /_static/portal_intro_DP02i.png
     :name: portal_ImageQuery_sidebyside_DP02
