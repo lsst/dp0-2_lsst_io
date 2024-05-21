@@ -195,9 +195,8 @@ hovering the mouse over the plotted data will show the x- and y-values in a pop-
 .. figure:: /_static/portal_intro_DP02f.png
     :name: portal_results_final_DP02
     :alt: Screenshot of the results from the query described above.  The top image shows a color magnitude diagram with magnitude g brightness plotted against the color r minus color i magnitude.
-    	Below the plot is the data table generated during the query.
-
-    An updated results view in which the plotted data has been manipulated.
+    	Below the plot is the data table generated during the query.  
+	An updated results view in which the plotted data has been manipulated.
 
 **Learn more.**
 See also :ref:`DP0-2-Tutorials-Portal` for additional demonstrations of how to use the Portal's UI assisted 
@@ -329,7 +328,7 @@ which were obtained with a modified Julian date between 60000 and 60500.
     :name: portal_ImageQueryDP02
     :alt: Screenshot of the user interface query for the portal aspect.  The user can select the type of service to use for the query and enter constraints to access the data they need.
 
-    The default interface for the "Image Search (ObsTAP)" queries, with example search parameters.
+	The default interface for the "Image Search (ObsTAP)" queries, with example search parameters.
     
 Click on the "Search" button.  Note that this search retrieves observations in all filters.  
 
@@ -344,7 +343,7 @@ You can restrict the retrieved images to be only those in the 'r' filter by clic
     :name: portal_ImageQueryResultsDP02
     :alt: A screenshot of the results view from submitting the query described above.  The upper left image is an image of the sky.  The upper right image shows the cartesian scatter plot resulting from the query.  The bottom section is the data table resulting from the query.
 
-    Results for the example search parameters.  
+	Results for the example search parameters.  
 
 **Manipulating the Active Chart plot** is the same process as shown for the :ref:`Portal-Intro-Single-Table-Queries` results: 
 click on the "settings" icon (single gear) in the upper right corner to change the column data being plotted, alter the plot style, add axes labels, etc.
@@ -361,7 +360,7 @@ On the right-hand side, select "Data Product: ivoa.ObsCore" tab.  This will resu
     :name: portal_ImageQuery_sidebyside_DP02
     :alt: Screenshot of a portal query.  The left image shows and image of the sky.  The right image shows the data table with one row selected, that row selects the image on the left.
 
-    Display the image in row two of the table (with the view format set to "Bi-view Tables").
+	Display the image in row two of the table (with the view format set to "Bi-view Tables").
 
 **Image tools**:
 There are many tools available for users, the following demonstrates use of just one.
