@@ -360,12 +360,12 @@ On the right-hand side, select "Data Product: ivoa.ObsCore" tab.  This will resu
 **Image tools**:
 There are many tools available for users, the following demonstrates use of just one.
 First, zoom in on a bright star in one of the images.
-Select the "tools" icon (wrench and ruler), and from the pop-up window choose to "Extract" using a line.
+Select the "tools" icon (wrench and hammer), and from the pop-up window choose to "Extract" using a line.
 Draw a line on the image across the star to extract the pixel values and show an approximate shape of the point-spread function (PSF) for the star.
 The plot reveals that this particular star is saturated.
-Click on "Pin Chart/Table" to add a table of pixel data as a new tab in the right half of the view as well as the PSF profile plot as a 
-new tab next to Active Chart plot. To make the line go away, click on the "layers" icon (the one for which the hover-over text reads:  
-"Manipulate overlay display...") and in the pop-up window, next to "Extract Line 1 - HDU#1", click on "Delete".
+Click on "Pin Chart/Table" to add a table of pixel data as a new tab in the left half of the view (the "Tables" side) as well as the PSF profile plot as a 
+new tab next to Active Chart plot (the tab is marked as "Pinned Charts"). To make the line go away, click on the "layers" icon (the one for which the hover-over text reads:  
+"Manipulate overlay display...") and in the pop-up window, next to "Extract Line 1 - HDU#1", click on "x" by the "Extract Line Tool" row.
 
 .. figure:: /_static/portal_intro_DP02j.png
     :name: portal_ImageQuery_tools_DP02
@@ -376,7 +376,7 @@ new tab next to Active Chart plot. To make the line go away, click on the "layer
     Use the image display tool to extract a line cut.
 
 **Image grid display**:
-Above the image use the grid icon (hover-over text "Tile all images in the search result table") to show up to eight of the images side-by-side.
+Close all pop-up windows.  Above the image use the grid icon (hover-over text "Tile all images in the search result table") to show up to eight of the images side-by-side.
 Notice that it is possible to pan and zoom in each of these grid windows. This functionality is only available with the "Tri-view" layout. 
 The default view is "Show single image at full size".
 
