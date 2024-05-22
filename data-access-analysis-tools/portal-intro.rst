@@ -37,7 +37,7 @@ Clicking on the respective tab will allow you to work with any of those image / 
 Within each tab, there are multiple types of queries that can be performed.  
 Within those three choices above, there is the ability to use "UI assisted" searching or ADQL queries. 
 Each of these options has a different user interface, covered in the sections below.  
-The fourth tab allows you to upload your own images or tables, but its use is more advanced and will not be covered here.  
+The rightmost tab allows you to upload your own images or tables, but its use is more advanced and will not be covered here.  
 The leftmost tab marked as "Results" will contain the result of your query.  
 If you execute several queries, the results of those queries will appeas as separate sub-tabs in the "Results" tab.  
 
