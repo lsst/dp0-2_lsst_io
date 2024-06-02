@@ -51,6 +51,11 @@ and clicking on "history" (near upper-right).
 Major Updates Log
 =================
 
+Jun 3 2024
+----------
+
+Tutorial notebook 05, Source Detection and Measurement, has been updated to include a demonstration of forced photometry.
+
 May 2 2024
 ----------
 
