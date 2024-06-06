@@ -24,21 +24,53 @@ Log in to the Portal Aspect by clicking on the "Portal" panel of the main landin
 
 **New for DP0.2!** :ref:`Portal-Intro-Image-Queries`
 
+**Last verified to run:** in the original version November 2023;  updates to reflect the new UI starting May 16 2024
+
 .. _Portal-Intro-User-Interface:
 
 The Portal's user interface
 ===========================
 
+The Rubin Science Platform Portal Aspect has a variety of search functions that can access DP0.2 Images, DP0.2 Catalogs, and DP0.3 (Solar System only) Catalogs.  
+Once you log in to the Rubin Science Platform and select "Portal aspect" you will see the multiple tabs on top.  
+Clicking on the respective tab will allow you to work with any of those image / catalog repositories.  
+Within each tab, there are multiple types of queries that can be performed.  
+Within those three choices above, there is the ability to use "UI assisted" searching or ADQL queries. 
+Each of these options has a different user interface, covered in the sections below.  
+The rightmost tab allows you to upload your own images or tables, but its use is more advanced and will not be covered here.  
+The leftmost tab marked as "Results" will contain the result of your query.  
+If you execute several queries, the results of those queries will appeas as separate sub-tabs in the "Results" tab.  
+
+In this Introduction, we will focus on the DP0.2 catalogs and images, but we note that the functionality described here also applies to the DP0.3 catalogs.  
+Note that DP0.3 simulations contain only catalogs (no images).  
+
+.. figure:: /_static/portal_intro_DP02a.png
+    :name: portal_default_view_DP02
+    :alt: Screenshot of the default view of the rubin science platform portal interface for single table queries. From this window the user can select the type of search, tables to search, 
+    	select various constraints, and can select the number of rows to return.  
+
+    The default view of the Portal's user interface for UI assisted queries.
+
+.. :ref:`Portal-Intro-Image-Queries` from the "DP0.2 Images" tab, :ref:`Portal-Intro-Single-Table-Queries` and :ref:`Portal-Intro-ADQL-Queries`, from the DP0.2 Catalogs tab. 
+
 **Try it:** Mouse-over text to view pop-up boxes with more detailed descriptions throughout the Portal interface.
-Click on any "settings" icons you see (double gears) to explore options.
+Click on any "settings" icons you see (single gear) to explore options.
 The Portal is a very powerful user interface with far more options than are covered in the introduction below.
 
-**Select TAP Service:**
-Leave the default (https://data.lsst.cloud/api/tap) to access DP0.2 data.
+.. **Select TAP Service:**
+.. Leave the default (https://data.lsst.cloud/api/tap) to access DP0.2 data.
+
+Sample query of one of the the DP0.2 catalogs
+=============================================
 
 **Select Query Type**
-There are three types of queries: :ref:`Portal-Intro-Single-Table-Queries` and :ref:`Portal-Intro-ADQL-Queries` in "View", and :ref:`Portal-Intro-Image-Queries` under "LSST DP0.2 DC2 Tables".
+The default landing page will be the one for "DP0.2 Catalogs" and we will begin with DP0.2 to get you started.  
+There, you have two types of queries: "UI Assisted" (amounting to single-table queries - default), or "ADQL Queries".  
+
+Once you selected the choice of data repository, you can select either to conduct your query.  
 Each of these options has a different user interface, covered in the sections below.
+
+.. :ref:`Portal-Intro-Single-Table-Queries` and :ref:`Portal-Intro-ADQL-Queries` in "View", and :ref:`Portal-Intro-Image-Queries` under "LSST DP0.2 DC2 Tables".
 
 
 .. _Portal-Intro-Single-Table-Queries:
@@ -48,36 +80,27 @@ UI assisted (Single Table)
 
 The default query type, and default user interface, is for "UI assisted" queries.
 
-.. figure:: /_static/portal_intro_DP02a.png
-    :name: portal_default_view_DP02
-    :alt: Screenshot of the default view of the rubin science platform portal interface for single table queries. From this window the user can select the type of search, tables to search, 
-    	select various constraints, and can select the number of rows to return.  
-
-    The default view of the Portal's user interface for UI assisted queries.
-    
-**Select Table**: Drop down menus of available tables.
-For DP0.2 data, choose the "Table Collection (Schema): dp02_dc2_catalogs" in the left drop-down menu.
-The default table in the right drop-down menu is the Object table.
+**Select Table**: Once you click on the "DP0.2 Catalogs" tab, you can choose the table to work with by clicking the "up-down" arrow to show the available tables.
+The default table in the right drop-down menu is the Object table, and we will use this table for this introduction.  
 See the :ref:`DP0-2-Data-Products-DPDD` for table descriptions and schema.
-Notice how the table view at lower-right will automatically update to match the selected table.
+Notice how the table view at lower-right will automatically update to match the table selected by you (via clicking the "up-down" arrow).  
 
-**Enter Constraints**: For "Spatial" constraints, choose the desired shape type for a spatial search 
+**Enter Constraints**: Check the box by "Spatial."  For "Spatial" constraints, choose the desired shape type for a spatial search 
 ("Cone" or "Polygon"), and the appropriate instructions for the search terms will appear. For example, 
-for cone search, "Coords or Obj Name" and "Radius" of search need to be entered. 
+for cone search, "Coordinates or Object Name" and "Radius" of search need to be entered. 
 
 Keeping the search area small will keep query times short and return manageable subsets of objects as you learn.
 It is recommended to start with 3 arcminutes.
 Note that the central (RA, Dec) coordinates for DC2, in decimal degrees, are: ``61.863 -35.790``.
 
-The longitude and latitude columns in "Position Columns" do automatically update to be the correct 
-column names for right ascension and declination for the selected table. If a non-existent column name
-is entered, the box will highlight red in indication of the error.
+The longitude and latitude columns in "Position Columns" do automatically update to be the correct column names for right ascension and declination for the selected table.  
+If a non-existent column name is entered, the box will highlight red in indication of the error.
 
 **The table view**:
-The table to the right of "Enter Constraints" enables users to apply additional search constraints on the columns in the selected catalog table.
-Some tables have a lot of data columns.
-Search for desired data columns by entering terms (e.g., ra, Flux, or flag) in the boxes underneath "Name" 
-and pressing "enter" in order to view data columns of interest to you.
+The table to the right of "Enter Constraints" enables users to apply additional search constraints on the columns in the selected catalog table.  
+Some tables have a lot of data columns.  
+Search for desired data columns by entering terms (e.g., ra, Flux, or flag) in the boxes underneath "Name" and pressing "enter" in order to view data columns of interest to you.  
+Entering, e.g. "ra" will return all rows containing "ra" in the name.  
 
 Use the checkboxes in the left-most column to select the data column names to be returned by the query.
 Use the funnel icon to filter the columns, and only view selected data column names.
@@ -88,7 +111,7 @@ Remove filters and reset the table view at any time using the "Reset Column Sele
 **ADQL conversions**:
 If desired, convert UI assisted table view queries to "ADQL Queries" using the "Populate and edit ADQL" button at the bottom of the page.
 This can enable entering more complex constraints that cannot be expressed against individual columns.
-This will switch the user interface to the "Edit ADQL" view.
+This will switch the user interface to the "Edit ADQL" view.  The searches using ADQL are described in more detail in the section "Edit ADQL (advanced)" below.  
 
 **Row limit**:
 The "Row Limit" in the bottom of the page can be changed to apply an upper bound to the number of rows returned.
@@ -118,19 +141,18 @@ The search might take a few moments.
 .. figure:: /_static/portal_intro_DP02c.png
     :name: portal_search_working
     :alt: A screenshot alerting the user that the query is being executed.  The user can select to send the query to background or cancel the query.
-    :width: 200
-
-    This will show while the search is executing.
+    :width: 200  
+	This will show while the search is executing.
 
 **Cancel**: It is possible to cancel a query while it is executing by clicking the "Cancel" button.
 
-**Results view**: The search results will populate the results view, as shown in the figure below.
-There are three icons that control the display layout at upper right: "Tri-view", "Bi-view Images", 
-and "Bi-view Tables".
-The default is "Tri-view", which is shown below, with a sky image at upper left.
+**Results view**: The search results will populate the "Results" view, as shown in the figure below.
+The display layout is controlled by the "hamburger" button (three horizontal lines) at upper left.  
+You can change the layout by clicking on this icon and then on the "Results Layout" tab.  
+The screenshot below uses the "Coverage Charts Tables" choice with a sky image at upper left.
 The color-composite image shows the relevant DC2 simulated sky region.
 A default "active chart" of the sky coordinates appears at upper right, and the table of results along 
-the bottom.
+the bottom.  Note that by default, the "active chart" displays the two leftmost columns in the table against each other.  
 
 .. figure:: /_static/portal_intro_DP02d.png
     :name: portal_search_results_DP02
@@ -139,19 +161,17 @@ the bottom.
 
     The default view of the search results.
 
-**Multiple queries and results**: From the results view page (see figure above), if you click on the "RSP 
-TAP Search" button at upper left you can go back to the query page and execute another query by entering 
-constraints and clicking "Search". (Click "Cancel" on the TAP search page to return to the results view 
+**Multiple queries and results**: From the results view page (see figure above), if you click on the "DP0.2 Catalogs" tab on top, you can go back to the query page.  
+There, you can execute another query by entering constraints and clicking "Search". (Click "Cancel" on the TAP search page to return to the results view 
 without executing a new query).
 
 The new query's results will appear as a new tab in the table of the results view page.
-In the image above, you can see that this has been done, because the results view table has two tabs, and the 
-sky images show symbols with two different colors. Switching between table tabs will also cause the sky image and 
-active chart to switch to show the selected query results.
+In the image above, you can see that this has been done, because the results view table has three tabs. 
+Switching between table tabs will also cause the sky image and active chart to switch to show the selected query results.
 Delete the results for a given query by clicking on the x in the table tab.
 
 **Manipulating the plotted data and converting fluxes to magnitudes**:
-To manipulate the plotted data, select the double gear "settings" icon above the active chart and a pop-up window 
+To manipulate the plotted data, select the single gear "settings" icon above the active chart and a pop-up window 
 will open (see the next figure). To create a color-magnitude diagram from the fluxes, for DP0.2 it is necessary 
 to apply the `standard conversion from nanojansky to AB magnitude <https://en.wikipedia.org/wiki/AB_magnitude>`_ 
 in the X and Y boxes as, e.g., "-2.5 * log10(g_calibFlux) + 31.4".
@@ -164,21 +184,20 @@ Add a chart title and label the axes, choose a point color, and click "Apply" an
     :alt: Screenshot of the plot settings pop up window where the user can select various values and plot types to display the data from a query.  
     	From here, the user can select parameters, lable the x and y axes, and add a new plot, overplot, or modify a previous plot
     :width: 200
-
     The plot settings pop-up window.
 
 At this point, additional cuts can be applied to the table data being plotted.
-In the figure below, the g-band flux is limited to >100, and this imposes a sharp cutoff in the y-axis values at 
-26.4 mag. Select "Bi-view Tables" to view only the plot and the table data.
-Notice how the corresponding plot point for the selected row in the table is differently colored, and that 
+In the figure below, the g-band flux is limited to >100 (via the constraint entered in the header of the column "g_calibFlux"), and this imposes a sharp cutoff in the y-axis values at 
+26.4 mag. 
+Convert the plot to "Tables Coverage Charts" using the "hamburger" menu at upper left and select only the "Active Chart" tab.  
+Click on any row in the table on the left, and notice how the corresponding plot point for the selected row in the table is differently colored, and that 
 hovering the mouse over the plotted data will show the x- and y-values in a pop-up window.
 
 .. figure:: /_static/portal_intro_DP02f.png
     :name: portal_results_final_DP02
     :alt: Screenshot of the results from the query described above.  The top image shows a color magnitude diagram with magnitude g brightness plotted against the color r minus color i magnitude.
-    	Below the plot is the data table generated during the query.
-
-    An updated results view in which the plotted data has been manipulated.
+    	Below the plot is the data table generated during the query.  
+	An updated results view in which the plotted data has been manipulated.
 
 **Learn more.**
 See also :ref:`DP0-2-Tutorials-Portal` for additional demonstrations of how to use the Portal's UI assisted 
@@ -273,11 +292,9 @@ See also :ref:`DP0-2-Tutorials-Portal` for additional demonstrations of how to u
 Image Search (ObsTAP)
 =====================
 
-The "Image Search (ObsTAP)" functionality has many new features -- not just new for DP0.2, but new to the Firefly interface, 
-and DP0 Delegates are among the first to use them.
-
-Checking the "Use Image Search (ObsTAP)" box below "LSST DP0.2 DC2 Tables" will change the user interface to display query 
-constraint options that are specific to the image data, as described below.
+You can perform image searches by clicking in the "DP0.2 Images" tab on top of the screen.  
+This functionality has many new features -- not just new for DP0.2, but new to the Firefly interface, and DP0 Delegates are among the first to use them.
+Clicking on that tab will change the user interface to display query constraint options that are specific to the image data, as described below.
 
 For more information about the image types available in the DP0.2 data set, see the :ref:`DP0-2-Data-Products-DPDD`.
 
@@ -301,87 +318,80 @@ Under "Spectral Coverage", users can provide a wavelength in, e.g., nanometers a
 
 The default is for all columns to be selected (i.e., have blue checks in the leftmost column).
 It is recommended to always return all metadata because the Portal requires some columns in order for the some of the 
-Results view functionality to work.
+"Results" view functionality to work.  
 
 **Example (PVIs/calexps)**
 
-The image below shows an example query for all r-band PVIs (calexps) that overlap the central coordinates of DC2, 
+The screenshot below shows an example query for all PVIs (calexps) that overlap the central coordinates of DC2, 
 which were obtained with a modified Julian date between 60000 and 60500.
-Note that the "r" filter constraint is applied in the table at right.
 
 .. figure:: /_static/portal_intro_DP02g.png
     :name: portal_ImageQueryDP02
-    :alt: Screenshot of the user interface query for the portal aspect.  The user can select the type of service to use for the query and enter constraints to access the data they need.
-
-    The default interface for the "Image Search (ObsTAP)" queries, with example search parameters.
+    :alt: Screenshot of the user interface query for the portal aspect.  The user can select the type of service to use for the query and enter constraints to access the data they need.  
+	The default interface for the "Image Search (ObsTAP)" queries, with example search parameters.
     
-Click on the "Search" button.
+Click on the "Search" button.  Note that this search retrieves observations in all filters.  
 
 **Results View**
 
 The default results appear in the tri-view format, with the image at upper left, an Active Chart plot at upper right, and the table of metadata below.
-The first row of the table is highlighted by default, with that image showing at upper left.
-The Active Chart plot default is RA versus Declination, with the location of the highlighted table row shown in orange and the rest in blue.
+The first row of the table is highlighted by default, with the corresponding image showing at upper left.
+The Active Chart plot default is RA versus Declination, with the location of the highlighted table row shown in orange and the rest in blue.  
+You can restrict the retrieved images to be only those in the 'r' filter by clicking the down-arrow below the table column heading "lsst_band" and selecting "r" from the drop-down menu.  
     
 .. figure:: /_static/portal_intro_DP02h.png
     :name: portal_ImageQueryResultsDP02
-    :alt: A screenshot of the results view from submitting the query described above.  The upper left image is an image of the sky.  The upper right image shows the cartesian
-    	scatter plot resulting from the query.  The bottom section is the data table resulting from the query.
-
-    Results for the example search parameters.
+    :alt: A screenshot of the results view from submitting the query described above.  The upper left image is an image of the sky.  The upper right image shows the cartesian scatter plot resulting from the query.  The bottom section is the data table resulting from the query.  
+	Results for the example search parameters.  
 
 **Manipulating the Active Chart plot** is the same process as shown for the :ref:`Portal-Intro-Single-Table-Queries` results: 
-click on the "settings" icon (double gears) in the upper right corner to change the column data being plotted, alter the plot style, add axes labels, etc.
+click on the "settings" icon (single gear) in the upper right corner to change the column data being plotted, alter the plot style, add axes labels, etc.
 
 **Interacting with the images** begins with just hovering the mouse over the sky image and noting the RA, Dec, and pixel value appear at the bottom.
-Use the magnifying glass icons in the upper left corner to zoom in and out. You may need to hover over the image for these upper left magnifying 
-glasses to appear. Click and drag the image to pan.
+Use the magnifying glass icons in the upper left corner to zoom in and out. 
+You might need to hover over the image for these magnifying glasses to appear on the upper left.  
+Click and drag the image to pan.
 Above the magnifying glass icons, use the back and forth arrows to navigate between HDU (header data units) 1, 2, and 3: the image, mask, and variance data.
 Click on another row in the table, to display an image of a different part of the sky.
-At upper right, click on "Bi-view Tables" to show a choice of the Active Chart plot, sky coverage, or the image and the table side-by-side.
+At upper left, click on the "hamburger" menu, and in the "Results Layout" tab, select "Tables / Coverage Images Charts" option.  
+On the right-hand side, select "Data Product: ivoa.ObsCore" tab.  
+This will result in the table and the sky image side-by-side.
 
 .. figure:: /_static/portal_intro_DP02i.png
     :name: portal_ImageQuery_sidebyside_DP02
-    :alt: Screenshot of a portal query.  The left image shows and image of the sky.  The right image shows the data table with one row selected, that row selects the image on the left.
-
-    Display the image in row two of the table (with the view format set to "Bi-view Tables").
+    :alt: Screenshot of a portal query.  The left image shows and image of the sky.  The right image shows the data table with one row selected, that row selects the image on the left.  
+	Display of the image in row two of the table (with the view format set to "Tables / Coverage Images Charts").
 
 **Image tools**:
 There are many tools available for users, the following demonstrates use of just one.
 First, zoom in on a bright star in one of the images.
-Select the "tools" icon (wrench and ruler), and from the pop-up window choose to "Extract" using a line.
+Select the "tools" icon (wrench and hammer), and from the pop-up window choose to "Extract" using a line.
 Draw a line on the image across the star to extract the pixel values and show an approximate shape of the point-spread function (PSF) for the star.
 The plot reveals that this particular star is saturated.
-Click on "Pin Chart/Table" to add a table of pixel data as a new tab in the right half of the view as well as the PSF profile plot as a 
-new tab next to Active Chart plot. To make the line go away, click on the "layers" icon (the one for which the hover-over text reads:  
-"Manipulate overlay display...") and in the pop-up window, next to "Extract Line 1 - HDU#1", click on "Delete".
+Click on "Pin Chart/Table" to add a table of pixel data as a new tab in the left half of the view (the "Tables" side) as well as the PSF profile plot as a 
+new tab next to Active Chart plot (the tab is marked as "Pinned Charts"). To make the line go away, click on the "layers" icon (the one for which the hover-over text reads:  
+"Manipulate overlay display...") and in the pop-up window, next to "Extract Line 1 - HDU#1", click on "x" by the "Extract Line Tool" row.
 
 .. figure:: /_static/portal_intro_DP02j.png
     :name: portal_ImageQuery_tools_DP02
     :alt: A screenshot of the image display used to extract a line cut in the portal. On the left, is an image of the sky with an inverted color lookup table.
-    	There is one large star in the image.  A horizontal arrow has been manually drawn over it by the user.  A data table is to the right.  
-	Sitting over the data table is a graph, constructed from the red arrow, showing data numbers versus offset in arcseconds.  
-
-    Use the image display tool to extract a line cut.
+    	There is one large star in the image.  A horizontal arrow has been manually drawn over it by the user.  A data table is to the right.  Sitting over the data table is a graph, constructed from the red arrow, showing data numbers versus offset in arcseconds.  
+	The use the image display tool to extract a line cut.
 
 **Image grid display**:
-Above the image use the grid icon (hover-over text "Tile all images in the search result table") to show up to eight of the images side-by-side.
-Notice that it is possible to pan and zoom in each of these grid windows. This functionality is only available with the "Tri-view" layout. 
-The default view is "Show single image at full size".
+Close all pop-up windows.  Above the image use the grid icon (hover-over text "Tile all images in the search result table") to show up to eight of the images side-by-side.
+Notice that it is possible to pan and zoom in each of these grid windows. 
 
 **Coverage window**:
-Above the image, notice that the default tab view is "Data Product", and instead click on "Coverage".
+Above the image, notice that the default tab view is "Data Product: ivoa.obs.core", and instead click on "Coverage".
 The bounding boxes of all images listed in the table are shown, with the image in the selected row highlighted.
 The color-composite background shows the relevant DC2 simulated sky region.
 
 .. figure:: /_static/portal_intro_DP02k.png
     :name: portal_ImageQueryCoverageDP02
-    :alt: This image is a screenshot of a results interface display in the Portal aspect. At left the bounding boxes for images returned by the query are drawn onto
-    	an image of the night sky. At right there is a table which lists metadata such as visit identifier and units for the images returned by the query.
-	The image demonstrates how users can click on a row in the table at right and the corresponding bounding box will be highlighted at left. 
-
-    The Portal results interface shows the bounding boxes of the retrieved DP0.2 image overplotted on a 2MASS image (in the future, the underlay will be LSST data) at left, and the table
-    table of retrieved DP0.2 image metadata at right.  The orange box at left corresponds to the yellow row at right.
+    :alt: This image is a screenshot of a results interface display in the Portal aspect. At right the bounding boxes for images returned by the query are drawn onto an image of the night sky. At left there is a table which lists metadata such as visit identifier and units for the images returned by the query.  The image demonstrates how users can click on a row in the table at left and the corresponding bounding box will be highlighted at right.   
+	The Portal "Results" view shows the bounding boxes of the retrieved DP0.2 images overplotted on a 2MASS image (in the future, the underlay will be LSST data) at the right, and the table
+    of retrieved DP0.2 image metadata at left.  The orange box at right corresponds to the yellow row at left.
 
 **Learn More.**
 See also :ref:`DP0-2-Tutorials-Portal` for a tutorial using additional image types and more of the Portal's image-related functionality.
