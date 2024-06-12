@@ -18,6 +18,8 @@
 Rendered tutorial notebooks
 ###########################
 
+These rendered notebooks have been confirmed to display properly with Chrome.
+Note that there have been reports of some figures not displaying properly in Firefox.
 
 +--------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
 | Title                                                                                                                                | Brief Description                                                                 |
