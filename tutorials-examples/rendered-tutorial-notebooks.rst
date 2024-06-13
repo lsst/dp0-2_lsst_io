@@ -32,7 +32,7 @@ Note that there have been reports of some figures not displaying properly in Fir
 +--------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
 | NB 03b. `Image Display with Firefly <https://dp0-2.lsst.io/_static/nb_html/DP02_03b_Image_Display_with_Firefly.html>`_               | Use the Firefly interactive interface for image data.                             |
 +--------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
-| NB 03c. `Survey Property Maps <https://dp0-2.lsst.io/_static/nb_html/DP02_03c_Survey_Property_Maps.html>`_                           | Use the tools to visualize full-area survey property maps.                        |
+| NB 03c. `Big deepCoadd Cutout <https://dp0-2.lsst.io/_static/nb_html/DP02_03c_Big_deepCoadd_Cutout.html>`_                           | Create a big cutout image which spans multiple patches and tracts.                |
 +--------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
 | NB 04a. `Introduction to the Butler <https://dp0-2.lsst.io/_static/nb_html/DP02_04a_Introduction_to_the_Butler.html>`_               | Use the Butler to query DP0 images and catalogs.                                  |
 +--------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
@@ -65,6 +65,8 @@ Note that there have been reports of some figures not displaying properly in Fir
 | NB 13a. `Image Cutout SciDemo <https://dp0-2.lsst.io/_static/nb_html/DP02_13a_Image_Cutout_SciDemo.html>`_                           | Demonstration of the use of the image cutout tool with a few science applications.|
 +--------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
 | NB 14. `Injecting Synthetic Sources <https://dp0-2.lsst.io/_static/nb_html/DP02_14_Injecting_Synthetic_Sources.html>`_               | Inject artificial stars and galaxies into images.                                 |
++--------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
+| NB 15. `Survey Property Maps <https://dp0-2.lsst.io/_static/nb_html/DP02_15_Survey_Property_Maps.html>`_                             | Use the tools to visualize full-area survey property maps.                        |
 +--------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
 
 
