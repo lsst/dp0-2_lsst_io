@@ -51,6 +51,11 @@ and clicking on "history" (near upper-right).
 Major Updates Log
 =================
 
+Jun 13 2024
+-----------
+
+Released tutorial notebook 03c, which demonstrates how to create a big cutout image which spans patch and tract boundaries.
+
 Jun 3 2024
 ----------
 
