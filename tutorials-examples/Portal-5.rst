@@ -57,7 +57,7 @@ Clear the content of the ADQL query box, if it is not empty.
     :name: portal_tut05_step01a
     :alt: A screenshot of the ADQL Query view of the Portal user interface.
 
-**RSP Portal aspect with "DP0.2 catalogs" selected.**
+    Figure 1: RSP Portal aspect with "DP0.2 catalogs" selected.
 
 **1.3.** In the ADQL Query box, enter the query as below.
 This query will retrieve the coordinates, DIA object identifier, CCD visit identifier, band, and forced difference-image flux 
@@ -104,14 +104,12 @@ In the results view, see that the query has returned forced flux measurements in
     :name: portal_tut05_step01b
     :alt: A screenshot of the default results view that is returned for the query.
 
-**Screenshot illustrating the results of the query, with the selection of "coverage" on the left, and "table" on the right.**
-
+    Figure 2: Screenshot illustrating the results of the query, with the selection of "coverage" on the left, and "table" on the right.
 
 **1.6.**  To plot the lightcurve instead of the "coverage" image (default), click on the "Active Chart" tab.  
 The defalt plot will be the dec vs. RA (the plotting chart defaults to plot the data in the two leftmost columns of the table).  
 To change the plot, open the plot parameters pop-up window by clicking on 
 the settings icon (a single gear above the plot window).  
-
 
 **1.7.** Update the plot parameters as shown in the figure below.
 Note that the grid line in the y-axis is selected.
@@ -123,14 +121,14 @@ Note how the grid lines in the y-axis illustrate that "off-peak" (non-detection)
     :name: portal_tut05_step01c
     :alt: A screenshot of the plot parameters pop-up window, with the parameters set to display the i-band lightcurve.
 
-**Plot parameters selection in the pop-up window, set to display the i-band lightcurve.**
+    Figure 3: Plot parameters selection in the pop-up window, set to display the i-band lightcurve.
 
 .. figure:: /_static/portal_tut05_step01d.png
     :name: portal_tut05_step01d
     :alt: A screenshot of the results view showing the table and the i-band lightcurve.
 
-**Results view showing the table and the i-band light curve.**
-    
+    Figure 4: Results view showing the table and the i-band light curve.
+
 **1.8.**  Restrict the x-axis (MJD range) to only show the lightcurve around the dates of peak brightness:
 reopen the plot parameters pop-up window, and under Chart Options set the ``X Min`` to be 930 and ``X Max`` to be 1010.
 The result can be directly compared to the lightcurve in Portal Tutorial 2.  
@@ -139,8 +137,8 @@ The result can be directly compared to the lightcurve in Portal Tutorial 2.
     :name: portal_tut05_step01e
     :alt: A screenshot of the results view in which the lightcurve date range has been limited
 
-**Light curve of the supernova over the limited date range, around the time of the presumed explosion.**
-    
+    Figure 5: Light curve of the supernova over the limited date range, around the time of the presumed explosion.
+
 **Note:** A statistical analysis of the lightcurve (e.g., goodness-of-fit to a template; timeseries features) is currently not possible
 in the Portal, and should be done in the Notebook Aspect.
 
@@ -182,7 +180,7 @@ To add a new column, click the 5th icon in the results table (the vertical recta
     :name: portal_tut05_step02a
     :alt: The results view table, with a red arrow pointing to the icon to add a column.
 
-**Multi-band light curve of a supernova with symbols for all bands plotted in the same color.**
+    Figure 6: Multi-band light curve of a supernova with symbols for all bands plotted in the same color.
 
 **2.4.** In the "Add a column" pop-up window, enter a name for the new column (``bands_ascii``) and the expression to convert
 the character in column ``band`` into its ASCII value: ``ascii("band")``. 
@@ -193,7 +191,7 @@ Set the "Data Type" to long, then click on "Add column", as shown in the figure 
     :name: portal_tut05_step02b
     :alt: A screenshot of the pop-up window for adding a new column that is the ascii for the band.
 
-**Parameters for the new column, needed to plot different filter bands in different colors.**
+    Figure 7: Parameters for the new column, needed to plot different filter bands in different colors.
 
 **2.5.** In the results view, see the new column in a numeric format: the corresponding ASCII value of the character in the ``band`` column.
 In the figure below, the new column named ``bands_ascii`` is marked with a red arrow.  
@@ -202,7 +200,7 @@ In the figure below, the new column named ``bands_ascii`` is marked with a red a
     :name: portal_tut05_step02c
     :alt: A screenshot of the results view page showing a new column named bands_ascii.
 
-**New column in the table, resulting from the step above.**
+    Figure 8: New column in the table, resulting from the step above.
 
 **2.6.** Set the colorbar for the points based on the values in the new column ``bands_ascii``. 
 Open the "Plot Parameters" pop-up window by clicking on the settings icon (single gear in the plot panel).
@@ -214,7 +212,7 @@ Click "Apply".
     :name: portal_tut05_step02d
     :alt: A screenshot of the plot parameters pop-up window that shows the trace options set for a rainbow colorscale based on the new column of ascii values.
 
-**Plot parameters to enable the view multi-band supernova light curve in distinct colors.**
+    Figure 9: Plot parameters to enable the view multi-band supernova light curve in distinct colors.
 
 **2.7.** View the new version of the lightcurve with the points colored by band, as in the figure below.
 Use the mouse to hover-over points in the plot, and notice that the pop-up info box for a given point includes only the
@@ -224,19 +222,18 @@ data included in the plot: x-axis value, y-axis value, and the ``bands_ascii`` v
     :name: portal_tut05_step02e
     :alt: A screenshot of the results table and the multi-band lightcurve with points colored by band.
 
-**Multi-band lightcurve of the supernova with points colored by band.**
-    
+    Figure 10: Multi-band lightcurve of the supernova with points colored by band.
+
 **2.8.** Restrict the multi-band lightcurve back down to a single filter without redoing the ADQL query.
 Apply a single ``r`` filter by clicking on the drop-down arrow in the ``band`` column header, adding a check-mark by the ``r`` entry, and clicking on "Apply."  
 Do it again for ``g``, and notice that additional points appear, in different colors.  
 You can check or uncheck as many filters as you wish.  
 
-
 .. figure:: /_static/portal_tut05_step02f.png
     :name: portal_tut05_step02f
     :alt: A screenshot of the results table and a two-band lightcurve.
 
-**Supernova light curve in two filters, as selected in the drop-down menu.**
+    Figure 11: Supernova light curve in two filters, as selected in the drop-down menu.
 
 **Note:** While not being able to choose your own symbols or colors for data points on the plot is a temporary drawback
 of the Portal, the future releases will bring improved functionality.
