@@ -270,7 +270,7 @@ RSP token to outside resources for even a short period of time.
    rsp_tap = pyvo.dal.TAPService(RSP_TAP_SERVICE, credential)
 
 
-**6. Run a query.**  For example, in the following case, the query requests a list of the catalogs that are available from the RSP TAP service.  More examples of useful DP0.2 queries can be found in the DP0.2 :ref:`DP0-2-Tutorials-Notebooks` and particularly in `DP0.2 Tutorial Notebook 2: Catalog Queries with TAP <https://github.com/rubin-dp0/tutorial-notebooks/blob/main/DP02_02_Catalog_Queries_with_TAP.ipynb>`_.
+**6. Run a query.**  For example, in the following case, the query requests a list of the catalogs that are available from the RSP TAP service.  More examples of useful DP0.2 queries can be found in the DP0.2 :ref:`DP0-2-Tutorials-Notebooks` and on the :doc:`data-access-analysis-tools/adql-recipes` page.
 
 .. code-block:: python
 
