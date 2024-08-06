@@ -22,17 +22,22 @@ Portal Future Functionality FAQ
 This page contains answers to frequently asked questions (FAQ) about the future full functionality of the Portal Aspect of the Rubin Science Platform (RSP).
 
 
+Will the portal have the functionality to compute statistics such as mean, standard deviation (stdev), and median absolute deviation (mad)?
+-------------------------------------------------------------------------------------------------------------------------------------------
+Currently, for a FITS image, the image toolbox has a ``Select a Region`` icon, which contains the ``Obtain Statistics`` option (with an icon that resembles an uppercase greek sigma letter).
+After a region has been selected and this option chosen, the  statistics option results in a pop-upwindow that contains ststistics such as the mean, the standard deviation, the integrated flux, the minimum and maximum flux in the region, etc. 
 
-Will the portal have the functionality to compute statistics such as mean, stdev, mad, making of 3D plots, and making of regressions??
-----------------------------------
 
-TDB
-
-
-Another quesion
-----------------------------------------------
+Will the portal have the capability to create 3D plots?
+-------------------------------------------------------
 
 TBD
+
+Will the portal support the creation of regression models?
+----------------------------------------------------------
+Currently, the Portal does not support direct creation of regression models, such as fitting a line to a plot of data.
+The development focus is on enabling seamless integration with external tools, like the Notebook Aspect of the RSP, which can perform a wide range of fit functions.
+This approach leverages the extensive capabilities of the scientific Python community and provides more robust and flexible fitting options.
 
 
 Additonal Questions
