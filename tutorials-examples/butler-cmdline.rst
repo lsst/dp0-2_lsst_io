@@ -121,45 +121,8 @@ Another reasonable question to ask when initially exploring the DP0.2 data produ
 .. code-block::
 
     butler query-dimension-records dp02 detector
-      instrument    id full_name name_in_raft raft  purpose 
-    -------------- --- --------- ------------ ---- ---------
-    LSSTCam-PhoSim   0   R01_S00          S00  R01   SCIENCE
-    LSSTCam-PhoSim   1   R01_S01          S01  R01   SCIENCE
-    LSSTCam-PhoSim   2   R01_S02          S02  R01   SCIENCE
-    LSSTCam-PhoSim   3   R01_S10          S10  R01   SCIENCE
-    LSSTCam-PhoSim   4   R01_S11          S11  R01   SCIENCE
-    LSSTCam-PhoSim   5   R01_S12          S12  R01   SCIENCE
-    LSSTCam-PhoSim   6   R01_S20          S20  R01   SCIENCE
-    LSSTCam-PhoSim   7   R01_S21          S21  R01   SCIENCE
-    LSSTCam-PhoSim   8   R01_S22          S22  R01   SCIENCE
-    LSSTCam-PhoSim   9   R02_S00          S00  R02   SCIENCE
-    LSSTCam-PhoSim  10   R02_S01          S01  R02   SCIENCE
-    LSSTCam-PhoSim  11   R02_S02          S02  R02   SCIENCE
-    LSSTCam-PhoSim  12   R02_S10          S10  R02   SCIENCE
-    LSSTCam-PhoSim  13   R02_S11          S11  R02   SCIENCE
-    LSSTCam-PhoSim  14   R02_S12          S12  R02   SCIENCE
 
-...
-
-.. code-block::
-
-    LSSTCam-imSim 174   R42_S10          S10  R42   SCIENCE
-    LSSTCam-imSim 175   R42_S11          S11  R42   SCIENCE
-    LSSTCam-imSim 176   R42_S12          S12  R42   SCIENCE
-    LSSTCam-imSim 177   R42_S20          S20  R42   SCIENCE
-    LSSTCam-imSim 178   R42_S21          S21  R42   SCIENCE
-    LSSTCam-imSim 179   R42_S22          S22  R42   SCIENCE
-    LSSTCam-imSim 180   R43_S00          S00  R43   SCIENCE
-    LSSTCam-imSim 181   R43_S01          S01  R43   SCIENCE
-    LSSTCam-imSim 182   R43_S02          S02  R43   SCIENCE
-    LSSTCam-imSim 183   R43_S10          S10  R43   SCIENCE
-    LSSTCam-imSim 184   R43_S11          S11  R43   SCIENCE
-    LSSTCam-imSim 185   R43_S12          S12  R43   SCIENCE
-    LSSTCam-imSim 186   R43_S20          S20  R43   SCIENCE
-    LSSTCam-imSim 187   R43_S21          S21  R43   SCIENCE
-    LSSTCam-imSim 188   R43_S22          S22  R43   SCIENCE
-
-Like before, the two arguments for the above command are the Butler repository (``dp02``) and the ``Dimension`` of interest, in this case ``detector`` because of the desire to obtain the list of CCDs. It is not necessary to specify a collection name for ``butler query-dimension-records``. From the above command's results, it's interesting to note that there are some ``WAVEFRONT`` and ``GUIDER`` CCDs present in the simulated DP0.2 data set, in addition to the ``SCIENCE`` CCDs. It is recommended to only work with the simulated ``SCIENCE`` CCDs within DP0.2 on the RSP.
+Like before, the two arguments for the above command are the Butler repository (``dp02``) and the ``Dimension`` of interest, in this case ``detector`` because of the desire to obtain the list of CCDs. It is not necessary to specify a collection name for ``butler query-dimension-records``. From the above command's results, it's interesting to note that there are some ``WAVEFRONT`` and ``GUIDER`` CCDs present in the simulated DP0.2 data set, in addition to the ``SCIENCE`` CCDs. It is recommended to only work with the simulated ``SCIENCE`` CCDs within DP0.2 on the RSP. The :doc:`full output </tutorials-examples/detectors-printouts>` of the above command is shown on a separate page for brevity. Note that this output contains both ``LSSTCam-imSim`` and ``LSSTCam-PhoSim`` results, which will be addressed in the next subsection.
 
 3.4. Refine a Butler dimension record query
 
