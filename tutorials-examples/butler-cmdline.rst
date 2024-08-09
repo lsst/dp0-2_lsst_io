@@ -70,7 +70,7 @@ The aforementioned ``butler --help`` command shows that there is a Butler invoca
 
     butler query-dataset-types dp02
 
-Specifying a collection is not needed here; only the repository name ``dp02`` is provided as an argument. There are more than 900 dataset types in the DP0.2 repo on RSP! Some of these are relatively recognizable and commonly used dataset types, including ``deepCoadd``, ``deepCoadd_obj``, ``raw``, ``calexp``, ``bias``, ``src``, and ``srcMatch``.
+Specifying a collection is not needed here; only the repository name ``dp02`` is provided as an argument. The :doc:`full output </tutorials-examples/query-dataset-types-printouts>` is shown on a separate page for brevity. There are more than 900 dataset types in the DP0.2 repo on RSP! Some of these are relatively recognizable and commonly used dataset types, including ``deepCoadd``, ``deepCoadd_obj``, ``raw``, ``calexp``, ``bias``, ``src``, and ``srcMatch``.
 
 Note that you can also get help documentation specific to the ``butler query-dataset-types`` invocation pattern from the command line:
 
