@@ -1,5 +1,5 @@
 ######################################################
-02. Custom Coadds from the Command Line (advanced)
+03. Custom Coadds from the Command Line (advanced)
 ######################################################
 
 .. This section should provide a brief, top-level description of the page.
