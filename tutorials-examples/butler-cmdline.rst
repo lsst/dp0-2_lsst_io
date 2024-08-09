@@ -124,7 +124,7 @@ Like before, the two arguments for the above command are the Butler repository (
 
 3.4. Refine a Butler dimension record query
 
-``butler-query dimension-records``, and other Butler command line invocation patterns, offer the very valuable ability to perform SQL-like filtering of returned results via the ``--where`` argument. The ``where`` argument for Butler command line invocations must be a string enclosed in quotes, with syntax similar to that used for ``WHERE`` clauses in `SQL <https://en.wikipedia.org/wiki/SQL>`_ or `ADQL <https://www.ivoa.net/documents/ADQL/20180112/PR-ADQL-2.1-20180112.html>`_ queries.
+``butler query-dimension-records``, and other Butler command line invocation patterns, offer the very valuable ability to perform SQL-like filtering of returned results via the ``--where`` argument. The ``where`` argument for Butler command line invocations must be a string enclosed in quotes, with syntax similar to that used for ``WHERE`` clauses in `SQL <https://en.wikipedia.org/wiki/SQL>`_ or `ADQL <https://www.ivoa.net/documents/ADQL/20180112/PR-ADQL-2.1-20180112.html>`_ queries.
 
 Here's an example of a ``butler query-dimension-records`` invocation that also brings in a SQL-like ``where`` clause to limit the amount of output, and focus only on detectors with ``id`` numbers between 6 and 8 (inclusive):
 
