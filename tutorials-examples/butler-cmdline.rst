@@ -92,29 +92,8 @@ Let's ask and answer the following question with ``butler query-dimension-record
 .. code-block::
 
     butler query-dimension-records dp02 band
-      name  
-    --------
-           g
-        grid
-     grid~nd
-        g~nd
-           i
-        i~nd
-           r
-        r~nd
-        spot
-     spot~nd
-           u
-     unknown
-        u~nd
-       white
-    white~nd
-           y
-        y~nd
-           z
-        z~nd
 
-The two arguments for the above command are the Butler repository (``dp02``) and the ``Dimension`` of interest, in this case ``band`` because of the desire to obtain the list of filters. It is not necessary to specify a collection name for ``butler query-dimension-records``. From the printouts shown above, it appears that there are some "bonus" bands included within the DP0.2 repository, beyond the ugrizy bands that will be present in the Rubin/LSST science survey. It is recommended to only work with the Rubin/LSST science filters ugrizy within DP0.2 on the RSP; the other ``band`` values listed generally correspond to early engineering exercises.
+The two arguments for the above command are the Butler repository (``dp02``) and the ``Dimension`` of interest, in this case ``band`` because of the desire to obtain the list of filters. It is not necessary to specify a collection name for ``butler query-dimension-records``. The :doc:`full output </tutorials-examples/query-dimension-records-printouts>` is shown on a separate page for brevity. From the results, it appears that there are some "bonus" bands included within the DP0.2 repository, beyond the ugrizy bands that will be present in the Rubin/LSST science survey. It is recommended to only work with the Rubin/LSST science filters ugrizy within DP0.2 on the RSP; the other ``band`` values listed generally correspond to early engineering exercises.
 
 3.2. Instruments included in the dp02 Butler repository
 
