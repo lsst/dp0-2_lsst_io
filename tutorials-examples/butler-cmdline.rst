@@ -33,8 +33,6 @@ Step 1. Access the terminal and set up
 
 1.3. Set up the LSST Science Pipelines environment
 
-Set up the LSST Science Pipelines environment as follows:
-
 .. code-block::
 
     setup lsst_distrib
