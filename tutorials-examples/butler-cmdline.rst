@@ -1,5 +1,5 @@
 ###################################################################
-03. The Rubin/LSST Data Butler from the Command Line (intermediate)
+02. The Rubin/LSST Data Butler from the Command Line (intermediate)
 ###################################################################
 
 .. This section should provide a brief, top-level description of the page.
