@@ -109,8 +109,8 @@ Much of the contents of the tutorial notebooks (above) can also be executed via 
 
     cmdline-beginner
     cmdline-beginner-ES
-    cmdline-custom-coadd
     butler-cmdline
+    cmdline-custom-coadd
 
 
 .. _DP0-2-Tutorials-API:
