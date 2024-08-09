@@ -206,9 +206,9 @@ Let's start off with a relatively standard, familiar dataset type within DP0.2: 
 
     butler query-data-ids dp02 tract --collections 2.2i/runs/DP0.2 --datasets 'deepCoadd' 
 
-Recall that a tract is a relatively large sky region within a given sky map, and then patches are smaller subregions within each tract. The first argument to ``butler query-data-ids`` above specifies, as usual, the ``dp02`` Butler repo on RSP. The second argument specifies the ``Dimension`` of interest -- that Butler should return the list of unique ``tract`` values corresponding to ``deepCoadd`` products in the DP0.2 repository. The third ``--collections`` argument specifies that Butler should consider only the production DP0.2 output collection; this will ignore any results that might be found from bespoke user-created collections on RSP.
+Recall that a tract is a relatively large sky region within a given sky map, and then patches are smaller subregions within each tract. The first argument to ``butler query-data-ids`` above specifies, as usual, the ``dp02`` Butler repo on RSP. The second argument specifies the ``Dimension`` of interest -- that Butler should return the list of unique ``tract`` values corresponding to ``deepCoadd`` products in the DP0.2 repository. The third ``--collections`` argument specifies that Butler should consider only the production DP0.2 output collection; this will ignore any results that might be found from bespoke user-created collections on RSP. The :doc:`full output </tutorials-examples/query-dataids-tracts-printouts>` of the above command is shown on a separate page for brevity.
 
-Let's restrict the output to only the returned data rows, as follows, and then count the number of returned results with the ``wc`` unix utility program:
+Let's restrict the output to only the returned data rows, as follows, upon noting that each data row contains the string "DC2" for the ``skymap``, and then count the number of returned results with the ``wc`` unix utility program:
 
 .. code-block::
 
