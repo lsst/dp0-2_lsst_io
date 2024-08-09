@@ -77,33 +77,6 @@ Note that you can also get help documentation specific to the ``butler query-dat
 .. code-block::
     
     butler query-dataset-types --help
-    Usage: butler query-dataset-types [OPTIONS] REPO [GLOB] ...
-    
-      Get the dataset types in a repository.
-    
-      REPO is the URI or path to an existing data repository root or configuration
-      file.
-
-      GLOB is one or more glob-style expressions that fully or partially identify
-      the dataset types to return.
-    
-    Options:
-      -v, --verbose                   Include dataset type name, dimensions, and
-                                      storage class in output.
-      --components / --no-components  For --components, apply all expression
-                                      patterns to component dataset type names as
-                                      well. For --no-components, never apply
-                                      patterns to components. Only --no-components
-                                      is now supported. Option will be removed
-                                      after v27.
-      -@, --options-file TEXT         URI to YAML file containing overrides of
-                                      command line options. The YAML should be
-                                      organized as a hierarchy with subcommand
-                                      names at the top level options for that
-                                      subcommand below.
-      -h, --help                      Show this message and exit.
-    
-      See 'butler --help' for more options.
 
 Step 3. Query dimension records
 ===============================
