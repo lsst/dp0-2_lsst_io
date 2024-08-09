@@ -102,6 +102,11 @@ For several commands later in this tutorial, it's useful to restrict to data gen
 .. code-block::
 
     butler query-dimension-records dp02 instrument
+
+The output of the above command is:
+
+.. code-block::
+
          name      visit_max exposure_max detector_max          class_name        
     -------------- --------- ------------ ------------ ---------------------------
     LSSTCam-PhoSim   9999999      9999999         1000 lsst.obs.lsst.LsstCamPhoSim
@@ -165,6 +170,11 @@ Here's an example of a ``butler query-dimension-records`` invocation that also b
 .. code-block::
 
     butler query-dimension-records dp02 detector --where "instrument='LSSTCam-imSim' AND detector.id IN (6..8)"
+
+The output of the above command is:
+
+.. code-block::
+
       instrument   id full_name name_in_raft raft purpose
     ------------- --- --------- ------------ ---- -------
     LSSTCam-imSim   6   R01_S20          S20  R01 SCIENCE
@@ -180,6 +190,11 @@ Putting together Butler's ``query-dimension-records`` and ``where`` argument fil
 .. code-block::
     
     butler query-dimension-records dp02 exposure --where "instrument='LSSTCam-imSim' AND exposure.tracking_ra > 53.0 AND exposure.tracking_ra < 53.0002" 
+
+The output of the above command is:
+
+.. code-block::
+
       instrument     id   physical_filter  obs_id exposure_time dark_time observation_type observation_reason day_obs  seq_num group_name group_id target_name science_program    tracking_ra       tracking_dec        sky_angle         zenith_angle                  timespan (TAI)              
     ------------- ------- --------------- ------- ------------- --------- ---------------- ------------------ -------- ------- ---------- -------- ----------- --------------- ----------------- ------------------ ------------------ ------------------ ------------------------------------------
     LSSTCam-imSim  202462       g_sim_1.4  202462          30.0      30.0          science              imsim 20221001       0     202462   202462     UNKNOWN          202462 53.00018875481526 -27.39918586728378   300.340730287346 30.851948317324634 [2022-10-02T05:10:33, 2022-10-02T05:11:03)
@@ -201,6 +216,11 @@ It is also possible to perform a temporally constrained query rather than a spat
 .. code-block::
     
     butler query-data-ids dp02 exposure --where "instrument='LSSTCam-imSim' AND exposure.timespan OVERLAPS (T'2023-11-19T01:29:17',T'2023-11-19T01:31:25')"
+
+The output of the above command is:
+
+.. code-block::
+
       instrument  exposure band physical_filter
     ------------- -------- ---- ---------------
     LSSTCam-imSim   470444    i       i_sim_1.4
