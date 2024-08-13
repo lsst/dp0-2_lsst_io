@@ -39,6 +39,35 @@ Currently, the Portal does not support direct creation of regression models, suc
 The development focus is on enabling seamless integration with external tools, like the Notebook Aspect of the RSP, which can perform a wide range of fit functions.
 This approach leverages the extensive capabilities of the scientific Python community and provides more robust and flexible fitting options.
 
+What is the maximum number of queries a user can run simultaneously?
+--------------------------------------------------------------------
+
+TBD
+
+Is there a maximum row limit for query output in the portal?
+------------------------------------------------------------
+The row limit for query outputs is adjustable by the user, typically set by default to a small number (e.g., 10,000) when testing queries. The maximum number of rows to return is 5000000.
+
+Will there be a feature to estimate the number of rows a query will return without retrieving the full dataset?
+---------------------------------------------------------------------------------------------------------------
+Yes, the `COUNT` function can be used in ADQL (Astronomical Data Query Language) similarly to how it is used in SQL.
+This function can be currently used in the `Edit ADQL` view section in the Portal.
+
+Will the Portal support batch processing of ADQL queries?
+---------------------------------------------------------
+
+TBD
+
+Are there size limits for files uploaded to the Portal, and what is their retention policy?
+-------------------------------------------------------------------------------------------
+
+TBD
+
+Will uploaded files remain accessible in the user’s space after the session ends, and can they be accessed through other RSP aspects?
+-------------------------------------------------------------------------------------------------------------------------------------
+
+TBD
+
 
 Additonal Questions
 -------------------
