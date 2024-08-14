@@ -8,7 +8,7 @@
 
 **Contact author:** Aaron Meisner
 
-**Last verified to run:** 8/9/2024
+**Last verified to run:** 8/13/2024
 
 **LSST Science Pipelines version**:  Weekly 2024_16
 
@@ -213,18 +213,16 @@ Let's restrict the output to only the returned data rows, as follows, upon notin
 .. code-block::
 
     butler query-data-ids dp02 tract --collections 2.2i/runs/DP0.2 --datasets 'deepCoadd' |grep DC2 |wc -l
-    157
 
-This value of 157 makes sense, as there are 157 tracts worth of sky coverage in DP0.2.
+This resulting printout value of 157 makes sense, as there are 157 tracts worth of sky coverage in DP0.2.
 
 Now use Butler from the command line to figure out how many coadd patches there are in the DP0.2 data set:
 
 .. code-block::
 
     butler query-data-ids dp02 patch --collections 2.2i/runs/DP0.2 --datasets 'deepCoadd' |grep DC |wc -l
-    7693
 
-Note that this command is almost identical to the one before it, but with ``patch`` rather than ``tract`` specified as the ``Dimension`` of interest. The resulting value of 7693 makes sense, because there are 157 DP0.2 coadd tracts, and each of these tracts consists of a grid of 7x7 = 49 patches. So then there should be 157 tracts x 49 patches/tract = 7693 patches in DP0.2.
+Note that this command is almost identical to the one before it, but with ``patch`` rather than ``tract`` specified as the ``Dimension`` of interest. The resulting printout value of 7693 makes sense, because there are 157 DP0.2 coadd tracts, and each of these tracts consists of a grid of 7x7 = 49 patches. So then there should be 157 tracts x 49 patches/tract = 7693 patches in DP0.2.
 
 Step 5. Optional exercises for the learner
 ==========================================
