@@ -56,7 +56,7 @@ Aug 22 2024
 
 The recommended image of the RSP at data.lsst.cloud was bumped to Weekly 2024_32.
 
-Tutorial notebook 14 (synthetic source injection) was update to work without writing the synthetic source catalog to the butler.
+Tutorial notebook 14 (synthetic source injection) was updated to work without writing the synthetic source catalog to the butler.
 
 Jul 29 2024
 -----------
