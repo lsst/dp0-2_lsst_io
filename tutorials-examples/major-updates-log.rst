@@ -58,6 +58,12 @@ The recommended image of the RSP at data.lsst.cloud was bumped to Weekly 2024_32
 
 Tutorial notebook 14 (synthetic source injection) was updated to work without writing the synthetic source catalog to the butler.
 
+Aug 13 2024
+-----------
+
+Released command line tutorial 02, demonstrating butler command line usage.
+The custom coadd command line tutorial is now labeled as command line tutorial 03.
+
 Jul 29 2024
 -----------
 
