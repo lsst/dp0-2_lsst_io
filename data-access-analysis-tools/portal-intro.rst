@@ -24,9 +24,11 @@ How to navigate the RSP Portal Aspect
 
 The Portal Aspect of the Rubin Science Platform (RSP) can be accessed by clicking on the "Portal" panel of the main landing page at `data.lsst.cloud <https://data.lsst.cloud>`_.
 
-The Rubin Science Platform Portal Aspect has a variety of search functions that can access DP0.2 Images, DP0.2 Catalogs, and DP0.3 (Solar System only) Catalogs.  
-Once you log in to the Rubin Science Platform and select "Portal aspect" you will see the multiple tabs on top.  
-Clicking on the respective tab will allow you to work with any of those image / catalog repositories.  
+The Rubin Science Platform Portal Aspect has a variety of search functions.
+Those can currently access the simulated Rubin data, namely DP0.2 Images, DP0.2 Catalogs, and DP0.3 (Solar System only) Catalogs.
+In the future, the RSP will be able to access the real (rather than simulated) Rubin data.  
+Logging in to the Rubin Science Platform and selecting "Portal aspect" will revealthe multiple tabs on top.  
+Those image / catalog repositories can be accessed by clicking on the respective tab.
 Within each tab, there are multiple types of queries that can be performed.  
 Within those three choices above, there is the ability to use "UI assisted" searching or ADQL queries. 
 Each of these options has a different user interface, covered in the sections below.  
