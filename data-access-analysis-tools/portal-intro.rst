@@ -27,14 +27,14 @@ The Portal Aspect of the Rubin Science Platform (RSP) can be accessed by clickin
 The Rubin Science Platform Portal Aspect has a variety of search functions.
 Those can currently access the simulated Rubin data, namely DP0.2 Images, DP0.2 Catalogs, and DP0.3 (Solar System only) Catalogs.
 In the future, the RSP will be able to access the real (rather than simulated) Rubin data.  
-Logging in to the Rubin Science Platform and selecting "Portal aspect" will revealthe multiple tabs on top.  
+Logging in to the Rubin Science Platform and selecting "Portal aspect" will reveal the multiple tabs on top.  
 Those image / catalog repositories can be accessed by clicking on the respective tab.
 Within each tab, there are multiple types of queries that can be performed.  
 Within those three choices above, there is the ability to use "UI assisted" searching or ADQL queries. 
 Each of these options has a different user interface, covered in the sections below.  
 The rightmost tab allows you to upload your own images or tables, but its use is more advanced and will not be covered here.  
-The leftmost tab marked as "Results" will contain the result of your query.  
-If you execute several queries, the results of those queries will appeas as separate sub-tabs in the "Results" tab.  
+The leftmost tab marked as "Results" will contain the result of the most recently executed query.  
+Execution of the several queries will result in the appearance of separate sub-tabs in the "Results" tab.  
 
 In this Introduction, we will focus on the DP0.2 catalogs and images, but we note that the functionality described here also applies to the DP0.3 catalogs.  
 Note that DP0.3 simulations contain only catalogs (no images).  
