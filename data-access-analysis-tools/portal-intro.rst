@@ -20,46 +20,6 @@ Introduction to the RSP Portal Aspect
 
 .. This section should provide a brief, top-level description of the page.
 
-Log in to the Portal Aspect by clicking on the "Portal" panel of the main landing page at `data.lsst.cloud <https://data.lsst.cloud>`_.
-
-**New for DP0.2!** :ref:`Portal-Intro-Image-Queries`
-
-**Last verified to run:** in the original version November 2023;  updates to reflect the new UI starting May 16 2024
-
-.. _Portal-Intro-User-Interface:
-
-The Portal's user interface
-===========================
-
-The Rubin Science Platform Portal Aspect has a variety of search functions that can access DP0.2 Images, DP0.2 Catalogs, and DP0.3 (Solar System only) Catalogs.  
-Once you log in to the Rubin Science Platform and select "Portal aspect" you will see the multiple tabs on top.  
-Clicking on the respective tab will allow you to work with any of those image / catalog repositories.  
-Within each tab, there are multiple types of queries that can be performed.  
-Within those three choices above, there is the ability to use "UI assisted" searching or ADQL queries. 
-Each of these options has a different user interface, covered in the sections below.  
-The rightmost tab allows you to upload your own images or tables, but its use is more advanced and will not be covered here.  
-The leftmost tab marked as "Results" will contain the result of your query.  
-If you execute several queries, the results of those queries will appeas as separate sub-tabs in the "Results" tab.  
-
-In this Introduction, we will focus on the DP0.2 catalogs and images, but we note that the functionality described here also applies to the DP0.3 catalogs.  
-Note that DP0.3 simulations contain only catalogs (no images).  
-
-.. figure:: /_static/portal_intro_DP02a.png
-    :name: portal_default_view_DP02
-    :alt: Screenshot of the default view of the rubin science platform portal interface for single table queries. From this window the user can select the type of search, tables to search, 
-    	select various constraints, and can select the number of rows to return.  
-
-    The default view of the Portal's user interface for UI assisted queries.
-
-.. :ref:`Portal-Intro-Image-Queries` from the "DP0.2 Images" tab, :ref:`Portal-Intro-Single-Table-Queries` and :ref:`Portal-Intro-ADQL-Queries`, from the DP0.2 Catalogs tab. 
-
-**Try it:** Mouse-over text to view pop-up boxes with more detailed descriptions throughout the Portal interface.
-Click on any "settings" icons you see (single gear) to explore options.
-The Portal is a very powerful user interface with far more options than are covered in the introduction below.
-
-.. **Select TAP Service:**
-.. Leave the default (https://data.lsst.cloud/api/tap) to access DP0.2 data.
-
 Sample query of one of the the DP0.2 catalogs
 =============================================
 
