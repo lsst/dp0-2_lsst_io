@@ -20,24 +20,23 @@ How to execute a sample User Interface (UI) query
 
 .. This section should provide a brief, top-level description of the page.
 
-This example uses the default DP0.2 Catalogs to illustrate steps necessary to execute a UI query.  
+This example uses the default DP0.2 Catalogs to illustrate steps necessary to execute a UI query.
 
-The default landing page in the Portal aspect of the Rubin Science Platform reveals several tabs allowing a choice of various image or catalog repositories.  
-The example given here uses the "DP0.2 Catalogs" repository, and this is the one to be selected here.  
-There, two types of queries are available: "UI Assisted" (amounting to single-table queries - default), or "ADQL Queries."  
+The default landing page in the Portal aspect of the Rubin Science Platform reveals several tabs allowing a choice of various image or catalog repositories.
+The example given here uses the "DP0.2 Catalogs" repository, and this is the one to be selected here.
+There, two types of queries are available: "UI Assisted" (amounting to single-table queries - default), or "ADQL Queries."
 It is possible to toggle between the two by clicking on the botton to the right of "Viev:".
-Each of these options has a different user interface.  
+Each of these options has a different user interface.
 
 **Table selection**: Within the "DP0.2 Catalogs" tab, it is possible to choose the table to work with by clicking the "up-down" arrow to show the available tables.
-The default table in the right drop-down menu is the "dp02_dc2_Object" table, which will be used this for this exmple.  
-Once any of the tables in the DP0.2 Catalogs repository is selected, the table view at lower-right will automatically update to match the selected table.  
+The default table in the right drop-down menu is the "dp02_dc2_Object" table, which will be used this for this example.
+Once any of the tables in the DP0.2 Catalogs repository is selected, the table view at lower-right will automatically update to match the selected table.
 
-**Entering the constraints**:  This example will use the spatial constraints, selected by checking the box by "Spatial."  
-For "Spatial" constraints, choose the desired shape type for a spatial search 
-("Cone" or "Polygon"), and the appropriate instructions for the search terms will appear. For example, 
-for cone search, "Coordinates or Object Name" and "Radius" of search need to be entered. 
+**Entering the constraints**:  This example will use the spatial constraints, selected by checking the box by "Spatial."
+For "Spatial" constraints, two shapes type for a spatial search are available ("Cone" or "Polygon"), and the appropriate instructions for the search terms will appear.
+This example uses the cone search, which requires "Coordinates or Object Name" and "Radius" of search to be entered.
 
-Keeping the search area small will keep query times short and return manageable subsets of objects as you learn.
+Keeping the search area small will keep query times short and return manageable subsets of objects.
 It is recommended to start with 3 arcminutes.
 Note that the central (RA, Dec) coordinates for DC2, in decimal degrees, are: ``61.863 -35.790``.
 
