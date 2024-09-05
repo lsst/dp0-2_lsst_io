@@ -20,16 +20,11 @@ How to execute a sample User Interface (UI) query
 
 .. This section should provide a brief, top-level description of the page.
 
-Sample query of one of the the DP0.2 catalogs
-=============================================
-
 This example uses the default DP0.2 Catalogs to illustrate steps necessary to execute a UI query.  
 
-The default landing page in the Portal aspect of the Rubin Science Platform will be the one for "DP0.2 Catalogs."  
+The default landing page in the Portal aspect of the Rubin Science Platform is the one for "DP0.2 Catalogs."  
 There, two types of queries are available: "UI Assisted" (amounting to single-table queries - default), or "ADQL Queries."  
 Each of these options has a different user interface.  
-
-The default query type, and default user interface, is for "UI assisted" queries.
 
 **Select Table**: Once you click on the "DP0.2 Catalogs" tab, you can choose the table to work with by clicking the "up-down" arrow to show the available tables.
 The default table in the right drop-down menu is the Object table, and we will use this table for this introduction.  
