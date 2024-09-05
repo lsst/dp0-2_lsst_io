@@ -28,12 +28,12 @@ There, two types of queries are available: "UI Assisted" (amounting to single-ta
 It is possible to toggle between the two by clicking on the botton to the right of "Viev:".
 Each of these options has a different user interface.  
 
-**Select Table**: Once you click on the "DP0.2 Catalogs" tab, you can choose the table to work with by clicking the "up-down" arrow to show the available tables.
-The default table in the right drop-down menu is the Object table, and we will use this table for this introduction.  
-See the :ref:`DP0-2-Data-Products-DPDD` for table descriptions and schema.
-Notice how the table view at lower-right will automatically update to match the table selected by you (via clicking the "up-down" arrow).  
+**Table selection**: Within the "DP0.2 Catalogs" tab, it is possible to choose the table to work with by clicking the "up-down" arrow to show the available tables.
+The default table in the right drop-down menu is the "dp02_dc2_Object" table, which will be used this for this exmple.  
+Once any of the tables in the DP0.2 Catalogs repository is selected, the table view at lower-right will automatically update to match the selected table.  
 
-**Enter Constraints**: Check the box by "Spatial."  For "Spatial" constraints, choose the desired shape type for a spatial search 
+**Entering the constraints**:  This example will use the spatial constraints, selected by checking the box by "Spatial."  
+For "Spatial" constraints, choose the desired shape type for a spatial search 
 ("Cone" or "Polygon"), and the appropriate instructions for the search terms will appear. For example, 
 for cone search, "Coordinates or Object Name" and "Radius" of search need to be entered. 
 
