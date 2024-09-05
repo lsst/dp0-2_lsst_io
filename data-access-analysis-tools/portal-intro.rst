@@ -22,8 +22,10 @@ How to execute a sample User Interface (UI) query
 
 This example uses the default DP0.2 Catalogs to illustrate steps necessary to execute a UI query.  
 
-The default landing page in the Portal aspect of the Rubin Science Platform is the one for "DP0.2 Catalogs."  
+The default landing page in the Portal aspect of the Rubin Science Platform reveals several tabs allowing a choice of various image or catalog repositories.  
+The example given here uses the "DP0.2 Catalogs" repository, and this is the one to be selected here.  
 There, two types of queries are available: "UI Assisted" (amounting to single-table queries - default), or "ADQL Queries."  
+It is possible to toggle between the two by clicking on the botton to the right of "Viev:".
 Each of these options has a different user interface.  
 
 **Select Table**: Once you click on the "DP0.2 Catalogs" tab, you can choose the table to work with by clicking the "up-down" arrow to show the available tables.
