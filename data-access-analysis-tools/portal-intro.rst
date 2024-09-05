@@ -14,9 +14,9 @@
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
 .. A warning will alert you of identical labels during the linkcheck process.
 
-#####################################
-HOW TO EXECUTE A SAMPLE 
-#####################################
+#################################################
+How to execute a sample User Interface (UI) query
+#################################################
 
 .. This section should provide a brief, top-level description of the page.
 
@@ -24,11 +24,15 @@ Sample query of one of the the DP0.2 catalogs
 =============================================
 
 **Select Query Type**
-The default landing page will be the one for "DP0.2 Catalogs" and we will begin with DP0.2 to get you started.  
-There, you have two types of queries: "UI Assisted" (amounting to single-table queries - default), or "ADQL Queries".  
+
+The default landing page will be the one for "DP0.2 Catalogs."  
+There, two types of queries are available: "UI Assisted" (amounting to single-table queries - default), or "ADQL Queries."  
+Each of these options has a different user interface.  
+This example query uses the default DP0.2 Catalogs to illustrate steps necessary to execute an UI query.  
+
 
 Once you selected the choice of data repository, you can select either to conduct your query.  
-Each of these options has a different user interface, covered in the sections below.
+
 
 .. :ref:`Portal-Intro-Single-Table-Queries` and :ref:`Portal-Intro-ADQL-Queries` in "View", and :ref:`Portal-Intro-Image-Queries` under "LSST DP0.2 DC2 Tables".
 
