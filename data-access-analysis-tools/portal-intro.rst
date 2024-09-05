@@ -20,7 +20,7 @@ How to execute a sample User Interface (UI) query
 
 .. This section should provide a brief, top-level description of the page.
 
-This example uses the default DP0.2 Catalogs to illustrate steps necessary to execute a UI query.
+This example uses the DP0.2 Catalogs to illustrate steps necessary to execute a UI query.
 
 The default landing page in the Portal aspect of the Rubin Science Platform reveals several tabs allowing a choice of various image or catalog repositories.
 The example given here uses the "DP0.2 Catalogs" repository, and this is the one to be selected here.
