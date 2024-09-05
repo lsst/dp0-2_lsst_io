@@ -32,8 +32,8 @@ In the future, the RSP will be able to access the real (rather than simulated) R
 Logging in to the Rubin Science Platform and selecting "Portal aspect" will reveal the multiple tabs on top.  
 Those image / catalog repositories can be accessed by clicking on the respective tab.
 Within each tab, there are multiple types of queries that can be performed.  
-Within those three choices above, there is the ability to use "UI assisted" searching or ADQL queries. 
-Each of these options has a different user interface, covered in the sections below.  
+Within those three choices above, there is the ability to use "User Interface (UI) assisted" searching or executr the search using the Astronomical Data Query Language (ADQL) queries. 
+Each of these options has a different user interface, covered in other "How to" d
 The rightmost tab allows you to upload your own images or tables, but its use is more advanced and will not be covered here.  
 The leftmost tab marked as "Results" will contain the result of the most recently executed query.  
 Execution of the several queries will result in the appearance of separate sub-tabs in the "Results" tab.  
