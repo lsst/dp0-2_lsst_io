@@ -20,6 +20,8 @@ How to manipulate plotted data
 
 .. This section should provide a brief, top-level description of the page.
 
+For the purpose of this exercise, if is necessary to select data for plotting.  This will be accomplised by executing the 
+
 **Manipulating the plotted data and converting fluxes to magnitudes**:
 Manipulation of the plotted data can be done by selecting the single gear "settings" icon above the active chart.
 This will result in an opening of a pop-up window as illustrated in the next figure.  
@@ -29,7 +31,7 @@ In the future, magnitudes will be available.
 
 To create a color-magnitude diagram from the fluxes, for DP0.2 it is necessary 
 to apply the `standard conversion from nanojansky to AB magnitude <https://en.wikipedia.org/wiki/AB_magnitude>`_ 
-in the X and Y boxes as, e.g., "-2.5 * log10(g_calibFlux) + 31.4".
+in the X and Y boxes as, e.g., "-2.5 * log10(g_calibFlux) + 31.4" for the Y axis, and "-2.5 * log10(r_calibFlux)+2.5 * log10(i_calibFlux)" for te X axis.  
 
 Add a chart title and label the axes, choose a point color, and click "Apply" and then "Close".
 
