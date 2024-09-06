@@ -22,9 +22,9 @@ How to execute a sample User Interface (UI) query
 
 .. Current version:  September 5, 2024
 
-This example uses the DP0.2 Catalogs to illustrate steps necessary to execute a UI query.
+This example uses the DP0.2 Catalogs to illustrate steps necessary to execute a UI query in the Portal aspect of the Rubin Science Platform (RSP).
 
-The default landing page in the Portal aspect of the Rubin Science Platform reveals several tabs allowing a choice of various image or catalog repositories.
+The default landing page in the Portal aspect of the RSP reveals several tabs allowing a choice of various image or catalog repositories.
 The example given here uses the "DP0.2 Catalogs" repository, and this is the one to be selected here.
 There, two types of queries are available: "UI Assisted" (amounting to single-table queries - default), or "ADQL Queries."
 It is possible to toggle between the two by clicking on the botton to the right of "View:".
@@ -46,7 +46,8 @@ Note that the central (RA, Dec) coordinates for DC2, in decimal degrees, are: ``
 The longitude and latitude columns in "Position Columns" do automatically update to be the correct column names for right ascension and declination for the selected table.
 If a non-existent column name is entered, the box will highlight red in indication of the error.
 
-**The table view**:  The table to the right of "Enter Constraints" enables users to apply additional search constraints on the columns in the selected catalog table.
+**The table view**:  
+The table to the right of "Enter Constraints" enables users to apply additional search constraints on the columns in the selected catalog table.
 Some tables have a lot of data columns.  
 It is possible to search for desired data columns by entering terms (e.g., ra, Flux, or flag) in the boxes underneath "Name" and pressing "enter" in order to view data columns of interest.
 Entering, e.g. "ra" will return all rows containing "ra" in the name (those will be highlighted).
