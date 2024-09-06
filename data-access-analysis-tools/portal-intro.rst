@@ -38,7 +38,8 @@ Add a chart title and label the axes, choose a point color, and click "Apply" an
     :alt: Screenshot of the plot settings pop up window where the user can select various values and plot types to display the data from a query.  
     	From here, the user can select parameters, lable the x and y axes, and add a new plot, overplot, or modify a previous plot
     :width: 200
-    The plot settings pop-up window.
+
+     The plot settings pop-up window.
 
 At this point, additional cuts can be applied to the table data being plotted.
 In the figure below, the g-band flux is limited to >100 (via the constraint entered in the header of the column "g_calibFlux"), and this imposes a sharp cutoff in the y-axis values at 
