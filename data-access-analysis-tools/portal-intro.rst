@@ -34,7 +34,7 @@ Once any of the tables in the DP0.2 Catalogs repository is selected, the table v
 
 **Entering the constraints**:  This example will use the spatial constraints, selected by checking the box by "Spatial."
 For "Spatial" constraints, two shapes type for a spatial search are available ("Cone" or "Polygon"), and the appropriate instructions for the search terms will appear.
-This example uses the cone search, which requires "Coordinates or Object Name" and "Radius" of search to be entered.
+This example uses the cone search, which requires "Coordinates or Object Name" and "Radius" of search to be entered in the box under the "Shape Type" on the left side of the screen.
 
 Keeping the search area small will keep query times short and return manageable subsets of objects.
 It is recommended to start with 3 arcminutes.
@@ -43,22 +43,17 @@ Note that the central (RA, Dec) coordinates for DC2, in decimal degrees, are: ``
 The longitude and latitude columns in "Position Columns" do automatically update to be the correct column names for right ascension and declination for the selected table.  
 If a non-existent column name is entered, the box will highlight red in indication of the error.
 
-**The table view**:
-The table to the right of "Enter Constraints" enables users to apply additional search constraints on the columns in the selected catalog table.  
+**The table view**:  The table to the right of "Enter Constraints" enables users to apply additional search constraints on the columns in the selected catalog table.  
 Some tables have a lot of data columns.  
-Search for desired data columns by entering terms (e.g., ra, Flux, or flag) in the boxes underneath "Name" and pressing "enter" in order to view data columns of interest to you.  
-Entering, e.g. "ra" will return all rows containing "ra" in the name.  
+It is possible to search for desired data columns by entering terms (e.g., ra, Flux, or flag) in the boxes underneath "Name" and pressing "enter" in order to view data columns of interest.  
+Entering, e.g. "ra" will return all rows containing "ra" in the name (those will be highlighted).  
 
-Use the checkboxes in the left-most column to select the data column names to be returned by the query.
-Use the funnel icon to filter the columns, and only view selected data column names.
-Use the "constraints" column to specify query parameters and only retrieve data which meets those constraints.
+The selection of the data column names to be returned by the query is via using checkboxes in the left-most column in the table.  
+Viewing only the selected data column names can be done by clicking the funnel icon to filter the columns of interest.  
+For the retrieval of only the data which meet specific constraints is desired, one can use the "constraints" column to specify query parameters.  
+For example, entering "> 300" in the "Constraints" box in the "g_ap03Flux" will restrict the entries at > 300 nJy.  
 
-Remove filters and reset the table view at any time using the "Reset Column Selections & Constraints" button above the upper-right corner of the table.
-
-**ADQL conversions**:
-If desired, convert UI assisted table view queries to "ADQL Queries" using the "Populate and edit ADQL" button at the bottom of the page.
-This can enable entering more complex constraints that cannot be expressed against individual columns.
-This will switch the user interface to the "Edit ADQL" view.  The searches using ADQL are described in more detail in the section "Edit ADQL (advanced)" below.  
+The removal of filters and resetting of the table view at any time is by using the "Reset Column Selections & Constraints" button above the upper-right corner of the table.
 
 **Row limit**:
 The "Row Limit" in the bottom of the page can be changed to apply an upper bound to the number of rows returned.
