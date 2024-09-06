@@ -29,6 +29,7 @@ The example given here uses the "DP0.2 Catalogs" repository, and this is the one
 There, two types of queries are available: "UI Assisted" (amounting to single-table queries - default), or "ADQL Queries."
 It is possible to toggle between the two by clicking on the botton to the right of "View:".
 Each of these options has a different user interface.
+This "How to" covers the UI version.
 
 **Table selection**: Within the "DP0.2 Catalogs" tab, it is possible to choose the table to work with by clicking the "up-down" arrow to show the available tables.
 The default table in the right drop-down menu is the "dp02_dc2_Object" table, which will be used this for this example.
