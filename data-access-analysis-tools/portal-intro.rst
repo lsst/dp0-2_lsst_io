@@ -88,7 +88,8 @@ The search might take a few moments.
     :name: portal_search_working
     :alt: A screenshot alerting the user that the query is being executed.  The user can select to send the query to background or cancel the query.
     :width: 200
-	This will show while the search is executing.
+
+    This will show while the search is executing.
 
 **Cancel**: It is possible to cancel a query while it is executing by clicking the "Cancel" button.
 
