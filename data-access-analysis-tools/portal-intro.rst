@@ -26,24 +26,25 @@ The Portal Aspect of the Rubin Science Platform (RSP) can be accessed by clickin
 
 The Rubin Science Platform Portal Aspect has a variety of search functions.
 Those can currently access the simulated Rubin data, namely DP0.2 Images, DP0.2 Catalogs, and DP0.3 (Solar System only) Catalogs.
-In the future, the RSP will be able to access the real (rather than simulated) Rubin data.  
+In the future, the RSP will be able to access the real (rather than simulated) Rubin data.
 
 
-Logging in to the Rubin Science Platform and selecting "Portal aspect" will reveal the multiple tabs on top.  
+Logging in to the Rubin Science Platform and selecting "Portal aspect" will reveal the multiple tabs on top.
 Those correspond to image / catalog repositories which can be accessed by clicking on the respective tab.
 
-Within each tab, there are multiple types of queries that can be performed.  
-Within those three choices above, there is the ability to use "User Interface (UI) assisted" searching (default, amounting to single-table queries) or execute the search using the Astronomical Data Query Language (ADQL) queries. 
-It is possible to toggle between the two by clicking on the button to the right of "View:". 
+Within each tab, there are multiple types of queries that can be performed.
+Within those three choices above, there is the ability to use "User Interface (UI) assisted" searching (default, amounting to single-table queries) or execute the search using the Astronomical Data Query Language (ADQL) queries.
+It is possible to toggle between the two by clicking on the button to the right of "View:".
 Each of these options has a different user interface, covered in other "How to" documents.
-The leftmost tab marked as "Results" will contain the result of the most recently executed query.  
+
+The leftmost tab marked as "Results" will contain the result of the most recently executed query.
 Execution of the several queries will result in the appearance of separate sub-tabs in the "Results" tab.
 The rightmost tab allows you to upload your own images or tables, but its use is more advanced and will not be covered here.
 
 .. figure:: /_static/portal_intro_DP02a.png
     :name: portal_default_view_DP02
     :alt: Screenshot of the default view of the rubin science platform portal interface for single table queries. From this window the user can select the type of search, tables to search, 
-    	select various constraints, and can select the number of rows to return.  
+    	select various constraints, and can select the number of rows to return.
 
     The default view of the Portal's user interface for UI assisted queries.
 
