@@ -21,7 +21,7 @@ How to manipulate plotted data
 .. This section should provide a brief, top-level description of the page.
 
 This "How-to" exercise will show how to plot data, and manipulate such a plot.
-The example below will show how to plot and manipilate a color-magniture diagram for a sample of objects.
+The example below will illustrate it for a color-magniture diagram for a sample of objects.
 
 For the purpose of this exercise, it is necessary to first select data for plotting.
 This can be accomplished in the "UI assisted" aspect of the Portal, by executing a search in the DP0.2 Object catalog using a 3 arcminute cone near the DC2's central coordinates.
