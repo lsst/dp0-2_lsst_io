@@ -43,7 +43,7 @@ In the future, magnitudes will be available.
 To create a color-magnitude diagram from the fluxes, for DP0.2 it is necessary 
 to apply the `standard conversion from nanojansky to AB magnitude <https://en.wikipedia.org/wiki/AB_magnitude>`_ 
 in the X and Y boxes as, e.g., "-2.5 * log10(g_calibFlux) + 31.4" for the Y axis, and "-2.5 * log10(r_calibFlux)+2.5 * log10(i_calibFlux)" for the X axis.  
-Note that the Y axis needs to be reversed, to have the faint objects at the bottom, and the bright objects at the top.  
+Note that the Y axis needs to be reversed (via checking the "reverse" button as shown on the screen shot), to have the faint objects at the bottom, and the bright objects at the top.  
 
 The pop-up window also allows to add the  chart title and label the axes, and to choose a point color
 To modify the plot, one needs to click "Apply" and then "Close".
