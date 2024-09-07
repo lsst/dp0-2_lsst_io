@@ -21,11 +21,12 @@ How to manipulate plotted data
 .. This section should provide a brief, top-level description of the page.
 
 This "How-to" exercise will show how to plot data, and manipulate such a plot.
+The example below will show how to plot a color-magniture diagram for a sample of objects.
 For the purpose of this exercise, it is necessary to select data for plotting.
-As an example - this can be accomplished in the "UI assisted" aspect of the Portal, by executing a search in the DP0.2 Object catalog using a 3 arcminute cone near the DC2's central coordinates.
-The search will return only the five data columns: "coord_ra", "coord_dec", and "g" "r" and "i_calibFlux".  
+This can be accomplished in the "UI assisted" aspect of the Portal, by executing a search in the DP0.2 Object catalog using a 3 arcminute cone near the DC2's central coordinates.
+The search will return only the five data columns: "coord_ra", "coord_dec", and "g" "r" and "i_calibFlux" - thise are selected by checking boxes to the left of the desired row.
 It will also impose the contraints that the flux must be between 20 and 1000 nanojansky, as in the screenshot below.
-Note that the displayed rows are limited only to the checked ones by clicking the box on the left of the desired column.
+Note that the displayed rows are limited only to the checked ones.  
 This is accomplished by clicking on the funnel above the selected boxes.
 
 .. figure:: /_static/portal_intro_DP02b.png
