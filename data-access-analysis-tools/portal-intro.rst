@@ -23,15 +23,17 @@ How to manipulate plotted data
 This "How-to" exercise will show how to plot data, and manipulate such a plot.
 For the purpose of this exercise, it is necessary to select data for plotting.
 As an example - this can be accomplished by executing a search in the DP0.2 Object catalog using a 3 arcminute cone near the DC2's central coordinates.
-The search will return only the five data columns: "coord_ra", "coord_dec", and "g" "r" and "i_calibFlux".  
+The search will return only the five data columns: "coord_ra", "cioord_dec", and "g" "r" and "i_calibFlux".  
 It will also impose the contraints that the flux must be between 20 and 1000 nanojansky, as in the screenshot below.
+Note that the displayed rows are limited only to the checked ones by clicking the box on the left of the desired column.
+This is accomplished by clicking on the funnel above the selected boxes.
 
 .. figure:: /_static/portal_intro_DP02b.png
     :name: portal_example_search_DP02
     :alt: Screenshot of the rubin science platform portal query page.  The user can select the type of service, the table from which to gather data, and select attributes
     	from the table and put constraints on those attributes.  The user may also select the number of data entries to return.
 
-    An example query of the DC2 Object catalog.
+     An example query of the DC2 Object catalog.
 
 **Manipulating the plotted data and converting fluxes to magnitudes**:
 Once the data were retrieved by executing "search" on the query above, the manipulation of the plotted data can be done by selecting the single gear "settings" icon above the active chart.
