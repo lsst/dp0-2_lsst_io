@@ -49,7 +49,7 @@ to apply the `standard conversion from nanojansky to AB magnitude <https://en.wi
 in the X and Y boxes as, e.g., "-2.5 * log10(g_calibFlux) + 31.4" for the Y axis, and "-2.5 * log10(r_calibFlux)+2.5 * log10(i_calibFlux)" for the X axis.  
 Note that the Y axis needs to be reversed (via checking the "reverse" button as shown on the screen shot), to have the faint objects at the bottom, and the bright objects at the top.  
 
-The pop-up window also allows to add the  chart title and label the axes, and to choose a color for the data points (under the "trave
+The pop-up window also allows to add the  chart title and label the axes, and to choose a color for the data points (via the "Trace Optipns" box).
 To modify the plot, one needs to click "Apply" and then "Close".
 
 .. figure:: /_static/portal_intro_DP02e.png
