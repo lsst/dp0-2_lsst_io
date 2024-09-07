@@ -39,17 +39,17 @@ Note that the displayed rows are limited only to the checked ones:  this is acco
 
 **Manipulating the plotted data and converting fluxes to magnitudes**:
 Once the data were retrieved by executing "search" on the query above, the manipulation of the plotted data can be done by selecting the single gear "Plot Parameters" icon above the active chart.
-This will result in an opening of a pop-up window as illustrated in the next figure.  
-This example shows how to plot the data using magnitudes rather than fluxes.  
+This will result in an opening of a pop-up window as illustrated in the next figure.
+This example shows how to plot the data using magnitudes rather than fluxes.
 Currently, the tables contain only fluxes (no magnitudes).
 In the future, magnitudes will be available.
 
 To create a color-magnitude diagram from the fluxes, for DP0.2 it is necessary 
-to apply the `standard conversion from nanojansky to AB magnitude <https://en.wikipedia.org/wiki/AB_magnitude>`_ 
-in the X and Y boxes as, e.g., "-2.5 * log10(g_calibFlux) + 31.4" for the Y axis, and "-2.5 * log10(r_calibFlux)+2.5 * log10(i_calibFlux)" for the X axis.  
-Note that the Y axis needs to be reversed (via checking the "reverse" button as shown on the screen shot), to have the faint objects at the bottom, and the bright objects at the top.  
+to apply the `standard conversion from nanojansky to AB magnitude <https://en.wikipedia.org/wiki/AB_magnitude>`_
+in the X and Y boxes as, e.g., "-2.5 * log10(g_calibFlux) + 31.4" for the Y axis, and "-2.5 * log10(r_calibFlux)+2.5 * log10(i_calibFlux)" for the X axis.
+Note that the Y axis needs to be reversed (via checking the "reverse" button as shown on the screen shot), to have the faint objects at the bottom, and the bright objects at the top.
 
-The pop-up window also allows to add the  chart title and label the axes, and to choose a color for the data points (via the "Trace Optipns" box).
+The pop-up window also allows to add the  chart title and label the axes (via the "Chart Options" box), and to choose a color for the data points (via the "Trace Optipns" box).
 To modify the plot, one needs to click "Apply" and then "Close".
 
 .. figure:: /_static/portal_intro_DP02e.png
