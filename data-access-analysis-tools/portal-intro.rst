@@ -33,7 +33,7 @@ This is accomplished by clicking on the funnel above the selected boxes.
     :alt: Screenshot of the rubin science platform portal query page.  The user can select the type of service, the table from which to gather data, and select attributes
     	from the table and put constraints on those attributes.  The user may also select the number of data entries to return.
 
-     An example query of the DC2 Object catalog.
+    An example query of the DC2 Object catalog.
 
 **Manipulating the plotted data and converting fluxes to magnitudes**:
 Once the data were retrieved by executing "search" on the query above, the manipulation of the plotted data can be done by selecting the single gear "settings" icon above the active chart.
@@ -56,7 +56,7 @@ To modify the plot, one needs to click "Apply" and then "Close".
     	From here, the user can select parameters, lable the x and y axes, and add a new plot, overplot, or modify a previous plot
     :width: 200
 
-     The plot settings pop-up window.
+    The plot settings pop-up window.
 
 At this point, additional cuts can be applied to the table data being plotted.
 In the figure below, the g-band flux is limited to >100 (via the constraint entered in the header of the column "g_calibFlux"), and this imposes a sharp cutoff in the y-axis values at 
