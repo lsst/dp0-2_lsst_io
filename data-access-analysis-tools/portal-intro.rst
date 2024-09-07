@@ -64,8 +64,11 @@ At this point, additional cuts can be applied to the table data being plotted.
 In the figure below, the g-band flux is limited to > 100 (via the constraint entered in the header of the column "g_calibFlux").
 This imposes a sharp cutoff in the y-axis values at 26.4 mag. 
 The windows which are displayed can be adjusted by using the "hamburger" menu at upper left.
-Click on any row in the table on the left, and notice how the corresponding plot point for the selected row in the table is differently colored, and that 
-hovering the mouse over the plotted data will show the x- and y-values in a pop-up window.
+Slicking on that icon will drop dpwn a "Results Layout" sub-menu, which in turn allows selecting the desired display.
+
+Note that the displayed data in the table and the plotted dayta points are linked.
+Clicking on any row in the table on the left will result in the corresponding plot point for the selected row in the table will be differently colored.
+Also, hovering the mouse over the plotted data will show the x- and y-values in a pop-up window.
 
 .. figure:: /_static/portal_intro_DP02f.png
     :name: portal_results_final_DP02
