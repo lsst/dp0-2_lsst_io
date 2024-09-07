@@ -25,7 +25,7 @@ The example below will show how to plot a color-magniture diagram for a sample o
 
 For the purpose of this exercise, it is necessary to first select data for plotting.
 This can be accomplished in the "UI assisted" aspect of the Portal, by executing a search in the DP0.2 Object catalog using a 3 arcminute cone near the DC2's central coordinates.
-The search will return only the five data columns: "coord_ra", "coord_dec", and "g" "r" and "i_calibFlux" - thise are selected by checking boxes to the left of the desired row.
+The search will return only the five data columns: "coord_ra", "coord_dec", and "g" "r" and "i_calibFlux" - those are selected by checking boxes to the left of the desired row.
 It will also impose the contraints that the flux must be between 20 and 1000 nanojansky.  
 The ready-to-execute seach is in the screenshot below.
 Note that the displayed rows are limited only to the checked ones:  this is accomplished by clicking on the funnel above the selected boxes.
