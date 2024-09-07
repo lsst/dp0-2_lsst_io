@@ -22,7 +22,7 @@ How to manipulate plotted data
 
 This "How-to" exercise will show how to plot data, and manipulate such a plot.
 For the purpose of this exercise, it is necessary to select data for plotting.
-This will be accomplished by executing a search in the DP0.2 Object catalog using a 3 arcminute cone near the DC2's central coordinates.
+As an example - this can be accomplished by executing a search in the DP0.2 Object catalog using a 3 arcminute cone near the DC2's central coordinates.
 The search will return only the five data columns: "coord_ra", "coord_dec", and "g" "r" and "i_calibFlux".  
 It will also impose the contraints that the flux must be between 20 and 1000 nanojansky, as in the screenshot below.
 
