@@ -76,4 +76,4 @@ Also, hovering the mouse over the plotted data will show the x- and y-values in 
     	Below the plot is the data table generated during the query.
 	An updated results view in which the plotted data has been manipulated.
 
-
+    Screenshot of the results from the query described above, with the table on the left, and the r-i color vs. g magnitude plot n the right.
