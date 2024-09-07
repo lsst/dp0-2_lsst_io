@@ -64,21 +64,16 @@ At this point, additional cuts can be applied to the table data being plotted.
 In the figure below, the g-band flux is limited to > 100 (via the constraint entered in the header of the column "g_calibFlux").
 This imposes a sharp cutoff in the y-axis values at 26.4 mag. 
 The windows which are displayed can be adjusted by using the "hamburger" menu at upper left.
-Slicking on that icon will drop dpwn a "Results Layout" sub-menu, which in turn allows selecting the desired display.
+Clicking on that icon will drop down a "Results Layout" sub-menu, which in turn allows selecting the desired display.
 
-Note that the displayed data in the table and the plotted dayta points are linked.
+Note that the displayed data in the table and the plotted data points are linked.
 Clicking on any row in the table on the left will result in the corresponding plot point for the selected row in the table will be differently colored.
 Also, hovering the mouse over the plotted data will show the x- and y-values in a pop-up window.
 
 .. figure:: /_static/portal_intro_DP02f.png
     :name: portal_results_final_DP02
     :alt: Screenshot of the results from the query described above.  The top image shows a color magnitude diagram with magnitude g brightness plotted against the color r minus color i magnitude.
-    	Below the plot is the data table generated during the query.  
+    	Below the plot is the data table generated during the query.
 	An updated results view in which the plotted data has been manipulated.
 
-**Learn more.**
-See also :ref:`DP0-2-Tutorials-Portal` for additional demonstrations of how to use the Portal's UI assisted 
-Query.
-
-.. _Portal-Intro-ADQL-Queries:
 
