@@ -56,7 +56,7 @@ To modify the plot, one needs to click "Apply" and then "Close".
     :name: portal_results_xy_settings_DP02
     :alt: Screenshot of the plot settings pop up window where the user can select various values and plot types to display the data from a query.  
     	From here, the user can select parameters, lable the x and y axes, and add a new plot, overplot, or modify a previous plot
-    :width: 200
+    :width: 300
 
     The plot settings pop-up window.
 
