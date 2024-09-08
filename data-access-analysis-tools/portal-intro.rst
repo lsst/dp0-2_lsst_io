@@ -21,13 +21,13 @@ How to manipulate plotted data
 .. This section should provide a brief, top-level description of the page.
 
 This "How-to" exercise will show how to plot data, and manipulate such a plot.
-The example below will illustrate it for a color-magniture diagram for a sample of objects.
+The example below will illustrate it for a color-magnitude diagram for a sample of objects.
 
 For the purpose of this exercise, it is necessary to first select data for plotting.
 This can be accomplished in the "UI assisted" aspect of the Portal, by executing a search in the DP0.2 Object catalog using a 3 arcminute cone near the DC2's central coordinates.
 The search will return only the five data columns: "coord_ra", "coord_dec", and "g" "r" and "i_calibFlux" - those are selected by checking boxes to the left of the desired row.
-It will also impose the contraints that the flux must be between 20 and 1000 nanojansky.
-The ready-to-execute seach is in the screenshot below.
+It will also impose the constraints that the flux must be between 20 and 1000 nanojansky.
+The ready-to-execute search is in the screenshot below.
 Note that the displayed rows are limited only to the checked ones:  this is accomplished by clicking on the funnel above the selected boxes.
 
 .. figure:: /_static/portal_intro_DP02b.png
@@ -49,13 +49,13 @@ to apply the `standard conversion from nanojansky to AB magnitude <https://en.wi
 in the X and Y boxes as, e.g., "-2.5 * log10(g_calibFlux) + 31.4" for the Y axis, and "-2.5 * log10(r_calibFlux)+2.5 * log10(i_calibFlux)" for the X axis.
 Note that the Y axis needs to be reversed (via checking the "reverse" button as shown on the screen shot), to have the faint objects at the bottom, and the bright objects at the top.
 
-The pop-up window also allows to add the  chart title and label the axes (via the "Chart Options" box), and to choose a color for the data points (via the "Trace Optipns" box).
+The pop-up window also allows to add the chart title and label the axes (via the "Chart Options" box), and to choose a color for the data points (via the "Trace Options" box).
 To modify the plot, one needs to click "Apply" and then "Close".
 
 .. figure:: /_static/portal_intro_DP02e.png
     :name: portal_results_xy_settings_DP02
     :alt: Screenshot of the plot settings pop up window where the user can select various values and plot types to display the data from a query.  
-    	From here, the user can select parameters, lable the x and y axes, and add a new plot, overplot, or modify a previous plot
+    	From here, the user can select parameters, label the x and y axes, and add a new plot, overplot, or modify a previous plot
     :width: 300
 
     The plot settings pop-up window.
@@ -76,4 +76,4 @@ Also, hovering the mouse over the plotted data will show the x- and y-values in 
     	Below the plot is the data table generated during the query.
 	An updated results view in which the plotted data has been manipulated.
 
-    Screenshot of the results from the query described above, with the table on the left, and the r-i color vs. g magnitude plot n the right.
+    Screenshot of the results from the query described above, with the table on the left, and the r-i color vs. g magnitude plot on the right.
