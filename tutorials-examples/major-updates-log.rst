@@ -51,6 +51,13 @@ and clicking on "history" (near upper-right).
 Major Updates Log
 =================
 
+Sept 19 2024
+------------
+
+The recommended image of the RSP at data.lsst.cloud was bumped to Weekly 2024_37.
+
+Tutorial notebook 04b (intermediate butler queries) was updated to work with the new Butler query system announced in `this Community Forum post <https://community.lsst.org/t/new-butler-query-system-released/9364>`_.
+
 Aug 22 2024
 -----------
 
