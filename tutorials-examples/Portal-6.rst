@@ -26,7 +26,7 @@
 
 **Contact authors:** Yumi Choi
 
-**Last verified to run:** 2024-09-20
+**Last verified to run:** 2024-10-04
 
 **Targeted learning level:** Beginner 
 
@@ -53,7 +53,7 @@ This first step is ...
 **1.2.** Under “Observation Type and Source”, choose “Calibration Level” 3,
 which is for derived images such as deepCoadds and difference images. Leave
 the other options to their default settings except for the “Data Product Subtype”
-enter “lsst.deepCoadd_calexp”. 
+select “lsst.deepCoadd_calexp”. 
 
 .. figure:: /_static/portal_tut05_step01a.png
     :name: portal_tut05_step01a
