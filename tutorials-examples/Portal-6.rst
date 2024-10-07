@@ -55,15 +55,15 @@ which is for derived images such as deepCoadds and difference images. Leave
 the other options to their default settings except for the “Data Product Subtype”
 select “lsst.deepCoadd_calexp”. 
 
-.. figure:: /_static/portal_tut05_step01a.png
-    :name: portal_tut05_step01a
-    :alt: A screenshot of the ADQL Query view of the Portal user interface.
-
-    Figure 1: RSP Portal aspect with "DP0.2 catalogs" selected.
-
 **1.3.** Under “Location”, choose “Observation boundary contains point” from
-the drop-down menu and enter the coordinates “67.4579, -44.0802” - the known
-location of the SNIa from Portal tutorial 02.
+the drop-down menu and enter the coordinates “56, -34.9” - this is a random
+location.
+
+.. figure:: /_static/portal_tut06_step01a.png
+    :name: portal_tut06_step01a
+    :alt: A screenshot of the DP0.2 Image Query view of the Portal user interface.
+
+    Figure 1: RSP Portal aspect with "DP0.2 Images" selected.
 
 **1.4.** Do not set any timing or spectral coverage constraints, and do not change the default table column selections.
 
