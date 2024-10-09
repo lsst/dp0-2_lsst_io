@@ -20,6 +20,8 @@ How to use and edit the Astronomical Data Query Language (ADQL) commands in the 
 
 .. This section should provide a brief, top-level description of the page.
 
+.. Most recent update:  October 9 2024
+
 The ADQL commands can be exectuted from the Portal Aspect of the Rubin Science Platform.
 This can be accessed by clicking on the "Portal" panel of the main landing page at `data.lsst.cloud <https://data.lsst.cloud>`_ and selecting one of the "DP0" tabs.
 
