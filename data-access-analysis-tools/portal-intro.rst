@@ -34,12 +34,12 @@ ADQL query box is acceesible by selecting the "Edit ADQL" box on the upper right
 This will change the user interface to display an empty box where users can supply their query statement.
 Scrolling down in that interface will show several examples.
 
-**Turn a UI assisted (i.e., single table) query into ADQL.**
-At any point while assembling a query using the UI assisted query interface described above, clicking on "Populate and edit ADQL" 
-at the bottom of the page will transform the query into ADQL.
+It is possible to turn a UI assisted (i.e., single table) query into an ADQL command.  
+At any point while assembling a query using any the UI assisted query interface, clicking on "Populate and edit ADQL" 
+at the bottom of the page will transform the query into ADQL command.  
 Note that any changes then made to the ADQL are not propogated back to the UI assisted query constraints.
 
-**Converting fluxes to magnitudes** is much easier with the ADQL interface by using the `scisql_nanojanskyToAbMag()` 
+Converting fluxes to magnitudes is much easier with the ADQL interface by using the `scisql_nanojanskyToAbMag()` 
 functionality as demonstrated below.
 
 **Query the TAP schema.**
