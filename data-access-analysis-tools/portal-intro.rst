@@ -26,7 +26,6 @@ How to perform an image search (ObsTAP)
 =====================
 
 Once logged into the Portal aspect of the Rubin Science Platform, searches for images at a specific location or observing time can be accomplished by clicking in the "DP0.2 Images" tab on top of the screen.  
-This functionality has many new features, new to the Firefly interface, and will be of use to the Rubin users.
 Clicking on that tab will change the user interface to display query constraint options that are specific to the image data.  
 
 Additional information about the image types available in the DP0.2 data set is available in the :ref:`DP0-2-Data-Products-DPDD`.
