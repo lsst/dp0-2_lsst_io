@@ -24,7 +24,7 @@ How to perform an image search (ObsTAP)
 
 =====================
 
-Once logged into the Portal aspect of the Rubin Science Platform, searches for images at a specific location or observing time can be accomplished by clicking in the "DP0.2 Images" tab on top of the screen.
+Once logged into the Portal aspect of the Rubin Science Platform, searches for images at a specific location or observing time can be conducted by (currently) clicking in the "DP0.2 Images" tab on top of the screen.
 Clicking on that tab will change the user interface to display query constraint options that are specific to the image data.
 
 Additional information about the image types available in the Rubin data set is available in the :ref:`DP0-2-Data-Products-DPDD`.
@@ -60,20 +60,22 @@ which were obtained with a modified Julian date between 60000 and 60500.
     :alt: Screenshot of the user interface query for the portal aspect.  The user can select the type of service to use for the query and enter constraints to access the data they need.  
 	The default interface for the "Image Search (ObsTAP)" queries, with example search parameters.
     
-Click on the "Search" button.  Note that this search retrieves observations in all filters.  
+Clicking on the "Search" button retrieves observations in all filters.  
 
 **Results View**
 
 The default results appear in the tri-view format, with the image at upper left, an Active Chart plot at upper right, and the table of metadata below.
 The first row of the table is highlighted by default, with the corresponding image showing at upper left.
+Clicking on another row in the displayed table will result in displaying the image corresponding to that particular exposure.
 The Active Chart plot default is RA versus Declination, with the location of the highlighted table row shown in orange and the rest in blue.  
-You can restrict the retrieved images to be only those in the 'r' filter by clicking the down-arrow below the table column heading "lsst_band" and selecting "r" from the drop-down menu.  
+It is possible to restrict the retrieved images to be only those in the 'r' filter by clicking the down-arrow below the table column heading "lsst_band" and selecting "r" from the drop-down menu.  
     
 .. figure:: /_static/portal_intro_DP02h.png
     :name: portal_ImageQueryResultsDP02
     :alt: A screenshot of the results view from submitting the query described above.  The upper left image is an image of the sky.  The upper right image shows the cartesian scatter plot resulting from the query.  The bottom section is the data table resulting from the query.  
 	Results for the example search parameters.  
 
-**Manipulating the Active Chart plot** is the same process as shown for the :ref:`Portal-Intro-Single-Table-Queries` results: 
-click on the "settings" icon (single gear) in the upper right corner to change the column data being plotted, alter the plot style, add axes labels, etc.
+**Manipulating the Active Chart plot** 
+
+This can be done via clicking on the "settings" icon (single gear) in the upper right corner to change the column data being plotted, alter the plot style, add axes labels, etc.
 
