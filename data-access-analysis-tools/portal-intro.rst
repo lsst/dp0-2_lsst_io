@@ -14,196 +14,14 @@
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
 .. A warning will alert you of identical labels during the linkcheck process.
 
-#####################################
-Introduction to the RSP Portal Aspect
-#####################################
+########################################################################################################
+How to use and edit the Astronomical Data Query Language (ADQL) commands in the Portal Aspect of the RSP
+########################################################################################################
 
 .. This section should provide a brief, top-level description of the page.
 
-Log in to the Portal Aspect by clicking on the "Portal" panel of the main landing page at `data.lsst.cloud <https://data.lsst.cloud>`_.
+The ADQL commands can be exectuted from the Portal Aspect of the Rubin Science Platform, which can be accessed by clicking on the "Portal" panel of the main landing page at `data.lsst.cloud <https://data.lsst.cloud>`_.
 
-**New for DP0.2!** :ref:`Portal-Intro-Image-Queries`
-
-**Last verified to run:** in the original version November 2023;  updates to reflect the new UI starting May 16 2024
-
-.. _Portal-Intro-User-Interface:
-
-The Portal's user interface
-===========================
-
-The Rubin Science Platform Portal Aspect has a variety of search functions that can access DP0.2 Images, DP0.2 Catalogs, and DP0.3 (Solar System only) Catalogs.  
-Once you log in to the Rubin Science Platform and select "Portal aspect" you will see the multiple tabs on top.  
-Clicking on the respective tab will allow you to work with any of those image / catalog repositories.  
-Within each tab, there are multiple types of queries that can be performed.  
-Within those three choices above, there is the ability to use "UI assisted" searching or ADQL queries. 
-Each of these options has a different user interface, covered in the sections below.  
-The rightmost tab allows you to upload your own images or tables, but its use is more advanced and will not be covered here.  
-The leftmost tab marked as "Results" will contain the result of your query.  
-If you execute several queries, the results of those queries will appeas as separate sub-tabs in the "Results" tab.  
-
-In this Introduction, we will focus on the DP0.2 catalogs and images, but we note that the functionality described here also applies to the DP0.3 catalogs.  
-Note that DP0.3 simulations contain only catalogs (no images).  
-
-.. figure:: /_static/portal_intro_DP02a.png
-    :name: portal_default_view_DP02
-    :alt: Screenshot of the default view of the rubin science platform portal interface for single table queries. From this window the user can select the type of search, tables to search, 
-    	select various constraints, and can select the number of rows to return.  
-
-    The default view of the Portal's user interface for UI assisted queries.
-
-.. :ref:`Portal-Intro-Image-Queries` from the "DP0.2 Images" tab, :ref:`Portal-Intro-Single-Table-Queries` and :ref:`Portal-Intro-ADQL-Queries`, from the DP0.2 Catalogs tab. 
-
-**Try it:** Mouse-over text to view pop-up boxes with more detailed descriptions throughout the Portal interface.
-Click on any "settings" icons you see (single gear) to explore options.
-The Portal is a very powerful user interface with far more options than are covered in the introduction below.
-
-.. **Select TAP Service:**
-.. Leave the default (https://data.lsst.cloud/api/tap) to access DP0.2 data.
-
-Sample query of one of the the DP0.2 catalogs
-=============================================
-
-**Select Query Type**
-The default landing page will be the one for "DP0.2 Catalogs" and we will begin with DP0.2 to get you started.  
-There, you have two types of queries: "UI Assisted" (amounting to single-table queries - default), or "ADQL Queries".  
-
-Once you selected the choice of data repository, you can select either to conduct your query.  
-Each of these options has a different user interface, covered in the sections below.
-
-.. :ref:`Portal-Intro-Single-Table-Queries` and :ref:`Portal-Intro-ADQL-Queries` in "View", and :ref:`Portal-Intro-Image-Queries` under "LSST DP0.2 DC2 Tables".
-
-
-.. _Portal-Intro-Single-Table-Queries:
-
-UI assisted (Single Table)
-==========================
-
-The default query type, and default user interface, is for "UI assisted" queries.
-
-**Select Table**: Once you click on the "DP0.2 Catalogs" tab, you can choose the table to work with by clicking the "up-down" arrow to show the available tables.
-The default table in the right drop-down menu is the Object table, and we will use this table for this introduction.  
-See the :ref:`DP0-2-Data-Products-DPDD` for table descriptions and schema.
-Notice how the table view at lower-right will automatically update to match the table selected by you (via clicking the "up-down" arrow).  
-
-**Enter Constraints**: Check the box by "Spatial."  For "Spatial" constraints, choose the desired shape type for a spatial search 
-("Cone" or "Polygon"), and the appropriate instructions for the search terms will appear. For example, 
-for cone search, "Coordinates or Object Name" and "Radius" of search need to be entered. 
-
-Keeping the search area small will keep query times short and return manageable subsets of objects as you learn.
-It is recommended to start with 3 arcminutes.
-Note that the central (RA, Dec) coordinates for DC2, in decimal degrees, are: ``61.863 -35.790``.
-
-The longitude and latitude columns in "Position Columns" do automatically update to be the correct column names for right ascension and declination for the selected table.  
-If a non-existent column name is entered, the box will highlight red in indication of the error.
-
-**The table view**:
-The table to the right of "Enter Constraints" enables users to apply additional search constraints on the columns in the selected catalog table.  
-Some tables have a lot of data columns.  
-Search for desired data columns by entering terms (e.g., ra, Flux, or flag) in the boxes underneath "Name" and pressing "enter" in order to view data columns of interest to you.  
-Entering, e.g. "ra" will return all rows containing "ra" in the name.  
-
-Use the checkboxes in the left-most column to select the data column names to be returned by the query.
-Use the funnel icon to filter the columns, and only view selected data column names.
-Use the "constraints" column to specify query parameters and only retrieve data which meets those constraints.
-
-Remove filters and reset the table view at any time using the "Reset Column Selections & Constraints" button above the upper-right corner of the table.
-
-**ADQL conversions**:
-If desired, convert UI assisted table view queries to "ADQL Queries" using the "Populate and edit ADQL" button at the bottom of the page.
-This can enable entering more complex constraints that cannot be expressed against individual columns.
-This will switch the user interface to the "Edit ADQL" view.  The searches using ADQL are described in more detail in the section "Edit ADQL (advanced)" below.  
-
-**Row limit**:
-The "Row Limit" in the bottom of the page can be changed to apply an upper bound to the number of rows returned.
-The Portal can work effectively with datasets with millions of rows.
-However, when learning or testing queries, it is advisable to limit the number of rows (e.g., 10000 rows is useful for testing).
-
-*Note*: Because of the implementation of the Rubin Observatory "QServ" database, it is not recommended to use 
-the row limit alone in order to get a "sampling" of data. Queries with only a row limit can run for much longer 
-than one might intuitively expect; applying a spatial constraint is likely to return a result more quickly.
-
-**Example UI assisted query**:
-The image below presents an example of how to search the DP0.2 Object catalog using a 3 arcminute cone near 
-the DC2's central coordinates, returning only the five data columns "coord_ra", "coord_dec", and "g" "r" 
-and "i_calibFlux", and imposing the contraints that the flux must be between 20 and 1000 nanojansky (i.e., 
-between 24th and 28th magnitude).
-
-.. figure:: /_static/portal_intro_DP02b.png
-    :name: portal_example_search_DP02
-    :alt: Screenshot of the rubin science platform portal query page.  The user can select the type of service, the table from which to gather data, and select attributes
-    	from the table and put constraints on those attributes.  The user may also select the number of data entries to return.
-
-    An example query of the DC2 Object catalog.
-
-**Search**: Press the search button at lower left when ready to execute.
-The search might take a few moments.
-
-.. figure:: /_static/portal_intro_DP02c.png
-    :name: portal_search_working
-    :alt: A screenshot alerting the user that the query is being executed.  The user can select to send the query to background or cancel the query.
-    :width: 200  
-	This will show while the search is executing.
-
-**Cancel**: It is possible to cancel a query while it is executing by clicking the "Cancel" button.
-
-**Results view**: The search results will populate the "Results" view, as shown in the figure below.
-The display layout is controlled by the "hamburger" button (three horizontal lines) at upper left.  
-You can change the layout by clicking on this icon and then on the "Results Layout" tab.  
-The screenshot below uses the "Coverage Charts Tables" choice with a sky image at upper left.
-The color-composite image shows the relevant DC2 simulated sky region.
-A default "active chart" of the sky coordinates appears at upper right, and the table of results along 
-the bottom.  Note that by default, the "active chart" displays the two leftmost columns in the table against each other.  
-
-.. figure:: /_static/portal_intro_DP02d.png
-    :name: portal_search_results_DP02
-    :alt: Rubin science platform portal search results are displayed in this image.  The left top panel shows an image of the sky.  The right to panel has a scatter plot of objects and the 
-    	bottom panel shows the data table from the search.
-
-    The default view of the search results.
-
-**Multiple queries and results**: From the results view page (see figure above), if you click on the "DP0.2 Catalogs" tab on top, you can go back to the query page.  
-There, you can execute another query by entering constraints and clicking "Search". (Click "Cancel" on the TAP search page to return to the results view 
-without executing a new query).
-
-The new query's results will appear as a new tab in the table of the results view page.
-In the image above, you can see that this has been done, because the results view table has three tabs. 
-Switching between table tabs will also cause the sky image and active chart to switch to show the selected query results.
-Delete the results for a given query by clicking on the x in the table tab.
-
-**Manipulating the plotted data and converting fluxes to magnitudes**:
-To manipulate the plotted data, select the single gear "settings" icon above the active chart and a pop-up window 
-will open (see the next figure). To create a color-magnitude diagram from the fluxes, for DP0.2 it is necessary 
-to apply the `standard conversion from nanojansky to AB magnitude <https://en.wikipedia.org/wiki/AB_magnitude>`_ 
-in the X and Y boxes as, e.g., "-2.5 * log10(g_calibFlux) + 31.4".
-In the future, magnitudes will be available.
-
-Add a chart title and label the axes, choose a point color, and click "Apply" and then "Close".
-
-.. figure:: /_static/portal_intro_DP02e.png
-    :name: portal_results_xy_settings_DP02
-    :alt: Screenshot of the plot settings pop up window where the user can select various values and plot types to display the data from a query.  
-    	From here, the user can select parameters, lable the x and y axes, and add a new plot, overplot, or modify a previous plot
-    :width: 200
-    The plot settings pop-up window.
-
-At this point, additional cuts can be applied to the table data being plotted.
-In the figure below, the g-band flux is limited to >100 (via the constraint entered in the header of the column "g_calibFlux"), and this imposes a sharp cutoff in the y-axis values at 
-26.4 mag. 
-Convert the plot to "Tables Coverage Charts" using the "hamburger" menu at upper left and select only the "Active Chart" tab.  
-Click on any row in the table on the left, and notice how the corresponding plot point for the selected row in the table is differently colored, and that 
-hovering the mouse over the plotted data will show the x- and y-values in a pop-up window.
-
-.. figure:: /_static/portal_intro_DP02f.png
-    :name: portal_results_final_DP02
-    :alt: Screenshot of the results from the query described above.  The top image shows a color magnitude diagram with magnitude g brightness plotted against the color r minus color i magnitude.
-    	Below the plot is the data table generated during the query.  
-	An updated results view in which the plotted data has been manipulated.
-
-**Learn more.**
-See also :ref:`DP0-2-Tutorials-Portal` for additional demonstrations of how to use the Portal's UI assisted 
-Query.
-
-.. _Portal-Intro-ADQL-Queries:
 
 Edit ADQL (advanced)
 ====================
@@ -212,7 +30,8 @@ ADQL is the `Astronomical Data Query Language <https://www.ivoa.net/documents/AD
 The language is used by the `IVOA <https://ivoa.net>`_ to represent astronomy queries posted to Virtual Observatory (VO) 
 services, such as the Rubin LSST TAP service. ADQL is based on the Structured Query Language (SQL).
 
-Selecting "Edit ADQL" will change the user interface to display an empty box where users can supply their query statement.
+ADQL query box is acceesible by selecting the "Edit ADQL" box on the upper right of the Portal landing page.  
+This will change the user interface to display an empty box where users can supply their query statement.
 Scrolling down in that interface will show several examples.
 
 **Turn a UI assisted (i.e., single table) query into ADQL.**
