@@ -34,7 +34,7 @@ This will change the user interface to display an empty box where users can supp
 Scrolling down in that interface will show several examples.
 
 It is possible to convert a query entered via the UI assisted (i.e., single table) means into an ADQL command.  
-At any point while assembling a query using any the UI assisted query interface, clicking on "Populate and edit ADQL" 
+At any point while assembling a query using the UI assisted query interface, clicking on "Populate and edit ADQL" 
 at the bottom of the page will transform the UI query into ADQL command.  
 Note that any changes then made to the ADQL are not propogated back to the UI assisted query constraints.
 
