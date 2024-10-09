@@ -15,14 +15,14 @@
 .. A warning will alert you of identical labels during the linkcheck process.
 
 #####################################
-Introduction to the RSP Portal Aspect
+How to perform an image search (ObsTAP)
 #####################################
 
 .. This section should provide a brief, top-level description of the page.
 
 .. Most recent update:  October 9 2024
 
-Image Search (ObsTAP)
+
 =====================
 
 You can perform image searches by clicking in the "DP0.2 Images" tab on top of the screen.  
