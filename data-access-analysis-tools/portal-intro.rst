@@ -22,13 +22,12 @@ How to perform an image search (ObsTAP)
 
 .. Most recent update:  October 9 2024
 
-
 =====================
 
-Once logged into the Portal aspect of the Rubin Science Platform, searches for images at a specific location or observing time can be accomplished by clicking in the "DP0.2 Images" tab on top of the screen.  
-Clicking on that tab will change the user interface to display query constraint options that are specific to the image data.  
+Once logged into the Portal aspect of the Rubin Science Platform, searches for images at a specific location or observing time can be accomplished by clicking in the "DP0.2 Images" tab on top of the screen.
+Clicking on that tab will change the user interface to display query constraint options that are specific to the image data.
 
-Additional information about the image types available in the DP0.2 data set is available in the :ref:`DP0-2-Data-Products-DPDD`.
+Additional information about the image types available in the Rubin data set is available in the :ref:`DP0-2-Data-Products-DPDD`.
 
 **Observation Types**
 
@@ -42,8 +41,7 @@ Under "Location", only “Observation boundary contains point” was implemented
 
 .. Recall that the central (RA, Dec) coordinates for the DC2 simulated sky region are ``61.863 -35.790``.
 
-Under "Timing", users can specify a range of the time of observation (this is only relevant for PVIs/calexps) 
-and/or exposure duration.
+Under "Timing", users can specify a range of the time of observation (this is only relevant for PVIs/calexps) and/or exposure duration.
 
 Under "Spectral Coverage", users can select one or more filters, or the wavelength in, e.g., nanometers as a means of specifying the image band.
 
@@ -54,7 +52,7 @@ It is recommended to always return all metadata because the Portal requires some
 
 **Example (PVIs/calexps)**
 
-The screenshot below shows an example query for all PVIs (calexps) that overlap the central coordinates of DC2, 
+The screenshot below shows an example query for all PVIs (calexps) that overlap a specified location (here:  61.863 -35.790)
 which were obtained with a modified Julian date between 60000 and 60500.
 
 .. figure:: /_static/portal_intro_DP02g.png
