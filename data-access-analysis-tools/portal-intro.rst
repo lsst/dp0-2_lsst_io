@@ -20,31 +20,30 @@ How to use and edit the Astronomical Data Query Language (ADQL) commands in the 
 
 .. This section should provide a brief, top-level description of the page.
 
-The ADQL commands can be exectuted from the Portal Aspect of the Rubin Science Platform, which can be accessed by clicking on the "Portal" panel of the main landing page at `data.lsst.cloud <https://data.lsst.cloud>`_.
-
+The ADQL commands can be exectuted from the Portal Aspect of the Rubin Science Platform.
+This can be accessed by clicking on the "Portal" panel of the main landing page at `data.lsst.cloud <https://data.lsst.cloud>`_ and selecting one of the "DP0" tabs.
 
 Using ADQL In the RSP Portal Aspect
 ===================================
 
 ADQL is the `Astronomical Data Query Language <https://www.ivoa.net/documents/ADQL/>`_.
-The language is used by the `IVOA <https://ivoa.net>`_ to represent astronomy queries posted to Virtual Observatory (VO) 
-services, such as the Rubin LSST TAP service. ADQL is based on the Structured Query Language (SQL).
+The language is used by the `IVOA <https://ivoa.net>`_ to represent astronomy queries posted to Virtual Observatory (VO) services, such as the Rubin LSST TAP service. ADQL is based on the Structured Query Language (SQL).
 
-ADQL query box is acceesible by clicking the "Edit ADQL" box on the upper right of the Portal landing page.  
+ADQL query box is acceesible by clicking the "Edit ADQL" box on the upper right of the Portal landing page, after selecting one of the "DP0" tabs.
 This will change the user interface to display an empty box where users can supply their query statement.
 Scrolling down in that interface will show several examples.
 
-It is possible to turn a UI assisted (i.e., single table) query into an ADQL command.  
+It is possible to convert a query entered via the UI assisted (i.e., single table) query into an ADQL command.  
 At any point while assembling a query using any the UI assisted query interface, clicking on "Populate and edit ADQL" 
-at the bottom of the page will transform the query into ADQL command.  
+at the bottom of the page will transform the UI query into ADQL command.  
 Note that any changes then made to the ADQL are not propogated back to the UI assisted query constraints.
 
-Converting fluxes to magnitudes is much easier with the ADQL interface by using the `scisql_nanojanskyToAbMag()` 
-functionality as demonstrated below.
+Converting fluxes to magnitudes is much easier with the ADQL interface by using the `scisql_nanojanskyToAbMag()` functionality as demonstrated below.
 
-**Query the TAP schema.**
+**Querying the TAP schema**
+
 Information about the LSST TAP schema can be obtained via ADQL queries.
-For example, to get the detailed list of columns available in the "Object" table, their associated units and descriptions:
+The example below illustrates how to get the detailed list of columns available in the "Object" table, their associated units and descriptions:
 
 .. code-block:: SQL
 
@@ -53,7 +52,9 @@ For example, to get the detailed list of columns available in the "Object" table
    FROM tap_schema.columns
    WHERE tap_schema.columns.table_name = 'dp02_dc2_catalogs.Object'
 
-**Query the Object table,** as done with the UI assisted query interface above, with the following ADQL:
+**An example of an ADQL query to search the Object table near a specified RA and Dec location** 
+
+This query will return RA, Dec, and g, i, and r_calibFlux for all objects within 0.05 degrees from RA = 67 deg and Dec = -37 deg and with respective fluxes between 20 and 1000 nanoJnsky:
 
 .. code-block:: SQL
 
@@ -64,11 +65,11 @@ For example, to get the detailed list of columns available in the "Object" table
    AND i_calibFlux >20 AND i_calibFlux <1000
    AND r_calibFlux >20 AND r_calibFlux <1000)
 
-Type the above query into the ADQL Query block and click on the "Search" button in the bottom-left corner to execute.
-Remember to set the "Row Limit" to be a small number, such as 10000, when testing queries.
-The search results will populate the same **Results View**, as shown above using the UI assisted Query interface.
+Once entered into the ADQL box, the above query can be exectuted by clicking the "Search" button in the bottom-left corner.
+It is advisable to set the "Row Limit" to be a small number, such as 10000, when testing queries.
+The search results will populate the **Results View**.
 
-To do the same query with magnitudes:
+The query above can be edited to return magnitudes rather than fluxes: 
 
 .. code-block:: SQL
 
@@ -83,7 +84,8 @@ To do the same query with magnitudes:
    AND r_calibFlux BETWEEN 20 AND 1000
    AND i_calibFlux BETWEEN 20 AND 1000
 
-**Joining two or more tables.**
+**Joining two or more tables**
+
 It is often desirable to access data stored in more than just one table.
 This is possible to do using a JOIN clause to combine rows from two or more tables.
 In the example below, the Source and CcdVisit table are joined in order to obtain the date and seeing from the CcdVisit table.
