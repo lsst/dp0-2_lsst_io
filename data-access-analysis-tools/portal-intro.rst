@@ -23,8 +23,8 @@ How to use and edit the Astronomical Data Query Language (ADQL) commands in the 
 The ADQL commands can be exectuted from the Portal Aspect of the Rubin Science Platform, which can be accessed by clicking on the "Portal" panel of the main landing page at `data.lsst.cloud <https://data.lsst.cloud>`_.
 
 
-Edit ADQL (advanced)
-====================
+Using ADQL In the RSP Portal Aspect
+===================================
 
 ADQL is the `Astronomical Data Query Language <https://www.ivoa.net/documents/ADQL/>`_.
 The language is used by the `IVOA <https://ivoa.net>`_ to represent astronomy queries posted to Virtual Observatory (VO) 
