@@ -14,9 +14,9 @@
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
 .. A warning will alert you of identical labels during the linkcheck process.
 
-#####################################
+#######################################
 How to perform an image search (ObsTAP)
-#####################################
+#######################################
 
 .. This section should provide a brief, top-level description of the page.
 
@@ -31,16 +31,17 @@ Clicking on that tab will change the user interface to display query constraint 
 
 Additional information about the image types available in the DP0.2 data set is available in the :ref:`DP0-2-Data-Products-DPDD`.
 
-**Enter Constraints**
+**Observation types**
 
-Under "Observation Type and Source", the IVOA standard options for "Calibration Level" (0, 1, 2, 3, or 4) are provided.
-For DP0.2, "1" is the raw (unprocessed) images, "2" is the processed visit images (PVIs; the calibrated single-epoch images 
-also called calexps), and "3" are the derived image data such as difference images and deep coadds.
+The IVOA standard options provide multiple choice for "Calibration Level" (0, 1, 2, 3, or 4).
+For Rubin data, "1" is for the raw (unprocessed) images, "2" is for the processed visit images (PVIs; the calibrated single-epoch images 
+also called calexps), and "3" is for the derived image data such as difference images and co-added multiple PVIs ("deep coadds").
 
 The "Data Product Type" should be left as "Image", and the "Instrument Name", "Collection", and "Data Product Subtype" can all be left blank.
 
 Under "Location", only “Observation boundary contains point” was implemented at the time this documentation was written.
-Recall that the central (RA, Dec) coordinates for the DC2 simulated sky region are ``61.863 -35.790``.
+
+.. Recall that the central (RA, Dec) coordinates for the DC2 simulated sky region are ``61.863 -35.790``.
 
 Under "Timing", users can specify a range of the time of observation (this is only relevant for PVIs/calexps) 
 and/or exposure duration.
