@@ -31,7 +31,7 @@ Clicking on that tab will change the user interface to display query constraint 
 
 Additional information about the image types available in the DP0.2 data set is available in the :ref:`DP0-2-Data-Products-DPDD`.
 
-**Observation types**
+**Observation Types**
 
 The IVOA standard options provide multiple choice for "Calibration Level" (0, 1, 2, 3, or 4).
 For Rubin data, "1" is for the raw (unprocessed) images, "2" is for the processed visit images (PVIs; the calibrated single-epoch images 
@@ -46,13 +46,12 @@ Under "Location", only “Observation boundary contains point” was implemented
 Under "Timing", users can specify a range of the time of observation (this is only relevant for PVIs/calexps) 
 and/or exposure duration.
 
-Under "Spectral Coverage", users can provide a wavelength in, e.g., nanometers as a means of specifying the image band.
+Under "Spectral Coverage", users can select one or more filters, or the wavelength in, e.g., nanometers as a means of specifying the image band.
 
 **Output Column Selection and Constraints**
 
 The default is for all columns to be selected (i.e., have blue checks in the leftmost column).
-It is recommended to always return all metadata because the Portal requires some columns in order for the some of the 
-"Results" view functionality to work.  
+It is recommended to always return all metadata because the Portal requires some columns in order for the some of the "Results" view functionality to work.  
 
 **Example (PVIs/calexps)**
 
@@ -81,51 +80,3 @@ You can restrict the retrieved images to be only those in the 'r' filter by clic
 **Manipulating the Active Chart plot** is the same process as shown for the :ref:`Portal-Intro-Single-Table-Queries` results: 
 click on the "settings" icon (single gear) in the upper right corner to change the column data being plotted, alter the plot style, add axes labels, etc.
 
-**Interacting with the images** begins with just hovering the mouse over the sky image and noting the RA, Dec, and pixel value appear at the bottom.
-Use the magnifying glass icons in the upper left corner to zoom in and out. 
-You might need to hover over the image for these magnifying glasses to appear on the upper left.  
-Click and drag the image to pan.
-Above the magnifying glass icons, use the back and forth arrows to navigate between HDU (header data units) 1, 2, and 3: the image, mask, and variance data.
-Click on another row in the table, to display an image of a different part of the sky.
-At upper left, click on the "hamburger" menu, and in the "Results Layout" tab, select "Tables / Coverage Images Charts" option.  
-On the right-hand side, select "Data Product: ivoa.ObsCore" tab.  
-This will result in the table and the sky image side-by-side.
-
-.. figure:: /_static/portal_intro_DP02i.png
-    :name: portal_ImageQuery_sidebyside_DP02
-    :alt: Screenshot of a portal query.  The left image shows and image of the sky.  The right image shows the data table with one row selected, that row selects the image on the left.  
-	Display of the image in row two of the table (with the view format set to "Tables / Coverage Images Charts").
-
-**Image tools**:
-There are many tools available for users, the following demonstrates use of just one.
-First, zoom in on a bright star in one of the images.
-Select the "tools" icon (wrench and hammer), and from the pop-up window choose to "Extract" using a line.
-Draw a line on the image across the star to extract the pixel values and show an approximate shape of the point-spread function (PSF) for the star.
-The plot reveals that this particular star is saturated.
-Click on "Pin Chart/Table" to add a table of pixel data as a new tab in the left half of the view (the "Tables" side) as well as the PSF profile plot as a 
-new tab next to Active Chart plot (the tab is marked as "Pinned Charts"). To make the line go away, click on the "layers" icon (the one for which the hover-over text reads:  
-"Manipulate overlay display...") and in the pop-up window, next to "Extract Line 1 - HDU#1", click on "x" by the "Extract Line Tool" row.
-
-.. figure:: /_static/portal_intro_DP02j.png
-    :name: portal_ImageQuery_tools_DP02
-    :alt: A screenshot of the image display used to extract a line cut in the portal. On the left, is an image of the sky with an inverted color lookup table.
-    	There is one large star in the image.  A horizontal arrow has been manually drawn over it by the user.  A data table is to the right.  Sitting over the data table is a graph, constructed from the red arrow, showing data numbers versus offset in arcseconds.  
-	The use the image display tool to extract a line cut.
-
-**Image grid display**:
-Close all pop-up windows.  Above the image use the grid icon (hover-over text "Tile all images in the search result table") to show up to eight of the images side-by-side.
-Notice that it is possible to pan and zoom in each of these grid windows. 
-
-**Coverage window**:
-Above the image, notice that the default tab view is "Data Product: ivoa.obs.core", and instead click on "Coverage".
-The bounding boxes of all images listed in the table are shown, with the image in the selected row highlighted.
-The color-composite background shows the relevant DC2 simulated sky region.
-
-.. figure:: /_static/portal_intro_DP02k.png
-    :name: portal_ImageQueryCoverageDP02
-    :alt: This image is a screenshot of a results interface display in the Portal aspect. At right the bounding boxes for images returned by the query are drawn onto an image of the night sky. At left there is a table which lists metadata such as visit identifier and units for the images returned by the query.  The image demonstrates how users can click on a row in the table at left and the corresponding bounding box will be highlighted at right.   
-	The Portal "Results" view shows the bounding boxes of the retrieved DP0.2 images overplotted on a 2MASS image (in the future, the underlay will be LSST data) at the right, and the table
-    of retrieved DP0.2 image metadata at left.  The orange box at right corresponds to the yellow row at left.
-
-**Learn More.**
-See also :ref:`DP0-2-Tutorials-Portal` for a tutorial using additional image types and more of the Portal's image-related functionality.
