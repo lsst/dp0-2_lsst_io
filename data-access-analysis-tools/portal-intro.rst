@@ -30,7 +30,7 @@ ADQL is the `Astronomical Data Query Language <https://www.ivoa.net/documents/AD
 The language is used by the `IVOA <https://ivoa.net>`_ to represent astronomy queries posted to Virtual Observatory (VO) 
 services, such as the Rubin LSST TAP service. ADQL is based on the Structured Query Language (SQL).
 
-ADQL query box is acceesible by selecting the "Edit ADQL" box on the upper right of the Portal landing page.  
+ADQL query box is acceesible by clicking the "Edit ADQL" box on the upper right of the Portal landing page.  
 This will change the user interface to display an empty box where users can supply their query statement.
 Scrolling down in that interface will show several examples.
 
