@@ -157,7 +157,7 @@ Source detection, measurement, and characterization have been run on the PVIs, c
 Catalog data are accessible with the Table Access Protocol (TAP) service via the Portal or Notebook Aspect, and with the Butler via the Notebook Aspect.
 
 **DP0.2 Table Schema:**
-The column names, units, and descriptions of the DP0.2 catalogs listed in the table below are all available via the `DP0.2 schema browser <https://dm.lsst.org/sdm_schemas/browser/dp02.html>`_.
+The column names, units, and descriptions of the DP0.2 catalogs listed in the table below are all available via the `DP0.2 schema browser <https://sdm-schemas.lsst.io/dp02.html>`_.
 
 **Multiple similar Butler catalogs**, which contain the same data but are slightly differently named and differently formatted,
 can be found by querying the collections in the Butler registry.
