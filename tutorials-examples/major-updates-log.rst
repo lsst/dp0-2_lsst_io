@@ -28,12 +28,12 @@ All Jupyter Notebook tutorial headers contain the date "last verified to run".
 If the date in the file you are using does not match the date shown in that file in `the "prod" branch of the tutorial-notebooks repository <https://github.com/rubin-dp0/tutorial-notebooks/tree/prod>`_, your version is out of date.
 Follow the instructions for what to do if notebooks do not automatically update in the :ref:`NB-Intro-Use-A-NB-tips`. 
 
-A full history for all tutorial notebooks can be accessed in GitHub via this `direct link to the commit log for the
-tutorial-notebooks repository <https://github.com/rubin-dp0/tutorial-notebooks/commits/main>`_.
+A full history for all tutorial notebooks can be accessed in GitHub by going to 
+`the tutorial-notebooks repository <https://github.com/rubin-dp0/tutorial-notebooks>`_
+and clicking on "commits" under the green "code" button.
+The history of a given tutorial can be accessed by clicking on its filename
+in the repository and then clicking on "history" (near upper-right).
 
-The full history for any given tutorial notebook can be accessed via GitHub by going to the notebook of interest
-(e.g., the `introduction to DP0.2 notebook <https://github.com/rubin-dp0/tutorial-notebooks>`_),
-and clicking on "history" (near upper-right).
 
 Portal, command line, and API tutorials
 ---------------------------------------
