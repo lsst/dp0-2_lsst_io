@@ -110,13 +110,17 @@ is independent of the coordinate format for the overlaid grid. To choose a reado
 click the colored box (blue square) next to the "expand window" icon at the bottom left
 corner of the image panel. Having different coordinate systems for the overlaid grid
 and readout is useful for determining an object's position across the two reference frames.
+ 
 
 .. figure:: /_static/portal_tut06_step02b.png
     :width: 700
     :name: portal_tut06_step02b
     :alt: A screenshot displaying the drop-down menu for selecting a grid coordinate system to overlay, along with the option to choose the readout coordinate to print out.
 
-    Figure 4: Demonstration of selecting a coordinate system for the overlaid grid and configuring the readout format. 
+    Figure 4: Demonstration of selecting a coordinate system for the overlaid grid and configuring the readout format.
+
+**Note:** Remove a layer completely by clicking the "x" next to the "color" box, or
+temporarily disable it by toggling the sliding button for that layer. 
 
 **2.3.** A different unit other than the default degrees is available for measuring
 the distance between two selected points. Options include arcminutes, arcseconds, and pixels.
@@ -177,7 +181,34 @@ Adjust their positions, angles, labels, label locations, and colors as desired i
 
     Figure 8: The footprints of the Spitzer/IRAC36, HST's WFC3/UVIS, and JWST/NIRCam are overlaid on the image. 
 
+**2.7.** At any point, if you want to capture all the layers as an image, click the "Tools"
+icon, then select the "Save" icon and choose "PNG" as the file type. Note that the "FITS"
+format only saves the default image. To remove all edits and revert to the default settings,
+click the "Restore" icon. Click the "Information" icon to view the FITS header. 
+
 Step 3. Analysis Tools  
 ======================
+
+The Portal feature enables a variety of basic image analysis tools.
+
+**3.1.** Extract line 
+
+.. figure:: /_static/portal_tut06_step03a.png
+    :name: portal_tut06_step03a
+    :alt: xxx
+
+    Figure 9: xxx
+
+**3.2.** Extract points
+
+.. figure:: /_static/portal_tut06_step03b.png
+    :name: portal_tut06_step03b
+    :alt: xxx
+
+    Figure 10: xxx 
+
+**3.3.** Save extracted points as a DS9 region file
+
+**3.4.** TAP search for the extracted points
 
 
