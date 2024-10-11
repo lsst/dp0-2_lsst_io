@@ -26,7 +26,7 @@
 
 **Contact authors:** Yumi Choi
 
-**Last verified to run:** 2024-10-04
+**Last verified to run:** 2024-10-10
 
 **Targeted learning level:** Beginner 
 
@@ -61,7 +61,7 @@ location within the `DC2 <https://dp0-2.lsst.io/data-products-dp0-2/index.html#t
 footprint. Do not set any timing, spectral coverage, or object ID search constraints.
 
 .. figure:: /_static/portal_tut06_step01a.png
-    :width: 300
+    :width: 400
     :name: portal_tut06_step01a
     :alt: A screenshot of the Portal aspect after selecting the "DP0.2 Images" with the query set up.
 
@@ -125,7 +125,7 @@ and choose the unit to use. Check the "Offset Calculation" box to display the se
 along the x and y axes on the image.
 
 .. figure:: /_static/portal_tut06_step02c.png
-    :width: 200
+    :width: 400
     :name: portal_tut06_step02c
     :alt: A screenshot demonstrating how to use the distance tool to display the angular separation between two points.
 
@@ -135,7 +135,7 @@ along the x and y axes on the image.
 How to creat a region file from selecting objects in the image. 
 
 .. figure:: /_static/portal_tut06_step02d.png
-    :width: 300
+    :width: 500
     :name: portal_tut06_step02d
     :alt: xxx
 
@@ -145,7 +145,7 @@ How to creat a region file from selecting objects in the image.
 How to load an existing region file and overplot on the image.
 
 .. figure:: /_static/portal_tut06_step02e.png
-    :width: 300
+    :width: 500
     :name: portal_tut06_step02e
     :alt: xxx
 
@@ -155,7 +155,7 @@ How to load an existing region file and overplot on the image.
 How to add makers on the image.
 
 .. figure:: /_static/portal_tut06_step02f.png
-    :width: 300
+    :width: 500
     :name: portal_tut06_step02f
     :alt: xxx
 
