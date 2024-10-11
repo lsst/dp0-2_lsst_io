@@ -139,8 +139,9 @@ the x and y axes on the image.
 
     Figure 5: Demonstration of the distance tool in use, displaying the angular separation between two selected points.
 
-**2.4.** A DS9 region file can be uploaded to the Portal, and overlaid on the image.
-Download an example region file to your computer using the `link to the file <https://github.com/lsst/dp0-2_lsst_io/blob/main/_static/table_Points-4-HDU1.reg>`_.
+**2.4. Upload a DS9 Region File.** A DS9 region file can be uploaded to the Portal,
+and overlaid on the image. Download an example region file to your computer using the
+`link to the file <https://github.com/lsst/dp0-2_lsst_io/blob/main/_static/table_Points-4-HDU1.reg>`_.
 If new to GitHub, click this link to navigate to the GitHub repository containing the 
 example region file, then click the "Download" tab (an icon of an arrow pointing into a box).
 To load the region file into the Portal and overlay the entries on the image, click the "Tools"
@@ -155,15 +156,15 @@ click "Upload", and then click "Draw". It should overlay six circles on the imag
 
     Figure 6: Six entries from the uploaded region file are overlaid on the image.
 
-**2.5.** Markers can be added to the images. Click the "Tools" icon to open the drop-down menu.
-Under the "Layers" section, click the last icon and select "Add Marker." A marker labeled
-"Marker #1" will appear at the center of the image. Click and drag the marker to the desired
-location, and adjust its size by dragging any corner of the surrounding box. To edit the marker,
-click the "Manipualte overlay display" icon and go to the "Marker #1" section. Change the label
-by typing "galaxy of interest" into the "Label" field, and use the "Corner" drop-down to adjust
-the label’s position. To change the marker's color, click the "color" box to open the "Color Picker"
-window and select your preferred color. To add another marker, click the "Add Marker" box, which
-will place a new marker at the center of the image.
+**2.5. Mark up the Image.** Markers can be added to the images. Click the "Tools" icon to open
+the drop-down menu. Under the "Layers" section, click the last icon and select "Add Marker".
+A marker labeled "Marker #1" will appear at the center of the image. Click and drag the marker
+to the desired location, and adjust its size by dragging any corner of the surrounding box. To
+edit the marker, click the "Manipualte overlay display" icon and go to the "Marker #1" section.
+Change the label by typing "galaxy of interest" into the "Label" field, and use the "Corner"
+drop-down to adjust the label’s position. To change the marker's color, click the "color" box
+to open the "Color Picker" window and select your preferred color. To add another marker, click
+the "Add Marker" box, which will place a new marker at the center of the image.
 
 .. figure:: /_static/portal_tut06_step02e.png
     :width: 700
@@ -172,12 +173,12 @@ will place a new marker at the center of the image.
 
     Figure 7: The image with an added marker with the modified label and color. 
 
-**2.6.** Lastly, it is possible to overlay footprints from various observatories and intruments
-directly onto the image. Click the last icon under the "Layers" section. Select "IRAC36" from
-the "Add Spitzer footprint" option, "WFC3/UVIS" from the "Add HST footprint" option, and "NIRCam"
-from the "Add JWST prelim. footprint" option. All three footprints will appear on the image.
-Adjust their positions, angles, labels, label locations, and colors as desired in the 
-"Manipulate Overlay Display" section as described in Step 2.5.
+**2.6. Overlay Footprints from Various Observatories and Instruments.** Lastly, it is possible
+to overlay footprints from various observatories and intruments directly onto the image. Click
+the last icon under the "Layers" section. Select "IRAC36" from the "Add Spitzer footprint" option,
+"WFC3/UVIS" from the "Add HST footprint" option, and "NIRCam" from the "Add JWST prelim. footprint"
+option. All three footprints will appear on the image. Adjust their positions, angles, labels,
+label locations, and colors as desired in the "Manipulate Overlay Display" section as described in Step 2.5.
 
 .. figure:: /_static/portal_tut06_step02f.png
     :name: portal_tut06_step02f
@@ -185,10 +186,13 @@ Adjust their positions, angles, labels, label locations, and colors as desired i
 
     Figure 8: The footprints of the Spitzer/IRAC36, HST's WFC3/UVIS, and JWST/NIRCam are overlaid on the image. 
 
-**2.7.** At any point, if you want to capture all the layers as an image, click the "Tools"
-icon, then select the "Save" icon and choose "PNG" as the file type. Note that the "FITS"
-format only saves the default image. To remove all edits and revert to the default settings,
-click the "Restore" icon. Click the "Information" icon to view the FITS header. 
+**2.7. Save, Restore, and View Image Information.** At any point, if you want to capture all
+the layers as an image, click the "Tools" icon, then select the "Save" icon and choose "PNG"
+as the file type. Note that the "FITS" format only saves the default image. To remove all edits
+and revert to the default settings, click the "Restore" icon. Click the "Information" icon to
+view the FITS header. 
+
+.. _DP0-2-Portal-6-Step-3:
 
 Step 3. Analysis Tools  
 ======================
