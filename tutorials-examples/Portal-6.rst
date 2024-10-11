@@ -84,7 +84,7 @@ Step 2. Add Layers to the Active Image(s)
 
 Additional information can be overlaid on the active image(s) as layers. 
 
-**2.1** Overlay a compass, coordinate grid, and ruler on the images. First, click
+**2.1.** Overlay a compass, coordinate grid, and ruler on the images. First, click
 the "Tools" icon to open the drop-down menu. Under the "Layers" section, click the
 "North-East arrow" icon to add the compass, click "Grid" icon to add a coordinate grid,
 and click "Ruler" icon to measure the distance between two user-identified points.
@@ -93,17 +93,16 @@ This will display an arrow on the image along with the angular separation betwee
 the two points and the position angle. 
 
 .. figure:: /_static/portal_tut06_step02a.png
+    :width: 600
     :name: portal_tut06_step02a
-    :alt: The image overlaid with a compass indicating the North and East directions,
-    a grid for Equatorial J2000 coordinates, and a ruler measuring angular separation
-    between two selected objects.
+    :alt: The image overlaid with a compass indicating the North and East directions, a grid for Equatorial J2000 coordinates, and a ruler measuring angular separation between two selected objects.
 
     Figure 3: The image overlaid with a compass, coordinate grid, and ruler.
 
 **Warning:** Switching between single and tile frames does not retain the applied layers,
 except for the compass indicating the North and East directions on the image.
 
-**2.2** To select a coordinate system to overlay on the image, open the drop-down
+**2.2.** To select a coordinate system to overlay on the image, open the drop-down
 menu under the "Grid" option from the "Manipualte overlay display" icon (magenta circle).
 For the Equatorial coordinate systems, two formats are available for displaying
 astronomical coordinates: sexagesimal and decimal. The readout coordinate format
@@ -113,15 +112,16 @@ corner of the image panel. Having different coordinate systems for the overlaid 
 and readout is useful for determining an object's position across the two reference frames.
 
 .. figure:: /_static/portal_tut06_step02b.png
+    :width: 700
     :name: portal_tut06_step02b
-    :alt:A screenshot displaying the drop-down menu for selecting a grid coordinate system to overlay, along with the option to choose the readout coordinate to print out.
+    :alt: A screenshot displaying the drop-down menu for selecting a grid coordinate system to overlay, along with the option to choose the readout coordinate to print out.
 
     Figure 4: Demonstration of selecting a coordinate system for the overlaid grid and configuring the readout format. 
 
-**2.3** A different unit other than the default degrees is available for measuring
+**2.3.** A different unit other than the default degrees is available for measuring
 the distance between two selected points. Options include arcminutes, arcseconds, and pixels.
-To change the unit, go to the "Distance Tool" option under the "Manipulate Overlay Display" icon,
-and choose the unit to use. Check the "Offset Calculation" box to display the separations
+To change the unit, go to the "Distance Tool" option under the "Manipulate Overlay Display"
+icon, and choose the unit to use. Check the "Offset Calculation" box to display the separations
 along the x and y axes on the image.
 
 .. figure:: /_static/portal_tut06_step02c.png
@@ -131,44 +131,51 @@ along the x and y axes on the image.
 
     Figure 5: Demonstration of the distance tool in use, displaying the angular separation between two selected points.
 
-**2.4** Create a region file
-How to creat a region file from selecting objects in the image. 
+**2.4.** A DS9 region file can be uploaded to the Portal, and overlaid on the image.
+Download an example region file to your computer using the `link to the file <https://github.com/lsst/dp0-2_lsst_io/blob/main/_static/table_Points-4-HDU1.reg>`_.
+If new to GitHub, click this link to navigate to the GitHub repository containing the 
+example region file, then click the "Download" tab (an icon of an arrow pointing into a box).
+To load the region file into the Portal and overlay the entries on the image, click the "Tools"
+icon to open the drop-down menu. Under the "Layers" section, select the "Load a DS9 Region File"
+icon to open a file upload window. Click "Choose File", select the region file from your computer,
+click "Upload", and then click "Draw". It should overlay six circles on the image.  
 
 .. figure:: /_static/portal_tut06_step02d.png
     :width: 500
     :name: portal_tut06_step02d
-    :alt: xxx
+    :alt: A screenshot showing how to upload an existing region file and overlay its entries on the image.
 
-    Figure 6: xxx
+    Figure 6: Six entries from the uploaded region file are overlaid on the image.
 
-**2.5** Load a region file
-How to load an existing region file and overplot on the image.
+**2.5.** Markers can be added to the images. Click the "Tools" icon to open the drop-down menu.
+Under the "Layers" section, click the last icon and select "Add Marker." A marker labeled
+"Marker #1" will appear at the center of the image. Click and drag the marker to the desired
+location, and adjust its size by dragging any corner of the surrounding box. To edit the marker,
+click the "Manipualte overlay display" icon and go to the "Marker #1" section. Change the label
+by typing "galaxy of interest" into the "Label" field, and use the "Corner" drop-down to adjust
+the label’s position. To change the marker's color, click the "color" box to open the "Color Picker"
+window and select your preferred color. To add another marker, click the "Add Marker" box, which
+will place a new marker at the center of the image.
 
 .. figure:: /_static/portal_tut06_step02e.png
-    :width: 500
+    :width: 700
     :name: portal_tut06_step02e
-    :alt: xxx
+    :alt: A screenshot showing how to add a marker and edit the marker.
 
-    Figure 7: xxx
+    Figure 7: The image with an added marker with the modified label and color. 
 
-**2.6** Adding a marker
-How to add makers on the image.
+**2.6.** Lastly, it is possible to overlay footprints from various observatories and intruments
+directly onto the image. Click the last icon under the "Layers" section. Select "IRAC36" from
+the "Add Spitzer footprint" option, "WFC3/UVIS" from the "Add HST footprint" option, and "NIRCam"
+from the "Add JWST prelim. footprint" option. All three footprints will appear on the image.
+Adjust their positions, angles, labels, label locations, and colors as desired in the 
+"Manipulate Overlay Display" section as described in Step 2.5.
 
 .. figure:: /_static/portal_tut06_step02f.png
-    :width: 500
     :name: portal_tut06_step02f
-    :alt: xxx
+    :alt: A screenshot demonstrating how to overlay footprints from various observatories and instruments onto the image.
 
-    Figure 8: xxx
-
-**2.7** Overlay footprints from various observatories and missions directly on images.
-How to overlay footprints.
-
-.. figure:: /_static/portal_tut06_step02g.png
-    :name: portal_tut06_step02g
-    :alt: xxx
-
-    Figure 9: xxx
+    Figure 8: The footprints of the Spitzer/IRAC36, HST's WFC3/UVIS, and JWST/NIRCam are overlaid on the image. 
 
 Step 3. Analysis Tools  
 ======================
