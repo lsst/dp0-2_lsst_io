@@ -26,7 +26,7 @@
 
 **Contact authors:** Yumi Choi
 
-**Last verified to run:** 2024-10-11
+**Last verified to run:** 2024-10-17
 
 **Targeted learning level:** Beginner 
 
@@ -178,7 +178,8 @@ to overlay footprints from various observatories and intruments directly onto th
 the last icon under the "Layers" section. Select "IRAC36" from the "Add Spitzer footprint" option,
 "WFC3/UVIS" from the "Add HST footprint" option, and "NIRCam" from the "Add JWST prelim. footprint"
 option. All three footprints will appear on the image. Adjust their positions, angles, labels,
-label locations, and colors as desired in the "Manipulate Overlay Display" section as described in Step 2.5.
+label locations, and colors as desired in the "Manipulate Overlay Display" section as described
+in Step 2.5.
 
 .. figure:: /_static/portal_tut06_step02f.png
     :name: portal_tut06_step02f
@@ -192,6 +193,7 @@ as the file type. Note that the "FITS" format only saves the default image. To r
 and revert to the default settings, click the "Restore" icon. Click the "Information" icon to
 view the FITS header. 
 
+
 .. _DP0-2-Portal-6-Step-3:
 
 Step 3. Analysis Tools  
@@ -199,13 +201,21 @@ Step 3. Analysis Tools
 
 The Portal feature enables a variety of basic image analysis tools.
 
-**3.1.** Extract line 
+**3.1. Extract Pixel Values along a Line (i.e., the 1D Brightness Profile of A Source).**
+Click the "Tools" icon, then select the "Line" icon under the "Extract" section.
+An instruction window will appear, allowing you to choose an aperture to combine the values.
+Click on the start point of the image and drag to the end point to draw a line along your source.
+Once the line is drawn, a pop-up window will display the 1D brightness profile.
+You can also adjust the aperture in this window as needed. To save the result temporarily,
+click the "Pin Chart/Table" button at the bottom left. This will add the table and chart
+next to the default results table and the active chart. Alternatively, you can download
+them directly.
 
 .. figure:: /_static/portal_tut06_step03a.png
     :name: portal_tut06_step03a
-    :alt: xxx
+    :alt: A screenshot displaying a line drawn across a source, accompanied by a pop-up window showing the source's 1D brightness profile along that line. 
 
-    Figure 9: xxx
+    Figure 9: A line drawn across a source, with a pop-up window displaying the 1D brightness profile of the source.
 
 **3.2.** Extract points
 
