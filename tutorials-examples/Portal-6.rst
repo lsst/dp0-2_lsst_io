@@ -209,25 +209,29 @@ Once the line is drawn, a pop-up window will display the 1D brightness profile.
 You can also adjust the aperture in this window as needed. To save the result temporarily,
 click the "Pin Chart/Table" button at the bottom left. This will add the table and chart
 next to the default results table and the active chart. Alternatively, you can download
-them directly.
+them directly. Repeat the process to add another line.
 
 .. figure:: /_static/portal_tut06_step03a.png
+    :width: 500
     :name: portal_tut06_step03a
     :alt: A screenshot displaying a line drawn across a source, accompanied by a pop-up window showing the source's 1D brightness profile along that line. 
 
     Figure 9: A line drawn across a source, with a pop-up window displaying the 1D brightness profile of the source.
 
-**3.2.** Extract points
+**3.2. Extract Pixel Information for Selected Points and Save as A DS9 Region File.**
+Now under the "Extract" section, click the "Points" icon. An instruction window will appear,
+allowing you to choose an aperture to combine the values. Unlike the line extraction process,
+multiple points can be selected to extract their pixel values at once. To save the result temporarily,
+click the "Pin Chart/Table" button. Or, to save the results, click the "Download as Table" and/or
+"Download Chart" button. Note that the results can be saved as a DS9 region file. 
 
 .. figure:: /_static/portal_tut06_step03b.png
     :name: portal_tut06_step03b
-    :alt: xxx
+    :alt: A screenshot displaying six selected points on the image, in the pinned table, and in the active chart, with a pop-up window offering options for file format and naming for saving.
 
-    Figure 10: xxx 
+    Figure 10: Six selected points on the image (left panel), in the pinned table (bottom panel), and in the active chart (right panel), with a pop-up window offering options for file format and naming for saving.
 
-**3.3.** Save extracted points as a DS9 region file
-
-**3.4.** TAP search for the extracted points
+**3.3.** TAP search for the extracted points
 
 `Link to the Portal FAQ page <https://dp0-2.lsst.io/v/PREOPS-5150/data-access-analysis-tools/portal-future-faq.html>`_
 
