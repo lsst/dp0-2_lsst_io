@@ -264,12 +264,14 @@ window, set "X" to "midPointTai" and "Y" to "apFlux." Toggle the y-axis "Error" 
 Click "OK" to generate the plot showing flux variation over time for the object.
 
 .. figure:: /_static/portal_tut06_step03e.png
+    :width: 400
     :name: portal_tut06_step03e
     :alt: A screenshot of the "Add New Chart" pop-up window with X, Y, and y-axis Err fields are properly entered.
 
     Figure 12: The "Add New Chart" pop-up window with settings to plot the object's Flux vs. Time. 
 
 .. figure:: /_static/portal_tut06_step03f.png
+    :width: 600
     :name: portal_tut06_step03f
     :alt: A screenshot of the object's Flux vs. Time.
 
