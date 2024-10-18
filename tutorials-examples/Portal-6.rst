@@ -26,7 +26,7 @@
 
 **Contact authors:** Yumi Choi
 
-**Last verified to run:** 2024-10-17
+**Last verified to run:** 2024-10-18
 
 **Targeted learning level:** Beginner 
 
@@ -105,7 +105,7 @@ the two points and the position angle.
 **Warning:** Switching between single and tile frames does not retain the applied layers,
 except for the compass indicating the North and East directions on the image.
 
-**2.2. Select the Coordinate Systems to Overlay and to Read Out.** To select a coordinate
+**2.1.1. Select the Coordinate Systems to Overlay and to Read Out.** To select a coordinate
 system to overlay on the image, open the drop-down menu under the "Grid" option from the
 "Manipualte overlay display" icon (magenta circle). For the Equatorial coordinate systems,
 two formats are available for displaying astronomical coordinates: sexagesimal and decimal.
@@ -125,7 +125,7 @@ reference frames.
 **Note:** Remove a layer completely by clicking the "x" next to the "color" box, or
 temporarily disable it by toggling the sliding button for that layer. 
 
-**2.3. Manipulate the Distance Tool.** 
+**2.1.2. Manipulate the Distance Tool.** 
 A different unit other than the default degrees is available for measuring the distance
 between two selected points. Options include arcminutes, arcseconds, and pixels. To change
 the unit, go to the "Distance Tool" option under the "Manipulate Overlay Display" icon, and
@@ -139,7 +139,7 @@ the x and y axes on the image.
 
     Figure 5: Demonstration of the distance tool in use, displaying the angular separation between two selected points.
 
-**2.4. Upload a DS9 Region File.** A DS9 region file can be uploaded to the Portal,
+**2.2. Upload a DS9 Region File.** A DS9 region file can be uploaded to the Portal,
 and overlaid on the image. Download an example region file to your computer using the
 `link to the file <https://github.com/lsst/dp0-2_lsst_io/blob/main/_static/table_Points-4-HDU1.reg>`_.
 If new to GitHub, click this link to navigate to the GitHub repository containing the 
@@ -156,7 +156,7 @@ click "Upload", and then click "Draw". It should overlay six circles on the imag
 
     Figure 6: Six entries from the uploaded region file are overlaid on the image.
 
-**2.5. Mark up the Image.** Markers can be added to the images. Click the "Tools" icon to open
+**2.3. Mark up the Image.** Markers can be added to the images. Click the "Tools" icon to open
 the drop-down menu. Under the "Layers" section, click the last icon and select "Add Marker".
 A marker labeled "Marker #1" will appear at the center of the image. Click and drag the marker
 to the desired location, and adjust its size by dragging any corner of the surrounding box. To
@@ -173,7 +173,7 @@ the "Add Marker" box, which will place a new marker at the center of the image.
 
     Figure 7: The image with an added marker with the modified label and color. 
 
-**2.6. Overlay Footprints from Various Observatories and Instruments.** Lastly, it is possible
+**2.4. Overlay Footprints from Various Observatories and Instruments.** Lastly, it is possible
 to overlay footprints from various observatories and intruments directly onto the image. Click
 the last icon under the "Layers" section. Select "IRAC36" from the "Add Spitzer footprint" option,
 "WFC3/UVIS" from the "Add HST footprint" option, and "NIRCam" from the "Add JWST prelim. footprint"
@@ -187,7 +187,7 @@ in Step 2.5.
 
     Figure 8: The footprints of the Spitzer/IRAC36, HST's WFC3/UVIS, and JWST/NIRCam are overlaid on the image. 
 
-**2.7. Save, Restore, and View Image Information.** At any point, if you want to capture all
+**2.5. Save, Restore, and View Image Information.** At any point, if you want to capture all
 the layers as an image, click the "Tools" icon, then select the "Save" icon and choose "PNG"
 as the file type. Note that the "FITS" format only saves the default image. To remove all edits
 and revert to the default settings, click the "Restore" icon. Click the "Information" icon to
@@ -227,12 +227,67 @@ click the "Pin Chart/Table" button. Or, to save the results, click the "Download
 
 .. figure:: /_static/portal_tut06_step03b.png
     :name: portal_tut06_step03b
-    :alt: A screenshot displaying six selected points on the image, in the pinned table, and in the active chart, with a pop-up window offering options for file format and naming for saving.
+    :alt: A screenshot displaying six selected points on the image (left panel), in the active chart (right panel), and in the pinned table (bottom panel), with a pop-up window offering options for file format and naming for saving.
 
-    Figure 10: Six selected points on the image (left panel), in the pinned table (bottom panel), and in the active chart (right panel), with a pop-up window offering options for file format and naming for saving.
+    Figure 10: Six selected points on the image (left panel), in the active chart (right panel), and in the pinned table (bottom panel), with a pop-up window offering options for file format and naming for saving.
 
-**3.3.** TAP search for the extracted points
+**3.3. TAP Search for a Selected Source.**
 
-`Link to the Portal FAQ page <https://dp0-2.lsst.io/v/PREOPS-5150/data-access-analysis-tools/portal-future-faq.html>`_
+**3.3.1. Select a Source to Execute TAP Search.** Select a source to run a TAP query against the
+DP0.2 catalogs by following Step 3.2. In the Table view panel, click the "Lamp" icon (magenta circle)
+at the top right, then choose "Search TAP at row" under the "Cone and Point Actions based on center"
+to section.
+
+.. figure:: /_static/portal_tut06_step03c.png
+    :name: portal_tut06_step03c
+    :alt: A screenshot showing a selected point on the image, displayed in the active chart (right panel) and pinned table (bottom panel), with a pop-up window offering TAP search options based on the selected table.
+
+    Figure 11: A screenshot showing a selected point on the image (left panel), displayed in the active chart (right panel) and pinned table (bottom panel), with a pop-up window offering TAP search options based on the selected table.
+
+**3.3.2. Execute a TAP query.** Step 3.3.1 leads to the General TAP page. Ensure the TAP Service tab
+at the top is set to "LSST DP0.2 DC2: https://data.lsst.cloud/api/tap". For the "LSST DP0.2 DC2 Tables" tab,
+select "dp02_dc2_catalogs.DiaSource" in the right-hand tab to retrieve flux variation data for the selected object.
+Confirm the coordinate box under the "Spatial" section defaults to "3h44m19.33s -34d57m12.1s Equ J2000".
+Change the search radius to 1 arcsecond. Leave the "Temporal" box unchecked. Click the "Search" button at the bottom left.
+
+.. figure:: /_static/portal_tut06_step03d.png
+    :name: portal_tut06_step03d
+    :alt: A screenshot of the General TAP page with the "dp02_dc2_catalogs.DiaSource" catalog selected, pre-populated coordinates for the selected source, and the search radius set to 1 arcsecond.
+
+    Figure 11: The General TAP page with the "dp02_dc2_catalogs.DiaSource" catalog selected, pre-populated coordinates for the selected source, and the search radius set to 1 arcsecond.
+
+**3.3.3. Plot Flux vs. Time from the TAP Query Results.** Step 3.3.2 automatically leads to the Results page.
+Once the search is complete, the Active Chart and Table panels will display the default view of the retrieved
+query results with 156 entries. Ensure that "diaObjectId" equals "1735002960351461445" for all entries.
+To plot the object's flux variation over time, click the "+" button in the Active Charts panel. In the "Add New Chart"
+window, set "X" to "midPointTai" and "Y" to "apFlux." Toggle the y-axis "Error" and set it to "apFluxErr".
+Click "OK" to generate the plot showing flux variation over time for the object.
+
+.. figure:: /_static/portal_tut06_step03e.png
+    :name: portal_tut06_step03e
+    :alt: A screenshot of the "Add New Chart" pop-up window with X, Y, and y-axis Err fields are properly entered.
+
+    Figure 12: The "Add New Chart" pop-up window with settings to plot the object's Flux vs. Time. 
+
+.. figure:: /_static/portal_tut06_step03f.png
+    :name: portal_tut06_step03f
+    :alt: A screenshot of the object's Flux vs. Time.
+
+    Figure 13: The flux versus observing time for the selected object. 
+
+
+.. _DP0-2-Portal-6-Step-4:
+
+Step 4. Exercises for the learner  
+=================================
+
+**4.1.** Load various layers onto the images of your selected area of interest, including a DS9 region file.
+
+**4.2.** Download a table of multiple extracted objects and upload it to perform a TAP search against the
+user-supplied tables. Refer to the available tutorials for detailed instructions on using the
+`Portal <https://dp0-3.lsst.io/tutorials-dp0-3/portal-dp0-3-5.html>`_ and
+`Jupyter Notebooks <https://dp0-3.lsst.io/tutorials-dp0-3/rendered_nb_03_06.html>`_. 
+
+**Portal FAQ page"** `Link to the Portal FAQ page <https://dp0-2.lsst.io/v/PREOPS-5150/data-access-analysis-tools/portal-future-faq.html>`_
 
 
