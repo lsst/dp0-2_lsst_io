@@ -14595,7 +14595,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <img align="left" src = https://project.lsst.org/sites/default/files/Rubin-O-Logo_0.png width=250 style="padding: 10px"> 
 <b>Detect and Measure Sources in a Custom Coadded Image</b> <br>
 Contact author: Melissa Graham, Aaron Meisner <br>
-Last verified to run: 2023-11-25 <br>
+Last verified to run: 2024-10-21 <br>
 LSST Science Pipelines version: <b>Weekly 2022_40</b> <br>
 Container Size: large <br>
 Targeted learning level: advanced <br>
@@ -14670,6 +14670,14 @@ This notebook will only run with LSST Science Pipelines version Weekly 2022_40.<
 <li>At <a href="https://dp0-2.lsst.io/data-access-analysis-tools/nb-intro.html#how-to-log-in-navigate-and-log-out-of-jupyterlab">the &quot;Server Options&quot; stage</a>, under &quot;Select uncached image (slower start)&quot; choose <code>Weekly 2022_40</code>.</li>
 <li>Note that it might take a few minutes to start the server with an old image.</li>
 </ol>
+<hr />
+<p><strong>NOTICE:
+This notebook will only run with the butler repo alias <code>dp02-direct</code>.</strong></p>
+<p>All other tutorial notebooks in this repository use the <code>dp02</code> alias, which was updated in Oct 2024 to provide
+ready-only access to butler data repos.
+As this tutorial writes processed images back to the butler, &quot;direct access&quot; is needed and <code>dp02-direct</code> must be used.
+Note that this is a temporary work around for Data Preview 0. 
+Butler functionality for Data Preview 1 will be different, as the butler service continues to evolve.</p>
 <hr />
 <p><br><br><br><br></p>
 
@@ -14893,7 +14901,7 @@ Find DP0-related documentation and resources at <a href="https://dp0-2.lsst.io">
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_username</span> <span class="o">=</span> <span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span>
-<span class="n">butler_repo</span> <span class="o">=</span> <span class="s1">'dp02'</span>
+<span class="n">butler_repo</span> <span class="o">=</span> <span class="s1">'dp02-direct'</span>
 </pre></div>
 
      </div>
@@ -14958,11 +14966,28 @@ Find DP0-related documentation and resources at <a href="https://dp0-2.lsst.io">
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>
-
-u/ameisner/custom_coadd_window1_test1
-u/ameisner/custom_coadd_window1_test1/20240418T192301Z
-
+<pre>u/melissagraham/custom_coadd_window1_cl00
+u/melissagraham/custom_coadd_window1_cl00/20230522T024824Z
+u/melissagraham/custom_coadd_window1_cl00/20231107T001052Z
+u/melissagraham/custom_coadd_window1_cl00_det
+u/melissagraham/custom_coadd_window1_cl00_det/20231107T051840Z
+u/melissagraham/custom_coadd_window1_test1
+u/melissagraham/custom_coadd_window1_test1/20230413T030012Z
+u/melissagraham/custom_coadd_window1_test1/20240418T162549Z
+u/melissagraham/custom_coadd_window1_test1_nbdet/20231127T182303Z
+u/melissagraham/custom_coadd_window1_test1_nbdet/20240422T020724Z
+u/melissagraham/custom_coadd_window1_test2
+u/melissagraham/custom_coadd_window1_test2/20241021T182310Z
+u/melissagraham/custom_coadd_window1_test3
+u/melissagraham/custom_coadd_window1_test3/20241018T231407Z
+u/melissagraham/injection_inputs21_contrib
+u/melissagraham/test0_injection_inputs
+u/melissagraham/test2_injection_inputs
+u/melissagraham/test_injection_inputs
+u/melissagraham/test_injection_inputs_240426_1
+u/melissagraham/test_injection_inputs_240426_2
+u/melissagraham/test_injection_inputs_V2
+u/melissagraham/test_injection_inputs_v2
 </pre>
 </div>
 </div>
@@ -15022,7 +15047,7 @@ u/ameisner/custom_coadd_window1_test1/20240418T192301Z
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">inputCollection</span> <span class="o">=</span> <span class="s2">"u/"</span><span class="o">+</span><span class="n">my_username</span><span class="o">+</span><span class="s2">"/custom_coadd_window1_test1"</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">inputCollection</span> <span class="o">=</span> <span class="s2">"u/"</span><span class="o">+</span><span class="n">my_username</span><span class="o">+</span><span class="s2">"/custom_coadd_window1_test2"</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">inputCollection</span><span class="p">)</span>
 </pre></div>
 
@@ -15043,7 +15068,7 @@ u/ameisner/custom_coadd_window1_test1/20240418T192301Z
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>u/ameisner/custom_coadd_window1_test1
+<pre>u/melissagraham/custom_coadd_window1_test2
 </pre>
 </div>
 </div>
@@ -15140,7 +15165,7 @@ u/ameisner/custom_coadd_window1_test1/20240418T192301Z
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 <div><i>Table length=6</i>
-<table id="table134405390205520" class="table-striped table-bordered table-condensed">
+<table id="table132886609564416" class="table-striped table-bordered table-condensed">
 <thead><tr><th>id</th><th>bbox_min_x</th><th>bbox_min_y</th><th>bbox_max_x</th><th>bbox_max_y</th><th>goodpix</th><th>weight</th><th>filter</th></tr></thead>
 <thead><tr><th></th><th>pix</th><th>pix</th><th>pix</th><th>pix</th><th></th><th></th><th></th></tr></thead>
 <thead><tr><th>int64</th><th>int32</th><th>int32</th><th>int32</th><th>int32</th><th>int32</th><th>float64</th><th>str32</th></tr></thead>
@@ -15210,10 +15235,10 @@ u/ameisner/custom_coadd_window1_test1/20240418T192301Z
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_outputCollection_identifier</span> <span class="o">=</span> <span class="s1">'custom_coadd_window1_test1_nbdet'</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_outputCollection_identifier</span> <span class="o">=</span> <span class="s1">'custom_coadd_window1_test2_nbdet'</span>
 <span class="n">my_outputCollection</span> <span class="o">=</span> <span class="s1">'u/'</span> <span class="o">+</span> <span class="n">my_username</span> <span class="o">+</span> <span class="s1">'/'</span><span class="o">+</span> <span class="n">my_outputCollection_identifier</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">my_outputCollection</span><span class="p">)</span>
 </pre></div>
@@ -15235,7 +15260,7 @@ u/ameisner/custom_coadd_window1_test1/20240418T192301Z
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>u/ameisner/custom_coadd_window1_test1_nbdet
+<pre>u/melissagraham/custom_coadd_window1_test2_nbdet
 </pre>
 </div>
 </div>
@@ -15261,7 +15286,7 @@ u/ameisner/custom_coadd_window1_test1/20240418T192301Z
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">simpleButler</span> <span class="o">=</span> <span class="n">SimplePipelineExecutor</span><span class="o">.</span><span class="n">prep_butler</span><span class="p">(</span><span class="n">butler_repo</span><span class="p">,</span> 
@@ -15298,7 +15323,7 @@ u/ameisner/custom_coadd_window1_test1/20240418T192301Z
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">simpleButler</span><span class="o">.</span><span class="n">registry</span><span class="o">.</span><span class="n">getCollectionChain</span><span class="p">(</span><span class="n">my_outputCollection</span><span class="p">)</span>
@@ -15317,13 +15342,13 @@ u/ameisner/custom_coadd_window1_test1/20240418T192301Z
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>CollectionSearch((&#39;u/ameisner/custom_coadd_window1_test1_nbdet/20240418T200206Z&#39;, &#39;u/ameisner/custom_coadd_window1_test1&#39;))</pre>
+<pre>CollectionSearch((&#39;u/melissagraham/custom_coadd_window1_test2_nbdet/20241021T190312Z&#39;, &#39;u/melissagraham/custom_coadd_window1_test2&#39;))</pre>
 </div>
 
 </div>
@@ -15361,7 +15386,7 @@ u/ameisner/custom_coadd_window1_test1/20240418T192301Z
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">yaml_file</span> <span class="o">=</span> <span class="s1">'$DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml'</span>
@@ -15425,7 +15450,7 @@ u/ameisner/custom_coadd_window1_test1/20240418T192301Z
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sourceDetectionPipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="o">.</span><span class="n">from_uri</span><span class="p">(</span><span class="n">my_uri</span><span class="p">)</span>
@@ -15453,7 +15478,7 @@ u/ameisner/custom_coadd_window1_test1/20240418T192301Z
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sourceDetectionPipeline</span><span class="o">.</span><span class="n">addConfigOverride</span><span class="p">(</span><span class="s1">'detection'</span><span class="p">,</span> <span class="s1">'detection.thresholdValue'</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">)</span>
@@ -15543,7 +15568,7 @@ u/ameisner/custom_coadd_window1_test1/20240418T192301Z
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#from lsst.ctrl.mpexec import pipeline2dot</span>
@@ -15585,7 +15610,7 @@ u/ameisner/custom_coadd_window1_test1/20240418T192301Z
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">queryString</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"tract = 4431 AND patch = 17 AND band = 'i' AND skymap = 'DC2'"</span>
@@ -15603,7 +15628,10 @@ u/ameisner/custom_coadd_window1_test1/20240418T192301Z
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Now it's time to define the <code>SimplePipelineExecutor</code> object that will be used to deploy source detection on the custom i-band coadd. The <code>SimplePipelineExecutor</code> brings together the URI defining the pipeline, the query string defining the data set on which to deploy source detection, and the simple butler with information about the inputs the pipeline will have to work with. These three components become the three arguments passed to the <code>SimplePipelineExecutor</code> instantiation command below. The following command results in a warning message that can be ignored.</p>
+<p>Now it's time to define the <code>SimplePipelineExecutor</code> object that will be used to deploy source detection on the custom i-band coadd. The <code>SimplePipelineExecutor</code> brings together the URI defining the pipeline, the query string defining the data set on which to deploy source detection, and the simple butler with information about the inputs the pipeline will have to work with. These three components become the three arguments passed to the <code>SimplePipelineExecutor</code> instantiation command below.</p>
+<blockquote>
+<p><strong>Notice:</strong> The following command returns UserWarning and FutureWarning messages that can be ignored.</p>
+</blockquote>
 
 </div>
 </div>
@@ -15613,7 +15641,7 @@ u/ameisner/custom_coadd_window1_test1/20240418T192301Z
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">spe</span> <span class="o">=</span> <span class="n">SimplePipelineExecutor</span><span class="o">.</span><span class="n">from_pipeline</span><span class="p">(</span><span class="n">sourceDetectionPipeline</span><span class="p">,</span> 
@@ -15670,7 +15698,7 @@ u/ameisner/custom_coadd_window1_test1/20240418T192301Z
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">quanta</span> <span class="o">=</span> <span class="n">spe</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
@@ -15887,7 +15915,7 @@ border-left-style: solid;
 font-family: var(--jp-code-font-family);
 font-size: var(--jp-code-font-size);
 line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.ctrl.mpexec.singleQuantumExecutor</span> <span style="color: var(--jp-info-color0)">INFO</span>: Execution of task &#x27;detection&#x27; on quantum {band: &#x27;i&#x27;, skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17} took 39.001 seconds</pre>
+"><span style="color: var(--jp-warn-color2)">lsst.ctrl.mpexec.singleQuantumExecutor</span> <span style="color: var(--jp-info-color0)">INFO</span>: Execution of task &#x27;detection&#x27; on quantum {band: &#x27;i&#x27;, skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17} took 35.291 seconds</pre>
 </div>
 
 </div>
@@ -15972,7 +16000,7 @@ border-left-style: solid;
 font-family: var(--jp-code-font-family);
 font-size: var(--jp-code-font-size);
 line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.ctrl.mpexec.singleQuantumExecutor</span> <span style="color: var(--jp-info-color0)">INFO</span>: Execution of task &#x27;mergeDetections&#x27; on quantum {skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17} took 3.701 seconds</pre>
+"><span style="color: var(--jp-warn-color2)">lsst.ctrl.mpexec.singleQuantumExecutor</span> <span style="color: var(--jp-info-color0)">INFO</span>: Execution of task &#x27;mergeDetections&#x27; on quantum {skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17} took 3.425 seconds</pre>
 </div>
 
 </div>
@@ -16057,7 +16085,7 @@ border-left-style: solid;
 font-family: var(--jp-code-font-family);
 font-size: var(--jp-code-font-size);
 line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.ctrl.mpexec.singleQuantumExecutor</span> <span style="color: var(--jp-info-color0)">INFO</span>: Execution of task &#x27;deblend&#x27; on quantum {skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17} took 110.026 seconds</pre>
+"><span style="color: var(--jp-warn-color2)">lsst.ctrl.mpexec.singleQuantumExecutor</span> <span style="color: var(--jp-info-color0)">INFO</span>: Execution of task &#x27;deblend&#x27; on quantum {skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17} took 87.958 seconds</pre>
 </div>
 
 </div>
@@ -16223,7 +16251,7 @@ border-left-style: solid;
 font-family: var(--jp-code-font-family);
 font-size: var(--jp-code-font-size);
 line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.ctrl.mpexec.singleQuantumExecutor</span> <span style="color: var(--jp-info-color0)">INFO</span>: Execution of task &#x27;measure&#x27; on quantum {band: &#x27;i&#x27;, skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17} took 506.013 seconds</pre>
+"><span style="color: var(--jp-warn-color2)">lsst.ctrl.mpexec.singleQuantumExecutor</span> <span style="color: var(--jp-info-color0)">INFO</span>: Execution of task &#x27;measure&#x27; on quantum {band: &#x27;i&#x27;, skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17} took 438.603 seconds</pre>
 </div>
 
 </div>
@@ -16300,7 +16328,7 @@ line-height: var(--jp-code-line-height);
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">butler</span> <span class="o">=</span> <span class="n">Butler</span><span class="p">(</span><span class="n">butler_repo</span><span class="p">,</span> <span class="n">collections</span><span class="o">=</span><span class="p">[</span><span class="n">my_outputCollection</span><span class="p">])</span>
@@ -16331,7 +16359,7 @@ Otherwise, the second cell below will fail with the error message <em>&quot;Reco
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sources</span> <span class="o">=</span> <span class="n">sources</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
@@ -16347,7 +16375,7 @@ Otherwise, the second cell below will fail with the error message <em>&quot;Reco
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_sources</span> <span class="o">=</span> <span class="n">sources</span><span class="o">.</span><span class="n">asAstropy</span><span class="p">()</span>
@@ -16375,7 +16403,7 @@ Otherwise, the second cell below will fail with the error message <em>&quot;Reco
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#my_sources.colnames</span>
@@ -16403,7 +16431,7 @@ Otherwise, the second cell below will fail with the error message <em>&quot;Reco
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#for col in my_sources.colnames:</span>
@@ -16979,7 +17007,7 @@ As a temporary butler that only looks at the DP0.2 data release collection, and 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#plt.figure()</span>
@@ -17011,7 +17039,7 @@ As a temporary butler that only looks at the DP0.2 data release collection, and 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
@@ -17044,8 +17072,8 @@ As a temporary butler that only looks at the DP0.2 data release collection, and 
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>CPU times: user 365 ms, sys: 8.03 ms, total: 373 ms
-Wall time: 5.66 s
+<pre>CPU times: user 270 ms, sys: 6 ms, total: 276 ms
+Wall time: 2.14 s
 </pre>
 </div>
 </div>
@@ -17071,7 +17099,7 @@ Wall time: 5.66 s
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tap_table</span> <span class="o">=</span> <span class="n">tap_results</span><span class="o">.</span><span class="n">to_table</span><span class="p">()</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">()</span>
@@ -17099,7 +17127,7 @@ Wall time: 5.66 s
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">wcs</span> <span class="o">=</span> <span class="n">cutout</span><span class="o">.</span><span class="n">wcs</span>
@@ -17144,7 +17172,7 @@ Wall time: 5.66 s
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
@@ -17205,8 +17233,8 @@ class="
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>CPU times: user 21 s, sys: 366 ms, total: 21.4 s
-Wall time: 21.2 s
+<pre>CPU times: user 13.6 s, sys: 258 ms, total: 13.9 s
+Wall time: 13.7 s
 </pre>
 </div>
 </div>
@@ -17232,7 +17260,7 @@ Wall time: 21.2 s
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
@@ -17306,7 +17334,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
