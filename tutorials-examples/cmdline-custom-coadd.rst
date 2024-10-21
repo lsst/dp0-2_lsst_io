@@ -115,11 +115,11 @@ First, let's try an experiment of simply finding out what the default value of `
 .. code-block::
 
     pipetask run \
-    -b dp02 \
+    -b dp02-direct \
     -p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#makeWarp,assembleCoadd \
     --show config=makeWarp::doApplyFinalizedPsf
     
-Notice that the ``-p`` parameter passed to ``pipetask`` has remained the same. But in order for ``pipetask run`` to operate, it also needs to know what Butler repository it's dealing with. That's why the ``-b dp02`` argument has been added. ``dp02`` is an alias that points to the `S3 <https://en.wikipedia.org/wiki/Amazon_S3>`_ location of the DP0.2 Butler repository.
+Notice that the ``-p`` parameter passed to ``pipetask`` has remained the same. But in order for ``pipetask run`` to operate, it also needs to know what Butler repository it's dealing with. That's why the ``-b dp02-direct`` argument has been added. ``dp02-direct`` is an alias that points to the location of the DP0.2 Butler repository that offers both read and write access (whereas ``dp02`` is a read-only DP0.2 butler).
 
 The final line merits further explanation. ``--show config`` tells the LSST pipelines not to actually run the pipeline, but rather to only show the configuration parameters, so that you can understand all the detailed choices being made by your processing, if desired. The last line would be valid as simply ``--show config``. However, this would print out every single configuration parameter and its description. Appending ``=<Task>::<Parameter>`` to ``--show config`` specifies exactly which parameter you want to be shown. In this case, it's known from `DP0.2 tutorial notebook 9a <https://github.com/rubin-dp0/tutorial-notebooks>`_ that you want to adjust the ``doApplyFinalizedPsf`` parameter of the ``makeWarp`` Task, hence why ``makeWarp::doApplyFinalizedPsf`` is appended to ``--show config``.
 
@@ -142,7 +142,7 @@ From `DP0.2 tutorial notebook 9a <https://github.com/rubin-dp0/tutorial-notebook
 .. code-block::
 
     pipetask run \
-    -b dp02 \
+    -b dp02-direct \
     -p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#makeWarp,assembleCoadd \
     -c makeWarp:doApplyFinalizedPsf=False \
     --show config=makeWarp::doApplyFinalizedPsf
@@ -178,7 +178,7 @@ You can find out full details about all quanta with a ``pipetask qgraph`` comman
 .. code-block::
 
     pipetask qgraph \
-    -b dp02 \
+    -b dp02-direct \
     -i 2.2i/runs/DP0.2 \
     -p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#makeWarp,assembleCoadd \
     -c makeWarp:doApplyFinalizedPsf=False \
@@ -260,7 +260,7 @@ Now the a directory for output logs is in place, let's also print out the proces
     LOGFILE=$LOGDIR/makeWarpAssembleCoadd-logfile.log; \
     date | tee $LOGFILE; \
     pipetask --long-log --log-file $LOGFILE run --register-dataset-types \
-    -b dp02 \
+    -b dp02-direct \
     -i 2.2i/runs/DP0.2 \
     -o u/$USER/custom_coadd_window1_cl00 \
     -p $DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml#makeWarp,assembleCoadd \
@@ -321,7 +321,7 @@ To perform source detection, deblending, and measurement on your custom i-band c
 
     LOGFILE=$LOGDIR/detectionMergeDetectionsDeblendMeasure.log
     pipetask --long-log --log-file $LOGFILE run \
-    -b dp02 \
+    -b dp02-direct \
     -i u/$USER/custom_coadd_window1_cl00 \
     -o u/$USER/custom_coadd_window1_cl00_det \
     -c detection:detection.thresholdValue=10 \
@@ -337,7 +337,7 @@ Note a few things about this command:
 
 * The URI specified here via the ``-p`` argument is the same as used when visualizing the corresponding ``QuantumGraph``.
 
-* The same ``-b dp02`` Butler repository is specified as was used for custom coaddition. 
+* The same ``-b dp02-direct`` Butler repository is specified as was used for custom coaddition. 
 
 * The ``-i`` input argument now points to what was previously the output ``-o`` argument for custom coaddition -- that is, the output of custom coaddition has now become the input for running source detection/measurement on the custom coadd. 
 
