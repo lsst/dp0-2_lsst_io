@@ -141,7 +141,7 @@ the x and y axes on the image.
 
 **2.2. Upload a DS9 Region File.** A DS9 region file can be uploaded to the Portal,
 and overlaid on the image. Download an example region file to your computer using the
-``link to the file <https://github.com/lsst/dp0-2_lsst_io/blob/main/_static/table_Points-4-HDU1.reg>``
+`link to the file <../_static/table_Points-4-HDU1.reg>`_.
 If new to GitHub, click this link to navigate to the GitHub repository containing the 
 example region file, then click the "Download" tab (an icon of an arrow pointing into a box).
 To load the region file into the Portal and overlay the entries on the image, click the "Tools"
