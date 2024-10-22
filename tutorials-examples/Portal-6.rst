@@ -32,7 +32,7 @@
 
 **Introduction:**
 This tutorial will explore some of the key functionalities available in the 
-`Firefly <https://github.com/Caltech-IPAC/firefly?tab=readme-ov-file#firefly>`_-based
+`Firefly <https://github.com/Caltech-IPAC/firefly>`_-based
 Rubin Science Platform (RSP) Portal that are also familiar to users of 
 `SAOImageDS9 <https://sites.google.com/cfa.harvard.edu/saoimageds9>`_ (hearafter DS9), 
 a widely-used astronomical image viewer. Both DS9 and Firefly allow astronomers to display,
@@ -245,7 +245,7 @@ to section.
     Figure 11: A screenshot showing a selected point on the image (left panel), displayed in the active chart (right panel) and pinned table (bottom panel), with a pop-up window offering TAP search options based on the selected table.
 
 **3.3.2. Execute a TAP query.** Step 3.3.1 leads to the General TAP page. Ensure the TAP Service tab
-at the top is set to "LSST DP0.2 DC2: https://data.lsst.cloud/api/tap". For the "LSST DP0.2 DC2 Tables" tab,
+at the top is set to "LSST DP0.2 DC2: ``https://data.lsst.cloud/api/tap``". For the "LSST DP0.2 DC2 Tables" tab,
 select "dp02_dc2_catalogs.DiaSource" in the right-hand tab to retrieve flux variation data for the selected object.
 Confirm the coordinate box under the "Spatial" section defaults to "3h44m19.33s -34d57m12.1s Equ J2000".
 Change the search radius to 1 arcsecond. Leave the "Temporal" box unchecked. Click the "Search" button at the bottom left.
