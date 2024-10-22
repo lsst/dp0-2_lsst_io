@@ -107,7 +107,7 @@ except for the compass indicating the North and East directions on the image.
 
 **2.1.1. Select the Coordinate Systems to Overlay and to Read Out.** To select a coordinate
 system to overlay on the image, open the drop-down menu under the "Grid" option from the
-"Manipualte overlay display" icon (magenta circle). For the Equatorial coordinate systems,
+"Manipulate overlay display" icon (magenta circle). For the Equatorial coordinate systems,
 two formats are available for displaying astronomical coordinates: sexagesimal and decimal.
 The readout coordinate format is independent of the coordinate format for the overlaid grid.
 To choose a readout format, click the colored box (blue square) next to the "expand window"
@@ -160,7 +160,7 @@ click "Upload", and then click "Draw". It should overlay six circles on the imag
 the drop-down menu. Under the "Layers" section, click the last icon and select "Add Marker".
 A marker labeled "Marker #1" will appear at the center of the image. Click and drag the marker
 to the desired location, and adjust its size by dragging any corner of the surrounding box. To
-edit the marker, click the "Manipualte overlay display" icon and go to the "Marker #1" section.
+edit the marker, click the "Manipulate overlay display" icon and go to the "Marker #1" section.
 Change the label by typing "galaxy of interest" into the "Label" field, and use the "Corner"
 drop-down to adjust the label’s position. To change the marker's color, click the "color" box
 to open the "Color Picker" window and select your preferred color. To add another marker, click
@@ -174,12 +174,12 @@ the "Add Marker" box, which will place a new marker at the center of the image.
     Figure 7: The image with an added marker with the modified label and color. 
 
 **2.4. Overlay Footprints from Various Observatories and Instruments.** Lastly, it is possible
-to overlay footprints from various observatories and intruments directly onto the image. Click
-the last icon under the "Layers" section. Select "IRAC36" from the "Add Spitzer footprint" option,
+to overlay footprints from various observatories and intruments directly onto the image. Under the "Tools"
+icon, click the last icon under the "Layers" section. Select "IRAC36" from the "Add Spitzer footprint" option,
 "WFC3/UVIS" from the "Add HST footprint" option, and "NIRCam" from the "Add JWST prelim. footprint"
 option. All three footprints will appear on the image. Adjust their positions, angles, labels,
 label locations, and colors as desired in the "Manipulate Overlay Display" section as described
-in Step 2.5.
+in Step 2.3.
 
 .. figure:: /_static/portal_tut06_step02f.png
     :name: portal_tut06_step02f
