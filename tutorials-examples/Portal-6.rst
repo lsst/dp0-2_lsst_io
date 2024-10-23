@@ -26,7 +26,7 @@
 
 **Contact authors:** Yumi Choi
 
-**Last verified to run:** 2024-10-18
+**Last verified to run:** 2024-10-22
 
 **Targeted learning level:** Beginner 
 
@@ -290,6 +290,6 @@ user-supplied tables. Refer to the available tutorials for detailed instructions
 `Portal <https://dp0-3.lsst.io/tutorials-dp0-3/portal-dp0-3-5.html>`_ and
 `Jupyter Notebooks <https://dp0-3.lsst.io/tutorials-dp0-3/rendered_nb_03_06.html>`_. 
 
-**Portal FAQ page"** `Link to the Portal FAQ page <https://dp0-2.lsst.io/v/PREOPS-5150/data-access-analysis-tools/portal-future-faq.html>`_
+`Link to the Portal FAQ page <https://dp0-2.lsst.io/v/PREOPS-5150/data-access-analysis-tools/portal-future-faq.html>`_
 
 
