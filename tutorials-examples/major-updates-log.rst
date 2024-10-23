@@ -51,6 +51,10 @@ and clicking on "history" (near upper-right).
 Major Updates Log
 =================
 
+Oct 22 2024
+-----------
+Released new portal tutorial 6 demonstrating various functionalities available in the Firefly-based RSP Portal Asepct.
+
 Sep 19 2024
 -----------
 
