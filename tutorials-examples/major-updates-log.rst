@@ -62,6 +62,11 @@ Tutorial notebooks 09a and 09b (custom coadds) were updated to use the ``dp02-di
 to writeable version of the DP0.2 butler repository.
 This functionality, and the ``-direct`` option, is temporary (for DP0 only).
 
+Oct 22 2024
+-----------
+
+Released new portal tutorial 6 demonstrating various functionalities available in the Firefly-based RSP Portal Asepct.
+
 Sep 19 2024
 -----------
 
