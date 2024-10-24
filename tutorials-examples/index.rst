@@ -69,7 +69,6 @@ The tutorials below are step-by-step demonstrations of how to use the Portal Asp
     portal-images
     portal-4
     Portal-5
-    Portal-6
 
 
 .. _DP0-2-Tutorials-Notebooks:
