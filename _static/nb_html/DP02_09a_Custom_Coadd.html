@@ -14595,7 +14595,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <img align="left" src = https://project.lsst.org/sites/default/files/Rubin-O-Logo_0.png width=250 style="padding: 10px"> 
 <b>Construct a Custom Coadded Image</b> <br>
 Contact author: Melissa Graham <br>
-Last verified to run: 2023-06-03 <br>
+Last verified to run: 2024-10-21 <br>
 LSST Science Pipelines version: <b>Weekly 2022_40</b> <br>
 Container Size: large <br>
 Targeted learning level: advanced <br>
@@ -14677,6 +14677,14 @@ However, the latest versions of the pipelines are not compatible with the interm
 To update this tutorial to be able to use Weekly 2023_07, it would have to demonstrate how to recreate coadds <em>starting with the raw data products</em>.
 This is pedagogically undesirable because it does not accurately represent <em>future workflows</em>, which is the goal of DP0.2.
 Thus, it is recommended that delegates learn how to recreate coadds with Weekly 2022_40.</p>
+<hr />
+<p><strong>NOTICE:
+This notebook will only run with the butler repo alias <code>dp02-direct</code>.</strong></p>
+<p>All other tutorial notebooks in this repository use the <code>dp02</code> alias, which was updated in Oct 2024 to provide
+ready-only access to butler data repos.
+As this tutorial writes processed images back to the butler, &quot;direct access&quot; is needed and <code>dp02-direct</code> must be used.
+Note that this is a temporary work around for Data Preview 0. 
+Butler functionality for Data Preview 1 will be different, as the butler service continues to evolve.</p>
 <hr />
 <p><br><br><br><br></p>
 
@@ -14883,7 +14891,7 @@ See the next tutorial notebook in the series, 09b_Custom_Coadd_Sources.ipynb, to
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">butler</span> <span class="o">=</span> <span class="n">Butler</span><span class="p">(</span><span class="s1">'dp02'</span><span class="p">,</span> <span class="n">collections</span><span class="o">=</span><span class="s1">'2.2i/runs/DP0.2'</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">butler</span> <span class="o">=</span> <span class="n">Butler</span><span class="p">(</span><span class="s1">'dp02-direct'</span><span class="p">,</span> <span class="n">collections</span><span class="o">=</span><span class="s1">'2.2i/runs/DP0.2'</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15593,7 +15601,7 @@ All users should feel free to go ahead and build up a bunch of processed data in
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>ameisner
+<pre>melissagraham
 </pre>
 </div>
 </div>
@@ -15610,7 +15618,7 @@ All users should feel free to go ahead and build up a bunch of processed data in
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_collection_identifier</span> <span class="o">=</span> <span class="s1">'custom_coadd_window1_test1'</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_collection_identifier</span> <span class="o">=</span> <span class="s1">'custom_coadd_window1_test2'</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">my_collection_identifier</span><span class="p">)</span>
 </pre></div>
 
@@ -15631,7 +15639,7 @@ All users should feel free to go ahead and build up a bunch of processed data in
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>custom_coadd_window1_test1
+<pre>custom_coadd_window1_test2
 </pre>
 </div>
 </div>
@@ -15669,7 +15677,7 @@ All users should feel free to go ahead and build up a bunch of processed data in
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Name of new butler collection for my output:  u/ameisner/custom_coadd_window1_test1
+<pre>Name of new butler collection for my output:  u/melissagraham/custom_coadd_window1_test2
 </pre>
 </div>
 </div>
@@ -15691,7 +15699,7 @@ All users should feel free to go ahead and build up a bunch of processed data in
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15707,22 +15715,6 @@ All users should feel free to go ahead and build up a bunch of processed data in
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-</div>
-
-</div>
-
 </div>
 
 </div>
@@ -15785,7 +15777,7 @@ All users should feel free to go ahead and build up a bunch of processed data in
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">simpleButler</span> <span class="o">=</span> <span class="n">SimplePipelineExecutor</span><span class="o">.</span><span class="n">prep_butler</span><span class="p">(</span><span class="s1">'dp02'</span><span class="p">,</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">simpleButler</span> <span class="o">=</span> <span class="n">SimplePipelineExecutor</span><span class="o">.</span><span class="n">prep_butler</span><span class="p">(</span><span class="s1">'dp02-direct'</span><span class="p">,</span> 
                                                   <span class="n">inputs</span><span class="o">=</span><span class="p">[</span><span class="s1">'2.2i/runs/DP0.2'</span><span class="p">],</span> 
                                                   <span class="n">output</span><span class="o">=</span><span class="n">my_outputCollection</span><span class="p">)</span>
 </pre></div>
@@ -15844,7 +15836,7 @@ All users should feel free to go ahead and build up a bunch of processed data in
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>CollectionSearch((&#39;u/ameisner/custom_coadd_window1_test1/20240418T192301Z&#39;, &#39;2.2i/runs/DP0.2&#39;))</pre>
+<pre>CollectionSearch((&#39;u/melissagraham/custom_coadd_window1_test2/20241021T182310Z&#39;, &#39;2.2i/runs/DP0.2&#39;))</pre>
 </div>
 
 </div>
@@ -15870,7 +15862,7 @@ All users should feel free to go ahead and build up a bunch of processed data in
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># for c in sorted(simpleButler.registry.queryCollections(my_outputCollection+'*')):</span>
@@ -15935,7 +15927,7 @@ Then create a Rubin Observatory environment, and render the pipeline yaml conten
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">yaml_file</span> <span class="o">=</span> <span class="s1">'$DRP_PIPE_DIR/pipelines/LSSTCam-imSim/DRP-test-med-1.yaml'</span>
@@ -15987,7 +15979,7 @@ Then create a Rubin Observatory environment, and render the pipeline yaml conten
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">assembleCoaddPipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="o">.</span><span class="n">from_uri</span><span class="p">(</span><span class="n">my_uri</span><span class="p">)</span>
@@ -16018,7 +16010,7 @@ Section 4.2.5. shows how to view the configurations that were used for a given r
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">assembleCoaddPipeline</span><span class="o">.</span><span class="n">addConfigOverride</span><span class="p">(</span><span class="s1">'makeWarp'</span><span class="p">,</span> <span class="s1">'doApplyFinalizedPsf'</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
@@ -16034,7 +16026,7 @@ Section 4.2.5. shows how to view the configurations that were used for a given r
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">assembleCoaddPipeline</span><span class="o">.</span><span class="n">addConfigOverride</span><span class="p">(</span><span class="s1">'makeWarp'</span><span class="p">,</span> 
@@ -16067,7 +16059,7 @@ Section 4.2.5. shows how to view the configurations that were used for a given r
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># from lsst.ctrl.mpexec import pipeline2dot</span>
@@ -16099,7 +16091,7 @@ Section 4.2.5. shows how to view the configurations that were used for a given r
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">queryString</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"tract = </span><span class="si">{</span><span class="n">my_tract</span><span class="si">}</span><span class="s2"> AND patch = </span><span class="si">{</span><span class="n">my_patch</span><span class="si">}</span><span class="s2"> AND "</span> <span class="o">+</span> \
@@ -16163,7 +16155,7 @@ Section 4.2.5. shows how to view the configurations that were used for a given r
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># SimplePipelineExecutor.from_pipeline?</span>
@@ -16191,7 +16183,7 @@ Section 4.2.5. shows how to view the configurations that were used for a given r
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">spe</span> <span class="o">=</span> <span class="n">SimplePipelineExecutor</span><span class="o">.</span><span class="n">from_pipeline</span><span class="p">(</span><span class="n">assembleCoaddPipeline</span><span class="p">,</span> 
@@ -16221,7 +16213,7 @@ Section 4.2.5. shows how to view the configurations that were used for a given r
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># spe.quantum_graph.</span>
@@ -16255,7 +16247,7 @@ Section 4.2.5. shows how to view the configurations that were used for a given r
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">quanta</span> <span class="o">=</span> <span class="n">spe</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
@@ -16285,7 +16277,7 @@ border-left-style: solid;
 font-family: var(--jp-code-font-family);
 font-size: var(--jp-code-font-size);
 line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.select</span> <span style="color: var(--jp-info-color0)">INFO</span>: Selecting calexp {instrument: &#x27;LSSTCam-imSim&#x27;, detector: 30, visit: 924057, ...}</pre>
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.select</span> <span style="color: var(--jp-info-color0)">INFO</span>: Selecting calexp {instrument: &#x27;LSSTCam-imSim&#x27;, detector: 110, visit: 919515, ...}</pre>
 </div>
 
 </div>
@@ -16302,7 +16294,7 @@ border-left-style: solid;
 font-family: var(--jp-code-font-family);
 font-size: var(--jp-code-font-size);
 line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.select</span> <span style="color: var(--jp-info-color0)">INFO</span>: Selecting calexp {instrument: &#x27;LSSTCam-imSim&#x27;, detector: 31, visit: 924057, ...}</pre>
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.select</span> <span style="color: var(--jp-info-color0)">INFO</span>: Selecting calexp {instrument: &#x27;LSSTCam-imSim&#x27;, detector: 113, visit: 919515, ...}</pre>
 </div>
 
 </div>
@@ -16319,7 +16311,7 @@ border-left-style: solid;
 font-family: var(--jp-code-font-family);
 font-size: var(--jp-code-font-size);
 line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.select</span> <span style="color: var(--jp-info-color0)">INFO</span>: Selecting calexp {instrument: &#x27;LSSTCam-imSim&#x27;, detector: 33, visit: 924057, ...}</pre>
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.select</span> <span style="color: var(--jp-info-color0)">INFO</span>: Selecting calexp {instrument: &#x27;LSSTCam-imSim&#x27;, detector: 116, visit: 919515, ...}</pre>
 </div>
 
 </div>
@@ -16336,24 +16328,7 @@ border-left-style: solid;
 font-family: var(--jp-code-font-family);
 font-size: var(--jp-code-font-size);
 line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.select</span> <span style="color: var(--jp-info-color0)">INFO</span>: Selecting calexp {instrument: &#x27;LSSTCam-imSim&#x27;, detector: 34, visit: 924057, ...}</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: Processing calexp 1 of 4 for this Warp: id={instrument: &#x27;LSSTCam-imSim&#x27;, detector: 30, visit: 924057, ...}</pre>
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: Processing calexp 1 of 3 for this Warp: id={instrument: &#x27;LSSTCam-imSim&#x27;, detector: 110, visit: 919515, ...}</pre>
 </div>
 
 </div>
@@ -16455,7 +16430,7 @@ border-left-style: solid;
 font-family: var(--jp-code-font-family);
 font-size: var(--jp-code-font-size);
 line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: Processing calexp 2 of 4 for this Warp: id={instrument: &#x27;LSSTCam-imSim&#x27;, detector: 31, visit: 924057, ...}</pre>
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: Processing calexp 2 of 3 for this Warp: id={instrument: &#x27;LSSTCam-imSim&#x27;, detector: 113, visit: 919515, ...}</pre>
 </div>
 
 </div>
@@ -16557,7 +16532,7 @@ border-left-style: solid;
 font-family: var(--jp-code-font-family);
 font-size: var(--jp-code-font-size);
 line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: Processing calexp 3 of 4 for this Warp: id={instrument: &#x27;LSSTCam-imSim&#x27;, detector: 33, visit: 924057, ...}</pre>
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: Processing calexp 3 of 3 for this Warp: id={instrument: &#x27;LSSTCam-imSim&#x27;, detector: 116, visit: 919515, ...}</pre>
 </div>
 
 </div>
@@ -16659,7 +16634,7 @@ border-left-style: solid;
 font-family: var(--jp-code-font-family);
 font-size: var(--jp-code-font-size);
 line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: Processing calexp 4 of 4 for this Warp: id={instrument: &#x27;LSSTCam-imSim&#x27;, detector: 34, visit: 924057, ...}</pre>
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: directWarp has 8982709 good pixels (50.9%)</pre>
 </div>
 
 </div>
@@ -16676,7 +16651,7 @@ border-left-style: solid;
 font-family: var(--jp-code-font-family);
 font-size: var(--jp-code-font-size);
 line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: compute Psf-matching kernel</pre>
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: psfMatchedWarp has 8856818 good pixels (50.2%)</pre>
 </div>
 
 </div>
@@ -16693,1316 +16668,7 @@ border-left-style: solid;
 font-family: var(--jp-code-font-family);
 font-size: var(--jp-code-font-size);
 line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Adjusted dimensions of reference PSF model from (23, 23) to (57, 57)</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.ip.diffim.generateAlardLuptonBasisList</span> <span style="color: var(--jp-info-color0)">INFO</span>: PSF sigmas are not available or scaling by fwhm disabled, falling back to config values</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Psf-match science exposure to reference</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: done</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: directWarp has 16098179 good pixels (91.3%)</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: psfMatchedWarp has 15894357 good pixels (90.1%)</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.ctrl.mpexec.singleQuantumExecutor</span> <span style="color: var(--jp-info-color0)">INFO</span>: Execution of task &#x27;makeWarp&#x27; on quantum {instrument: &#x27;LSSTCam-imSim&#x27;, skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17, visit: 924057, ...} took 132.752 seconds</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.ctrl.mpexec.singleQuantumExecutor</span> <span style="color: var(--jp-info-color0)">INFO</span>: Log records could not be stored in this butler because the datastore can not ingest files, empty record list is stored instead.</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.select</span> <span style="color: var(--jp-info-color0)">INFO</span>: Selecting calexp {instrument: &#x27;LSSTCam-imSim&#x27;, detector: 165, visit: 930353, ...}</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.select</span> <span style="color: var(--jp-info-color0)">INFO</span>: Selecting calexp {instrument: &#x27;LSSTCam-imSim&#x27;, detector: 166, visit: 930353, ...}</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.select</span> <span style="color: var(--jp-info-color0)">INFO</span>: Selecting calexp {instrument: &#x27;LSSTCam-imSim&#x27;, detector: 168, visit: 930353, ...}</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.select</span> <span style="color: var(--jp-info-color0)">INFO</span>: Selecting calexp {instrument: &#x27;LSSTCam-imSim&#x27;, detector: 169, visit: 930353, ...}</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: Processing calexp 1 of 4 for this Warp: id={instrument: &#x27;LSSTCam-imSim&#x27;, detector: 165, visit: 930353, ...}</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: compute Psf-matching kernel</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Adjusted dimensions of reference PSF model from (23, 23) to (57, 57)</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.ip.diffim.generateAlardLuptonBasisList</span> <span style="color: var(--jp-info-color0)">INFO</span>: PSF sigmas are not available or scaling by fwhm disabled, falling back to config values</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Psf-match science exposure to reference</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: done</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: Processing calexp 2 of 4 for this Warp: id={instrument: &#x27;LSSTCam-imSim&#x27;, detector: 166, visit: 930353, ...}</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: compute Psf-matching kernel</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Adjusted dimensions of reference PSF model from (23, 23) to (57, 57)</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.ip.diffim.generateAlardLuptonBasisList</span> <span style="color: var(--jp-info-color0)">INFO</span>: PSF sigmas are not available or scaling by fwhm disabled, falling back to config values</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Psf-match science exposure to reference</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: done</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: Processing calexp 3 of 4 for this Warp: id={instrument: &#x27;LSSTCam-imSim&#x27;, detector: 168, visit: 930353, ...}</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: compute Psf-matching kernel</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Adjusted dimensions of reference PSF model from (23, 23) to (57, 57)</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.ip.diffim.generateAlardLuptonBasisList</span> <span style="color: var(--jp-info-color0)">INFO</span>: PSF sigmas are not available or scaling by fwhm disabled, falling back to config values</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Psf-match science exposure to reference</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: done</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: Processing calexp 4 of 4 for this Warp: id={instrument: &#x27;LSSTCam-imSim&#x27;, detector: 169, visit: 930353, ...}</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: compute Psf-matching kernel</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Adjusted dimensions of reference PSF model from (23, 23) to (57, 57)</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.ip.diffim.generateAlardLuptonBasisList</span> <span style="color: var(--jp-info-color0)">INFO</span>: PSF sigmas are not available or scaling by fwhm disabled, falling back to config values</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Psf-match science exposure to reference</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: done</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: directWarp has 16076133 good pixels (91.1%)</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: psfMatchedWarp has 15873200 good pixels (90.0%)</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.ctrl.mpexec.singleQuantumExecutor</span> <span style="color: var(--jp-info-color0)">INFO</span>: Execution of task &#x27;makeWarp&#x27; on quantum {instrument: &#x27;LSSTCam-imSim&#x27;, skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17, visit: 930353, ...} took 133.291 seconds</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.ctrl.mpexec.singleQuantumExecutor</span> <span style="color: var(--jp-info-color0)">INFO</span>: Log records could not be stored in this butler because the datastore can not ingest files, empty record list is stored instead.</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.select</span> <span style="color: var(--jp-info-color0)">INFO</span>: Selecting calexp {instrument: &#x27;LSSTCam-imSim&#x27;, detector: 52, visit: 929477, ...}</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.select</span> <span style="color: var(--jp-info-color0)">INFO</span>: Selecting calexp {instrument: &#x27;LSSTCam-imSim&#x27;, detector: 90, visit: 929477, ...}</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.select</span> <span style="color: var(--jp-info-color0)">INFO</span>: Selecting calexp {instrument: &#x27;LSSTCam-imSim&#x27;, detector: 91, visit: 929477, ...}</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.select</span> <span style="color: var(--jp-info-color0)">INFO</span>: Selecting calexp {instrument: &#x27;LSSTCam-imSim&#x27;, detector: 92, visit: 929477, ...}</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.select</span> <span style="color: var(--jp-info-color0)">INFO</span>: Selecting calexp {instrument: &#x27;LSSTCam-imSim&#x27;, detector: 94, visit: 929477, ...}</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: Processing calexp 1 of 5 for this Warp: id={instrument: &#x27;LSSTCam-imSim&#x27;, detector: 52, visit: 929477, ...}</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: compute Psf-matching kernel</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Adjusted dimensions of reference PSF model from (23, 23) to (55, 55)</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.ip.diffim.generateAlardLuptonBasisList</span> <span style="color: var(--jp-info-color0)">INFO</span>: PSF sigmas are not available or scaling by fwhm disabled, falling back to config values</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Psf-match science exposure to reference</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: done</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: Processing calexp 2 of 5 for this Warp: id={instrument: &#x27;LSSTCam-imSim&#x27;, detector: 90, visit: 929477, ...}</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: compute Psf-matching kernel</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Adjusted dimensions of reference PSF model from (23, 23) to (55, 55)</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.ip.diffim.generateAlardLuptonBasisList</span> <span style="color: var(--jp-info-color0)">INFO</span>: PSF sigmas are not available or scaling by fwhm disabled, falling back to config values</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Psf-match science exposure to reference</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: done</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: Processing calexp 3 of 5 for this Warp: id={instrument: &#x27;LSSTCam-imSim&#x27;, detector: 91, visit: 929477, ...}</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: compute Psf-matching kernel</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Adjusted dimensions of reference PSF model from (23, 23) to (55, 55)</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.ip.diffim.generateAlardLuptonBasisList</span> <span style="color: var(--jp-info-color0)">INFO</span>: PSF sigmas are not available or scaling by fwhm disabled, falling back to config values</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Psf-match science exposure to reference</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: done</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: Processing calexp 4 of 5 for this Warp: id={instrument: &#x27;LSSTCam-imSim&#x27;, detector: 92, visit: 929477, ...}</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: compute Psf-matching kernel</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Adjusted dimensions of reference PSF model from (23, 23) to (55, 55)</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.ip.diffim.generateAlardLuptonBasisList</span> <span style="color: var(--jp-info-color0)">INFO</span>: PSF sigmas are not available or scaling by fwhm disabled, falling back to config values</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Psf-match science exposure to reference</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: done</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: Processing calexp 5 of 5 for this Warp: id={instrument: &#x27;LSSTCam-imSim&#x27;, detector: 94, visit: 929477, ...}</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: compute Psf-matching kernel</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Adjusted dimensions of reference PSF model from (23, 23) to (55, 55)</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.ip.diffim.generateAlardLuptonBasisList</span> <span style="color: var(--jp-info-color0)">INFO</span>: PSF sigmas are not available or scaling by fwhm disabled, falling back to config values</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Psf-match science exposure to reference</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: done</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: directWarp has 16280498 good pixels (92.3%)</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: psfMatchedWarp has 16091293 good pixels (91.2%)</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.ctrl.mpexec.singleQuantumExecutor</span> <span style="color: var(--jp-info-color0)">INFO</span>: Execution of task &#x27;makeWarp&#x27; on quantum {instrument: &#x27;LSSTCam-imSim&#x27;, skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17, visit: 929477, ...} took 144.758 seconds</pre>
+"><span style="color: var(--jp-warn-color2)">lsst.ctrl.mpexec.singleQuantumExecutor</span> <span style="color: var(--jp-info-color0)">INFO</span>: Execution of task &#x27;makeWarp&#x27; on quantum {instrument: &#x27;LSSTCam-imSim&#x27;, skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17, visit: 919515, ...} took 77.212 seconds</pre>
 </div>
 
 </div>
@@ -18665,7 +17331,7 @@ border-left-style: solid;
 font-family: var(--jp-code-font-family);
 font-size: var(--jp-code-font-size);
 line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.ctrl.mpexec.singleQuantumExecutor</span> <span style="color: var(--jp-info-color0)">INFO</span>: Execution of task &#x27;makeWarp&#x27; on quantum {instrument: &#x27;LSSTCam-imSim&#x27;, skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17, visit: 924086, ...} took 144.832 seconds</pre>
+"><span style="color: var(--jp-warn-color2)">lsst.ctrl.mpexec.singleQuantumExecutor</span> <span style="color: var(--jp-info-color0)">INFO</span>: Execution of task &#x27;makeWarp&#x27; on quantum {instrument: &#x27;LSSTCam-imSim&#x27;, skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17, visit: 924086, ...} took 134.562 seconds</pre>
 </div>
 
 </div>
@@ -18699,7 +17365,7 @@ border-left-style: solid;
 font-family: var(--jp-code-font-family);
 font-size: var(--jp-code-font-size);
 line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.select</span> <span style="color: var(--jp-info-color0)">INFO</span>: Selecting calexp {instrument: &#x27;LSSTCam-imSim&#x27;, detector: 110, visit: 919515, ...}</pre>
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.select</span> <span style="color: var(--jp-info-color0)">INFO</span>: Selecting calexp {instrument: &#x27;LSSTCam-imSim&#x27;, detector: 165, visit: 930353, ...}</pre>
 </div>
 
 </div>
@@ -18716,7 +17382,7 @@ border-left-style: solid;
 font-family: var(--jp-code-font-family);
 font-size: var(--jp-code-font-size);
 line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.select</span> <span style="color: var(--jp-info-color0)">INFO</span>: Selecting calexp {instrument: &#x27;LSSTCam-imSim&#x27;, detector: 113, visit: 919515, ...}</pre>
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.select</span> <span style="color: var(--jp-info-color0)">INFO</span>: Selecting calexp {instrument: &#x27;LSSTCam-imSim&#x27;, detector: 166, visit: 930353, ...}</pre>
 </div>
 
 </div>
@@ -18733,7 +17399,7 @@ border-left-style: solid;
 font-family: var(--jp-code-font-family);
 font-size: var(--jp-code-font-size);
 line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.select</span> <span style="color: var(--jp-info-color0)">INFO</span>: Selecting calexp {instrument: &#x27;LSSTCam-imSim&#x27;, detector: 116, visit: 919515, ...}</pre>
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.select</span> <span style="color: var(--jp-info-color0)">INFO</span>: Selecting calexp {instrument: &#x27;LSSTCam-imSim&#x27;, detector: 168, visit: 930353, ...}</pre>
 </div>
 
 </div>
@@ -18750,7 +17416,7 @@ border-left-style: solid;
 font-family: var(--jp-code-font-family);
 font-size: var(--jp-code-font-size);
 line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: Processing calexp 1 of 3 for this Warp: id={instrument: &#x27;LSSTCam-imSim&#x27;, detector: 110, visit: 919515, ...}</pre>
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.select</span> <span style="color: var(--jp-info-color0)">INFO</span>: Selecting calexp {instrument: &#x27;LSSTCam-imSim&#x27;, detector: 169, visit: 930353, ...}</pre>
 </div>
 
 </div>
@@ -18767,92 +17433,7 @@ border-left-style: solid;
 font-family: var(--jp-code-font-family);
 font-size: var(--jp-code-font-size);
 line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: compute Psf-matching kernel</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Adjusted dimensions of reference PSF model from (23, 23) to (57, 57)</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.ip.diffim.generateAlardLuptonBasisList</span> <span style="color: var(--jp-info-color0)">INFO</span>: PSF sigmas are not available or scaling by fwhm disabled, falling back to config values</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Psf-match science exposure to reference</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: done</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: Processing calexp 2 of 3 for this Warp: id={instrument: &#x27;LSSTCam-imSim&#x27;, detector: 113, visit: 919515, ...}</pre>
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: Processing calexp 1 of 4 for this Warp: id={instrument: &#x27;LSSTCam-imSim&#x27;, detector: 165, visit: 930353, ...}</pre>
 </div>
 
 </div>
@@ -18954,7 +17535,7 @@ border-left-style: solid;
 font-family: var(--jp-code-font-family);
 font-size: var(--jp-code-font-size);
 line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: Processing calexp 3 of 3 for this Warp: id={instrument: &#x27;LSSTCam-imSim&#x27;, detector: 116, visit: 919515, ...}</pre>
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: Processing calexp 2 of 4 for this Warp: id={instrument: &#x27;LSSTCam-imSim&#x27;, detector: 166, visit: 930353, ...}</pre>
 </div>
 
 </div>
@@ -19056,7 +17637,7 @@ border-left-style: solid;
 font-family: var(--jp-code-font-family);
 font-size: var(--jp-code-font-size);
 line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: directWarp has 8982709 good pixels (50.9%)</pre>
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: Processing calexp 3 of 4 for this Warp: id={instrument: &#x27;LSSTCam-imSim&#x27;, detector: 168, visit: 930353, ...}</pre>
 </div>
 
 </div>
@@ -19073,7 +17654,7 @@ border-left-style: solid;
 font-family: var(--jp-code-font-family);
 font-size: var(--jp-code-font-size);
 line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: psfMatchedWarp has 8856818 good pixels (50.2%)</pre>
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: compute Psf-matching kernel</pre>
 </div>
 
 </div>
@@ -19090,7 +17671,874 @@ border-left-style: solid;
 font-family: var(--jp-code-font-family);
 font-size: var(--jp-code-font-size);
 line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.ctrl.mpexec.singleQuantumExecutor</span> <span style="color: var(--jp-info-color0)">INFO</span>: Execution of task &#x27;makeWarp&#x27; on quantum {instrument: &#x27;LSSTCam-imSim&#x27;, skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17, visit: 919515, ...} took 83.209 seconds</pre>
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Adjusted dimensions of reference PSF model from (23, 23) to (57, 57)</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.ip.diffim.generateAlardLuptonBasisList</span> <span style="color: var(--jp-info-color0)">INFO</span>: PSF sigmas are not available or scaling by fwhm disabled, falling back to config values</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Psf-match science exposure to reference</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: done</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: Processing calexp 4 of 4 for this Warp: id={instrument: &#x27;LSSTCam-imSim&#x27;, detector: 169, visit: 930353, ...}</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: compute Psf-matching kernel</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Adjusted dimensions of reference PSF model from (23, 23) to (57, 57)</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.ip.diffim.generateAlardLuptonBasisList</span> <span style="color: var(--jp-info-color0)">INFO</span>: PSF sigmas are not available or scaling by fwhm disabled, falling back to config values</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Psf-match science exposure to reference</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: done</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: directWarp has 16076133 good pixels (91.1%)</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: psfMatchedWarp has 15873200 good pixels (90.0%)</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.ctrl.mpexec.singleQuantumExecutor</span> <span style="color: var(--jp-info-color0)">INFO</span>: Execution of task &#x27;makeWarp&#x27; on quantum {instrument: &#x27;LSSTCam-imSim&#x27;, skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17, visit: 930353, ...} took 124.350 seconds</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.ctrl.mpexec.singleQuantumExecutor</span> <span style="color: var(--jp-info-color0)">INFO</span>: Log records could not be stored in this butler because the datastore can not ingest files, empty record list is stored instead.</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.select</span> <span style="color: var(--jp-info-color0)">INFO</span>: Selecting calexp {instrument: &#x27;LSSTCam-imSim&#x27;, detector: 52, visit: 929477, ...}</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.select</span> <span style="color: var(--jp-info-color0)">INFO</span>: Selecting calexp {instrument: &#x27;LSSTCam-imSim&#x27;, detector: 90, visit: 929477, ...}</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.select</span> <span style="color: var(--jp-info-color0)">INFO</span>: Selecting calexp {instrument: &#x27;LSSTCam-imSim&#x27;, detector: 91, visit: 929477, ...}</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.select</span> <span style="color: var(--jp-info-color0)">INFO</span>: Selecting calexp {instrument: &#x27;LSSTCam-imSim&#x27;, detector: 92, visit: 929477, ...}</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.select</span> <span style="color: var(--jp-info-color0)">INFO</span>: Selecting calexp {instrument: &#x27;LSSTCam-imSim&#x27;, detector: 94, visit: 929477, ...}</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: Processing calexp 1 of 5 for this Warp: id={instrument: &#x27;LSSTCam-imSim&#x27;, detector: 52, visit: 929477, ...}</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: compute Psf-matching kernel</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Adjusted dimensions of reference PSF model from (23, 23) to (55, 55)</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.ip.diffim.generateAlardLuptonBasisList</span> <span style="color: var(--jp-info-color0)">INFO</span>: PSF sigmas are not available or scaling by fwhm disabled, falling back to config values</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Psf-match science exposure to reference</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: done</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: Processing calexp 2 of 5 for this Warp: id={instrument: &#x27;LSSTCam-imSim&#x27;, detector: 90, visit: 929477, ...}</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: compute Psf-matching kernel</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Adjusted dimensions of reference PSF model from (23, 23) to (55, 55)</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.ip.diffim.generateAlardLuptonBasisList</span> <span style="color: var(--jp-info-color0)">INFO</span>: PSF sigmas are not available or scaling by fwhm disabled, falling back to config values</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Psf-match science exposure to reference</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: done</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: Processing calexp 3 of 5 for this Warp: id={instrument: &#x27;LSSTCam-imSim&#x27;, detector: 91, visit: 929477, ...}</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: compute Psf-matching kernel</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Adjusted dimensions of reference PSF model from (23, 23) to (55, 55)</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.ip.diffim.generateAlardLuptonBasisList</span> <span style="color: var(--jp-info-color0)">INFO</span>: PSF sigmas are not available or scaling by fwhm disabled, falling back to config values</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Psf-match science exposure to reference</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: done</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: Processing calexp 4 of 5 for this Warp: id={instrument: &#x27;LSSTCam-imSim&#x27;, detector: 92, visit: 929477, ...}</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: compute Psf-matching kernel</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Adjusted dimensions of reference PSF model from (23, 23) to (55, 55)</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.ip.diffim.generateAlardLuptonBasisList</span> <span style="color: var(--jp-info-color0)">INFO</span>: PSF sigmas are not available or scaling by fwhm disabled, falling back to config values</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Psf-match science exposure to reference</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: done</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: Processing calexp 5 of 5 for this Warp: id={instrument: &#x27;LSSTCam-imSim&#x27;, detector: 94, visit: 929477, ...}</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: compute Psf-matching kernel</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Adjusted dimensions of reference PSF model from (23, 23) to (55, 55)</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.ip.diffim.generateAlardLuptonBasisList</span> <span style="color: var(--jp-info-color0)">INFO</span>: PSF sigmas are not available or scaling by fwhm disabled, falling back to config values</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Psf-match science exposure to reference</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: done</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: directWarp has 16280498 good pixels (92.3%)</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: psfMatchedWarp has 16091293 good pixels (91.2%)</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.ctrl.mpexec.singleQuantumExecutor</span> <span style="color: var(--jp-info-color0)">INFO</span>: Execution of task &#x27;makeWarp&#x27; on quantum {instrument: &#x27;LSSTCam-imSim&#x27;, skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17, visit: 929477, ...} took 132.537 seconds</pre>
 </div>
 
 </div>
@@ -19277,7 +18725,7 @@ border-left-style: solid;
 font-family: var(--jp-code-font-family);
 font-size: var(--jp-code-font-size);
 line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.ctrl.mpexec.singleQuantumExecutor</span> <span style="color: var(--jp-info-color0)">INFO</span>: Execution of task &#x27;makeWarp&#x27; on quantum {instrument: &#x27;LSSTCam-imSim&#x27;, skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17, visit: 924085, ...} took 25.236 seconds</pre>
+"><span style="color: var(--jp-warn-color2)">lsst.ctrl.mpexec.singleQuantumExecutor</span> <span style="color: var(--jp-info-color0)">INFO</span>: Execution of task &#x27;makeWarp&#x27; on quantum {instrument: &#x27;LSSTCam-imSim&#x27;, skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17, visit: 924085, ...} took 23.827 seconds</pre>
 </div>
 
 </div>
@@ -19311,7 +18759,534 @@ border-left-style: solid;
 font-family: var(--jp-code-font-family);
 font-size: var(--jp-code-font-size);
 line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.assembleCoadd</span> <span style="color: var(--jp-info-color0)">INFO</span>: Weight of deepCoadd_directWarp {instrument: &#x27;LSSTCam-imSim&#x27;, skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17, visit: 919515, ...} = 3.466</pre>
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.select</span> <span style="color: var(--jp-info-color0)">INFO</span>: Selecting calexp {instrument: &#x27;LSSTCam-imSim&#x27;, detector: 30, visit: 924057, ...}</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.select</span> <span style="color: var(--jp-info-color0)">INFO</span>: Selecting calexp {instrument: &#x27;LSSTCam-imSim&#x27;, detector: 31, visit: 924057, ...}</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.select</span> <span style="color: var(--jp-info-color0)">INFO</span>: Selecting calexp {instrument: &#x27;LSSTCam-imSim&#x27;, detector: 33, visit: 924057, ...}</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.select</span> <span style="color: var(--jp-info-color0)">INFO</span>: Selecting calexp {instrument: &#x27;LSSTCam-imSim&#x27;, detector: 34, visit: 924057, ...}</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: Processing calexp 1 of 4 for this Warp: id={instrument: &#x27;LSSTCam-imSim&#x27;, detector: 30, visit: 924057, ...}</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: compute Psf-matching kernel</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Adjusted dimensions of reference PSF model from (23, 23) to (57, 57)</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.ip.diffim.generateAlardLuptonBasisList</span> <span style="color: var(--jp-info-color0)">INFO</span>: PSF sigmas are not available or scaling by fwhm disabled, falling back to config values</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Psf-match science exposure to reference</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: done</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: Processing calexp 2 of 4 for this Warp: id={instrument: &#x27;LSSTCam-imSim&#x27;, detector: 31, visit: 924057, ...}</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: compute Psf-matching kernel</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Adjusted dimensions of reference PSF model from (23, 23) to (57, 57)</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.ip.diffim.generateAlardLuptonBasisList</span> <span style="color: var(--jp-info-color0)">INFO</span>: PSF sigmas are not available or scaling by fwhm disabled, falling back to config values</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Psf-match science exposure to reference</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: done</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: Processing calexp 3 of 4 for this Warp: id={instrument: &#x27;LSSTCam-imSim&#x27;, detector: 33, visit: 924057, ...}</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: compute Psf-matching kernel</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Adjusted dimensions of reference PSF model from (23, 23) to (57, 57)</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.ip.diffim.generateAlardLuptonBasisList</span> <span style="color: var(--jp-info-color0)">INFO</span>: PSF sigmas are not available or scaling by fwhm disabled, falling back to config values</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Psf-match science exposure to reference</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: done</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: Processing calexp 4 of 4 for this Warp: id={instrument: &#x27;LSSTCam-imSim&#x27;, detector: 34, visit: 924057, ...}</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: compute Psf-matching kernel</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Adjusted dimensions of reference PSF model from (23, 23) to (57, 57)</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.ip.diffim.generateAlardLuptonBasisList</span> <span style="color: var(--jp-info-color0)">INFO</span>: PSF sigmas are not available or scaling by fwhm disabled, falling back to config values</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: Psf-match science exposure to reference</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp.warpAndPsfMatch.psfMatch</span> <span style="color: var(--jp-info-color0)">INFO</span>: done</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: directWarp has 16098179 good pixels (91.3%)</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.makeWarp</span> <span style="color: var(--jp-info-color0)">INFO</span>: psfMatchedWarp has 15894357 good pixels (90.1%)</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.ctrl.mpexec.singleQuantumExecutor</span> <span style="color: var(--jp-info-color0)">INFO</span>: Execution of task &#x27;makeWarp&#x27; on quantum {instrument: &#x27;LSSTCam-imSim&#x27;, skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17, visit: 924057, ...} took 122.323 seconds</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.ctrl.mpexec.singleQuantumExecutor</span> <span style="color: var(--jp-info-color0)">INFO</span>: Log records could not be stored in this butler because the datastore can not ingest files, empty record list is stored instead.</pre>
 </div>
 
 </div>
@@ -19345,7 +19320,24 @@ border-left-style: solid;
 font-family: var(--jp-code-font-family);
 font-size: var(--jp-code-font-size);
 line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.assembleCoadd</span> <span style="color: var(--jp-info-color0)">INFO</span>: Weight of deepCoadd_directWarp {instrument: &#x27;LSSTCam-imSim&#x27;, skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17, visit: 924085, ...} = 4.447</pre>
+"><span style="color: var(--jp-warn-color2)">lsst.assembleCoadd</span> <span style="color: var(--jp-info-color0)">INFO</span>: Weight of deepCoadd_directWarp {instrument: &#x27;LSSTCam-imSim&#x27;, skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17, visit: 929477, ...} = 4.051</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.assembleCoadd</span> <span style="color: var(--jp-info-color0)">INFO</span>: Weight of deepCoadd_directWarp {instrument: &#x27;LSSTCam-imSim&#x27;, skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17, visit: 919515, ...} = 3.466</pre>
 </div>
 
 </div>
@@ -19379,7 +19371,7 @@ border-left-style: solid;
 font-family: var(--jp-code-font-family);
 font-size: var(--jp-code-font-size);
 line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.assembleCoadd</span> <span style="color: var(--jp-info-color0)">INFO</span>: Weight of deepCoadd_directWarp {instrument: &#x27;LSSTCam-imSim&#x27;, skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17, visit: 929477, ...} = 4.051</pre>
+"><span style="color: var(--jp-warn-color2)">lsst.assembleCoadd</span> <span style="color: var(--jp-info-color0)">INFO</span>: Weight of deepCoadd_directWarp {instrument: &#x27;LSSTCam-imSim&#x27;, skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17, visit: 930353, ...} = 3.769</pre>
 </div>
 
 </div>
@@ -19396,7 +19388,7 @@ border-left-style: solid;
 font-family: var(--jp-code-font-family);
 font-size: var(--jp-code-font-size);
 line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.assembleCoadd</span> <span style="color: var(--jp-info-color0)">INFO</span>: Weight of deepCoadd_directWarp {instrument: &#x27;LSSTCam-imSim&#x27;, skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17, visit: 930353, ...} = 3.769</pre>
+"><span style="color: var(--jp-warn-color2)">lsst.assembleCoadd</span> <span style="color: var(--jp-info-color0)">INFO</span>: Weight of deepCoadd_directWarp {instrument: &#x27;LSSTCam-imSim&#x27;, skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17, visit: 924085, ...} = 4.447</pre>
 </div>
 
 </div>
@@ -19430,58 +19422,7 @@ border-left-style: solid;
 font-family: var(--jp-code-font-family);
 font-size: var(--jp-code-font-size);
 line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.assembleCoadd.assembleStaticSkyModel</span> <span style="color: var(--jp-info-color0)">INFO</span>: Weight of deepCoadd_psfMatchedWarp {instrument: &#x27;LSSTCam-imSim&#x27;, skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17, visit: 919515, ...} = 237.689</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
 "><span style="color: var(--jp-warn-color2)">lsst.assembleCoadd.assembleStaticSkyModel</span> <span style="color: var(--jp-info-color0)">INFO</span>: Weight of deepCoadd_psfMatchedWarp {instrument: &#x27;LSSTCam-imSim&#x27;, skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17, visit: 924057, ...} = 303.107</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.assembleCoadd.assembleStaticSkyModel</span> <span style="color: var(--jp-info-color0)">INFO</span>: Weight of deepCoadd_psfMatchedWarp {instrument: &#x27;LSSTCam-imSim&#x27;, skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17, visit: 924085, ...} = 307.386</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.assembleCoadd.assembleStaticSkyModel</span> <span style="color: var(--jp-info-color0)">INFO</span>: Weight of deepCoadd_psfMatchedWarp {instrument: &#x27;LSSTCam-imSim&#x27;, skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17, visit: 924086, ...} = 294.087</pre>
 </div>
 
 </div>
@@ -19515,7 +19456,58 @@ border-left-style: solid;
 font-family: var(--jp-code-font-family);
 font-size: var(--jp-code-font-size);
 line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.assembleCoadd.assembleStaticSkyModel</span> <span style="color: var(--jp-info-color0)">INFO</span>: Weight of deepCoadd_psfMatchedWarp {instrument: &#x27;LSSTCam-imSim&#x27;, skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17, visit: 919515, ...} = 237.689</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.assembleCoadd.assembleStaticSkyModel</span> <span style="color: var(--jp-info-color0)">INFO</span>: Weight of deepCoadd_psfMatchedWarp {instrument: &#x27;LSSTCam-imSim&#x27;, skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17, visit: 924086, ...} = 294.087</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
 "><span style="color: var(--jp-warn-color2)">lsst.assembleCoadd.assembleStaticSkyModel</span> <span style="color: var(--jp-info-color0)">INFO</span>: Weight of deepCoadd_psfMatchedWarp {instrument: &#x27;LSSTCam-imSim&#x27;, skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17, visit: 930353, ...} = 200.529</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.assembleCoadd.assembleStaticSkyModel</span> <span style="color: var(--jp-info-color0)">INFO</span>: Weight of deepCoadd_psfMatchedWarp {instrument: &#x27;LSSTCam-imSim&#x27;, skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17, visit: 924085, ...} = 307.386</pre>
 </div>
 
 </div>
@@ -19634,40 +19626,6 @@ border-left-style: solid;
 font-family: var(--jp-code-font-family);
 font-size: var(--jp-code-font-size);
 line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.assembleCoadd.scaleWarpVariance</span> <span style="color: var(--jp-info-color0)">INFO</span>: Renormalizing variance by 1.146336</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.assembleCoadd.detect</span> <span style="color: var(--jp-info-color0)">INFO</span>: Detected 63 positive peaks in 35 footprints and 39 negative peaks in 24 footprints to 5 sigma</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
 "><span style="color: var(--jp-warn-color2)">lsst.assembleCoadd.scaleWarpVariance</span> <span style="color: var(--jp-info-color0)">INFO</span>: Renormalizing variance by 1.154961</pre>
 </div>
 
@@ -19686,74 +19644,6 @@ font-family: var(--jp-code-font-family);
 font-size: var(--jp-code-font-size);
 line-height: var(--jp-code-line-height);
 "><span style="color: var(--jp-warn-color2)">lsst.assembleCoadd.detect</span> <span style="color: var(--jp-info-color0)">INFO</span>: Detected 10 positive peaks in 4 footprints and 6 negative peaks in 5 footprints to 5 sigma</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.assembleCoadd.scaleWarpVariance</span> <span style="color: var(--jp-info-color0)">INFO</span>: Renormalizing variance by 1.162910</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.assembleCoadd.detect</span> <span style="color: var(--jp-info-color0)">INFO</span>: Detected 0 positive peaks in 0 footprints and 0 negative peaks in 0 footprints to 5 sigma</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.assembleCoadd.scaleWarpVariance</span> <span style="color: var(--jp-info-color0)">INFO</span>: Renormalizing variance by 1.150889</pre>
-</div>
-
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<pre style="margin: 0.1em;
-padding-left: 0.25em;
-border-left-style: solid;
-font-family: var(--jp-code-font-family);
-font-size: var(--jp-code-font-size);
-line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.assembleCoadd.detect</span> <span style="color: var(--jp-info-color0)">INFO</span>: Detected 15 positive peaks in 12 footprints and 34 negative peaks in 20 footprints to 5 sigma</pre>
 </div>
 
 </div>
@@ -19804,6 +19694,74 @@ border-left-style: solid;
 font-family: var(--jp-code-font-family);
 font-size: var(--jp-code-font-size);
 line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.assembleCoadd.scaleWarpVariance</span> <span style="color: var(--jp-info-color0)">INFO</span>: Renormalizing variance by 1.146336</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.assembleCoadd.detect</span> <span style="color: var(--jp-info-color0)">INFO</span>: Detected 63 positive peaks in 35 footprints and 39 negative peaks in 24 footprints to 5 sigma</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.assembleCoadd.scaleWarpVariance</span> <span style="color: var(--jp-info-color0)">INFO</span>: Renormalizing variance by 1.150889</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.assembleCoadd.detect</span> <span style="color: var(--jp-info-color0)">INFO</span>: Detected 15 positive peaks in 12 footprints and 34 negative peaks in 20 footprints to 5 sigma</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
 "><span style="color: var(--jp-warn-color2)">lsst.assembleCoadd.scaleWarpVariance</span> <span style="color: var(--jp-info-color0)">INFO</span>: Renormalizing variance by 1.142096</pre>
 </div>
 
@@ -19822,6 +19780,40 @@ font-family: var(--jp-code-font-family);
 font-size: var(--jp-code-font-size);
 line-height: var(--jp-code-line-height);
 "><span style="color: var(--jp-warn-color2)">lsst.assembleCoadd.detect</span> <span style="color: var(--jp-info-color0)">INFO</span>: Detected 42 positive peaks in 36 footprints and 68 negative peaks in 25 footprints to 5 sigma</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.assembleCoadd.scaleWarpVariance</span> <span style="color: var(--jp-info-color0)">INFO</span>: Renormalizing variance by 1.162910</pre>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.assembleCoadd.detect</span> <span style="color: var(--jp-info-color0)">INFO</span>: Detected 0 positive peaks in 0 footprints and 0 negative peaks in 0 footprints to 5 sigma</pre>
 </div>
 
 </div>
@@ -19906,7 +19898,7 @@ border-left-style: solid;
 font-family: var(--jp-code-font-family);
 font-size: var(--jp-code-font-size);
 line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.ctrl.mpexec.singleQuantumExecutor</span> <span style="color: var(--jp-info-color0)">INFO</span>: Execution of task &#x27;assembleCoadd&#x27; on quantum {band: &#x27;i&#x27;, skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17} took 253.330 seconds</pre>
+"><span style="color: var(--jp-warn-color2)">lsst.ctrl.mpexec.singleQuantumExecutor</span> <span style="color: var(--jp-info-color0)">INFO</span>: Execution of task &#x27;assembleCoadd&#x27; on quantum {band: &#x27;i&#x27;, skymap: &#x27;DC2&#x27;, tract: 4431, patch: 17} took 243.213 seconds</pre>
 </div>
 
 </div>
@@ -19952,7 +19944,7 @@ Each of those has information about, e.g., the name of the task, the reference t
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># quanta</span>
@@ -19980,7 +19972,7 @@ Each of those has information about, e.g., the name of the task, the reference t
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># quanta.</span>
@@ -20008,7 +20000,7 @@ Each of those has information about, e.g., the name of the task, the reference t
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># dir(quanta[0])</span>
@@ -20036,7 +20028,7 @@ Each of those has information about, e.g., the name of the task, the reference t
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">q</span><span class="p">,</span> <span class="n">quantum</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">quanta</span><span class="p">):</span>
@@ -20097,7 +20089,7 @@ Each of those has information about, e.g., the name of the task, the reference t
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">coadd_index</span> <span class="o">=</span> <span class="mi">6</span>
@@ -20125,7 +20117,7 @@ Each of those has information about, e.g., the name of the task, the reference t
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># quanta[coadd_index].inputs</span>
@@ -20141,7 +20133,7 @@ Each of those has information about, e.g., the name of the task, the reference t
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># quanta[coadd_index].outputs</span>
@@ -20157,7 +20149,7 @@ Each of those has information about, e.g., the name of the task, the reference t
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">output</span> <span class="ow">in</span> <span class="n">quanta</span><span class="p">[</span><span class="n">coadd_index</span><span class="p">]</span><span class="o">.</span><span class="n">outputs</span><span class="p">:</span>
@@ -20182,10 +20174,10 @@ Each of those has information about, e.g., the name of the task, the reference t
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>DatasetType(&#39;deepCoadd&#39;, {band, skymap, tract, patch}, ExposureF)
+DatasetType(&#39;deepCoadd_inputMap&#39;, {band, skymap, tract, patch}, HealSparseMap)
+DatasetType(&#39;assembleCoadd_metadata&#39;, {band, skymap, tract, patch}, PropertySet)
 DatasetType(&#39;assembleCoadd_log&#39;, {band, skymap, tract, patch}, ButlerLogRecords)
 DatasetType(&#39;deepCoadd_nImage&#39;, {band, skymap, tract, patch}, ImageU)
-DatasetType(&#39;assembleCoadd_metadata&#39;, {band, skymap, tract, patch}, PropertySet)
-DatasetType(&#39;deepCoadd_inputMap&#39;, {band, skymap, tract, patch}, HealSparseMap)
 </pre>
 </div>
 </div>
@@ -20211,7 +20203,7 @@ DatasetType(&#39;deepCoadd_inputMap&#39;, {band, skymap, tract, patch}, HealSpar
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">quanta</span><span class="p">[</span><span class="n">coadd_index</span><span class="p">]</span><span class="o">.</span><span class="n">outputs</span><span class="p">[</span><span class="s1">'deepCoadd'</span><span class="p">]</span>
@@ -20230,7 +20222,7 @@ DatasetType(&#39;deepCoadd_inputMap&#39;, {band, skymap, tract, patch}, HealSpar
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[46]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[37]:</div>
 
 
 
@@ -20281,7 +20273,7 @@ DatasetType(&#39;deepCoadd_inputMap&#39;, {band, skymap, tract, patch}, HealSpar
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_new_deepCoadd</span> <span class="o">=</span> <span class="n">simpleButler</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">quanta</span><span class="p">[</span><span class="n">coadd_index</span><span class="p">]</span><span class="o">.</span><span class="n">outputs</span><span class="p">[</span><span class="s1">'deepCoadd'</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
@@ -20314,7 +20306,7 @@ DatasetType(&#39;deepCoadd_inputMap&#39;, {band, skymap, tract, patch}, HealSpar
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># simpleButler.registry.getCollectionChain(my_outputCollection)</span>
@@ -20330,7 +20322,7 @@ DatasetType(&#39;deepCoadd_inputMap&#39;, {band, skymap, tract, patch}, HealSpar
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># my_new_deepCoadd = simpleButler.get('deepCoadd', dataId=my_dataId)</span>
@@ -20351,7 +20343,7 @@ DatasetType(&#39;deepCoadd_inputMap&#39;, {band, skymap, tract, patch}, HealSpar
 <h4 id="Accessing-the-image-from-another-notebook.">Accessing the image from another notebook.<a class="anchor-link" href="#Accessing-the-image-from-another-notebook.">&#182;</a></h4><p>The results have been permanently written to the butler.</p>
 <p>If you instantiated a new butler in a new notebook: <br>
 <code>collection = &quot;u/&lt;Your User Name&gt;/coadd_recreation_nb/Window1_coadd/&lt;Unique Timestamp&gt;&quot;</code><br>
-<code>butler = Butler('dp02', collections=collection)</code><br></p>
+<code>butler = Butler('dp02-direct', collections=collection)</code><br></p>
 <p>Then you would be able to define the dataId in the same way:<br>
 <code>my_dataId = {'band': 'i', 'tract': 4431, 'patch': 17}</code><br></p>
 <p>And retrieve your new <code>deepCoadd</code> with:<br>
@@ -20384,7 +20376,7 @@ to have the results returned as an astropy table with a single command, instead 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[50]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_new_deepCoadd_inputs</span> <span class="o">=</span> <span class="n">simpleButler</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"deepCoadd.coaddInputs"</span><span class="p">,</span> <span class="n">my_dataId</span><span class="p">)</span>
@@ -20400,7 +20392,7 @@ to have the results returned as an astropy table with a single command, instead 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[51]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_new_deepCoadd_inputs</span><span class="o">.</span><span class="n">visits</span><span class="o">.</span><span class="n">asAstropy</span><span class="p">()</span>
@@ -20419,13 +20411,13 @@ to have the results returned as an astropy table with a single command, instead 
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[51]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[40]:</div>
 
 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 <div><i>Table length=6</i>
-<table id="table136987028806512" class="table-striped table-bordered table-condensed">
+<table id="table135214765072464" class="table-striped table-bordered table-condensed">
 <thead><tr><th>id</th><th>bbox_min_x</th><th>bbox_min_y</th><th>bbox_max_x</th><th>bbox_max_y</th><th>goodpix</th><th>weight</th><th>filter</th></tr></thead>
 <thead><tr><th></th><th>pix</th><th>pix</th><th>pix</th><th>pix</th><th></th><th></th><th></th></tr></thead>
 <thead><tr><th>int64</th><th>int32</th><th>int32</th><th>int32</th><th>int32</th><th>int32</th><th>float64</th><th>str32</th></tr></thead>
@@ -20462,7 +20454,7 @@ to have the results returned as an astropy table with a single command, instead 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[52]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
@@ -20485,7 +20477,7 @@ to have the results returned as an astropy table with a single command, instead 
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[52]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[41]:</div>
 
 
 
@@ -20535,7 +20527,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[53]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_makeWarp_config</span> <span class="o">=</span> <span class="n">simpleButler</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"makeWarp_config"</span><span class="p">,</span> <span class="n">my_dataId</span><span class="p">)</span>
@@ -20551,7 +20543,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[54]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_assembleCoadd_config</span> <span class="o">=</span> <span class="n">simpleButler</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"assembleCoadd_config"</span><span class="p">,</span> <span class="n">my_dataId</span><span class="p">)</span>
@@ -20579,7 +20571,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[55]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># for key, value in my_makeWarp_config.items():</span>
@@ -20596,7 +20588,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[56]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># for key, value in my_assembleCoadd_config.items():</span>
