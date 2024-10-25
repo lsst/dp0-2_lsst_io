@@ -51,6 +51,17 @@ and clicking on "history" (near upper-right).
 Major Updates Log
 =================
 
+Oct 24 2024
+-----------
+
+The ``dp02`` alias for the butler repository holding the DP0.2 data set was updated to be read-only.
+This change accommodates evolution in the butler service and better aligns with the functionality to be expected
+for Data Preview 1.
+
+Tutorial notebooks 09a and 09b (custom coadds) were updated to use the ``dp02-direct`` alias, which connects
+to writeable version of the DP0.2 butler repository.
+This functionality, and the ``-direct`` option, is temporary (for DP0 only).
+
 Oct 22 2024
 -----------
 Released new portal tutorial 6 demonstrating various functionalities available in the Firefly-based RSP Portal Asepct.
