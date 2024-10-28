@@ -146,7 +146,7 @@ Step 2. Create the color-magnitude diagram
 The default layout shows a sky coverage map from DESC DC2 simulation at upper left, 
 an active chart showing the spatial distribution of returned 
 objects at upper right, and a table of the search results along the bottom. 
-To change the layout displayed on the screen, click the hamburger icon at the top left.
+To change the layout displayed on the screen, click the hamburger icon (box with three horizonal lines on top of each other) at the top left.
 
 .. figure:: /_static/portal_tut01_step02_01.png
 	:name: portal_tut01_step02_01
