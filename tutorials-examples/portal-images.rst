@@ -65,7 +65,7 @@ difference images. Leave the other options to their default settings except for 
 2. Interact with the deepCoadds
 ===============================
 
-2.1. Above the image, click on the grid icon (hover-over text "Tile all images in the search result table") to simultaneously view all six filters' deepCoadds. 
+2.1. On the right hand panel, click on "Data Product: ivoa..." tab, then click on the grid icon (hover-over text "Tile all images in the search result table") to simultaneously view all six filters' deepCoadds. 
 The default view is to center all deepCoadds on the center of the patch.
 In this example the compass (Under Layers, click "Show the directions of Equatorial J2000 North and East) has been enabled using the "Tools" icon (wrench and hammer, 
 hover-over text "Tools drop down: save, rotate, extract and more").
