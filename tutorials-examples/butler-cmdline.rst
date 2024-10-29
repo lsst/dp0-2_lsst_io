@@ -8,7 +8,7 @@
 
 **Contact author:** Aaron Meisner
 
-**Last verified to run:** 8/13/2024
+**Last verified to run:** 10/28/2024
 
 **LSST Science Pipelines version**:  Weekly 2024_16
 
