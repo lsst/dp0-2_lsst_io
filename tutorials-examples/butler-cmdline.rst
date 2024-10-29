@@ -244,7 +244,7 @@ The output of the above command is:
        DC2  3831    47
        DC2  4852    18
 
-Note that Butler has a default limit value of 20,000 which would become relevant for a query that might yield a very large number of results.
+Note that Butler has a default limit value of 20,000 which would become relevant for a query that might yield a very large number of results. A Butler query that hits the default limit of 20,000 results will issue a warning about this default limit.
 
 The ``order-by`` command line argument is also available for multiple Butler command line utilities, including ``query-dimension-records``. To order ``query-dimension-records`` results for a list of detectors by detector full name:
 
