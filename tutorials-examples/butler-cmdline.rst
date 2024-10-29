@@ -8,7 +8,7 @@
 
 **Contact author:** Aaron Meisner
 
-**Last verified to run:** 8/13/2024
+**Last verified to run:** 10/28/2024
 
 **LSST Science Pipelines version**:  Weekly 2024_16
 
@@ -224,7 +224,48 @@ Now use Butler from the command line to figure out how many coadd patches there 
 
 Note that this command is almost identical to the one before it, but with ``patch`` rather than ``tract`` specified as the ``Dimension`` of interest. The resulting printout value of 7693 makes sense, because there are 157 DP0.2 coadd tracts, and each of these tracts consists of a grid of 7x7 = 49 patches. So then there should be 157 tracts x 49 patches/tract = 7693 patches in DP0.2.
 
-Step 5. Optional exercises for the learner
+Step 5. The ``limit`` and ``order-by`` arguments
+================================================
+
+``butler-query-data-ids`` has a ``limit`` argument that restricts the output to only at most a certain user-specified number of results. The following command displays just a first set of 4 ``deepCoadd`` dataIDs:
+
+.. code-block::
+
+    butler query-data-ids dp02 patch --collections 2.2i/runs/DP0.2 --datasets 'deepCoadd' --limit 4
+
+The output of the above command is:
+
+.. code-block::
+
+    skymap tract patch
+    ------ ----- -----
+       DC2  3265     7
+       DC2  3633    22
+       DC2  3831    47
+       DC2  4852    18
+
+Note that Butler has a default limit value of 20,000 which would become relevant for a query that might yield a very large number of results. A Butler query that hits the default limit of 20,000 results will issue a warning about this default limit.
+
+The ``order-by`` command line argument is also available for multiple Butler command line utilities, including ``query-dimension-records``. To order ``query-dimension-records`` results for a list of detectors by detector full name:
+
+.. code-block::
+
+    butler query-dimension-records dp02 detector --limit 4 --order-by full_name --where "instrument='LSSTCam-imSim'"
+
+The output of the above command is:
+
+.. code-block::
+
+    instrument   id full_name name_in_raft raft purpose
+    ------------- --- --------- ------------ ---- -------
+    LSSTCam-imSim   0   R01_S00          S00  R01 SCIENCE
+    LSSTCam-imSim   1   R01_S01          S01  R01 SCIENCE
+    LSSTCam-imSim   2   R01_S02          S02  R01 SCIENCE
+    LSSTCam-imSim   3   R01_S10          S10  R01 SCIENCE
+
+Note that the above command combines the ``order-by`` and ``limit`` arguments, only showing the first 4 results sorted by ascending detector ``full_name``.
+
+Step 6. Optional exercises for the learner
 ==========================================
 
 1. ``butler query-data-ids`` also accepts a ``where`` argument to narrow down queries. Try issuing a ``butler query-data-ids`` command that only returns a list of i-band ``deepCoadd`` products, rather than all bands.
