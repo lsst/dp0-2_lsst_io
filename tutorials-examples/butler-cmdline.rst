@@ -224,7 +224,28 @@ Now use Butler from the command line to figure out how many coadd patches there 
 
 Note that this command is almost identical to the one before it, but with ``patch`` rather than ``tract`` specified as the ``Dimension`` of interest. The resulting printout value of 7693 makes sense, because there are 157 DP0.2 coadd tracts, and each of these tracts consists of a grid of 7x7 = 49 patches. So then there should be 157 tracts x 49 patches/tract = 7693 patches in DP0.2.
 
-Step 5. Optional exercises for the learner
+Step 5. The ``limit`` and ``order-by`` arguments
+================================================
+
+``butler-query-data-ids`` has a ``limit`` argument that restricts the output to only at most a certain user-specified number of results. The following command displays just a first set of 4 ``deepCoadd`` dataIDs:
+
+.. code-block::
+
+    butler query-data-ids dp02 patch --collections 2.2i/runs/DP0.2 --datasets 'deepCoadd' --limit 4
+
+The output of the above command is:
+
+.. code-block::
+
+    skymap tract patch
+    ------ ----- -----
+       DC2  3265     7
+       DC2  3633    22
+       DC2  3831    47
+       DC2  4852    18
+
+
+Step 6. Optional exercises for the learner
 ==========================================
 
 1. ``butler query-data-ids`` also accepts a ``where`` argument to narrow down queries. Try issuing a ``butler query-data-ids`` command that only returns a list of i-band ``deepCoadd`` products, rather than all bands.
