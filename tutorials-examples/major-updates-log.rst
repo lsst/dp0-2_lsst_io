@@ -51,6 +51,10 @@ and clicking on "history" (near upper-right).
 Major Updates Log
 =================
 
+Nov 1 2024
+-----------
+Tutorial notebook 03c (Big deepCoadd Cutout) was updated to include an appendix demonstrating an alternative method of identifying overlapping exposures.
+
 Oct 31 2024
 -----------
 
