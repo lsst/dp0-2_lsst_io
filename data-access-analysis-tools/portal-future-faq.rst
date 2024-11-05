@@ -28,21 +28,11 @@ Currently, for a FITS image, the image toolbox has a ``Select a Region`` icon, w
 After a region has been selected and this option chosen, the  statistics option results in a pop-upwindow that contains ststistics such as the mean, the standard deviation, the integrated flux, the minimum and maximum flux in the region, etc. 
 
 
-Will the portal have the capability to create 3D plots?
--------------------------------------------------------
-
-TBD
-
 Will the portal support the creation of regression models?
 ----------------------------------------------------------
 Currently, the Portal does not support direct creation of regression models, such as fitting a line to a plot of data.
 The development focus is on enabling seamless integration with external tools, like the Notebook Aspect of the RSP, which can perform a wide range of fit functions.
 This approach leverages the extensive capabilities of the scientific Python community and provides more robust and flexible fitting options.
-
-What is the maximum number of queries a user can run simultaneously?
---------------------------------------------------------------------
-
-TBD
 
 Is there a maximum row limit for query output in the portal?
 ------------------------------------------------------------
@@ -53,26 +43,7 @@ Will there be a feature to estimate the number of rows a query will return witho
 Yes, the `COUNT` function can be used in ADQL (Astronomical Data Query Language) similarly to how it is used in SQL.
 This function can be currently used in the `Edit ADQL` view section in the Portal.
 
-Will the Portal support batch processing of ADQL queries?
----------------------------------------------------------
-
-TBD
-
-Are there size limits for files uploaded to the Portal, and what is their retention policy?
--------------------------------------------------------------------------------------------
-
-TBD
-
-Will uploaded files remain accessible in the user’s space after the session ends, and can they be accessed through other RSP aspects?
--------------------------------------------------------------------------------------------------------------------------------------
-
-TBD
-
-
 Additonal Questions
 -------------------
 
-
 To ask additional questions, please use the "Support -- Rubin Science Platform" category in the Rubin Observatory `Community Forum <https://community.lsst.org/c/support/lsp/39>`_
-
-
