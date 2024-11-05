@@ -187,4 +187,8 @@ See the following FAQ (and references therein) for more details on the future fu
 
     rsp-future-faq
 
+.. toctree::
+    :maxdepth: 2
+    :glob:
 
+    portal-future-faq
