@@ -65,7 +65,7 @@ difference images. Leave the other options to their default settings except for 
 2. Interact with the deepCoadds
 ===============================
 
-2.1. Above the image, click on the grid icon (hover-over text "Tile all images in the search result table") to simultaneously view all six filters' deepCoadds. 
+2.1. On the right hand panel, click on "Data Product: ivoa..." tab, then click on the grid icon (hover-over text "Tile all images in the search result table") to simultaneously view all six filters' deepCoadds. 
 The default view is to center all deepCoadds on the center of the patch.
 In this example the compass (Under Layers, click "Show the directions of Equatorial J2000 North and East) has been enabled using the "Tools" icon (wrench and hammer, 
 hover-over text "Tools drop down: save, rotate, extract and more").
@@ -115,7 +115,9 @@ To sort the table so that the filter order is u, g, r, i, z, y, click on the col
 
 2.5. Rescale the flux to explore the underlying distribution of host galaxy light.
 Use the "scale" icon (panel icon with a histogram, third from left, hover-over text "Stretch drop down: change the background image stretch") to set the Stretch Type to "Log: Stretch to 99%".
-Notice that there appears to be a faint - but spatially distinct - extended object at the location of the SNIa, especially in the g-band image (bottom center), which at first was not obvious due to the wings of the brighter galaxy.
+(Note: click on "Z Scale Log Stretch", then select "Log: Stretch to 99%", if necessary.)
+Notice that there appears to be a faint - but spatially distinct - extended object at the location of the SNIa, especially in the g-band image (bottom center),
+which at first was not obvious due to the wings of the brighter galaxy.
 
 .. figure:: /_static/portal_tut03_step02_05.png
     :name: portal_tut03_step02_05

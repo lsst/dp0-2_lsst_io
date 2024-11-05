@@ -71,7 +71,7 @@ footprint. Do not set any timing, spectral coverage, or object ID search constra
     Figure 1: RSP Portal aspect with "DP0.2 Images" selected, prepared to query images.
 
 **1.4.** Click "Search", and the Portal will execute the query and display
-the default results view.
+the default results view. (Click on the "Data Product: ivoa.ObsCore..." tab, if necessary.)
 
 .. figure:: /_static/portal_tut06_step01b.png
     :name: portal_tut06_step01b
