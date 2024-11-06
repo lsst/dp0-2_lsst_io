@@ -394,3 +394,26 @@ The color-composite background shows the relevant DC2 simulated sky region.
 
 **Learn More.**
 See also :ref:`DP0-2-Tutorials-Portal` for a tutorial using additional image types and more of the Portal's image-related functionality.
+
+.. _Portal-Intro-URL-APIs:
+
+Public URL API for the Portal
+=============================
+
+The public URL API provides direct access to specific resources via a publicly accessible URL; however, an RSP login is still required.
+
+One application is to construct URLs for your ADQL queries, enabling you to share these links with collaborators for efficient
+communication or save them for future reuse, avoiding the need to repopulate the ADQL edit box each time. For further guidance
+on the Web API, see the documentation `here <https://data.lsst.cloud/portal/app/?api>`__. Please note that not all features documented
+there are fully applicable within the RSP context. Here are some examples.
+
+**Exploring tables**
+.. code-block:: SQL
+
+   SELECT TOP 100 * FROM dp02_dc2_catalogs.Object
+
+
+Corresponding URL API: https://data.lsst.cloud/portal/app/?api=tap&service=https://data.lsst.cloud/api/tap&adql=SELECT TOP 100 * FROM dp02_dc2_catalogs.Object&execute=true
+
+**Note.** Currently, using this API involves a degree of shared risk, as further modifications are anticipated prior to DP1 and
+the commencement of survey operations.
