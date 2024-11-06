@@ -74,6 +74,7 @@ Exploring tables
 When learning about the contents of a table, it can be handy to simply retrieve all columns for "a bunch" (hundreds to thousands) of rows
 and take a look at the results.
 For this use-case, it is recommended to use the ``SELECT TOP`` statement, like in the example below that just retrieves the first 100 rows of the ``Object`` table.
+`Navigate directly to the query results page <https://data.lsst.cloud/portal/app/?api=tap&service=https://data.lsst.cloud/api/tap&adql=SELECT%20TOP%20100%20*%20FROM%20dp02_dc2_catalogs.Object&execute=true>`__.
 
 .. code-block:: SQL
 
@@ -87,6 +88,7 @@ Cone Search
 ===========
 
 Retrieve the ``coord_dec`` and ``coord_ra`` columns from the ``Object`` table for objects within a 0.05 degree radius of RA = 62, Dec = -37.
+`Navigate directly to the query results page <https://data.lsst.cloud/portal/app/?api=tap&service=https://data.lsst.cloud/api/tap&adql=SELECT%20coord_dec,coord_ra%20FROM%20dp02_dc2_catalogs.Object%20WHERE%20CONTAINS(POINT('ICRS',coord_ra,coord_dec),CIRCLE('ICRS',62,-37,0.05))%3D1&execute=true>`__.
 
 .. code-block:: SQL
 
@@ -103,6 +105,7 @@ Polygon Search
 
 Retrieve the ``coord_dec`` and ``coord_ra`` columns from the ``Object`` table for objects 
 within a box defined by vertices (RA, Dec) = (59.58, -36.95), (59.58, -36.65), (59.96, -36.65), and (59.96, -36.95).
+`Navigate directly to the query results page <https://data.lsst.cloud/portal/app/?api=tap&service=https://data.lsst.cloud/api/tap&adql=SELECT%20coord_dec,coord_ra%20FROM%20dp02_dc2_catalogs.Object%20WHERE%20CONTAINS(POINT('ICRS',coord_ra,coord_dec),POLYGON('ICRS',59.58,-36.95,59.58,-36.65,59.96,-36.65,59.96,-36.95))%3D1&execute=true>`__.
 
 .. code-block:: SQL
 
@@ -130,6 +133,7 @@ Convert fluxes to magnitudes
 As above, retrieve the ``coord_dec`` and ``coord_ra`` columns from the ``Object`` table for objects within a 0.05 degree radius of RA = 62, Dec = -37,
 and also retrieve the g-band AB magnitude and magnitude error.
 The ``scisql`` functions used below can be applied to any flux column.
+`Navigate directly to the query results page <https://data.lsst.cloud/portal/app/?api=tap&service=https://data.lsst.cloud/api/tap&adql=SELECT%20coord_dec,%20coord_ra,%20scisql_nanojanskyToAbMag(g_calibFlux)%20AS%20g_calibMag,%20scisql_nanojanskyToAbMagSigma(g_calibFlux,%20g_calibFluxErr)%20AS%20g_calibMagErr%20FROM%20dp02_dc2_catalogs.Object%20WHERE%20CONTAINS(POINT('ICRS',%20coord_ra,%20coord_dec),%20CIRCLE('ICRS',%2062,%20-37,%200.05))%3D1&execute=true>`__.
 
 .. code-block:: SQL
 
@@ -152,6 +156,7 @@ Any two tables can be joined so long as they have an index in common.
 This query also renames (nicknames) columns and tables using ``AS``,
 and applies a spatial constraint, a temporal constraint (using ``obsStartMJD``), 
 and constraints on the band, extendedness, and flux value.
+`Navigate directly to the query results page <https://data.lsst.cloud/portal/app/?api=tap&service=https://data.lsst.cloud/api/tap&adql=SELECT%20src.ccdVisitId%20AS%20src_ccdVisitId,%20src.extendedness%20AS%20src_extendedness,%20src.band%20AS%20src_band,%20scisql_nanojanskyToAbMag(src.psfFlux)%20AS%20src_psfAbMag,%20cv.obsStartMJD%20AS%20cv_obsStartMJD,%20cv.seeing%20AS%20cv_seeing%20FROM%20dp02_dc2_catalogs.Source%20AS%20src%20JOIN%20dp02_dc2_catalogs.CcdVisit%20AS%20cv%20ON%20src.ccdVisitId%20%3D%20cv.ccdVisitId%20WHERE%20CONTAINS(POINT('ICRS',%20coord_ra,%20coord_dec),%20CIRCLE('ICRS',%2062.0,%20-37,%201))%20%3D%201%20AND%20src.band%20%3D%20'i'%20AND%20src.extendedness%20%3D%200%20AND%20src.psfFlux%20%3E%2010000%20AND%20cv.obsStartMJD%20%3E%2060925%20AND%20cv.obsStartMJD%20%3C%2060955&execute=true>`__.
 
 Additional external resources on SQL table joins:
  - `W2 School's SQL tutorial: joins <https://www.w3schools.com/sql/sql_join.asp>`__
@@ -185,7 +190,7 @@ TruthSummary and MatchesTruth table joins
 
 The query below demonstrates how to retrieve the truth table identifier (``id_truth_type`` from the ``MatchesTruth`` table)
 and true redshift (from the ``TruthSummary`` table) for a particular detected object with ``ObjectId`` = 1486698050427598336 (from the ``Object`` table)
-using a triple table join.
+using a triple table join. `Navigate directly to the query results page <https://data.lsst.cloud/portal/app/?api=tap&service=https://data.lsst.cloud/api/tap&adql=SELECT%20mt.id_truth_type%20AS%20mt_id_truth_type,%20mt.match_objectId%20AS%20mt_match_objectId,%20obj.objectId%20AS%20obj_objectId,%20ts.redshift%20AS%20ts_redshift%20FROM%20dp02_dc2_catalogs.MatchesTruth%20AS%20mt%20JOIN%20dp02_dc2_catalogs.TruthSummary%20AS%20ts%20ON%20mt.id_truth_type%3Dts.id_truth_type%20JOIN%20dp02_dc2_catalogs.Object%20AS%20obj%20ON%20mt.match_objectId%3Dobj.objectId%20WHERE%20obj.objectId%3D1486698050427598336%20AND%20ts.truth_type%3D1%20AND%20obj.detect_isPrimary%3D1%20ORDER%20BY%20obj_objectId%20DESC&execute=true>`__.
 
 **Director vs. ref match tables:** 
 Note that the restriction for the given ``Object`` is written in the query below specifically as ``WHERE obj.objectId=1486698050427598336``.

@@ -394,3 +394,105 @@ The color-composite background shows the relevant DC2 simulated sky region.
 
 **Learn More.**
 See also :ref:`DP0-2-Tutorials-Portal` for a tutorial using additional image types and more of the Portal's image-related functionality.
+
+.. _Portal-Intro-URL-APIs:
+
+Public URL API for the Portal
+=============================
+
+The public Uniform Resource Locator (URL) Application Programming Interface (API) provides direct access to specific resources
+via a publicly accessible URL; however, an RSP login is still required.
+
+One application is to construct URLs for your ADQL queries, enabling you to share these links with collaborators for efficient
+communication or save them for future reuse, avoiding the need to repopulate the ADQL edit box each time.
+Use the following examples as a guide to construct your own.
+
+**1. Exploring the Object table**
+
+To learn about the contents of a tableto, retrieve the first 100 rows of the Object table using the SELECT TOP statement.
+
+.. code-block:: SQL
+
+    SELECT TOP 100 * FROM dp02_dc2_catalogs.Object
+
+Corresponding URL API: 
+
+.. code-block:: text
+
+   https://data.lsst.cloud/portal/app/?api=tap&service=https://data.lsst.cloud/api/tap&adql=SELECT%20TOP%20100%20*%20FROM%20dp02_dc2_catalogs.Object&execute=true
+
+**2. Populate the ``UI-assisted'' page for a cone search**
+
+The URL below populates the "UI-assisted" page to perform a cone search on the Object catalog using a radius of 0.05 degrees 
+centered at (RA, Dec) = (62, -37).
+
+URL API: 
+
+.. code-block:: text
+
+   https://data.lsst.cloud/portal/app/?api=tap&service=https://data.lsst.cloud/api/tap&schema=dp02_dc2_catalogs&table=dp02_dc2_catalogs.Object&ra=62.0&dec=-37.0&sr=0.05d
+
+.. figure:: /_static/portal_intro_DP02l.png
+    :name: portal_populatedUIpage
+    :alt: A screenshot of the populated UI-assisted page for a cone search of the Object catalog, with a 0.05 degree radius around (ra,dec)=(62,-37)
+
+**3. Execute the cone search above**
+
+You can also perform this search by editing the ADQL query box and clicking the search button. Below is the ADQL query for
+the cone search, along with the URL API that executes the search directly.
+
+.. code-block:: SQL
+
+   SELECT coord_dec, coord_ra
+   FROM dp02_dc2_catalogs.Object
+   WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
+   CIRCLE('ICRS', 62, -37, 0.05)) = 1
+
+Corresponding URL API: 
+
+.. code-block:: text
+
+   https://data.lsst.cloud/portal/app/?api=tap&service=https://data.lsst.cloud/api/tap&adql=SELECT%20coord_dec,coord_ra%20FROM%20dp02_dc2_catalogs.Object%20WHERE%20CONTAINS(POINT('ICRS',coord_ra,coord_dec),CIRCLE('ICRS',62,-37,0.05))%3D1&execute=true
+
+**4. Search for coadded images**
+
+The URL below will directly perform a search for coadded images containing the specified coordinates above.
+
+URL API: 
+
+.. code-block:: text
+
+   https://data.lsst.cloud/portal/app/?api=tap&service=https://data.lsst.cloud/api/tap&schema=ivoa&table=ivoa.ObsCore&worldPt=62.0;-37.0;EQ_J2000&obsCoreSubType=lsst.deepCoadd_calexp&execute=true
+
+**5. Convert fluxes to magnitudes**
+
+The ADQL query below retrieves columns for the specified coordinates above, including the g-band AB magnitude and its error,
+converted from the g_calibFlux and g_calibFluxErr columns. The corresponding URL to execute the query directly is also provided.
+
+.. code-block:: SQL
+
+   SELECT coord_dec, coord_ra,
+   scisql_nanojanskyToAbMag(g_calibFlux) AS g_calibMag,
+   scisql_nanojanskyToAbMagSigma(g_calibFlux, g_calibFluxErr) as g_calibMagErr
+   FROM dp02_dc2_catalogs.Object
+   WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
+   CIRCLE('ICRS', 62, -37, 0.05)) = 1
+
+Corresponding URL API: 
+
+.. code-block:: text
+
+   https://data.lsst.cloud/portal/app/?api=tap&service=https://data.lsst.cloud/api/tap&adql=SELECT%20coord_dec,%20coord_ra,%20scisql_nanojanskyToAbMag(g_calibFlux)%20AS%20g_calibMag,%20scisql_nanojanskyToAbMagSigma(g_calibFlux,%20g_calibFluxErr)%20AS%20g_calibMagErr%20FROM%20dp02_dc2_catalogs.Object%20WHERE%20CONTAINS(POINT('ICRS',%20coord_ra,%20coord_dec),%20CIRCLE('ICRS',%2062,%20-37,%200.05))%3D1&execute=true
+
+**6. Populate the ``Edit ADQL'' page with a search for a specific object**
+
+The URL below populates the ``Edit ADQL'' page to perform a search for a specific object with ObjectId=1651220174314974795.
+
+URL API: 
+
+.. code-block:: text
+
+   https://data.lsst.cloud/portal/app/?api=tap&service=https://data.lsst.cloud/api/tap&adql=select%20*%20from%20dp02_dc2_catalogs.Object%20where%20objectId=1651220174314974795
+
+**Note.** Currently, using this API involves a degree of shared risk, as further modifications are anticipated prior to DP1 and
+the commencement of survey operations.

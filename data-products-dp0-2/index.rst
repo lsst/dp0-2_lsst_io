@@ -174,34 +174,34 @@ Note that in the future, for real LSST data releases, this level of redundancy i
    * - TAP Name
      - Butler Name
      - Description
-   * - Object
+   * - `Object <https://data.lsst.cloud/portal/app/?api=tap&service=https://data.lsst.cloud/api/tap&schema=dp02_dc2_catalogs&table=dp02_dc2_catalogs.Object>`_
      - objectTable
      - Astrometric and photometric measurements for objects detected in coadded images (990 columns).
-   * - Source
+   * - `Source <https://data.lsst.cloud/portal/app/?api=tap&service=https://data.lsst.cloud/api/tap&schema=dp02_dc2_catalogs&table=dp02_dc2_catalogs.Source>`_
      - sourceTable
      - Astrometric and photometric measurements for sources detected in the individual PVIs (143 columns).
-   * - ForcedSource
+   * - `ForcedSource <https://data.lsst.cloud/portal/app/?api=tap&service=https://data.lsst.cloud/api/tap&schema=dp02_dc2_catalogs&table=dp02_dc2_catalogs.ForcedSource>`_
      - forcedSourceTable
      - Forced photometry on the individual PVIs at the locations of all detected objects (38 columns).
-   * - DiaObject
+   * - `DiaObject <https://data.lsst.cloud/portal/app/?api=tap&service=https://data.lsst.cloud/api/tap&schema=dp02_dc2_catalogs&table=dp02_dc2_catalogs.DiaObject>`_
      - diaObjectTable_tract
      - Derived summary parameters for DiaSources associated by sky location, including lighcurve statistics (137 columns).
-   * - DiaSource
+   * - `DiaSource <https://data.lsst.cloud/portal/app/?api=tap&service=https://data.lsst.cloud/api/tap&schema=dp02_dc2_catalogs&table=dp02_dc2_catalogs.DiaSource>`_
      - diaSourceTable
      - Astrometric and photometric measurements for sources detected in the difference images (66 columns).
-   * - ForcedSourceOnDiaObject
+   * - `ForcedSourceOnDiaObject <https://data.lsst.cloud/portal/app/?api=tap&service=https://data.lsst.cloud/api/tap&schema=dp02_dc2_catalogs&table=dp02_dc2_catalogs.ForcedSourceOnDiaObject>`_
      - forcedSourceOnDiaObjectTable
      - Forced photometry on the individual PVIs at the locations of all DiaObjects (35 columns).
-   * - Visit
+   * - `Visit <https://data.lsst.cloud/portal/app/?api=tap&service=https://data.lsst.cloud/api/tap&schema=dp02_dc2_catalogs&table=dp02_dc2_catalogs.Visit>`_
      - visitTable
      - Individual visit information, including band, airmass, exposure time, and so on (15 columns).
-   * - CcdVisit
+   * - `CcdVisit <https://data.lsst.cloud/portal/app/?api=tap&service=https://data.lsst.cloud/api/tap&schema=dp02_dc2_catalogs&table=dp02_dc2_catalogs.CcdVisit>`_
      - ccdVisitTable
      - Individual CCD (detector) information, including measured seeing, sky background, and zeropoint (30 columns).
-   * - MatchesTruth
+   * - `MatchesTruth <https://data.lsst.cloud/portal/app/?api=tap&service=https://data.lsst.cloud/api/tap&schema=dp02_dc2_catalogs&table=dp02_dc2_catalogs.MatchesTruth>`_
      - *(Use TAP)*
      - Matches between TruthSummary and Object tables, including match statistics (8 columns).
-   * - TruthSummary
+   * - `TruthSummary <https://data.lsst.cloud/portal/app/?api=tap&service=https://data.lsst.cloud/api/tap&schema=dp02_dc2_catalogs&table=dp02_dc2_catalogs.TruthSummary>`_
      - *(Use TAP)*
      - Summary properties of objects from the DESC DC2 truth catalog, as described in arXiv:2101.04855 (27 columns).
 
