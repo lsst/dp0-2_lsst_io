@@ -400,7 +400,8 @@ See also :ref:`DP0-2-Tutorials-Portal` for a tutorial using additional image typ
 Public URL API for the Portal
 =============================
 
-The public URL API provides direct access to specific resources via a publicly accessible URL; however, an RSP login is still required.
+The public Uniform Resource Locator (URL) Application Programming Interface (API) provides direct access to specific resources
+via a publicly accessible URL; however, an RSP login is still required.
 
 One application is to construct URLs for your ADQL queries, enabling you to share these links with collaborators for efficient
 communication or save them for future reuse, avoiding the need to repopulate the ADQL edit box each time. Here are some examples.
