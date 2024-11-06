@@ -190,7 +190,7 @@ TruthSummary and MatchesTruth table joins
 
 The query below demonstrates how to retrieve the truth table identifier (``id_truth_type`` from the ``MatchesTruth`` table)
 and true redshift (from the ``TruthSummary`` table) for a particular detected object with ``ObjectId`` = 1486698050427598336 (from the ``Object`` table)
-using a triple table join.
+using a triple table join. To directly go to the query results page, click this `link <https://data.lsst.cloud/portal/app/?api=tap&service=https://data.lsst.cloud/api/tap&adql=SELECT%20mt.id_truth_type%20AS%20mt_id_truth_type,%20mt.match_objectId%20AS%20mt_match_objectId,%20obj.objectId%20AS%20obj_objectId,%20ts.redshift%20AS%20ts_redshift%20FROM%20dp02_dc2_catalogs.MatchesTruth%20AS%20mt%20JOIN%20dp02_dc2_catalogs.TruthSummary%20AS%20ts%20ON%20mt.id_truth_type%3Dts.id_truth_type%20JOIN%20dp02_dc2_catalogs.Object%20AS%20obj%20ON%20mt.match_objectId%3Dobj.objectId%20WHERE%20obj.objectId%3D1486698050427598336%20AND%20ts.truth_type%3D1%20AND%20obj.detect_isPrimary%3D1%20ORDER%20BY%20obj_objectId%20DESC&execute=true>`__.
 
 **Director vs. ref match tables:** 
 Note that the restriction for the given ``Object`` is written in the query below specifically as ``WHERE obj.objectId=1486698050427598336``.
@@ -201,7 +201,6 @@ Qserv has special mechanics to optimize queries with ``WHERE`` restrictions expr
 and can often dispatch these queries to just a few involved data shards.
 These same mechanics, however, cannot be applied in general to "ref match" tables so the seemingly same restriction,
 if expressed in terms of the "ref match" table, would necessitate a full scan of the entire catalog which could be quite time-consuming.
-To directly go to the query results page, click this `link <https://data.lsst.cloud/portal/app/?api=tap&service=https://data.lsst.cloud/api/tap&adql=SELECT%20mt.id_truth_type%20AS%20mt_id_truth_type,%20mt.match_objectId%20AS%20mt_match_objectId,%20obj.objectId%20AS%20obj_objectId,%20ts.redshift%20AS%20ts_redshift%20FROM%20dp02_dc2_catalogs.MatchesTruth%20AS%20mt%20JOIN%20dp02_dc2_catalogs.TruthSummary%20AS%20ts%20ON%20mt.id_truth_type%3Dts.id_truth_type%20JOIN%20dp02_dc2_catalogs.Object%20AS%20obj%20ON%20mt.match_objectId%3Dobj.objectId%20WHERE%20obj.objectId%3D1486698050427598336%20AND%20ts.truth_type%3D1%20AND%20obj.detect_isPrimary%3D1%20ORDER%20BY%20obj_objectId%20DESC&execute=true>`__.
 
 .. code-block:: SQL
 
