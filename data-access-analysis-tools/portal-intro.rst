@@ -31,50 +31,15 @@ For generating the lightcurve of a variable object where there is no need to sub
 
 Selecting the data for the object of interest will require entering the object coordinates in the "Spatial" constraints on the left, with the "Cone shape" button selected, and a 2 arcseconds radius chosen.  
 
-For the output column, selection of the "midPointTai" will yield the time of the observation, "psFlux" will give the flux, and "filterName" will provide the filter used for the observation.  
+For the output column, selection of the ``midPointTai`` will yield the time of the observation, ``psFlux`` will give the flux, and ``filterName`` will provide the filter used for the observation.  
 
-**WARNING:** In this tutorial, the difference-image fluxes are converted to magnitudes in the TAP query.
-This is usually safe to do, because supernovae fluxes should never be negative in a difference image -- unless the supernova also appears in the template image.
-In the case of DP0.2, due to how the template images were built, some of the template images are contaminated with supernova flux, potentially up to 40% of DC2 SNIa.
-This leads to negative-flux difference-image detections that are significant (SNR>5), and thus an overall offset in the SNIa lightcurves.
-Work is ongoing to evaluate this issue and recommend a robust correction method (see :ref:`DP0-2-Data-Products-DPDD-Images`).
-Note that this offset is not discoverable in the following tutorial.
-
-
-.. _DP0-2-Portal-Intermediate_Step-1:
-
-1. Determine the DiaObject Id
-=============================
-
-**1.1.** Log in to the Rubin Science Platform, and click on Portal.  This will take you to the next screen, where you will have several options.  
-For the purpose of this exploration, you will be using DP0.2 Catalogs, so click on the "DP0.2 Catalogs" tab on top of the screen.  
-
-**1.2.** Click on the box on the screen top where you select the tables - this will show all the available tables.  Select dp02_dc2_catalogs.DiaObject table.   
+The screenshot below illustrates the selected spatial constraints and the selected output columns.
 
 .. figure:: /_static/portal_tut02_step01a.png
 ..  :name: portal_tut02_step01a
 ..  :alt: Screenshot of RSP portal start page where the user can select table and constraints
 
-**Screenshot of RSP portal start page where the user can select table and constraints.**
-
-**1.3.** On the left-hand side of the screen, under "Enter Constraints" you will have three choices, "Spatial," "Temporal," and "Object ID Search."  Select only "Spatial."  
-
-
-**1.4.** In the “Spatial” entry, leave the “Shape Type” as the default “Cone shape,” and for “Coordinates or Object Name” enter the coordinates ``67.4579, -44.0802``. Set the "Radius" to 2 arcsec. 
-
-**1.5.** In the table at right, select columns ra, decl, and diaObjectId to be returned.  If you wish to see only the rows selected by you - click on the little funnel.  
-
-.. figure:: /_static/portal_tut02_step01b.png
-..  :name: portal_tut02_step01b
-..  :alt: Screenshot of RSP portal interface DC2 difference image analysis object catalog query. 
-..    	Within this dialog box, the user can select the type of search, the image table collections, and various parameters to select information under investigation. (?)
-
-**Initial query to obtain the DiaObjectId.**
-
-
-**1.6.** Click "Search" and view the results at a table on the bottom of the screen: there is only one DiaObject within 2 arcsec, with coordinates ``67.4579634, -44.080243`` and DiaObjectId "1252220598734556212".
-This is definitely the SNIa of interest to the user.
-
+**Screenshot of RSP portal start page with the selected constraaints and required output columns.**
 
 .. _DP0-2-Portal-Intermediate_Step-2:
 
