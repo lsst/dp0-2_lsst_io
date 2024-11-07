@@ -11,30 +11,15 @@
 .. A warning will alert you of identical labels during the linkcheck process.
 
 ############################################################
-How to make a Lightcurve of an object with known coordinates
+How to make a lightcurve of an object with known coordinates
 ############################################################
 
 .. This section should provide a brief, top-level description of the page.
 
 .. Most recent update:  November 9 2024
 
-=====================
-Once logged into the Portal aspect of the Rubin Science Platform, it is possbile to extract and plot a light curve of an object with known coordinates.  
-
-**Introduction:**
-This tutorial explores the data for a Type Ia supernova (SNIa) lightcurve: the i-band photometry, the seeing for each i-band epoch, and the astrometric scatter of the i-band observations.
-The scientific motivation here is that a user knows the coordinates of a low-redshift SNIa (67.4579, -44.0802), and now
-wants to find an i-band epoch in which this SNIa was bright *and* the seeing was good.
-The user also wants to get a sense of the scatter in the astrometry for the coordinates in the DiaObject catalog.
-For example, perhaps the user knows there is pre-explosion JWST imaging of the host galaxy, and is looking for the best image from Rubin Observatory
-with which to co-register with the JWST image in order to characterize the underlying stellar population at the SNIa's location.
-(Note that typically, laser adaptive optics is necessary to obtain ground-based images of SNe that have high enough astrometric precision to
-co-register with a space-based image and identify a progenitor star, so this use-case is a bit contrived).
-
-This tutorial assumes a basic working knowledge of the Portal interface (e.g., the successful completion of the first Portal tutorial).
-This tutorial uses the Astronomy Data Query Language (ADQL) to query and retrieve data from the DP0.2 catalogs.
-ADQL is similar to SQL (Structured Query Language), and the `documentation for ADQL <https://www.ivoa.net/documents/latest/ADQL.html>`_ includes more information about syntax and keywords.
-For more information about the DP0.2 catalogs, visit the :ref:`DP0-2-Data-Products-DPDD` or the `DP0.2 Catalog Schema Browser <https://sdm-schemas.lsst.io/dp02.html>`_.
+Once logged into the Portal aspect of the Rubin Science Platform, it is possbile to extract and plot a light curve of an object with known coordinates.
+An example here considers a low-redshift SNIa (67.4579, -44.0802).
 
 **WARNING:** In this tutorial, the difference-image fluxes are converted to magnitudes in the TAP query.
 This is usually safe to do, because supernovae fluxes should never be negative in a difference image -- unless the supernova also appears in the template image.
