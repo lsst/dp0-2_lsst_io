@@ -19,11 +19,16 @@ How to make a lightcurve of an object with known coordinates
 .. Most recent update:  November 7 2024
 
 The Portal aspect of the Rubin Science Platform lends itself well to extracting and plotting a light curve of an object with known coordinates.
-It can be accessed by clicking on the "Portal" panel on the main landing page st data.lsst.cloud.
+It can be accessed by clicking on the "Portal" panel on the main landing page at data.lsst.cloud.
 An example here considers a low-redshift SNIa (67.4579, -44.0802).
 
-Plotting of a light curve requires a data table which contains the obervztion time.  
-For the simulated DP0.2 data, such table is the dp02_dc2_catalogs.DiaSource.  
+Plotting of a light curve requires a data table which contains the obervation time.
+For the simulated DP0.2 data, such table is the dp02_dc2_catalogs.DiaSource.
+This table can be accessed by selecting "DP0.2 Catalogs" tab on the left-hand side, and the "dp02_dc2_catalogs.DiaSource" tab on the right.
+
+Selecting the data for the object of interest will require entering the object coordinates in the "Spatial" constraints on the left, with the "Cone shape" button selected, and a 2 arcseconds radius chosen.  
+
+For the output column, selection of the "midPointTai" will yield the time of the observation, "psFlux" will give the flux, and "filterName" will provide the filter used for the observation.  
 
 **WARNING:** In this tutorial, the difference-image fluxes are converted to magnitudes in the TAP query.
 This is usually safe to do, because supernovae fluxes should never be negative in a difference image -- unless the supernova also appears in the template image.
