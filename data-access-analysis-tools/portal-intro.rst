@@ -26,7 +26,7 @@ For the simulated DP0.2 data, such table is the dp02_dc2_catalogs.DiaSource.
 This table can be accessed by selecting "DP0.2 Catalogs" tab on the left-hand side, and the "dp02_dc2_catalogs.DiaSource" tab on the right.
 
 An example here considers a low-redshift SNIa (67.4579, -44.0802) and will extract the flux data from that location only when the object was detected at ``SNR > 5``.
-If the flux of the object at epochs when the ``SNR < 5`` is needed, a different table (``ForcedSourceOnDiaObject``) needs to be used and this is not covered in another "HowTo" bit.
+If the flux of the object at epochs when the ``SNR < 5`` is needed, a different table (``ForcedSourceOnDiaObject``) needs to be used and this is covered in another "HowTo" bit.
 
 As an aside, this table contains forced photometry at the specified location extracted from both the difference image, ``psfDiffFlux``, and the processed visit image (PVI; “direct” image), ``psfFlux``. 
 For generating the lightcurve of a variable object where there is no need to subtract the static component, using ``psfFlux`` is appropriate.  
