@@ -10,9 +10,9 @@
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
 .. A warning will alert you of identical labels during the linkcheck process.
 
-############################################################
-How to make a lightcurve of an object with known coordinates
-############################################################
+############################################################################
+How to make a lightcurve of a clearly detected object with known coordinates
+############################################################################
 
 .. This section should provide a brief, top-level description of the page.
 
@@ -20,11 +20,13 @@ How to make a lightcurve of an object with known coordinates
 
 The Portal aspect of the Rubin Science Platform lends itself well to extracting and plotting a light curve of an object with known coordinates.
 It can be accessed by clicking on the "Portal" panel on the main landing page at data.lsst.cloud.
-An example here considers a low-redshift SNIa (67.4579, -44.0802).
 
 Plotting of a light curve requires a data table which contains the obervation time.
 For the simulated DP0.2 data, such table is the dp02_dc2_catalogs.DiaSource.
 This table can be accessed by selecting "DP0.2 Catalogs" tab on the left-hand side, and the "dp02_dc2_catalogs.DiaSource" tab on the right.
+
+An example here considers a low-redshift SNIa (67.4579, -44.0802) and will extract the flux data from that location only when the object was detected at ``SNR > 5``.
+If the flux of the object at epochs when the ``SNR < 5`` is needed, a different table (``ForcedSourceOnDiaObject``) needs to be used and this is not covered in another "HowTo" bit.
 
 As an aside, this table contains forced photometry at the specified location extracted from both the difference image, ``psfDiffFlux``, and the processed visit image (PVI; “direct” image), ``psfFlux``. 
 For generating the lightcurve of a variable object where there is no need to subtract the static component, using ``psfFlux`` is appropriate.  
