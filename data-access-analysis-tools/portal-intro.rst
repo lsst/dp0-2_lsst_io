@@ -31,9 +31,7 @@ For generating the lightcurve of a variable object where there is no need to sub
 
 Selecting the data for the object of interest will require entering the object coordinates in the "Spatial" constraints on the left, with the "Cone shape" button selected, and a 2 arcseconds radius chosen.  
 
-For the output column, selection of the ``midPointTai`` will yield the time of the observation, ``psFlux`` will give the flux, and ``filterName`` will provide the filter used for the observation.  
-
-The screenshot below illustrates the selected spatial constraints and the selected output columns.
+For the output column, selection of the ``midPointTai`` will yield the time of the observation, ``psFlux`` will give the flux, and ``filterName`` will provide the filter used for the observation.
 
 .. figure:: /_static/portal_tut02_step01a.png
 ..  :name: portal_tut02_step01a
