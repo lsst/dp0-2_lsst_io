@@ -26,8 +26,8 @@ Plotting of a light curve requires a data table which contains the obervation ti
 For the simulated DP0.2 data, such table is the dp02_dc2_catalogs.DiaSource.
 This table can be accessed by selecting "DP0.2 Catalogs" tab on the left-hand side, and the "dp02_dc2_catalogs.DiaSource" tab on the right.
 
-As an aside, this table contains forced photometry at the specified location extracted from both the difference image, psfDiffFlux, and the processed visit image (PVI; “direct” image), psfFlux. 
-For generating the lightcurve of a variable object where there is no need to subtract the static component, using psfFlux is appropriate.  
+As an aside, this table contains forced photometry at the specified location extracted from both the difference image, ``psfDiffFlux``, and the processed visit image (PVI; “direct” image), ``psfFlux``. 
+For generating the lightcurve of a variable object where there is no need to subtract the static component, using ``psfFlux`` is appropriate.  
 
 Selecting the data for the object of interest will require entering the object coordinates in the "Spatial" constraints on the left, with the "Cone shape" button selected, and a 2 arcseconds radius chosen.  
 
