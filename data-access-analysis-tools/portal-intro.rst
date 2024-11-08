@@ -23,15 +23,13 @@ It can be accessed by clicking on the "Portal" panel on the main landing page at
 
 Plotting of a light curve requires a data table which contains the obervation time.
 For the simulated DP0.2 data, such table is the dp02_dc2_catalogs.DiaSource.
-This table can be accessed by selecting "DP0.2 Catalogs" tab on the left-hand side, and the "dp02_dc2_catalogs.DiaSource" tab on the right.
+This table can be accessed by selecting ``DP0.2 Catalogs`` tab on the left-hand side, and the ``dp02_dc2_catalogs.DiaSource`` tab on the right.
 
 An example here considers a low-redshift SNIa (67.4579, -44.0802) and will extract the flux data from that location only when the object was detected at ``SNR > 5``.
-If the flux of the object at epochs when the ``SNR < 5`` is needed, a different table (``ForcedSourceOnDiaObject``) needs to be used and this is covered in another "HowTo" bit.
+Such flux is derived from the processed visit image (PVI; “direct” image), ``psfFlux``.
+If the flux of the object at epochs when the ``SNR < 5`` is needed, a different table using forced photometry (``ForcedSourceOnDiaObject``) needs to be used and this is covered in another "HowTo" bit.
 
-As an aside, this table contains forced photometry at the specified location extracted from both the difference image, ``psfDiffFlux``, and the processed visit image (PVI; “direct” image), ``psfFlux``. 
-For generating the lightcurve of a variable object where there is no need to subtract the static component, using ``psfFlux`` is appropriate.  
-
-Selecting the data for the object of interest will require entering the object coordinates in the "Spatial" constraints on the left, with the "Cone shape" button selected, and a 2 arcseconds radius chosen.  
+Selecting the data for the object of interest will require entering the object coordinates in the "Spatial" constraints on the left, selecting the "Cone shape" button and a 2 arcseconds radius.  
 
 For the output column, selection of the ``midPointTai`` will yield the time of the observation, ``psFlux`` will give the flux, and ``filterName`` will provide the filter used for the observation.
 
