@@ -32,12 +32,33 @@ If the flux of the object at epochs when the ``SNR < 5`` is needed, a different 
 Selecting the data for the object of interest will require entering the object coordinates in the "Spatial" constraints on the left, selecting the "Cone shape" button and a 2 arcseconds radius.  
 
 For the output column, selection of the ``midPointTai`` will yield the time of the observation, ``psFlux`` will give the flux, and ``filterName`` will provide the filter used for the observation.
+Pressing on the "funnel" icon will restrict the gtable on the right to show only the selected entries.
 
 .. figure:: /_static/portal_tut02_step01a.png
 ..  :name: portal_tut02_step01a
 ..  :alt: Screenshot of RSP portal start page where the user can select table and constraints
 
 **Screenshot of RSP portal start page with the selected constraaints and required output columns.**
+
+Pressing the "Search" button will execute the search, resulting in the three-panel display.  
+
+The right-hand plot, by default, will plot the first two columns of the table.
+To plot the flux against time, it is necessary to click on the "gear" icon, and select the "midPointTai-60000" for X and "psFlux" for Y as shown below.  
+
+.. figure:: /_static/portal_tut02_step01a.png
+..  :name: portal_tut02_step01a
+..  :alt: Screenshot of RSP portal start page where the user can select table and constraints
+
+**Screenshot of RSP portal start page with the selected constraaints and required output columns.**
+
+.. figure:: /_static/portal_tut02_step01a.png
+..  :name: portal_tut02_step01a
+..  :alt: Screenshot of RSP portal start page where the user can select table and constraints
+
+**Screenshot of RSP portal start page with the selected constraaints and required output columns.**
+
+Note that the resulting plot on the right-hand side displays flux in all filters.
+It is possible to restrict the flux from a single filter by clicking the down-arrow under the "filterName" column heading in the table on the bottom, and selecting only the desired filter, say "r".  
 
 .. _DP0-2-Portal-Intermediate_Step-2:
 
