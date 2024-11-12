@@ -26,19 +26,21 @@ For the simulated DP0.2 data, such table is the dp02_dc2_catalogs.DiaSource.
 This table can be accessed by selecting ``DP0.2 Catalogs`` tab on the left-hand side, and the ``dp02_dc2_catalogs.DiaSource`` tab on the right.
 
 An example here considers a low-redshift SNIa (67.4579, -44.0802) and will extract the flux data from that location only when the object was detected at ``SNR > 5``.
+This example uses the "UI Assisted" means (selected by pressing the "UI Assisted" button on the upper right).
 Such flux is derived from the processed visit image (PVI; “direct” image), ``psfFlux``.
 If the flux of the object at epochs when the ``SNR < 5`` is needed, a different table using forced photometry (``ForcedSourceOnDiaObject``) needs to be used and this is covered in another "HowTo" bit.
 
-Selecting the data for the object of interest will require entering the object coordinates in the "Spatial" constraints on the left, selecting the "Cone shape" button and a 2 arcseconds radius.  
+Selecting the data for the object of interest will require entering the object coordinates in the "Spatial" constraints on the left, selecting the "Cone shape" button and a 2 arcseconds radius.
+The box next to "Temporal" needs to be uncheckd (allowing the display of all data points at the required RA and Dec).
 
 For the output column, selection of the ``midPointTai`` will yield the time of the observation, ``psFlux`` will give the flux, and ``filterName`` will provide the filter used for the observation.
-Pressing on the "funnel" icon will restrict the gtable on the right to show only the selected entries.
+Pressing on the "funnel" icon will restrict the table on the right to show only the selected entries.
 
-.. figure:: /_static/portal_tut02_step01a.png
+.. figure:: /_static/portal_tut02_step01.png
 ..  :name: portal_tut02_step01a
 ..  :alt: Screenshot of RSP portal start page where the user can select table and constraints
 
-**Screenshot of RSP portal start page with the selected constraaints and required output columns.**
+**Screenshot of RSP portal start page with the selected constraints and required output columns.**
 
 Pressing the "Search" button will execute the search, resulting in the three-panel display.  
 
@@ -49,7 +51,7 @@ To plot the flux against time, it is necessary to click on the "gear" icon, and 
 ..  :name: portal_tut02_step01a
 ..  :alt: Screenshot of RSP portal start page where the user can select table and constraints
 
-**Screenshot of RSP portal start page with the selected constraaints and required output columns.**
+**Screenshot of RSP portal start page with the selected constraints and required output columns.**
 
 .. figure:: /_static/portal_tut02_step01a.png
 ..  :name: portal_tut02_step01a
