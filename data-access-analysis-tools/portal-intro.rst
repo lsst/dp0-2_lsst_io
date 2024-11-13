@@ -21,12 +21,12 @@ How to make a lightcurve of a clearly detected object with known coordinates
 The Portal aspect of the Rubin Science Platform lends itself well to extracting and plotting a light curve of an object with known coordinates.
 It can be accessed by clicking on the "Portal" panel on the main landing page at data.lsst.cloud.
 
-Plotting of a light curve requires a data table which contains the obervation time.
+Plotting of a light curve requires a data table which contains the observation time.
 For the simulated DP0.2 data, such table is the dp02_dc2_catalogs.DiaSource.
 This table can be accessed by selecting ``DP0.2 Catalogs`` tab on the left-hand side, and the ``dp02_dc2_catalogs.DiaSource`` tab on the right.
+This example uses the "UI Assisted" means (selected by pressing the "UI Assisted" button on the upper right).
 
 An example here considers a low-redshift SNIa (67.4579, -44.0802) and will extract the flux data from that location only when the object was detected at ``SNR > 5``.
-This example uses the "UI Assisted" means (selected by pressing the "UI Assisted" button on the upper right).
 Such flux is derived from the processed visit image (PVI; “direct” image), ``psfFlux``.
 If the flux of the object at epochs when the ``SNR < 5`` is needed, a different table using forced photometry (``ForcedSourceOnDiaObject``) needs to be used and this is covered in another "HowTo" bit.
 
@@ -36,7 +36,7 @@ The box next to "Temporal" needs to be uncheckd (allowing the display of all dat
 For the output column, selection of the ``midPointTai`` will yield the time of the observation, ``psFlux`` will give the flux, and ``filterName`` will provide the filter used for the observation.
 Pressing on the "funnel" icon will restrict the table on the right to show only the selected entries.
 
-.. figure:: /_static/portal_tut02_step01.png
+.. figure:: /_static/Howto_lightcurve_1.png
 ..  :name: portal_tut02_step01a
 ..  :alt: Screenshot of RSP portal start page where the user can select table and constraints
 
@@ -46,21 +46,22 @@ Pressing the "Search" button will execute the search, resulting in the three-pan
 
 The right-hand plot, by default, will plot the first two columns of the table.
 To plot the flux against time, it is necessary to click on the "gear" icon, and select the "midPointTai-60000" for X and "psFlux" for Y as shown below.  
+Note that the plotted flux is as measured in all filters.  
 
-.. figure:: /_static/portal_tut02_step01a.png
+.. figure:: /_static/Howto_lightcurve_2.png
 ..  :name: portal_tut02_step01a
 ..  :alt: Screenshot of RSP portal start page where the user can select table and constraints
 
-**Screenshot of RSP portal start page with the selected constraints and required output columns.**
+**Screenshot of the panel displaying the parameters needed to plot the source flux vs. time.**
 
-.. figure:: /_static/portal_tut02_step01a.png
+.. figure:: /_static/Howto_lightcurve_3.png
 ..  :name: portal_tut02_step01a
 ..  :alt: Screenshot of RSP portal start page where the user can select table and constraints
 
-**Screenshot of RSP portal start page with the selected constraaints and required output columns.**
+**Screenshot of the query results, with the light curve on the right, and the table of the observations on the bottom.**
 
 Note that the resulting plot on the right-hand side displays flux in all filters.
-It is possible to restrict the flux from a single filter by clicking the down-arrow under the "filterName" column heading in the table on the bottom, and selecting only the desired filter, say "r".  
+It is possible to restrict the plotted flux to be from a single filter by clicking the down-arrow under the "filterName" column heading in the table on the bottom, and selecting only the desired filter, say "r".  
 
 .. _DP0-2-Portal-Intermediate_Step-2:
 
@@ -232,7 +233,7 @@ It is recommended to always return all metadata because the Portal requires some
 The screenshot below shows an example query for all PVIs (calexps) that overlap a specified location (here:  61.863 -35.790)
 which were obtained with a modified Julian date between 60000 and 60500.
 
-.. figure:: /_static/portal_intro_DP02g.png
+.. figure:: /_static/Howto_lightcurve_1.png
     :name: portal_ImageQueryDP02
     :alt: Screenshot of the user interface query for the portal aspect.  The user can select the type of service to use for the query and enter constraints to access the data they need.  
 	The default interface for the "Image Search (ObsTAP)" queries, with example search parameters.
@@ -247,7 +248,7 @@ Clicking on another row in the displayed table will result in displaying the ima
 The Active Chart plot default is RA versus Declination, with the location of the highlighted table row shown in orange and the rest in blue.  
 It is possible to restrict the retrieved images to be only those in the 'r' filter by clicking the down-arrow below the table column heading "lsst_band" and selecting "r" from the drop-down menu.  
     
-.. figure:: /_static/portal_intro_DP02h.png
+.. figure:: /_static/Howto_lightcurve_2.png
     :name: portal_ImageQueryResultsDP02
     :alt: A screenshot of the results view from submitting the query described above.  The upper left image is an image of the sky.  The upper right image shows the cartesian scatter plot resulting from the query.  The bottom section is the data table resulting from the query.  
 	Results for the example search parameters.  
