@@ -15,7 +15,7 @@
 .. A warning will alert you of identical labels during the linkcheck process.
 
 ###############################################
-How to extract and plot forcexd photometry data
+How to extract and plot forced photometry data
 ###############################################
 
 
