@@ -89,3 +89,22 @@ In the results view, see that the query has returned forced flux measurements in
 The defalt plot will be the dec vs. RA (the plotting chart defaults to plot the data in the two leftmost columns of the table).  
 To change the plot, open the plot parameters pop-up window by clicking on 
 the settings icon (a single gear above the plot window).  
+
+
+**1.7.** Update the plot parameters as shown in the figure below.
+Note that the grid line in the y-axis is selected.
+Click "Apply".  
+Note how the grid lines in the y-axis illustrate that "off-peak" (non-detection) forced fluxes can be negative.  
+
+.. figure:: /_static/portal_tut05_step01c.png
+    :width: 300
+    :name: portal_tut05_step01c
+    :alt: A screenshot of the plot parameters pop-up window, with the parameters set to display the i-band lightcurve.
+
+    Figure 3: Plot parameters selection in the pop-up window, set to display the i-band lightcurve.
+
+.. figure:: /_static/portal_tut05_step01d.png
+    :name: portal_tut05_step01d
+    :alt: A screenshot of the results view showing the table and the i-band lightcurve.
+
+    Figure 4: Results view showing the table and the i-band light curve.
