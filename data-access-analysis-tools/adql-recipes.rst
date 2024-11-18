@@ -43,7 +43,7 @@ General Advice
 ==============
 
 LSST Query Services (Qserv) provides access to the LSST Database Catalogs.
-Users can query the catalogs using standard SQL query language with a few `restrictions <https://qserv.lsst.io/user/index.html#restrictions>`__.
+Users can query the catalogs using standard SQL query language with a few `restrictions <https://qserv.lsst.io/user/sql.html#restrictions>`__.
 
 **Use spatial constraints on RA and Dec.**
 It is recommended to always start with spatial constraints for a small radius and then expand the search area.
@@ -195,7 +195,7 @@ using a triple table join. `Navigate directly to the query results page <https:/
 **Director vs. ref match tables:** 
 Note that the restriction for the given ``Object`` is written in the query below specifically as ``WHERE obj.objectId=1486698050427598336``.
 If we were to write ``WHERE mt.match_objectId=1486698050427598336`` instead, the query could take orders of magnitude longer to execute.
-This subtle difference exists because the ``TruthSummary`` and ``Object`` tables are stored in Qserv as what are known as `director tables <https://qserv.lsst.io/user/index.html#director-table>`__,
+This subtle difference exists because the ``TruthSummary`` and ``Object`` tables are stored in Qserv as what are known as `director tables <https://qserv.lsst.io/user/sql.html#director-table>`__,
 while the ``MatchesTruth`` table used to join them is stored as a somewhat more restricted "ref match" table.
 Qserv has special mechanics to optimize queries with ``WHERE`` restrictions expressed in terms of director tables,
 and can often dispatch these queries to just a few involved data shards.
