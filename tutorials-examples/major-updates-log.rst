@@ -53,7 +53,8 @@ Major Updates Log
 
 Nov 15 2024
 -----------
-Tutorial notebook 13a (Image Cutout SciDemo) was updated to incorporate various updates and improvements.
+Tutorial notebook 13a (Image Cutout SciDemo) was updated to demonstrate how to retrieve cutouts without writing to disk,
+to add more context about use of IVOA, and to optimize the efficiency of TAP queries.
 
 Nov 1 2024
 -----------
