@@ -20,8 +20,7 @@ How to extract and plot forced photometry light curve
 
 The Rubin data set readily provides fluxes of the objects when they were detected at a ``SNR > 5``.
 In some cases, the science goal on-hand requires lower-SNR measurements.
-This might be the case when fluxes of a given object measured during all visits to its location are required.
-A good example would be a measurement of a source flux before and after a flare or explosion.
+This might be the case when fluxes of a given object measured during all visits to its location are required, for instance a measurement of a source flux before and after a flare or explosion.
 In those cases, the forced photometry - available in the ``ForcedSourceOnDiaObject`` table - has to be used instead.
 That table contains "forced" flux measurements in locations of all objects which had positive ``SNR > 5`` detections in a table ``dp02_dc2_catalogs.DiaObject``.
 The table ``dp02_dc2_catalogs.DiaObject``, in turn, contains objects which were detected using the "Difference Image Analysis" (DIA) method.
