@@ -20,15 +20,17 @@ How to make a lightcurve of a clearly detected object with known coordinates
 
 The Portal aspect of the Rubin Science Platform lends itself well to extracting and plotting a light curve of an object with known coordinates.
 It can be accessed by clicking on the "Portal" panel on the main landing page at data.lsst.cloud.
-
-Plotting of a light curve requires a data table which contains the observation time.
-For the simulated DP0.2 data, such table is the dp02_dc2_catalogs.DiaSource.
-This table can be accessed by selecting ``DP0.2 Catalogs`` tab on the left-hand side, and the ``dp02_dc2_catalogs.DiaSource`` tab on the right.
 This example uses the "UI Assisted" means (selected by pressing the "UI Assisted" button on the upper right).
 
-An example here considers a low-redshift SNIa (67.4579, -44.0802) and will extract the flux data from that location only when the object was detected at ``SNR > 5``.
-Such flux is derived from the processed visit image (PVI; “direct” image), ``psfFlux``.
+Plotting of a light curve requires a data table which contains the observation time.
+For the simulated DP0.2 data, such table is the dp02_dc2_catalogs.DiaSource, but it contains fluxes at times when the object was detected at ``SNR > 5``.
+This table can be accessed by selecting ``DP0.2 Catalogs`` tab on the left-hand side, and the `dp02_dc2_catalogs.DiaSource`` tab on the right.
+
 If the flux of the object at epochs when the ``SNR < 5`` is needed, a different table using forced photometry (``ForcedSourceOnDiaObject``) needs to be used and this is covered in another "HowTo" bit.
+
+
+An example here considers a low-redshift SNIa (67.4579, -44.0802) and will extract the ``SNR > 5`` flux data from that location.
+Such flux is derived from the processed visit image (PVI; “direct” image), ``psfFlux``.
 
 Selecting the data for the object of interest will require entering the object coordinates in the "Spatial" constraints on the left, selecting the "Cone shape" button and a 2 arcseconds radius.
 The box next to "Temporal" needs to be uncheckd (allowing the display of all data points at the required RA and Dec).
