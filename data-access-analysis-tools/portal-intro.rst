@@ -43,7 +43,7 @@ Such table joins are effectively performed using the Astronomical Data Query Lan
 A query given below will retrieve the coordinates, DIA object identifier, CCD visit identifier, band, and forced difference-image flux 
 and its error for all rows of the ``ForcedSourceOnDiaObjects`` table which are associated with the ``diaObject`` of interest,
 for i-band visits only.
-It also retrieves the exposure time midpoint modified julian date for all visits by joining to the ``CcdVisit`` table.
+Again, the exposure time midpoint modified julian date for all visits is extracted by joining to the ``CcdVisit`` table.
 
 .. code-block:: SQL 
 
