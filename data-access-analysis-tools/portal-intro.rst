@@ -20,17 +20,20 @@ How to extract and plot forced photometry light curve
 
 The Rubin data set readily provides fluxes of the objects when they were detected at a ``SNR > 5``.
 In some cases, the science goal on-hand requires lower-SNR measurements.
-This might be the case when fluxes of a given object measured during all visits to its location are required, for instance a measurement of a source flux before and after a flare or explosion.
+This might be the case when fluxes of a given object measured during all visits to its location are required, for instance a measurement of its flux before and after a flare or explosion.
 In those cases, the forced photometry - available in the ``ForcedSourceOnDiaObject`` table - has to be used instead.
 That table contains "forced" flux measurements in locations of all objects which had positive ``SNR > 5`` detections in a table ``dp02_dc2_catalogs.DiaObject``.
 The table ``dp02_dc2_catalogs.DiaObject``, in turn, contains objects which were detected using the "Difference Image Analysis" (DIA) method.
 The DIA method basically subtracts the fluxes of the previously undetected objects from those that showed ``SNR > 5`` detections in individual single-epoch difference images.
 
-This tutorial demonstrates how to create a forced photometry lightcurve for the supernova located at (67.4579, -44.0802).
+This example demonstrates how to create a forced photometry lightcurve for the supernova located at (67.4579, -44.0802).
 
-Since the 
-
-**1.1.** Log in to the Portal Aspect of the Rubin Science Platform, and select "DP0.2 Catalogs" tab.  
+Since individual Processed Visit Images might have very slightly different coordinates for the same object.
+With this, instead of providing the RA and Dec to the search, it is wise to extract the data from the ``dp02_dc2_catalogs.DiaObject`` table using the object's unique ``diaObjectId``.  
+Determining the ``diaObjectId`` can be accomplished via the Portal Aspect of the Rubin Science Platform, clicking on the "UI assisted" button, selecting "DP0.2 Catalogs" tab, chosing the "dp02_dc2_catalogs" on the left, and "dp02_dc2_catalogs.DiaObject" table on the right.
+Only the spatial constraints need to be entered on the left, with the 67.4579, -44.0802 - and a 2 arcseconds radius using the "cone Shape" ("Temporal" constraints need to be unchecked).
+For the "Output Column Selection" only the ``diaObjectId`` needs to be checked.  
+Pressing the "search" button will return only one ``diaObjectId`` - it is 1252220598734556212.  
 
 **1.2.** At upper right on the main Portal user interface, click "Edit ADQL" to switch to the ADQL query view.
 (In the figure below, see the red arrow.)  
