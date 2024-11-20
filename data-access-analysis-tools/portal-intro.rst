@@ -28,25 +28,19 @@ The DIA method basically subtracts the fluxes of the previously undetected objec
 
 This example demonstrates how to create a forced photometry lightcurve for the supernova located at (67.4579, -44.0802).
 
-Since individual Processed Visit Images might have very slightly different coordinates for the same object.
-With this, instead of providing the RA and Dec to the search, it is wise to extract the data from the ``dp02_dc2_catalogs.DiaObject`` table using the object's unique ``diaObjectId``.  
-Determining the ``diaObjectId`` can be accomplished via the Portal Aspect of the Rubin Science Platform, clicking on the "UI assisted" button, selecting "DP0.2 Catalogs" tab, chosing the "dp02_dc2_catalogs" on the left, and "dp02_dc2_catalogs.DiaObject" table on the right.
-Only the spatial constraints need to be entered on the left, with the 67.4579, -44.0802 - and a 2 arcseconds radius using the "cone Shape" ("Temporal" constraints need to be unchecked).
+The individual Processed Visit Images might have very slightly different coordinates for the same object.
+With this, instead of providing the RA and Dec to the light curve extraction process, it is wise to extract the data from the ``dp02_dc2_catalogs.DiaObject`` table using the object's unique ``diaObjectId``.  
+Determining the ``diaObjectId`` can be accomplished via the Portal Aspect of the Rubin Science Platform, by clicking on the "UI assisted" button, selecting "DP0.2 Catalogs" tab, chosing the "dp02_dc2_catalogs" on the left, and "dp02_dc2_catalogs.DiaObject" table on the right.
+
+Only the spatial constraints need to be entered on the left, with the 67.4579, -44.0802 - and a 2 arcseconds radius using the "cone Shape" ("Temporal" constraints button needs to be unchecked).
 For the "Output Column Selection" only the ``diaObjectId`` needs to be checked.  
-Pressing the "search" button will return only one ``diaObjectId`` - it is 1252220598734556212.  
+Pressing the "search" button will return only one ``diaObjectId`` - it is 1252220598734556212.
 
-**1.2.** At upper right on the main Portal user interface, click "Edit ADQL" to switch to the ADQL query view.
-(In the figure below, see the red arrow.)  
-Clear the content of the ADQL query box, if it is not empty.  
+The ``ForcedSourceOnDiaObject`` contains the fluxes of individual objects, it does not contain the observation epochs, but the table ``CcdVisit`` does.
+This will require joining two tables - specifically ``ForcedSourceOnDiaObject`` and ``CcdVisit`` on the common meta entry of ``ccdVisitId``.  
+Such table joins are effectively performed using the Astronomical Data Query Language, ADQL.
 
-.. figure:: /_static/portal_tut05_step01a.png
-    :name: portal_tut05_step01a
-    :alt: A screenshot of the ADQL Query view of the Portal user interface.
-
-    Figure 1: RSP Portal aspect with "DP0.2 catalogs" selected.
-
-**1.3.** In the ADQL Query box, enter the query as below.
-This query will retrieve the coordinates, DIA object identifier, CCD visit identifier, band, and forced difference-image flux 
+A query given below will retrieve the coordinates, DIA object identifier, CCD visit identifier, band, and forced difference-image flux 
 and its error for all rows of the ``ForcedSourceOnDiaObjects`` table which are associated with the ``diaObject`` of interest,
 for i-band visits only.
 It also retrieves the exposure time midpoint modified julian date for all visits by joining to the ``CcdVisit`` table.
