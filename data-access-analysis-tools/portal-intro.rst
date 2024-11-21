@@ -24,15 +24,7 @@ How to plot one- and two-dimensional histograms in the Portal
 
 =====================
 
-**RSP Aspect:** Portal
-
-**Contact authors:** Melissa Graham and Greg Madejski
-
-**Last verified to run:** 2024-05-09
-
-**Targeted learning level:** intermediate
-
-**Introduction:** This tutorial demonstrates how to retrieve apparent magnitudes and cluster offsets for a sample of 
+The Portal aspect of the Rubin Science Platform demonstrates how to retrieve apparent magnitudes and cluster offsets for a sample of 
 extended objects around a rich galaxy cluster, and use 1- and 2-dimensional histograms to explore their apparent magnitude and color distributions.
 
 This tutorial assumes the successful completion of the beginner-level Portal tutorial 01, and uses the 
