@@ -57,12 +57,9 @@ Again, the exposure time midpoint modified julian date for all visits is extract
    WHERE fsodo.diaObjectId = 1252220598734556212 
    AND fsodo.band = 'i'
 
-**Note:** The ``ForcedSourceOnDiaObject`` table contains forced photometry on both the difference image, 
-``psfDiffFlux``, and the processed visit image (PVI; "direct" image), ``psfFlux``.
-As this tutorial is using a supernova it uses the ``psfDiffFlux``, which is the forced photometry on the difference image,
-in which the static-sky component (the host galaxy) has been subtracted.
-However, the ``psfFlux`` would be more appropriate for generating the lightcurve of a variable star, as there is no
-need to subtract the static component (in this case, the variable star's average flux).
+**Note:** The ``ForcedSourceOnDiaObject`` table contains forced photometry on both the difference image, ``psfDiffFlux``, and the processed visit image (PVI; "direct" image), ``psfFlux``.
+This example is using a supernova it uses the ``psfDiffFlux``, which is the forced photometry on the difference image, in which the static-sky component (the host galaxy) has been subtracted.
+However, the ``psfFlux`` would be more appropriate for generating the lightcurve of a variable star, as there is no need to subtract the static component (in this case, the variable star's average flux).
 
 **WARNING:** Do not use the ADQL function ``scisql_nanojanskyToAbMag()`` to convert difference image fluxes to magnitudes.
 This is very dangerous! 
