@@ -106,9 +106,5 @@ Any two tables can be joined so long as they have an index in common.
    AND src.band = 'i' AND src.extendedness = 0 AND src.psfFlux > 10000
    AND cv.obsStartMJD > 60925 AND cv.obsStartMJD < 60955
 
-**Learn More.**
-See also :ref:`DP0-2-Tutorials-Portal` for additional demonstrations of how to use the Portal's ADQL functionality.
-
-
 .. _Portal-Intro-Image-Queries:
 
