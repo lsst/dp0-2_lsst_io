@@ -50,7 +50,7 @@ Again, the exposure time midpoint modified julian date for all visits is extract
 
    SELECT fsodo.coord_ra, fsodo.coord_dec, 
    fsodo.diaObjectId, fsodo.ccdVisitId, fsodo.band, 
-   fsodo.psfDiffFlux, fsodo.psFlux, fsodo.psfDiffFluxErr, 
+   fsodo.psfDiffFlux, fsodo.psfFlux, fsodo.psfDiffFluxErr, 
    cv.expMidptMJD
    FROM dp02_dc2_catalogs.ForcedSourceOnDiaObject as fsodo 
    JOIN dp02_dc2_catalogs.CcdVisit as cv 
