@@ -30,7 +30,7 @@ This example demonstrates how to create a forced photometry lightcurve for the s
 
 The individual Processed Visit Images might have very slightly different coordinates for the same object.
 With this, instead of providing the RA and Dec to the light curve extraction process, it is wise to extract the data from the ``dp02_dc2_catalogs.DiaObject`` table using the object's unique ``diaObjectId``.  
-Determining the ``diaObjectId`` can be accomplished via the Portal Aspect of the Rubin Science Platform, by clicking on the "UI assisted" button, selecting "DP0.2 Catalogs" tab, chosing the "dp02_dc2_catalogs" on the left, and "dp02_dc2_catalogs.DiaObject" table on the right.
+Determining the ``diaObjectId`` (DIA object identifier) can be accomplished via the Portal Aspect of the Rubin Science Platform, by clicking on the "UI assisted" button, selecting "DP0.2 Catalogs" tab, chosing the "dp02_dc2_catalogs" on the left, and "dp02_dc2_catalogs.DiaObject" table on the right.
 
 Only the spatial constraints need to be entered on the left, with the 67.4579, -44.0802 - and a 2 arcseconds radius using the "cone Shape" ("Temporal" constraints button needs to be unchecked).
 For the "Output Column Selection" only the ``diaObjectId`` needs to be checked.  
