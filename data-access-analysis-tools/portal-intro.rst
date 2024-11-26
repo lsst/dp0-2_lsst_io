@@ -38,11 +38,12 @@ For more information about the DP0.2 catalogs, tables, and columns, visit the DP
 Preparation and execution of the ADQL query
 ===========================================
 
-1.1.  The sample query below extracts fluxes of all extended objects (by selecting ``g_extendedness = 1`` and ``r_extendedness = 1``).  
-It requests only the objects which, if blended, are primary (via ``detect_isPrimary = 1``).  
-It restricts the search to those located in a circular region with a radius of 1 degree, around direction with RA of 55.75 deg and and Dec of -32.27 deg.  
+1.1.  The sample query below extracts g-band and r-band fluxes (respectively ``g_calibFlux`` and ``rcalibFlux``) of all extended objects (by selecting ``g_extendedness = 1`` and ``r_extendedness = 1``).
+It converts the fluxes to magnitudes, by the use of an ADQL function ``scisql_nanojanskyToAbMag`` where the respective flux is the argument.  
+It restricts the search to those located in a circular region with a radius of 1 degree, around direction with RA of 55.75 deg and and Dec of -32.27 deg, via the restriction ``CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 55.75, -32.27, 1.0)) = 1 ``
+It requests only the objects which, if blended, are primary (via ``detect_isPrimary = 1``).
 
-1.2. By default, you will see the "UI assisted" view on the upper right, click on "Edit ADQL."  
+
 
 1.3. Enter the following ADQL code into the “ADQL Query” box:  
 
