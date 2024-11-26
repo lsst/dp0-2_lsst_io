@@ -40,28 +40,23 @@ Preparation and execution of the ADQL query
 
 1.1.  The sample query below extracts g-band and r-band fluxes (respectively ``g_calibFlux`` and ``rcalibFlux``) of all extended objects (by selecting ``g_extendedness = 1`` and ``r_extendedness = 1``).
 It converts the fluxes to magnitudes, by the use of an ADQL function ``scisql_nanojanskyToAbMag`` where the respective flux is the argument.  
-It restricts the search to those located in a circular region with a radius of 1 degree, around direction with RA of 55.75 deg and and Dec of -32.27 deg, via the restriction ``CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 55.75, -32.27, 1.0)) = 1 ``
-It requests only the objects which, if blended, are primary (via ``detect_isPrimary = 1``).
-
-
+It restricts the search to those located in a circular region with a radius of 1 degree, around direction with RA of 55.75 deg and and Dec of -32.27 deg, via the restriction ``CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 55.75, -32.27, 1.0)) = 1 ``.  
 
 1.3. Enter the following ADQL code into the “ADQL Query” box:  
 
 .. code-block:: SQL 
 
-   SELECT coord_dec, coord_ra, detect_isPrimary, 
+   SELECT coord_dec, coord_ra, 
    scisql_nanojanskyToAbMag(g_calibFlux) as gmag, 
    scisql_nanojanskyToAbMag(r_calibFlux) as rmag, 
-   g_extendedness as gext, 
-   r_extendedness as rext, 
-   DISTANCE(POINT('ICRS', coord_ra, coord_dec), POINT('ICRS', 55.75, -32.27)) as radial_offset 
+   g_extendedness, 
+   r_extendedness  
    FROM dp02_dc2_catalogs.Object 
    WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 55.75, -32.27, 1.0)) = 1 
-   AND detect_isPrimary = 1 
    AND g_extendedness = 1 
    AND r_extendedness = 1 
-   AND scisql_nanojanskyToAbMag(g_calibFlux) < 25 
-   AND scisql_nanojanskyToAbMag(r_calibFlux) < 25 
+   AND scisql_nanojanskyToAbMag(g_calibFlux) < 23 
+   AND scisql_nanojanskyToAbMag(r_calibFlux) < 23 
 
 1.4. Notice how the ADQL query above retrieves the g- and r-band ``calibFlux`` columns from the ``Object`` catalog as apparent 
 AB magnitudes, and renames them as ``gmag`` and ``rmag``. 
