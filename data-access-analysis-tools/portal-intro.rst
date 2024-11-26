@@ -24,21 +24,23 @@ How to plot one- and two-dimensional histograms in the Portal
 
 =====================
 
-The Portal aspect of the Rubin Science Platform demonstrates how to retrieve apparent magnitudes and cluster offsets for a sample of 
-extended objects around a rich galaxy cluster, and use 1- and 2-dimensional histograms to explore their apparent magnitude and color distributions.
+The Portal aspect of the Rubin Science Platform lends itself well to retrieve apparent magnitudes of (for instance) extended objects in a region of the sky.  
+It provides convenient and easy to use tools to plot 1- and 2-dimensional histograms to explore their apparent magnitude and color distributions.
 
-This tutorial assumes the successful completion of the beginner-level Portal tutorial 01, and uses the 
-Astronomy Data Query Language (ADQL), which is similar to SQL (Structured Query Language).
+For the retrieval of the required data, this "How to" uses the Astronomy Data Query Language (ADQL), which is similar to SQL (Structured Query Language).
+This option in the Portal aspect of the Rubin Science Platform is selected by clicking on "Edit ADQL" in the upper right-hand side of the Portal landing page.  
 
 For more information about the DP0.2 catalogs, tables, and columns, visit the DP0.2 Data Products Definition Document (DPDD) 
 :ref:`DP0-2-Data-Products-DPDD` or the `DP0.2 Catalog Schema Browser <https://sdm-schemas.lsst.io/dp02.html>`_.  
 
 .. _DP0-2-Portal-Histogram-Step-1:
 
-Step 1.  Execute the ADQL query
-===============================
+Preparation and execution of the ADQL query
+===========================================
 
-1.1.  Log into the Portal Aspect then click on the "DP0.2 Catalogs" Tab in the top menu.
+1.1.  The sample query below extracts fluxes of all extended objects (by selecting ``g_extendedness = 1`` and ``r_extendedness = 1``).  
+It requests only the objects which, if blended, are primary (via ``detect_isPrimary = 1``).  
+It restricts the search to those located in a circular region with a radius of 1 degree, around direction with RA of 55.75 deg and and Dec of -32.27 deg.  
 
 1.2. By default, you will see the "UI assisted" view on the upper right, click on "Edit ADQL."  
 
