@@ -28,7 +28,7 @@ The Portal aspect of the Rubin Science Platform lends itself well to retrieve ap
 It provides convenient and easy to use tools to plot 1- and 2-dimensional histograms to explore their apparent magnitude and color distributions.
 
 For the retrieval of the required data, this "How to" uses the Astronomy Data Query Language (ADQL), which is similar to SQL (Structured Query Language).
-This option in the Portal aspect of the Rubin Science Platform is selected by clicking on "Edit ADQL" in the upper right-hand side of the Portal landing page.  
+The option to use the ADQL in the Portal aspect of the Rubin Science Platform is selected by clicking on "Edit ADQL" in the upper right-hand side of the Portal landing page.  
 
 For more information about the DP0.2 catalogs, tables, and columns, visit the DP0.2 Data Products Definition Document (DPDD) 
 :ref:`DP0-2-Data-Products-DPDD` or the `DP0.2 Catalog Schema Browser <https://sdm-schemas.lsst.io/dp02.html>`_.  
@@ -38,11 +38,11 @@ For more information about the DP0.2 catalogs, tables, and columns, visit the DP
 Preparation and execution of the ADQL query
 ===========================================
 
-1.1.  The sample query below extracts g-band and r-band fluxes (respectively ``g_calibFlux`` and ``rcalibFlux``) of all extended objects (by selecting ``g_extendedness = 1`` and ``r_extendedness = 1``).
-It converts the fluxes to magnitudes, by the use of an ADQL function ``scisql_nanojanskyToAbMag`` where the respective flux is the argument.  
-It restricts the search to those located in a circular region with a radius of 1 degree, around direction with RA of 55.75 deg and and Dec of -32.27 deg, via the restriction ``CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 55.75, -32.27, 1.0)) = 1 ``.  
-
-1.3. Enter the following ADQL code into the “ADQL Query” box:  
+1.1.  The sample query below uses the ``dp02_dc2_catalogs.Object`` catalog to extract the g-band and r-band fluxes (respectively ``g_calibFlux`` and ``r_calibFlux``) of all extended objects (by selecting ``g_extendedness = 1`` and ``r_extendedness = 1``).
+The ``calibFlux`` is the flux within a 12 pixel aperture; aperture fluxes are appropriate to use when calculating extended object colors.  
+It converts the fluxes to magnitudes, by the use of an ADQL function ``scisql_nanojanskyToAbMag`` where the respective flux is the argument (and renames them as ``gmag`` and ``rmag``).  
+It restricts the search to return only objects with g and i magnitudes less than 23.  
+It limits the search to those objects located in a circular region with a radius of 1 degree, around direction with RA of 55.75 deg and and Dec of -32.27 deg, via the restriction ``CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 55.75, -32.27, 1.0)) = 1 ``.
 
 .. code-block:: SQL 
 
@@ -57,19 +57,6 @@ It restricts the search to those located in a circular region with a radius of 1
    AND r_extendedness = 1 
    AND scisql_nanojanskyToAbMag(g_calibFlux) < 23 
    AND scisql_nanojanskyToAbMag(r_calibFlux) < 23 
-
-1.4. Notice how the ADQL query above retrieves the g- and r-band ``calibFlux`` columns from the ``Object`` catalog as apparent 
-AB magnitudes, and renames them as ``gmag`` and ``rmag``. 
-The ``calibFlux`` is the flux within a 12 pixel aperture; aperture fluxes are appropriate to use when calculating extended 
-object colors, as is done in this tutorial.  
-The query also retrieves the g- and r-band extendedness parameters as ``gext`` and ``rext``, and the distance of the object 
-from the search center, RA 55.75, Dec -32.27 degrees (the center of a rich galaxy cluster) as ``radial_offset`` 
-(the units will be degrees).
-
-1.5. Notice how the ADQL query above places a condition that returned objects must be within 1 degree of the search center; 
-must have the ``detect_isPrimary`` flag equal to 1; must have the g- and r-band ``extendedness`` parameters equal to 1 (i.e., 
-be extended and not point-like); and have g- and r-band apparent magnitudes brighter than 25. 
-These conditions will return only bright, deblended, extended objects (i.e., individual galaxies).
 
 1.6. Set the “Row Limit” at the bottom of the page to 300,000, and click “Search” in the lower left corner.  
 
