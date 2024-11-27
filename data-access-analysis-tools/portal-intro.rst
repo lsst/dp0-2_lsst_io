@@ -58,7 +58,7 @@ It limits the search to those objects located in a circular region with a radius
    AND scisql_nanojanskyToAbMag(g_calibFlux) < 23 
    AND scisql_nanojanskyToAbMag(r_calibFlux) < 23 
 
-1.6. Set the “Row Limit” at the bottom of the page to 300,000, and click “Search” in the lower left corner.  
+1.2.  Executing the ADQL query is via clicking the “Search” in the lower left corner.  
 
 .. figure:: /_static/portal_tut_04_step01_06.png
 	:name: portal_tut_04_step01_06
