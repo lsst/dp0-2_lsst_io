@@ -69,8 +69,8 @@ Clicking "Apply" will result in displaying an additional plot window, with g mag
 The "coord_ra vs/ cpoord_dec" can be removed by clicking on the "x" in the upper right-hand side of the plot window.
 This will result in the dispay as below.  
 
-.. figure:: /_static/Howto_Histogram_1d.png
-	:name: Howto_Histogram_1d.png
+.. figure:: /_static/Howto_Histogram_1dd.png
+	:name: Howto_Histogram_1dd.png
 	:alt: Screenshot of the 1-d histogram of g-magnitudes in the selectred region, obtained by executing an ADQL query.
 
 
