@@ -42,7 +42,7 @@ The sample query below uses the ``dp02_dc2_catalogs.Object`` catalog to extract 
 The ``calibFlux`` is the flux within a 12 pixel aperture; aperture fluxes are appropriate to use when calculating extended object colors.  
 It converts the fluxes to magnitudes, by the use of an ADQL function ``scisql_nanojanskyToAbMag`` where the respective flux is the argument (and renames them as ``gmag`` and ``rmag``).  
 It restricts the search to return only objects with g and i magnitudes less than 23.  
-It limits the search to those objects located in a circular region with a radius of 0.5 degree, around direction with RA of 55.75 deg and and Dec of -32.27 deg, via the restriction ``CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 55.75, -32.27, 0.5) = 0.5``.
+It limits the search to those objects located in a circular region with a radius of 0.75 degree, around direction with RA of 55.75 deg and and Dec of -32.27 deg, via the restriction ``CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 55.75, -32.27, 0.75) = 1``.
 
 .. code-block:: SQL 
 
@@ -52,7 +52,7 @@ It limits the search to those objects located in a circular region with a radius
    g_extendedness, 
    r_extendedness  
    FROM dp02_dc2_catalogs.Object 
-   WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 55.75, -32.27, 0.5)) = 1 
+   WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 55.75, -32.27, 0.75)) = 1 
    AND g_extendedness = 1 
    AND r_extendedness = 1 
    AND scisql_nanojanskyToAbMag(g_calibFlux) < 23 
