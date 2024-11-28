@@ -78,8 +78,12 @@ This will result in the dispay as below.
 
 .. _DP0-2-Portal-Histogram-Step-2:
 
-Step 2.  Explore the default results view
-==========================================
+3.  Plotting the 2-d histogram (heatmap) of the g-r colors vs. g magnitudes
+===========================================================================
+
+The two-dimensional histogram (heatmap) of the g-r colors vs. g magnitudes can be prepared by clicking on the "+" button on the upper left-hand side of the active chart.
+To plot the heatmap, this needs to be selected in the resulting pop-up window by slecting "Heatmap" as the plot type.
+
 
 2.1. The above query should have returned 229,570 objects and the default results interface should look approximately like 
 the figure below, with the sky image at left, a default xy plot of Dec vs. RA at right, and the tabular results along the bottom.
