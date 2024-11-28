@@ -69,12 +69,12 @@ Clicking "Apply" will result in displaying an additional plot window, with g mag
 The "coord_ra vs/ cpoord_dec" can be removed by clicking on the "x" in the upper right-hand side of the plot window.
 This will result in the dispay as below.  
 
-.. figure:: /_static/portal_tut_04_step01_06.png
-	:name: portal_tut_04_step01_06
-	:alt: Screenshot of the Portal Aspect's ADQL query entry page, showing the query given above pasted into the query box and the Search button at lower left.
+.. figure:: /_static/Howto_Histogram_1d.png
+	:name: Howto_Histogram_1d.png
+	:alt: Screenshot of the 1-d histogram of g-magnitudes in the selectred region, obtained by executing an ADQL query.
 
 
-**Portal ADQL query entry page.**
+**Screenshot of the 1-d histogram of g-magnitudes of extended objects in the selectred region, obtained by executing an ADQL query.**
 
 .. _DP0-2-Portal-Histogram-Step-2:
 
