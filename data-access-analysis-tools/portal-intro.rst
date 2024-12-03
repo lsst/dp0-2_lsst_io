@@ -24,18 +24,18 @@ How to execute a sample User Interface (UI) query
 
 This example uses the DP0.2 Catalogs to illustrate steps necessary to execute a UI query in the Portal aspect of the Rubin Science Platform (RSP).
 
-The default landing page in the Portal aspect of the RSP reveals several tabs allowing a choice of various image or catalog repositories.
+**1. Landing page**  The default landing page in the Portal aspect of the RSP reveals several tabs allowing a choice of various image or catalog repositories.
 The example given here uses the "DP0.2 Catalogs" repository, and this is the one to be selected here.
 There, two types of queries are available: "UI Assisted" (amounting to single-table queries - default), or "ADQL Queries."
 It is possible to toggle between the two by clicking on the botton to the right of "View:".
 Each of these options has a different user interface.
 This "How to" covers the UI version.
 
-**Table selection**: Within the "DP0.2 Catalogs" tab, it is possible to choose the table to work with by clicking the "up-down" arrow to show the available tables.
+**2.  Table selection**: Within the "DP0.2 Catalogs" tab, it is possible to choose the table to work with by clicking the "up-down" arrow to show the available tables.
 The default table in the right drop-down menu is the "dp02_dc2_Object" table, which will be used this for this example.
 Once any of the tables in the DP0.2 Catalogs repository is selected, the table view at lower-right will automatically update to match the selected table.
 
-**Entering the constraints**:  This example will use the spatial constraints, selected by checking the box by "Spatial."
+**3.  Entering the constraints**:  This example will use the spatial constraints, selected by checking the box by "Spatial."
 For "Spatial" constraints, two shapes type for a spatial search are available ("Cone" or "Polygon"), and the appropriate instructions for the search terms will appear.
 This example uses the cone search, which requires "Coordinates or Object Name" and "Radius" of search to be entered in the box under the "Shape Type" on the left side of the screen.
 
@@ -46,7 +46,7 @@ Note that the central (RA, Dec) coordinates for DC2, in decimal degrees, are: ``
 The longitude and latitude columns in "Position Columns" do automatically update to be the correct column names for right ascension and declination for the selected table.
 If a non-existent column name is entered, the box will highlight red in indication of the error.
 
-**The table view**:  
+**3.  Exploring the table view**:  
 The table to the right of "Enter Constraints" enables users to apply additional search constraints on the columns in the selected catalog table.
 Some tables have a lot of data columns.  
 It is possible to search for desired data columns by entering terms (e.g., ra, Flux, or flag) in the boxes underneath "Name" and pressing "enter" in order to view data columns of interest.
@@ -59,16 +59,15 @@ For example, entering "> 300" in the "Constraints" box in the "g_ap03Flux" will 
 
 The removal of filters and resetting of the table view at any time is by using the "Reset Column Selections & Constraints" button above the upper-right corner of the table.
 
-**Row limit**:
+**4.  Applying the row limit**:
 The "Row Limit" in the bottom of the page can be changed to apply an upper bound to the number of rows returned.
 The Portal can work effectively with datasets with millions of rows.
 However, when learning or testing queries, it is advisable to limit the number of rows (e.g., 10000 rows is useful for testing).
 
 *Note*: Because of the implementation of the Rubin Observatory "QServ" database, it is not recommended to use the row limit alone in order to get a "sampling" of data.
-Queries with only a row limit can run for much longer 
-than one might intuitively expect; applying a spatial constraint is likely to return a result more quickly.
+Queries with only a row limit can run for much longer than one might intuitively expect; applying a spatial constraint is likely to return a result more quickly.
 
-**Example UI assisted query**:
+**5.  Executing an example UI assisted query**:
 The image below presents an example of how to search the DP0.2 Object catalog using a 3 arcminute cone near
 the DC2's central coordinates, returning only the five data columns "coord_ra", "coord_dec", and "g" "r"
 and "i_calibFlux", and imposing the contraints that the flux must be between 20 and 1000 nanojansky (i.e., 
@@ -81,7 +80,7 @@ between 24th and 28th magnitude).
 
     An example query of the DC2 Object catalog.
 
-**Search**: Pressing the search button at lower left will start the execution of the query.
+Pressing the search button at lower left will start the execution of the query.
 The search might take a few moments.
 
 .. figure:: /_static/portal_intro_DP02c.png
@@ -91,7 +90,7 @@ The search might take a few moments.
 
     This will show while the search is executing.  It is possible to cancel a query while it is executing by clicking the "Cancel" button.
 
-**Results view**: The search results will populate the "Results" view, as shown in the figure below.
+**6.  Exploring the results view**: The search results will populate the "Results" view, as shown in the figure below.
 The display layout is controlled by the "hamburger" button (three horizontal lines) at upper left.
 It is possible to change the layout by clicking on this icon and then on the "Results Layout" tab.
 The screenshot below uses the "Coverage Charts Tables" choice with a sky image at upper left.
