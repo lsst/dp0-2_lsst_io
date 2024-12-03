@@ -38,9 +38,9 @@ For more information about the DP0.2 catalogs, tables, and columns, visit the DP
 1.  Preparation and execution of the ADQL query
 ===============================================
 
-The sample query below uses the ``dp02_dc2_catalogs.Object`` catalog to extract the g-band and r-band fluxes (respectively ``g_calibFlux`` and ``r_calibFlux``) of all extended objects (by selecting ``g_extendedness = 1`` and ``r_extendedness = 1``).
+The sample query below uses the ``dp02_dc2_catalogs.Object`` catalog to extract the g-band and r-band fluxes (respectively ``g_calibFlux`` and ``r_calibFlux``) of all extended objects (by selecting ``g_extendedness = 1`` and ``r_extendedness = 1``) in a ~ 1 sq. degree region of the sky.  
 The ``calibFlux`` is the flux within a 12 pixel aperture; aperture fluxes are appropriate to use when calculating extended object colors.  
-It converts the fluxes to magnitudes, by the use of an ADQL function ``scisql_nanojanskyToAbMag`` where the respective flux is the argument (and renames them as ``gmag`` and ``rmag``).  
+It converts the fluxes to magnitudes, by the use of an ADQL function ``scisql_nanojanskyToAbMag()`` where the respective flux is the argument (and renames them as ``gmag`` and ``rmag``).  
 It restricts the search to return only objects with g and i magnitudes less than 23.  
 It limits the search to those objects located in a circular region with a radius of 0.75 degree, around direction with RA of 55.75 deg and and Dec of -32.27 deg, via the restriction ``CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 55.75, -32.27, 0.75) = 1``.
 
@@ -82,17 +82,17 @@ This will result in the dispay as below.
 ===========================================================================
 
 The two-dimensional histogram (heatmap) of the g-r colors vs. g magnitudes can be prepared by clicking on the "+" button on the upper left-hand side of the active chart.
-To plot the heatmap, this needs to be selected in the resulting pop-up window by slecting "Heatmap" as the plot type.
+To plot the heatmap, this needs to be selected in the resulting pop-up window by clicking on "Heatmap" as the plot type.
+Plotting of the heatmap of g-r color vs. g magnitude is accomplished via entering ``gmag`` for X, and ``gmag-rmag`` for Y.
+The resulting display will now have the 1-d histogram of magnitudes and 2-d histogram (heatmap) of colors vs. magnitudes, as below.
 
+.. figure:: /_static/Howto_Histogram_2d.png
+	:name: Howto_Histogram_1d.png
+	:alt: Screenshot of the 2-d histogram of g-r color vs. g-magnitudes in the selectred region, obtained by executing an ADQL query.
 
-2.1. The above query should have returned 229,570 objects and the default results interface should look approximately like 
-the figure below, with the sky image at left, a default xy plot of Dec vs. RA at right, and the tabular results along the bottom.
+**Screenshot of the 2-d histogram of g-r color vs. g-magnitudes of the extended objects in the selectred region, obtained by executing an ADQL query.**
 
-2.2. In the sky image at upper left, click on the magnifying glass icon with the + sign a couple of times.
-This should zoom in on the image until you can see the cluster, as in the figure below.
-Notice how not all galaxies appear to be marked with a square as a returned object. 
-This seems to suggest that objects are missing from the results table.
-However, not all returned objects are shown with markers in the sky image.
+of the 2-d histogram of g-magnitudes of extended objects in the selectred region, obtained by executing an ADQL query.**
 
 .. figure:: /_static/portal_tut04_step02_02.png
 	:name: portal_tut04_step02_02
