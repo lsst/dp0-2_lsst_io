@@ -39,10 +39,10 @@ For more information about the DP0.2 catalogs, tables, and columns, visit the DP
 ===============================================
 
 The sample query below uses the ``dp02_dc2_catalogs.Object`` catalog to extract the g-band and r-band fluxes (respectively ``g_calibFlux`` and ``r_calibFlux``) of all extended objects (by selecting ``g_extendedness = 1`` and ``r_extendedness = 1``) in a ~ 1.5 sq. degree region of the sky.  
-The ``calibFlux`` is the flux within a 12 pixel aperture; aperture fluxes are appropriate to use when calculating extended object colors.  
-It converts the fluxes to magnitudes, by the use of an ADQL function ``scisql_nanojanskyToAbMag()`` where the respective flux is the argument (and renames them as ``gmag`` and ``rmag``).  
-It restricts the search to return only objects with g and i magnitudes less than 23.  
-It limits the search to those objects located in a circular region with a radius of 0.75 degree, around direction with RA of 55.75 deg and and Dec of -32.27 deg, via the restriction ``CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 55.75, -32.27, 0.75) = 1``.
+(The ``calibFlux`` is the flux within a 12 pixel aperture; aperture fluxes are appropriate to use when calculating extended object colors.)
+The query converts the fluxes to magnitudes, by the use of an ADQL function ``scisql_nanojanskyToAbMag()`` where the respective flux is the argument (and renames them as ``gmag`` and ``rmag``).  
+It restricts the search to return only objects with g- and i-magnitudes less than 23.
+It limits the search to those objects located in a circular region with a radius of 0.75 degree, around the direction with RA of 55.75 deg and and Dec of -32.27 deg, via the restriction ``CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 55.75, -32.27, 0.75) = 1``.
 
 .. code-block:: SQL 
 
@@ -66,13 +66,12 @@ The resulting display will by default show the sky coverage on the left, and the
 To plot the distribution of g magnitudes, it is necessary to add another plot panel, by clicking on the "+" button on the upper left-hand side of the active chart, and selecting "Histogram" as the Plot Type.
 The resulting  pop-up window allows a selection of the quantity for the plotted histogram - in ths case, "Column or expression" box needs to have "gmag" entered.
 Clicking "Apply" will result in displaying an additional plot window, with g magnitude histogram.
-The "coord_ra vs/ cpoord_dec" can be removed by clicking on the "x" in the upper right-hand side of the plot window.
+The "coord_ra vs/ coord_dec" plot can be removed by clicking on the "x" in the upper right-hand side of the plot window.
 This will result in the dispay as below.  
 
 .. figure:: /_static/Howto_Histogram_1d.png
 	:name: Howto_Histogram_1d.png
 	:alt: Screenshot of the 1-d histogram of g-magnitudes in the selectred region, obtained by executing an ADQL query.
-
 
 **Screenshot of the 1-d histogram of g-magnitudes of extended objects in the selectred region, obtained by executing an ADQL query.**
 
@@ -81,209 +80,14 @@ This will result in the dispay as below.
 3.  Plotting the 2-d histogram (heatmap) of the g-r colors vs. g magnitudes
 ===========================================================================
 
-The two-dimensional histogram (heatmap) of the g-r colors vs. g magnitudes can be prepared by clicking on the "+" button on the upper left-hand side of the active chart.
+The two-dimensional histogram (heatmap) of the g-r colors vs. g-magnitudes can be prepared by clicking on the "+" button on the upper left-hand side of the active chart.
 To plot the heatmap, this needs to be selected in the resulting pop-up window by clicking on "Heatmap" as the plot type.
-Plotting of the heatmap of g-r color vs. g magnitude is accomplished via entering ``gmag`` for X, and ``gmag-rmag`` for Y.
+Plotting of the heatmap of g-r color vs. g-magnitude is accomplished via entering ``gmag`` for X, and ``gmag-rmag`` for Y.
 The resulting display will now have the 1-d histogram of magnitudes and 2-d histogram (heatmap) of colors vs. magnitudes, as below.
 
 .. figure:: /_static/Howto_Histogram_2d.png
 	:name: Howto_Histogram_1d.png
 	:alt: Screenshot of the 2-d histogram of g-r color vs. g-magnitudes in the selectred region, obtained by executing an ADQL query.
 
-**Screenshot of the 2-d histogram of g-r color vs. g-magnitudes of the extended objects in the selectred region, obtained by executing an ADQL query.**
-
-of the 2-d histogram of g-magnitudes of extended objects in the selectred region, obtained by executing an ADQL query.**
-
-.. figure:: /_static/portal_tut04_step02_02.png
-	:name: portal_tut04_step02_02
-	:alt: Screenshot of the default results view that appears after clicking the search button.
-
-**Screenshot of default results view.**
-
-2.3. In the table view, add a constraint of "radial_offset < 0.03" as shown below and hit return, and see how the sky image plot updates 
-to show that all extended members of the rich galaxy cluster were returned by the query (below).  
-So the fact that above, not all are marked with icons, is not an issue for concern.  
-
-.. figure:: /_static/portal_tut04_step02_03.png
-	:name: portal_tut04_step02_03
-	:alt: The sky image view of the galaxy cluster, with purple squares marking all objects within 0.03 degrees of the center.
-
-**Sky image view of the galaxy cluster.**
-
-2.4. Delete the “< 0.03” constraint on the ``radial_offset`` column and press enter to reset the results view.
-
-.. _DP0-2-Portal-Histogram-Step-3:
-
-Step 3.  Change a heatmap illustrating a color-magnitude diagram
-================================================================
-
-Galaxy color-magnitude diagrams (CMDs) are a standard and widely-used diagnostic plot type, and use of the g-r color 
-vs. g-band magnitude are standard choices for axes. 
-This type of plot is created below.  
-
-3.1. On the right-hand part of your current display, click on the "Active Chart" tab.  
-Change the settings of the default xy plot of RA and Dec. 
-At upper right, click the single gear (settings) icon to open the "Plot Parameters" pop-up window. 
-Select “Overplot New Trace”, and fill in the boxes as shown below.
-
-.. figure:: /_static/portal_tut04_step03_01.png
-	:width: 300
-	:name: portal_tut04_step03_01
-	:alt: A screenshot of the plot parameters pop-up window showing how the parameters should be set to create the heatmap.
-
-**Plot parameters pop-up window.**
-
-3.2. See that now the plot has both the color-magnitude diagram and the RA vs. Dec. 
-This is not very useful!  
-But, the purpose of showing this is to demonstrate the flexibility of the Portal’s plotting capabilities.
-
-.. figure:: /_static/portal_tut04_step03_02.png
-	:name: portal_tut04_step03_02
-	:alt: A screenshot of the initial plot with two heatmaps, the original coordinates heatmap and the color-magnitude heatmap.
-
-**Intial plot with two heatmaps.**
-	
-3.3. Remove the default “trace 0” (RA vs. Dec) from the plot. 
-Click on the single gear icon and select "Remove Active Trace" in the drop-down menu, select "trace 0", then click "OK".
-
-.. figure:: /_static/portal_tut04_step03_03a.png
-	:name: portal_tut04_step03_03b
-	:alt: A screenshot of how to remove a trace.
-
-**Screenshot to remove a trace.**
-
-
-Now, the “CMD” trace created in step 3.1 is the only one.
-
-.. figure:: /_static/portal_tut04_step03_03b.png
-	:name: portal_tut04_step03_03b
-	:alt: A screenshot of the color-magnitude heatmap in default.
-
-**Default color scheme of CMD trace.**
-	
-3.4. Change the color palette by  
-clicking on the single gears icon again and in the drop-down menu next to “Color Scale” choose from a number of color options. 
-Notice that the color bar at right has the name of the trace, “CMD”, and represents the number of objects per 2-dimensional bin.
-
-
-3.5. Interact with the plot. 
-At upper right, select the magnifying glass with the + sign icon and click-and-drag over the data to zoom in on a small area. 
-Select the four-arrows-pointing-out icon and click-and-drag to navigate around the plot. 
-Select the magnifying glass with 1x icon to return the plot to the default axes limits.
-
-3.6. Be aware that clicking the half-circle upwards-pointing arrow (the “go back” or “refresh” icon) will return the xy plot to 
-its default 
-display of RA vs. Dec. 
-Do not click it.
-
-3.7. Notice the sharp cutoffs at the bright end (around g=17, g-r=0.5) and the faint end (around g=24.5, g-r=0.2), and recall 
-that the DP0.2 data set is based on simulated astrophysical objects and simulated images. 
-Notice that a clear red sequence, blue cloud, and green valley are not very obvious in this galaxy CMD. 
-A real LSST color-magnitude diagram for galaxies might look quite different.
-
-.. _DP0-2-Portal-Histogram-Step-4:
-
-Step 4.  Add a plot showing histograms of apparent magnitude
-============================================================
-
-Distributions of apparent magnitude are another standard type of plot that gives an at-a-glance impression of the brightness and 
-completeness of a population of galaxies.
-
-4.1. Add a new plot. At upper left of the right hand panel, click on the plus sign in a circle to add a new chart.
-Select a Plot Type of "Histogram" from the drop-down menu, and set the other boxes to match the screenshot below. 
-
-.. figure:: /_static/portal_tut04_step04_01.png
-	:width: 300
-	:name: portal_tut04_step04_01
-	:alt: A screenshot of the plot parameters pop-up window showing how the parameters should be set to create the histogram.
-
-**Plot parameters pop-up window for creating a histogram.**
-
-4.2. Notice the histogram options available. 
-In this demo, as shown above, a “Uniform binning” is used instead of “Bayesian blocks” (quantiles defined by the data itself); 
-a set bin width of 0.2 mag is selected; and the minimum and maximum values are defined. 
-However, users do have the option to instead choose the number of bins, and allow the bin size and the min/max values will be set automatically.
-
-4.3. Review the g-band magnitude distribution. 
-Since the ADQL query only retrieved extended objects brighter than 25th magnitude, and the coadded images of DP0.2 (and thus the 
-Object table) goes deeper than 25th mag, no turn-over due to detection incompleteness is seen in the apparent magnitude distribution. 
-
-.. figure:: /_static/portal_tut04_step04_03.png
-	:name: portal_tut04_step04_03
-	:alt: A screenshot of the portal's results view showing both the color-magnitude heatmap and the magnitude histogram.
-
-**Color-magnitude heatmap and magnitude historgram.**
-
-4.4. Add the r-band apparent magnitude distribution to the new plot. 
-With the right-most plot selected (click on plot to select plot; selected plot has an orange outline), click on the single gear icon 
-at upper right. 
-In the "Plot Parameters" pop-up window, select “Overplot New Trace”, fill out the remaining boxes as shown below (notice that the 
-option to log the y-axis has been selected), and click “OK”.
-
-.. figure:: /_static/portal_tut04_step04_04.png
-	:name: portal_tut04_step04_04
-	:alt: A screenshot of the plot parameters pop-up window showing how to overplot a new trace and add the r-band histogram.
-
-**Over-plot trace and add r-band histogram.**
-
-4.5. Update the trace names and colors. 
-The default colors used for g-band and r-band are inappropriate, and the g-band trace is still named “trace 0”. 
-Click on the single gear icon and use the "Plot Parameters" pop-up window to edit trace name and color. 
-Click on the magnifying glass to the right of “Color” under “Trace Options” to get the “Color Picker” pop-up window. 
-Choose green for g-band and orange for r-band.
-
-.. figure:: /_static/portal_tut04_step04_05.png
-	:name: portal_tut04_step04_05
-	:alt: A screenshot of the plot parameters and color picker pop-up windows showing how to adjust the visual aspects of the histograms.
-
-**Color picker pop-up window.**
-
-4.6. Review the final plot. 
-Notice that it is possible to change which trace is “in front” using the drop-down menu to the left of the magnifying glass icon. 
-
-
-Bring the g-band trace to the front.
-
-.. figure:: /_static/portal_tut04_step04_06.png
-	:width: 300
-	:name: portal_tut04_step04_06
-	:alt: A screenshot of the final histogram, showing both r-band and g-band magnitude distributions.
-
-**Final histogram.**
-
-Step 5.  Restrict all plots to objects near the rich cluster
-============================================================
-
-5.1. View the sky image, the color-magnitude diagram, and the apparent magnitude histograms for the full set of returned objects.
-
-.. figure:: /_static/portal_tut04_step05_01.png
-	:name: portal_tut04_step05_01
-	:alt: A screenshot of the portal's results view showing both the color-magnitude heatmap and the magnitude histograms for all galaxies returned by the original search.
-
-**Screenshot of results view.**
-
-5.2. Restrict the results to only those objects within < 0.05 degrees of the cluster center by entering “< 0.05” into the constraints 
-box for the ``radial_offset`` column and clicking enter. 
-Notice how all of the plots automatically update. 
-The CMD (center) shows the red sequence of cluster galaxies, and the histogram (right) shows the over-density of bright objects 
-in the cluster. 
-Cool!
-
-.. figure:: /_static/portal_tut04_step05_02.png
-	:name: portal_tut04_step05_02
-	:alt: A screenshot of the portal's results view showing both the color-magnitude heatmap and the magnitude histograms for all galaxies within 0.03 degrees of the original search coordinates.
-
-**Results within 0.03 degrees of the original search coordinates.**
-
-Step 6.  Exercises for the learner
-==================================
-
-6.1. Return to the ADQL query in step 1.3, and re-do this tutorial but include faint extended objects down to 28th magnitude. 
-Notice how the histograms change in shape.
-
-6.2. Return to the ADQL query in step 1.3, and add u, i, z, and y-bands to the retrieved columns. 
-Create an apparent magnitude histogram with all six filters. 
-Create a color-magnitude diagram (or a color-color diagram!) with the bands of your choice.
-
-
+**Screenshot showing the 1-d histogram of g-magnitudes as well as the 2-d histogram of g-r color vs. g-magnitudes of the extended objects in the selected region, obtained by executing an ADQL query.**
 
