@@ -35,7 +35,7 @@ Note that the displayed rows are limited only to the checked ones:  this is acco
     :alt: Screenshot of the rubin science platform portal query page.  The user can select the type of service, the table from which to gather data, and select attributes
     	from the table and put constraints on those attributes.  The user may also select the number of data entries to return.
 
-    **An example query of the DC2 Object catalog.**
+   **An example query of the DC2 Object catalog.**
 
 **2.  Manipulating the plotted data**:
 Once the data were retrieved by executing "search" on the query above, the manipulation of the plotted data can be done by selecting the single gear "Plot Parameters" icon above the active chart.
