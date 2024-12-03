@@ -42,9 +42,7 @@ Note that any changes then made to the ADQL are not propogated back to the UI as
 
 Converting fluxes to magnitudes is much easier with the ADQL interface by using the `scisql_nanojanskyToAbMag()` functionality as demonstrated below.
 
-**Querying the TAP schema**
-
-Information about the LSST TAP schema can be obtained via ADQL queries.
+**1. Querying the TAP schema**:  Information about the LSST TAP schema can be obtained via ADQL queries.
 The example below illustrates how to get the detailed list of columns available in the "Object" table, their associated units and descriptions:
 
 .. code-block:: SQL
@@ -54,9 +52,7 @@ The example below illustrates how to get the detailed list of columns available 
    FROM tap_schema.columns
    WHERE tap_schema.columns.table_name = 'dp02_dc2_catalogs.Object'
 
-**An example of an ADQL query to search the Object table near a specified RA and Dec location** 
-
-This query will return RA, Dec, and g, i, and r_calibFlux for all objects within 0.05 degrees from RA = 67 deg and Dec = -37 deg and with respective fluxes between 20 and 1000 nanoJnsky:
+**2. An example of an ADQL query to search the Object table near a specified RA and Dec location**:  This query will return RA, Dec, and g, i, and r_calibFlux for all objects within 0.05 degrees from RA = 67 deg and Dec = -37 deg and with respective fluxes between 20 and 1000 nanoJnsky:
 
 .. code-block:: SQL
 
@@ -65,13 +61,13 @@ This query will return RA, Dec, and g, i, and r_calibFlux for all objects within
    WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),CIRCLE('ICRS', 62, -37, 0.05))=1
    AND (g_calibFlux >20 AND g_calibFlux <1000
    AND i_calibFlux >20 AND i_calibFlux <1000
-   AND r_calibFlux >20 AND r_calibFlux <1000)
+   AND r_calibFlux >20 AND r_calibFlux <1000).
 
 Once entered into the ADQL box, the above query can be exectuted by clicking the "Search" button in the bottom-left corner.
 It is advisable to set the "Row Limit" to be a small number, such as 10000, when testing queries.
 The search results will populate the **Results View**.
 
-The query above can be edited to return magnitudes rather than fluxes: 
+**3.  Converting fluxes to magnitudes**:  The query above can be edited to return magnitudes rather than fluxes: 
 
 .. code-block:: SQL
 
@@ -86,9 +82,7 @@ The query above can be edited to return magnitudes rather than fluxes:
    AND r_calibFlux BETWEEN 20 AND 1000
    AND i_calibFlux BETWEEN 20 AND 1000
 
-**Joining two or more tables**
-
-It is often desirable to access data stored in more than just one table.
+**4.  Joining two or more tables**:  It is often desirable to access data stored in more than just one table.
 This is possible to do using a JOIN clause to combine rows from two or more tables.
 In the example below, the Source and CcdVisit table are joined in order to obtain the date and seeing from the CcdVisit table.
 Any two tables can be joined so long as they have an index in common.
