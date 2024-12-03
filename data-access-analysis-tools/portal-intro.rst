@@ -24,7 +24,7 @@ How to execute a sample User Interface (UI) query
 
 This example uses the DP0.2 Catalogs to illustrate steps necessary to execute a UI query in the Portal aspect of the Rubin Science Platform (RSP).
 
-**1. Landing page**  The default landing page in the Portal aspect of the RSP reveals several tabs allowing a choice of various image or catalog repositories.
+**1. Landing page**:  The default landing page in the Portal aspect of the RSP reveals several tabs allowing a choice of various image or catalog repositories.
 The example given here uses the "DP0.2 Catalogs" repository, and this is the one to be selected here.
 There, two types of queries are available: "UI Assisted" (amounting to single-table queries - default), or "ADQL Queries."
 It is possible to toggle between the two by clicking on the botton to the right of "View:".
