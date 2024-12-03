@@ -78,7 +78,7 @@ between 24th and 28th magnitude).
     :alt: Screenshot of the rubin science platform portal query page.  The user can select the type of service, the table from which to gather data, and select attributes
     	from the table and put constraints on those attributes.  The user may also select the number of data entries to return.
 
-    An example query of the DC2 Object catalog.
+**An example query of the DC2 Object catalog.**
 
 Pressing the search button at lower left will start the execution of the query.
 The search might take a few moments.
@@ -88,7 +88,7 @@ The search might take a few moments.
     :alt: A screenshot alerting the user that the query is being executed.  The user can select to send the query to background or cancel the query.
     :width: 200
 
-    This will show while the search is executing.  It is possible to cancel a query while it is executing by clicking the "Cancel" button.
+**This will show while the search is executing.  It is possible to cancel a query while it is executing by clicking the "Cancel" button.**
 
 **6.  Exploring the results view**: The search results will populate the "Results" view, as shown in the figure below.
 The display layout is controlled by the "hamburger" button (three horizontal lines) at upper left.
@@ -96,11 +96,14 @@ It is possible to change the layout by clicking on this icon and then on the "Re
 The screenshot below uses the "Coverage Charts Tables" choice with a sky image at upper left.
 The color-composite image shows the relevant DC2 simulated sky region.
 A default "active chart" of the sky coordinates appears at upper right, and the table of results along the bottom.  
-Note that by default, the "active chart" displays the two leftmost columns in the table against each other.
+
 
 .. figure:: /_static/portal_intro_DP02d.png
     :name: portal_search_results_DP02
     :alt: Rubin science platform portal search results are displayed in this image.  The left top panel shows an image of the sky.  The right to panel has a scatter plot of objects and the
     	bottom panel shows the data table from the search.
 
-    The default view of the search results.
+**The default view of the search results.**
+
+Note that by default, the "active chart" displays the two leftmost columns in the table against each other.
+This can be changed by clicking on the "gear" icon above the active chart, and selecting the quantitied to be plotted.
