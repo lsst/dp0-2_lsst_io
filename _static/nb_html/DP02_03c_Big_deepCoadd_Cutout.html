@@ -7519,7 +7519,7 @@ a.anchor-link {
 <h1 id="Create-a-large-cutout-of-coadded-images">Create a large cutout of coadded images<a class="anchor-link" href="#Create-a-large-cutout-of-coadded-images">¶</a></h1><img align="left" alt="Rubin Observatory logo, a graphical representation of turning stars into data." src="https://project.lsst.org/sites/default/files/Rubin-O-Logo_0.png" style="padding: 10px" width="250"/>
 <br/>
 Contact authors: Christina Williams, Melissa Graham <br/>
-Last verified to run: 2024-11-1 <br/>
+Last verified to run: 2024-12-02 <br/>
 LSST Science Pipelines version: Weekly 2024_42 <br/>
 Container Size: Large <br/>
 Targeted learning level: Intermediate <br/>
@@ -8379,7 +8379,7 @@ Pixel Scale: 0.2 arcsec/pixel
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>(&lt;matplotlib.patches.Circle at 0x7b2407f04410&gt;,)</pre>
+<pre>(&lt;matplotlib.patches.Circle at 0x7ee10f789090&gt;,)</pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
@@ -8727,7 +8727,7 @@ Use <code>collections.defaultdict(list)</code> to contain these, looping over un
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>dataIds defaultdict(&lt;class 'list'&gt;, {3441: [{'tract': 3441, 'patch': 7, 'band': 'r'}, {'tract': 3441, 'patch': 14, 'band': 'r'}], 3442: [{'tract': 3442, 'patch': 13, 'band': 'r'}, {'tract': 3442, 'patch': 19, 'band': 'r'}, {'tract': 3442, 'patch': 20, 'band': 'r'}, {'tract': 3442, 'patch': 12, 'band': 'r'}]})
-dict of images defaultdict(&lt;class 'list'&gt;, {3441: [&lt;lsst.afw.image._exposure.ExposureF object at 0x7b2428582230&gt;, &lt;lsst.afw.image._exposure.ExposureF object at 0x7b2407bc1af0&gt;], 3442: [&lt;lsst.afw.image._exposure.ExposureF object at 0x7b240804c070&gt;, &lt;lsst.afw.image._exposure.ExposureF object at 0x7b240804f370&gt;, &lt;lsst.afw.image._exposure.ExposureF object at 0x7b2428517e70&gt;, &lt;lsst.afw.image._exposure.ExposureF object at 0x7b2407b7f970&gt;]})
+dict of images defaultdict(&lt;class 'list'&gt;, {3441: [&lt;lsst.afw.image._exposure.ExposureF object at 0x7ee12bf21070&gt;, &lt;lsst.afw.image._exposure.ExposureF object at 0x7ee10f6ec230&gt;], 3442: [&lt;lsst.afw.image._exposure.ExposureF object at 0x7ee10fbf5b70&gt;, &lt;lsst.afw.image._exposure.ExposureF object at 0x7ee10f8a3b30&gt;, &lt;lsst.afw.image._exposure.ExposureF object at 0x7ee12bf128f0&gt;, &lt;lsst.afw.image._exposure.ExposureF object at 0x7ee10f8164f0&gt;]})
 </pre>
 </div>
 </div>
@@ -9377,11 +9377,11 @@ percent difference is  0.22870104236734057 %
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">dI</span> <span class="o">=</span> <span class="n">all_dataIds</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">dataset_refs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">butler</span><span class="o">.</span><span class="n">registry</span><span class="o">.</span><span class="n">queryDatasets</span><span class="p">(</span><span class="s1">'deepCoadd'</span><span class="p">,</span> <span class="n">dataId</span><span class="o">=</span><span class="n">dI</span><span class="p">))</span>
+<span class="n">dataset_refs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">butler</span><span class="o">.</span><span class="n">query_datasets</span><span class="p">(</span><span class="s1">'deepCoadd'</span><span class="p">,</span> <span class="n">data_id</span><span class="o">=</span><span class="n">dI</span><span class="p">))</span>
 <span class="n">dataset_refs</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">dataset_refs</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">dI</span> <span class="ow">in</span> <span class="n">all_dataIds</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
-    <span class="n">dr</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">butler</span><span class="o">.</span><span class="n">registry</span><span class="o">.</span><span class="n">queryDatasets</span><span class="p">(</span><span class="s1">'deepCoadd'</span><span class="p">,</span> <span class="n">dataId</span><span class="o">=</span><span class="n">dI</span><span class="p">))</span>
+    <span class="n">dr</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">butler</span><span class="o">.</span><span class="n">query_datasets</span><span class="p">(</span><span class="s1">'deepCoadd'</span><span class="p">,</span> <span class="n">data_id</span><span class="o">=</span><span class="n">dI</span><span class="p">))</span>
     <span class="n">dataset_refs</span> <span class="o">=</span> <span class="n">dataset_refs</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">dr</span><span class="p">))</span>
 
 <span class="n">coadd_deferred_dataset_handle</span> <span class="o">=</span> <span class="p">[</span><span class="n">butler</span><span class="o">.</span><span class="n">getDeferred</span><span class="p">(</span><span class="n">dr</span><span class="p">)</span> <span class="k">for</span> <span class="n">dr</span> <span class="ow">in</span> <span class="n">dataset_refs</span><span class="p">]</span>
@@ -9442,7 +9442,7 @@ border-left-style: solid;
 font-family: var(--jp-code-font-family);
 font-size: var(--jp-code-font-size);
 line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.getTemplate</span> <span style="color: var(--jp-info-color0)">INFO</span>: Using template input tract=3441, patch=7</pre>
+"><span style="color: var(--jp-warn-color2)">lsst.getTemplate</span> <span style="color: var(--jp-info-color0)">INFO</span>: Using template input tract=3442, patch=13</pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
@@ -9454,7 +9454,7 @@ border-left-style: solid;
 font-family: var(--jp-code-font-family);
 font-size: var(--jp-code-font-size);
 line-height: var(--jp-code-line-height);
-"><span style="color: var(--jp-warn-color2)">lsst.getTemplate</span> <span style="color: var(--jp-info-color0)">INFO</span>: Using template input tract=3442, patch=13</pre>
+"><span style="color: var(--jp-warn-color2)">lsst.getTemplate</span> <span style="color: var(--jp-info-color0)">INFO</span>: Using template input tract=3441, patch=7</pre>
 </div>
 </div>
 </div>
@@ -9493,7 +9493,7 @@ line-height: var(--jp-code-line-height);
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>dictionary of dataIds for overlapping exposures: defaultdict(&lt;class 'list'&gt;, {3442: [{band: 'r', skymap: 'DC2', tract: 3442, patch: 20}, {band: 'r', skymap: 'DC2', tract: 3442, patch: 13}], 3441: [{band: 'r', skymap: 'DC2', tract: 3441, patch: 14}, {band: 'r', skymap: 'DC2', tract: 3441, patch: 7}]})
-dictionary of overlapping exposures: defaultdict(&lt;class 'list'&gt;, {3442: [&lt;lsst.afw.image._exposure.ExposureF object at 0x7b2428485130&gt;, &lt;lsst.afw.image._exposure.ExposureF object at 0x7b2428347270&gt;], 3441: [&lt;lsst.afw.image._exposure.ExposureF object at 0x7b24285559b0&gt;, &lt;lsst.afw.image._exposure.ExposureF object at 0x7b2428349470&gt;]})
+dictionary of overlapping exposures: defaultdict(&lt;class 'list'&gt;, {3442: [&lt;lsst.afw.image._exposure.ExposureF object at 0x7ee12bd0dcf0&gt;, &lt;lsst.afw.image._exposure.ExposureF object at 0x7ee12bd631f0&gt;], 3441: [&lt;lsst.afw.image._exposure.ExposureF object at 0x7ee12be08030&gt;, &lt;lsst.afw.image._exposure.ExposureF object at 0x7ee12bd1aff0&gt;]})
 </pre>
 </div>
 </div>
