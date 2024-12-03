@@ -38,7 +38,7 @@ For more information about the DP0.2 catalogs, tables, and columns, visit the DP
 1.  Preparation and execution of the ADQL query
 ===============================================
 
-The sample query below uses the ``dp02_dc2_catalogs.Object`` catalog to extract the g-band and r-band fluxes (respectively ``g_calibFlux`` and ``r_calibFlux``) of all extended objects (by selecting ``g_extendedness = 1`` and ``r_extendedness = 1``) in a ~ 1 sq. degree region of the sky.  
+The sample query below uses the ``dp02_dc2_catalogs.Object`` catalog to extract the g-band and r-band fluxes (respectively ``g_calibFlux`` and ``r_calibFlux``) of all extended objects (by selecting ``g_extendedness = 1`` and ``r_extendedness = 1``) in a ~ 1.5 sq. degree region of the sky.  
 The ``calibFlux`` is the flux within a 12 pixel aperture; aperture fluxes are appropriate to use when calculating extended object colors.  
 It converts the fluxes to magnitudes, by the use of an ADQL function ``scisql_nanojanskyToAbMag()`` where the respective flux is the argument (and renames them as ``gmag`` and ``rmag``).  
 It restricts the search to return only objects with g and i magnitudes less than 23.  
