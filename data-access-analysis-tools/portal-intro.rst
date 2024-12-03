@@ -57,7 +57,7 @@ To modify the plot, one needs to click "Apply" and then "Close".
     :alt: Screenshot of the plot settings pop up window where the user can select various values and plot types to display the data from a query.  From here, the user can select parameters, label the x and y axes, and add a new plot, overplot, or modify a previous plot
     :width: 300
 
-   ** The plot settings pop-up window.**
+   **The plot settings pop-up window.**
 
 **5.  Imposing additional cuts on the plotted data**:  At this point, additional cuts can be applied to the table data being plotted.
 In the figure below, the g-band flux is limited to > 100 (via the constraint entered in the header of the column "g_calibFlux").
