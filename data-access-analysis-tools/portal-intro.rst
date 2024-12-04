@@ -35,9 +35,7 @@ For more information about the DP0.2 catalogs, tables, and columns, visit the DP
 
 .. _DP0-2-Portal-Histogram-Step-1:
 
-1.  Preparation and execution of the ADQL query
-===============================================
-
+**1.  Preparation and execution of the ADQL query**:  
 The sample query below uses the ``dp02_dc2_catalogs.Object`` catalog to extract the g-band and r-band fluxes (respectively ``g_calibFlux`` and ``r_calibFlux``) of all extended objects (by selecting ``g_extendedness = 1`` and ``r_extendedness = 1``) in a ~ 1.5 sq. degree region of the sky.  
 (The ``calibFlux`` is the flux within a 12 pixel aperture; aperture fluxes are appropriate to use when calculating extended object colors.)
 The query converts the fluxes to magnitudes, by the use of an ADQL function ``scisql_nanojanskyToAbMag()`` where the respective flux is the argument (and renames them as ``gmag`` and ``rmag``).  
@@ -58,9 +56,7 @@ It limits the search to those objects located in a circular region with a radius
    AND scisql_nanojanskyToAbMag(g_calibFlux) < 23 
    AND scisql_nanojanskyToAbMag(r_calibFlux) < 23 
 
-2.  Plotting the histogram of g-magnitudes
-==========================================
-
+**2.  Plotting the histogram of g-magnitudes**:  
 Executing the ADQL query is via clicking the “Search” button in the lower left corner.  
 The resulting display will by default show the sky coverage on the left, and the plot of the 1st column as a function of the 2nd column on the right.
 To plot the distribution of g magnitudes, it is necessary to add another plot panel, by clicking on the "+" button on the upper left-hand side of the active chart, and selecting "Histogram" as the Plot Type.
@@ -77,9 +73,7 @@ This will result in the dispay as below.
 
 .. _DP0-2-Portal-Histogram-Step-2:
 
-3.  Plotting the 2-d histogram (heatmap) of the g-r colors vs. g magnitudes
-===========================================================================
-
+**3.  Plotting the 2-d histogram (heatmap) of the g-r colors vs. g magnitudes**:
 The two-dimensional histogram (heatmap) of the g-r colors vs. g-magnitudes can be prepared by clicking on the "+" button on the upper left-hand side of the active chart.
 To plot the heatmap, this needs to be selected in the resulting pop-up window by clicking on "Heatmap" as the plot type.
 Plotting of the heatmap of g-r color vs. g-magnitude is accomplished via entering ``gmag`` for X, and ``gmag-rmag`` for Y.
