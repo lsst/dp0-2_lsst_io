@@ -54,7 +54,8 @@ which were obtained with a modified Julian date between 60000 and 60500.
 .. figure:: /_static/Howto_Image_1.png
     :name: Howto_Image_1
     :alt: Screenshot of the user interface query for the portal aspect.  The user can select the type of service to use for the query and enter constraints to access the data they need.  
-	The default interface for the "Image Search (ObsTAP)" queries, with example search parameters.
+	
+**The default interface for the "Image Search (ObsTAP)" queries, with example search parameters.**
     
 Clicking on the "Search" button retrieves observations in all filters.  
 
@@ -67,7 +68,8 @@ It is possible to restrict the retrieved images to be only those in the 'r' filt
 .. figure:: /_static/Howto_Image_2.png
     :name: Howto_Image_2
     :alt: A screenshot of the results view from submitting the query described above.  The upper left image is an image of the sky.  The upper right image shows the cartesian scatter plot resulting from the query.  The bottom section is the data table resulting from the query.  
-	Results for the example search parameters.  
+
+**Results for the example search parameters, with the right panel displaying the image corresponding to the observation which is highlighted in orange in the table at the bottom.**
 
 **7.  Manipulating the Active Chart plot**:
 This can be done via clicking on the "settings" icon (single gear) in the upper right corner to change the column data being plotted, alter the plot style, add axes labels, etc.
