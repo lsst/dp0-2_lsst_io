@@ -51,8 +51,8 @@ It is recommended to always return all metadata because the Portal requires some
 The screenshot below shows an example query for all PVIs (calexps) that overlap a specified location (here:  61.863 -35.790)
 which were obtained with a modified Julian date between 60000 and 60500.
 
-.. figure:: /_static/portal_intro_DP02g.png
-    :name: portal_ImageQueryDP02
+.. figure:: /_static/Howto_Image_1.png
+    :name: Howto_Image_1
     :alt: Screenshot of the user interface query for the portal aspect.  The user can select the type of service to use for the query and enter constraints to access the data they need.  
 	The default interface for the "Image Search (ObsTAP)" queries, with example search parameters.
     
@@ -60,13 +60,12 @@ Clicking on the "Search" button retrieves observations in all filters.
 
 **6.  Results View**:
 The default results appear in the tri-view format, with the image at upper left, an Active Chart plot at upper right, and the table of metadata below.
-The first row of the table is highlighted by default, with the corresponding image showing at upper left.
+The Active Chart plot default is RA versus Declination of all retrieved images, with the location of the highlighted table row shown in orange and the rest in blue, with the corresponding image showing at upper left.
 Clicking on another row in the displayed table will result in displaying the image corresponding to that particular exposure.
-The Active Chart plot default is RA versus Declination, with the location of the highlighted table row shown in orange and the rest in blue.  
 It is possible to restrict the retrieved images to be only those in the 'r' filter by clicking the down-arrow below the table column heading "lsst_band" and selecting "r" from the drop-down menu.  
     
-.. figure:: /_static/portal_intro_DP02h.png
-    :name: portal_ImageQueryResultsDP02
+.. figure:: /_static/Howto_Image_2.png
+    :name: Howto_Image_2
     :alt: A screenshot of the results view from submitting the query described above.  The upper left image is an image of the sky.  The upper right image shows the cartesian scatter plot resulting from the query.  The bottom section is the data table resulting from the query.  
 	Results for the example search parameters.  
 
