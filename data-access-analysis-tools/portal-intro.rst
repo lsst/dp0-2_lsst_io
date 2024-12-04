@@ -20,9 +20,9 @@ How to execute a sample User Interface (UI) query
 
 .. This section should provide a brief, top-level description of the page.
 
-.. Current version:  September 5, 2024
+.. Current version:  December 3, 2024
 
-This example uses the DP0.2 Catalogs to illustrate steps necessary to execute a UI query in the Portal aspect of the Rubin Science Platform (RSP).
+This "How-to" guide uses the DP0.2 Catalogs to illustrate steps necessary to execute a UI query in the Portal aspect of the Rubin Science Platform (RSP).
 
 **1. Landing page**:  The default landing page in the Portal aspect of the RSP reveals several tabs allowing a choice of various image or catalog repositories.
 The example given here uses the "DP0.2 Catalogs" repository, and this is the one to be selected here.
@@ -56,7 +56,7 @@ The selection of the data column names to be returned by the query is via using 
 Viewing only the selected data column names can be done by clicking the funnel icon to filter the columns of interest.
 
 **5.  Restrictng the range of selected data**:
-For the retrieval of only the data which meet specific constraints is desired, one can use the "constraints" column to specify query parameters.
+For the retrieval of only the data which meet specific constraints, one can use the "constraints" column to specify query parameters.
 For example, entering "> 300" in the "Constraints" box in the "g_ap03Flux" will restrict the entries at > 300 nJy.
 
 The removal of filters and resetting of the table view at any time is by using the "Reset Column Selections & Constraints" button above the upper-right corner of the table.
