@@ -29,7 +29,7 @@ The example given here uses the "DP0.2 Catalogs" repository, and this is the one
 There, two types of queries are available: "UI Assisted" (amounting to single-table queries - default), or "ADQL Queries."
 It is possible to toggle between the two by clicking on the botton to the right of "View:".
 Each of these options has a different user interface.
-This "How to" covers the UI version.
+This "How to" guide covers the UI version.
 
 **2.  Table selection**: Within the "DP0.2 Catalogs" tab, it is possible to choose the table to work with by clicking the "up-down" arrow to show the available tables.
 The default table in the right drop-down menu is the "dp02_dc2_Object" table, which will be used this for this example.
@@ -46,7 +46,7 @@ Note that the central (RA, Dec) coordinates for DC2, in decimal degrees, are: ``
 The longitude and latitude columns in "Position Columns" do automatically update to be the correct column names for right ascension and declination for the selected table.
 If a non-existent column name is entered, the box will highlight red in indication of the error.
 
-**3.  Exploring the table view**:  
+**4.  Exploring the table view**:
 The table to the right of "Enter Constraints" enables users to apply additional search constraints on the columns in the selected catalog table.
 Some tables have a lot of data columns.  
 It is possible to search for desired data columns by entering terms (e.g., ra, Flux, or flag) in the boxes underneath "Name" and pressing "enter" in order to view data columns of interest.
@@ -54,12 +54,14 @@ Entering, e.g. "ra" will return all rows containing "ra" in the name (those will
 
 The selection of the data column names to be returned by the query is via using checkboxes in the left-most column in the table.
 Viewing only the selected data column names can be done by clicking the funnel icon to filter the columns of interest.
+
+**5.  Restrictng the range of selected data**:
 For the retrieval of only the data which meet specific constraints is desired, one can use the "constraints" column to specify query parameters.
 For example, entering "> 300" in the "Constraints" box in the "g_ap03Flux" will restrict the entries at > 300 nJy.
 
 The removal of filters and resetting of the table view at any time is by using the "Reset Column Selections & Constraints" button above the upper-right corner of the table.
 
-**4.  Applying the row limit**:
+**6.  Applying the row limit**:
 The "Row Limit" in the bottom of the page can be changed to apply an upper bound to the number of rows returned.
 The Portal can work effectively with datasets with millions of rows.
 However, when learning or testing queries, it is advisable to limit the number of rows (e.g., 10000 rows is useful for testing).
@@ -67,7 +69,7 @@ However, when learning or testing queries, it is advisable to limit the number o
 *Note*: Because of the implementation of the Rubin Observatory "QServ" database, it is not recommended to use the row limit alone in order to get a "sampling" of data.
 Queries with only a row limit can run for much longer than one might intuitively expect; applying a spatial constraint is likely to return a result more quickly.
 
-**5.  Executing an example UI assisted query**:
+**7.  Executing an example UI assisted query**:
 The image below presents an example of how to search the DP0.2 Object catalog using a 3 arcminute cone near
 the DC2's central coordinates, returning only the five data columns "coord_ra", "coord_dec", and "g" "r"
 and "i_calibFlux", and imposing the contraints that the flux must be between 20 and 1000 nanojansky (i.e., 
@@ -90,13 +92,12 @@ The search might take a few moments.
 
 **This will show while the search is executing.  It is possible to cancel a query while it is executing by clicking the "Cancel" button.**
 
-**6.  Exploring the results view**: The search results will populate the "Results" view, as shown in the figure below.
+**8.  Exploring the results view**: The search results will populate the "Results" view, as shown in the figure below.
 The display layout is controlled by the "hamburger" button (three horizontal lines) at upper left.
 It is possible to change the layout by clicking on this icon and then on the "Results Layout" tab.
 The screenshot below uses the "Coverage Charts Tables" choice with a sky image at upper left.
 The color-composite image shows the relevant DC2 simulated sky region.
-A default "active chart" of the sky coordinates appears at upper right, and the table of results along the bottom.  
-
+A default "active chart" of the sky coordinates appears at upper right, and the table of results along the bottom.
 
 .. figure:: /_static/portal_intro_DP02d.png
     :name: portal_search_results_DP02
