@@ -69,7 +69,7 @@ It is possible to restrict the retrieved images to be only those in the 'r' filt
     :name: Howto_Image_2
     :alt: A screenshot of the results view from submitting the query described above.  The upper left image is an image of the sky.  The upper right image shows the cartesian scatter plot resulting from the query.  The bottom section is the data table resulting from the query.  
 
-**Results for the example search parameters, with the right panel displaying the image corresponding to the observation which is highlighted in orange in the table at the bottom.**
+**Results for the example search parameters, with the left panel displaying the image corresponding to the observation which is highlighted in orange in the table at the bottom.**
 
 **7.  Manipulating the Active Chart plot**:
 This can be done via clicking on the "settings" icon (single gear) in the upper right corner to change the column data being plotted, alter the plot style, add axes labels, etc.
