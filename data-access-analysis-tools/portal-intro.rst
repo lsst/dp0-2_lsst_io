@@ -20,7 +20,7 @@ How to use and edit the Astronomical Data Query Language (ADQL) commands in the 
 
 .. This section should provide a brief, top-level description of the page.
 
-.. Most recent update:  October 9 2024
+.. Most recent update:  December 4 2024
 
 The ADQL commands can be exectuted from the Portal Aspect of the Rubin Science Platform.
 This can be accessed by clicking on the "Portal" panel of the main landing page at `data.lsst.cloud <https://data.lsst.cloud>`_ and selecting one of the "DP0" tabs.
@@ -37,7 +37,7 @@ At any point while assembling a query using the UI assisted query interface, cli
 at the bottom of the page will transform the UI query into ADQL command.  
 Note that any changes then made to the ADQL are not propogated back to the UI assisted query constraints.
 
-Converting fluxes to magnitudes is much easier with the ADQL interface by using the `scisql_nanojanskyToAbMag()` functionality as demonstrated below.
+Converting fluxes to magnitudes is much easier with the ADQL interface by using the ``scisql_nanojanskyToAbMag()`` functionality as demonstrated below.
 
 **3. Querying the TAP schema**:  Information about the LSST TAP schema can be obtained via ADQL queries.
 The example below illustrates how to get the detailed list of columns available in the "Object" table, their associated units and descriptions:
