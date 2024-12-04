@@ -20,7 +20,7 @@ How to manipulate plotted data
 
 .. This section should provide a brief, top-level description of the page.
 
-This "How-to" exercise will show how to plot data, and manipulate such a plot.
+This "How-to" guide will show how to plot data, and manipulate such a plot.
 The example below will illustrate it for a color-magnitude diagram for a sample of objects.
 
 **1.  Selection of data**:  For the purpose of this exercise, it is necessary to first select data for plotting.
