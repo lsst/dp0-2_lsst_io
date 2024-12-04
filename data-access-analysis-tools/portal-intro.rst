@@ -22,20 +22,19 @@ The Portal aspect of the Rubin Science Platform lends itself well to extracting 
 It can be accessed by clicking on the "Portal" panel on the main landing page at data.lsst.cloud.
 This example uses the "UI Assisted" means (selected by pressing the "UI Assisted" button on the upper right).
 
-Plotting of a light curve requires a data table which contains the observation time.
+**1.  Selecting a data table containing observing time**:  Plotting of a light curve requires a data table which contains the observation time.
 For the simulated DP0.2 data, such table is the dp02_dc2_catalogs.DiaSource, but it contains fluxes at times when the object was detected at ``SNR > 5``.
-This table can be accessed by selecting ``DP0.2 Catalogs`` tab on the left-hand side, and the `dp02_dc2_catalogs.DiaSource`` tab on the right.
+This table can be accessed by selecting ``DP0.2 Catalogs`` tab on the left-hand side, and the ``dp02_dc2_catalogs.DiaSource`` tab on the right.
 
-If the flux of the object at epochs when the ``SNR < 5`` is needed, a different table using forced photometry (``ForcedSourceOnDiaObject``) needs to be used and this is covered in another "HowTo" bit.
+If the flux of the object at epochs when the ``SNR < 5`` is needed, a different table using forced photometry (``ForcedSourceOnDiaObject``) needs to be used and this is covered in another "HowTo" guide.
 
-
-An example here considers a low-redshift SNIa (67.4579, -44.0802) and will extract the ``SNR > 5`` flux data from that location.
+**2.  SN Ia as an example**:  An example here considers a low-redshift SNIa (67.4579, -44.0802) and will extract the ``SNR > 5`` flux data from that location.
 Such flux is derived from the processed visit image (PVI; “direct” image), ``psfFlux``.
 
-Selecting the data for the object of interest will require entering the object coordinates in the "Spatial" constraints on the left, selecting the "Cone shape" button and a 2 arcseconds radius.
+**3.  Selection criteria for object of interest**:  Selecting the data for the object of interest will require entering the object coordinates in the "Spatial" constraints on the left, selecting the "Cone shape" button and a 2 arcseconds radius.
 The box next to "Temporal" needs to be uncheckd (allowing the display of all data points at the required RA and Dec).
 
-For the output column, selection of the ``midPointTai`` will yield the time of the observation, ``psFlux`` will give the flux, and ``filterName`` will provide the filter used for the observation.
+**4.  Selection of desired output**:  For the output column, selection of the ``midPointTai`` will yield the time of the observation, ``psFlux`` will give the flux, and ``filterName`` will provide the filter used for the observation.
 Pressing on the "funnel" icon will restrict the table on the right to show only the selected entries.
 
 .. figure:: /_static/Howto_lightcurve_1.png
@@ -46,7 +45,7 @@ Pressing on the "funnel" icon will restrict the table on the right to show only 
 
 Pressing the "Search" button will execute the search, resulting in the three-panel display.  
 
-The right-hand plot, by default, will plot the first two columns of the table.
+**5.  Manipulating the resulting plot**:  The right-hand plot, by default, will plot the first two columns of the table.
 To plot the flux against time, it is necessary to click on the "gear" icon, and select the "midPointTai-60000" for X and "psFlux" for Y as shown below.  
 Note that the plotted flux is as measured in all filters.  
 
@@ -63,7 +62,7 @@ Note that the plotted flux is as measured in all filters.
 
 **Screenshot of the query results, with the light curve on the right, and the table of the observations on the bottom.**
 
-Note that the resulting plot on the right-hand side displays flux in all filters.
+**6.  Restricting the results to a single filter observation**:  Note that the resulting plot on the right-hand side displays flux in all filters.
 It is possible to restrict the plotted flux to be from a single filter by clicking the down-arrow under the "filterName" column heading in the table on the bottom, and selecting only the desired filter, say "r".  
 
 
