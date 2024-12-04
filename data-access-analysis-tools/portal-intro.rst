@@ -24,18 +24,16 @@ How to perform an image search (ObsTAP)
 
 =====================
 
-Once logged into the Portal aspect of the Rubin Science Platform, searches for images at a specific location or observing time can be conducted by (currently) clicking in the "DP0.2 Images" tab on top of the screen.
+**1.  Selecting the image (rather than catalog) repository**:  Once logged into the Portal aspect of the Rubin Science Platform, searches for images at a specific location or observing time can be conducted by (currently) clicking in the "DP0.2 Images" tab on top of the screen.
 Clicking on that tab will change the user interface to display query constraint options that are specific to the image data.
 
 Additional information about the image types available in the Rubin data set is available in the :ref:`DP0-2-Data-Products-DPDD`.
 
-**Observation Types**
-
-The IVOA standard options provide multiple choice for "Calibration Level" (0, 1, 2, 3, or 4).
+**2.  Observation Types (calibration level)**: The IVOA standard options provide multiple choice for "Calibration Level" (0, 1, 2, 3, or 4).
 For Rubin data, "1" is for the raw (unprocessed) images, "2" is for the processed visit images (PVIs; the calibrated single-epoch images 
 also called calexps), and "3" is for the derived image data such as difference images and co-added multiple PVIs ("deep coadds").
 
-The "Data Product Type" should be left as "Image", and the "Instrument Name", "Collection", and "Data Product Subtype" can all be left blank.
+**3.  Selection criteria**:  The "Data Product Type" should be left as "Image", and the "Instrument Name", "Collection", and "Data Product Subtype" should all be left blank.
 
 Under "Location", only “Observation boundary contains point” was implemented at the time this documentation was written.
 
@@ -45,13 +43,11 @@ Under "Timing", users can specify a range of the time of observation (this is on
 
 Under "Spectral Coverage", users can select one or more filters, or the wavelength in, e.g., nanometers as a means of specifying the image band.
 
-**Output Column Selection and Constraints**
-
+**4.  Output Column Selection and Constraints**:  
 The default is for all columns to be selected (i.e., have blue checks in the leftmost column).
 It is recommended to always return all metadata because the Portal requires some columns in order for the some of the "Results" view functionality to work.  
 
-**Example (PVIs/calexps)**
-
+**5.  Example (PVIs/calexps)**:
 The screenshot below shows an example query for all PVIs (calexps) that overlap a specified location (here:  61.863 -35.790)
 which were obtained with a modified Julian date between 60000 and 60500.
 
@@ -62,8 +58,7 @@ which were obtained with a modified Julian date between 60000 and 60500.
     
 Clicking on the "Search" button retrieves observations in all filters.  
 
-**Results View**
-
+**6.  Results View**:
 The default results appear in the tri-view format, with the image at upper left, an Active Chart plot at upper right, and the table of metadata below.
 The first row of the table is highlighted by default, with the corresponding image showing at upper left.
 Clicking on another row in the displayed table will result in displaying the image corresponding to that particular exposure.
@@ -75,7 +70,6 @@ It is possible to restrict the retrieved images to be only those in the 'r' filt
     :alt: A screenshot of the results view from submitting the query described above.  The upper left image is an image of the sky.  The upper right image shows the cartesian scatter plot resulting from the query.  The bottom section is the data table resulting from the query.  
 	Results for the example search parameters.  
 
-**Manipulating the Active Chart plot** 
-
+**7.  Manipulating the Active Chart plot**:
 This can be done via clicking on the "settings" icon (single gear) in the upper right corner to change the column data being plotted, alter the plot style, add axes labels, etc.
 
