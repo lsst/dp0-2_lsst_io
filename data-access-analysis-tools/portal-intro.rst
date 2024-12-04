@@ -18,6 +18,8 @@
 How to manipulate plotted data
 ##############################
 
+.. Current version:  December 3 2024
+
 .. This section should provide a brief, top-level description of the page.
 
 This "How-to" guide will show how to plot data, and manipulate such a plot.
