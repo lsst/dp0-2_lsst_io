@@ -23,8 +23,10 @@ It can be accessed by clicking on the "Portal" panel on the main landing page at
 This example uses the "UI Assisted" means (selected by pressing the "UI Assisted" button on the upper right).
 
 **1.  Selecting a data table containing observing time**:  Plotting of a light curve requires a data table which contains the observation time.
-For the simulated DP0.2 data, such table is the dp02_dc2_catalogs.DiaSource, but it contains fluxes at times when the object was detected at ``SNR > 5``.
+For the simulated DP0.2 data, such table is the ``dp02_dc2_catalogs.DiaSource``, but it contains fluxes at times when the object was detected at ``SNR > 5``.
+The DIA (Difference Image Analysis) method, used to prepare this table, basically subtracts the fluxes of the previously undetected objects from those that showed ``SNR > 5`` detections in individual single-epoch difference images.
 This table can be accessed by selecting ``DP0.2 Catalogs`` tab on the left-hand side, and the ``dp02_dc2_catalogs.DiaSource`` tab on the right.
+
 
 If the flux of the object at epochs when the ``SNR < 5`` is needed, a different table using forced photometry (``ForcedSourceOnDiaObject``) needs to be used and this is covered in another "HowTo" guide.
 
