@@ -20,7 +20,7 @@ How to navigate the RSP Portal Aspect
 
 .. This section should provide a brief, top-level description of the page.
 
-.. Current version:  September 1 2024
+.. Current version:  December 3 2024 (added numbers to entries)
 
 **1.  Logging in**:  The Portal Aspect of the Rubin Science Platform (RSP) can be accessed by clicking on the "Portal" panel of the main landing page at `data.lsst.cloud <https://data.lsst.cloud>`_.
 
