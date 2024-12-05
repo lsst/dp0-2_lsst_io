@@ -14,9 +14,11 @@
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
 .. A warning will alert you of identical labels during the linkcheck process.
 
-#####################################################
-How to extract and plot forced photometry light curve
-#####################################################
+########################################################################
+How to extract and plot forced photometry light curve of a variable star
+#########################################################################
+
+.. Current version December 4 2024
 
 The Rubin data set readily provides fluxes of the objects when they were detected at a ``SNR > 5``.
 In some cases, the science goal on-hand requires lower-SNR measurements.
@@ -26,15 +28,15 @@ That table contains "forced" flux measurements in locations of all objects which
 The table ``dp02_dc2_catalogs.DiaObject``, in turn, contains objects which were detected using the "Difference Image Analysis" (DIA) method.
 The DIA method basically subtracts the fluxes of the previously undetected objects from those that showed ``SNR > 5`` detections in individual single-epoch difference images.
 
-This example demonstrates how to create a forced photometry lightcurve for the supernova located at (67.4579, -44.0802).
+This example demonstrates how to create a forced photometry lightcurve for the known RR Lyrae star located at (62.1479031, -35.799138).
 
 The individual Processed Visit Images might have very slightly different coordinates for the same object.
 With this, instead of providing the RA and Dec to the light curve extraction process, it is wise to extract the data from the ``dp02_dc2_catalogs.DiaObject`` table using the object's unique DIA object identifier ``diaObjectId``.  
 Determining the ``diaObjectId``  can be accomplished via the Portal Aspect of the Rubin Science Platform, by clicking on the "UI assisted" button, selecting "DP0.2 Catalogs" tab, chosing the "dp02_dc2_catalogs" on the left, and "dp02_dc2_catalogs.DiaObject" table on the right.
 
-Only the spatial constraints need to be entered on the left, with the 67.4579, -44.0802 - and a 2 arcseconds radius using the "cone Shape" ("Temporal" constraints button needs to be unchecked).
-For the "Output Column Selection" only the ``diaObjectId`` needs to be checked.  
-Pressing the "search" button will return only one ``diaObjectId`` - it is 1252220598734556212.
+Only the spatial constraints need to be entered on the left, with the 62.1479031, -35.799138 - and a 2 arcseconds radius using the "cone Shape" ("Temporal" constraints button needs to be unchecked).
+For the "Output Column Selection" only the ``diaObjectId`` and needs to be checked.  
+Pressing the "search" button will return only one ``diaObjectId`` - it is 1651589610221864014.
 
 The ``ForcedSourceOnDiaObject`` contains fluxes of individual objects, but it does not contain the observation epochs;  however, the table ``CcdVisit`` does.
 Obtaining the visit epochs will require joining two tables - specifically ``ForcedSourceOnDiaObject`` and ``CcdVisit`` on the common meta entry of ``ccdVisitId``.  
@@ -55,7 +57,7 @@ Again, the exposure time midpoint modified julian date for all visits is extract
    FROM dp02_dc2_catalogs.ForcedSourceOnDiaObject as fsodo 
    JOIN dp02_dc2_catalogs.CcdVisit as cv 
    ON cv.ccdVisitId = fsodo.ccdVisitId 
-   WHERE fsodo.diaObjectId = 1252220598734556212 
+   WHERE fsodo.diaObjectId = 125222059873455621 
    AND fsodo.band = 'i'
 
 **Note:** The ``ForcedSourceOnDiaObject`` table contains forced photometry on both the difference image, ``psfDiffFlux``, and the processed visit image (PVI; "direct" image), ``psfFlux``.
