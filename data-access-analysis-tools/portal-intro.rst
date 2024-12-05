@@ -20,7 +20,7 @@ How to perform an image search (ObsTAP)
 
 .. This section should provide a brief, top-level description of the page.
 
-.. Most recent update:  October 9 2024
+.. Most recent update:  December 4 2024
 
 =====================
 
