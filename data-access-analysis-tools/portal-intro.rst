@@ -16,7 +16,7 @@ How to make a lightcurve of a clearly detected object with known coordinates
 
 .. This section should provide a brief, top-level description of the page.
 
-.. Most recent update:  November 7 2024
+.. Most recent update:  December 4 2024
 
 The Portal aspect of the Rubin Science Platform lends itself well to extracting and plotting a light curve of an object with known coordinates.
 It can be accessed by clicking on the "Portal" panel on the main landing page at data.lsst.cloud.
