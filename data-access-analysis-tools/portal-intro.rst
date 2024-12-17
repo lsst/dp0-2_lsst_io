@@ -37,7 +37,7 @@ Determining the ``diaObjectId``  can be accomplished via the Portal Aspect of th
 Only the spatial constraints need to be entered on the left, with the 62.1479038, -35.7991348 - and a 2 arcseconds radius using the "cone Shape" ("Temporal" constraints button needs to be unchecked).
 For the "Output Column Selection" only the ``diaObjectId`` and ``gPSFluxNdata`` need to be checked.
 (The ``gPSFluxNdata`` will return the number of observations in the ``g`` band, and if there are multiple objects in the search radius - the one with a larger mumber of data points needs to be selected.)
-Pressing the "search" button will return two ``diaObjectId``.  The one with a larger number of data points is 1651589610221862935.  
+Pressing the "search" button will return a few ``diaObjectId`` values.  The one with a larger number of data points is 1651589610221862935.  
 
 The ``ForcedSourceOnDiaObject`` contains fluxes of individual objects, but it does not contain the observation epochs;  however, the table ``CcdVisit`` does.
 Obtaining the visit epochs will require joining two tables - specifically ``ForcedSourceOnDiaObject`` and ``CcdVisit`` on the common meta entry of ``ccdVisitId``.  
@@ -53,13 +53,12 @@ Again, the exposure time midpoint modified julian date for all visits is extract
 
    SELECT fsodo.coord_ra, fsodo.coord_dec, 
    fsodo.diaObjectId, fsodo.ccdVisitId, fsodo.band, 
-   fsodo.psfDiffFlux, fsodo.psfFlux, fsodo.psfDiffFluxErr, 
+   fsodo.psfFlux, fsodo.psfFluxErr, 
    cv.expMidptMJD
    FROM dp02_dc2_catalogs.ForcedSourceOnDiaObject as fsodo 
    JOIN dp02_dc2_catalogs.CcdVisit as cv 
    ON cv.ccdVisitId = fsodo.ccdVisitId 
-   WHERE fsodo.diaObjectId = 125222059873455621 
-   AND fsodo.band = 'i'
+   WHERE fsodo.diaObjectId =  1651589610221862935
 
 **Note:** The ``ForcedSourceOnDiaObject`` table contains forced photometry on both the difference image, ``psfDiffFlux``, and the processed visit image (PVI; "direct" image), ``psfFlux``.
 Both are extracted via the query above.  
