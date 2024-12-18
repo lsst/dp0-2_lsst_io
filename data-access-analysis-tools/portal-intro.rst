@@ -18,7 +18,7 @@
 How to extract and plot forced photometry light curve of a variable star
 ########################################################################
 
-.. Current version December 4 2024
+.. Current version December 18 2024
 
 The Rubin data set readily provides fluxes of the objects when they were detected at a ``SNR > 5``.
 In some cases, the science goal on-hand requires lower-SNR measurements.
