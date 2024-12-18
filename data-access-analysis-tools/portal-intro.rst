@@ -44,9 +44,8 @@ Obtaining the visit epochs will require joining two tables - specifically ``Forc
 Such table joins are effectively performed using the Astronomical Data Query Language, ADQL.
 Entering an ADQL query requires clicking on the "Edit ADQL" button on the upper right.  
 
-A query given below will retrieve the coordinates, DIA object identifier, CCD visit identifier, band, and forced difference-image flux 
-and its error for all rows of the ``ForcedSourceOnDiaObjects`` table which are associated with the ``diaObject`` of interest,
-for i-band visits only.
+A query given below will retrieve the coordinates, DIA object identifier, CCD visit identifier, band, and "forced" flux 
+and its error for all rows of the ``ForcedSourceOnDiaObjects`` table which are associated with the ``diaObject`` of interest.
 Again, the exposure time midpoint modified julian date for all visits is extracted by joining to the ``CcdVisit`` table.
 
 .. code-block:: SQL 
@@ -60,31 +59,16 @@ Again, the exposure time midpoint modified julian date for all visits is extract
    ON cv.ccdVisitId = fsodo.ccdVisitId 
    WHERE fsodo.diaObjectId =  1651589610221862935
 
-**Note:** The ``ForcedSourceOnDiaObject`` table contains forced photometry on both the difference image, ``psfDiffFlux``, and the processed visit image (PVI; "direct" image), ``psfFlux``.
-Both are extracted via the query above.  
-This example is using a supernova it uses the ``psfDiffFlux``, which is the forced photometry on the difference image, in which the static-sky component (the host galaxy) has been subtracted.
-However, the ``psfFlux`` would be more appropriate for generating the lightcurve of a variable star, as there is no need to subtract the static component (in this case, the variable star's average flux).
-
 The defalt plot will be the dec vs. RA (the plotting tool defaults to plot the data in the two leftmost columns of the table).  
 The plot can be changed by opening the plot parameters pop-up window which will appear by clicking on the settings icon (a single gear above the plot window).
-The example below uses ``psfDiffFlux`` as a function of ``expMidptMJD`` (MJD time of the exposure).  
-Note that for some of the pointings, the plotted flux is negative.
-This is because ``psfDiffFlux`` is a result of the subtraction of some fiducial value (obtained by averaging previous observations) from the data in the PVI on hand.
-This, on some occassions can result in a negative value.  
+The example below uses ``psfFlux`` as a function of ``expMidptMJD`` (MJD time of the exposure).
+Here, only one band was seleted (``r``) by selecting this in the box contaning ``band char`` under the table header.  
 
-**WARNING:** Do not use the ADQL function ``scisql_nanojanskyToAbMag()`` to convert difference image fluxes to magnitudes.
-This is very dangerous! 
-This function does not return any value for a negative flux, and difference image fluxes can be negative (e.g., either the
-object has declined in brightness compared to the template, or it is a non-detection and the flux is very small and negative).
-Using the ``scisql_nanojanskyToAbMag()`` function on columns like ``psfDiffFlux`` can result in missing data.
-While it is generally safe to convert forced fluxes from the PVI to magnitudes, there might be edge cases where the direct image
-forced photometry is negative 
-(e.g., rare cases where the source is faint or gone *and* in a region of slightly oversubtracted sky background).
-It is only ever fully safe to use this function when using ``SNR > 5`` *detections* in PVIs.
+If a magnitude rather than flux is needed, one can use the ADQL function ``scisql_nanojanskyToAbMag()`` to convert difference image fluxes to magnitudes.
 
 .. figure:: /_static/portal_tut05_step01d.png
     :name: portal_tut05_step01d
     :alt: A screenshot of the results view showing the table and the i-band lightcurve.
 
-    Figure 4: Results view showing the table and the i-band light curve.
+** Results view showing the table and the g-band light curve.**
 
