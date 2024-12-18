@@ -62,7 +62,7 @@ Again, the exposure time midpoint modified julian date for all visits is extract
 The defalt plot will be the dec vs. RA (the plotting tool defaults to plot the data in the two leftmost columns of the table).  
 The plot can be changed by opening the plot parameters pop-up window which will appear by clicking on the settings icon (a single gear above the plot window).
 The example below uses ``psfFlux`` as a function of ``expMidptMJD`` (MJD time of the exposure).
-Here, only one band was seleted (``r``) by selecting this in the box contaning ``band char`` under the table header.  
+Here, only one band was seleted (``r``) by selecting this under the box contaning ``band char`` in the table header.  
 
 If a magnitude rather than flux is needed, one can use the ADQL function ``scisql_nanojanskyToAbMag()`` to convert difference image fluxes to magnitudes.
 
