@@ -68,7 +68,7 @@ If a magnitude rather than flux is needed, one can use the ADQL function ``scisq
 
 .. figure:: /_static/portal_tut05_step01d.png
     :name: portal_tut05_step01d
-    :alt: A screenshot of the results view showing the table and the i-band lightcurve.
+    :alt: A screenshot of the results view showing the table and the r-band lightcurve.
 
-** Results view showing the table and the g-band light curve.**
+** Results view showing the table and the r-band light curve.**
 
