@@ -51,6 +51,11 @@ and clicking on "history" (near upper-right).
 Major Updates Log
 =================
 
+Dec 19 2024
+-----------
+
+The recommended image of the RSP at data.lsst.cloud was bumped to Weekly 2024_50.
+
 Nov 15 2024
 -----------
 Tutorial notebook 13a (Image Cutout SciDemo) was updated to demonstrate how to retrieve cutouts without writing to disk,
