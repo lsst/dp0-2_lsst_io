@@ -159,13 +159,9 @@ Catalog data are accessible with the Table Access Protocol (TAP) service via the
 **DP0.2 Table Schema:**
 The column names, units, and descriptions of the DP0.2 catalogs listed in the table below are all available via the `DP0.2 schema browser <https://sdm-schemas.lsst.io/dp02.html>`_.
 
-**Multiple similar Butler catalogs**, which contain the same data but are slightly differently named and differently formatted,
-can be found by querying the collections in the Butler registry.
-Some tables require different types of inputs: for example, "diaSourceTable" can be queried with a dataId that includes the visit,
-whereas "diaSourceTable_tract" can be queried with a dataId that includes the tract number.
-The table below lists the catalogs most likely to be most useful to most people.
-Note that in the future, for real LSST data releases, this level of redundancy in the catalog data would not be served.
-
+**DP0.2 Table Index:**
+Object and source tables are indexed by coordinate (RA, Dec), and all tables are indexed by an identifier (e.g., the Object table by ``objectId``, the ccdVisit table by ``ccdVisitId``).
+Queries that provide constraints on these indexed columns (e.g., cone searches) can be executed much faster because it is not necessary to consider all rows.
 
 .. list-table:: Catalog data available for DP0.2.
    :widths: 100 100 390
@@ -207,11 +203,28 @@ Note that in the future, for real LSST data releases, this level of redundancy i
 
 |
 
+**Multiple similar Butler catalogs**, which contain the same data but are slightly differently named and differently formatted,
+can be found by querying the collections in the Butler registry.
+Some tables require different types of inputs: for example, "diaSourceTable" can be queried with a dataId that includes the visit,
+whereas "diaSourceTable_tract" can be queried with a dataId that includes the tract number.
+The table below lists the catalogs most likely to be most useful to most people.
+Note that in the future, for real LSST data releases, this level of redundancy in the catalog data would not be served.
+
 **Principal Columns:**
+In this context, 'principal columns' means the columns that a basic table query (or most queries) would want to retrieve;
+in other words, the default columns.
 For convenience, Rubin Observatory staff have identified the principal columns which are most likely to be useful.
 These principal columns will be pre-selected in the Table View of the RSP's Portal Aspect.
 
-**Recommended Search Parameter "detect_isPrimary = True":**
+**Recommendation to include spatial constraints:**
+It is recommended to always start with spatial constraints for a small radius and then expand the search area.
+Qserv stores catalog data sharded by coordinate (RA, Dec).
+ADQL query statements that include constraints by coordinate do not requre a whole-catalog search,
+and are typically faster (and can be *much* faster) than ADQL query statements which only include constraints for other columns.
+Use either an ADQL :ref:`Adql-Recipes-Cone-Search` or a :ref:`Adql-Recipes-Polygon-Search` for faster queries.
+Use of column constraints, or ``WHERE ... BETWEEN`` statements, to set boundaries on RA and Dec is not recommended.
+
+**Recommended search parameter "detect_isPrimary = True":**
 A good default search query parameter for the Object, Source, and ForcedSource catalogs is to set **detect_isPrimary** = **True**.
 The ``detect_isPrimary`` parameter is ``True`` if a source has no children, is in the inner region of a coadd patch, is in the inner region of a coadd tract, and is not “detected” in a pseudo-filter.
 Setting ``detect_isPrimary`` to ``True`` will remove any duplicates, sky objects, etc.
