@@ -64,7 +64,7 @@ The plot can be changed by opening the plot parameters pop-up window which will 
 The example below uses ``psfFlux`` as a function of ``expMidptMJD`` (MJD time of the exposure).
 Here, only one band was seleted (``r``) by selecting this under the box contaning ``band char`` in the table header.  
 
-If a magnitude rather than flux is needed, one can use the ADQL function ``scisql_nanojanskyToAbMag()`` to convert difference image fluxes to magnitudes.
+If a magnitude rather than flux is needed, one can use the ADQL function ``scisql_nanojanskyToAbMag()`` to convert fluxes to magnitudes.
 
 .. figure:: /_static/portal_tut05_step01d.png
     :name: portal_tut05_step01d
