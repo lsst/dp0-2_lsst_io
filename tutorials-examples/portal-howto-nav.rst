@@ -110,6 +110,9 @@ Dismiss the pop-up window by clicking on the OK button or on the X in its upper 
 * G: Data type. E.g., integer (int), double precision (double), boolean.
 * H: Button to clear (reset) all column selections and constraints.
 
-**12.** Columns are searchable. Type a word, or use the drop-down menu, at the top of every column to find columns of interest.
+**12.** In the schema interface of Figure 5, notice that the columns are searchable.
+Type a word, or use the drop-down menu, at the top of every column to find columns of interest.
 For example, in the entry field under "Name" type "Flux" and click "enter" or "return" to see all column names with "Flux" in them.
 Clear the entry field and click "enter" or "return" again to see all columns names (all rows of the schema interface).
+
+Return to the list of DP0.2 :ref:`DP0-2-Tutorials-Portal`.
