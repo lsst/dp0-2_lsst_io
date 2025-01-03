@@ -44,7 +44,7 @@ This tutorial demonstrates how to navigate the Portal's user interface (UI), and
 
 **2.** On the RSP landing page (Figure 1), if "Log in" appears at upper right instead of your username, click "Log in" and follow the prompts to authenticate.
 
-**3.** Click on the Portal square to enter the Portal Aspect.
+**3.** On the RSP landing page (Figure 1) click on the Portal square to enter the Portal Aspect.
 
 .. figure:: /_static/portal-howto-nav-2.png
     :name: portal-howto-nav-2
@@ -84,10 +84,10 @@ Dismiss the pop-up window by clicking on the OK button or on the X in its upper 
 
 **10.** In the Portal UI (Figure 4) review the 8 main components labeled A through H, which are used together to query (search) and retrieve data.
 
-* A: Drop-down menu of the available DP0.2 catalogs.
-* B: Drop-down menu of tables available for the selected catalog. The ``Object`` table is selected by default.
-* C: Schema interface to put column constraints on, and choose rows to be returned from, the selected table.
-* D: Entry fields for spatial constraints to be applied to the selected table.
+* A: Drop-down menu of the collections available. The DP0.2 catalogs (``dp02_dc2_catalogs``) are selected by default.
+* B: Drop-down menu of the tables available for the selected catalog. The ``Object`` table is selected by default.
+* C: Schema interface to apply column constraints on, and select rows to be returned from, the selected table.
+* D: Entry fields for spatial constraints to be applied to the selected table (e.g., cone or polygon areas).
 * E: Entry field to set the maximum number of rows to return from the selected table.
 * F: Button to convert the search constraints set with C, D, and E into an ADQL statement.
 * G: Toggle to switch between this graphical UI and the alternative ADQL UI.
