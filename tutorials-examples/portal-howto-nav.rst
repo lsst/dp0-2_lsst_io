@@ -57,6 +57,7 @@
 .. figure:: /_static/portal-howto-nav-3.png
     :name: portal-howto-nav-3
     :alt: The sidebar menu of the Portal Aspect, showing options in addition to the tabs.
+    :width: 300
 
     Figure 3: The sidebar menu of the Portal Aspect.
 
@@ -78,13 +79,13 @@ Dismiss the pop-up window by clicking on the OK button or on the X in its upper 
 
 **9.** Review the 8 main components of the UI, labeled A through H, that are used together to query (search) and retrieve data.
 
- * A. Drop-down menu of the available DP0.2 catalogs.
- * B. Drop-down menu of tables available for the selected catalog. The ``Object`` table is selected by default.
- * C. Schema interface to put column constraints on, and choose rows to be returned from, the selected table.
- * D. Entry fields for spatial constraints to be applied to the selected table.
- * E. Entry field to set the maximum number of rows to return from the selected table.
- * F. Button to convert the search constraints set with C, D, and E into an ADQL statement.
- * G. The toggle to switch between this graphical UI and the alternative ADQL UI.
- * H. A button to execute the query: to apply the search constraints and retrieve data.
+* A. Drop-down menu of the available DP0.2 catalogs.
+* B. Drop-down menu of tables available for the selected catalog. The ``Object`` table is selected by default.
+* C. Schema interface to put column constraints on, and choose rows to be returned from, the selected table.
+* D. Entry fields for spatial constraints to be applied to the selected table.
+* E. Entry field to set the maximum number of rows to return from the selected table.
+* F. Button to convert the search constraints set with C, D, and E into an ADQL statement.
+* G. The toggle to switch between this graphical UI and the alternative ADQL UI.
+* H. A button to execute the query: to apply the search constraints and retrieve data.
 
 **10.** Review the X components of the schema interface.
