@@ -59,6 +59,22 @@ More information can also be found in the `about firefly <https://data.lsst.clou
 
 The tutorials below are step-by-step demonstrations of how to use the Portal Aspect for science investigations with the DP0 data set.
 
+How-to tutorials
+----------------
+
+Short tutorials that focus on one Portal function or tool.
+
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    portal-howto-nav
+
+Science tutorials
+-----------------
+
+Longer tutorials that demonstrate common workflows for scientific analyses that use multiple Portal tools in sequence.
+
 .. toctree::
     :titlesonly:
     :glob:
