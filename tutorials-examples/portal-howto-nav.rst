@@ -68,7 +68,7 @@ Dismiss the sidebar menu by clicking on the X in the upper right corner of the m
 **7.** Click on the Rubin logo next to the menu icon to see a pop-up window with Rubin Portal Version Information.
 Dismiss the pop-up window by clicking on the OK button or on the X in its upper right corner.
 
-**.8.** Click on the tab labeled DP0.2 Catalogs.
+**8.** Click on the tab labeled DP0.2 Catalogs.
 
 .. figure:: /_static/portal-howto-nav-4.png
     :name: portal-howto-nav-4
@@ -77,15 +77,40 @@ Dismiss the pop-up window by clicking on the OK button or on the X in its upper 
     Figure 4: The Portal User Interface (UI) for querying the DP0.2 catalogs.
 
 
-**9.** Review the 8 main components of the UI, labeled A through H, that are used together to query (search) and retrieve data.
+**9.** Review the 8 main components of the UI, labeled A through H in Figure 4, that are used together to query (search) and retrieve data.
 
-* A. Drop-down menu of the available DP0.2 catalogs.
-* B. Drop-down menu of tables available for the selected catalog. The ``Object`` table is selected by default.
-* C. Schema interface to put column constraints on, and choose rows to be returned from, the selected table.
-* D. Entry fields for spatial constraints to be applied to the selected table.
-* E. Entry field to set the maximum number of rows to return from the selected table.
-* F. Button to convert the search constraints set with C, D, and E into an ADQL statement.
-* G. The toggle to switch between this graphical UI and the alternative ADQL UI.
-* H. A button to execute the query: to apply the search constraints and retrieve data.
+* A: Drop-down menu of the available DP0.2 catalogs.
+* B: Drop-down menu of tables available for the selected catalog. The ``Object`` table is selected by default.
+* C: Schema interface to put column constraints on, and choose rows to be returned from, the selected table.
+* D: Entry fields for spatial constraints to be applied to the selected table.
+* E: Entry field to set the maximum number of rows to return from the selected table.
+* F: Button to convert the search constraints set with C, D, and E into an ADQL statement.
+* G: Toggle to switch between this graphical UI and the alternative ADQL UI.
+* H: Button to execute the query; to apply the search constraints and retrieve data into the results tab.
 
-**10.** Review the X components of the schema interface.
+.. figure:: /_static/portal-howto-nav-5.png
+    :name: portal-howto-nav-5
+    :alt: The schema interface, showing how to select columns to include in the results, and how to place constraints on column values.
+
+    Figure 4: The schema interface for the DP0.2 ``Object`` table, with three columns selected (``coord_ra``, ``coord_dec``, and ``g_ap03Flux``), and a constraint that ``g_ap03Flux`` be greater than 360 nJy (nanoJanskies).
+
+
+**10.** Review the 8 components of the schema interface, labeled A through H in Figure 5, that are used to apply search constraints on the table data.
+
+* A: Selection boxes. Click a box to include the column in the query. Click the funnel icon to view only selected columns.
+* B: Names. Column names are short, descriptive, and unique within a table.
+* C: Constraints. In any box type in the desired contraints on the values to be returned (e.g., :math:`>, <, =, !=`).
+* D: Units. For DP0.2, it is a known issue that some columns are missing their units.
+* E: Unified Content Descriptor (UCD). Vocabulary standards set by the `International Virtual Observatory Alliance <https://www.ivoa.net/>`_.
+* F: Descriptions of the column's data.
+* G: Data type. E.g., integer (int), double precision (double), boolean.
+* H: Button to clear (reset) all column selections and constraints.
+
+**11.** Columns are searchable. Type a word, or use the drop-down menu, at the top of every column to find columns of interest.
+For example, in the entry field under "Name" type "Flux" and click "enter" or "return" to see all column names with "Flux" in them.
+
+**Warning:** Do not use the schema interface to apply spatial constraints.
+In other words, do not use the "constraints" column (component C of Figure 5) to apply limits on coordinate columns (such as ``coord_ra`` and ``coord_dec``).
+Do use the entry fields in component D of Figure 4 to apply spatial constraints with a cone or polygon search.
+The backend of the database can execute cone and polygon spatial constraints much more quickly than schema constraints placed on coordinate columns.
+
