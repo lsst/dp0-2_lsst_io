@@ -69,6 +69,8 @@ Short tutorials that focus on one Portal function or tool.
     :glob:
 
     portal-howto-nav
+    portal-howto-uiquery
+
 
 Science tutorials
 -----------------
