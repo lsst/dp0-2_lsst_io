@@ -16,9 +16,9 @@
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
 .. A warning will alert you of identical labels during the linkcheck process.
 
-############################################
-01. How to navigate the user interface (UI).
-############################################
+######################################
+01. How to navigate the user interface
+######################################
 
 .. This section should provide a brief, top-level description of the page.
 
@@ -29,6 +29,9 @@
 **Last verified to run:** 2025-02-03
 
 **Targeted learning level:** beginner 
+
+**Introduction:**
+This tutorial demonstrates how to navigate the Portal's user interface (UI), and provides a tour of the its main components.
 
 **1.** In a web browser, go to the URL `data.lsst.cloud <https://data.lsst.cloud/>`_.
 
@@ -76,8 +79,9 @@ Dismiss the pop-up window by clicking on the OK button or on the X in its upper 
 
     Figure 4: The Portal User Interface (UI) for querying the DP0.2 catalogs.
 
+**9.** Use the mouse to hover-over the components of the UI and see pop-up explanations of the functionality.
 
-**9.** Review the 8 main components of the UI, labeled A through H in Figure 4, that are used together to query (search) and retrieve data.
+**10.** Review the 8 main components of the UI, labeled A through H in Figure 4, that are used together to query (search) and retrieve data.
 
 * A: Drop-down menu of the available DP0.2 catalogs.
 * B: Drop-down menu of tables available for the selected catalog. The ``Object`` table is selected by default.
@@ -92,25 +96,20 @@ Dismiss the pop-up window by clicking on the OK button or on the X in its upper 
     :name: portal-howto-nav-5
     :alt: The schema interface, showing how to select columns to include in the results, and how to place constraints on column values.
 
-    Figure 4: The schema interface for the DP0.2 ``Object`` table, with three columns selected (``coord_ra``, ``coord_dec``, and ``g_ap03Flux``), and a constraint that ``g_ap03Flux`` be greater than 360 nJy (nanoJanskies).
+    Figure 5: The schema interface for the DP0.2 ``Object`` table, with three columns selected (``coord_ra``, ``coord_dec``, and ``g_ap03Flux``), and a constraint that ``g_ap03Flux`` be greater than 360 nJy (nanoJanskies).
 
 
-**10.** Review the 8 components of the schema interface, labeled A through H in Figure 5, that are used to apply search constraints on the table data.
+**11.** Review the 8 components of the schema interface, labeled A through H in Figure 5, that are used to apply search constraints on the table data.
 
 * A: Selection boxes. Click a box to include the column in the query. Click the funnel icon to view only selected columns.
-* B: Names. Column names are short, descriptive, and unique within a table.
-* C: Constraints. In any box type in the desired contraints on the values to be returned (e.g., :math:`>, <, =, !=`).
+* B: Names. Column names are short, descriptive, and unique within a table. Click on "Name" to sort by name.
+* C: Constraints. Apply limits on column values by typing in desired constraints (e.g., :math:`>, <, =, !=`).
 * D: Units. For DP0.2, it is a known issue that some columns are missing their units.
 * E: Unified Content Descriptor (UCD). Vocabulary standards set by the `International Virtual Observatory Alliance <https://www.ivoa.net/>`_.
 * F: Descriptions of the column's data.
 * G: Data type. E.g., integer (int), double precision (double), boolean.
 * H: Button to clear (reset) all column selections and constraints.
 
-**11.** Columns are searchable. Type a word, or use the drop-down menu, at the top of every column to find columns of interest.
+**12.** Columns are searchable. Type a word, or use the drop-down menu, at the top of every column to find columns of interest.
 For example, in the entry field under "Name" type "Flux" and click "enter" or "return" to see all column names with "Flux" in them.
-
-**Warning:** Do not use the schema interface to apply spatial constraints.
-In other words, do not use the "constraints" column (component C of Figure 5) to apply limits on coordinate columns (such as ``coord_ra`` and ``coord_dec``).
-Do use the entry fields in component D of Figure 4 to apply spatial constraints with a cone or polygon search.
-The backend of the database can execute cone and polygon spatial constraints much more quickly than schema constraints placed on coordinate columns.
-
+Clear the entry field and click "enter" or "return" again to see all columns names (all rows of the schema interface).
