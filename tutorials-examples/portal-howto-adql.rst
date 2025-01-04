@@ -99,15 +99,14 @@ It is the same query as was used above in Option 1.
 .. code-block:: SQL
 
   SELECT coord_dec, coord_ra, detect_isPrimary, refExtendedness,
-         g_ModelFlux, i_ModelFlux, r_ModelFlux, 
-         u_cModelFlux, y_cModelFlux, z_cModeLFlux
-  FROM dp02_dc2_catalogs.Object
-  WHERE CONTAINS(POINT 'ICRS', coord_ra, coord_dec),
-  CIRCLE(' ICRS', 62, -37, 0. 167) = 1
-  AND (detect_isPrimary =1 AND refExtendedness =1
-  AND u_ModelFlux >360 AND g_ModelFlux >360
-  AND r_cModelFlux >360 AND i_ModelFlux >360
-  AND z_cModelFlux >360 AND y_cModelFlux >360)
+         u_cModelFlux, g_cModelFlux, r_cModelFlux, 
+         i_cModelFlux, z_cModelFlux, y_cModelFlux 
+  FROM dp02_dc2_catalogs.Object 
+  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),CIRCLE('ICRS', 62, -37, 0.167))=1
+        AND (detect_isPrimary =1 AND refExtendedness =1 
+             AND u_cModelFlux >360 AND g_cModelFlux >360
+             AND r_cModelFlux >360 AND i_cModelFlux >360
+             AND z_cModelFlux >360 AND y_cModelFlux >360)
 
 
 **2.5.** Click the Search button at lower left.
