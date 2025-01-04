@@ -80,11 +80,6 @@ typically without scientific context or motivation - just simple examples for qu
     portal-howto-table
 
 
-Acronyms used above:
-
-* UI = User Interface
-* ADQL = Astronomy Query Data Language
-
 
 Science tutorials
 -----------------
