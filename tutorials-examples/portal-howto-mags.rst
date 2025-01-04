@@ -39,7 +39,7 @@ Negative fluxes should not be converted to magnitudes using this special ADQL fu
 **1. Go to the DP0.2 catalog ADQL interface.**
 Navigate to the Portal's DP0.2 Catalogs tab and switch to the ADQL interface.
 
-**2. For magnitudes, use the ``scisql_nanojanskyToAbMag()`` function.**
+**2. To return magnitudes** use the ``scisql_nanojanskyToAbMag()`` function.
 This function will convert a flux value with the units of nanoJanskies (nJy) into an AB magnitude.
 The conversion is :math:`m = -2.5 log(f) + 31.4`, where :math:`m` is magnitude and :math:`f` is flux.
 
@@ -61,7 +61,7 @@ The conversion is :math:`m = -2.5 log(f) + 31.4`, where :math:`m` is magnitude a
              AND z_cModelFlux >360 AND y_cModelFlux >360)
 
 
-**3. For magnitude errors, use the ``scisql_nanojanskyToAbMagSigma()`` function.**
+**3. To return magnitude errors** use the ``scisql_nanojanskyToAbMagSigma()`` function.
 This funtion will convert the corresponding flux errors, in nJy, into AB magnitude errors.
 
 .. code-block:: SQL
@@ -89,8 +89,8 @@ This funtion will convert the corresponding flux errors, in nJy, into AB magnitu
 
 **4. View the results.**
 Figure 1 shows the table panel in the Results tab for the query above.
-No flux columns have been retrieved.
-Instead, magnitude and magnitude error columns have been returned, and are named as specified in the ADQL statement.
+Notice that there are no flux columns because they were retrieved ``AS`` magnitudes,
+and the columns have been renamed as specified in the ADQL statement.
 
 .. figure:: /_static/portal-howto-mags-1.png
     :name: portal-howto-mags-1
