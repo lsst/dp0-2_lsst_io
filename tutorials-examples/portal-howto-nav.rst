@@ -82,14 +82,14 @@ Dismiss the window by clicking on the OK button or on the X in its upper right c
 **8. Select DP0.2 catalogs.**
 On the Portal landing page (Figure 2) click on the tab labeled DP0.2 Catalogs.
 
+**9. Mouse-over for pop-up notes.**
+In the Portal UI (Figure 4) use the mouse to hover-over the components of the UI and see pop-up explanations of the functionality.
+
 .. figure:: /_static/portal-howto-nav-4.png
     :name: portal-howto-nav-4
     :alt: The graphical user interface for the Portal, offering drop-down menus to select catalogs and tables, entry fields for temporal and spatial constraints, and an interative view of the selected table schema.
 
     Figure 4: The Portal User Interface (UI) for querying the DP0.2 catalogs.
-
-**9. Mouse-over for pop-up notes.**
-In the Portal UI (Figure 4) use the mouse to hover-over the components of the UI and see pop-up explanations of the functionality.
 
 **10. Review the UI components.**
 In the Portal UI (Figure 4) review the 8 main components labeled A through H, which are used together to query (search) and retrieve data.
