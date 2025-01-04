@@ -33,5 +33,60 @@
 **Introduction:**
 This tutorial demonstrates how to join tables from a given catalog and retrieve results with ADQL.
 
+**Warning!** 
+Not all tables can be joined.
+Two tables must have a column in common in order to be joined.
+
 **1. Go to the DP0.2 catalog ADQL interface.**
 Navigate to the Portal's DP0.2 Catalogs tab and switch to the ADQL interface.
+
+**2. The ADQL components of a JOIN...ON statment.**
+The generic example below illustrates a common join scenario.
+Four columns ("ra", "dec", "colA", and "colB") are selected from "table1", for objects
+where their coordinates are within 0.1 degrees of RA=62 deg, Dec=-37 deg.
+The results from "table1" are joined with "table2" on their matching column, "colID".
+Two columns are selected from "table2" ("colX" and "colY").
+
+.. code-block:: SQL
+
+   SELECT tab1.ra, tab1.dec, tab1.colA, tab1.colB, tab2.colX, tab2.colY 
+   FROM table1 AS tab1 
+   JOIN table2 AS tab2 
+   ON tab1.colID = tab2.colID 
+   WHERE CONTAINS(POINT('ICRS', tab1.ra, tab1.dec),
+         CIRCLE('ICRS', 62.0, -37, 0.1)) = 1
+
+
+**3. Execute a two-table join.**
+The ``Source`` table (detections in individual processed visit images) can be joined with the
+``ccdVisit`` table (metadata about individual visits) using a shared column, ``ccdVisitId``,
+which uniquely identifies an LSST visit.
+
+.. code-block:: SQL
+
+   SELECT src.coord_ra, src.coord_dec, src.band, src.ccdVisitId, 
+          scisql_nanojanskyToAbMag(src.psfFlux) AS psfAbMag,
+          cv.expMidptMJD, cv.seeing
+   FROM dp02_dc2_catalogs.Source AS src
+   JOIN dp02_dc2_catalogs.CcdVisit AS cv
+   ON src.ccdVisitId = cv.ccdVisitId
+   WHERE CONTAINS(POINT('ICRS', src.scoord_ra, src.coord_dec),
+         CIRCLE('ICRS', 62.0, -37, 0.1)) = 1 
+         AND cv.obsStartMJD > 60925 AND cv.obsStartMJD < 60955
+         AND src.band = 'i' 
+
+
+
+**4. Execute a three-table join.**
+
+object, forcedsource, ccdvisit
+
+.. code-block:: SQL
+
+
+
+**X. Find more join examples.**
+Visit the :doc:`/data-access-analysis-tools/adql-recipes` page for more examples of table joins.
+Visit the `DP0.2 schema browser <https://sdm-schemas.lsst.io/dp02.html>`_ to see which tables have columns in common.
+
+Return to the list of DP0.2 :ref:`DP0-2-Tutorials-Portal`.
