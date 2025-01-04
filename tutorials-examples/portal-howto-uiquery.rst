@@ -34,7 +34,7 @@
 This tutorial demonstrates how to execute a simple query for table data with the Portal's user interface (UI).
 
 
-**1.** Navigate to the "DP0.2 Catalogs" tab in the Portal UI.
+**1. Go to the Portal's DP0.2 Catalogs tab.** The screen should look like Figure 1.
 
 .. figure:: /_static/portal-howto-uiquery-1.png
     :name: portal-howto-uiquery-1
@@ -43,13 +43,13 @@ This tutorial demonstrates how to execute a simple query for table data with the
     Figure 1: The Portal User Interface (UI) for querying the DP0.2 catalogs.
 
 
-**2.** Select to query and retrieve data from the DP0.2 ``Object`` table.
-Leave the collection as the default, ``dp02_dc2_catalogs`` (A in Figure 1).
-Leave the table as the default, ``Object`` (B in Figure 1).
+**2. Select collection and table.**
+Set the collection to ``dp02_dc2_catalogs`` (A in Figure 1) and the table to ``Object`` (B in Figure 1).
+These are the defaults of a new Portal session and might be pre-selected.
 
-**3.** Set the spatial constraints for the query (C in Figure 1, and Figure 2).
-Select shape type "cone shape", and set the coordinates to 62, -37 (a convenient location near the center of the DP0.2 simulation).
-Set the radius to 10 arcminutes.
+**3. Set spatial constraints** (C in Figure 1).
+Select shape type "cone shape", set the coordinates to 62, -37 (near the center of the DP0.2 simulation),
+and set the radius to 10 arcminutes (as in Figure 2).
 
 .. figure:: /_static/portal-howto-uiquery-2.png
     :name: portal-howto-uiquery-2
@@ -58,9 +58,9 @@ Set the radius to 10 arcminutes.
     Figure 2: Spatial constraints for a cone search centered on Right Ascension 62 degrees, Declination -37 degrees, and with a radius of 10 arcminutes.
 
 
-**4.** Set the ``Object`` table columns to be returned using the schema interface (D in Figure 1).
-Select all of the columns listed below.
-Use the table search functionality, such as ``like '%_cModelFlux'`` as shown in Figure 3, to find the column names.
+**4. Select columns to return.** 
+In the schema interface (D in Figure 1), select all of the columns listed below.
+Use the table search functionality, such as ``like '%_cModelFlux'`` as shown in Figure 3, to find the columns.
 
 * ``coord_ra``
 * ``coord_dec``
@@ -80,9 +80,9 @@ Use the table search functionality, such as ``like '%_cModelFlux'`` as shown in 
     Figure 3: The schema interface, with a search for column names containin the string ``cModelFlux``, and six columns selected.
 
 
-**5.** Set contraints on the objects to be returned using the schema interface (D in Figure 1).
-Click on the funnel icon to show only selected columns, and set the contraints in the list below.
-The schema interface should now appear as in Figure 4.
+**5. Set column constraints.**
+In the schema interface (D in Figure 1), click on the funnel icon to show only selected columns.
+Set the constraints in the list below, as shown in Figure 4.
 
 * ``detect_isPrimary`` :math:`= 1` to return deblended objects and reject duplicates.
 * ``refExtendedness`` :math:`= 1` to return objects that appear extended (likely galaxies, not stars).
@@ -95,10 +95,12 @@ The schema interface should now appear as in Figure 4.
     Figure 4: The schema interface, with all desired columns selected and all column constraints applied. The funnel icon has been clicked so that only selected columns are shown.
 
 
-**Warning:** Do not use the schema interface to apply spatial constraints, i.e., do not apply limits on coordinate columns (``coord_ra``, ``coord_dec``).
+**Warning!**
+Do not use the schema interface to apply spatial constraints, i.e., do not apply limits on coordinate columns (``coord_ra``, ``coord_dec``).
 Applying spatial constraints as instructed in Step 3, because cone and polygon searches are executed much more quickly than columns limits.
 
-**6.** Leave the Row Limit (E in Figure 1) at the default of 50,000 and click Search (F in Figure 1).
+**6. Execute the UI query.**
+Leave the Row Limit (E in Figure 1) at the default of 50,000 and click Search (F in Figure 1).
 The query will be executed and the results will appear in the Results tab.
 
 Return to the list of DP0.2 :ref:`DP0-2-Tutorials-Portal`.
