@@ -73,8 +73,15 @@ typically without scientific context or motivation - just simple examples for qu
     portal-howto-uiquery
     portal-howto-adql
     portal-howto-results
+    portal-howto-mags
+    portal-howto-join
+    portal-howto-hips
+    portal-howto-plots
+    portal-howto-table
+
 
 Acronyms used above:
+
 * UI = User Interface
 * ADQL = Astronomy Query Data Language
 
