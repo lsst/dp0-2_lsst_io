@@ -106,6 +106,6 @@ The table now has two tabs, one for each query (C in Figure 3).
 Click on the tab for the first query and note that the table and active chart change.
 
 **10. Delete unwanted query results.**
-Click on the X in the tab for the first query results in the table to delete the results.
+In the table (C in Figure 3), click on the X in the tab for the first query results to delete them.
 
 Return to the list of DP0.2 :ref:`DP0-2-Tutorials-Portal`.
