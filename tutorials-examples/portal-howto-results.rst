@@ -79,6 +79,7 @@ Under "Results Layout", click on the icon of the default layout (A in Figure 2) 
 .. figure:: /_static/portal-howto-results-2.png
     :name: portal-howto-results-2
     :alt: The sidebar menu with options for the results view layout.
+    :width: 200
 
     Figure 2: The sidebar menu with options for the results view layout.
 
