@@ -84,9 +84,9 @@ Use the table search functionality, such as ``like '%_cModelFlux'`` as shown in 
 Click on the funnel icon to show only selected columns, and set the contraints in the list below.
 The schema interface should now appear as in Figure 4.
 
-* Set ``detect_isPrimary`` :math:`= 1` to return deblended objects and reject duplicates.
-* Set ``refExtendedness`` :math:`= 1` to return objects that appear extended (likely galaxies, not stars).
-* Set all ``cModelFlux`` :math:`> 360` nJy to return objects brighter than 25th mag. (Recall that :math:`m = -2.5 log(f) + 31.4`, where :math:`f` is in units of nJy).
+* ``detect_isPrimary`` :math:`= 1` to return deblended objects and reject duplicates.
+* ``refExtendedness`` :math:`= 1` to return objects that appear extended (likely galaxies, not stars).
+* All ``cModelFlux`` :math:`> 360` nJy to return objects brighter than 25th mag. (Recall that :math:`m = -2.5 log(f) + 31.4`, where :math:`f` is in units of nJy).
 
 .. figure:: /_static/portal-howto-uiquery-4.png
     :name: portal-howto-uiquery-4
