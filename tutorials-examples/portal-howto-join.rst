@@ -56,10 +56,12 @@ Two columns are selected from "table2" ("colX" and "colY").
    WHERE CONTAINS(POINT('ICRS', tab1.ra, tab1.dec),
          CIRCLE('ICRS', 62.0, -37, 0.1)) = 1
 
+   **The above cannot be executed and is a generic demonstration only.**
+
 
 **3. Execute a two-table join.**
 The ``Source`` table (detections in individual processed visit images) can be joined with the
-``ccdVisit`` table (metadata about individual visits) using a shared column, ``ccdVisitId``,
+``CcdVisit`` table (metadata about individual visits) using a shared column, ``ccdVisitId``,
 which uniquely identifies an LSST visit.
 Constraints can be applied on columns from either or both tables.
 Spatial constraints are applied to the ``FROM`` table, not the ``JOIN`` table.
@@ -81,7 +83,7 @@ Spatial constraints are applied to the ``FROM`` table, not the ``JOIN`` table.
 
 **4. Review the two-table join results.**
 Notice that this join is not one-to-one: there are multiple individual sources returned that are matched to the same visit.
-In other words, there are multiple rows from the ``Source`` table joined with a given row from the ``ccdVisit`` table.
+In other words, there are multiple rows from the ``Source`` table joined with a given row from the ``CcdVisit`` table.
 
 .. figure:: /_static/portal-howto-join-1.png
     :name: portal-howto-join-1
@@ -93,7 +95,7 @@ In other words, there are multiple rows from the ``Source`` table joined with a 
 **5. Execute a three-table join.**
 The ``Object`` table (photometry in deeply coadded images) can be joined with the
 ``ForcedSource`` table (photometry in individual processed visit images) using their shared ``objectId`` column.
-The ``FourcedSource`` table can be joined with the ``ccdVisit`` table using ``ccdVisitId``.
+The ``FourcedSource`` table can be joined with the ``CcdVisit`` table using ``ccdVisitId``.
 Constraints can be applied on columns from any or all tables.
 
 .. code-block:: SQL
@@ -116,16 +118,16 @@ Constraints can be applied on columns from any or all tables.
 
 
 **6. Review the three-table join results.**
-
+The join of ``Object`` to ``ForcedSource`` is one-to-many, and the join of ``ForcedSource`` to ``CcdVisit`` is many-to-one.
 
 .. figure:: /_static/portal-howto-join-2.png
     :name: portal-howto-join-2
     :alt: The Portal results tab for a three-table join.
 
-    Figure 1: The Portal Results tab with a default layout for the data returned from the three-table join query.
+    Figure 2: The Portal Results tab with a default layout for the data returned from the three-table join query.
 
 
-*7. Find more join examples.**
+**7. Find more join examples.**
 Visit the :doc:`/data-access-analysis-tools/adql-recipes` page for more examples of table joins.
 Visit the `DP0.2 schema browser <https://sdm-schemas.lsst.io/dp02.html>`_ to see which tables have columns in common.
 
