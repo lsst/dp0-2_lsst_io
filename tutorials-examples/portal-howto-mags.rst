@@ -78,7 +78,7 @@ This funtion will convert the corresponding flux errors, in nJy, into AB magnitu
          scisql_nanojanskyToAbMag(z_cModelFlux) AS z_cModelMag, 
          scisql_nanojanskyToAbMagSigma(z_cModelFlux, z_cModelFluxErr) AS z_cModelMagErr, 
          scisql_nanojanskyToAbMag(y_cModelFlux) AS y_cModelMag,
-         scisql_nanojanskyToAbMagSigma(y_cModelFlux, y_cModelFluxErr) AS y_cModelMagErr, 
+         scisql_nanojanskyToAbMagSigma(y_cModelFlux, y_cModelFluxErr) AS y_cModelMagErr 
   FROM dp02_dc2_catalogs.Object 
   WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), 
         CIRCLE('ICRS', 62, -37, 0.167)) =1 
@@ -87,8 +87,19 @@ This funtion will convert the corresponding flux errors, in nJy, into AB magnitu
              AND r_cModelFlux >360 AND i_cModelFlux >360 
              AND z_cModelFlux >360 AND y_cModelFlux >360)
 
+**4. View the results.**
+Figure 1 shows the table panel in the Results tab for the query above.
+No flux columns have been retrieved.
+Instead, magnitude and magnitude error columns have been returned, and are named as specified in the ADQL statement.
 
-For a demonstration of how to convert fluxes to magnitudes after a query is executed,
+.. figure:: /_static/portal-howto-mags-1.png
+    :name: portal-howto-mags-1
+    :alt: The table panel in the results tab shows the created magnitude columns.
+
+    Figure 1: The table panel in the Results tab for the query above shows no flux columns, but magnitude and magnitude error columns.
+
+
+**Note.** For a demonstration of how to convert fluxes to magnitudes after a query is executed,
 see the tutorial on how to use the results table data.
 
 Return to the list of DP0.2 :ref:`DP0-2-Tutorials-Portal`.
