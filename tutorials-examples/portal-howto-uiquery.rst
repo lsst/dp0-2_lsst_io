@@ -54,7 +54,6 @@ Set the radius to 10 arcminutes.
 .. figure:: /_static/portal-howto-uiquery-2.png
     :name: portal-howto-uiquery-2
     :alt: Spatial constraints applied in the Portal UI.
-    :width: 300
 
     Figure 2: Spatial constraints for a cone search centered on Right Ascension 62 degrees, Declination -37 degrees, and with a radius of 10 arcminutes.
 
@@ -77,7 +76,6 @@ Use the table search functionality, such as ``like '%_cModelFlux'`` as shown in 
 .. figure:: /_static/portal-howto-uiquery-3.png
     :name: portal-howto-uiquery-3
     :alt: Selecting columns from the schema interface.
-    :width: 300
 
     Figure 3: The schema interface, with a search for column names containin the string ``cModelFlux``, and six columns selected.
 
@@ -93,13 +91,12 @@ The schema interface should now appear as in Figure 4.
 .. figure:: /_static/portal-howto-uiquery-4.png
     :name: portal-howto-uiquery-4
     :alt: Applying column constraints in the schema interface.
-    :width: 300
 
     Figure 4: The schema interface, with all desired columns selected and all column constraints applied. The funnel icon has been clicked so that only selected columns are shown.
 
 
 **Warning:** Do not use the schema interface to apply spatial constraints, i.e., do not apply limits on coordinate columns (``coord_ra``, ``coord_dec``).
-Applying spatial constraints as instructed in Step 5, because cone and polygon searches are executed much more quickly than columns limits.
+Applying spatial constraints as instructed in Step 3, because cone and polygon searches are executed much more quickly than columns limits.
 
 **6.** Leave the Row Limit (E in Figure 1) at the default of 50,000 and click Search (F in Figure 1).
 The query will be executed and the results will appear in the Results tab.
