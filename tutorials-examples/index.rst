@@ -62,7 +62,8 @@ The tutorials below are step-by-step demonstrations of how to use the Portal Asp
 How-to tutorials
 ----------------
 
-Short tutorials that focus on one Portal function or tool.
+Short tutorials that focus on how to use one Portal function or tool,
+typically without scientific context or motivation - just simple examples for quick reference.
 
 .. toctree::
     :titlesonly:
@@ -75,7 +76,8 @@ Short tutorials that focus on one Portal function or tool.
 Science tutorials
 -----------------
 
-Longer tutorials that demonstrate common workflows for scientific analyses that use multiple Portal tools in sequence.
+Longer tutorials that demonstrate common workflows for scientific analyses that use multiple Portal tools in sequence,
+and that include scientific context and motivation for why the data and tools are used. 
 
 .. toctree::
     :titlesonly:
