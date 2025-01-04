@@ -71,6 +71,7 @@ typically without scientific context or motivation - just simple examples for qu
 
     portal-howto-nav
     portal-howto-uiquery
+    portal-howto-adql
 
 
 Science tutorials
