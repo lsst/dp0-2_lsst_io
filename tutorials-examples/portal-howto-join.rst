@@ -28,7 +28,7 @@
 
 **Last verified to run:** 2025-02-04
 
-**Targeted learning level:** beginner 
+**Targeted learning level:** intermediate 
 
 **Introduction:**
 This tutorial demonstrates how to join tables from a given catalog and retrieve results with ADQL.
@@ -61,31 +61,71 @@ Two columns are selected from "table2" ("colX" and "colY").
 The ``Source`` table (detections in individual processed visit images) can be joined with the
 ``ccdVisit`` table (metadata about individual visits) using a shared column, ``ccdVisitId``,
 which uniquely identifies an LSST visit.
+Constraints can be applied on columns from either or both tables.
+Spatial constraints are applied to the ``FROM`` table, not the ``JOIN`` table.
 
 .. code-block:: SQL
 
-   SELECT src.coord_ra, src.coord_dec, src.band, src.ccdVisitId, 
+   SELECT src.coord_ra, src.coord_dec, src.sourceId, src.band, 
           scisql_nanojanskyToAbMag(src.psfFlux) AS psfAbMag,
+          src.ccdVisitId, cv.ccdVisitId, 
           cv.expMidptMJD, cv.seeing
    FROM dp02_dc2_catalogs.Source AS src
    JOIN dp02_dc2_catalogs.CcdVisit AS cv
    ON src.ccdVisitId = cv.ccdVisitId
-   WHERE CONTAINS(POINT('ICRS', src.scoord_ra, src.coord_dec),
+   WHERE CONTAINS(POINT('ICRS', src.coord_ra, src.coord_dec),
          CIRCLE('ICRS', 62.0, -37, 0.1)) = 1 
-         AND cv.obsStartMJD > 60925 AND cv.obsStartMJD < 60955
+         AND cv.expMidptMJD > 60925 AND cv.expMidptMJD < 60955
          AND src.band = 'i' 
 
 
+**4. Review the two-table join results.**
+Notice that this join is not one-to-one: there are multiple individual sources returned that are matched to the same visit.
+In other words, there are multiple rows from the ``Source`` table joined with a given row from the ``ccdVisit`` table.
 
-**4. Execute a three-table join.**
+.. figure:: /_static/portal-howto-join-1.png
+    :name: portal-howto-join-1
+    :alt: The Portal results tab for a two-table join.
 
-object, forcedsource, ccdvisit
+    Figure 1: The Portal Results tab with a default layout for the data returned from the two-table join query.
+
+
+**5. Execute a three-table join.**
+The ``Object`` table (photometry in deeply coadded images) can be joined with the
+``ForcedSource`` table (photometry in individual processed visit images) using their shared ``objectId`` column.
+The ``FourcedSource`` table can be joined with the ``ccdVisit`` table using ``ccdVisitId``.
+Constraints can be applied on columns from any or all tables.
 
 .. code-block:: SQL
 
+   SELECT obj.coord_ra, obj.coord_dec, obj.objectId, obj.refExtendedness, 
+          scisql_nanojanskyToAbMag(i_psfFlux) AS obj_i_psfAbMag,
+          scisql_nanojanskyToAbMag(fs.psfFlux) AS fs_psfAbMag,
+          cv.ccdVisitId, cv.expMidptMJD, cv.seeing
+   FROM dp02_dc2_catalogs.Object AS obj 
+   JOIN dp02_dc2_catalogs.ForcedSource AS fs 
+   ON obj.objectId = fs.objectId
+   JOIN dp02_dc2_catalogs.CcdVisit AS cv
+   ON fs.ccdVisitId = cv.ccdVisitId
+   WHERE CONTAINS(POINT('ICRS', obj.coord_ra, obj.coord_dec),
+         CIRCLE('ICRS', 62.0, -37, 0.1)) = 1 
+         AND obj.refExtendedness = 1 
+         AND obj.i_psfFlux > 3600 
+         AND cv.expMidptMJD > 60925 AND cv.expMidptMJD < 60955
+         AND fs.band = 'i' 
 
 
-**X. Find more join examples.**
+**6. Review the three-table join results.**
+
+
+.. figure:: /_static/portal-howto-join-2.png
+    :name: portal-howto-join-2
+    :alt: The Portal results tab for a three-table join.
+
+    Figure 1: The Portal Results tab with a default layout for the data returned from the three-table join query.
+
+
+*7. Find more join examples.**
 Visit the :doc:`/data-access-analysis-tools/adql-recipes` page for more examples of table joins.
 Visit the `DP0.2 schema browser <https://sdm-schemas.lsst.io/dp02.html>`_ to see which tables have columns in common.
 
