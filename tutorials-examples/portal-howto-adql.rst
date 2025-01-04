@@ -81,8 +81,9 @@ The interface should look like Figure 3.
     Figure 3: The Portal UI with no query constraints entered.
 
 
-**2.3.** Select "Edit ADQL" at upper right in Figure 3.
-The ADQL Query box will be empty; scroll down to see example queries or visit the :doc:`data-access-analysis-tools/adql-recipes.rst` page for examples.
+**2.3.** Select "Edit ADQL" at upper right in Figure 3 to go to the ADQL interface.
+It will appear as in Figure 4; the ADQL Query box will be empty.
+Scroll down on the ADQL interface page to see example queries and visit the :doc:`/data-access-analysis-tools/adql-recipes` page for more.
 
 .. figure:: /_static/portal-howto-adql-4.png
     :name: portal-howto-adql-4
@@ -90,9 +91,10 @@ The ADQL Query box will be empty; scroll down to see example queries or visit th
 
     Figure 4: The ADQL interface with no query entered.
 
+
 **2.4.** Enter an ADQL statement in the box.
-Copy paste the statement below.
-It is the same query as was used above for Option 1.
+For example, copy paste the statement below.
+It is the same query as was used above in Option 1.
 
 .. code-block:: SQL
 
@@ -103,9 +105,12 @@ It is the same query as was used above for Option 1.
   WHERE CONTAINS(POINT 'ICRS', coord_ra, coord_dec),
   CIRCLE(' ICRS', 62, -37, 0. 167) = 1
   AND (detect_isPrimary =1 AND refExtendedness =1
-  AND g_ModelFlux >360 AND i_ModelFlux >360
-  AND r_cModelFlux >360 AND u_ModelFlux >360
-  AND y_cModelFlux >360 AND ≥_cModelFlux >360)
+  AND u_ModelFlux >360 AND g_ModelFlux >360
+  AND r_cModelFlux >360 AND i_ModelFlux >360
+  AND z_cModelFlux >360 AND y_cModelFlux >360)
 
+
+**2.5.** Click the Search button at lower left.
+The query will be executed and the results will appear in the Results tab.
 
 Return to the list of DP0.2 :ref:`DP0-2-Tutorials-Portal`.
