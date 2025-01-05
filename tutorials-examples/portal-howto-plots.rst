@@ -40,13 +40,7 @@ Terminology:
 
 * `ADQL <https://www.ivoa.net/documents/latest/ADQL.html>`_: Astronomy Query Data Language
 * PNG: Portable Network Graphic
-
-* `HiPS <https://aladin.cds.unistra.fr/hips/>`_: Hierarchical Progressive Surveys 
-* `MOC <https://www.ivoa.net/documents/MOC/>`_: Multi-Order Coverage map 
-* `HEALpix <https://healpix.sourceforge.io/>`_: Hierarchical Equal Area isoLatitude Pixelation of a sphere
-* `2MASS <https://irsa.ipac.caltech.edu/Missions/2mass.html>`_: Two Micron All Sky Survey 
-* `regions <https://ds9.si.edu/doc/ref/region.html>`_ file: a standard format for marking regions in an image
-* WCS: World Coordinate System (the convention that defines the coordinates per pixel)
+* color: The difference in magnitude (brightness) between adjacent bands (e.g., g-r, r-i).
 
 .. code-block:: SQL
 
@@ -89,14 +83,104 @@ Click on the "Details" tab (item A in Figure 1) to see the values for all return
 In the active chart panel (Figure 1) click on each of the icons listed below and review the information, options, and tools.
 
 * B: **Pin** - keep this chart as a tab in the active chart panel.
-* C: **Zoom** - click icon to enter zoom mode, then click-and-drag in the plot to zoom in. (See also item F.)
-* D: **Pan** - click the icon to enter pan mode, then click-and-drag in the plot to pan around.
-* E: **Select** - click the icon to enter select mode, then click-and-drag to create a selection box. (See step X.)
-* F: **Unzoom** - click to reset zoom back to default.
-* G: **Save** - click to get a pop-up window with the option to save the plot as a PNG file.
+* C: **Zoom** - enter zoom mode (click-and-drag in the plot to zoom in).
+* D: **Pan** - enter pan mode (click-and-drag in the plot to pan around).
+* E: **Select** - enter select mode (click-and-drag to create a selection box).
+* F: **Unzoom** - reset zoom back to default.
+* G: **Save** - open a pop-up window with the option to save the plot as a PNG file.
 * H: **Restore** - undo all plot manipulation and restore to the default as in Figure 1.
-* I: **Filter** - click to get a pop-up window of filters applied to the table data. (See step X.)
-* J: **Settings** - manipulate the plotted data. (See step X.)
-* K: **Expand panel** to have the active chart take the full browser window.
-* L: **Add chart** - click to add a new chart (a new plot) to the active chart panel. (See step X.)
+* I: **Filter** - open a pop-up window to manipulate the filters applied to the data.
+* J: **Settings** - open a pop-up window to manipulate the plotted data.
+* K: **Expand panel** - have the active chart take the full browser window.
+* L: **Add chart** - add a new chart (a new plot) to the active chart panel.
 
+**5. Zoom, pan, and unzoom.**
+Click on the zoom icon (C in Figure 1) to enter zoom mode. 
+Click-and-drag in the plot to zoom in.
+Click on the pan icon (D in Figure 1) to enter pan mode.
+Click-and-drag in the plot to recenter the plotted data.
+Click on the zoom reset icon (H in Figure 1) to return to the default zoom.
+
+**6. Use the box select tool.**
+Click on the box icon (E in Figure 1).
+Click-and-drag in the plot to select points (A in Figure 2).
+Two new icons will appear to "select" (B in Figure 2) or "filter on" (C in Figure 2) the points.
+
+.. figure:: /_static/portal-howto-plots-2.png
+    :name: portal-howto-plots-2
+    :alt: Using the selection box tool in the active chart panel.
+
+    Figure 2: After using the box select tool to create a box in the plot (A), two new icons appear (B and C).
+
+
+**7. Select objects.**
+Click on the select icon (B in Figure 2).
+The will be marked with a different color in the active chart and the coverage chart, and will be selected in the
+table, as shown in Figure 3.
+
+.. figure:: /_static/portal-howto-plots-3.png
+    :name: portal-howto-plots-3
+    :alt: The full Portal Results tab with points selected in the active chart.
+
+    Figure 3: The full Portal Results tab after points have been selected in the active chart.
+
+
+**8. Filter on the selected objects.**
+Click on the select icon (B in Figure 2) to unselect objects.
+Repeat step 6.
+Click on the filter icon (C in Figure 2).
+The selected objects will now be the only points shown in the active chart, the coverage map, and the table, as in Figure 4.
+
+.. figure:: /_static/portal-howto-plots-4.png
+    :name: portal-howto-plots-4
+    :alt: The full Portal Results tab with points filtered in the active chart.
+
+    Figure 4: The full Portal Results tab after points have been selected and filtered on in the active chart.
+
+**9. Remove the filter.**
+Click on the filter icon (C in Figure 2) to remove the filter and return to the default plot of Figure 1.
+
+**10. Manipulate the plotted data.**
+Click on the settings icon (J in Figure 1) to get the plot parameters pop-up window as seen in Figure 5.
+Leave the default selection to modify the trace, which means to modify the axes and points in the plot.
+For the X axis enter ``g_cModelMag - r_cModelMag`` and for the Y axis enter ``g_cModelMag``.
+Ajust the trace options (plot style) and chart options (labels) as in Figure 5.
+Click "Apply" and then "Close" in the plot parameters window.
+
+.. figure:: /_static/portal-howto-plots-5.png
+    :name: portal-howto-plots-5
+    :alt: The plot parameters pop-up window to manipulate the axes and point styles.
+
+    Figure 5: The plot parameters pop-up window with adjustments made to generate a color-magnitude diagram.
+
+
+**11. Option to save the plot.**
+Click on the save icon (G in Figure 1) to download a PNG file of the plot.
+It should look like the one shown in Figure 6.
+
+.. figure:: /_static/portal-howto-plots-6.png
+    :name: portal-howto-plots-6
+    :alt: An example of a color-magnitude diagram.
+
+    Figure 6: The color-magnitude diagram created in step 10.
+
+
+**12. Add a new chart.**
+Click on the "new chart" icon (L in Figure 1), and create another scatter plot color-magnitude diagram
+using different columns, point styles, and axis labels.
+The new plot will appear as a second panel in the active chart region, as in Figure 7.
+
+.. figure:: /_static/portal-howto-plots-7.png
+    :name: portal-howto-plots-7
+    :alt: Another example of a color-magnitude diagram.
+
+    Figure 7: Another, different, color-magnitude diagram added as a new chart.
+
+
+**Warning!** 
+After changing the plot settings (e.g., changing which columns are plotted, point symbols and colors),
+be wary of clicking the restore icon (H in Figure 1) because it entirely resets the plot to the default
+axes and point style as shown in Figure 1.
+To zoom out to the original range, click the icon under F in Figure 1, not the icon under H.
+
+Return to the list of DP0.2 :ref:`DP0-2-Tutorials-Portal`.
