@@ -33,14 +33,15 @@
 **Introduction:**
 This tutorial demonstrates how to manipulate the active chart and customize the plotted data in the Portal results tab.
 
-**1. Execute a query.**
-Go to the Portal's DP0.2 Catalogs tab, switch to the ADQL interface, and execute the query below.
-
 Terminology:
 
 * `ADQL <https://www.ivoa.net/documents/latest/ADQL.html>`_: Astronomy Query Data Language
 * PNG: Portable Network Graphic
 * color: The difference in magnitude (brightness) between adjacent bands (e.g., g-r, r-i).
+* CMD: color-magnitude diagram, a plot with a color on one axis and magnitude on the other.
+
+**1. Execute a query.**
+Go to the Portal's DP0.2 Catalogs tab, switch to the ADQL interface, and execute the query below.
 
 .. code-block:: SQL
 
