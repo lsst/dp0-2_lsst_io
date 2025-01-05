@@ -70,7 +70,7 @@ In the table panel (Figure 1) click on each of the items below and review the fu
 * D: **Actions** - generate new TAP searches (advanced, not covered in this tutorial).
 * E: **Filter** - show or hide the header row for table filter entries.
 * F: **Text view** - switch the table view to text mode.
-* G: **Save** file (download table), a variety of formats are offered.
+* G: **Save** file (download table); a variety of formats are offered.
 * H: **Add a column** that is derived from existing columns.
 * I: **Information** about the query job that produced these results.
 * J: **Table options** - open a pop-up window to show, hide, or filter columns.
@@ -81,9 +81,9 @@ In the table panel (Figure 1) click on each of the items below and review the fu
 Click on the table header ``coord_ra`` to sort the table by the Right Ascension coordinate.
 Any column can be sorted in this way.
 
-**6. Select the first 10 rows.**
+**6. Select rows.**
 Click on the boxes at left (B in Figure 1) for the first 10 rows.
-See how these objects are colored differently in the coverage and active chart, as in Figure 2.
+Notice how these objects are colored differently in the coverage and active chart, as in Figure 2.
 
 .. figure:: /_static/portal-howto-table-2.png
     :name: portal-howto-table-2
@@ -124,7 +124,23 @@ See how all panels update to show only the filtered objects.
 Click the "unfilter" icon at upper right in the table panel to remove the filter (A in Figure 3).
 
 **11. Create a new column.**
+Click on the "add column" icon (H in Figure 1).
+In the pop-up window, name the new column ``g_cModelMag``.
+Use the following expression, which converts fluxes (in units of nJy) into AB magnitudes: ``-2.5 * LOG10(g_cModelFlux) + 31.4``.
+Provide the units of the new column as ``mag``, and add a description.
+Click "Add Column", and it will appear in the table.
 
+.. figure:: /_static/portal-howto-table-5.png
+    :name: portal-howto-table-5
+    :alt: The pop-up window to add a new column, with entry field boxes to define the derived column.
+
+    Figure 5: The pop-up window to add a new column, with entry field boxes set to define a new derived column of g-band AB magnitudes.
+
+
+**12. Option to save the table.**
+Click on the save icon (G in Figure 1), choose a file format of comma-separated values (CSV),
+leave the filename as the default, leave the default selection of "Save table as displayed" to include
+the new derived column of g-band magnitudes, and click "Save".
 
 
 **Exercises for the learner.**
@@ -133,4 +149,4 @@ Click the "unfilter" icon at upper right in the table panel to remove the filter
 * Use the "Remove all filters" button in the table options pop-up window to remove the filter constraint.
 * Sort and apply constraints on the flux columns instead of a coordinate column.
 
-
+Return to the list of DP0.2 :ref:`DP0-2-Tutorials-Portal`.
