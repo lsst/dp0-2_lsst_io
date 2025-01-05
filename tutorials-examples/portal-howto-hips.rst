@@ -33,16 +33,17 @@
 **Introduction:**
 This tutorial demonstrates how to manipulate the coverage chart and HiPS map panel in the Portal results tab.
 
-Some helpful terminology includes:
+Terminology:
 
 * `HiPS <https://aladin.cds.unistra.fr/hips/>`_: Hierarchical Progressive Surveys 
 * `MOC <https://www.ivoa.net/documents/MOC/>`_: Multi-Order Coverage map 
-* `ADQL <https://www.ivoa.net/documents/latest/ADQL.html>`: Astronomy Query Data Language
+* `ADQL <https://www.ivoa.net/documents/latest/ADQL.html>`_: Astronomy Query Data Language
 * `HEALpix <https://healpix.sourceforge.io/>`_: Hierarchical Equal Area isoLatitude Pixelation of a sphere
-* WCS: World Coordinate System (the convention that defines the coordinates per pixel)
 * `2MASS <https://irsa.ipac.caltech.edu/Missions/2mass.html>`_: Two Micron All Sky Survey 
-* PNG: Portable Network Graphic
 * `regions <https://ds9.si.edu/doc/ref/region.html>`_ file: a standard format for marking regions in an image
+* WCS: World Coordinate System (the convention that defines the coordinates per pixel)
+* PNG: Portable Network Graphic
+
 
 **1. Execute a query.**
 Go to the Portal's DP0.2 Catalogs tab, switch to the ADQL interface, and execute the query below.
