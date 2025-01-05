@@ -79,18 +79,18 @@ In the coverage chart panel (Figure 1) use the mouse to hover over the menus and
 **4. Explore menus and icons.**
 In the coverage chart panel (Figure 1) click on each of the drop-down menus and icons listed below, and see the pop-up windows of options and tools.
 
-* A: HiPS/MOC options: change the underlying HiPS map or add a MOC layer.
-* B: Equ / Spherical options: choose the orientation and projection of the underlying HiPS map.
-* C: Zoom in, out, or to fit the window. (It is also possible to use the mouse to zoom).
-* D: The WCS Coordinates of the mouse position; click the box-and-arrow icon at left to view coordinates in a separate window.
-* E: Toggle lock to "on" to lock the WCS Coordinates to the location of the last mouse click, and "off" for continuous position.
-* F: Tools menu: save, reset, or orient the display; add compass, ruler, points, etc.
-* G: Color table menu: choose a different color map.
-* H: Recenter: enter coordinates for the desired display center.
-* I: Spatial selection: define a cone or rectangluar area.
-* J: Overlay manipulation: change the options or color for the HEALpix and points overlay.
-* K: Image lock and alignment: options for when multiple images are displayed.
-* L: Expand panel: click to have the coverage chart take the full browser window.
+* A: **HiPS/MOC** options to change the underlying HiPS map or add a MOC layer.
+* B: **WCS** options to choose the orientation and projection of the underlying HiPS map.
+* C: **Zoom** in, out, or to fit the window. (It is also possible to use the mouse to zoom.)
+* D: **WCS Coordinates** of the mouse position. Click the box-and-arrow icon at left to view coordinates in a separate window.
+* E: **Toggle lock** to "on" to lock the WCS Coordinates to the location of the last mouse click, and "off" for continuous position.
+* F: **Tools** menu with options to save, reset, or orient the display; add compass, ruler, points, etc.
+* G: **Color table** menu to choose a different color map.
+* H: **Recenter** by entering coordinates for the desired display center.
+* I: **Spatial selection** (not currently active for HiPS maps).
+* J: **Overlays** manipulation to change the options or color for the HEALpix and points overlay.
+* K: **Image lock** and alignment (tools for when multiple images are displayed).
+* L: **Expand panel** to have the coverage chart take the full browser window.
 
 **5. Change the HiPS image.**
 Under A in Figure 1, click on "HiPS/MOC" and then "Change HiPS image".
