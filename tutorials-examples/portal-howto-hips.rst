@@ -28,15 +28,21 @@
 
 **Last verified to run:** 2025-02-04
 
-**Targeted learning level:** beginner 
+**Targeted learning level:** intermediate 
 
 **Introduction:**
 This tutorial demonstrates how to manipulate the coverage chart and HiPS map panel in the Portal results tab.
 
 Some helpful terminology includes:
 
-* HiPS: `Hierarchical Progressive Surveys <https://aladin.cds.unistra.fr/hips/>`_
-* MOC: `Multi-Order Coverage map <https://www.ivoa.net/documents/MOC/>`_
+* `HiPS <https://aladin.cds.unistra.fr/hips/>`_: Hierarchical Progressive Surveys 
+* `MOC <https://www.ivoa.net/documents/MOC/>`_: Multi-Order Coverage map 
+* `ADQL <https://www.ivoa.net/documents/latest/ADQL.html>`: Astronomy Query Data Language
+* `HEALpix <https://healpix.sourceforge.io/>`_: Hierarchical Equal Area isoLatitude Pixelation of a sphere
+* WCS: World Coordinate System (the convention that defines the coordinates per pixel)
+* `2MASS <https://irsa.ipac.caltech.edu/Missions/2mass.html>`_: Two Micron All Sky Survey 
+* PNG: Portable Network Graphic
+* `regions <https://ds9.si.edu/doc/ref/region.html>`_ file: a standard format for marking regions in an image
 
 **1. Execute a query.**
 Go to the Portal's DP0.2 Catalogs tab, switch to the ADQL interface, and execute the query below.
@@ -55,9 +61,9 @@ Go to the Portal's DP0.2 Catalogs tab, switch to the ADQL interface, and execute
              AND z_cModelFlux >360 AND y_cModelFlux >360)
 
 **2. View the default coverage chart** (Figure 1).
-The default view is a `HEALpix <https://healpix.sourceforge.io/>`_ grid showing the number of returned objects per grid region.
+The default view is a HEALpix grid showing the number of returned objects per grid region.
 Small red squares mark individual objects outside the grid.
-The background is a color `HiPS <https://aladin.cds.unistra.fr/hips/>`_ map of the DP0.2 deeply coadded images.
+The background is a color HiPS map of the DP0.2 deeply coadded images.
 
 .. figure:: /_static/portal-howto-hips-1.png
     :name: portal-howto-hips-1
@@ -88,7 +94,7 @@ In the coverage chart panel (Figure 1) click on each of the drop-down menus and 
 **5. Change the HiPS image.**
 Under A in Figure 1, click on "HiPS/MOC" and then "Change HiPS image".
 The pop-up window offers options of color images made from different filter combinations and single-filter DP0.2 images.
-There is also the option of a blank background or `2MASS <https://irsa.ipac.caltech.edu/Missions/2mass.html>`_ color images (the real 2MASS images will not match the location of the simulated DP0.2 objects).
+There is also the option of a blank background or 2MASS color images (the real 2MASS images will not match the location of the simulated DP0.2 objects).
 Select the DP0.2 i-band image.
 
 **6. Add a north arrow.**
@@ -134,7 +140,7 @@ It should look similar to Figure 3.
 Click on the tools icon (F in Figure 1) and select the disk icon next to "Save...".
 Leave the default selection of PNG file and click "Save".
 An image of the coverage chart will automatically download.
-Note the option to export the overlays as a `regions <https://ds9.si.edu/doc/ref/region.html>`_ file.
+Note the option to export the overlays as a regions file.
 
 **13. Reset the coverage chart.**
 Click on the tools icon (F in Figure 1) and select the circlular arrow icon next to "Save..." to restore to default options.
