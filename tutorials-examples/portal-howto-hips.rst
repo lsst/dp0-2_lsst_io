@@ -28,7 +28,7 @@
 
 **Last verified to run:** 2025-02-04
 
-**Targeted learning level:** intermediate 
+**Targeted learning level:** beginner 
 
 **Introduction:**
 This tutorial demonstrates how to manipulate the coverage chart and HiPS map panel in the Portal results tab.
