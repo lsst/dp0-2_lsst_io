@@ -117,6 +117,7 @@ then click the layout icon under "Results Layout", and choose the triple view th
 
   Figure 2: The three-panel default results layout of coverage chart (upper left), active chart (upper right), and table (below).
 
+
 **2.2. Zoom in on the coverage chart.**
 At upper left, in the coverage chart window, a HEALpix grid maps the number of returned objects per region.
 Zoom in by clicking on the magnifying glass icon with the + sign until individual markers appear.
@@ -131,6 +132,7 @@ Note that, in the coverage chart, only galaxies that look like cluster members n
   :alt: The sky image view of the galaxy cluster, with red squares marking all objects within 0.03 degrees of the center.
 
   Figure 3: After applying a filter on the radial offset column, all three panels automatically update.
+
 
 **2.4. Remove the filter.**
 Delete the constraint "< 0.03" on ``radial_offset`` and press "enter" or "return" on the keyboard to remove the filter.
@@ -196,73 +198,60 @@ and that a real LSST color-magnitude diagram for galaxies might look quite diffe
 
 .. _DP0-2-Portal-Histogram-Step-4:
 
-Step 4.  Add a plot showing histograms of apparent magnitude
-============================================================
+Step 4. Add magnitude distributions as 1D histograms
+====================================================
 
-Distributions of apparent magnitude are another standard type of plot that gives an at-a-glance impression of the brightness and 
-completeness of a population of galaxies.
-
-4.1. Add a new plot. At upper left of the right hand panel, click on the plus sign in a circle to add a new chart.
-Select a Plot Type of "Histogram" from the drop-down menu, and set the other boxes to match the screenshot below. 
+**4.1. Add a new chart.**
+In the upper left corner of the active chart panel, click on the plus sign in a circle to add a new chart.
+Select type "Histogram" from the drop-down menu, and set the other boxes to match Figure 8.
+To open the color picker and choose a green color for the g-band, click on the magnifying glass in the "Color" field.
+Click "OK" in the color picker, then "OK" in the "Add a new chart" window.
 
 .. figure:: /_static/portal_tut04_step04_01.png
-	:width: 300
-	:name: portal_tut04_step04_01
-	:alt: A screenshot of the plot parameters pop-up window showing how the parameters should be set to create the histogram.
+  :name: portal_tut04_step04_01
+  :alt: A screenshot of the plot parameters pop-up window showing how the parameters should be set to create the histogram.
 
-**Plot parameters pop-up window for creating a histogram.**
+  Figure 8: The parameters to use to create a new chart (new plot) containing the g-band apparent magnitude distribution.
 
-4.2. Notice the histogram options available. 
-In this demo, as shown above, a “Uniform binning” is used instead of “Bayesian blocks” (quantiles defined by the data itself); 
-a set bin width of 0.2 mag is selected; and the minimum and maximum values are defined. 
-However, users do have the option to instead choose the number of bins, and allow the bin size and the min/max values will be set automatically.
 
-4.3. Review the g-band magnitude distribution. 
-Since the ADQL query only retrieved extended objects brighter than 25th magnitude, and the coadded images of DP0.2 (and thus the 
-Object table) goes deeper than 25th mag, no turn-over due to detection incompleteness is seen in the apparent magnitude distribution. 
+**4.2. Notice the histogram options available.**
+As shown in Figure 8, this tutorial uses "uniform binning" (the same size for all bins), but
+"Bayesian blocks" is also an option (quantiles defined by the data itself).
+This tutorial sets the bin sizes, and first and last bin edges, but there is also the option
+to simply set the number of bins and those values will be worked out automatically.
+
+**4.3. View the g-band magnitude distribution.**
+It should appear as in Figure 9.
 
 .. figure:: /_static/portal_tut04_step04_03.png
-	:name: portal_tut04_step04_03
-	:alt: A screenshot of the portal's results view showing both the color-magnitude heatmap and the magnitude histogram.
+  :width: 400
+  :name: portal_tut04_step04_03
+  :alt: The g-band magnitude histogram.
 
-**Color-magnitude heatmap and magnitude historgram.**
-
-4.4. Add the r-band apparent magnitude distribution to the new plot. 
-With the right-most plot selected (click on plot to select plot; selected plot has an orange outline), click on the single gear icon 
-at upper right. 
-In the "Plot Parameters" pop-up window, select “Overplot New Trace”, fill out the remaining boxes as shown below (notice that the 
-option to log the y-axis has been selected), and click “OK”.
-
-.. figure:: /_static/portal_tut04_step04_04.png
-	:name: portal_tut04_step04_04
-	:alt: A screenshot of the plot parameters pop-up window showing how to overplot a new trace and add the r-band histogram.
-
-**Over-plot trace and add r-band histogram.**
-
-4.5. Update the trace names and colors. 
-The default colors used for g-band and r-band are inappropriate, and the g-band trace is still named “trace 0”. 
-Click on the single gear icon and use the "Plot Parameters" pop-up window to edit trace name and color. 
-Click on the magnifying glass to the right of “Color” under “Trace Options” to get the “Color Picker” pop-up window. 
-Choose green for g-band and orange for r-band.
-
-.. figure:: /_static/portal_tut04_step04_05.png
-	:name: portal_tut04_step04_05
-	:alt: A screenshot of the plot parameters and color picker pop-up windows showing how to adjust the visual aspects of the histograms.
-
-**Color picker pop-up window.**
-
-4.6. Review the final plot. 
-Notice that it is possible to change which trace is “in front” using the drop-down menu to the left of the magnifying glass icon. 
+  Figure 9: The g-band apparent magnitude distribution as a 1D histogram.
 
 
-Bring the g-band trace to the front.
+**4.4. Add the r-band apparent magnitude distribution to the new plot.**
+With the 1D histogram plot selected, click on the single gear icon at upper right.
+(The selected plot will have an orange outline; click on the plot to select the plot.)
+In the "Plot Parameters" pop-up window, select "Overplot New Trace", and fill in the boxes as in Figure 8 **except**
+use the ``rmag`` instead of ``gmag`` column, name the trace "r-mag", and choose an orange color.
+Click "OK" to add the trace of the r-band apparent magnitude distribution to the plot.
+
+**4.5. Review the 1D histograms.**
+The apparent magnitude distributions should appear as in Figure 10.
 
 .. figure:: /_static/portal_tut04_step04_06.png
-	:width: 300
-	:name: portal_tut04_step04_06
-	:alt: A screenshot of the final histogram, showing both r-band and g-band magnitude distributions.
+  :width: 400
+  :name: portal_tut04_step04_06
+  :alt: A screenshot of the final histogram, showing both r-band and g-band magnitude distributions.
 
-**Final histogram.**
+  Figure 10: The final 1D histograms of the apparent magnitude distributions.
+
+
+**4.7. Known issues:**
+the fact that the legend is not automatically appearing once there are multiple traces in a single plot is a known issue.
+
 
 Step 5.  Restrict all plots to objects near the rich cluster
 ============================================================
