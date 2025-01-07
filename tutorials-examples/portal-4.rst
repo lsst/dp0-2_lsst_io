@@ -39,8 +39,8 @@ This tutorial uses a galaxy CMD that plots the g-band magnitude on the X-axis an
 This tutorial assumes the successful completion of the beginner-level Portal tutorial 01, and uses the 
 Astronomy Data Query Language (ADQL), which is similar to SQL (Structured Query Language).
 Learners who are unfamiliar with galaxy CMDs might find 
-`Wikipedia's galaxy color-magnitude diagram page <https://en.wikipedia.org/wiki/Galaxy_color%E2%80%93magnitude_diagram>`_
-a helpful introduction to their red sequence, blue cloud, and green forest components.
+`Wikipedia's galaxy color-magnitude diagram page https://en.wikipedia.org/wiki/Galaxy_color%E2%80%93magnitude_diagram>`_
+a helpful introduction to their red sequence, blue cloud, and green valley components.
 
 This tutorial uses ``cModel`` fluxes (`Composite Model <https://www.sdss3.org/dr8/algorithms/magnitudes.php#cmodel>`_).
 
