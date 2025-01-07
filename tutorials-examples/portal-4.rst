@@ -38,6 +38,9 @@ This tutorial uses a galaxy CMD that plots the g-band magnitude on the X-axis an
 
 This tutorial assumes the successful completion of the beginner-level Portal tutorial 01, and uses the 
 Astronomy Data Query Language (ADQL), which is similar to SQL (Structured Query Language).
+Learners who are unfamiliar with galaxy CMDs might find 
+`Wikipedia's galaxy color-magnitude diagram page <https://en.wikipedia.org/wiki/Galaxy_color%E2%80%93magnitude_diagram>`_
+a helpful introduction to their red sequence, blue cloud, and green forest components.
 
 This tutorial uses ``cModel`` fluxes (`Composite Model <https://www.sdss3.org/dr8/algorithms/magnitudes.php#cmodel>`_).
 
@@ -235,7 +238,7 @@ It should appear as in Figure 9.
 With the 1D histogram plot selected, click on the single gear icon at upper right.
 (The selected plot will have an orange outline; click on the plot to select the plot.)
 In the "Plot Parameters" pop-up window, select "Overplot New Trace", and fill in the boxes as in Figure 8 **except**
-use the ``rmag`` instead of ``gmag`` column, name the trace "r-mag", and choose an orange color.
+use the ``rmag`` instead of ``gmag`` column and choose an orange color.
 Click "OK" to add the trace of the r-band apparent magnitude distribution to the plot.
 
 **4.5. Review the 1D histograms.**
@@ -253,29 +256,43 @@ The apparent magnitude distributions should appear as in Figure 10.
 the fact that the legend is not automatically appearing once there are multiple traces in a single plot is a known issue.
 
 
-Step 5.  Restrict all plots to objects near the rich cluster
-============================================================
+Step 5. Restrict all plots to objects near the rich cluster
+===========================================================
 
-5.1. View the sky image, the color-magnitude diagram, and the apparent magnitude histograms for the full set of returned objects.
+**5.1. Filter on radial offset.**
+Similar to step 2.3, but use a slightly larger maximum radius of 0.05 degrees:
+enter "< 0.05" into the filter entry box in the table for the ``radial_offset`` column and
+press "enter" or "return" on the keyboard.
+
+**5.2. Notice the 2D CMD cannot be displayed.**
+There are now too few objects (763 objects) to populate a 2D histogram.
+
+**5.3. Create a new chart with a scatter-plot CMD.**
+In the upper left corner of the active chart panel, click on the plus sign in a circle to add a new chart.
+Fill in the options as shown in Figure 11 and click "OK".
 
 .. figure:: /_static/portal_tut04_step05_01.png
-	:name: portal_tut04_step05_01
-	:alt: A screenshot of the portal's results view showing both the color-magnitude heatmap and the magnitude histograms for all galaxies returned by the original search.
+  :name: portal_tut04_step05_01
+  :alt: The new chart panel filled out to make a CMD scatter plot.
 
-**Screenshot of results view.**
+  Figure 11: The parameters to use to create a new chart (new plot) containing the galaxy CMD as a scatter plot.
 
-5.2. Restrict the results to only those objects within < 0.05 degrees of the cluster center by entering “< 0.05” into the constraints 
-box for the ``radial_offset`` column and clicking enter. 
-Notice how all of the plots automatically update. 
-The CMD (center) shows the red sequence of cluster galaxies, and the histogram (right) shows the over-density of bright objects 
-in the cluster. 
-Cool!
+
+**5.4. Find the cluster red sequence.**
+In the new galaxy CMD scatter plot at right in Figure 12, the cluster red sequence can be seen as an overdense locus of points.
 
 .. figure:: /_static/portal_tut04_step05_02.png
-	:name: portal_tut04_step05_02
-	:alt: A screenshot of the portal's results view showing both the color-magnitude heatmap and the magnitude histograms for all galaxies within 0.03 degrees of the original search coordinates.
+  :name: portal_tut04_step05_02
+  :alt: A screenshot of the portal's results view with the new scatter-plot CMD.
 
-**Results within 0.03 degrees of the original search coordinates.**
+  Figure 12: The full Results view tab with three plots in the active chart, the right-most one being a scatter plot CMD for galaxies near the center of a known rich cluster, and the cluster's "red squence" highlighted with a box (added after the screenshot was acquired).
+
+
+**5.5. Remove the filter.**
+Delete the constraint "< 0.05" on ``radial_offset`` and press "enter" or "return" on the keyboard to remove the filter.
+All three plots in the active chart will refresh to include all objects.
+
+
 
 Step 6.  Exercises for the learner
 ==================================
@@ -285,5 +302,5 @@ Notice how the histograms change in shape.
 
 6.2. Return to the ADQL query in step 1.3, and add u, i, z, and y-bands to the retrieved columns. 
 Create an apparent magnitude histogram with all six filters. 
-Create a color-magnitude diagram (or a color-color diagram!) with the bands of your choice.
+Create a color-magnitude diagram (or a color-color diagram) with the bands of your choice.
 
