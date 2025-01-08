@@ -162,8 +162,8 @@ The column names, units, and descriptions of the DP0.2 catalogs listed in the ta
 **DP0.2 Table Index:**
 Object and source tables are indexed by coordinate (RA, Dec), and all tables are indexed by an identifier (e.g., the Object table by ``objectId``, the ccdVisit table by ``ccdVisitId``).
 Queries that provide constraints on these indexed columns (e.g., cone searches, ``objectId`` searches) can be executed much faster because it is not necessary to consider all rows.
-The easiest way to see which columns, in addition to coordinate, are indexed for a given table is to use :ref:`Portal-Intro-User-Interface`.
-Log in and select the table.
+The easiest way to see which columns, in addition to coordinates, are indexed for a given table is to use :ref:`Portal-Intro-User-Interface`.
+Log in to the RSP Portal and select the table.
 In the drop-down filter menu under the ``indexed`` column in the table, select 1.
 This will filter the table to show only the rows that contain metadata for indexed columns, in addition to coordinate.
 
