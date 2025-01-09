@@ -159,13 +159,20 @@ Catalog data are accessible with the Table Access Protocol (TAP) service via the
 **DP0.2 Table Schema:**
 The column names, units, and descriptions of the DP0.2 catalogs listed in the table below are all available via the `DP0.2 schema browser <https://sdm-schemas.lsst.io/dp02.html>`_.
 
-**DP0.2 Table Index:**
-Object and source tables are indexed by coordinate (RA, Dec), and all tables are indexed by an identifier (e.g., the Object table by ``objectId``, the ccdVisit table by ``ccdVisitId``).
-Queries that provide constraints on these indexed columns (e.g., cone searches, ``objectId`` searches) can be executed much faster because it is not necessary to consider all rows.
+**DP0.2 Database Sharding:**
+On disk, the catalog tables are sharded by coordinate (RA, Dec).
+This can be thought of as the database being divided up and saved on disk in smaller files; all rows of a given file have coordinates in the "shard" (the piece of sky).
+Queries that include spatial constraints which minimize the number of shards that have to be accessed, opened, and searched through will be much faster than
+queries which have no (or very wide) spatial constraints.
+
+**DP0.2 Table Indices**
+Catalog tables are also indexed by a unique identifier (e.g., the Object table by ``objectId``, the ccdVisit table by ``ccdVisitId``).
+These index columns can be thought of as encoding information about which shard the object can be found in.
+For this reason, queries that provide constraints on index columns (e.g., that specify an ``objectId``) can also be executed much faster.
 The easiest way to see which columns, in addition to coordinates, are indexed for a given table is to use :ref:`Portal-Intro-User-Interface`.
 Log in to the RSP Portal and select the table.
 In the drop-down filter menu under the ``indexed`` column in the table, select 1.
-This will filter the table to show only the rows that contain metadata for indexed columns, in addition to coordinate.
+This will filter the table to show only the rows that contain metadata for indexed columns.
 
 
 .. list-table:: Catalog data available for DP0.2.
@@ -197,19 +204,6 @@ This will filter the table to show only the rows that contain metadata for index
 
 |
 
-**Multiple similar Butler catalogs**, which contain the same data but are slightly differently named and differently formatted,
-can be found by querying the collections in the Butler registry.
-Some tables require different types of inputs: for example, "diaSourceTable" can be queried with a dataId that includes the visit,
-whereas "diaSourceTable_tract" can be queried with a dataId that includes the tract number.
-The table below lists the catalogs most likely to be most useful to most people.
-Note that in the future, for real LSST data releases, this level of redundancy in the catalog data would not be served.
-
-**Principal Columns:**
-In this context, 'principal columns' means the columns that a basic table query (or most queries) would want to retrieve;
-in other words, the default columns.
-For convenience, Rubin Observatory staff have identified the principal columns which are most likely to be useful.
-These principal columns will be pre-selected in the Table View of the RSP's Portal Aspect.
-
 **Recommendation to include spatial constraints:**
 It is recommended to always start with spatial constraints for a small radius and then expand the search area.
 Qserv stores catalog data sharded by coordinate (RA, Dec).
@@ -223,6 +217,19 @@ A good default search query parameter for the Object, Source, and ForcedSource c
 The ``detect_isPrimary`` parameter is ``True`` if a source has no children, is in the inner region of a coadd patch, is in the inner region of a coadd tract, and is not “detected” in a pseudo-filter.
 Setting ``detect_isPrimary`` to ``True`` will remove any duplicates, sky objects, etc.
 See `this documentation on filtering for unique, deblended sources with the detect_isPrimary flag <https://pipelines.lsst.io/getting-started/multiband-analysis.html#filtering-for-unique-deblended-sources-with-the-detect-isprimary-flag>`_ for more information.
+
+**Multiple similar Butler catalogs**, which contain the same data but are slightly differently named and differently formatted,
+can be found by querying the collections in the Butler registry.
+Some tables require different types of inputs: for example, "diaSourceTable" can be queried with a dataId that includes the visit,
+whereas "diaSourceTable_tract" can be queried with a dataId that includes the tract number.
+The table below lists the catalogs most likely to be most useful to most people.
+Note that in the future, for real LSST data releases, this level of redundancy in the catalog data would not be served.
+
+**Principal Columns:**
+In this context, 'principal columns' means the columns that a basic table query (or most queries) would want to retrieve;
+in other words, the default columns.
+For convenience, Rubin Observatory staff have identified the principal columns which are most likely to be useful.
+These principal columns will be pre-selected in the Table View of the RSP's Portal Aspect.
 
 **For photometry of point sources:**
 PSF model fluxes are generally recommended, but there could be issues for objects near the edges of CCDs.  For single-visit (source) photometry, it is recommended to use ``psfFlux`` for the flux, ``psfFluxErr`` for the flux error, and ``psfFlux_flag`` for culling sources with poorly determined PSF model fluxes.  For coadd (object) photometry, it is recommended to use ``<band>_psfFlux`` for the flux, ``<band>_psfFluxErr`` for the flux error, and ``<band>_pixelFlags_inexact_psfCenter`` to identify objects which may contain sources with poorly determined PSF photometry.  (Note:  the object ``<band>_inputCount`` value can help indicate how strong this effect may be; the larger ``<band>_inputCount``, the smaller the effect.)
