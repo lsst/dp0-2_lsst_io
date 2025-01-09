@@ -62,8 +62,8 @@ Copy-paste the following ADQL code into the “ADQL Query” box.
 .. code-block:: SQL 
 
    SELECT coord_dec, coord_ra, detect_isPrimary,
-   scisql_nanojanskyToAbMag(g_calibFlux) as gmag,
-   scisql_nanojanskyToAbMag(r_calibFlux) as rmag,
+   scisql_nanojanskyToAbMag(g_cModelFlux) as gmag,
+   scisql_nanojanskyToAbMag(r_cModelFlux) as rmag,
    g_extendedness as gext,
    r_extendedness as rext,
    DISTANCE(POINT('ICRS', coord_ra, coord_dec), POINT('ICRS', 55.75, -32.27)) as radial_offset 
@@ -100,7 +100,7 @@ At bottom left, increase the "Row Limit" to 300,000, and click “Search”.
   Figure 1: The Portal's ADQL interface with the query entered and the row limit updated to 300,000.
 
 
-**1.7. The query will return 229,570 objects.**
+**1.7. The query will return 227,752 objects.**
 
 
 .. _DP0-2-Portal-Histogram-Step-2:
@@ -193,7 +193,7 @@ and that a real LSST color-magnitude diagram for galaxies might look quite diffe
 
 .. figure:: /_static/portal_tut04_step03_03b.png
   :name: portal_tut04_step03_03b
-  :alt: A screenshot of the color-magnitude heatmap in default.
+  :alt: A screenshot of the color-magnitude heatmap in default color scheme.
 
   Figure 7: The color magnitude diagram (CMD) as a 2D histogram (heatmap) for all returned objects.
 
@@ -274,7 +274,7 @@ Fill in the options as shown in Figure 11 and click "OK".
   :name: portal_tut04_step05_01
   :alt: The new chart panel filled out to make a CMD scatter plot.
 
-  Figure 11: The parameters to use to create a new chart (new plot) containing the galaxy CMD as a scatter plot.
+  Figure 11: The parameters to use to create a new chart (new plot) containing the galaxy CMD as a scatter plot. For color, select the light grey palette box.
 
 
 **5.4. Find the cluster red sequence.**
