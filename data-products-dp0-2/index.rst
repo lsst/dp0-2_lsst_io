@@ -166,14 +166,9 @@ Queries that include spatial constraints which minimize the number of shards tha
 queries which have no (or very wide) spatial constraints.
 
 **DP0.2 Table Indices**
-Catalog tables are also indexed by a unique identifier (e.g., the Object table by ``objectId``, the ccdVisit table by ``ccdVisitId``).
-These index columns can be thought of as encoding information about which shard the object can be found in.
-For this reason, queries that provide constraints on index columns (e.g., that specify an ``objectId``) can also be executed much faster.
-The easiest way to see which columns, in addition to coordinates, are indexed for a given table is to use :ref:`Portal-Intro-User-Interface`.
-Log in to the RSP Portal and select the table.
-In the drop-down filter menu under the ``indexed`` column in the table, select 1.
-This will filter the table to show only the rows that contain metadata for indexed columns.
-
+The three columns, ``objectId``, ``diaObjectId``, and ``sourceId``, can be thought of as columns that encode information about which shard the object can be found in.
+These columns appear in multiple tables (e.g., the ``objectId`` appears in the ``Object`` table but also in the ``ForcedSource`` table).
+Queries that provide constraints on these columns are executed much faster, because they also minimize the number of shards that have to be accessed.
 
 .. list-table:: Catalog data available for DP0.2.
    :widths: 150 440
