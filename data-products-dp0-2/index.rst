@@ -165,7 +165,7 @@ This can be thought of as the database being divided up by spatial region (shard
 Queries that include spatial constraints which minimize the number of shards that have to be searched through will be much faster than
 queries which have no (or very wide) spatial constraints.
 
-**DP0.2 Table Indices**
+**DP0.2 Table Indices:**
 The three columns, ``objectId``, ``diaObjectId``, and ``sourceId``, can be thought of as columns that encode information about which shard the object can be found in.
 These columns appear in multiple tables (e.g., the ``objectId`` appears in the ``Object`` table but also in the ``ForcedSource`` table).
 Queries that provide constraints on these columns are executed much faster, because they also minimize the number of shards that have to be accessed.
