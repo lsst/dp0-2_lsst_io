@@ -87,7 +87,11 @@ This funtion will convert the corresponding flux errors, in nJy, into AB magnitu
              AND r_cModelFlux >360 AND i_cModelFlux >360 
              AND z_cModelFlux >360 AND y_cModelFlux >360)
 
-**4. View the results.**
+
+**4. Notice the query constraints** on coordinate, extendedness, flux, and the ``detect_isPrimary`` flag are set in order to
+retrieve a small sample of point-like objects (stars) brighter than 25th magnitude (as in preceding tutorials).
+
+**5. View the results.**
 Figure 1 shows the table panel in the Results tab for the query above.
 Notice that there are no flux columns because they were retrieved ``AS`` magnitudes,
 and the columns have been renamed as specified in the ADQL statement.
