@@ -92,72 +92,27 @@ In the coverage chart panel (Figure 1) click on each of the drop-down menus and 
 * K: **Image lock** and alignment (tools for when multiple images are displayed).
 * L: **Expand panel** to have the coverage chart take the full browser window.
 
-**5. Change the HiPS image.**
-Under A in Figure 1, click on "HiPS/MOC" and then "Change HiPS image".
-The pop-up window offers options of color images made from different filter combinations and single-filter DP0.2 images.
-There is also the option of a blank background or 2MASS color images (the real 2MASS images will not match the location of the simulated DP0.2 objects).
-Select the DP0.2 i-band image.
+**5. Zoom in.**
+Above C in Figure 1, click the "zoom in" icon (magnifying glass with a + inside) 5-6 times to zoom in,
+until individual object markers are displayed instead of the HEALpix grid (Figure 2).
 
-**6. Add a north arrow.**
-Click on the tools icon (F in Figure 1) and in the row for Layers, select the north arrow icon (the compass with north-up, east-left).
-The north arrow will appear in the image. 
+**6. Select a single object.**
+Click on any individual marker, and notice that it's row will be highlighted orange in the table panel and its symbol will be orange in the active chart (Figure 2).
 
-**7. Invert the color map.**
-Click on the color palette icon (G in Figure 1) and select the color bar showing white-to-black left-to-right.
-The HiPS map display will be inverted and the stars will be dark on a light background.
+.. figure:: /_static/portal-howto-hips-2a.png
+    :name: portal-howto-hips-2a
+    :alt: The new view of the zoomed-in coverage chart.
 
-**8. Recenter on a bright star.**
-Click on the target icon (H in Figure 1) and enter ``4h08m32.54s, -36d57m44.2s`` in the box.
-Click "Go & Mark".
-The display will recenter on a bright star and it will be marked with a crosshair icon.
-
-**9. Manipulate the layers.**
-Click on the layers icon (J in Figure 1).
-Make changes as shown in Figure 2.
-Change the colors of the north arrow to purple and the marked bright star to green.
-Under "Coverage", next to "Min Group" select "40" from the drop down menu to change the HEALpix grid overlay.
-Toggle off the layer to display the central search position from the ADQL query.
-
-.. figure:: /_static/portal-howto-hips-2.png
-    :name: portal-howto-hips-2
-    :alt: The pop-up window for overlays.
-
-    Figure 2: The pop-up window to manipulate the layers, with the changes of step 9 implemented.
-
-**10. Zoom in.**
-Above C in Figure 1, click the "zoom in" icon (magnifying glass with a + inside) three times to zoom in.
-
-**11. View the new coverage chart.**
-It should look similar to Figure 3.
-
-.. figure:: /_static/portal-howto-hips-3.png
-    :name: portal-howto-hips-3
-    :alt: The new view of the manipulated coverage chart.
-
-    Figure 3: The coverage chart panel with modifications from steps 5, 6, 7, 8, 9, and 10 applied.
+    Figure 2: The coverage chart panel, zoomed in to show individual markers, with one object selected.
 
 
-**12. Option: save a PNG of the coverage chart.**
+**7. Option: save a PNG of the coverage chart.**
 Click on the tools icon (F in Figure 1) and select the disk icon next to "Save...".
 Leave the default selection of PNG file and click "Save".
 An image of the coverage chart will automatically download.
 Note the option to export the overlays as a regions file.
 
-**13. Reset the coverage chart.**
+**8. Reset the coverage chart.**
 Click on the tools icon (F in Figure 1) and select the circlular arrow icon next to "Save..." to restore to default options.
-
-**14. Select a single object.**
-Zoom in on the coverage map until individual object markers are displayed instead of the HEALpix grid.
-Click on any marker, and notice that it's row will be highlighted orange in the table panel and its symbol will be orange in the active chart.
-
-**15. What about the spatial selection tool?**
-Using this tool (I in Figure 1) with HiPS maps is still a work in progress.
-
-**Exercises for the learner.**
-
-* Remove the north arrow.
-* Delete the marker for the bright star.
-* Switch the coverage overlay from HEALpix to heatmap.
-* Switch the color palette to "cool".
 
 Return to the list of DP0.2 :ref:`DP0-2-Tutorials-Portal`.
