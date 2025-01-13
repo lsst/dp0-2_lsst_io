@@ -95,7 +95,7 @@ In other words, there are multiple rows from the ``Source`` table joined with a 
 **5. Execute a three-table join.**
 The ``Object`` table (photometry in deeply coadded images) can be joined with the
 ``ForcedSource`` table (photometry in individual processed visit images) using their shared ``objectId`` column.
-The ``FourcedSource`` table can be joined with the ``CcdVisit`` table using ``ccdVisitId``.
+The ``ForcedSource`` table can be joined with the ``CcdVisit`` table using ``ccdVisitId``.
 Constraints can be applied on columns from any or all tables.
 
 .. code-block:: SQL
