@@ -264,7 +264,7 @@ enter "< 0.05" into the filter entry box in the table for the ``radial_offset`` 
 press "enter" or "return" on the keyboard.
 
 **5.2. Notice the 2D CMD cannot be displayed.**
-There are now too few objects (763 objects) to populate a 2D histogram.
+There are now too few objects (790 objects) to populate a 2D histogram.
 
 **5.3. Create a new chart with a scatter-plot CMD.**
 In the upper left corner of the active chart panel, click on the plus sign in a circle to add a new chart.
