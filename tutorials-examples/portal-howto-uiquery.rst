@@ -97,10 +97,17 @@ Set the constraints in the list below, as shown in Figure 4.
 
 **Warning!**
 Do not use the schema interface to apply spatial constraints, i.e., do not apply limits on coordinate columns (``coord_ra``, ``coord_dec``).
-Applying spatial constraints as instructed in Step 3, because cone and polygon searches are executed much more quickly than columns limits.
+Only apply spatial constraints as instructed in Step 3, because cone and polygon searches are executed much more quickly than columns limits.
 
 **6. Execute the UI query.**
 Leave the Row Limit (E in Figure 1) at the default of 50,000 and click Search (F in Figure 1).
 The query will be executed and the results will appear in the Results tab.
+
+.. figure:: /_static/portal-howto-uiquery-5.png
+    :name: portal-howto-uiquery-5
+    :alt: Default search results from a query.
+
+    Figure 4: The default results view layout for the query described above. Interacting with query results is covered in a separate tutorial.
+
 
 Return to the list of DP0.2 :ref:`DP0-2-Tutorials-Portal`.
