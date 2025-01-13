@@ -161,8 +161,8 @@ The column names, units, and descriptions of the DP0.2 catalogs listed in the ta
 
 **DP0.2 Database Sharding:**
 On disk, the catalog tables are sharded by coordinate (RA, Dec).
-This can be thought of as the database being divided up and saved on disk in smaller files; all rows of a given file have coordinates in the "shard" (the piece of sky).
-Queries that include spatial constraints which minimize the number of shards that have to be accessed, opened, and searched through will be much faster than
+This can be thought of as the database being divided up by spatial region (shard) and distributed across multiple servers.
+Queries that include spatial constraints which minimize the number of shards that have to be searched through will be much faster than
 queries which have no (or very wide) spatial constraints.
 
 **DP0.2 Table Indices**
