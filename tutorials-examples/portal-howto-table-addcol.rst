@@ -87,7 +87,7 @@ Leave the default selection of "Save table as displayed" in order to include the
     :name: portal-howto-table-6
     :alt: The pop-up window to save a table.
 
-    Figure 2: The pop-up window to save a table, with the selections as described in step 5.
+    Figure 3: The pop-up window to save a table, with the selections as described in step 5.
 
 
 Return to the list of DP0.2 :ref:`DP0-2-Tutorials-Portal`.
