@@ -35,6 +35,7 @@ This tutorial demonstrates how to manipulate the active chart and customize the 
 
 **1. Execute a query.**
 Go to the Portal's DP0.2 Catalogs tab, switch to the ADQL interface, and execute the query below.
+This query will retrieve a small sample of point-like objects (stars) brighter than 25th magnitude (as in preceding tutorials).
 
 .. code-block:: SQL
 
@@ -64,12 +65,9 @@ The default plot will use the first two columns of the returned data table (Figu
     Figure 1: The active chart panel in the Results tab, with default settings, for the query above.
 
 
-**3. Customize the default plot.**
+**3. Customize the plot parameters.**
 Click on the settings icon (J in Figure 1) to get the plot parameters pop-up window as seen in Figure 2.
 Leave the default selection as modify the trace, which means to modify the axes and points in the plot.
-For the X axis enter ``g_cModelMag - r_cModelMag`` and for the Y axis enter ``g_cModelMag``.
-Ajust the trace options (plot style) and chart options (labels) as in Figure 2.
-Click "Apply" and then "Close" in the plot parameters window.
 
 .. figure:: /_static/portal-howto-plots-5.png
     :name: portal-howto-plots-5
@@ -78,34 +76,53 @@ Click "Apply" and then "Close" in the plot parameters window.
     Figure 2: The plot parameters pop-up window with adjustments made to generate a color-magnitude diagram.
 
 
-**4. Option to save the plot.**
-Click on the save icon (G in Figure 1) to download a PNG file of the plot.
-It should look like the one shown in Figure 3.
+**4. Select data for the x- and y-axis.**
+For the X axis enter ``g_cModelMag - r_cModelMag`` and for the Y axis enter ``g_cModelMag``, as in the left panel of Figure 2.
+
+**5. Select the point type and color (trace options).**
+As in the center panel of Figure 2, for the symbol type select open circles.
+For the symbol color, choose to scale the color by the ``u_cModelMag`` column using the "Bluered" color map.
+Points that represent objects with bright (faint) u-band magnitudes will be bluer (redder).
+
+**6. Label the axes (chart options).**
+As in the right panel of Figure 2, set the chart title to "Color-Magnitude".
+Set the X label to "g-r color" and the Y label to "g-band magnitude".
+
+**7. Apply customization.**
+Click "Apply" and then "Close" in the plot parameters window.
+The plot will now appear as in Figure 3.
 
 .. figure:: /_static/portal-howto-plots-6.png
     :name: portal-howto-plots-6
     :alt: An example of a color-magnitude diagram.
 
-    Figure 3: The color-magnitude diagram created in step 11.
+    Figure 3: The color-magnitude diagram created with steps 3, 4, 5, 6, and 7.
 
 
-**5. Add a new chart.**
-Click on the "new chart" icon (L in Figure 1), and create another scatter plot color-magnitude diagram
-using different columns, point styles, and axis labels.
-The new plot will appear as a second panel in the active chart region, as in Figure 4.
+**8. Option to save the plot.**
+Click on the save icon (G in Figure 1) to download a PNG file of the plot.
+
+**9. Add a second custom chart.**
+Click on the "new chart" icon (L in Figure 1) to get an "Add New Chart" pop-up window.
+Adjust the plot type, trace, and chart options to create another plot, such as another
+color-magnitude diagram using different columns, point styles, and axis labels.
+Then click "OK" and the new plot will appear as a second panel in the active chart region, as in Figure 4.
 
 .. figure:: /_static/portal-howto-plots-7.png
     :name: portal-howto-plots-7
     :alt: Another example of a color-magnitude diagram.
 
-    Figure 4: Another, different, color-magnitude diagram added as a new chart.
+    Figure 4: Additional custom plots added as a new chart will appear next to the first one in the active chart area of the Portal results view.
 
+
+**10. Toggle between tile and single-plot view.**
+At upper left in Figure 4, underneath the tab labelled "Active Charts", use the single/tiled squares icon to toggle between
+viewing one/multiple plots at a time.
 
 **Warning!** 
 After changing the plot settings (e.g., changing which columns are plotted, point symbols and colors),
 be wary of clicking the restore icon (H in Figure 1) because it entirely resets the plot to the default
 axes and point style as shown in Figure 1.
-To zoom out (reset to default zoom), click the icon under F in Figure 1, not the icon under H.
-
+After zooming in on a plot, to zoom out (reset to default zoom), click the icon under F in Figure 1, not the icon under H.
 
 Return to the list of DP0.2 :ref:`DP0-2-Tutorials-Portal`.
