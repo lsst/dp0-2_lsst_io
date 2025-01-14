@@ -31,7 +31,7 @@
 **Targeted learning level:** beginner 
 
 **Introduction:**
-This tutorial demonstrates how to manipulate the coverage chart and HiPS map panel in the Portal results tab.
+This tutorial demonstrates how to use the coverage chart and HiPS map panel in the Portal results tab.
 
 Terminology:
 
