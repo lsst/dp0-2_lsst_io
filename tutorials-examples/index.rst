@@ -76,6 +76,7 @@ typically without scientific context or motivation - just simple examples for qu
     portal-howto-mags
     portal-howto-join
     portal-howto-hips
+    portal-howto-hips-alt
     portal-howto-plots
     portal-howto-table
 
