@@ -80,6 +80,8 @@ typically without scientific context or motivation - just simple examples for qu
     portal-howto-plots
     portal-howto-plots-custom
     portal-howto-table
+    portal-howto-table-filter
+    portal-howto-table-addcol
 
 
 
