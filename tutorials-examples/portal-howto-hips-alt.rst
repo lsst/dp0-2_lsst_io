@@ -35,6 +35,7 @@ This tutorial demonstrates how to customize the coverage chart and HiPS map pane
 
 **1. Execute a query.**
 Go to the Portal's DP0.2 Catalogs tab, switch to the ADQL interface, and execute the query below.
+This query will retrieve a small sample of point-like objects (stars) brighter than 25th magnitude (as in preceding tutorials).
 
 .. code-block:: SQL
 
