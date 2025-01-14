@@ -31,7 +31,7 @@
 **Targeted learning level:** beginner 
 
 **Introduction:**
-This tutorial demonstrates how to manipulate the table panel, apply constraints, and add derived columns in the Portal results tab.
+This tutorial demonstrates how to derived new columns from retrieved columns in the Portal results tab.
 
 **1. Execute a query.**
 Go to the Portal's DP0.2 Catalogs tab, switch to the ADQL interface, and execute the query below.
