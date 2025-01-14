@@ -32,6 +32,7 @@
 
 **Introduction:**
 This tutorial demonstrates how to use the coverage chart and HiPS map panel in the Portal results tab.
+This query will retrieve a small sample of point-like objects (stars) brighter than 25th magnitude (as in preceding tutorials).
 
 Terminology:
 
