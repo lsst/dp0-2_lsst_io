@@ -113,6 +113,6 @@ An image of the coverage chart will automatically download.
 Note the option to export the overlays as a regions file.
 
 **8. Reset the coverage chart.**
-Click on the tools icon (F in Figure 1) and select the circlular arrow icon next to "Save..." to restore to default options.
+Click on the tools icon (F in Figure 1) and select the circular arrow icon next to "Save..." to restore to default options.
 
 Return to the list of DP0.2 :ref:`DP0-2-Tutorials-Portal`.
