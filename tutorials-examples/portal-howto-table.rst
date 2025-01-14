@@ -16,9 +16,9 @@
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
 .. A warning will alert you of identical labels during the linkcheck process.
 
-####################################################
-09. How to use the results table (apply constraints)
-####################################################
+################################
+09. How to use the results table
+################################
 
 .. This section should provide a brief, top-level description of the page.
 
@@ -31,10 +31,11 @@
 **Targeted learning level:** beginner 
 
 **Introduction:**
-This tutorial demonstrates how to manipulate the table panel, apply constraints, and add derived columns in the Portal results tab.
+This tutorial demonstrates how to use the table panel in the Portal results tab.
 
 **1. Execute a query.**
 Go to the Portal's DP0.2 Catalogs tab, switch to the ADQL interface, and execute the query below.
+This query will retrieve a small sample of point-like objects (stars) brighter than 25th magnitude (as in preceding tutorials).
 
 .. code-block:: SQL
 
@@ -106,47 +107,5 @@ See how all panels update to show only the selected objects, as in Figure 3.
 **8. Remove the filter and selection.**
 Click the "unfilter" icon at upper right in the table panel to remove the filter (A in Figure 3).
 Click the "unselect" icon at uppr right in the active chart panel to unselect all objects (B in Figure 3).
-
-
-**9. Apply a constraint on column values.**
-Filter the table such that only objects with Right Ascension coordinates :math:`<` 61.9 degrees are shown
-by typing ``< 61.9`` into the filter entry box at the top of the ``coord_ra`` column as shown in Figure 4 (item A).
-See how all panels update to show only the filtered objects.
-
-.. figure:: /_static/portal-howto-table-4.png
-    :name: portal-howto-table-4
-    :alt: The full Results tab when rows have been filtered by the right ascension coordinate.
-
-    Figure 4: The full Results tab after a filter for objects with ``RA`` :math:`<` 61.9 degrees is applied (item A).
-
-
-**10. Remove the constraint.**
-Click the "unfilter" icon at upper right in the table panel to remove the filter (A in Figure 3).
-
-**11. Create a new column.**
-Click on the "add column" icon (H in Figure 1).
-In the pop-up window, name the new column ``g_cModelMag``.
-Use the following expression, which converts fluxes (in units of nJy) into AB magnitudes: ``-2.5 * LOG10(g_cModelFlux) + 31.4``.
-Provide the units of the new column as ``mag``, and add a description.
-Click "Add Column", and it will appear in the table.
-
-.. figure:: /_static/portal-howto-table-5.png
-    :name: portal-howto-table-5
-    :alt: The pop-up window to add a new column, with entry field boxes to define the derived column.
-
-    Figure 5: The pop-up window to add a new column, with entry field boxes set to define a new derived column of g-band AB magnitudes.
-
-
-**12. Option to save the table.**
-Click on the save icon (G in Figure 1), choose a file format of comma-separated values (CSV),
-leave the filename as the default, leave the default selection of "Save table as displayed" to include
-the new derived column of g-band magnitudes, and click "Save".
-
-
-**Exercises for the learner.**
-
-* Apply the same constraint as in step 9, but use the table options pop-up window (J in Figure 1).
-* Use the "Remove all filters" button in the table options pop-up window to remove the filter constraint.
-* Sort and apply constraints on the flux columns instead of a coordinate column.
 
 Return to the list of DP0.2 :ref:`DP0-2-Tutorials-Portal`.
