@@ -65,11 +65,11 @@ Within the RSP's Notebook Aspect, a set of utilities are provided to get a TAP s
 
 .. code-block:: python
 
-from lsst.rsp import get_tap_service, retrieve_query
-service = get_tap_service("tap")
-query = "SELECT TOP 100 * FROM dp02_dc2_catalogs.Object"
-results = service.search(query)
-results.to_table()
+	from lsst.rsp import get_tap_service, retrieve_query
+	service = get_tap_service("tap")
+	query = "SELECT TOP 100 * FROM dp02_dc2_catalogs.Object"
+	results = service.search(query)
+	results.to_table()
 
 Several of the DP0 :ref:`DP0-2-Tutorials-Notebooks` demonstrate how to use the TAP service programmatically from a python notebook. 
 
