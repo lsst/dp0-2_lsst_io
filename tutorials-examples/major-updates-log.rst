@@ -51,6 +51,11 @@ and clicking on "history" (near upper-right).
 Major Updates Log
 =================
 
+Jan 22 2025
+-----------
+
+Thirteen new, short, functionality-focused "How To" :ref:`DP0-2-Tutorials-Portal` released.
+
 Dec 19 2024
 -----------
 
