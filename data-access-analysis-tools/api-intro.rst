@@ -267,7 +267,7 @@ RSP token to outside resources for even a short period of time.
    cred = pyvo.auth.CredentialStore()
    cred.set_password("x-oauth-basic", token_str)
    credential = cred.get("ivo://ivoa.net/sso#BasicAA")
-   rsp_tap = pyvo.dal.TAPService(RSP_TAP_SERVICE, credential)
+   rsp_tap = pyvo.dal.TAPService(RSP_TAP_SERVICE, session=credential)
 
 
 **6. Run a query.**  For example, in the following case, the query requests a list of the catalogs that are available from the RSP TAP service.  More examples of useful DP0.2 queries can be found in the DP0.2 :ref:`DP0-2-Tutorials-Notebooks` and on the :doc:`/data-access-analysis-tools/adql-recipes` page.
