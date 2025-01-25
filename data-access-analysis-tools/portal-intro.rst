@@ -35,9 +35,14 @@
 
 .. _DP0-2-Portal-Histogram-Step-1:
 
-**1.  Preparation and execution of the ADQL query**:  
-The sample query below uses the ``dp02_dc2_catalogs.Object`` catalog to extract the g-band and r-band fluxes (respectively ``g_calibFlux`` and ``r_calibFlux``) of all extended objects (by selecting ``g_extendedness = 1`` and ``r_extendedness = 1``) in a ~ 1.5 sq. degree region of the sky.  
-(The ``calibFlux`` is the flux within a 12 pixel aperture; aperture fluxes are appropriate to use when calculating extended object colors.)
+**1.  Prepare and execute the ADQL query to retrieve data**:  
+
+**1.1. Go to the DP0.2 catalog ADQL interface.**
+Navigate to the Portal's DP0.2 Catalogs tab and switch to the ADQL interface by selecting  "Edit ADQL" at upper right.
+If needed, reload the webpage in the browser to clear any previously-entered constraints. 
+
+**1.2. Enter an ADQL statement in the box.** For example, copy paste the statement below. 
+
 The query converts the fluxes to magnitudes, by the use of an ADQL function ``scisql_nanojanskyToAbMag()`` where the respective flux is the argument (and renames them as ``gmag`` and ``rmag``).  
 It restricts the search to return only objects with g- and i-magnitudes less than 23.
 It limits the search to those objects located in a circular region with a radius of 0.75 degree, around the direction with RA of 55.75 deg and and Dec of -32.27 deg, via the restriction ``CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 55.75, -32.27, 0.75) = 1``.
@@ -45,18 +50,19 @@ It limits the search to those objects located in a circular region with a radius
 .. code-block:: SQL 
 
    SELECT coord_dec, coord_ra, 
-   scisql_nanojanskyToAbMag(g_calibFlux) as gmag, 
-   scisql_nanojanskyToAbMag(r_calibFlux) as rmag, 
+   scisql_nanojanskyToAbMag(g_cModelFlux) AS g_cModelMag, 
+   scisql_nanojanskyToAbMag(r_cModelFlux) AS r_cModelMag, 
    g_extendedness, 
-   r_extendedness  
+   r_extendedness 
    FROM dp02_dc2_catalogs.Object 
-   WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 55.75, -32.27, 0.75)) = 1 
+   WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), 
+   CIRCLE('ICRS', 62, -37, 0.167)) =1 
    AND g_extendedness = 1 
    AND r_extendedness = 1 
-   AND scisql_nanojanskyToAbMag(g_calibFlux) < 23 
-   AND scisql_nanojanskyToAbMag(r_calibFlux) < 23 
+   AND g_cModelFlux > 360 
+   AND r_cModelFlux > 360 
 
-**2.  Plotting the histogram of g-magnitudes**:  
+**Part 2.  Plot the histogram of g-magnitudes**:  
 Executing the ADQL query is via clicking the “Search” button in the lower left corner.  
 The resulting display will by default show the sky coverage on the left, and the plot of the 1st column as a function of the 2nd column on the right.
 To plot the distribution of g magnitudes, it is necessary to add another plot panel, by clicking on the "+" button on the upper left-hand side of the active chart, and selecting "Histogram" as the Plot Type.
