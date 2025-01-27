@@ -14,14 +14,14 @@
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
 .. A warning will alert you of identical labels during the linkcheck process.
 
-#####################
-DP0 Delegate Homepage
-#####################
+#################
+DP0 User Homepage
+#################
 
 .. This section should provide a brief, top-level description of the page.
 
 .. Important::
-    This page has moved! `Go to the new delegate homepage <https://dp0.lsst.io/delegate-resources/index.html>`__.
+    This page has moved! `Go to the new DP0 user homepage <https://dp0.lsst.io/delegate-resources/index.html>`__.
 
 
 .. _Delegate-Homepage-Getting-Started-Checklist:
