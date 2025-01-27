@@ -61,7 +61,6 @@ linkcheck_ignore = [
     r"^http://www.star.bris.ac.uk/~mbt/topcat/",  # site temporarily down
     r"^https://www.star.bris.ac.uk/~mbt/topcat/",  # site temporarily down
     r"^https://www.star.bris.ac.uk/~mbt/topcat/sun253/sun253.html#subsetDef",  # site temporarily down
-    r"^https://ui.adsabs.harvard.edu",
     r"https://ui.adsabs.harvard.edu/abs/2014SPIE.9150E..14C/abstract", # ADS issue presumed temporary
     r"https://www.ivoa.net/", r"https://ivoa.net/", # links too slow  
     r"https://www.ivoa.net/documents/SIA/20150730/index.html",
