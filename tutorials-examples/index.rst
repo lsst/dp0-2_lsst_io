@@ -27,7 +27,7 @@ Before following these tutorials, users should:
 | 1. have gotten their `RSP account <https://rsp.lsst.io/guides/getting-started/get-an-account.html>`_ and be able to log in at `data.lsst.cloud <https://data.lsst.cloud/>`_,
 | 2. be familiar with this list of :doc:`/data-access-analysis-tools/rsp-warnings`,
 | 3. have reviewed the basic introductions to the RSP's :ref:`Tools-RSP-Portal` or :ref:`Tools-RSP-Notebook`, and
-| 4. know their options for :ref:`Delegate-Homepage-Getting-Support`.
+| 4. know their options for `getting support <https://dp0.lsst.io/delegate-resources/support.html>`_.
 
 
 All RSP tutorials are created by Rubin staff and adhere to
@@ -221,7 +221,7 @@ View the readme files in each sub-directory for more information about the conte
 
 **Who can contribute a tutorial?**
 Everyone is welcome to contribute tutorials or science demonstrations to this repo.
-All are welcome to drop in to a :ref:`DP0-Delegate-Programming-StackClub` session to workshop a tutorial topic or get assistance.
+All are welcome to drop in to a `Rubin Science Assembly <https://dp0.lsst.io/delegate-resources/virtual-events.html#dp0-delegate-resources-virtual-events-assemblies>`_ session to workshop a tutorial topic or get assistance.
 
 **How are contributions made?**
 The `README <https://github.com/rubin-dp0/delegate-contributions-dp02/blob/main/README.md>`_ file for this repo 
