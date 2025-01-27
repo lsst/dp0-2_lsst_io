@@ -36,12 +36,12 @@ Term definitions are provided on the `Rubin Observatory Glossary & Acronyms webp
 
 .. _Rubin-Observatory-Documentation-DP0-2-Delegate-Resources:
 
-Resources for DP0 delegates
-===========================
+Resources for DP0 users
+=======================
 
-The term delegate refers to the 900 data rights holders who have accounts in the Rubin Science Platform (RSP) and access to the DP0 data sets.
+DP0 users are the 900 data rights holders who have accounts in the Rubin Science Platform (RSP) and access to the DP0 data sets.
 Use the `getting started with DP0 checklist <https://dp0.lsst.io/delegate-resources/getting-started.html#new-delegate-checklist>`__
-to become a delegate and have access to the DP0 data sets.
+to become a DP0 user.
     
 .. toctree::
     :maxdepth: 2
