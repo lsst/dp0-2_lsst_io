@@ -46,7 +46,7 @@ On Feb 16 2023, as documented in the `Major Updates Log <https://dp0-2.lsst.io/t
 However, the latest versions of the pipelines are not compatible with the intermediate data products of DP0.2, which were produced in early 2022.
 To update this tutorial to be able to use Weekly 2023_07, it would have to demonstrate how to recreate coadds *starting with the raw data products*.
 This is pedagogically undesirable because it does not accurately represent *future workflows*, which is the goal of DP0.2.
-Thus, it is recommended that delegates learn how to recreate coadds with Weekly 2022_40.
+Thus, it is recommended that users learn how to recreate coadds with Weekly 2022_40.
 
 Step 1. Access the terminal and set up
 =====================================
