@@ -76,7 +76,7 @@ linkcheck_ignore = [
     r"https://dp0-2.lsst.io/_static/nb_html/*",
     r"https://datalab.noirlab.edu/",
     r"https://ls.st/lse-319",
-    r"https://ui.adsabs.harvard.edu/abs/2019ApJ...873..111I/abstract"
+    r"https://ui.adsabs.harvard.edu/.*#"
 ]
 
 
