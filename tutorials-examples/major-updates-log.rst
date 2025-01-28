@@ -263,7 +263,7 @@ Notebooks 09a and 09b (custom coadds) added.
 
 
 Oct 04 2022
-----------
+-----------
 
 Notebook 08 (truth tables) updated to optimize TAP query.
 
