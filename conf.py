@@ -74,7 +74,8 @@ linkcheck_ignore = [
     r"https://www.ivoa.net/documents/latest/ADQL.html",
     r"https://aladin.u-strasbg.fr/hips/",
     r"https://dp0-2.lsst.io/_static/nb_html/*",
-    r"https://datalab.noirlab.edu/"
+    r"https://datalab.noirlab.edu/",
+    r"https://ls.st/lse-319"
 ]
 
 

@@ -228,10 +228,10 @@ Yes, the RSP Notebook Aspect will only have python environments for DP0.
 To access data from the Notebook Aspect, users will need to use Python commands and code.
 Much of the `LSST Science Pipelines <https://pipelines.lsst.io/>`_ code is in Python, and the DP0 :ref:`DP0-2-Tutorials-Notebooks` use Python as well.
 These tutorials contain executable examples of the commands required to access and analyze data.
-All DP0 delegates should feel free to copy and paste from the provided tutorials.
+All DP0 users should feel free to copy and paste from the provided tutorials.
 
 Anyone new to Python and looking to learn more might benefit from this `Python for Beginners <https://www.python.org/about/gettingstarted>`_ website (which includes links to tutorial in a variety of languages),
-or this Community Forum thread where DP0 delegates can share `resources for python beginners <https://community.lsst.org/t/5975>`_.
+or this Community Forum thread where DP0 users can share `resources for python beginners <https://community.lsst.org/t/5975>`_.
 Web searches for "python *(thing you want to do)*" are usually pretty successful too.
 
 
@@ -355,12 +355,12 @@ How do I ask questions about Notebooks?
 ---------------------------------------
 
 Keep in mind that if you are not experienced at accessing data via Jupyter notebooks, or using a Science Platform more generally, you are not alone!
-Most of the DP0 delegates are new to this environment, and all of your questions and feedback will help us improve both the documentation and the tools.
+Most of the DP0 users are new to this environment, and all of your questions and feedback will help us improve both the documentation and the tools.
 
-The `DP0 Delegate Homepage <https://dp0-2.lsst.io>`_ provides information about :ref:`Delegate-Homepage-Getting-Support` at any time via the `Rubin Observatory Community Forum <https://community.lsst.org/>`_ or via GitHub Issues.
-Another option is to attend the biweekly :ref:`Delegate-Homepage-DP0-Delegate-Assemblies` which will feature live tutorials and question-and-answer time with Rubin Observatory staff.
+The `DP0 User Homepage <https://dp0-2.lsst.io>`_ provides information about getting support at any time via the `Rubin Observatory Community Forum <https://community.lsst.org/>`_ or via GitHub Issues.
+Another option is to attend the biweekly `Rubin Science Assemblies <https://dp0.lsst.io/delegate-resources/virtual-events.html#rubin-science-assemblies>`_ which will feature live tutorials and question-and-answer time with Rubin Observatory staff.
 
-Beginner-level questions are very welcome, both in the Community Forum and during the Delegate Assemblies.
+Beginner-level questions are very welcome, both in the Community Forum and during the Rubin Science Assemblies.
 To encourage questions in the Forum, a couple of beginner-level topics have been started to share resources for
 learning `python <https://community.lsst.org/t/resources-for-python-beginners/5975>`_ and `SQL <https://community.lsst.org/t/sql-adql-beginner-resources/6051>`_.
 People new to the Rubin Community Forum might appreciate `this video demonstrating how to navigate and post topics to the forum <https://www.youtube.com/watch?v=d_Z5xmkR4P4&list=PLPINAcUH0dXZSx2aY6wTIjLCWiexs3dZR&index=10>`_.

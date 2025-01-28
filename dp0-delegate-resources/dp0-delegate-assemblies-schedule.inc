@@ -15,9 +15,9 @@
 .. A warning will alert you of identical labels during the linkcheck process.
 
 .. This file does not contain a title because it is a table for another location (dp0-delegate-resources/index.rst).
-.. title:: DP0 Delegate Assemblies Schedule
+.. title:: DP0 Science Assemblies Schedule
 .. ################################
-.. DP0 Delegate Assemblies Schedule
+.. DP0 Science Assemblies Schedule
 .. ################################
 
 .. This section should provide a brief, top-level description of the page.
@@ -26,7 +26,7 @@
 
 .. Use double-underscore for external links to prevent duplicate explicit target names.
 
-.. list-table:: Schedule and planned content of DP0 Delegate Assemblies
+.. list-table:: Schedule and planned content of DP0 Science Assemblies
    :header-rows: 1
    :widths: 1 2 2
 
@@ -62,7 +62,7 @@
      - *general Q&A, breakouts*
 
 
-Additional delegate assemblies to be posted.
+Additional assemblies to be posted.
 Rows in *italics* are tentative topics.
 	
 	

@@ -254,7 +254,7 @@ Double click on the filename to open and view the plot.
 Step 6. Retrieve image data using the butler
 ============================================
 
-The two most common types of images that DP0 delegates will interact with are calexps and deepCoadds.
+The two most common types of images that DP0 users will interact with are calexps and deepCoadds.
 
 calexp: A single image in a single filter.
 

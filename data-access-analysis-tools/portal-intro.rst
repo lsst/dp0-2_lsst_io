@@ -294,7 +294,7 @@ Image Search (ObsTAP)
 =====================
 
 You can perform image searches by clicking in the "DP0.2 Images" tab on top of the screen.  
-This functionality has many new features -- not just new for DP0.2, but new to the Firefly interface, and DP0 Delegates are among the first to use them.
+This functionality has many new features -- not just new for DP0.2, but new to the Firefly interface, and DP0 users are among the first to use them.
 Clicking on that tab will change the user interface to display query constraint options that are specific to the image data, as described below.
 
 For more information about the image types available in the DP0.2 data set, see the :ref:`DP0-2-Data-Products-DPDD`.
