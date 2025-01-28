@@ -283,7 +283,7 @@ Hint: use a search radius of 200 arcseconds.
 
 Hint: you can use the scisql_nanojanskyToAbMag SQL function to convert fluxes to magnitudes.
 
-*Definition: The red sequence in galaxy clusters refers to a tight correlation observed in color-magnitude diagrams, where many of the galaxies in a cluster show a similar red color and brightness, indicating they are older, more evolved galaxies with less star formation.
+*Definition*: The red sequence in galaxy clusters refers to a tight correlation observed in color-magnitude diagrams, where many of the galaxies in a cluster show a similar red color and brightness, indicating they are older, more evolved galaxies with less star formation.
 
 Step 1. Visualize the region of the cluster
 ===========================================
