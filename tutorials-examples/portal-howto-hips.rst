@@ -39,10 +39,10 @@ Terminology:
 * `HiPS <https://aladin.cds.unistra.fr/hips/>`_: Hierarchical Progressive Surveys 
 * `MOC <https://www.ivoa.net/documents/MOC/>`_: Multi-Order Coverage map 
 * `ADQL <https://www.ivoa.net/documents/latest/ADQL.html>`_: Astronomy Query Data Language
-* `HEALpix <https://healpix.sourceforge.io/>`_: Hierarchical Equal Area isoLatitude Pixelation of a sphere
+* `HEALPix <https://healpix.sourceforge.io/>`_: Hierarchical Equal Area isoLatitude Pixelation of a sphere
 * `2MASS <https://irsa.ipac.caltech.edu/Missions/2mass.html>`_: Two Micron All Sky Survey 
 * `regions <https://ds9.si.edu/doc/ref/region.html>`_ file: a standard format for marking regions in an image
-* WCS: World Coordinate System (the convention that defines the coordinates per pixel)
+* `WCS <https://fits.gsfc.nasa.gov/fits_wcs.html>`_: World Coordinate System (the convention that defines the coordinates per pixel)
 * PNG: Portable Network Graphic
 
 
@@ -63,9 +63,9 @@ Go to the Portal's DP0.2 Catalogs tab, switch to the ADQL interface, and execute
              AND z_cModelFlux >360 AND y_cModelFlux >360)
 
 **2. View the default coverage chart** (Figure 1).
-The default view is a HEALpix grid showing the number of returned objects per grid region.
+The default view is a HEALPix grid showing the number of returned objects per grid region.
 Small red squares mark individual objects outside the grid.
-The background is a color HiPS map of the DP0.2 deeply coadded images.
+The background is a color HiPS map of the DP0.2 deepCoadd images.
 
 .. figure:: /_static/portal-howto-hips-1.png
     :name: portal-howto-hips-1
@@ -89,13 +89,13 @@ In the coverage chart panel (Figure 1) click on each of the drop-down menus and 
 * G: **Color table** menu to choose a different color map.
 * H: **Recenter** by entering coordinates for the desired display center.
 * I: **Spatial selection** (not currently active for HiPS maps).
-* J: **Overlays** manipulation to change the options or color for the HEALpix and points overlay.
+* J: **Overlays** manipulation to change the options or color for the HEALPix and points overlay.
 * K: **Image lock** and alignment (tools for when multiple images are displayed).
 * L: **Expand panel** to have the coverage chart take the full browser window.
 
 **5. Zoom in.**
 Above C in Figure 1, click the "zoom in" icon (magnifying glass with a + inside) 5-6 times to zoom in,
-until individual object markers are displayed instead of the HEALpix grid (Figure 2).
+until individual object markers are displayed instead of the HEALPix grid (Figure 2).
 
 **6. Select a single object.**
 Click on any individual marker, and notice that it's row will be highlighted orange in the table panel and its symbol will be orange in the active chart (Figure 2).
