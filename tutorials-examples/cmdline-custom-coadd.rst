@@ -49,7 +49,7 @@ This is pedagogically undesirable because it does not accurately represent *futu
 Thus, it is recommended that users learn how to recreate coadds with Weekly 2022_40.
 
 Step 1. Access the terminal and set up
-=====================================
+======================================
 
 1.0. Recall the scientific context motivating custom coadds
 
