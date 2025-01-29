@@ -21,7 +21,7 @@ DP0 User Homepage
 .. This section should provide a brief, top-level description of the page.
 
 .. Important::
-    This page has moved! `Go to the new DP0 user homepage <https://dp0.lsst.io/delegate-resources/index.html>`__.
+    This page has moved! `Go to the new DP0 user homepage <https://dp0.lsst.io/delegate-resources/index.html>`_.
 
 
 .. _Delegate-Homepage-Getting-Started-Checklist:
@@ -29,4 +29,4 @@ DP0 User Homepage
 Getting started with DP0 checklist
 ==================================
 
-The checklist has moved! `Go to the new getting started with DP0 checklist <https://dp0.lsst.io/delegate-resources/getting-started.html#new-delegate-checklist>`__.
+The checklist has moved! `Go to the new getting started with DP0 checklist <https://dp0.lsst.io/delegate-resources/getting-started.html#new-user-checklist>`_.

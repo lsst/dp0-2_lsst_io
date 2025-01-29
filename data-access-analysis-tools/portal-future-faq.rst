@@ -15,9 +15,9 @@
 .. A warning will alert you of identical labels during the link check process.
 
 
-############################
+###############################
 Portal Future Functionality FAQ
-############################
+###############################
 
 This page contains answers to frequently asked questions (FAQ) about the future full functionality of the Portal Aspect of the Rubin Science Platform (RSP).
 
