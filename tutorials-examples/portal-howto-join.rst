@@ -119,12 +119,14 @@ Constraints can be applied on columns from any or all tables.
 
 **6. Review the three-table join results.**
 The join of ``Object`` to ``ForcedSource`` is one-to-many, and the join of ``ForcedSource`` to ``CcdVisit`` is many-to-one.
+The default Results tab will display an empty panel instead of the coverage chart. To view the coverage chart, click the
+``Coverage'' tab at the top of the upper left panel.
 
 .. figure:: /_static/portal-howto-join-2.png
     :name: portal-howto-join-2
     :alt: The Portal results tab for a three-table join.
 
-    Figure 2: The Portal Results tab with a default layout for the data returned from the three-table join query.
+    Figure 2: The Portal Results tab displays the activated coverage chart for the data returned from the three-table join query.
 
 
 **7. Find more join examples.**
