@@ -40,7 +40,7 @@ Resources for DP0 users
 =======================
 
 DP0 users are the 900 data rights holders who have accounts in the Rubin Science Platform (RSP) and access to the DP0 data sets.
-Use the `getting started with DP0 checklist <https://dp0.lsst.io/delegate-resources/getting-started.html#new-delegate-checklist>`__
+Use the `getting started with DP0 checklist <https://dp0.lsst.io/delegate-resources/getting-started.html#new-user-checklist>`__
 to become a DP0 user.
     
 .. toctree::
