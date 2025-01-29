@@ -71,12 +71,13 @@ It limits the search to the extended objects with ``g`` and ``r`` cModel fluxes 
    AND g_cModelFlux > 360 
    AND r_cModelFlux > 360 
 
-**2.  Plot the histogram of g-magnitudes:**
-execute the ADQL query is via clicking the “Search” button in the lower left corner.  
+**2.  Extract the required magnitudes.**
+Execute the ADQL query by clicking the “Search” button in the lower left corner.  
 The resulting display will by default show the sky coverage on the left, and the plot of the 1st column as a function of the 2nd column on the right.
 
 
-**2.1.  Plot the distribution of g magnitudes.**  To do so, add another plot panel, by clicking on the "+" button on the upper left-hand side of the active chart, and select "Histogram" as the Plot Type.
+**2.1.  Plot the distribution of g magnitudes.**  
+To do so, add another plot panel, by clicking on the "+" button on the upper left-hand side of the active chart, and select "Histogram" as the Plot Type.
 The resulting  pop-up window allows a selection of the quantity for the plotted histogram.  
 In the "Column or expression" box, enter ``g_cModelMag``.
 Click "OK" which will result in displaying an additional plot window, with g magnitude histogram.
@@ -87,19 +88,19 @@ This will result in the dispay as below.
 	:name: Howto_Histogram_1d.png
 	:alt: Screenshot of the 1-d histogram of g-magnitudes in the selectred region, obtained by executing an ADQL query.
 
-**Figure 1.  screenshot of the 1-d histogram of g-magnitudes of extended objects in the selectred region, obtained by executing an ADQL query.**
+Figure 1:  screenshot of the 1-d histogram of g-magnitudes of extended objects in the selectred region, obtained by executing an ADQL query.
 
 .. _DP0-2-Portal-Histogram-Step-2:
 
-**3.  Plot the 2-d histogram (heatmap) of the g-r colors vs. g magnitudes.**  Add an additional plot panel by clicking on the "+" button on the upper left-hand side of the active chart.
-
-To plot the heatmap, this needs to be selected in the resulting pop-up window by clicking on "Heatmap" as the plot type.
-Plotting of the heatmap of g-r color vs. g-magnitude is accomplished via entering ``gmag`` for X, and ``gmag-rmag`` for Y.
+**3.  Plot the 2-d histogram (heatmap) of the g-r colors vs. g cModel magnitudes.**  
+Add an additional plot panel by clicking on the "+" button on the upper left-hand side of the active chart.
+In the resulting pop-up window, click on "Heatmap" as the plot type.
+Plot the heatmap of g-r color vs. g-magnitude by entering ``g_cModelMag`` for X, and ``g_cModelMag-r_cModelMag`` for Y.
 The resulting display will now have the 1-d histogram of magnitudes and 2-d histogram (heatmap) of colors vs. magnitudes, as below.
 
 .. figure:: /_static/Howto_Histogram_2d.png
 	:name: Howto_Histogram_1d.png
 	:alt: Screenshot of the 2-d histogram of g-r color vs. g-magnitudes in the selectred region, obtained by executing an ADQL query.
 
-**Screenshot showing the 1-d histogram of g-magnitudes as well as the 2-d histogram of g-r color vs. g-magnitudes of the extended objects in the selected region, obtained by executing an ADQL query.**
+Fugure 2:  The 1-d histogram of g-magnitudes as well as the 2-d histogram of g-r color vs. g-magnitudes of the extended objects in the selected region, obtained by executing an ADQL query.
 
