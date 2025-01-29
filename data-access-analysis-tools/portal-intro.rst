@@ -54,7 +54,7 @@ If needed, reload the webpage in the browser to clear any previously-entered con
 **1.2. Enter an ADQL statement in the box.** For example, copy and paste the statement below. 
 
 The query converts the fluxes to magnitudes, by the use of an ADQL function ``scisql_nanojanskyToAbMag()`` where the respective flux is the argument (and renames them as ``g_cModelMag`` and ``r_cModelMag``).  
-It limits the search to the extended objects with ``g`` and ``r`` cModel fluxes greater than 360 nJy (cModel magnitudes less than 23), located in a circular region with a radius of 10 arc min (0.167 degree), around the direction with RA of 62.0 deg and and Dec of -37.0 deg.
+It limits the search to the extended objects with ``g`` and ``r`` cModel fluxes greater than 360 nJy (cModel magnitudes less than 25), located in a circular region with a radius of 10 arc min (0.167 degree), around the direction with RA of 62.0 deg and and Dec of -37.0 deg.
 
 .. code-block:: SQL 
 
