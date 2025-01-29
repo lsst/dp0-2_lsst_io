@@ -18,9 +18,20 @@
 10. How to plot one- and two-dimensional histograms in the Portal
 #################################################################
 
+
 .. This section should provide a brief, top-level description of the page.
 
-.. Most recent update:  October 9 2024
+**RSP Aspect:** Portal
+
+**Contact authors:** Greg Madejski and Melissa Graham
+
+**Last verified to run:** 2025-02-04
+
+**Targeted learning level:** beginner 
+
+**Introduction:**
+This tutorial demonstrates how to create one- and two-dimensional ("heatrmap") histograms of quantities retrieved from object or source catalogs.  
+
 
 .. =====================
 
@@ -35,7 +46,7 @@
 
 .. _DP0-2-Portal-Histogram-Step-1:
 
-**1.  Prepare and execute the ADQL query to retrieve data**:  
+**1.  Prepare and execute the ADQL query to retrieve data.**  
 
 **1.1. Go to the DP0.2 catalog ADQL interface.**
 Navigate to the Portal's DP0.2 Catalogs tab and switch to the ADQL interface by selecting  "Edit ADQL" at upper right.
@@ -45,7 +56,7 @@ If needed, reload the webpage in the browser to clear any previously-entered con
 
 The query converts the fluxes to magnitudes, by the use of an ADQL function ``scisql_nanojanskyToAbMag()`` where the respective flux is the argument (and renames them as ``gmag`` and ``rmag``).  
 It restricts the search to return only objects with g- and i-magnitudes less than 23.
-It limits the search to those objects located in a circular region with a radius of 0.75 degree, around the direction with RA of 55.75 deg and and Dec of -32.27 deg, via the restriction ``CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 55.75, -32.27, 0.75) = 1``.
+It limits the search to the extended objects with ``g`` and ``r`` fluxes greater than 360 nJy, located in a circular region with a radius of 10 arc min (0.167 degree), around the direction with RA of 62.0 deg and and Dec of -37.0 deg.
 
 .. code-block:: SQL 
 
@@ -62,8 +73,8 @@ It limits the search to those objects located in a circular region with a radius
    AND g_cModelFlux > 360 
    AND r_cModelFlux > 360 
 
-**Part 2.  Plot the histogram of g-magnitudes**:  
-Executing the ADQL query is via clicking the “Search” button in the lower left corner.  
+**2.  Plot the histogram of g-magnitudes:**
+execute the ADQL query is via clicking the “Search” button in the lower left corner.  
 The resulting display will by default show the sky coverage on the left, and the plot of the 1st column as a function of the 2nd column on the right.
 To plot the distribution of g magnitudes, it is necessary to add another plot panel, by clicking on the "+" button on the upper left-hand side of the active chart, and selecting "Histogram" as the Plot Type.
 The resulting  pop-up window allows a selection of the quantity for the plotted histogram - in ths case, "Column or expression" box needs to have "gmag" entered.
