@@ -30,7 +30,7 @@ An LSST-like simulation of solar system objects is also available at `dp0-3.lsst
 Term definitions are provided on the `Rubin Observatory Glossary & Acronyms webpage <https://www.lsst.org/scientists/glossary-acronyms>`__.
 
 .. Important::
-    To access the DP0 data sets see the `getting started with DP0 checklist <https://dp0.lsst.io/delegate-resources/getting-started.html#new-delegate-checklist>`__.
+    To access the DP0 data sets see the `getting started with DP0 checklist <https://dp0.lsst.io/delegate-resources/getting-started.html#new-user-checklist>`__.
 
 
 
