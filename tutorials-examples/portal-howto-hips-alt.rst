@@ -54,7 +54,7 @@ This query will retrieve a small sample of point-like objects (stars) brighter t
 **2. View the default coverage chart** (Figure 1).
 The default view is a HEALpix grid showing the number of returned objects per grid region.
 Small red squares mark individual objects outside the grid.
-The background is a color HiPS map of the DP0.2 deeply coadded images.
+The background is a color HiPS map of the DP0.2 deepCoadd images.
 
 .. figure:: /_static/portal-howto-hips-1.png
     :name: portal-howto-hips-1

@@ -59,7 +59,12 @@ On the RSP landing page (Figure 1) click on the Portal square to enter the Porta
 **4. Review the layout.**
 On the Portal landing page (Figure 2) notice the icons and tabs across the top of the screen, and that the default selected tab of the landing page is labeled Results.
 
-**5. Open the sidebar menu.**
+**5. View the information window.**
+On the Portal landing page (Figure 2) click on the Rubin logo next to the menu icon to open a window with Rubin Portal Version Information.
+Dismiss the window by clicking on the OK button or on the X in its upper right corner.
+(Window is not shown in a figure in this tutorial.)
+
+**6. Open the sidebar menu.**
 On the Portal landing page (Figure 2) click on the menu icon (three horizontal lines at upper left) to open the sidebar menu.
 
 .. figure:: /_static/portal-howto-nav-3.png
@@ -70,14 +75,9 @@ On the Portal landing page (Figure 2) click on the menu icon (three horizontal l
     Figure 3: The sidebar menu of the Portal Aspect.
 
 
-**6. Review the sidebar menu.**
+**7. Review the sidebar menu.**
 In the sidebar menu (Figure 3) notice that some of the menu options match the tabs (e.g., DP0.2 Catalogs), and that which tabs you see are configurable with the "Hide Tab" option.
 Dismiss the sidebar menu by clicking on the X in the upper right corner of the menu.
-
-**7. View the information window.**
-On the Portal landing page (Figure 2) click on the Rubin logo next to the menu icon to open a window with Rubin Portal Version Information.
-Dismiss the window by clicking on the OK button or on the X in its upper right corner.
-(Window is not shown in a figure in this tutorial.)
 
 **8. Select DP0.2 catalogs.**
 On the Portal landing page (Figure 2) click on the tab labeled DP0.2 Catalogs.
@@ -96,7 +96,7 @@ In the Portal UI (Figure 4) review the 8 main components labeled A through H, wh
 
 * A: Drop-down menu of the collections available. The DP0.2 catalogs (``dp02_dc2_catalogs``) are selected by default.
 * B: Drop-down menu of the tables available for the selected catalog. The ``Object`` table is selected by default.
-* C: Schema interface to apply column constraints on, and select rows to be returned from, the selected table.
+* C: Schema interface to apply column constraints on, and select rows to be returned from the selected table.
 * D: Entry fields for spatial constraints to be applied to the selected table (e.g., cone or polygon areas).
 * E: Entry field to set the maximum number of rows to return from the selected table.
 * F: Button to convert the search constraints set with C, D, and E into an ADQL statement.

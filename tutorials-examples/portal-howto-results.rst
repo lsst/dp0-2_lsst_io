@@ -59,9 +59,9 @@ The default layout of the Results tab is shown in Figure 1.
     Figure 1: The Results tab after a query has been executed defaults to a screens split three ways: coverage map at upper left, default plot at uppr right, and the tabular data below.
 
 **3. Coverage chart** (A in Figure 1).
-The default view is a `HEALpix <https://healpix.sourceforge.io/>`_ grid showing the number of returned objects per grid region.
+The default view is a `HEALPix <https://healpix.sourceforge.io/>`_ grid showing the number of returned objects per grid region.
 Small red squares mark individual objects outside the grid.
-The background is a color `HiPS <https://aladin.cds.unistra.fr/hips/>`_ map of the DP0.2 deeply coadded images.
+The background is a color `HiPS <https://aladin.cds.unistra.fr/hips/>`_ map of the DP0.2 deepCoadd images.
 
 **4. Active chart** (B in Figure 1).
 The default plot will be the first two columns of the returned data table.
@@ -101,10 +101,10 @@ Execute the query.
 
 **9. View multiple query results.**
 The Results tab components are now populated with the data from the new query (Figure 3).
-The coverage chart includes HEALpix maps for both queries, with the new one in magenta (A in Figure 3).
+The coverage chart includes HEALPix maps for both queries, with the new one in magenta (A in Figure 3).
 The active chart uses data from the new query results (B in Figure 3).
 The table now has two tabs, one for each query (C in Figure 3).
-Click on the tab for the first query and note that the table and active chart change.
+Click on the tab for the first query and note that the coverage chart, table, and active chart change.
 
 **10. Delete unwanted query results.**
 In the table (C in Figure 3), click on the X in the tab for the first query results to delete them.

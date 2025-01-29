@@ -43,7 +43,7 @@ Navigate to the Portal's DP0.2 Catalogs tab and switch to the ADQL interface.
 **2. The ADQL components of a JOIN...ON statment.**
 The generic example below illustrates a common join scenario.
 Four columns ("ra", "dec", "colA", and "colB") are selected from "table1", for objects
-where their coordinates are within 0.1 degrees of RA=62 deg, Dec=-37 deg.
+where their coordinates are within 0.05 degrees of RA=62 deg, Dec=-37 deg.
 The results from "table1" are joined with "table2" on their matching column, "colID".
 Two columns are selected from "table2" ("colX" and "colY").
 
@@ -54,7 +54,7 @@ Two columns are selected from "table2" ("colX" and "colY").
    JOIN table2 AS tab2 
    ON tab1.colID = tab2.colID 
    WHERE CONTAINS(POINT('ICRS', tab1.ra, tab1.dec),
-         CIRCLE('ICRS', 62.0, -37, 0.1)) = 1
+         CIRCLE('ICRS', 62.0, -37, 0.05)) = 1
 
    **The above cannot be executed and is a generic demonstration only.**
 
@@ -76,7 +76,7 @@ Spatial constraints are applied to the ``FROM`` table, not the ``JOIN`` table.
    JOIN dp02_dc2_catalogs.CcdVisit AS cv
    ON src.ccdVisitId = cv.ccdVisitId
    WHERE CONTAINS(POINT('ICRS', src.coord_ra, src.coord_dec),
-         CIRCLE('ICRS', 62.0, -37, 0.1)) = 1 
+         CIRCLE('ICRS', 62.0, -37, 0.05)) = 1 
          AND cv.expMidptMJD > 60925 AND cv.expMidptMJD < 60955
          AND src.band = 'i' 
 
@@ -93,7 +93,7 @@ In other words, there are multiple rows from the ``Source`` table joined with a 
 
 
 **5. Execute a three-table join.**
-The ``Object`` table (photometry in deeply coadded images) can be joined with the
+The ``Object`` table (photometry in the deepCoadd images) can be joined with the
 ``ForcedSource`` table (photometry in individual processed visit images) using their shared ``objectId`` column.
 The ``ForcedSource`` table can be joined with the ``CcdVisit`` table using ``ccdVisitId``.
 Constraints can be applied on columns from any or all tables.
@@ -110,7 +110,7 @@ Constraints can be applied on columns from any or all tables.
    JOIN dp02_dc2_catalogs.CcdVisit AS cv
    ON fs.ccdVisitId = cv.ccdVisitId
    WHERE CONTAINS(POINT('ICRS', obj.coord_ra, obj.coord_dec),
-         CIRCLE('ICRS', 62.0, -37, 0.1)) = 1 
+         CIRCLE('ICRS', 62.0, -37, 0.05)) = 1 
          AND obj.refExtendedness = 1 
          AND obj.i_psfFlux > 3600 
          AND cv.expMidptMJD > 60925 AND cv.expMidptMJD < 60955
