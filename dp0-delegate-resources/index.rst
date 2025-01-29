@@ -29,4 +29,4 @@ DP0 User Homepage
 Getting started with DP0 checklist
 ==================================
 
-The checklist has moved! `Go to the new getting started with DP0 checklist <https://dp0.lsst.io/delegate-resources/getting-started.html#new-delegate-checklist>`_.
+The checklist has moved! `Go to the new getting started with DP0 checklist <https://dp0.lsst.io/delegate-resources/getting-started.html#new-user-checklist>`_.
