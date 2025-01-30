@@ -84,6 +84,7 @@ Spatial constraints are applied to the ``FROM`` table, not the ``JOIN`` table.
 **4. Review the two-table join results.**
 Notice that this join is not one-to-one: there are multiple individual sources returned that are matched to the same visit.
 In other words, there are multiple rows from the ``Source`` table joined with a given row from the ``CcdVisit`` table.
+If multiple tabs are present above the upper left panel in the default Results tab layout, click the "Coverage" tab to display the coverage chart.
 
 .. figure:: /_static/portal-howto-join-1.png
     :name: portal-howto-join-1
