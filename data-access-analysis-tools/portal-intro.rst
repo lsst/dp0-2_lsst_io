@@ -75,7 +75,7 @@ The resulting display will by default show the sky coverage on the left, and the
 To do so, add another plot panel, by clicking on the "+" button on the upper left-hand side of the active chart, and select "Histogram" as the Plot Type.
 In the resulting  pop-up window, in the "Column or expression" box, enter ``g_cModelMag`` and click "OK" which will result in displaying an additional plot window, with g magnitude histogram.
 
-**5.  Remove the "coord_ra vs. coord_dec" plot** by clicking on the "x" in the upper right-hand side of the plot window, which will result in the display as below.  
+**5.  Remove the "coord_ra vs. coord_dec" plot** by clicking on the "x" in the upper right-hand side of the plot window, which will result in the display as below.
 
 .. figure:: /_static/Howto_Histogram_1d.png
 	:name: Howto_Histogram_1d.png
@@ -85,7 +85,7 @@ Figure 1:  screenshot of the 1-d histogram of g-magnitudes of extended objects i
 
 .. _DP0-2-Portal-Histogram-Step-2:
 
-**6.  Plot the 2-d histogram (heatmap) of the g-r colors vs. g cModel magnitudes.**  
+**6.  Plot the 2-d histogram (heatmap) of the g-r colors vs. g cModel magnitudes.**
 Add an additional plot panel by clicking on the "+" button on the upper left-hand side of the active chart, and in the resulting pop-up window, click on "Heatmap" as the plot type.
 Plot the heatmap of g-r color vs. g-magnitude by entering ``g_cModelMag`` for X, and ``g_cModelMag-r_cModelMag`` for Y.
 
