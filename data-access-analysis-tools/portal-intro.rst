@@ -45,7 +45,7 @@ This tutorial demonstrates how to create one- and two-dimensional ("heatrmap") h
 
 .. _DP0-2-Portal-Histogram-Step-1:
 
-**1.  Prepare and execute the ADQL query to retrieve data.**  
+**1.  Prepare to execute the ADQL query to retrieve data.**  
 Navigate to the Portal's DP0.2 Catalogs tab and switch to the ADQL interface by selecting  "Edit ADQL" at upper right.
 If needed, reload the webpage in the browser to clear any previously-entered constraints.
 
