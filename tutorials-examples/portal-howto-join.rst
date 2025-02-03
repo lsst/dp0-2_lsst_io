@@ -84,6 +84,7 @@ Spatial constraints are applied to the ``FROM`` table, not the ``JOIN`` table.
 **4. Review the two-table join results.**
 Notice that this join is not one-to-one: there are multiple individual sources returned that are matched to the same visit.
 In other words, there are multiple rows from the ``Source`` table joined with a given row from the ``CcdVisit`` table.
+If multiple tabs are present above the upper left panel in the default Results tab layout, click the "Coverage" tab to display the coverage chart.
 
 .. figure:: /_static/portal-howto-join-1.png
     :name: portal-howto-join-1
@@ -119,12 +120,14 @@ Constraints can be applied on columns from any or all tables.
 
 **6. Review the three-table join results.**
 The join of ``Object`` to ``ForcedSource`` is one-to-many, and the join of ``ForcedSource`` to ``CcdVisit`` is many-to-one.
+The default Results tab will display an empty panel instead of the coverage chart. To view the coverage chart, click the
+"Coverage" tab at the top of the upper left panel.
 
 .. figure:: /_static/portal-howto-join-2.png
     :name: portal-howto-join-2
     :alt: The Portal results tab for a three-table join.
 
-    Figure 2: The Portal Results tab with a default layout for the data returned from the three-table join query.
+    Figure 2: The Portal Results tab with the layout displaying the activated coverage chart for the data returned from the three-table join query.
 
 
 **7. Find more join examples.**
