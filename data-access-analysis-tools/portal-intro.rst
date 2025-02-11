@@ -30,7 +30,7 @@
 **Targeted learning level:** beginner
 
 **Introduction:**
-This tutorial demonstrates how to create one- and two-dimensional ("heatrmap") histograms of quantities (g- snf r-msgnitudes) retrieved from object or source catalogs.
+This tutorial demonstrates how to create one- and two-dimensional ("heatrmap") histograms of quantities (g- and r-magnitudes) retrieved from object or source catalogs.
 
 .. =====================
 
