@@ -34,18 +34,18 @@ This example demonstrates how to create a forced photometry lightcurve for the s
 
 **1.  Note the need to determine the Object ID for the oject of interest.** Note that the individual Processed Visit Images might have very slightly different coordinates for the same object, so it is wise to extract the data from the ``dp02_dc2_catalogs.DiaObject`` table using the object's unique DIA object identifier ``diaObjectId``.  
 
-**2. Determine the object's** ``diaObjectId``.  After logging into the Portal aspect of the Rubin Science Platform, click on the "UI assisted" button, select "DP0.2 Catalogs" tab, chose the "dp02_dc2_catalogs" on the left, and "dp02_dc2_catalogs.DiaObject" table on the right.  
+**2. Select the relevant table containing the** ``diaObjectId``.  After logging into the Portal aspect of the Rubin Science Platform, click on the "UI assisted" button, select "DP0.2 Catalogs" tab, chose the "dp02_dc2_catalogs" on the left, and "dp02_dc2_catalogs.DiaObject" table on the right.  
 
-For spatial constraints, enter 67.4579, -44.0802 and a 2 arcseconds radius using the "cone Shape" ("Temporal" constraints button needs to be unchecked).
+**3. Determine the object's** ``diaObjectId``.  For spatial constraints, enter 67.4579, -44.0802 and a 2 arcseconds radius using the "cone Shape" ("Temporal" constraints button needs to be unchecked).
 For the "Output Column Selection" only the ``diaObjectId`` needs to be checked.  
 Pressing the "search" button will return only one ``diaObjectId`` - it is 1252220598734556212.
 
-**3.  Select the tables containing fluxes and observation epochs of the object and determine the common meta entry.** ``ForcedSourceOnDiaObject`` contains fluxes of individual objects, but it does not contain the observation epochs;  however, the table ``CcdVisit`` does.  
+**4.  Select the tables containing fluxes and observation epochs of the object and determine the common meta entry.** ``ForcedSourceOnDiaObject`` contains fluxes of individual objects, but it does not contain the observation epochs;  however, the table ``CcdVisit`` does.  
 Obtaining the visit epochs will require joining two tables - specifically ``ForcedSourceOnDiaObject`` and ``CcdVisit`` on the common meta entry of ``ccdVisitId``.  
 Such table joins are effectively performed using the Astronomical Data Query Language, ADQL.
 Click on the "Edit ADQL" button on the upper right.  
 
-**4.  Enter the query to  retrieve the required data.**  This query extracts coordinates, DIA object identifier, CCD visit identifier, band, and forced difference-image flux 
+**5.  Enter the query to  retrieve the required data.**  This query extracts coordinates, DIA object identifier, CCD visit identifier, band, and forced difference-image flux 
 and its error for all rows of the ``ForcedSourceOnDiaObjects`` table which are associated with the ``diaObject`` of interest,
 for i-band visits only.
 Again, the exposure time midpoint modified julian date for all visits is extracted by joining to the ``CcdVisit`` table.
@@ -63,14 +63,14 @@ Again, the exposure time midpoint modified julian date for all visits is extract
    AND fsodo.band = 'i'
 
 **Note:** The ``ForcedSourceOnDiaObject`` table contains forced photometry on both the difference image, ``psfDiffFlux``, and the processed visit image (PVI; "direct" image), ``psfFlux``.
-Both are extracted via the query above.  
-This example is using a supernova and it uses the ``psfDiffFlux``, which is the forced photometry on the difference image, in which the static-sky component (the host galaxy) has been subtracted.
+Both are extracted via the query above.
+This example considers a supernova and thus it uses the ``psfDiffFlux``, which is the forced photometry on the difference image, in which the static-sky component (the host galaxy) has been subtracted.
 However, the ``psfFlux`` would be more appropriate for generating the lightcurve of a variable star, as there is no need to subtract the static component (in this case, the variable star's average flux).
 
-**5.  Create the default plot.**  Click on "Search".  The defalt plot will be the dec vs. RA (the plotting tool defaults to plot the data in the two leftmost columns of the table).  
+**6.  Create the default plot.**  Click on "Search".  The defalt plot will be the dec vs. RA (the plotting tool defaults to plot the data in the two leftmost columns of the table).  
 
-**6.  Modify the plot to display the light curve.**  Change the plot by opening the plot parameters pop-up window which will appear by clicking on the settings icon (a single gear above the plot window).
-The example below uses ``psfDiffFlux`` as a function of ``expMidptMJD`` (MJD time of the exposure).  
+**7.  Modify the plot to display the light curve.**  Change the plot by opening the plot parameters pop-up window which will appear by clicking on the settings icon (a single gear above the plot window).
+The example below uses ``psfDiffFlux`` as a function of ``expMidptMJD`` (MJD time of the exposure).
 Note that for some of the pointings, the plotted flux is negative.
 This is because ``psfDiffFlux`` is a result of the subtraction of some fiducial value (obtained by averaging previous observations) from the data in the PVI on hand.
 This, on some occassions can result in a negative value.  
