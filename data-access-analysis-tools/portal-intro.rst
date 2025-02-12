@@ -75,8 +75,8 @@ Note that for some of the pointings, the plotted flux is negative.
 This is because ``psfDiffFlux`` is a result of the subtraction of some fiducial value (obtained by averaging previous observations) from the data in the PVI on hand.
 This, on some occasions can result in a negative value.  
 
-.. figure:: /_static/portal_tut05_step01d.png
-    :name: portal_tut05_step01d
+.. figure:: /_static/Howto_SN_lightcurve_1.png
+    :name: Howto_SN_lightcurve
     :alt: A screenshot of the results view showing the table and the i-band lightcurve.
 
     Figure 1: Results view showing the table and the i-band light curve.
