@@ -37,7 +37,7 @@ This example demonstrates how to create a forced photometry lightcurve for the s
 
 **2. Determine the ``diaObjectId``.**  After logging into the Portal aspect of the Rubin Science Platform, click on the "UI assisted" button, select "DP0.2 Catalogs" tab, chose the "dp02_dc2_catalogs" on the left, and "dp02_dc2_catalogs.DiaObject" table on the right.  
 
-As spatial constraints, enter 67.4579, -44.0802 and a 2 arcseconds radius using the "cone Shape" ("Temporal" constraints button needs to be unchecked).
+For spatial constraints, enter 67.4579, -44.0802 and a 2 arcseconds radius using the "cone Shape" ("Temporal" constraints button needs to be unchecked).
 For the "Output Column Selection" only the ``diaObjectId`` needs to be checked.  
 Pressing the "search" button will return only one ``diaObjectId`` - it is 1252220598734556212.
 
