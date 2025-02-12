@@ -93,5 +93,5 @@ Plot the heatmap of g-r color vs. g-magnitude by entering ``g_cModelMag`` for X,
 	:name: Howto_Histogram_1d.png
 	:alt: Screenshot of the 2-d histogram of g-r color vs. g-magnitudes in the selectred region, obtained by executing an ADQL query.
 
-Fugure 2:  The 1-d histogram of g-magnitudes as well as the 2-d histogram of g-r color vs. g-magnitudes of the extended objects in the selected region, obtained by executing an ADQL query.
+Figure 2:  The 1-d histogram of g-magnitudes as well as the 2-d histogram of g-r color vs. g-magnitudes of the extended objects in the selected region, obtained by executing an ADQL query.
 
