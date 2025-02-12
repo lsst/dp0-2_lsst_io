@@ -70,6 +70,7 @@ However, the ``psfFlux`` would be more appropriate for generating the lightcurve
 **6.  Create the default plot.**  Click on "Search".  The default plot will be the dec vs. RA (the plotting tool defaults to plot the data in the two leftmost columns of the table).  
 
 **7.  Modify the plot to display the light curve.**  Change the plot by opening the plot parameters pop-up window which will appear by clicking on the settings icon (a single gear above the plot window).
+Change the x-axis label to ``expMidptMJD-60000`` to make it more celear.
 The example below uses ``psfDiffFlux`` as a function of ``expMidptMJD`` (MJD time of the exposure).
 Note that for some of the pointings, the plotted flux is negative.
 This is because ``psfDiffFlux`` is a result of the subtraction of some fiducial value (obtained by averaging previous observations) from the data in the PVI on hand.
