@@ -33,15 +33,15 @@ That table contains "forced" flux measurements in locations of all objects which
 
 This example demonstrates how to create a forced photometry lightcurve for the supernova located at (67.4579, -44.0802).
 
-The individual Processed Visit Images might have very slightly different coordinates for the same object.
-With this, instead of providing the RA and Dec to the light curve extraction process, it is wise to extract the data from the ``dp02_dc2_catalogs.DiaObject`` table using the object's unique DIA object identifier ``diaObjectId``.  
-Determining the ``diaObjectId``  can be accomplished via the Portal Aspect of the Rubin Science Platform, by clicking on the "UI assisted" button, selecting "DP0.2 Catalogs" tab, chosing the "dp02_dc2_catalogs" on the left, and "dp02_dc2_catalogs.DiaObject" table on the right.
+**1.  Note the need to determine the Object ID for the oject of interest.** Note that the individual Processed Visit Images might have very slightly different coordinates for the same object, so it is wise to extract the data from the ``dp02_dc2_catalogs.DiaObject`` table using the object's unique DIA object identifier ``diaObjectId``.  
 
-Only the spatial constraints need to be entered on the left, with the 67.4579, -44.0802 - and a 2 arcseconds radius using the "cone Shape" ("Temporal" constraints button needs to be unchecked).
+**2. Determine the ``diaObjectId``.**  After logging into the Portal aspect of the Rubin Science Platform, click on the "UI assisted" button, select "DP0.2 Catalogs" tab, chose the "dp02_dc2_catalogs" on the left, and "dp02_dc2_catalogs.DiaObject" table on the right.  
+
+As spatial constraints, enter 67.4579, -44.0802 and a 2 arcseconds radius using the "cone Shape" ("Temporal" constraints button needs to be unchecked).
 For the "Output Column Selection" only the ``diaObjectId`` needs to be checked.  
 Pressing the "search" button will return only one ``diaObjectId`` - it is 1252220598734556212.
 
-The ``ForcedSourceOnDiaObject`` contains fluxes of individual objects, but it does not contain the observation epochs;  however, the table ``CcdVisit`` does.
+**Select the tables containing fluxes and observation epochs of the object and determine the common meta entry.** ``ForcedSourceOnDiaObject`` contains fluxes of individual objects, but it does not contain the observation epochs;  however, the table ``CcdVisit`` does.  
 Obtaining the visit epochs will require joining two tables - specifically ``ForcedSourceOnDiaObject`` and ``CcdVisit`` on the common meta entry of ``ccdVisitId``.  
 Such table joins are effectively performed using the Astronomical Data Query Language, ADQL.
 Entering an ADQL query requires clicking on the "Edit ADQL" button on the upper right.  
