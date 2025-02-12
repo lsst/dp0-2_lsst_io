@@ -41,7 +41,7 @@ For spatial constraints, enter 67.4579, -44.0802 and a 2 arcseconds radius using
 For the "Output Column Selection" only the ``diaObjectId`` needs to be checked.  
 Pressing the "search" button will return only one ``diaObjectId`` - it is 1252220598734556212.
 
-**Select the tables containing fluxes and observation epochs of the object and determine the common meta entry.** ``ForcedSourceOnDiaObject`` contains fluxes of individual objects, but it does not contain the observation epochs;  however, the table ``CcdVisit`` does.  
+**3.  Select the tables containing fluxes and observation epochs of the object and determine the common meta entry.** ``ForcedSourceOnDiaObject`` contains fluxes of individual objects, but it does not contain the observation epochs;  however, the table ``CcdVisit`` does.  
 Obtaining the visit epochs will require joining two tables - specifically ``ForcedSourceOnDiaObject`` and ``CcdVisit`` on the common meta entry of ``ccdVisitId``.  
 Such table joins are effectively performed using the Astronomical Data Query Language, ADQL.
 Entering an ADQL query requires clicking on the "Edit ADQL" button on the upper right.  
