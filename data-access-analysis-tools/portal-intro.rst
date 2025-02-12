@@ -14,10 +14,9 @@
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
 .. A warning will alert you of identical labels during the linkcheck process.
 
-#####################################################
-How to extract and plot forced photometry light curve
-#####################################################
-
+#########################################################
+11. How to extract and plot forced photometry light curve
+#########################################################
 **RSP Aspect:** Portal
 
 **Contact authors:** Greg Madejski and Melissa Graham
@@ -27,7 +26,7 @@ How to extract and plot forced photometry light curve
 **Targeted learning level:** beginner
 
 **Introduction:**
-This tutorial demonstrates how to create a light curve of an object which was not detected at a ``SNR > 5`` - for instance a measurement of its flux before and after a flare or explosion.
+This tutorial demonstrates how to create a light curve of an object in all observations where it was not detected at a ``SNR > 5`` - for instance a measurement of its flux before and after a flare or explosion.
 In those cases, the forced photometry - available in the ``ForcedSourceOnDiaObject`` table - has to be used instead.
 That table contains "forced" flux measurements in locations of all objects which had positive ``SNR > 5`` detections in the table ``dp02_dc2_catalogs.DiaObject``.
 
