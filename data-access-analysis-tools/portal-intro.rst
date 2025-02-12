@@ -30,7 +30,7 @@
 **Targeted learning level:** beginner
 
 **Introduction:**
-This tutorial demonstrates how to create one- and two-dimensional ("heatrmap") histograms of quantities (g- and r-magnitudes) retrieved from object or source catalogs.
+This tutorial demonstrates how to create one- and two-dimensional ("heatmap") histograms of quantities (g- and r-magnitudes) retrieved from object or source catalogs.
 
 .. =====================
 
@@ -81,7 +81,7 @@ In the resulting  pop-up window, in the "Column or expression" box, enter ``g_cM
 	:name: Howto_Histogram_1d.png
 	:alt: Screenshot of the 1-d histogram of g-magnitudes in the selectred region, obtained by executing an ADQL query.
 
-Figure 1:  screenshot of the 1-d histogram of g-magnitudes of extended objects in the selectred region, obtained by executing an ADQL query.
+Figure 1:  screenshot of the 1-d histogram of g-magnitudes of extended objects in the selected region, obtained by executing an ADQL query.
 
 .. _DP0-2-Portal-Histogram-Step-2:
 
@@ -91,7 +91,7 @@ Plot the heatmap of g-r color vs. g-magnitude by entering ``g_cModelMag`` for X,
 
 .. figure:: /_static/Howto_Histogram_2d.png
 	:name: Howto_Histogram_1d.png
-	:alt: Screenshot of the 2-d histogram of g-r color vs. g-magnitudes in the selectred region, obtained by executing an ADQL query.
+	:alt: Screenshot of the 2-d histogram of g-r color vs. g-magnitudes in the selected region, obtained by executing an ADQL query.
 
 Figure 2:  The 1-d histogram of g-magnitudes as well as the 2-d histogram of g-r color vs. g-magnitudes of the extended objects in the selected region, obtained by executing an ADQL query.
 
