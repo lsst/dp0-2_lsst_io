@@ -34,7 +34,7 @@ This example demonstrates how to create a forced photometry lightcurve for the s
 
 **1.  Note the need to determine the Object ID for the oject of interest.** Note that the individual Processed Visit Images might have very slightly different coordinates for the same object, so it is wise to extract the data from the ``dp02_dc2_catalogs.DiaObject`` table using the object's unique DIA object identifier ``diaObjectId``.  
 
-**2. Determine the ``diaObjectId``.**  After logging into the Portal aspect of the Rubin Science Platform, click on the "UI assisted" button, select "DP0.2 Catalogs" tab, chose the "dp02_dc2_catalogs" on the left, and "dp02_dc2_catalogs.DiaObject" table on the right.  
+**2. Determine the object's** ``diaObjectId``.  After logging into the Portal aspect of the Rubin Science Platform, click on the "UI assisted" button, select "DP0.2 Catalogs" tab, chose the "dp02_dc2_catalogs" on the left, and "dp02_dc2_catalogs.DiaObject" table on the right.  
 
 For spatial constraints, enter 67.4579, -44.0802 and a 2 arcseconds radius using the "cone Shape" ("Temporal" constraints button needs to be unchecked).
 For the "Output Column Selection" only the ``diaObjectId`` needs to be checked.  
@@ -43,9 +43,9 @@ Pressing the "search" button will return only one ``diaObjectId`` - it is 125222
 **3.  Select the tables containing fluxes and observation epochs of the object and determine the common meta entry.** ``ForcedSourceOnDiaObject`` contains fluxes of individual objects, but it does not contain the observation epochs;  however, the table ``CcdVisit`` does.  
 Obtaining the visit epochs will require joining two tables - specifically ``ForcedSourceOnDiaObject`` and ``CcdVisit`` on the common meta entry of ``ccdVisitId``.  
 Such table joins are effectively performed using the Astronomical Data Query Language, ADQL.
-Entering an ADQL query requires clicking on the "Edit ADQL" button on the upper right.  
+Click on the "Edit ADQL" button on the upper right.  
 
-A query given below will retrieve the coordinates, DIA object identifier, CCD visit identifier, band, and forced difference-image flux 
+**4.  Enter the query to  retrieve the required data.**  This query extracts coordinates, DIA object identifier, CCD visit identifier, band, and forced difference-image flux 
 and its error for all rows of the ``ForcedSourceOnDiaObjects`` table which are associated with the ``diaObject`` of interest,
 for i-band visits only.
 Again, the exposure time midpoint modified julian date for all visits is extracted by joining to the ``CcdVisit`` table.
