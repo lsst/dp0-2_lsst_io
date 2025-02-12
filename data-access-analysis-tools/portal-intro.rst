@@ -23,7 +23,7 @@
 
 **Last verified to run:** 2025-02-04
 
-**Targeted learning level:** beginner
+**Targeted learning level:** intermediate
 
 **Introduction:**
 This tutorial demonstrates how to create a light curve of an object in all observations where it was not detected at a ``SNR > 5`` - for instance a measurement of its flux before and after a flare or explosion.
