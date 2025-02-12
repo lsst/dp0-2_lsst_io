@@ -32,7 +32,7 @@ That table contains "forced" flux measurements in locations of all objects which
 
 This example demonstrates how to create a forced photometry lightcurve for the supernova located at (67.4579, -44.0802).
 
-**1.  Note the need to determine the Object ID for the oject of interest.** Note that the individual Processed Visit Images might have very slightly different coordinates for the same object, so it is wise to extract the data from the ``dp02_dc2_catalogs.DiaObject`` table using the object's unique DIA object identifier ``diaObjectId``.  
+**1.  Note the need to determine the Object ID for the object of interest.** Note that the individual Processed Visit Images might have very slightly different coordinates for the same object, so it is wise to extract the data from the ``dp02_dc2_catalogs.DiaObject`` table using the object's unique DIA object identifier ``diaObjectId``.  
 
 **2. Select the relevant table containing the** ``diaObjectId``.  After logging into the Portal aspect of the Rubin Science Platform, click on the "UI assisted" button, select "DP0.2 Catalogs" tab, chose the "dp02_dc2_catalogs" on the left, and "dp02_dc2_catalogs.DiaObject" table on the right.  
 
@@ -67,13 +67,13 @@ Both are extracted via the query above.
 This example considers a supernova and thus it uses the ``psfDiffFlux``, which is the forced photometry on the difference image, in which the static-sky component (the host galaxy) has been subtracted.
 However, the ``psfFlux`` would be more appropriate for generating the lightcurve of a variable star, as there is no need to subtract the static component (in this case, the variable star's average flux).
 
-**6.  Create the default plot.**  Click on "Search".  The defalt plot will be the dec vs. RA (the plotting tool defaults to plot the data in the two leftmost columns of the table).  
+**6.  Create the default plot.**  Click on "Search".  The default plot will be the dec vs. RA (the plotting tool defaults to plot the data in the two leftmost columns of the table).  
 
 **7.  Modify the plot to display the light curve.**  Change the plot by opening the plot parameters pop-up window which will appear by clicking on the settings icon (a single gear above the plot window).
 The example below uses ``psfDiffFlux`` as a function of ``expMidptMJD`` (MJD time of the exposure).
 Note that for some of the pointings, the plotted flux is negative.
 This is because ``psfDiffFlux`` is a result of the subtraction of some fiducial value (obtained by averaging previous observations) from the data in the PVI on hand.
-This, on some occassions can result in a negative value.  
+This, on some occasions can result in a negative value.  
 
 .. figure:: /_static/portal_tut05_step01d.png
     :name: portal_tut05_step01d
