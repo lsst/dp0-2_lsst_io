@@ -32,7 +32,7 @@
 **Introduction:** This tutorial demonstrates how to create a forced photometry lightcurve, using the Portal aspect of the Rubin Science Platform.  
 As an example, it uses the known RR Lyrae star located at (62.1479031, -35.799138) 
 
-This example demonstrates how to create a forced photometry lightcurve for the known RR Lyrae star located at (62.1479031, -35.799138) using the Portal aspect of the Rubin Science Platform.
+This example demonstrates how to create a forced photometry lightcurve for the known RR Lyrae star located at (62.1479031, -35.7991348) using the Portal aspect of the Rubin Science Platform.
 
 **1.  Determine the ObjectId of the chosen star.**  The individual Processed Visit Images might have very slightly different coordinates for the same object.
 With this, instead of providing the RA and Dec to the light curve extraction process, it is wise to extract the data from the ``dp02_dc2_catalogs.DiaObject`` table using the object's unique DIA object identifier ``diaObjectId``.  
