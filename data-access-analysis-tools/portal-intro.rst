@@ -34,7 +34,7 @@ As an example, it uses the known RR Lyrae star located at (62.1479031, -35.79913
 
 This example demonstrates how to create a forced photometry lightcurve for the known RR Lyrae star located at (62.1479031, -35.799138) using the Portal aspect of the Rubin Science Platform.
 
-The individual Processed Visit Images might have very slightly different coordinates for the same object.
+**1.  Determine the ObjectId of the chosen star.**  The individual Processed Visit Images might have very slightly different coordinates for the same object.
 With this, instead of providing the RA and Dec to the light curve extraction process, it is wise to extract the data from the ``dp02_dc2_catalogs.DiaObject`` table using the object's unique DIA object identifier ``diaObjectId``.  
 Determining the ``diaObjectId``  can be accomplished in the Portal Aspect of the Rubin Science Platform, by clicking on the "UI assisted" button, selecting "DP0.2 Catalogs" tab, chosing the "dp02_dc2_catalogs" on the left, and "dp02_dc2_catalogs.DiaObject" table on the right.
 
@@ -53,6 +53,16 @@ and its error for all rows of the ``ForcedSourceOnDiaObjects`` table which are a
 Again, the exposure time midpoint modified julian date for all visits is extracted by joining to the ``CcdVisit`` table.
 
 .. code-block:: SQL 
+
+SELECT TOP 100 
+        coord_ra, coord_dec, objectId, 
+        g_psfFlux, r_psfFlux, i_psfFlux, detect_isPrimary, 
+        scisql_nanojanskyToAbMag(g_psfFlux) as gPSFMag, 
+        scisql_nanojanskyToAbMag(r_psfFlux) as rPSFMag, 
+        scisql_nanojanskyToAbMag(i_psfFlux) as iPSFMag, 
+        g_extendedness, r_extendedness, i_extendedness 
+        FROM dp02_dc2_catalogs.Object 
+        WHERE CONTAINS (POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 62.1479031, -35.799138, 0.001)) = 1
 
 The defalt plot will be the dec vs. RA (the plotting tool defaults to plot the data in the two leftmost columns of the table).  
 The plot can be changed by opening the plot parameters pop-up window which will appear by clicking on the settings icon (a single gear above the plot window).
