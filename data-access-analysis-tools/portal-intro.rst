@@ -14,19 +14,23 @@
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
 .. A warning will alert you of identical labels during the linkcheck process.
 
-########################################################################
-How to extract and plot forced photometry light curve of a variable star
-########################################################################
+#############################################################################
+12.  How to extract and plot forced photometry light curve of a variable star
+#############################################################################
 
-.. Current version December 18 2024
 
-The Rubin data set readily provides fluxes of the objects when they were detected at a ``SNR > 5``.
-In some cases, the science goal on-hand requires lower-SNR measurements.
-This might be the case when fluxes of a given object measured during all visits to its location are required, for instance a measurement of its flux before and after a flare or explosion.
-In those cases, the forced photometry - available in the ``ForcedSourceOnDiaObject`` table - has to be used instead.
-That table contains "forced" flux measurements in locations of all objects which had positive ``SNR > 5`` detections in the table ``dp02_dc2_catalogs.DiaObject``.
-The table ``dp02_dc2_catalogs.DiaObject``, in turn, contains objects which were detected using the "Difference Image Analysis" (DIA) method.
-The DIA method basically subtracts the fluxes of the previously undetected objects from those that showed ``SNR > 5`` detections in individual single-epoch difference images.
+.. This section should provide a brief, top-level description of the page.
+
+**RSP Aspect:** Portal
+
+**Contact authors:** Greg Madejski and Melissa Graham
+
+**Last verified to run:** 2025-02-04
+
+**Targeted learning level:** intermediate 
+
+**Introduction:** This tutorial demonstrates how to create a forced photometry lightcurve, using the Portal aspect of the Rubin Science Platform.  
+As an example, it uses the known RR Lyrae star located at (62.1479031, -35.799138) 
 
 This example demonstrates how to create a forced photometry lightcurve for the known RR Lyrae star located at (62.1479031, -35.799138) using the Portal aspect of the Rubin Science Platform.
 
