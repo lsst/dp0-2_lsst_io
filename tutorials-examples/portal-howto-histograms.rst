@@ -90,7 +90,7 @@ Add an additional plot panel by clicking on the "+" button on the upper left-han
 Plot the heatmap of g-r color vs. g-magnitude by entering ``g_cModelMag`` for X, and ``g_cModelMag-r_cModelMag`` for Y.
 
 .. figure:: /_static/Howto_Histogram_2d.png
-	:name: Howto_Histogram_1d.png
+	:name: Howto_Histogram_2d.png
 	:alt: Screenshot of the 2-d histogram of g-r color vs. g-magnitudes in the selected region, obtained by executing an ADQL query.
 
 Figure 2:  The 1-d histogram of g-magnitudes as well as the 2-d histogram of g-r color vs. g-magnitudes of the extended objects in the selected region, obtained by executing an ADQL query.
