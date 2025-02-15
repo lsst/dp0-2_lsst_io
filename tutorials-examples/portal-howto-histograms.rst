@@ -45,14 +45,15 @@ This tutorial demonstrates how to create one- and two-dimensional ("heatmap") hi
 
 .. _DP0-2-Portal-Histogram-Step-1:
 
-**1.  Prepare to execute the ADQL query to retrieve data.**  
+**1.  Prepare to execute the ADQL query to retrieve data.**
 Navigate to the Portal's DP0.2 Catalogs tab and switch to the ADQL interface by selecting  "Edit ADQL" at upper right.
 If needed, reload the webpage in the browser to clear any previously-entered constraints.
 
-**2. Enter an ADQL statement in the box.** 
-For example, copy and paste the statement below, which converts the fluxes to magnitudes, by the use of an ADQL function ``scisql_nanojanskyToAbMag()`` where the respective flux is the argument (and renames them as ``g_cModelMag`` and ``r_cModelMag``), and it limits the search to the extended objects with ``g`` and ``r`` cModel fluxes greater than 360 nJy (cModel magnitudes less than 25), located in a circular region with a radius of 10 arc min (0.167 degree), around the direction with RA of 62.0 deg and and Dec of -37.0 deg.
+**2. Enter an ADQL statement in the box.**
+For example, copy and paste the statement below, which converts the fluxes to magnitudes, by the use of an ADQL function ``scisql_nanojanskyToAbMag()`` where the respective flux is the argument (and renames them as ``g_cModelMag`` and ``r_cModelMag``).
+It limits the search to the extended objects with ``g`` and ``r`` cModel fluxes greater than 360 nJy (cModel magnitudes less than 25), located in a circular region with a radius of 10 arc min (0.167 degree), around the direction with RA of 62.0 deg and and Dec of -37.0 deg.
 
-.. code-block:: SQL 
+.. code-block:: SQL
 
    SELECT coord_dec, coord_ra, 
    scisql_nanojanskyToAbMag(g_cModelFlux) AS g_cModelMag, 
@@ -94,4 +95,3 @@ Plot the heatmap of g-r color vs. g-magnitude by entering ``g_cModelMag`` for X,
 	:alt: Screenshot of the 2-d histogram of g-r color vs. g-magnitudes in the selected region, obtained by executing an ADQL query.
 
 Figure 2:  The 1-d histogram of g-magnitudes as well as the 2-d histogram of g-r color vs. g-magnitudes of the extended objects in the selected region, obtained by executing an ADQL query.
-
