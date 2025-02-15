@@ -14,9 +14,9 @@
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
 .. A warning will alert you of identical labels during the linkcheck process.
 
-##################################################################
-8.2. How to plot one- and two-dimensional histograms in the Portal
-##################################################################
+###################################################################
+08.2. How to plot one- and two-dimensional histograms in the Portal
+###################################################################
 
 
 .. This section should provide a brief, top-level description of the page.
