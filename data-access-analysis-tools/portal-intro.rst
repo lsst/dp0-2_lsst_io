@@ -30,15 +30,23 @@ This tutorial demonstrates how to create a light curve of an object in all obser
 In those cases, the forced photometry - available in the ``ForcedSourceOnDiaObject`` table - has to be used instead.
 That table contains "forced" flux measurements in locations of all objects which had positive ``SNR > 5`` detections in the table ``dp02_dc2_catalogs.DiaObject``.
 
-This example demonstrates how to create a forced photometry lightcurve of a RR LyrAE STER located at (62.1479031 -35.7991348).
+This example demonstrates how to create a forced photometry lightcurve of a RR Lyrae star located at (62.1479031 -35.7991348).
 
 **1.  Note the need to determine the Object ID for the object of interest.** Note that the individual Processed Visit Images might have very slightly different coordinates for the same object, so it is wise to extract the data from the ``dp02_dc2_catalogs.DiaObject`` table using the object's unique DIA object identifier ``diaObjectId``.  
 
 **2. Select the relevant table containing the** ``diaObjectId``.  After logging into the Portal aspect of the Rubin Science Platform, click on the "UI assisted" button, select "DP0.2 Catalogs" tab, chose the "dp02_dc2_catalogs" on the left, and "dp02_dc2_catalogs.DiaObject" table on the right.  
 
 **3. Determine the object's** ``diaObjectId``.  For spatial constraints, enter 62.1479031, -35.7991348 and a 2 arcseconds radius using the "cone Shape" ("Temporal" constraints button needs to be unchecked).
-For the "Output Column Selection" only the ``diaObjectId`` needs to be checked.  
-Pressing the "search" button will return only one ``diaObjectId`` - it is .
+For the "Output Column Selection" check the ``diaObjectId`` box and the ``nDiaSources`` - the latter will tell you the number of observations of each ``diaObjectId``.
+In the case if there were multiple ``diaObjectId`` entries, you will select the one with the lasrgest number of observations.
+Pressing the "search" button will return two entries.  The one with the larger number of observations has the ``diaObjectId`` of .
+
+.. figure:: /_static/Howto_RRLyare_lc_1.png
+    :name: Howto_SN_lightcurve
+    :alt: A screenshot of the results view showing the table of RA, Dec and number of observations of an object at the selected location.
+
+    Figure 1: A screenshot of the results view showing the table of RA, Dec and number of observations of an object at the selected location.
+
 
 **4.  Select the tables containing fluxes and observation epochs of the object and determine the common meta entry.** ``ForcedSourceOnDiaObject`` contains fluxes of individual objects, but it does not contain the observation epochs;  however, the table ``CcdVisit`` does.  
 Obtaining the visit epochs will require joining two tables - specifically ``ForcedSourceOnDiaObject`` and ``CcdVisit`` on the common meta entry of ``ccdVisitId``.  
