@@ -26,7 +26,7 @@
 **Targeted learning level:** intermediate
 
 **Introduction:**
-This tutorial demonstrates how to create a light curve of an object in all observations where it was not detected at a ``SNR > 5`` - for instance a measurement of a flux of a star whis is on occassion extremely faint.
+This tutorial demonstrates how to create a light curve of an object in all observations where it was not detected at a ``SNR > 5`` - for instance a measurement of a flux of a star which is on occassion extremely faint.
 In those cases, the forced photometry - available in the ``ForcedSourceOnDiaObject`` table - has to be used instead.
 That table contains "forced" flux measurements in locations of all objects which had positive ``SNR > 5`` detections in the table ``dp02_dc2_catalogs.DiaObject``.
 
@@ -56,9 +56,8 @@ Click on the "Edit ADQL" button on the upper right.
 
 **5.  Enter the query to  retrieve the required data.**
 This query extracts coordinates, DIA object identifier, CCD visit identifier, band, and forced PSF flux 
-and its error for all rows of the ``ForcedSourceOnDiaObjects`` table which are associated with the ``diaObject`` of interest,
-for i-band visits only.
-Again, the exposure time midpoint modified julian date for all visits is extracted by joining to the ``CcdVisit`` table.
+and its error for all rows of the ``ForcedSourceOnDiaObjects`` table which are associated with the ``diaObject`` of interest, for visits with ll filters (bands).  
+Again, the exposure time midpoint modified Julian date for all visits is extracted by joining to the ``CcdVisit`` table.
 
 .. code-block:: SQL 
 
@@ -74,7 +73,8 @@ Again, the exposure time midpoint modified julian date for all visits is extract
 **6.  Create the default plot.**  Click on "Search".  The default plot will be the dec vs. RA (the plotting tool defaults to plot the data in the two leftmost columns of the table).  
 
 **7.  Modify the plot to display the light curve.**  Change the plot by opening the plot parameters pop-up window which will appear by clicking on the settings icon (a single gear above the plot window).
-Change the x-axis label to ``expMidptMJD-60000`` to make it more celear.
+
+For y-axis, use ``psfFlux`` and for the x-axis, use ``expMidptMJD-60000`` to make it more clear.
 
 .. figure:: /_static/Howto_RRLyrae_lc_2.png
     :name: Howto_RRLyrae_lightcurve
@@ -82,3 +82,14 @@ Change the x-axis label to ``expMidptMJD-60000`` to make it more celear.
 
     Figure 2: Results view showing the table and the light curve.
 
+**8.  Restrict the light curve to be only for the i-band observations.**  
+Click on the header of the "band" column on the table in the lower part of the screen.  
+Enter a checkmark by the ``i`` enry and hit "apply".  
+Note that the fainter flux entries disappeared.  
+Those were measurements in the ``u`` band where the star is generally very faint.  
+
+.. figure:: /_static/Howto_RRLyrae_lc_3.png
+    :name: Howto_RRLyrae_lightcurve
+    :alt: A screenshot of the results view showing the table and the lightcurve restricerted to the i-band.  
+
+    Figure 3: Results view showing the table and the light curve restricted to the ``i`` band.
