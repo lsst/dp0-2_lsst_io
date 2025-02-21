@@ -26,19 +26,19 @@
 **Targeted learning level:** intermediate
 
 **Introduction:**
-This tutorial demonstrates how to create a light curve of an object in all observations where it was not detected at a ``SNR > 5`` - for instance a measurement of its flux before and after a flare or explosion.
+This tutorial demonstrates how to create a light curve of an object in all observations where it was not detected at a ``SNR > 5`` - for instance a measurement of a flux of a star whis is on occassion extremely faint.
 In those cases, the forced photometry - available in the ``ForcedSourceOnDiaObject`` table - has to be used instead.
 That table contains "forced" flux measurements in locations of all objects which had positive ``SNR > 5`` detections in the table ``dp02_dc2_catalogs.DiaObject``.
 
-This example demonstrates how to create a forced photometry lightcurve for the supernova located at (67.4579, -44.0802).
+This example demonstrates how to create a forced photometry lightcurve of a RR LyrAE STER located at (62.1479031 -35.7991348).
 
 **1.  Note the need to determine the Object ID for the object of interest.** Note that the individual Processed Visit Images might have very slightly different coordinates for the same object, so it is wise to extract the data from the ``dp02_dc2_catalogs.DiaObject`` table using the object's unique DIA object identifier ``diaObjectId``.  
 
 **2. Select the relevant table containing the** ``diaObjectId``.  After logging into the Portal aspect of the Rubin Science Platform, click on the "UI assisted" button, select "DP0.2 Catalogs" tab, chose the "dp02_dc2_catalogs" on the left, and "dp02_dc2_catalogs.DiaObject" table on the right.  
 
-**3. Determine the object's** ``diaObjectId``.  For spatial constraints, enter 67.4579, -44.0802 and a 2 arcseconds radius using the "cone Shape" ("Temporal" constraints button needs to be unchecked).
+**3. Determine the object's** ``diaObjectId``.  For spatial constraints, enter 62.1479031, -35.7991348 and a 2 arcseconds radius using the "cone Shape" ("Temporal" constraints button needs to be unchecked).
 For the "Output Column Selection" only the ``diaObjectId`` needs to be checked.  
-Pressing the "search" button will return only one ``diaObjectId`` - it is 1252220598734556212.
+Pressing the "search" button will return only one ``diaObjectId`` - it is .
 
 **4.  Select the tables containing fluxes and observation epochs of the object and determine the common meta entry.** ``ForcedSourceOnDiaObject`` contains fluxes of individual objects, but it does not contain the observation epochs;  however, the table ``CcdVisit`` does.  
 Obtaining the visit epochs will require joining two tables - specifically ``ForcedSourceOnDiaObject`` and ``CcdVisit`` on the common meta entry of ``ccdVisitId``.  
