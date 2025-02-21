@@ -14,9 +14,9 @@
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
 .. A warning will alert you of identical labels during the linkcheck process.
 
-#########################################################
-11. How to extract and plot forced photometry light curve
-#########################################################
+###########################################################
+08.3. How to extract and plot forced photometry light curve
+###########################################################
 **RSP Aspect:** Portal
 
 **Contact authors:** Greg Madejski and Melissa Graham
