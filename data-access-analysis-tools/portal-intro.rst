@@ -86,7 +86,7 @@ For y-axis, use ``psfFlux`` and for the x-axis, use ``expMidptMJD-60000`` to mak
 Click on the header of the "band" column on the table in the lower part of the screen.  
 Enter a checkmark by the ``i`` enry and hit "apply".  
 Note that the fainter flux entries disappeared.  
-Those were measurements in the ``u`` band where the star is generally very faint.  
+Those were measurements in the bands where the star is generally very faint at all times.
 
 .. figure:: /_static/Howto_RRLyrae_lc_3.png
     :name: Howto_RRLyrae_lightcurve
