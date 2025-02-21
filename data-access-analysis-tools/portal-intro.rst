@@ -39,21 +39,23 @@ This example demonstrates how to create a forced photometry lightcurve of a RR L
 **3. Determine the object's** ``diaObjectId``.  For spatial constraints, enter 62.1479031, -35.7991348 and a 2 arcseconds radius using the "cone Shape" ("Temporal" constraints button needs to be unchecked).
 For the "Output Column Selection" check the ``diaObjectId`` box and the ``nDiaSources`` - the latter will tell you the number of observations of each ``diaObjectId``.
 In the case if there were multiple ``diaObjectId`` entries, you will select the one with the lasrgest number of observations.
-Pressing the "search" button will return two entries.  The one with the larger number of observations has the ``diaObjectId`` of .
+Pressing the "search" button will return two entries.  The one with the larger number of observations has the ``diaObjectId`` of 1651589610221862935.
 
-.. figure:: /_static/Howto_RRLyare_lc_1.png
+.. figure:: /_static/Howto_RRLyrae_lc_1.png
     :name: Howto_SN_lightcurve
     :alt: A screenshot of the results view showing the table of RA, Dec and number of observations of an object at the selected location.
 
     Figure 1: A screenshot of the results view showing the table of RA, Dec and number of observations of an object at the selected location.
 
 
-**4.  Select the tables containing fluxes and observation epochs of the object and determine the common meta entry.** ``ForcedSourceOnDiaObject`` contains fluxes of individual objects, but it does not contain the observation epochs;  however, the table ``CcdVisit`` does.  
-Obtaining the visit epochs will require joining two tables - specifically ``ForcedSourceOnDiaObject`` and ``CcdVisit`` on the common meta entry of ``ccdVisitId``.  
+**4.  Select the tables containing fluxes and observation epochs of the object and determine the common meta entry.**
+``ForcedSourceOnDiaObject`` contains fluxes of individual objects, but it does not contain the observation epochs;  however, the table ``CcdVisit`` does.
+Obtaining the visit epochs will require joining two tables - specifically ``ForcedSourceOnDiaObject`` and ``CcdVisit`` on the common meta entry of ``ccdVisitId``.
 Such table joins are effectively performed using the Astronomical Data Query Language, ADQL.
 Click on the "Edit ADQL" button on the upper right.  
 
-**5.  Enter the query to  retrieve the required data.**  This query extracts coordinates, DIA object identifier, CCD visit identifier, band, and forced difference-image flux 
+**5.  Enter the query to  retrieve the required data.**
+This query extracts coordinates, DIA object identifier, CCD visit identifier, band, and forced PSF flux 
 and its error for all rows of the ``ForcedSourceOnDiaObjects`` table which are associated with the ``diaObject`` of interest,
 for i-band visits only.
 Again, the exposure time midpoint modified julian date for all visits is extracted by joining to the ``CcdVisit`` table.
@@ -62,36 +64,21 @@ Again, the exposure time midpoint modified julian date for all visits is extract
 
    SELECT fsodo.coord_ra, fsodo.coord_dec, 
    fsodo.diaObjectId, fsodo.ccdVisitId, fsodo.band, 
-   fsodo.psfDiffFlux, fsodo.psfFlux, fsodo.psfDiffFluxErr, 
+   fsodo.psfFlux, fsodo.psfFluxErr, 
    cv.expMidptMJD
    FROM dp02_dc2_catalogs.ForcedSourceOnDiaObject as fsodo 
    JOIN dp02_dc2_catalogs.CcdVisit as cv 
    ON cv.ccdVisitId = fsodo.ccdVisitId 
-   WHERE fsodo.diaObjectId = 1252220598734556212 
-   AND fsodo.band = 'i'
-
-**Note:** The ``ForcedSourceOnDiaObject`` table contains forced photometry on both the difference image, ``psfDiffFlux``, and the processed visit image (PVI; "direct" image), ``psfFlux``.
-Both are extracted via the query above.
-This example considers a supernova and thus it uses the ``psfDiffFlux``, which is the forced photometry on the difference image, in which the static-sky component (the host galaxy) has been subtracted.
-However, the ``psfFlux`` would be more appropriate for generating the lightcurve of a variable star, as there is no need to subtract the static component (in this case, the variable star's average flux).
+   WHERE fsodo.diaObjectId = 1651589610221862935
 
 **6.  Create the default plot.**  Click on "Search".  The default plot will be the dec vs. RA (the plotting tool defaults to plot the data in the two leftmost columns of the table).  
 
 **7.  Modify the plot to display the light curve.**  Change the plot by opening the plot parameters pop-up window which will appear by clicking on the settings icon (a single gear above the plot window).
 Change the x-axis label to ``expMidptMJD-60000`` to make it more celear.
-The example below uses ``psfDiffFlux`` as a function of ``expMidptMJD`` (MJD time of the exposure).
-Note that for some of the pointings, the plotted flux is negative.
-This is because ``psfDiffFlux`` is a result of the subtraction of some fiducial value (obtained by averaging previous observations) from the data in the PVI on hand.
-This, on some occasions can result in a negative value.  
 
-.. figure:: /_static/Howto_SN_lightcurve_1.png
-    :name: Howto_SN_lightcurve
-    :alt: A screenshot of the results view showing the table and the i-band lightcurve.
+.. figure:: /_static/Howto_RRLyrae_lc_2.png
+    :name: Howto_RRLyrae_lightcurve
+    :alt: A screenshot of the results view showing the table and the lightcurve.
 
-    Figure 1: Results view showing the table and the i-band light curve.
+    Figure 2: Results view showing the table and the light curve.
 
-**A word of warning:** Do not use the ADQL function ``scisql_nanojanskyToAbMag()`` to convert difference image fluxes to magnitudes.
-This can be misleading, as this function does not return any value for a negative flux, and difference image fluxes can be negative (e.g., either the
-object has declined in brightness compared to the template, or it is a non-detection and the flux is very small and negative).
-Using the ``scisql_nanojanskyToAbMag()`` function on columns like ``psfDiffFlux`` can result in missing data.
-It is only ever fully safe to use this function when using ``SNR > 5`` *detections* in PVIs.
