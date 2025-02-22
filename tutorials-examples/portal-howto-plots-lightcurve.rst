@@ -75,6 +75,7 @@ Again, the exposure time midpoint modified Julian date for all visits is extract
 **7.  Modify the plot to display the light curve.**  Change the plot by opening the plot parameters pop-up window which will appear by clicking on the settings icon (a single gear above the plot window).
 
 For y-axis, use ``psfFlux`` and for the x-axis, use ``expMidptMJD-60000`` to make it more clear.
+Add error bars for the y-axis (extracted as PSF flux error).
 
 .. figure:: /_static/Howto_RRLyrae_lc_2.png
     :name: Howto_RRLyrae_lightcurve
