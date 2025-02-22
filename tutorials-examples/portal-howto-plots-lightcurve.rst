@@ -26,7 +26,7 @@
 **Targeted learning level:** intermediate
 
 **Introduction:**
-This tutorial demonstrates how to create a light curve of an object in all observations where it was not detected at a ``SNR > 5`` - for instance a measurement of a flux of a star which is on occassion extremely faint.
+This tutorial demonstrates how to create a light curve of an object in all observations where it was not detected at a ``SNR > 5`` - for instance a measurement of a flux of a star which is on occasion extremely faint.
 In those cases, the forced photometry - available in the ``ForcedSourceOnDiaObject`` table - has to be used instead.
 That table contains "forced" flux measurements in locations of all objects which had positive ``SNR > 5`` detections in the table ``dp02_dc2_catalogs.DiaObject``.
 
@@ -38,7 +38,7 @@ This example demonstrates how to create a forced photometry lightcurve of a RR L
 
 **3. Determine the object's** ``diaObjectId``.  For spatial constraints, enter 62.1479031, -35.7991348 and a 2 arcseconds radius using the "cone Shape" ("Temporal" constraints button needs to be unchecked).
 For the "Output Column Selection" check the ``diaObjectId`` box and the ``nDiaSources`` - the latter will tell you the number of observations of each ``diaObjectId``.
-In the case if there were multiple ``diaObjectId`` entries, you will select the one with the lasrgest number of observations.
+In the case if there were multiple ``diaObjectId`` entries, you will select the one with the largest number of observations.
 Pressing the "search" button will return two entries.  The one with the larger number of observations has the ``diaObjectId`` of 1651589610221862935.
 
 .. figure:: /_static/Howto_RRLyrae_lc_1.png
@@ -83,9 +83,9 @@ For y-axis, use ``psfFlux`` and for the x-axis, use ``expMidptMJD-60000`` to mak
     Figure 2: Results view showing the table and the light curve.
 
 **8.  Restrict the light curve to be only for the i-band observations.**  
-Click on the header of the "band" column on the table in the lower part of the screen.  
-Enter a checkmark by the ``i`` enry and hit "apply".  
-Note that the fainter flux entries disappeared.  
+Click on the header of the "band" column on the table in the lower part of the screen.
+Enter a checkmark by the ``i`` entry and hit "apply".
+Note that the fainter flux entries disappeared.
 Those were measurements in the bands where the star is generally very faint at all times.
 
 .. figure:: /_static/Howto_RRLyrae_lc_3.png
