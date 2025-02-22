@@ -41,8 +41,8 @@ For the "Output Column Selection" check the ``diaObjectId`` box and the ``nDiaSo
 In the case if there were multiple ``diaObjectId`` entries, you will select the one with the largest number of observations.
 Pressing the "search" button will return two entries.  The one with the larger number of observations has the ``diaObjectId`` of 1651589610221862935.
 
-.. figure:: /_static/Howto_RRLyrae_lc_1.png
-    :name: Howto_SN_lightcurve
+.. figure:: /_static/portal-howto-plots-RRLyrae-lc-1.png
+    :name: Howto_RRLyrae_lightcurve_1
     :alt: A screenshot of the results view showing the table of RA, Dec and number of observations of an object at the selected location.
 
     Figure 1: A screenshot of the results view showing the table of RA, Dec and number of observations of an object at the selected location.
@@ -77,8 +77,8 @@ Again, the exposure time midpoint modified Julian date for all visits is extract
 For y-axis, use ``psfFlux`` and for the x-axis, use ``expMidptMJD-60000`` to make it more clear.
 Add error bars for the y-axis (extracted as PSF flux error).
 
-.. figure:: /_static/Howto_RRLyrae_lc_2.png
-    :name: Howto_RRLyrae_lightcurve
+.. figure:: /_static/portal-howto-plots-RRLyrae-lc-2.png
+    :name: Howto_RRLyrae_lightcurve_2
     :alt: A screenshot of the results view showing the table and the lightcurve.
 
     Figure 2: Results view showing the table and the light curve.
@@ -89,8 +89,8 @@ Enter a checkmark by the ``i`` entry and hit "apply".
 Note that the fainter flux entries disappeared.
 Those were measurements in the bands where the star is generally very faint at all times.
 
-.. figure:: /_static/Howto_RRLyrae_lc_3.png
-    :name: Howto_RRLyrae_lightcurve
+.. figure:: /_static/portal-howto-plots-RRLyrae-lc-3.png
+    :name: Howto_RRLyrae_lightcurve_3
     :alt: A screenshot of the results view showing the table and the lightcurve restricerted to the i-band.  
 
     Figure 3: Results view showing the table and the light curve restricted to the ``i`` band.
