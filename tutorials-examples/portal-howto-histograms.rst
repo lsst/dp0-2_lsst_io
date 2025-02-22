@@ -78,7 +78,7 @@ In the resulting  pop-up window, in the "Column or expression" box, enter ``g_cM
 
 **5.  Remove the "coord_ra vs. coord_dec" plot** by clicking on the "x" in the upper right-hand side of the plot window, which will result in the display as below.
 
-.. figure:: /_static/Howto_Histogram_1d.png
+.. figure:: /_static/portal-howto-plots-histogram-1d.png
 	:name: Howto_Histogram_1d.png
 	:alt: Screenshot of the 1-d histogram of g-magnitudes in the selectred region, obtained by executing an ADQL query.
 
@@ -90,7 +90,7 @@ Figure 1:  screenshot of the 1-d histogram of g-magnitudes of extended objects i
 Add an additional plot panel by clicking on the "+" button on the upper left-hand side of the active chart, and in the resulting pop-up window, click on "Heatmap" as the plot type.
 Plot the heatmap of g-r color vs. g-magnitude by entering ``g_cModelMag`` for X, and ``g_cModelMag-r_cModelMag`` for Y.
 
-.. figure:: /_static/Howto_Histogram_2d.png
+.. figure:: /_static/portal-howto-plots-histogram-2d.png
 	:name: Howto_Histogram_2d.png
 	:alt: Screenshot of the 2-d histogram of g-r color vs. g-magnitudes in the selected region, obtained by executing an ADQL query.
 
