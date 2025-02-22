@@ -80,7 +80,7 @@ In the resulting  pop-up window, in the "Column or expression" box, enter ``g_cM
 
 .. figure:: /_static/portal-howto-plots-histogram-1d.png
 	:name: Howto_Histogram_1d.png
-	:alt: Screenshot of the 1-d histogram of g-magnitudes in the selectred region, obtained by executing an ADQL query.
+	:alt: Screenshot of the 1-d histogram of g-magnitudes in the selected region, obtained by executing an ADQL query.
 
 Figure 1:  screenshot of the 1-d histogram of g-magnitudes of extended objects in the selected region, obtained by executing an ADQL query.
 
