@@ -1,5 +1,3 @@
-.. This is the beginning of a new tutorial focussing on learning to study variability using features of the Rubin Portal
-
 .. Review the README on instructions to contribute.
 .. Review the style guide to keep a consistent approach to the documentation.
 .. Static objects, such as figures, should be stored in the _static directory. Review the _static/README on instructions to contribute.
@@ -10,11 +8,12 @@
 
 .. This is the label that can be used for cross referencing this file.
 .. Recommended title label format is "Directory Name"-"Title Name" -- Spaces should be replaced by hyphens.
-.. _Tutorials-Examples-DP0-2-Portal-howto-query-image:
+.. _Tutorials-Examples-DPX-Aspect-Y:
 .. Each section should include a label for cross referencing to a given area.
 .. Recommended format for all labels is "Title Name"-"Section Name" -- Spaces should be replaced by hyphens.
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
 .. A warning will alert you of identical labels during the linkcheck process.
+
 
 #################################
 10. How to execute an Image query
@@ -22,30 +21,86 @@
 
 .. This section should provide a brief, top-level description of the page.
 
-**RSP Aspect:** Portal
+For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
-**Contact authors:** Yumi Choi
+**Data Release:** DP0.2
 
-**Last verified to run:** 2025-02-11
+**Last verified to run:** 2025-02-25
 
-**Targeted learning level:** beginner 
+**Learning objective:** How to query images in the RSP's Portal via ObsTAP
 
-**Introduction:**
+**LSST data products:** *List the catalogs and images used.*
+
+**Credit:** Yumi Choi. Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
+
+**Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum. Rubin staff will respond to all questions posted there.
+
+
+.. _DP0.2-Portal-Y-Intro:
+
+Introduction
+============
+
 This tutorial demonstrates how to execute a simple Portal query for image data using the `ObsTAP <https://www.ivoa.net/documents/ObsCore/>`_.
 
-                                           
-**1. Go to the Portal’s DP0.2 Images tab.**
-Navigate to the "DP0.2 Images" tab in the Portal aspect.
+
+.. _DP0.2-Portal-Y-1:
+
+1. Navigate to the Portal’s "DP0.2 Images" tab
+==============================================
+
+**1.1. Log in to the Portal Aspect of the Rubin Science Platform.**
+In a browser, go to the URL `data.lsst.cloud <https://data.lsst.cloud>`_ and select the Portal Aspect.
+Follow the process to log in.
+
+**1.2. Select the "DP0.2 Images" tab in the Portal.** 
+Click on the "DP0.2 Images" tab at the top to navigate to the DP0.2 image saerch page, as shown in Figure 1.
 
 .. figure:: /_static/portal-howto-query-image-1.png
     :name: portal-howto-query-image-1
-    :alt: The Portal DP0.2 image search set up.
+    :alt: A screenshot of the DP0.2 image search landing page, annotated with labels.
 
-    Figure 1: The Portal image search set up for a simple location search query for the processed visit images (PVIs; the calibrated single-epoch images also called calexps).
+    Figure 1: A screenshot of the DP0.2 image search landing page, annotated with labels. 
+
+
+
+.. _DP0.2-Portal-Y-2:
+
+2. Enter constraints for image query (A in Figure 1)
+====================================================
+
+**2.1. Set observation type and source (B in Figure 1).** 
+Under "Observation Type and Source", the IVOA standard "Calibration Level" option (0, 1, 2, 3, or 4) is provided.
+Check the "2" box to retrieve processed visit images (PVIs), also known as calibrated single-epoch images (calexps).
+In the "Data Product Subtype" drop-down menu, select "lsst.calexp". 
+
+The "Data Product Type" should be left as Image”, and the “Instrument Name”, “Collection”, and “Data Product Subtype” can all be left blank.
+
+
+
+
+.. _DP0.2-Portal-exercises:
+
+X. Exercises for the learner 
+============================
+
+**X.1. A clear, achievable task.**
+
+**X.2. Another clear, achievable task.**
+
+
+
+
+==========================
+
+                                           
+
 
 
 **2. Enter constraints** (A in Figure 1).
 Impose a variety of constraints on the image query. 
+The Portal is set up for a simple location-based search query to retrieve processed visit images (PVIs),
+also known as calibrated single-epoch images (calexps).
 
 
 **2.1. Set observation type and source** (B in Figure 1).
