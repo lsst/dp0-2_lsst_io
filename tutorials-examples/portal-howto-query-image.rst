@@ -86,6 +86,7 @@ choose "MJD values" as the time format, and enter 60000 as the Star Time and 605
 
 .. figure:: /_static/portal-howto-query-image-2.png
     :name: portal-howto-query-image-2
+    :width: 300
     :alt: A screenshot showing how to constrain timing in an image query.
 
     Figure 2: A screenshot demonstrating how to constrain timing in an image query by specifying the start and end times for the overlapping observation period in MJD. 
@@ -96,6 +97,7 @@ check the "u" box to only retrieve u-band images.
 
 .. figure:: /_static/portal-howto-query-image-3.png
     :name: portal-howto-query-image-3
+    :width: 300
     :alt: A screenshot showing how to constrain spectral coverage in an image query.
 
     Figure 3: A screenshot demonstrating how to constrain spectral coverage in an image query by specifying the LSSTCam's filter.
