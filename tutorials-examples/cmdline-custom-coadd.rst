@@ -14,10 +14,10 @@
 
 **Container size:** large
 
-**Credit:** This command line tutorial is based on the `corresponding notebook tutorials <https://github.com/rubin-dp0/tutorial-notebooks>`_ by Melissa Graham. The command line approach is heavily influenced by Shenming Fu's recipe for reducing DECam data with the Gen3 LSST Science Pipelines, which is in turn based on `Lee Kelvin's Merian processing notes <https://hackmd.io/@lsk/merian>`_.
+**Credit:** This command line tutorial is based on the `corresponding notebook tutorials <https://github.com/lsst/tutorial-notebooks>`_ by Melissa Graham. The command line approach is heavily influenced by Shenming Fu's recipe for reducing DECam data with the Gen3 LSST Science Pipelines, which is in turn based on `Lee Kelvin's Merian processing notes <https://hackmd.io/@lsk/merian>`_.
 
 **Introduction:** 
-This tutorial shows how to use command line ``pipetask`` invocations to produce custom coadds from simulated single-exposure Rubin/LSST images, then detect and measure sources in this custom coadd. It is meant to parallel the corresponding Jupyter Notebook tutorial entitled `Construct a Custom Coadded Image <https://github.com/rubin-dp0/tutorial-notebooks>`_, plus the initial portion of the Jupyter Notebook tutorial entitled `Detect and Measure Sources in a Custom Coadded Image <https://github.com/rubin-dp0/tutorial-notebooks>`_.
+This tutorial shows how to use command line ``pipetask`` invocations to produce custom coadds from simulated single-exposure Rubin/LSST images, then detect and measure sources in this custom coadd. It is meant to parallel the corresponding Jupyter Notebook tutorial entitled `Construct a Custom Coadded Image <https://github.com/lsst/tutorial-notebooks>`_, plus the initial portion of the Jupyter Notebook tutorial entitled `Detect and Measure Sources in a Custom Coadded Image <https://github.com/lsst/tutorial-notebooks>`_.
 
 The peak memory of this custom coadd processing is between 8 and 9 GB, hence a large container is appropriate.
 
@@ -25,7 +25,7 @@ This tutorial uses the Data Preview 0.2 (DP0.2) data set.
 This data set uses a subset of the DESC's Data Challenge 2 (DC2) simulated images, which have been reprocessed by Rubin Observatory using Version 23 of the LSST Science Pipelines.
 More information about the simulated data can be found in the DESC's `DC2 paper <https://ui.adsabs.harvard.edu/abs/2021ApJS..253...31L/abstract>`_ and in the `DP0.2 data release documentation <https://dp0-2.lsst.io>`_.
 
-A `shell script version <https://github.com/rubin-dp0/tutorial-notebooks/tree/main/DP02_09_Custom_Coadds>`_ of this command line tutorial is also available.
+A `shell script version <https://github.com/lsst/tutorial-notebooks/tree/main/DP02_09_Custom_Coadds>`_ of this command line tutorial is also available.
 
 **WARNING:
 This custom coadd tutorial will only run with LSST Science Pipelines version Weekly 2022_40.**
@@ -53,7 +53,7 @@ Step 1. Access the terminal and set up
 
 1.0. Recall the scientific context motivating custom coadds
 
-Per `notebook 9a <https://github.com/rubin-dp0/tutorial-notebooks>`_, a (hypothetical) supernova went off at (RA, Dec) = (55.745834, -32.269167) degrees on MJD = 60960. You wish to make a custom coadd of input DESC DC2 simulated exposures corresponding to a specific MJD range, nicknamed "Window1": 60925 < MJD < 60955, roughly the month leading up to the explosion. The science goal is to search for any potential supernova precursor in the pre-explosion imaging, without contamination by the post-explosion transient.
+Per `notebook 9a <https://github.com/lsst/tutorial-notebooks>`_, a (hypothetical) supernova went off at (RA, Dec) = (55.745834, -32.269167) degrees on MJD = 60960. You wish to make a custom coadd of input DESC DC2 simulated exposures corresponding to a specific MJD range, nicknamed "Window1": 60925 < MJD < 60955, roughly the month leading up to the explosion. The science goal is to search for any potential supernova precursor in the pre-explosion imaging, without contamination by the post-explosion transient.
 
 1.1. Log in to the RSP Notebook Aspect. 
 The terminal is a subcomponent of the Notebook Aspect.
@@ -78,11 +78,11 @@ If indeed using ``w_2022_40``, you should see ``w_2022_40`` as part of the outpu
 Step 2. Show your custom coaddition pipeline and its configurations
 ===================================================================
 
-As you saw in `DP0.2 tutorial notebook 9a <https://github.com/rubin-dp0/tutorial-notebooks>`_, you do not need to rerun the entire DP0.2 data processing in order to obtain custom coadds. You only need to run a subset of the tasks that make up ``step3`` of the DP0.2 processing, where ``step3`` refers to coadd-level processing. Specifically, you want to rerun only the ``makeWarp`` and ``assembleCoadd`` tasks.
+As you saw in `DP0.2 tutorial notebook 9a <https://github.com/lsst/tutorial-notebooks>`_, you do not need to rerun the entire DP0.2 data processing in order to obtain custom coadds. You only need to run a subset of the tasks that make up ``step3`` of the DP0.2 processing, where ``step3`` refers to coadd-level processing. Specifically, you want to rerun only the ``makeWarp`` and ``assembleCoadd`` tasks.
 
 2.1. Choose an output collection name/location
 
-Some of the ``pipetask`` commands later in this tutorial require you to specify an output collection where your new coadds will eventually be persisted. As described in the notebook version of `tutorial 9a <https://github.com/rubin-dp0/tutorial-notebooks>`_, you want to name your output collection as something like ``u/<Your User Name>/<Collection Identifier>``. As a concrete example, throughout the rest of this tutorial ``u/$USER/custom_coadd_window1_cl00`` is used as the collection name for the custom coadd products (``$USER`` is an environment variable that stores your RSP user name).
+Some of the ``pipetask`` commands later in this tutorial require you to specify an output collection where your new coadds will eventually be persisted. As described in the notebook version of `tutorial 9a <https://github.com/lsst/tutorial-notebooks>`_, you want to name your output collection as something like ``u/<Your User Name>/<Collection Identifier>``. As a concrete example, throughout the rest of this tutorial ``u/$USER/custom_coadd_window1_cl00`` is used as the collection name for the custom coadd products (``$USER`` is an environment variable that stores your RSP user name).
 
 2.2. Build the pipeline
 
@@ -106,7 +106,7 @@ The ``-p`` parameter of ``pipetask`` is short for ``--pipeline`` and it is criti
 
 2.3. Customize and inspect the coaddition configurations
 
-As mentioned in `DP0.2 tutorial notebook 9a <https://github.com/rubin-dp0/tutorial-notebooks>`_, there are a couple of specific coaddition configuration parameters that need to be set in order to accomplish the desired custom coaddition. In detail, the ``makeWarp`` Task needs two of its configuration parameters modified: ``doApplyFinalizedPsf`` and ``connections.visitSummary``.
+As mentioned in `DP0.2 tutorial notebook 9a <https://github.com/lsst/tutorial-notebooks>`_, there are a couple of specific coaddition configuration parameters that need to be set in order to accomplish the desired custom coaddition. In detail, the ``makeWarp`` Task needs two of its configuration parameters modified: ``doApplyFinalizedPsf`` and ``connections.visitSummary``.
 
 2.3.1. Display the default configuration
 
@@ -121,7 +121,7 @@ First, let's try an experiment of simply finding out what the default value of `
     
 Notice that the ``-p`` parameter passed to ``pipetask`` has remained the same. But in order for ``pipetask run`` to operate, it also needs to know what Butler repository it's dealing with. That's why the ``-b dp02`` argument has been added. ``dp02`` is an alias that points to the `S3 <https://en.wikipedia.org/wiki/Amazon_S3>`_ location of the DP0.2 Butler repository.
 
-The final line merits further explanation. ``--show config`` tells the LSST pipelines not to actually run the pipeline, but rather to only show the configuration parameters, so that you can understand all the detailed choices being made by your processing, if desired. The last line would be valid as simply ``--show config``. However, this would print out every single configuration parameter and its description. Appending ``=<Task>::<Parameter>`` to ``--show config`` specifies exactly which parameter you want to be shown. In this case, it's known from `DP0.2 tutorial notebook 9a <https://github.com/rubin-dp0/tutorial-notebooks>`_ that you want to adjust the ``doApplyFinalizedPsf`` parameter of the ``makeWarp`` Task, hence why ``makeWarp::doApplyFinalizedPsf`` is appended to ``--show config``.
+The final line merits further explanation. ``--show config`` tells the LSST pipelines not to actually run the pipeline, but rather to only show the configuration parameters, so that you can understand all the detailed choices being made by your processing, if desired. The last line would be valid as simply ``--show config``. However, this would print out every single configuration parameter and its description. Appending ``=<Task>::<Parameter>`` to ``--show config`` specifies exactly which parameter you want to be shown. In this case, it's known from `DP0.2 tutorial notebook 9a <https://github.com/lsst/tutorial-notebooks>`_ that you want to adjust the ``doApplyFinalizedPsf`` parameter of the ``makeWarp`` Task, hence why ``makeWarp::doApplyFinalizedPsf`` is appended to ``--show config``.
 
 When the above `pipetask run` command is executed, the output should be:
 
@@ -137,7 +137,7 @@ Ignore the lines about "No quantum graph" and "NOIGNORECASE" -- for the present 
 
 2.3.2. Perform configuration override
 
-From `DP0.2 tutorial notebook 9a <https://github.com/rubin-dp0/tutorial-notebooks>`_, you know that it's necessary to change ``doApplyFinalizedPsf`` to ``False`` i.e., the opposite of its default value. The following modified ``pipetask run`` command adds one extra ``-c`` input parameter for the custom ``doApplyFinalizedPsf`` setting:
+From `DP0.2 tutorial notebook 9a <https://github.com/lsst/tutorial-notebooks>`_, you know that it's necessary to change ``doApplyFinalizedPsf`` to ``False`` i.e., the opposite of its default value. The following modified ``pipetask run`` command adds one extra ``-c`` input parameter for the custom ``doApplyFinalizedPsf`` setting:
 
 .. code-block::
 
@@ -167,11 +167,11 @@ Step 3. Explore and visualize the custom coaddition ``QuantumGraph``
 
 Before actually deploying the custom coaddition, let's take some time to understand the ``QuantumGraph`` of the processing to be run. The ``QuantumGraph`` is `a tool <https://pipelines.lsst.io/py-api/lsst.pipe.base.QuantumGraph.html#lsst.pipe.base.QuantumGraph>`_ used by the LSST Science Pipelines to break a large processing into relatively "bite-sized" quanta and arrange these quanta into a sequence such that all inputs needed by a given quantum are available for the execution of that quantum. In the present case, you will not be doing an especially large processing, but for production deployments it makes sense to inspect and validate the ``QuantumGraph`` before proceeding straight to full-scale processing launch.
 
-So far, you've seen ``pipetask build`` and ``pipetask run``. For the ``QuantumGraph``, you'll use another ``pipetask`` variant, ``pipetask qgraph``. ``pipetask qgraph`` determines the full list of quanta that your processing will entail, so at this stage it's important to bring in the query constraints that specify what subset of DP0.2 will be analyzed. This information is already available from `notebook tutorial 9a <https://github.com/rubin-dp0/tutorial-notebooks>`_. In detail, you want to make a coadd only for ``patch=4431``, ``tract=17`` of the ``DC2`` ``skyMap``, and only using a particular set of 6 input exposures drawn from a desired temporal interval (``visit`` = 919515, 924057, 924085, 924086, 929477, 930353). `DP0.2 tutorial notebook 9a <https://github.com/rubin-dp0/tutorial-notebooks>`_ also provides a translation of these constraints into `Butler query syntax <https://pipelines.lsst.io/modules/lsst.daf.butler/queries.html>`_, which you can see in the line starting with ``-d`` in the first ``pipetask qgraph`` command of section 3.1 below.
+So far, you've seen ``pipetask build`` and ``pipetask run``. For the ``QuantumGraph``, you'll use another ``pipetask`` variant, ``pipetask qgraph``. ``pipetask qgraph`` determines the full list of quanta that your processing will entail, so at this stage it's important to bring in the query constraints that specify what subset of DP0.2 will be analyzed. This information is already available from `notebook tutorial 9a <https://github.com/lsst/tutorial-notebooks>`_. In detail, you want to make a coadd only for ``patch=4431``, ``tract=17`` of the ``DC2`` ``skyMap``, and only using a particular set of 6 input exposures drawn from a desired temporal interval (``visit`` = 919515, 924057, 924085, 924086, 929477, 930353). `DP0.2 tutorial notebook 9a <https://github.com/lsst/tutorial-notebooks>`_ also provides a translation of these constraints into `Butler query syntax <https://pipelines.lsst.io/modules/lsst.daf.butler/queries.html>`_, which you can see in the line starting with ``-d`` in the first ``pipetask qgraph`` command of section 3.1 below.
 
 3.1. What are the quanta?
 
-`DP0.2 tutorial notebook 9a <https://github.com/rubin-dp0/tutorial-notebooks>`_ shows that the desired custom coaddition entails executing 7 quanta (6 for ``makeWarp`` -- one per input exposure -- plus one for ``assembleCoadd``). Hopefully the command line version of this processing has the same number (and list) of quanta! 
+`DP0.2 tutorial notebook 9a <https://github.com/lsst/tutorial-notebooks>`_ shows that the desired custom coaddition entails executing 7 quanta (6 for ``makeWarp`` -- one per input exposure -- plus one for ``assembleCoadd``). Hopefully the command line version of this processing has the same number (and list) of quanta! 
 
 You can find out full details about all quanta with a ``pipetask qgraph`` command. Here's the ``pipetask qgraph`` command:
 
@@ -278,7 +278,7 @@ The last line (before the timestamp printout) says "Executed 7 quanta successful
 Step 5. Source detection, deblending, and measurement on your custom coadd
 ==========================================================================
 
-The following material corresponds to (a subset of) that contained in `DP0.2 tutorial notebook 9b <https://github.com/rubin-dp0/tutorial-notebooks>`_ "Detect and Measure Sources in a Custom Coadded Image", rather than DP0.2 tutorial notebook 9a.
+The following material corresponds to (a subset of) that contained in `DP0.2 tutorial notebook 9b <https://github.com/lsst/tutorial-notebooks>`_ "Detect and Measure Sources in a Custom Coadded Image", rather than DP0.2 tutorial notebook 9a.
 
 5.1. The ``QuantumGraph`` for detection, deblending, and measurement
 
