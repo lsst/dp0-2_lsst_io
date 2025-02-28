@@ -229,7 +229,7 @@ More Complex User Installs
 
 Suppose one wishes to install a user package on the RSP that has dependencies on non-python libraries.
 Typically, these non-python libraries must be installed and built separately, and the ``LD_LIBRARY_PATH`` must be updated.
-Leanne Guy created a simple and effective `tutorial notebook for working with user packages <https://github.com/rubin-dp0/tutorial-notebooks/>`_,  using the install of the ``bagpipes`` Bayesian Analysis of Galaxies package as an example.
+Leanne Guy created a simple and effective `tutorial notebook for working with user packages <https://github.com/lsst/tutorial-notebooks/>`_,  using the install of the ``bagpipes`` Bayesian Analysis of Galaxies package as an example.
 (The ``bagpipes`` package depends on ``PyMultiNest``, a python interface to the ``MultiNest`` package, which is written in C++.)
 The tutorial notebook runs through the steps to user install the ``bagpipes`` package and build its dependencies on the RSP so that it can be used both from the python command line shell and from inside a notebook.
 
@@ -272,7 +272,7 @@ The basic steps are:
 
 6. The first time you perfom Steps 4 and/or 5, log out and log back into the RSP.
 
-For more information, please consult `tutorial notebook for working with user packages <https://github.com/rubin-dp0/tutorial-notebooks/>`_.
+For more information, please consult `tutorial notebook for working with user packages <https://github.com/lsst/tutorial-notebooks/>`_.
 
 
 
