@@ -48,8 +48,8 @@ the tutorial and clicking on "history" (near upper-right).
 Major Updates Log
 =================
 
-Feb 27 2025
------------
+Mar 6 2025
+----------
 
 All Jupyter Notebook tutorials were migrated to the new repository `lsst/tutorial-notebooks <https://github.com/lsst/tutorial-notebooks>`_.
 This repository no longer has a ``/data`` folder.
