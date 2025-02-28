@@ -14,10 +14,13 @@
 
 **Container size:** large
 
-**Credit:** This command line tutorial is based on the `corresponding notebook tutorials <https://github.com/lsst/tutorial-notebooks>`_ by Melissa Graham. The command line approach is heavily influenced by Shenming Fu's recipe for reducing DECam data with the Gen3 LSST Science Pipelines, which is in turn based on `Lee Kelvin's Merian processing notes <https://hackmd.io/@lsk/merian>`_.
+**Credit:** This command line tutorial is based on the custom coadd :ref:`Notebook tutorial <DP0-2-Tutorials-Notebooks>`_.
+The command line approach is heavily influenced by Shenming Fu's recipe for reducing DECam data with the Gen3 LSST Science Pipelines, which is in turn based on `Lee Kelvin's Merian processing notes <https://hackmd.io/@lsk/merian>`_.
 
 **Introduction:** 
-This tutorial shows how to use command line ``pipetask`` invocations to produce custom coadds from simulated single-exposure Rubin/LSST images, then detect and measure sources in this custom coadd. It is meant to parallel the corresponding Jupyter Notebook tutorial entitled `Construct a Custom Coadded Image <https://github.com/lsst/tutorial-notebooks>`_, plus the initial portion of the Jupyter Notebook tutorial entitled `Detect and Measure Sources in a Custom Coadded Image <https://github.com/lsst/tutorial-notebooks>`_.
+This tutorial shows how to use command line ``pipetask`` invocations to produce custom coadds from simulated single-exposure Rubin/LSST images, then detect and measure sources in this custom coadd.
+It is meant to parallel the corresponding :ref:`Notebook tutorial <DP0-2-Tutorials-Notebooks>`_ entitled "Construct a Custom Coadded Image",
+plus the initial portion of one entitled "Detect and Measure Sources in a Custom Coadded Image".
 
 The peak memory of this custom coadd processing is between 8 and 9 GB, hence a large container is appropriate.
 
@@ -25,7 +28,7 @@ This tutorial uses the Data Preview 0.2 (DP0.2) data set.
 This data set uses a subset of the DESC's Data Challenge 2 (DC2) simulated images, which have been reprocessed by Rubin Observatory using Version 23 of the LSST Science Pipelines.
 More information about the simulated data can be found in the DESC's `DC2 paper <https://ui.adsabs.harvard.edu/abs/2021ApJS..253...31L/abstract>`_ and in the `DP0.2 data release documentation <https://dp0-2.lsst.io>`_.
 
-A `shell script version <https://github.com/lsst/tutorial-notebooks/tree/main/DP02_09_Custom_Coadds>`_ of this command line tutorial is also available.
+A shell script version of this command line tutorial is also available in the `tutorial notebooks respository <https://github.com/lsst/tutorial-notebooks>`_.
 
 **WARNING:
 This custom coadd tutorial will only run with LSST Science Pipelines version Weekly 2022_40.**
