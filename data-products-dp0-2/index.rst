@@ -237,7 +237,7 @@ The ``TruthSummary`` and ``MatchesTruth`` tables are accessible via TAP (and not
 as demonstrated in DP0.2 `tutorial notebook <https://github.com/lsst/tutorial-notebooks>`_ "DP02_08_Truth_Tables.ipynb".
 Additional truth data has been made available by DESC as parquet files in the shared disk space in the RSP
 at `data.lsst.cloud <https://data.lsst.cloud/>`_, with access demonstrated in this
-`DP0.2 contributed notebook <https://github.com/lsst/delegate-contributions-dp02/tree/main/desc_truth>`_.
+`DP0.2 contributed notebook <https://github.com/rubin-dp0/delegate-contributions-dp02/tree/main/desc_truth>`_.
 Find more information about the matching algorithm in :ref:`Data-Processing-Overview-Truth-Matching`.
 
 
