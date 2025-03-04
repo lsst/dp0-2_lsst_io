@@ -70,13 +70,14 @@ The plot will update to display i-band fluxes only (Figure 2).
 
 
 **4. Color markers by band in a multi-band light curve.**
-To set marker color based on band (filter)
+To set marker color based on band (filter),
 create a new column in which the band is represented as a number (Figure 3)
 and then a color map based on those numbers (Figure 4).
 The plot will then display points colored by band (Figure 5).
 
 .. figure:: /_static/portal-howto-lightcurves-3.png
     :name: portal-howto-lightcurves-3
+    :width: 300
     :alt: A screenshot of the "Add a column" pop-up window.
 
     Figure 3: The "Add a column" pop-up window to create a new column of integer numbers to represent each band.
@@ -93,11 +94,12 @@ The plot will then display points colored by band (Figure 5).
     :name: portal-howto-lightcurves-5
     :alt: A screenshot of the results view with plotted points colored by band.
 
-    Figure 5: The results view with the new "bands_ascii" column and the plotted points colored accordingly.
+    Figure 5: The results view with the new "bands_ascii" column and the plotted points colored by the Rainbow color map.
 
 
-**Notice**
-Future Portal functionality to plot multi-band light curves in which points are colored by filter is planned.
+**Notice: **
+In the future, the trick of creating an ascii column to represent band as an integer will not be needed.
+The development of Portal functionality to plot multi-band light curves in which points are colored by filter is planned.
 
 Return to the list of DP0.2 :ref:`DP0-2-Tutorials-Portal`.
 
