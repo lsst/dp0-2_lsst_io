@@ -78,9 +78,9 @@ typically without scientific context or motivation - just simple examples for qu
     portal-howto-hips
     portal-howto-hips-alt
     portal-howto-plots
+    portal-howto-plots-custom
     portal-howto-histograms
     portal-howto-lightcurves
-    portal-howto-plots-custom
     portal-howto-table
     portal-howto-table-filter
     portal-howto-table-addcol
