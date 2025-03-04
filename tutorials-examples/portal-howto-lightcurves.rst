@@ -84,7 +84,7 @@ The plot will then display points colored by band (Figure 5).
 
 .. figure:: /_static/portal-howto-lightcurves-4.png
     :name: portal-howto-lightcurves-4
-    :width: 300
+    :width: 400
     :alt: A screenshot of the "Plot Parameters" pop-up window.
 
     Figure 4: The "Plot Parameters" pop-up window with the Trace Options set to define a color map based on the new "bands_ascii" column.
