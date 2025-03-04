@@ -97,7 +97,7 @@ The plot will then display points colored by band (Figure 5).
     Figure 5: The results view with the new "bands_ascii" column and the plotted points colored by the Rainbow color map.
 
 
-**Notice: **
+**Notice:**
 In the future, the trick of creating an ascii column to represent band as an integer will not be needed.
 The development of Portal functionality to plot multi-band light curves in which points are colored by filter is planned.
 
