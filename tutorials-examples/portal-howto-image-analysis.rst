@@ -29,7 +29,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Learning objective:** How to use image analysis tools in the RSP's Portal image query results page
 
-**LSST data products:** lsst.calexp
+**LSST data products:** Image (any data product subtype)
 
 **Credit:** This tutorial is based on the tutorial developed by Yumi Choi and incorporates part of Step 3 from the Science Portal Tutorial, "06. Exploring SAOImageDS9-like Functionality in the Firefly-based RSP Portal."
 
