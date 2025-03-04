@@ -77,7 +77,6 @@ The plot will then display points colored by band (Figure 5).
 
 .. figure:: /_static/portal-howto-lightcurves-3.png
     :name: portal-howto-lightcurves-3
-    :width: 300
     :alt: A screenshot of the "Add a column" pop-up window.
 
     Figure 3: The "Add a column" pop-up window to create a new column of integer numbers to represent each band.
@@ -85,6 +84,7 @@ The plot will then display points colored by band (Figure 5).
 
 .. figure:: /_static/portal-howto-lightcurves-4.png
     :name: portal-howto-lightcurves-4
+    :width: 300
     :alt: A screenshot of the "Plot Parameters" pop-up window.
 
     Figure 4: The "Plot Parameters" pop-up window with the Trace Options set to define a color map based on the new "bands_ascii" column.
