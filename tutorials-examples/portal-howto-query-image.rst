@@ -102,7 +102,7 @@ check the "u" box to only retrieve u-band images.
 
     Figure 3: A screenshot demonstrating how to constrain spectral coverage in an image query by specifying the LSSTCam's filter.
 
-**2.5 Output Column Selection and Constraints (F in Figure 1).
+**2.5 Output Column Selection and Constraints (F in Figure 1).**
 The default is 27 out of 37 columns to be selected. It is recommended to return all selected metadata.
 Click on the “Search” button. 
 
