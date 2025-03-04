@@ -25,11 +25,11 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP0.2
 
-**Last verified to run:** 2025-02-25
+**Last verified to run:** 2025-03-04
 
 **Learning objective:** How to query images in the RSP's Portal via ObsTAP
 
-**LSST data products:** *List the catalogs and images used.*
+**LSST data products:** lsst.calexp
 
 **Credit:** Yumi Choi. Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
 
