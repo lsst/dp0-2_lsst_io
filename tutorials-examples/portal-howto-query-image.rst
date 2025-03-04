@@ -117,6 +117,7 @@ The query returns seven u-band PVIs that meet all the constraints specified in S
 
 .. figure:: /_static/portal-howto-query-image-4.png
     :name: portal-howto-query-image-4
+    :width: 700
     :alt: A screenshot showing the query results.
 
     Figure 4: A screenshot displaying the image query results, showing seven u-band PVIs.
