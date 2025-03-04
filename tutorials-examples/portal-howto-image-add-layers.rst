@@ -29,7 +29,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Learning objective:** How to add layers to retrieved images in the RSP's Portal query results page
 
-**LSST data products:** lsst.calexp
+**LSST data products:** Image (any data product subtype)
 
 **Credit:** Yumi Choi
 
