@@ -26,7 +26,7 @@
 
 **Contact authors:** Yumi Choi
 
-**Last verified to run:** 2025-03-04
+**Last verified to run:** 2025-03-05
 
 **Targeted learning level:** beginner
 
@@ -47,17 +47,15 @@ Click on the "DP0.2 Images" tab at the top to navigate to the DP0.2 image search
     Figure 1: A screenshot of the DP0.2 image search landing page, annotated with labels. 
 
 
-**3. Enter constraints for image query (A in Figure 1).**
-
-**3.1. Set observation type and source (B in Figure 1).** 
+**3. Set observation type and source (B in Figure 1).** 
 Select IVOA standard "Calibration Level" 2 to retrieve processed visit images (PVIs; also called "calexps") and "lsst.calexp" in the "Data Product Subtype" drop-down menu. 
 
-**3.2. Set location (C in Figure 1).**
+**4. Set location (C in Figure 1).**
 Choose "Observation boundary contains point" for "Query Type" and enter 61.863, -35.790.
 
-**3.3. Set timing (D in Figure 1).**
+**5. Set timing (D in Figure 1).**
 Check "Timing", select "Overlapping specified range" for "Time of Observation",
-choose "MJD values", and enter 60000 as the Star Time and 60500 as the End Time.  
+choose "MJD values", and enter 60000 as the Start Time and 60500 as the End Time.  
 
 .. figure:: /_static/portal-howto-query-image-2.png
     :name: portal_howto_query_image_viaObsTAP-2
@@ -67,7 +65,7 @@ choose "MJD values", and enter 60000 as the Star Time and 60500 as the End Time.
     Figure 2: A screenshot demonstrating how to constrain timing in an image query by specifying the start and end times for the overlapping observation period in MJD. 
 
 
-**3.4. Set spectral coverage (E in Figure 1).**
+**6. Set spectral coverage (E in Figure 1).**
 To constrain an image query by the LSSTCam's filter or wavelength, check the "Spectral Coverage" box and
 check the "u" box to only retrieve u-band images. 
 
@@ -79,11 +77,11 @@ check the "u" box to only retrieve u-band images.
     Figure 3: A screenshot demonstrating how to constrain spectral coverage in an image query by specifying the LSSTCam's filter.
 
 
-**3.5. Output column selection (F in Figure 1).**
+**7. Output column selection (F in Figure 1).**
 The default is 27 out of 37 columns to be selected. It is recommended to return all selected metadata.
 Click on the “Search” button. 
 
-**4. Results.**
+**8. Results.**
 The query returns seven u-band PVIs that meet all the constraints specified in Section 2.
 
 .. figure:: /_static/portal-howto-query-image-4.png
