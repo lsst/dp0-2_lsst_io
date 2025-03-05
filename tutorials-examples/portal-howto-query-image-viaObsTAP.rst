@@ -10,15 +10,15 @@
 
 .. This is the label that can be used for cross referencing this file.
 .. Recommended title label format is "Directory Name"-"Title Name" -- Spaces should be replaced by hyphens.
-.. _Tutorials-Examples-DP0-2-Portal-howto-join:
+.. _Tutorials-Examples-DP0-2-Portal-howto-query-image-viaObsTAP:
 .. Each section should include a label for cross referencing to a given area.
 .. Recommended format for all labels is "Title Name"-"Section Name" -- Spaces should be replaced by hyphens.
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
 .. A warning will alert you of identical labels during the linkcheck process.
 
-#################################
-10. How to execute an image query
-#################################
+#######################################
+10. How to search for images via ObsTAP
+#######################################
 
 .. This section should provide a brief, top-level description of the page.
 
@@ -41,7 +41,7 @@ Follow the process to log in.
 Click on the "DP0.2 Images" tab at the top to navigate to the DP0.2 image search page, as shown in Figure 1.
 
 .. figure:: /_static/portal-howto-query-image-1.png
-    :name: portal-howto-query-image-1
+    :name: portal_howto_query_image_viaObsTAP-1
     :alt: A screenshot of the DP0.2 image search landing page, annotated with labels.
 
     Figure 1: A screenshot of the DP0.2 image search landing page, annotated with labels. 
@@ -60,7 +60,7 @@ Check "Timing", select "Overlapping specified range" for "Time of Observation",
 choose "MJD values", and enter 60000 as the Star Time and 60500 as the End Time.  
 
 .. figure:: /_static/portal-howto-query-image-2.png
-    :name: portal-howto-query-image-2
+    :name: portal_howto_query_image_viaObsTAP-2
     :width: 500
     :alt: A screenshot showing how to constrain timing in an image query.
 
@@ -72,14 +72,14 @@ To constrain an image query by the LSSTCam's filter or wavelength, check the "Sp
 check the "u" box to only retrieve u-band images. 
 
 .. figure:: /_static/portal-howto-query-image-3.png
-    :name: portal-howto-query-image-3
+    :name: portal_howto_query_image_viaObsTAP-3
     :width: 500
     :alt: A screenshot showing how to constrain spectral coverage in an image query.
 
     Figure 3: A screenshot demonstrating how to constrain spectral coverage in an image query by specifying the LSSTCam's filter.
 
 
-**3.5. Output Column Selection and Constraints (F in Figure 1).**
+**3.5. Output column selection (F in Figure 1).**
 The default is 27 out of 37 columns to be selected. It is recommended to return all selected metadata.
 Click on the “Search” button. 
 
@@ -87,7 +87,7 @@ Click on the “Search” button.
 The query returns seven u-band PVIs that meet all the constraints specified in Section 2.
 
 .. figure:: /_static/portal-howto-query-image-4.png
-    :name: portal-howto-query-image-4
+    :name: portal_howto_query_image_viaObsTAP-4
     :width: 700
     :alt: A screenshot showing the query results.
 
