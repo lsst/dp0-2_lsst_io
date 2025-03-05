@@ -10,7 +10,7 @@
 
 .. This is the label that can be used for cross referencing this file.
 .. Recommended title label format is "Directory Name"-"Title Name" -- Spaces should be replaced by hyphens.
-.. _Tutorials-Examples-DP0-2-Portal-howto-nav:
+.. _Tutorials-Examples-DP0-2-Portal-howto-image-add-layers:
 .. Each section should include a label for cross referencing to a given area.
 .. Recommended format for all labels is "Title Name"-"Section Name" -- Spaces should be replaced by hyphens.
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
@@ -26,7 +26,7 @@
 
 **Contact authors:** Yumi Choi
 
-**Last verified to run:** 2025-03-04
+**Last verified to run:** 2025-03-05
 
 **Targeted learning level:** beginner 
 
@@ -38,51 +38,56 @@ Go to `data.lsst.cloud <https://data.lsst.cloud>`_ , select the Portal Aspect, a
 click on the "DP0.2 Images" tab at the top. Enter your desired constraints for the image query,
 and click "Search" to execute it.
 
-**2. Add layers to the active image(s).**
-Overlay additional information on the active image(s) as layers,
-displayed in the top-left panel of the default results view.
-  
-**2.1. Explore available image layer options.**
-First, click the "Tools" icon to open the drop-down menu. 
-Under the "Layers" section, explore the available options. 
+**2. Explore available image layer options.**
+Click the Tools icon (A in Figure 1) to open the drop-down menu,
+then mouse-over each icon in the "Layers" section (red circle in Figure 1) to see pop-up description boxes.
 
 .. figure:: /_static/portal-howto-image-add-layers-1.png
     :name: portal-howto-image-add-layers-1
-    :alt: A screenshot of the drop-down menu under the "Tool" icon.
+    :alt: A screenshot of the drop-down menu under the Tool icon.
 
-    Figure 1: A screenshot of the drop-down menu under the "Tool" icon.
+    Figure 1: A screenshot of the drop-down menu under the Tool icon.
 
 
-**2.2. Add desired layers to the active image.**
+**3. Add a compass.** 
+Click the north-east arrow icon (C in Figure 1). The compass will appear on the image.
+Change its color to purple by clicking the Overlay icon (B in Figure 1),
+then clicking "Color" to the right of "North Arrow", and selecting purple.
 
-* To add **compass**, click the "North-East arrow" icon. 
-* To add **coordinate grid**, click the "Grid" icon. 
-* To add **ruler** to measure distance, select the "Ruler" icon, click a starting point, and drag to an endpoint.
-* To add **regions of interest**, click the "DS9" icon, choose a DS9 region file to upload, and click "Draw".
-* To add **mask**, click the "Mask" icon, upload a mask file or use an extension of the active plot file, then click "Ok".
-* To add **marker**, click the last icon and select "Add Marker".
-* To add **footprint**, click the last icon and select desired observatory and intrument.
+**4. Add a coordinate grid.**
+Click the Grid icon (D in Figure 1) to display the coordinate grid on the image.  
+Change its coordinate system to the Galactic coordinate by clicking the Overlay icon
+and selecting "Galactic" from the drop-down menu under "Grid". 
 
-**3. Customize the image layers.**
-After overlaying the desired layers, customize them as needed using the "Manipulate overlay display" functionality.
-Click the "Layer" icon (circled in red in Figure 2) to view all added layers for the active image and access overlay display controls.
+**5. Add a ruler to measure distance.**
+Click the Ruler icon (E in Figure 1), click a starting point on the image, and drag to an endpoint.
+Click the Overlay icon, check "Offset Calculation" under "Distance Tool", and set "Unit" to degrees.
 
-* To temporalily remove a layer, toggle the sliding button next to it.
-* To completely remove a layer, click the "X" next to its "Color" box. 
-* To change a layer's color, click its "Color" box and select a new color.
-* To change the unit for the "Distance Tool", select the desired unit. 
-* To display separations along the x and y axes, check the "Offset Calculation" box.
-* To edit a marker or footprint label, enter the desired label and select its position from the drop-down menu.
-* To move a marker, click and drag it. 
-* To resize a marker, click and drag any corner.
-* To move a footpint, click and drag any part of it.
-* To roate a footprint, drag the rotate handle or enter a specific rotation angle.
+**6. Add a mask.**
+Click the Mask icon (F in Figure 1), enter "2" under "HDU Index" to use the 2nd extension of the active image file, and click OK.  
+Alternatively, uploading a custom mask file is possible.  
+
+**7. Add a marker.**
+Click the last icon (G in Figure 1) and select "Add Marker" to place a marker at the center.  
+Click and drag it to the lower-left corner, resize it by dragging any corner, and set its label to "object of interest".  
+Change the label location to "NE" from the "Corner" drop-down menu.
+
+**8. Add a footprint.**
+Click the last icon (G in Figure 1) and select "NIRCAM" from "Add JWST footprint". 
+The footprint will appear in the center of the image. Move it by clicking and dragging any part of it. 
+To rotate, click the Overlay icon and enter "45" for "Angle" under "Footprint: JWST NIRCAM",
+or drag the rotate handle by 45 degrees.
 
 .. figure:: /_static/portal-howto-image-add-layers-2.png
     :name: portal-howto-image-add-layers-2
-    :alt: A screenshot of exmaple added layers listed under the "Layer" icon with overlay display controls.
+    :alt: A screenshot of the added layers listed under the Overlay icon with layer display controls.
 
-    Figure 2: A screenshot of exmaple added layers listed under the "Layer" icon (circled in red) with overlay display controls.
+    Figure 2: A screenshot of the added layers listed under the Overlay icon with layer display controls. The mask layer is removed to improve visualization clarity (see Step 9).
+
+
+**9. Remove a layer.**
+To temporalily remove a layer, click the Overlay icon and toggle the sliding button next to the layer.
+To completely remove a layer, click the "X" next to its "Color" box. 
 
 
 Return to the list of DP0.2 :ref:`DP0-2-Tutorials-Portal`.
