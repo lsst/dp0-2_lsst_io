@@ -82,9 +82,9 @@ typically without scientific context or motivation - just simple examples for qu
     portal-howto-table
     portal-howto-table-filter
     portal-howto-table-addcol
-    portal-howto-query-image
+    portal-howto-query-image-viaObsTAP
     portal-howto-image-add-layers
-    portal-howto-image-analysis
+    portal-howto-image-extract-pixelvalues
 
 
 
