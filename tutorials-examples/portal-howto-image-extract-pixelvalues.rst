@@ -1,3 +1,5 @@
+.. This is the beginning of a new tutorial focussing on learning to study variability using features of the Rubin Portal
+
 .. Review the README on instructions to contribute.
 .. Review the style guide to keep a consistent approach to the documentation.
 .. Static objects, such as figures, should be stored in the _static directory. Review the _static/README on instructions to contribute.
@@ -8,56 +10,35 @@
 
 .. This is the label that can be used for cross referencing this file.
 .. Recommended title label format is "Directory Name"-"Title Name" -- Spaces should be replaced by hyphens.
-.. _Tutorials-Examples-DP0-2-Portal-howto-query-image:
+.. _Tutorials-Examples-DP0-2-Portal-howto-image-extract-pixelvalues:
 .. Each section should include a label for cross referencing to a given area.
 .. Recommended format for all labels is "Title Name"-"Section Name" -- Spaces should be replaced by hyphens.
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
 .. A warning will alert you of identical labels during the linkcheck process.
 
-
-###################################
-12. How to use image analysis tools
-###################################
+###########################################
+12. How to extract pixel values from images
+###########################################
 
 .. This section should provide a brief, top-level description of the page.
 
-For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
+**RSP Aspect:** Portal
 
-**Data Release:** DP0.2
+**Contact authors:** Yumi Choi
 
 **Last verified to run:** 2025-03-04
 
-**Learning objective:** How to use image analysis tools in the RSP's Portal image query results page
+**Targeted learning level:** beginner 
 
-**LSST data products:** Image (any data product subtype)
+**Introduction:**
+This tutorial demonstrates how to extract pixel values from active images retreived from a Portal image query.
 
-**Credit:** This tutorial is based on the tutorial developed by Yumi Choi and incorporates part of Step 3 from the Science Portal Tutorial, "06. Exploring SAOImageDS9-like Functionality in the Firefly-based RSP Portal."
-
-**Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum. Rubin staff will respond to all questions posted there.
-
-
-.. _DP0-2-Portal-howto-image-analysis:
-
-Introduction
-============
-
-This tutorial demonstrates how to use basic image analysis tools on active images retreived from a Portal image query.
-
-.. _DP0-2-Portal-howto-image-analysis-1:
-
-1. Execute an Image query 
-=========================
-
+**1. Execute an Image query.**
 Go to `data.lsst.cloud <https://data.lsst.cloud>`_ , select the Portal Aspect, and
 click on the "DP0.2 Images" tab at the top. Enter your desired constraints for the image query,
 and click "Search" to execute it.
 
-
-
-.. _DP0-2-Portal-howto-image-analysis-2:
-                                        
-2. Extract pixel values along a line 
-====================================
+**2. Extract pixel values along a line.**
                                         
 To extract pixel values along a line (i.e., 1D Brightness Profile of a Source),
 click the "Tools" icon, then select the "Line" icon under the "Extract" section.
@@ -76,13 +57,8 @@ them directly. Repeat the process to add another line.
 
     Figure 1: A line drawn across a source, with a pop-up window displaying the 1D brightness profile of the source.
 
-
-
-.. _DP0-2-Portal-howto-image-analysis-3:
                                         
-3. Extract pixel information for selected points 
-================================================
-  
+**3. Extract pixel information for selected points.** 
 To extract pixel values in the specified aperture for selected points, click the "Points" icon under the "Extract" section. 
 An instruction window will appear, allowing you to choose an aperture to combine the values. Unlike the line extraction process,
 multiple points can be selected to extract their pixel values at once. To save the result temporarily,
