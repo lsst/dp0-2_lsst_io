@@ -33,40 +33,48 @@
 **Introduction:**
 This tutorial demonstrates how to extract pixel values from active images retreived from a Portal image query.
 
-**1. Execute an Image query.**
+**1. Execute an image query.**
 Go to `data.lsst.cloud <https://data.lsst.cloud>`_ , select the Portal Aspect, and
 click on the "DP0.2 Images" tab at the top. Enter your desired constraints for the image query,
 and click "Search" to execute it.
 
-**2. Extract pixel values along a line.**
-                                        
-To extract pixel values along a line (i.e., 1D Brightness Profile of a Source),
-click the "Tools" icon, then select the "Line" icon under the "Extract" section.
-An instruction window will appear, allowing you to choose an aperture to combine the values.
-Click on the start point of the image and drag to the end point to draw a line along your source.
-Once the line is drawn, a pop-up window will display the 1D brightness profile.
-You can also adjust the aperture in this window as needed. To save the result temporarily,
-click the "Pin Chart/Table" button at the bottom left. This will add the table and chart
-next to the default results table and the active chart. Alternatively, you can download
-them directly. Repeat the process to add another line.
+**2. Extract pixel values along a line (1D brightness profile).**             
+
+**2.1. Select the Line Tool.**
+Click the "Tools" icon, then select the "Line" icon under the "Extract" section.
+In the instruction window, choose an aperture for combining values.
+
+**2.2. Draw and view profile.**
+Click the starting point on the image, drag to the endpoint, and release. 
+A pop-up window will display the 1D brightness profile, where you can adjust the aperture if needed.
+
+**2.3. Save or download.**
+Click "Pin Chart/Table" to add the chart and table to the result,
+or download them directly. Repeat the process to extract another profile.
 
 .. figure:: /_static/portal_tut06_step03a.png
     :width: 500
-    :name: portal_howto_image_analysis-1
+    :name: portal_howto_image_extract_pixelvalues-1
     :alt: A screenshot displaying a line drawn across a source, accompanied by a pop-up window showing the source's 1D brightness profile along that line. 
 
     Figure 1: A line drawn across a source, with a pop-up window displaying the 1D brightness profile of the source.
 
                                         
 **3. Extract pixel information for selected points.** 
-To extract pixel values in the specified aperture for selected points, click the "Points" icon under the "Extract" section. 
-An instruction window will appear, allowing you to choose an aperture to combine the values. Unlike the line extraction process,
-multiple points can be selected to extract their pixel values at once. To save the result temporarily,
-click the "Pin Chart/Table" button. Or, to save the results locally, click the "Download as Table" and/or
-"Download Chart" button. Note that the results can be saved as a DS9 region file. 
+
+**3.1. Select the Points Tool.**
+Click the "Points" icon under the "Extract" section. 
+In the instruction window, choose an aperture to combine the values. 
+
+**3.2. Select points.** 
+Click multiple points on the image to extract their pixel values at once. 
+
+**3.3. Save or download.**
+Click "Pin Chart/Table" to save the results temporariliy, or use "Download as Table" and/or
+"Download Chart" to save them locally. Results can also be saved as a DS9 region file. 
 
 .. figure:: /_static/portal_tut06_step03b.png
-    :name: portal_howto_image_analysis-2
+    :name: portal_howto_image_extract_pixelvalues-2
     :alt: A screenshot displaying six selected points on the image (left panel), in the active chart (right panel), and in the pinned table (bottom panel), with a pop-up window offering options for file format and naming for saving.
 
     Figure 2: Six selected points on the image (left panel), in the active chart (right panel), and in the pinned table (bottom panel), with a pop-up window offering options for file format and naming for saving.
