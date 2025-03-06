@@ -53,6 +53,9 @@ Mar 6 2025
 
 The recommended image of the RSP at data.lsst.cloud was bumped to Weekly 2025_09.
 
+Two new "How To" :ref:`DP0-2-Tutorials-Portal` were released, demonstrating how to
+plot histograms and lightcurves.
+
 All Jupyter Notebook tutorials were migrated to the new repository `lsst/tutorial-notebooks <https://github.com/lsst/tutorial-notebooks>`_.
 
 The new tutorial notebooks repository no longer has a ``/data`` folder.
