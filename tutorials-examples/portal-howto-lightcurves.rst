@@ -32,6 +32,11 @@ In this demonstration, an RR Lyrae star is used.
 This star has coordinates RA, Dec = 62.1479031, -35.7991348 deg and an object identifier number ``diaObjectId`` = 1651589610221862935.
 As is appropriate for variable stars, the forced photometry fluxes from PSF model fits in the direct (not difference) images are used.
 
+If it is not known, the ``diaObjectId`` for an object at a given location can be obtained from the table ``dp02_dc2_catalogs.DiaObject`` by using the "UI" aspect of the Portal.
+There, under spatial contraints, enter its coordinates and give a small radius (a few arc sec).
+Select the ``diaObjectId`` and ``nDiaSources`` for the output column selection and press "Search".
+The ``diaObjectId`` with the largest number of ``nDiaSources`` is the one you want.
+
 **1. Execute the query.**
 Go to the Portal's DP0.2 Catalogs tab, switch to the ADQL interface, and execute the query below.
 The query will return the modified julian date (MJD) from the ``CcdVisitId`` table,
