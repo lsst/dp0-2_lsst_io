@@ -79,9 +79,14 @@ typically without scientific context or motivation - just simple examples for qu
     portal-howto-hips-alt
     portal-howto-plots
     portal-howto-plots-custom
+    portal-howto-histograms
+    portal-howto-lightcurves
     portal-howto-table
     portal-howto-table-filter
     portal-howto-table-addcol
+    portal-howto-query-image-viaObsTAP
+    portal-howto-image-add-layers
+    portal-howto-image-extract-pixelvalues
 
 
 

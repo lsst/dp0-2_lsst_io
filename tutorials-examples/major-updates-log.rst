@@ -70,6 +70,10 @@ the tutorials in the `tutorial-notebooks repository <https://github.com/lsst/tut
 Users select the desired tutorial, and a writeable version automatically opens and is saved into
 the folder ``/notebooks/tutorials/``.
 
+Mar 5 2025
+-----------
+
+Three new, short, functionality-focused "How To" :ref:`DP0-2-Tutorials-Portal` released.
 
 Jan 22 2025
 -----------
