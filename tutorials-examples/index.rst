@@ -114,19 +114,14 @@ and that include scientific context and motivation for why the data and tools ar
 Notebook tutorials
 ==================
 
-A beginner-level overview for the Notebook Aspect is provided in this :doc:`/data-access-analysis-tools/nb-intro`,
-along with :ref:`NB-Intro-Use-A-NB-faq` and :ref:`NB-Intro-Use-A-NB-tips`.
-More information can also be found in the `Notebook Aspect documentation <https://nb.lsst.io/>`_.
-
-All Jupyter Notebook tutorials are kept in the `tutorial-notebooks repository <https://github.com/rubin-dp0/tutorial-notebooks>`_
-of the ``rubin-dp0`` GitHub Organization.
-The contents of the ``prod`` branch of that repository are made available (and automatically updated) in the folder ``notebooks/tutorial-notebooks``
-which appears in all users' home directories.
-
-**List of Notebook tutorials:**
-See the repository's `README file <https://github.com/rubin-dp0/tutorial-notebooks/blob/main/README.md>`_ for the most up-to-date
-list of available tutorials with descriptions.
+After logging in to the Notebook Aspect of the RSP, click on the "Tutorials" menu item and select the
+desired tutorial notebook from the drop-down list.
+A writeable version of the file will automatically open and be saved in the ``/notebooks/tutorials/`` folder.
 Spanish-language Jupyter Notebook tutorials have filenames ending in "ES.ipynb". 
+
+Jupyter Notebook tutorials are kept in the `tutorial-notebooks repository <https://github.com/lsst/tutorial-notebooks>`_.
+See that repo's `readme <https://github.com/lsst/tutorial-notebooks/blob/main/README.md>`_ file for details.
+Find further instructions and FAQ in the `Notebook Aspect user guide <https://rsp.lsst.io/guides/notebooks/index.html>`_.
 
 .. toctree::
     :titlesonly:
@@ -199,9 +194,7 @@ have translated several DP0.2 tutorials into Spanish.
 **Notebook tutorials**
 
 The introductory DP0.2 Notebook tutorial (DP02_01_Introduccion_a_DP02_ES.ipynb) is available in the
-`tutorial-notebooks repository <https://github.com/rubin-dp0/tutorial-notebooks>`_ repository.
-
-`Introduccion a DP0.2 <https://dp0-2.lsst.io/_static/nb_html/DP02_01_Introduccion_a_DP02_ES.html>`_ 
+`tutorial-notebooks repository <https://github.com/lsst/tutorial-notebooks>`_ repository.
 
 
 **Command-line tutorials**

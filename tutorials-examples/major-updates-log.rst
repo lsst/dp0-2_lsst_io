@@ -25,14 +25,11 @@ Notebook tutorials
 ------------------
 
 All Jupyter Notebook tutorial headers contain the date "last verified to run".
-If the date in the file you are using does not match the date shown in that file in `the "prod" branch of the tutorial-notebooks repository <https://github.com/rubin-dp0/tutorial-notebooks/tree/prod>`_, your version is out of date.
-Follow the instructions for what to do if notebooks do not automatically update in the :ref:`NB-Intro-Use-A-NB-tips`. 
+If the date in the file you are using does not match the date shown in that file in `the "main" branch of the tutorial-notebooks repository <https://github.com/lsst/tutorial-notebooks>`_, your version is out of date.
 
-A full history for all tutorial notebooks can be accessed in GitHub by going to 
-`the tutorial-notebooks repository <https://github.com/rubin-dp0/tutorial-notebooks>`_
-and clicking on "commits" under the green "code" button.
-The history of a given tutorial can be accessed by clicking on its filename
-in the repository and then clicking on "history" (near upper-right).
+The history of a given tutorial can be accessed in GitHub by going to 
+`the tutorial-notebooks repository <https://github.com/lsst/tutorial-notebooks>`_,
+clicking on its file name and then clicking on "history" (near upper-right).
 
 
 Portal, command line, and API tutorials
@@ -43,13 +40,35 @@ All Portal, command line, and API tutorials contain the date last verified to ru
 All tutorials for the Portal aspect, for the command line (Notebook Aspect), and for the API aspect 
 are kept in the `dp0-2_lsst_io repository <https://github.com/lsst/dp0-2_lsst_io>`_.
 
-The full history for any given tutorial can be accessed via GitHub by going to the tutorial of interest
-(e.g., the `beginner Portal tutorial <https://github.com/lsst/dp0-2_lsst_io/blob/main/tutorials-examples/portal-beginner.rst>`_), 
-and clicking on "history" (near upper-right).
+The history of a given tutorial can be accessed in GitHub by going to 
+`the DP0.2 documentation repository <https://github.com/lsst/dp0-2_lsst_io>`), navigating to the file containing
+the tutorial and clicking on "history" (near upper-right).
 
 
 Major Updates Log
 =================
+
+Mar 6 2025
+----------
+
+The recommended image of the RSP at data.lsst.cloud was bumped to Weekly 2025_09.
+
+Two new "How To" :ref:`DP0-2-Tutorials-Portal` were released, demonstrating how to
+plot histograms and lightcurves.
+
+All Jupyter Notebook tutorials were migrated to the new repository `lsst/tutorial-notebooks <https://github.com/lsst/tutorial-notebooks>`_.
+
+The new tutorial notebooks repository no longer has a ``/data`` folder.
+Instead, input data for notebook tutorials is stored in the new Git LFS repository `lsst/tutorial-notebooks-data <https://github.com/lsst/tutorial-notebooks-data>`_,
+which is already cloned into the ``/project`` directory and accessed by the tutorials (users do not need to obtain the contents of ``/data`` themselves).
+
+The tutorial notebook delivery mechanism in the Notebook Aspect of the RSP also changed.
+With the old way, latest version of all notebooks were copied as read-only files into the folder ``/notebooks/tutorial-notebooks/`` in
+all users' home directories whenever a new Notebook server was instantiated.
+With the new way, users have a new menu bar item "Tutorials" which provides a drop down menu of all
+the tutorials in the `tutorial-notebooks repository <https://github.com/lsst/tutorial-notebooks>`_.
+Users select the desired tutorial, and a writeable version automatically opens and is saved into
+the folder ``/notebooks/tutorials/``.
 
 Mar 5 2025
 -----------

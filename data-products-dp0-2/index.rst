@@ -234,7 +234,7 @@ PSF model fluxes are generally recommended, but there could be issues for object
 
 **Truth catalog data:** 
 The ``TruthSummary`` and ``MatchesTruth`` tables are accessible via TAP (and not the Butler)
-as demonstrated in DP0.2 `tutorial notebook <https://github.com/rubin-dp0/tutorial-notebooks>`_ "DP02_08_Truth_Tables.ipynb".
+as demonstrated in DP0.2 `tutorial notebook <https://github.com/lsst/tutorial-notebooks>`_ "DP02_08_Truth_Tables.ipynb".
 Additional truth data has been made available by DESC as parquet files in the shared disk space in the RSP
 at `data.lsst.cloud <https://data.lsst.cloud/>`_, with access demonstrated in this
 `DP0.2 contributed notebook <https://github.com/rubin-dp0/delegate-contributions-dp02/tree/main/desc_truth>`_.
@@ -251,7 +251,7 @@ They take the form of sparse HEALPix maps, where the survey property at each spa
 Each map represents a `healsparse <https://healsparse.readthedocs.io/en/latest/>`_ map containing the value of an individual survey property, for a given band.
 Note that the DCR maps are proportionality maps; that is, the expected effect will be proportional to the value in the map with an arbitrary/empirically derived constant of proportionality.
 All survey property maps are available via the Butler.
-Find a demonstration of how to retrieve, display, and analyze survey property maps in the `tutorial notebook <https://github.com/rubin-dp0/tutorial-notebooks>`_ named Survey_Property_Maps.
+Find a demonstration of how to retrieve, display, and analyze survey property maps in the `tutorial notebook <https://github.com/lsst/tutorial-notebooks>`_ named Survey_Property_Maps.
 
 .. list-table:: Survey property maps available for DP0.2.
    :widths: 150 400
