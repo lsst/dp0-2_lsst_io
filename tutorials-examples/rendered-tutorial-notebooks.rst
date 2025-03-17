@@ -72,6 +72,8 @@ Note that there have been reports of some figures not displaying properly in Fir
 +--------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
 | NB 15. `Survey Property Maps <https://dp0-2.lsst.io/_static/nb_html/DP02_15_Survey_Property_Maps.html>`_                             | Use the tools to visualize full-area survey property maps.                        |
 +--------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
+| NB 16. `Galaxy Cluster Weak Lensing <https://dp0-2.lsst.io/_static/nb_html/16_Galaxy_Cluster_Weak_Lensing.html>`_                    | Demonstration of the weak lensing signal around a rich galaxy cluster.            |
++--------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
 
 
 More tutorials coming soon!
