@@ -48,6 +48,11 @@ the tutorial and clicking on "history" (near upper-right).
 Major Updates Log
 =================
 
+Mar 17 2025
+-----------
+
+Released new notebook tutorial 16 demonstrating the weak lensing signal around a rich galaxy cluster.
+
 Mar 6 2025
 ----------
 
