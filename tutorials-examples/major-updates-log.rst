@@ -48,6 +48,14 @@ the tutorial and clicking on "history" (near upper-right).
 Major Updates Log
 =================
 
+Mar 24 2025
+-----------
+
+Tutorial notebooks on custom coadds (09a and 09b) were decommissioned.
+
+They could only be run with LSST Science Pipelines version Weekly 2022_40.
+Code has evolved significantly and they were no longer a useful learning tool for DP1 preparation.
+
 Mar 17 2025
 -----------
 
