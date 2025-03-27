@@ -70,7 +70,7 @@ Note that there have been reports of some figures not displaying properly in Fir
 +--------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
 | NB 16. `Galaxy Cluster Weak Lensing <https://dp0-2.lsst.io/_static/nb_html/16_Galaxy_Cluster_Weak_Lensing.html>`_                    | Demonstration of the weak lensing signal around a rich galaxy cluster.            |
 +--------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
-| NB 17. `Anomaly Detection with DiaObjects Lensing <https://dp0-2.lsst.io/_static/nb_html/17_DiaObject_Anomaly_Detection.html>`_      | Apply anomaly detection techniques to DIA Objects.                                |
+| NB 17. `Anomaly Detection with DiaObjects <https://dp0-2.lsst.io/_static/nb_html/17_DiaObject_Anomaly_Detection.html>`_              | Apply anomaly detection techniques to DIA Objects.                                |
 +--------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
 
 
