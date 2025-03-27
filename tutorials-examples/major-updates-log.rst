@@ -48,6 +48,12 @@ the tutorial and clicking on "history" (near upper-right).
 Major Updates Log
 =================
 
+Mar 26 2025
+-----------
+
+Released new notebook tutorial 17 demonstrating anomaly detection with ``diaObjects``.
+
+
 Mar 24 2025
 -----------
 
