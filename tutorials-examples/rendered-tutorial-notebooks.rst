@@ -73,5 +73,4 @@ Note that there have been reports of some figures not displaying properly in Fir
 | NB 17. `Anomaly Detection with DiaObjects <https://dp0-2.lsst.io/_static/nb_html/17_DiaObject_Anomaly_Detection.html>`_              | Apply anomaly detection techniques to DIA Objects.                                |
 +--------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
 
-
 More tutorials coming soon!
