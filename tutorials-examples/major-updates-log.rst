@@ -48,6 +48,11 @@ the tutorial and clicking on "history" (near upper-right).
 Major Updates Log
 =================
 
+Apr 24 2025
+-----------
+
+Released new notebook tutorial 18 demonstrating galaxy photometry.
+
 Mar 26 2025
 -----------
 
