@@ -48,6 +48,14 @@ the tutorial and clicking on "history" (near upper-right).
 Major Updates Log
 =================
 
+Apr 28 2025
+-----------
+
+Released new notebook tutorial 19 demonstrating how to use AI to classify images.
+
+The recommended image of the RSP at data.lsst.cloud was bumped to Weekly 2025_17.
+
+
 Apr 24 2025
 -----------
 
