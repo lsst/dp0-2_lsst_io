@@ -48,8 +48,8 @@ the tutorial and clicking on "history" (near upper-right).
 Major Updates Log
 =================
 
-Apr 28 2025
------------
+May 1 2025
+----------
 
 Released new notebook tutorial 19 demonstrating how to use AI to classify images.
 
