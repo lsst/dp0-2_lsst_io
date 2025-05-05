@@ -17,7 +17,7 @@
 .. A warning will alert you of identical labels during the linkcheck process.
 
 ########################################
-12. How to use Simple Image Access (SIA)
+13. How to use Simple Image Access (SIA)
 ########################################
 
 .. This section should provide a brief, top-level description of the page.
