@@ -30,12 +30,17 @@
 
 **Targeted learning level:** beginner 
 
-**Introduction:**
-This tutorial demonstrates how to use the Simple Image Access (SIA) service to retrieve DP0.2 images.
+##Introduction
+This tutorial demonstrates how to use the Simple Image Access (SIA) service to retrieve DP0.2 images and perform simple manipulation steps.
+Specifically it retrieves all "calexps" (Processed Visit Images) for a containing specific location on the sky,
 
 **1. Execute an image query.**
-Go to `data.lsst.cloud <https://data.lsst.cloud>`_ , select the Portal Aspect, and
-click on ...
+Go to `data.lsst.cloud <https://data.lsst.cloud>`_ , select the Portal Aspect, and click on the ``SIAv2 Searches".
+To the right of "Select SIAv2 Service" select the "LSST SIAV2 DP0.2 DC2" from the menu (it should be the default).
+
+
+Check the "Spatial" box and in the "Coordinates or Object Name" enter the desired coordinates.
+This example uses 62.0, -37.0 for RA and Dec.  
 
 
 *The rest of the steps GM adds here.*
