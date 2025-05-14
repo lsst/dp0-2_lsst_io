@@ -30,22 +30,41 @@
 
 **Targeted learning level:** beginner 
 
-##Introduction
+**Introduction:**
 This tutorial demonstrates how to use the Simple Image Access (SIA) service to retrieve DP0.2 images and perform simple manipulation steps.
-Specifically it retrieves all "calexps" (Processed Visit Images) for a containing specific location on the sky,
+Specifically it retrieves all "calexps" (Processed Visit Images) for a containing specific location on the sky during the desired range of observation epochs.
 
 **1. Execute an image query.**
 Go to `data.lsst.cloud <https://data.lsst.cloud>`_ , select the Portal Aspect, and click on the ``SIAv2 Searches".
 To the right of "Select SIAv2 Service" select the "LSST SIAV2 DP0.2 DC2" from the menu (it should be the default).
 
-
+**1.1. Select the location contained in the images to be retrieved.**
 Check the "Spatial" box and in the "Coordinates or Object Name" enter the desired coordinates.
-This example uses 62.0, -37.0 for RA and Dec.  
+This example uses 62.0, -37.0 for RA and Dec.
+For "Shape Type select "Cone Shape."
+For "Radius" select 10 arcseconds"
 
+**1.2.  Select the Observation Type and Source."**
+For "Calibration Level" select "Calibrated science-ready data (2)".
+For the "Data Product Type" select "image".
+For "Instrument Name" select 'LSSTCam-imSim."
+Leave the defaults for the "Facility" and "Collection."
 
-*The rest of the steps GM adds here.*
+**1.3.  Select the desired range of observation times.**
+Check the "Timing" box and for the "Time of Observation" select "Overlapping specified range".
+Select "MJD values" and enter ``60100`` for the "Start Time" and ``60180`` for the end time.
 
+.. figure:: /_static/portal-howto-SIA-1.png
+	:name: portal-howto-SIA-1
+	:alt: Screenshot of the window containing all parameters and ready to execute the search.
 
+Figure 1:  The screenshot of the window containing all parameters and ready to execute the search.
+
+**1.4.  Retrieve the images.**  
+Click on the "Search" button.
+This will result in extracting 17 images meeting the selected criteria.
+By default, the displayed image on the upper left is the first one in the table of images on the bottom of the screen.
+The plot on the uper right 
 
 
 Return to the list of DP0.2 :ref:`DP0-2-Tutorials-Portal`.
