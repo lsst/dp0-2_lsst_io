@@ -35,7 +35,7 @@ This tutorial demonstrates how to use the Simple Image Access (SIA) service to r
 Specifically it retrieves all "calexps" (Processed Visit Images) containing specific location on the sky during the desired range of observation epochs.
 
 **1. Execute an image query.**
-Go to `data.lsst.cloud <https://data.lsst.cloud>`_ , select the Portal Aspect, and click on the ``SIAv2 Searches".
+Go to `data.lsst.cloud <https://data.lsst.cloud>`_ , select the Portal Aspect, and click on the ``SIAv2 Searches``.
 To the right of "Select SIAv2 Service" select the "LSST SIAV2 DP0.2 DC2" from the menu (it should be the default).
 
 **1.1. Select the location contained in the images to be retrieved.**
@@ -66,6 +66,12 @@ This will result in extracting 17 images meeting the selected criteria.
 By default, the displayed image on the upper left is the first one in the table of images on the bottom of the screen.
 The plot on the uper right will display the pointing directions of the telescope.
 
+.. figure:: /_static/portal-howto-SIA-2.png
+	:name: portal-howto-SIA-2
+	:alt: Screenshot of the window resulting from the execution of the search above.
+
+Figure 2:  The screenshot of the window resulting from the execution of the search with paramegters as in Figure 1.
+
 **2.  Examine the images,**
 Click on any line in the table - this will result in displaying the image corresponding to the table entry.
 Click on any point on the scatter plot on the right - this also will display the corresponding image.
@@ -76,9 +82,19 @@ Click on the icon with 6 rectangles above the image on the upper left - this wil
 **3.1.  For a single image:**  display a single image clicking on the icon just to the left of the one display containing 6 rectangles.
 Ths will return an image corresponding to the first entry in the table.
 Click on the "wrench and hammer" icon, and in the drop-down menu, in the row "Rotate / Flip" line, select the second icon from the left.
-This will result in the rotation of the image to have "north - up" orientation.
+This will result in the rotation of the image to have "North - up" orientation.
+
+.. figure:: /_static/portal-howto-SIA-3.png
+	:name: portal-howto-SIA-3
+	:alt: Screenshot of the window resulting from the execution of the search above but with North - up.
+
+Figure 3:  The screenshot of the window resulting from the execution of the search with paramegters as in Figure 1, but with North - up.
+
 
 **3.2.  Locking the operations to all images.**
+First, deselect the "North-up" button.  
+Click on the icon with 6 rectangles - this will display eight images.  
+Click on the second from the right icon above the eight images (
 
 
 Return to the list of DP0.2 :ref:`DP0-2-Tutorials-Portal`.
