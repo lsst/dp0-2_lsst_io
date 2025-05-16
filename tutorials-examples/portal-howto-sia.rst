@@ -63,7 +63,7 @@ Figure 1:  The screenshot of the window containing all parameters and ready to e
 Click on the "Search" button.
 This will result in extracting 19 images meeting the selected criteria.
 By default, the displayed image on the upper left is the first one in the table of images on the bottom of the screen.
-The plot on the uper right will display the pointing directions of the telescope for individual images,
+The plot on the uper right will display the pointing directions of the telescope for individual images.
 
 .. figure:: /_static/portal-howto-SIA-2.png
 	:name: portal-howto-SIA-2
@@ -77,14 +77,14 @@ Click on any point on the scatter plot on the right - this also will display the
 Click on the icon with 6 rectangles above the image on the upper left - this will result in a display of eight images corresponding to the first eight entries in the table.
 
 **3.  Manipulate the images.**
-There are a number of useful tools available to monipulate the images - explore those 
+There are a number of useful tools available to monipulate the images - explore those by hovering over the icons above the image on the upper left.
 
 **3.1.  For a single image:**  display a single image clicking on the icon just to the left of the one display containing 6 rectangles.
 Ths will return an image corresponding to the first entry in the table.
 Click on the "wrench and hammer" icon, and in the drop-down menu, in the row "Rotate / Flip" line, click on the second icon from the left.
-This will result in the rotation of the image to have "North - up" orientation.
+This will result in the rotation of the image to have "North-up" orientation.
 
-**3.2.  Locking the operations to all images.**
+**3.2.  Lock the operations to all images.**
 After the operation in 3.1, click on the icon with 6 rectangles - this will display eight images.  
 Now all eight images will be rotated to the "North-up" orientation.
 
@@ -92,7 +92,6 @@ Now all eight images will be rotated to the "North-up" orientation.
 	:name: portal-howto-SIA-3
 	:alt: Screenshot of the window resulting from the execution of the search above but with North - up for all eight images.
 
-Figure 3:  The screenshot of the window resulting from the execution of the search with paramegters as in Figure 1, but displaying eight images with North - up.
-
+Figure 3:  The screenshot of the window resulting from the execution of the search with paramegters as in Figure 1, but displaying eight images with North-up.
 
 Return to the list of DP0.2 :ref:`DP0-2-Tutorials-Portal`.
