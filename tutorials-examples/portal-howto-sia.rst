@@ -51,7 +51,7 @@ For the "Data Product Type" select "image", for "Instrument Name" select "LSSTCa
 
 **1.3.  Select the desired range of observation times.**
 Check the "Timing" box and for the "Time of Observation" select "Overlapping specified range".
-Select "MJD values" and enter ``60100`` for the "Start Time" and ``60180`` for the end time.
+Select "MJD values" and enter ``60100`` for the "Start Time" and ``60180`` for the "End Time".
 
 .. figure:: /_static/portal-howto-SIA-1.png
 	:name: portal-howto-SIA-1
@@ -71,7 +71,7 @@ The plot on the uper right will display the pointing directions of the telescope
 
 Figure 2:  The screenshot of the window resulting from the execution of the search with parameters as in Figure 1.
 
-**2.  Examine the images,**
+**2.  Examine the images.**
 Click on any line in the table - this will result in displaying the image corresponding to the table entry.
 Click on any point on the scatter plot on the right - this also will display the corresponding image.
 Click on the icon with 6 rectangles above the image on the upper left - this will result in a display of eight images corresponding to the first eight entries in the table.
@@ -83,17 +83,15 @@ Ths will return an image corresponding to the first entry in the table.
 Click on the "wrench and hammer" icon, and in the drop-down menu, in the row "Rotate / Flip" line, select the second icon from the left.
 This will result in the rotation of the image to have "North - up" orientation.
 
+**3.2.  Locking the operations to all images.**
+Click on the icon with 6 rectangles - this will display eight images.  
+Now all eight images will 
+
 .. figure:: /_static/portal-howto-SIA-3.png
 	:name: portal-howto-SIA-3
-	:alt: Screenshot of the window resulting from the execution of the search above but with North - up.
+	:alt: Screenshot of the window resulting from the execution of the search above but with North - up for all eight images.
 
-Figure 3:  The screenshot of the window resulting from the execution of the search with paramegters as in Figure 1, but with North - up.
-
-
-**3.2.  Locking the operations to all images.**
-First, deselect the "North-up" button.  
-Click on the icon with 6 rectangles - this will display eight images.  
-Click on the second from the right icon above the eight images (
+Figure 3:  The screenshot of the window resulting from the execution of the search with paramegters as in Figure 1, but displaying eight images with North - up.
 
 
 Return to the list of DP0.2 :ref:`DP0-2-Tutorials-Portal`.
