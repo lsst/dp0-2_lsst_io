@@ -94,4 +94,7 @@ Now all eight images will be rotated to the "North-up" orientation.
 
 Figure 3:  The screenshot of the window resulting from the execution of the search with paramegters as in Figure 1, but displaying eight images with North-up.
 
+**3.3.  Examine the remaining images.**
+Click on the "left - right" arrows above the images on the upper left.  This will result in displaying more images.  
+
 Return to the list of DP0.2 :ref:`DP0-2-Tutorials-Portal`.
