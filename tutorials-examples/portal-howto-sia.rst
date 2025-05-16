@@ -35,7 +35,7 @@ This tutorial demonstrates how to use the Simple Image Access (SIA) service to r
 Specifically it retrieves all "calexps" (Processed Visit Images) containing specific location on the sky during the desired range of observation epochs.
 
 **1. Execute an image query.**
-Go to `data.lsst.cloud <https://data.lsst.cloud>`_ , select the Portal Aspect, and click on the ``SIAv2 Searches``.
+Go to `data.lsst.cloud <https://data.lsst.cloud>`_ , select the Portal Aspect, and click on the ``SIAv2 Searches`` box.
 To the right of "Select SIAv2 Service" select the "LSST SIAV2 DP0.2 DC2" from the menu (it should be the default).
 
 **1.1. Select the location contained in the images to be retrieved.**
@@ -46,7 +46,7 @@ For "Radius" select 10 arcseconds.
 
 **1.2.  Select the Observation Type and Source.**
 Check the box for the "Observation Type and Source".
-For "Calibration Level" select "Calibrated science-ready data (2)".
+In the drop-down menu, for "Calibration Level" select "Calibrated science-ready data (2)".
 For the "Data Product Type" select "image", for "Instrument Name" select "LSSTCam-imSim", for the "Facility" select Rubin-LSST", and for "Collection" select "LSST.DP0.2".
 
 **1.3.  Select the desired range of observation times.**
