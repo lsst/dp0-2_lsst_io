@@ -92,7 +92,7 @@ Now all eight images will be rotated to the "North-up" orientation.
 	:name: portal-howto-SIA-3
 	:alt: Screenshot of the window resulting from the execution of the search above but with North - up for all eight images.
 
-Figure 3:  The screenshot of the window resulting from the execution of the search with paramegters as in Figure 1, but displaying eight images with North-up.
+Figure 3:  The screenshot of the window resulting from the execution of the search with parameters as in Figure 1, but displaying eight images with North-up.
 
 **3.3.  Examine the remaining images.**
 Click on the "left - right" arrows above the images on the upper left.  This will result in displaying more images.  
