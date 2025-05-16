@@ -76,16 +76,17 @@ Click on any line in the table - this will result in displaying the image corres
 Click on any point on the scatter plot on the right - this also will display the corresponding image.
 Click on the icon with 6 rectangles above the image on the upper left - this will result in a display of eight images corresponding to the first eight entries in the table.
 
-**3.  Manipulate the images**
+**3.  Manipulate the images.**
+There are a number of useful tools available to monipulate the images - explore those 
 
 **3.1.  For a single image:**  display a single image clicking on the icon just to the left of the one display containing 6 rectangles.
 Ths will return an image corresponding to the first entry in the table.
-Click on the "wrench and hammer" icon, and in the drop-down menu, in the row "Rotate / Flip" line, select the second icon from the left.
+Click on the "wrench and hammer" icon, and in the drop-down menu, in the row "Rotate / Flip" line, click on the second icon from the left.
 This will result in the rotation of the image to have "North - up" orientation.
 
 **3.2.  Locking the operations to all images.**
-Click on the icon with 6 rectangles - this will display eight images.  
-Now all eight images will 
+After the operation in 3.1, click on the icon with 6 rectangles - this will display eight images.  
+Now all eight images will be rotated to the "North-up" orientation.
 
 .. figure:: /_static/portal-howto-SIA-3.png
 	:name: portal-howto-SIA-3
