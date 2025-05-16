@@ -44,11 +44,10 @@ This example uses 62.0, -37.0 for RA and Dec.
 For "Shape Type select "Cone Shape."
 For "Radius" select 10 arcseconds.
 
-**1.2.  Select the Observation Type and Source."**
+**1.2.  Select the Observation Type and Source.**
+Check the box for the "Observation Type and Source".
 For "Calibration Level" select "Calibrated science-ready data (2)".
-For the "Data Product Type" select "image".
-For "Instrument Name" select "LSSTCam-imSim".
-Leave the defaults for the "Facility" and "Collection."
+For the "Data Product Type" select "image", for "Instrument Name" select "LSSTCam-imSim", for the "Facility" select Rubin-LSST", and for "Collection" select "LSST.DP0.2".
 
 **1.3.  Select the desired range of observation times.**
 Check the "Timing" box and for the "Time of Observation" select "Overlapping specified range".
@@ -62,15 +61,15 @@ Figure 1:  The screenshot of the window containing all parameters and ready to e
 
 **1.4.  Retrieve the images.**  
 Click on the "Search" button.
-This will result in extracting 17 images meeting the selected criteria.
+This will result in extracting 19 images meeting the selected criteria.
 By default, the displayed image on the upper left is the first one in the table of images on the bottom of the screen.
-The plot on the uper right will display the pointing directions of the telescope.
+The plot on the uper right will display the pointing directions of the telescope for individual images,
 
 .. figure:: /_static/portal-howto-SIA-2.png
 	:name: portal-howto-SIA-2
 	:alt: Screenshot of the window resulting from the execution of the search above.
 
-Figure 2:  The screenshot of the window resulting from the execution of the search with paramegters as in Figure 1.
+Figure 2:  The screenshot of the window resulting from the execution of the search with parameters as in Figure 1.
 
 **2.  Examine the images,**
 Click on any line in the table - this will result in displaying the image corresponding to the table entry.
