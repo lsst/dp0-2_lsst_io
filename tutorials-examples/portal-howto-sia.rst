@@ -31,7 +31,7 @@
 **Targeted learning level:** beginner 
 
 **Introduction:**
-This tutorial demonstrates how to use the Simple Image Access (SIA) service to retrieve DP0.2 images and perform simple manipulation steps.
+This tutorial demonstrates how to use the Simple Image Access (SIA) service to retrieve DP0.2 images.
 Specifically it retrieves all "calexps" (Processed Visit Images) containing a specific location on the sky during the desired range of observation epochs.
 
 **1. Execute an image query.**
