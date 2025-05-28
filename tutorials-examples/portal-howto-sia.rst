@@ -63,7 +63,7 @@ Figure 1:  The screenshot of the window containing all parameters and ready to e
 Click on the "Search" button.
 This will result in extracting 19 images meeting the selected criteria.
 By default, the displayed image on the upper left is the first one in the table of images on the bottom of the screen.
-The plot on the uper right will display the pointing directions of the telescope for individual images.
+The plot on the upper right will display the pointing directions of the telescope for individual images.
 
 .. figure:: /_static/portal-howto-SIA-2.png
 	:name: portal-howto-SIA-2
