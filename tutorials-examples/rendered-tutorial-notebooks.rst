@@ -74,7 +74,7 @@ Note that there have been reports of some figures not displaying properly in Fir
 +--------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
 | NB 18. `Galaxy Photometry <https://dp0-2.lsst.io/_static/nb_html/DP02_18_Galaxy_Photometry.html>`_                                   | Demonstration of galaxy photometry in objectTable.                                       |
 +--------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
-| NB 19. `Introduction to AI <https://dp0-2.lsst.io/_static/nb_html/19a_Introduction_to_AI.html>`_                                     | An introduction to the classification of images with AI-based classification algorithms. |
+| NB 19. `Introduction to AI <https://dp0-2.lsst.io/_static/nb_html/19a_Introduction_to_AI.html>`_                                     | An introduction to the classification of images with AI-based algorithms.                |
 +--------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
 
 
