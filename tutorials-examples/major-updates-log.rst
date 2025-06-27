@@ -48,6 +48,16 @@ the tutorial and clicking on "history" (near upper-right).
 Major Updates Log
 =================
 
+Jun 25 2025
+-----------
+
+TAP calls to ``ivoa.ObsCore`` were changed to ``dp_c2_catalogs.Obsore`` for tutorial
+notebooks ``02c_Image_Queries_with_TAP.ipynb``, ``13a_Image_Cutout_SciDemo.ipynb``,
+and ``18_Galaxy_Photometry.ipynb``.
+
+The recommended image of the RSP at data.lsst.cloud was bumped to Release r29.1.1.
+
+
 May 1 2025
 ----------
 
