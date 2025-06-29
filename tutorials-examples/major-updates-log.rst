@@ -51,7 +51,7 @@ Major Updates Log
 Jun 25 2025
 -----------
 
-TAP calls to ``ivoa.ObsCore`` were changed to ``dp_c2_catalogs.Obsore`` for tutorial
+TAP calls to ``ivoa.ObsCore`` were changed to ``dp02_dc2_catalogs.ObsCore`` for tutorial
 notebooks ``02c_Image_Queries_with_TAP.ipynb``, ``13a_Image_Cutout_SciDemo.ipynb``,
 and ``18_Galaxy_Photometry.ipynb``.
 
