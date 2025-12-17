@@ -48,6 +48,13 @@ the tutorial and clicking on "history" (near upper-right).
 Major Updates Log
 =================
 
+Dec 17 2025
+-----------
+
+Minor updates for tutorial
+notebooks ``13a_Image_Cutout_SciDemo.ipynb``,
+and ``18_Galaxy_Photometry.ipynb`` to work with the new cutout service.
+
 Jun 25 2025
 -----------
 
